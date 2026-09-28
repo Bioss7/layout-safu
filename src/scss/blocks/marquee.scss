@@ -1,0 +1,57 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.marquee {
+  padding: 20px 0;
+  overflow: hidden;
+  width: 100%;
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 30s linear infinite;
+    will-change: transform;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.06em;
+    color: var(--main-blue-blue-100);
+    white-space: nowrap;
+  }
+
+  &__dot {
+    flex-shrink: 0;
+    margin: 0 68px;
+  }
+
+  // Пауза при наведении (опционально)
+  &:hover &__track {
+    animation-play-state: paused;
+  }
+
+  // Уважение к настройкам пользователя
+  @media (prefers-reduced-motion: reduce) {
+    &__track {
+      animation: none;
+    }
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

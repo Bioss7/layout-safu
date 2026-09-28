@@ -1,0 +1,37 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.container {
+  max-width: 1718px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include breakpoint(1600px) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint($bp-lg) {
+    max-width: 1084px;
+    padding: 0;
+  }
+
+  @include breakpoint($bp-md) {
+    max-width: 535px;
+    padding: 0 20px;
+  }
+
+  @include breakpoint(576px) {
+    &--mobile {
+      max-width: 100%;
+    }
+  }
+
+  @include breakpoint($bp-sm) {
+    max-width: 320px;
+    padding: 0;
+
+    &--mobile {
+      max-width: 360px;
+    }
+  }
+}

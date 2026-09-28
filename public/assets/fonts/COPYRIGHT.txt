@@ -1,0 +1,1 @@
+Copyright (c) 2014 by Henrik Kubel, A2/SW/HK + A2-TYPE. All rights reserved.

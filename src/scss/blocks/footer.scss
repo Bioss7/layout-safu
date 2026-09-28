@@ -1,0 +1,362 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.footer {
+  padding: 0 0 20px;
+  color: var(--color-white);
+
+  &__title {
+    padding-left: 37px;
+    margin-bottom: 12px;
+    font-family: $font3;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    @include breakpoint($bp-lg) {
+      padding-left: 28px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 125%;
+    }
+
+    @include breakpoint($bp-md) {
+      padding-left: 23px;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: 0.01em;
+    }
+
+    position: relative;
+
+    &::before {
+      content: "/";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: $font3;
+      font-weight: 500;
+      font-size: 48px;
+      text-transform: uppercase;
+      color: var(--color-primary-blue);
+
+      @include breakpoint($bp-lg) {
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 120%;
+      }
+
+      @include breakpoint($bp-md) {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__email {
+    max-width: 368px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-blue-light);
+    margin-bottom: 40px;
+
+    &-link {
+      text-decoration: none;
+      color: var(--color-blue-light);
+
+      &:hover {
+        color: var(--color-blue-light);
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: var(--color-blue-hover);
+      }
+    }
+
+    @include breakpoint($bp-lg) {
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+
+    @include breakpoint($bp-md) {
+      max-width: 100%;
+      margin-bottom: 16px;
+      font-size: 16px;
+
+      .br-sm {
+        display: none;
+      }
+    }
+
+    @include breakpoint($bp-sm) {
+      .br-sm {
+        display: block;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @include breakpoint($bp-lg) {
+      margin-bottom: 32px;
+    }
+
+    @include breakpoint($bp-md) {
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    @include breakpoint($bp-md) {
+      margin-bottom: 40px;
+      gap: 40px;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+
+    @include breakpoint($bp-lg) {
+      gap: 35px;
+    }
+
+    @include breakpoint($bp-md) {
+      gap: 18px;
+    }
+
+    svg {
+      height: auto;
+      width: auto;
+      display: block;
+
+      &:first-child {
+        width: 152px;
+        height: 48px;
+
+        @include breakpoint($bp-lg) {
+          width: 111px;
+          height: 35px;
+        }
+
+        @include breakpoint($bp-md) {
+          width: 95px;
+          height: 30px;
+        }
+      }
+
+      &:last-child {
+        width: 225px;
+        height: 44px;
+
+        @include breakpoint($bp-lg) {
+          width: 164px;
+          height: 32px;
+        }
+
+        @include breakpoint($bp-md) {
+          width: 141px;
+          height: 27px;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include breakpoint($bp-md) {
+      gap: 12px;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+
+    @include breakpoint($bp-lg) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include breakpoint($bp-md) {
+      width: 32px;
+      height: 32px;
+    }
+
+    transition: background 0.3s ease,
+    transform 0.2s ease;
+
+    &:hover {
+      svg path {
+        fill: var(--color-primary-blue);
+      }
+
+      transform: scale(1.05);
+    }
+
+    &:active {
+      svg path {
+        fill: var(--color-blue-hover);
+      }
+
+      transform: scale(0.95);
+    }
+
+    svg {
+      width: 48px;
+      height: 48px;
+
+      @include breakpoint($bp-lg) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include breakpoint($bp-md) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include breakpoint($bp-lg) {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+
+    @include breakpoint($bp-md) {
+      gap: 24px;
+    }
+  }
+
+  &__copyright {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--color-white);
+    max-width: 723px;
+
+    @include breakpoint($bp-lg) {
+      width: 95%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 13px;
+
+    @include breakpoint($bp-lg) {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @include breakpoint($bp-md) {
+      flex-direction: column;
+      align-items: unset;
+      gap: 24px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    @include breakpoint($bp-md) {
+      gap: 12px;
+    }
+
+    @include breakpoint($bp-md) {
+      flex-direction: column;
+    }
+
+    &-link {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--color-white);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-blue-light);
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: var(--color-blue-hover);
+      }
+
+      @include breakpoint($bp-lg) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+      }
+    }
+  }
+
+  &__version {
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--color-white);
+      text-decoration: none;
+
+      @include breakpoint($bp-md) {
+        font-size: 14px;
+        line-height: 143%;
+      }
+
+      &:hover {
+        color: var(--color-blue-light);
+
+        svg path {
+          fill: var(--color-blue-light);
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bp-md) {
+    &__divider {
+      display: none;
+    }
+  }
+}

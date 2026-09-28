@@ -1,0 +1,42 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--color-bg-dark);
+  color: var(--color-white);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  &.menu-open {
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(16, 5, 45, 0.8);
+      z-index: 99;
+      animation: overlayFadeIn 0.3s ease;
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}

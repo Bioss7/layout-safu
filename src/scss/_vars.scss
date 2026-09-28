@@ -1,0 +1,137 @@
+// Colors
+$bg-dark: #301f12;
+$text-white: #ffffff;
+$primary-blue: #3f6fd1;
+$btn-primary: #3f6fd1;
+
+// Typography
+$font-family: "Montserrat", sans-serif;
+$second-family: "HS_LunaObscura", sans-serif;
+$third-family: "Golos Text", sans-serif;
+$font3: "Fira Mono", sans-serif;
+$font4: "GT Walsheim Pro", sans-serif;
+$font5: "Inter", sans-serif;
+
+// :root {
+//   --font-family: "Montserrat", sans-serif;
+//   --second-family: "HS_LunaObscura", sans-serif;
+//   --third-family: "Inter", sans-serif;
+//   --font3: "Open Sans", sans-serif;
+//   --font4: "Cera Pro", sans-serif;
+// }
+
+// Sizes
+$container-max-width: 1600px;
+$container-padding: 160px;
+$button-radius: 16px;
+
+// Breakpoints
+$bp-lg: 1919px;
+$bp-md: 1279px;
+$bp-sm: 360px;
+
+// CSS Custom Properties
+:root {
+  // fonts
+  --font-family: #{$font-family};
+  --second-family: #{$second-family};
+  --third-family: #{$third-family};
+  --font3: #{$font3};
+  --font4: #{$font4};
+  --font5: #{$font5};
+
+  --main-accent-accent-100: #00aeef;
+  --main-accent-accent-90: #1ab6f1;
+  --main-accent-accent-80: #33bef2;
+  --main-accent-accent-70: #4dc6f4;
+  --main-accent-accent-60: #66cef5;
+  --main-accent-accent-50: #80d6f7;
+  --main-accent-accent-40: #99dff9;
+  --main-accent-accent-30: #b3e7fa;
+  --main-accent-accent-300-opacity: rgba(0, 174, 239, 0.3);
+  --main-accent-accent-20: #cceffc;
+  --main-accent-accent-10: #e6f7fd;
+  --main-accent-accent-5: #f2fbfe;
+  --main-blue-blue-100: #0b2d4e;
+  --main-blue-blue-90: #234260;
+  --main-blue-blue-80: #3c5771;
+  --main-blue-blue-70: #546c83;
+  --main-blue-blue-60: #6d8195;
+  --main-blue-blue-50: #8596a6;
+  --main-blue-blue-500-opacity: rgba(11, 45, 78, 0.5);
+  --main-blue-blue-40: #c2d7e8;
+  --main-blue-blue-30: #b6c0ca;
+  --main-blue-blue-20: #ced5dc;
+  --main-blue-blue-200-opacity: rgba(11, 45, 78, 0.2);
+  --main-blue-blue-10: #e7eaed;
+  --main-blue-blue-100-opacity: rgba(11, 45, 78, 0.1);
+  --main-blue-blue-5: #f3f5f6;
+  --main-white-white-100: #fff;
+  --main-white-white-700-opacity: rgba(255, 255, 255, 0.7);
+  --main-white-white--500-opacity: rgba(255, 255, 255, 0.5);
+  --main-white-white-400-opacity: rgba(255, 255, 255, 0.4);
+  --main-white-white-200-opacity: rgba(255, 255, 255, 0.2);
+  --main-white-white-50-opacity: rgba(255, 255, 255, 0.05);
+  --color: #fff;
+
+  /* Color styles */
+  --main---accent---accent-100: #00aeef;
+  --main---accent---accent-90: #1ab6f1;
+  --main---accent---accent-80: #33bef2;
+  --main---accent---accent-70: #4dc6f4;
+  --main---accent---accent-60: #66cef5;
+  --main---accent---accent-50: #80d6f7;
+  --main---accent---accent-40: #99dff9;
+  --main---accent---accent-30: #b3e7fa;
+  --main---accent---accent-30-opacity: #00aeef;
+  --main---accent---accent-20: #cceffc;
+  --main---accent---accent-10: #e6f7fd;
+  --main---accent---accent-5: #f2fbfe;
+  --main---blue---blue-100: #0b2d4e;
+  --main---blue---blue-90: #234260;
+  --main---blue---blue-80: #3c5771;
+  --main---blue---blue-70: #546c83;
+  --main---blue---blue-60: #6d8195;
+  --main---blue---blue-50: #8596a6;
+  --main---blue---blue-50-opacity: #0b2d4e;
+  --main---blue---blue-40: #c2d7e8;
+  --main---blue---blue-30: #b6c0ca;
+  --main---blue---blue-20: #ced5dc;
+  --main---blue---blue-20-opacity: #0b2d4e;
+  --main---blue---blue-10: #e7eaed;
+  --main---blue---blue-10-opacity: #0b2d4e;
+  --main---blue---blue-5: #f3f5f6;
+  --main---white---white-100: #ffffff;
+  --main---white---white-70--opacity: #ffffff;
+  --main---white---white--50-opacity: #ffffff;
+  --main---white---white-40-opacity: #ffffff;
+  --main---white---white-20--opacity: #ffffff;
+  --main---white---white-5--opacity: #ffffff;
+
+  /* Text-size styles */
+  --main---title---title-1: 56px;
+  --main---title---title-2: 40px;
+  --main---title---title-3: 32px;
+  --main---title---title-4: 28px;
+  --main---title---title-5: 24px;
+  --main---title---sub-title: 20px;
+  --main---component---button--l: 16px;
+  --main---component---button--m: 14px;
+  --main---component---button--s: 12px;
+  --main---text--body---x-x-l-20--medium: 20px;
+  --main---text--body---l-18--semibold: 18px;
+  --main---text--body---l-18---regular: 18px;
+  --main---text--body---m-16---semibold: 16px;
+  --main---text--body---m-16--medium: 16px;
+  --main---text--body---m-16--regular: 16px;
+  --main---text--body---s-14---semibold: 14px;
+  --main---text--body---s-14--medium: 14px;
+  --main---text--body---s-14--regular: 14px;
+  --main---text--body---x-s-12--medium: 12px;
+  --main---text--body---x-s-12--semi-bold: 12px;
+  --main---text--body---x-s-12--regular: 12px;
+
+  // transitions
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}

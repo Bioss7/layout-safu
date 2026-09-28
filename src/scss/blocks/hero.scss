@@ -1,0 +1,373 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.hero {
+  padding-top: 207px;
+  width: 100%;
+  min-height: 100svh;
+  background:
+    linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+    linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+    var(--main-white-white-700-opacity) url("../img/hero.png") center center /
+      cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  // ---------- Внутренний контейнер ----------
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    border-radius: 4px;
+    background: var(--main-white-white-700-opacity);
+    max-width: 928px;
+  }
+
+  // ---------- Слайдер ----------
+  &__slider {
+    position: relative;
+  }
+
+  &__slide {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  // ---------- Табы ----------
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 32px;
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__tab {
+    // сброс стилей кнопки
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0 0 8px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid var(--main-blue-blue-100);
+      }
+    }
+  }
+
+  &__tab-link {
+    display: inline-block;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    color: var(--main-blue-blue-100);
+    opacity: 0.7;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+
+    .hero__tab:hover & {
+      opacity: 1;
+      color: var(--main-accent-accent-100);
+    }
+
+    .hero__tab:active & {
+      color: var(--main-blue-blue-90);
+    }
+
+    .hero__tab--active & {
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
+  // ---------- Заголовок и подзаголовок ----------
+  &__title {
+    margin: 0 0 28px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 121%;
+    letter-spacing: 0.06em;
+    color: var(--main-blue-blue-100);
+  }
+
+  &__subtitle {
+    margin: 0 0 40px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--main-blue-blue-80);
+  }
+
+  // ---------- Кнопки действий ----------
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 24px;
+    font-size: 15px;
+    text-decoration: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 3px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    // ----- Primary -----
+    &--primary {
+      padding: 18px 24px;
+      width: 231px;
+      min-height: 60px;
+      background: var(--main-blue-blue-100);
+
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: var(--main-white-white-100);
+      white-space: nowrap;
+
+      &:hover {
+        background: var(--main-accent-accent-100);
+      }
+
+      &:active {
+        background: var(--main-blue-blue-90);
+      }
+
+      &:disabled {
+        background: var(--main-blue-blue-30);
+      }
+    }
+
+    // ----- Secondary -----
+    &--secondary {
+      padding: 18px 24px;
+      max-width: 377px;
+      min-height: 60px;
+      background: var(--main-white-white-100);
+
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: var(--main-blue-blue-100);
+      white-space: nowrap;
+
+      &:hover {
+        background: var(--main-accent-accent-100);
+        color: var(--main-white-white-100);
+      }
+
+      &:active {
+        background: var(--main-blue-blue-30);
+        color: var(--main-white-white-100);
+      }
+
+      &:disabled {
+        background: var(--main-blue-blue-20);
+      }
+    }
+  }
+
+  &__btn-icon {
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+
+    .hero__btn:hover & {
+      transform: translateX(2px);
+    }
+  }
+
+  // ---------- Пагинация ----------
+  &__pagination {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  // ----- Точки -----
+  &__dots {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      display: flex;
+    }
+  }
+
+  &__dot {
+    // сброс стилей кнопки
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+
+    position: relative;
+    padding: 0 0 10px;
+    font-size: 15px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    &--active {
+      opacity: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 33px;
+        height: 0;
+        border-bottom: 2px solid var(--main-blue-blue-100);
+      }
+    }
+  }
+
+  &__dot-num {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    color: var(--main-blue-blue-100);
+  }
+
+  // ----- Стрелки -----
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    color: var(--main-blue-blue-100);
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+    background: var(--main-white-white--500-opacity);
+
+    &:hover {
+      background: var(--main-accent-accent-60);
+      color: var(--main-white-white-100);
+
+      svg path {
+        stroke: currentColor;
+      }
+    }
+
+    &:active {
+      background: var(--main-accent-accent-100);
+      color: var(--main-white-white-100);
+
+      svg path {
+        stroke: currentColor;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 3px;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}

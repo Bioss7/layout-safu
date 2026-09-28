@@ -1,0 +1,23 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.section {
+  margin-bottom: 120px;
+  position: relative;
+
+  @include breakpoint($bp-lg) {
+    margin-bottom: 80px;
+  }
+
+  @include breakpoint($bp-md) {
+    margin-bottom: 60px;
+  }
+}
+
+.section-overflow {
+  overflow: hidden;
+
+  @include breakpoint($bp-md) {
+    margin-bottom: 60px;
+  }
+}

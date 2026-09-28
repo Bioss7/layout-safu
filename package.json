@@ -1,0 +1,42 @@
+{
+  "name": "landing-moscow-transport",
+  "version": "1.0.0",
+  "description": "Gulp build: SCSS -> CSS (autoprefix + minify), JS minify, images -> WebP, live server",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp",
+    "start": "gulp",
+    "serve": "gulp serve",
+    "clean": "gulp clean",
+    "webp": "gulp webp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bioss7/landing-moscow-transport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Bioss7/landing-moscow-transport/issues"
+  },
+  "homepage": "https://github.com/Bioss7/landing-moscow-transport#readme",
+  "dependencies": {
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.4",
+    "browser-sync": "^3.0.4",
+    "del": "^7.1.0",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.102.0"
+  }
+}
