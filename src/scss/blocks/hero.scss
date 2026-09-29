@@ -2,7 +2,7 @@
 @use "../_vars" as *;
 
 .hero {
-  padding-top: 207px;
+  padding: 207px 0 63px;
   width: 100%;
   min-height: 100svh;
   background:
@@ -14,7 +14,6 @@
   background-position: center center;
   background-size: cover;
 
-  // ---------- Внутренний контейнер ----------
   &__inner {
     position: relative;
     z-index: 1;
@@ -24,7 +23,6 @@
     max-width: 928px;
   }
 
-  // ---------- Слайдер ----------
   &__slider {
     position: relative;
   }

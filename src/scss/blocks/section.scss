@@ -1,16 +1,137 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-.section {
-  margin-bottom: 120px;
-  position: relative;
+.title-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-100);
 
-  @include breakpoint($bp-lg) {
-    margin-bottom: 80px;
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--main-blue-blue-100);
   }
 
-  @include breakpoint($bp-md) {
-    margin-bottom: 60px;
+  &--white {
+    color: var(--main-white-white-100);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--main-white-white-100);
+    }
+  }
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--main-blue-blue-100);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+  }
+}
+
+.section-title {
+  margin-bottom: 80px;
+}
+
+.section-descr {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--main-white-white-700-opacity);
+}
+
+// .section-header--life {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-start;
+//   gap: 40px;
+//   margin-bottom: 40px;
+// }
+
+.section-header--life .title-2 {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.section-header__descr {
+  margin-bottom: 24px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-80);
+}
+
+
+.section {
+  padding: 120px 0;
+
+  &--accent {
+    background: var(--main-accent-accent-10);
+  }
+
+  &--stats {
+    width: 100%;
+    background: url("../img/stats/stats-bg.png") center center / cover no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
   }
 }
 
