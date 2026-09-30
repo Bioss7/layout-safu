@@ -1,0 +1,217 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.pulse {
+    display: grid;
+    grid-template-columns: 280px auto 280px 706px;
+    align-items: center;
+    gap: 24px;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &--left {
+            align-items: flex-start;
+        }
+
+        &--right {
+            align-items: flex-start;
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.pulse-circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 24px;
+
+    &__glow {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 8px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 133%;
+        letter-spacing: 0.06em;
+        color: var(--main-blue-blue-100);
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--main-blue-blue-90);
+    }
+}
+
+.pulse-card {
+    display: block;
+    border-radius: 4px;
+    padding: 12px;
+    width: 280px;
+    min-height: 84px;
+    background: var(--main-white-white-700-opacity);
+    text-decoration: none;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: var(--main-white-white-100);
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.06em;
+        color: var(--main-blue-blue-100);
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        color: var(--main-blue-blue-100);
+    }
+
+    &__text {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 133%;
+        color: var(--main-blue-blue-90);
+    }
+}
+
+.pulse-panel {
+    position: relative;
+    border-radius: 4px;
+    padding: 28px;
+    width: 706px;
+    min-height: 410px;
+    background: var(--main-white-white-400-opacity);
+
+    &__decor {
+        position: absolute;
+        pointer-events: none;
+
+        &--top {
+            top: 8px;
+            left: 0;
+        }
+
+        &--bottom {
+            bottom: 14px;
+            right: 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__title {
+        margin: 0 0 8px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 133%;
+        letter-spacing: 0.06em;
+        color: var(--main-blue-blue-100);
+    }
+
+    &__text {
+        margin: 0 0 27px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--main-blue-blue-90);
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: auto;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.pulse-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 4px;
+    padding: 18px 12px;
+    width: 316px;
+    min-height: 74px;
+    background: var(--main-white-white-100);
+    text-decoration: none;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: var(--main-white-white-700-opacity);
+    }
+
+    &__text {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--main-blue-blue-100);
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        color: var(--main-blue-blue-100);
+    }
+}

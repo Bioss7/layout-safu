@@ -287,14 +287,14 @@
                     </ul>
 
                     <div class="hero__arrows">
-                        <button class="hero__arrow" type="button" aria-label="Предыдущий слайд">
+                        <button class="hero__arrow arrow-btn" type="button" aria-label="Предыдущий слайд">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="M7 1 1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </button>
 
-                        <button class="hero__arrow" type="button" aria-label="Следующий слайд">
+                        <button class="hero__arrow arrow-btn" type="button" aria-label="Следующий слайд">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="m1 1 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -591,8 +591,9 @@
                 </div>
 
                 <a href="#" class="link-arrow">
-                    <span>Все новости</span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span class="link-arrow__text">Все новости</span>
+                    <svg class="link-arrow__icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10 9.16667C10 9.6269 9.6269 10 9.16667 10C8.70643 10 8.33333 9.6269 8.33333 9.16667V2.84505L1.42253 9.75586C1.09709 10.0813 0.569577 10.0813 0.244141 9.75586C-0.0812963 9.43042 -0.0812963 8.90291 0.244141 8.57747L7.15495 1.66667H0.833333C0.373096 1.66667 0 1.29357 0 0.833333C0 0.373096 0.373096 0 0.833333 0H9.16667C9.6269 0 10 0.373096 10 0.833333V9.16667Z"
                             fill="#0B2D4E" />
@@ -1026,12 +1027,684 @@
 
                     </div>
                 </article>
+
+                <!-- Кнопка "Подобрать программу" -->
+                <a href="#" class="directions__button button-gradient">
+                    <span class="button-gradient__text">Подобрать программу</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--pulse">
+        <div class="container">
+
+            <!-- Шапка секции -->
+            <div class="section-header">
+                <h2 class="title-2">Пульс Арктики</h2>
+
+                <div class="section-header__content">
+                    <p class="section-header__descr section-header__descr--pulse">
+                        Пульс Арктики — это самая свежая и актуальная информация о САФУ и Арктике:
+                        исследования, экспедиции, успехи студентов и преподавателей, новые
+                        образовательные возможности, университетские события и проекты, меняющие
+                        облик Арктики.
+                    </p>
+                </div>
             </div>
 
-            <!-- Кнопка "Подобрать программу" -->
-            <a href="#" class="directions__button button-gradient">
-                <span class="button-gradient__text">Подобрать программу</span>
-            </a>
+            <!-- Основной блок -->
+            <div class="pulse">
+
+                <!-- Левая колонка -->
+                <div class="pulse__col pulse__col--left">
+
+                    <a class="pulse-card" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">Образование</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            Исследования, научные центры, экспедиции и возможности для учёных
+                        </p>
+                    </a>
+
+                    <a class="pulse-card" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">Наука</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            Исследования, научные центры, экспедиции и возможности для учёных
+                        </p>
+                    </a>
+
+                    <a class="pulse-card" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">Университет</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            О САФУ, его структуре, развитии и официальных документах
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- Центральный круг -->
+                <div class="pulse__center">
+                    <div class="pulse-circle">
+                        <h3 class="pulse-circle__title">Университет, где Арктика — это профессия</h3>
+                        <p class="pulse-circle__text">
+                            Образование, наука, и технологии для развития Арктики и страны
+                        </p>
+                        <svg class="pulse-circle__glow" width="350" height="350" viewBox="0 0 350 350" fill="none"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="175" cy="175" r="175" fill="url(#paint0_radial_4033_2651)" fill-opacity="0.2" />
+                            <defs>
+                                <radialGradient id="paint0_radial_4033_2651" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(175 181) rotate(-90) scale(165 189.153)">
+                                    <stop offset="0.474151" stop-color="white" />
+                                    <stop offset="1" stop-color="#105598" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Правая колонка -->
+                <div class="pulse__col pulse__col--right">
+
+                    <a class="pulse-card pulse-card--right" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">САФУ для всех</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            Возможности, сервисы и поддержка для каждого в САФУ
+                        </p>
+                    </a>
+
+                    <a class="pulse-card pulse-card--right" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">international</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            Обучение, сотрудничество и международные возможности САФУ
+                        </p>
+                    </a>
+
+                    <a class="pulse-card pulse-card--right" href="#">
+                        <div class="pulse-card__head">
+                            <h3 class="pulse-card__title">Жизнь САФУ</h3>
+                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="pulse-card__text">
+                            Кампус, сообщества, творчество, спорт и поддержка студентов
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- Правая панель -->
+                <aside class="pulse-panel">
+
+                    <svg class="pulse-panel__decor pulse-panel__decor--top" width="30" height="18" viewBox="0 0 30 18"
+                        fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M-5.5 3.67345H-5.96717V4.6078H-5.5V4.14062V3.67345ZM23.742 4.14062C23.742 5.51669 24.8575 6.63221 26.2336 6.63221C27.6096 6.63221 28.7252 5.51669 28.7252 4.14062C28.7252 2.76456 27.6096 1.64904 26.2336 1.64904C24.8575 1.64904 23.742 2.76456 23.742 4.14062ZM-5.5 4.14062V4.6078H26.2336V4.14062V3.67345H-5.5V4.14062Z"
+                            fill="#0B2D4E" />
+                        <circle cx="26" cy="4" r="4" fill="#0B2D4E" />
+                        <path
+                            d="M-17 13.3844H-17.4672V14.3187H-17V13.8516V13.3844ZM12.237 13.8516C12.237 15.2276 13.3525 16.3431 14.7286 16.3431C16.1046 16.3431 17.2202 15.2276 17.2202 13.8516C17.2202 12.4755 16.1046 11.36 14.7286 11.36C13.3525 11.36 12.237 12.4755 12.237 13.8516ZM-17 13.8516V14.3187H14.7286V13.8516V13.3844H-17V13.8516Z"
+                            fill="#0B2D4E" />
+                        <circle cx="14" cy="14" r="4" fill="#0B2D4E" />
+                    </svg>
+
+                    <div class="pulse-panel__content">
+                        <h3 class="pulse-panel__title">Образование</h3>
+                        <p class="pulse-panel__text">
+                            Выберите подходящую образовательную программу, познакомьтесь
+                            с институтами и колледжами и узнайте, как поступить в САФУ
+                        </p>
+
+                        <div class="pulse-panel__links">
+                            <div class="pulse-panel__col">
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Подготовка к поступлению</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Институты, высшие школы <br>и колледжи</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Дополнительное образование</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="pulse-panel__col">
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Как поступить</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Мероприятия</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a class="pulse-link" href="#">
+                                    <span class="pulse-link__text">Учебный процесс: расписание</span>
+                                    <svg class="pulse-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.41097 3.57757C9.73641 3.25214 10.2639 3.25214 10.5894 3.57757L16.4227 9.41091C16.7481 9.73634 16.7481 10.2639 16.4227 10.5893L10.5894 16.4226C10.2639 16.7481 9.73641 16.7481 9.41097 16.4226C9.08553 16.0972 9.08553 15.5697 9.41097 15.2442L13.8218 10.8334H4.16683C3.70659 10.8334 3.3335 10.4603 3.3335 10.0001C3.3335 9.53986 3.70659 9.16677 4.16683 9.16677H13.8218L9.41097 4.75596C9.08553 4.43052 9.08553 3.90301 9.41097 3.57757Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <svg class="pulse-panel__decor pulse-panel__decor--bottom" width="30" height="18"
+                        viewBox="0 0 30 18" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M35.5 3.61095H35.9672V4.5453H35.5V4.07812V3.61095ZM6.25254 4.07812C6.25254 5.45419 5.13702 6.56971 3.76096 6.56971C2.38489 6.56971 1.26937 5.45419 1.26937 4.07812C1.26937 2.70206 2.38489 1.58654 3.76096 1.58654C5.13702 1.58654 6.25254 2.70206 6.25254 4.07812ZM35.5 4.07812V4.5453H3.76096V4.07812V3.61095H35.5V4.07812Z"
+                            fill="#0B2D4E" />
+                        <circle cx="4" cy="4" r="4" transform="matrix(-1 0 0 1 8 0)" fill="#0B2D4E" />
+                        <path
+                            d="M47 13.3297H47.4672V14.264H47V13.7969V13.3297ZM17.7591 13.7969C17.7591 15.1729 16.6436 16.2885 15.2676 16.2885C13.8915 16.2885 12.776 15.1729 12.776 13.7969C12.776 12.4208 13.8915 11.3053 15.2676 11.3053C16.6436 11.3053 17.7591 12.4208 17.7591 13.7969ZM47 13.7969V14.264H15.2676V13.7969V13.3297H47V13.7969Z"
+                            fill="#0B2D4E" />
+                        <circle cx="4" cy="4" r="4" transform="matrix(-1 0 0 1 20 10)" fill="#0B2D4E" />
+                    </svg>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ГОРДОСТЬ САФУ ================= -->
+    <section class="section section--accent">
+        <div class="container">
+
+            <!-- Шапка секции -->
+            <div class="section-header">
+                <h2 class="title-2">Гордость САФУ</h2>
+            </div>
+
+            <!-- Слайдер -->
+            <div class="reviews-slider">
+                <div class="reviews-slider__viewport">
+                    <ul class="reviews-slider__track">
+
+                        <!-- Карточка 1 -->
+                        <li class="reviews-slider__slide">
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
+                                        playsinline preload="none"></video>
+
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <h3 class="review-card__title">Николай Иванов</h3>
+
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+
+                                <p class="review-card__text">
+                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
+                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
+                                    узнали о профессиях, связанных с морем...
+                                </p>
+
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <!-- Карточка 2 -->
+                        <li class="reviews-slider__slide">
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
+                                        playsinline preload="none"></video>
+
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <h3 class="review-card__title">Анна Петрова</h3>
+
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+
+                                <p class="review-card__text">
+                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
+                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
+                                    узнали о профессиях, связанных с морем...
+                                </p>
+
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <!-- Карточка 3 -->
+                        <li class="reviews-slider__slide">
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
+                                        playsinline preload="none"></video>
+
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <h3 class="review-card__title">Сергей Смирнов</h3>
+
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+
+                                <p class="review-card__text">
+                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
+                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
+                                    узнали о профессиях, связанных с морем...
+                                </p>
+
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <!-- Карточка 4 -->
+                        <li class="reviews-slider__slide">
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
+                                        playsinline preload="none"></video>
+
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <h3 class="review-card__title">Елена Кузнецова</h3>
+
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+
+                                <p class="review-card__text">
+                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
+                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
+                                    узнали о профессиях, связанных с морем...
+                                </p>
+
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Пагинация -->
+                <div class="reviews-slider__pagination">
+                    <a href="#" class="link-arrow">
+                        <span class="link-arrow__text">Посмотреть все истории</span>
+                        <svg class="link-arrow__icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M10 9.16667C10 9.6269 9.6269 10 9.16667 10C8.70643 10 8.33333 9.6269 8.33333 9.16667V2.84505L1.42253 9.75586C1.09709 10.0813 0.569577 10.0813 0.244141 9.75586C-0.0812963 9.43042 -0.0812963 8.90291 0.244141 8.57747L7.15495 1.66667H0.833333C0.373096 1.66667 0 1.29357 0 0.833333C0 0.373096 0.373096 0 0.833333 0H9.16667C9.6269 0 10 0.373096 10 0.833333V9.16667Z"
+                                fill="#0B2D4E" />
+                        </svg>
+                    </a>
+
+                    <div class="reviews-slider__controls">
+                        <button class="arrow-btn arrow-btn--blue reviews-slider__arrow--prev" type="button"
+                            aria-label="Предыдущий слайд">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
+                                <path d="M7 1 1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <ul class="dots" role="tablist" aria-label="Слайды">
+                            <li>
+                                <button class="dots__dot dots__dot--active" type="button" aria-label="Слайд 1"
+                                    aria-selected="true" role="tab"></button>
+                            </li>
+                            <li>
+                                <button class="dots__dot" type="button" aria-label="Слайд 2" aria-selected="false"
+                                    role="tab"></button>
+                            </li>
+                            <li>
+                                <button class="dots__dot" type="button" aria-label="Слайд 3" aria-selected="false"
+                                    role="tab"></button>
+                            </li>
+                            <li>
+                                <button class="dots__dot" type="button" aria-label="Слайд 4" aria-selected="false"
+                                    role="tab"></button>
+                            </li>
+                            <li>
+                                <button class="dots__dot" type="button" aria-label="Слайд 5" aria-selected="false"
+                                    role="tab"></button>
+                            </li>
+                        </ul>
+
+                        <button class="arrow-btn arrow-btn--blue reviews-slider__arrow--next" type="button"
+                            aria-label="Следующий слайд">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
+                                <path d="m1 1 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section section--accent">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="section-header__content section-header__content--history">
+                    <h2 class="title-2">История САФУ</h2>
+
+                    <p class="section-header__descr">
+                        Студенты узнали о профессиях, связанных с морем и судостроением в Арктике —
+                        от инженеров-судостроителей, проектирующих ледокольные суда, до специалистов
+                        по морской навигации и экологии, обеспечивающих безопасное и устойчивое
+                        освоение северных морских путей
+                    </p>
+                </div>
+            </div>
+
+            <div class="history-timeline">
+                <div class="history-timeline__line" aria-hidden="true">
+                    <svg width="100%" height="2" viewBox="0 0 1720 2" preserveAspectRatio="none" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1H1720" stroke="#0B2D4E" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <!-- Точки -->
+                <ul class="history-timeline__points" role="tablist" aria-label="Годы истории САФУ">
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1916 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1916</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1929 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1929</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1932 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1932</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1957 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1957</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1991 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1991</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="1994 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">1994</span>
+                        </button>
+                    </li>
+
+                    <!-- Активная точка -->
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point history-timeline__point--active" type="button" role="tab"
+                            aria-selected="true" aria-label="2010 год">
+                            <svg class="history-timeline__dot history-timeline__dot--active" width="32" height="32"
+                                viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="16" fill="#0B2D4E" fill-opacity="0.1" />
+                                <circle cx="16" cy="16" r="12" fill="#0B2D4E" fill-opacity="0.5" />
+                                <circle cx="16" cy="16" r="7" fill="#0B2D4E" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year history-timeline__year--active">2010</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="2011 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">2011</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="2012 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">2012</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="2021 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">2021</span>
+                        </button>
+                    </li>
+
+                    <li class="history-timeline__item">
+                        <button class="history-timeline__point" type="button" role="tab" aria-selected="false"
+                            aria-label="2026 год">
+                            <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+                            </svg>
+                            <span class="history-timeline__year">2026</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <article class="history-card">
+                <div class="history-card__text">
+                    <h3 class="history-card__year">2010 год</h3>
+                    <p class="history-card__descr">
+                        Создание Северного (Арктического) федерального университета.
+                        Университет создан 8 июня 2010 года путём объединения Архангельского
+                        государственного технического университета, Поморского государственного
+                        университета имени М. В. Ломоносова, Архангельского лесотехнического
+                        колледжа Императора Петра I и Северодвинского технического колледжа.
+                    </p>
+                </div>
+
+                <div class="history-card__media">
+                    <img src="../public/assets/img/history/01.png" alt="Создание САФУ в 2010 году">
+                </div>
+            </article>
 
         </div>
     </section>

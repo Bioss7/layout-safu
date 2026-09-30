@@ -319,53 +319,53 @@
     gap: 12px;
   }
 
-  &__arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: none;
-    border-radius: 4px;
-    color: var(--main-blue-blue-100);
-    cursor: pointer;
-    transition:
-      background 0.3s ease,
-      color 0.3s ease;
-    background: var(--main-white-white--500-opacity);
+  // &__arrow {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 40px;
+  //   height: 40px;
+  //   padding: 0;
+  //   border: none;
+  //   border-radius: 4px;
+  //   color: var(--main-blue-blue-100);
+  //   cursor: pointer;
+  //   transition:
+  //     background 0.3s ease,
+  //     color 0.3s ease;
+  //   background: var(--main-white-white--500-opacity);
 
-    &:hover {
-      background: var(--main-accent-accent-60);
-      color: var(--main-white-white-100);
+  //   &:hover {
+  //     background: var(--main-accent-accent-60);
+  //     color: var(--main-white-white-100);
 
-      svg path {
-        stroke: currentColor;
-      }
-    }
+  //     svg path {
+  //       stroke: currentColor;
+  //     }
+  //   }
 
-    &:active {
-      background: var(--main-accent-accent-100);
-      color: var(--main-white-white-100);
+  //   &:active {
+  //     background: var(--main-accent-accent-100);
+  //     color: var(--main-white-white-100);
 
-      svg path {
-        stroke: currentColor;
-      }
-    }
+  //     svg path {
+  //       stroke: currentColor;
+  //     }
+  //   }
 
-    &:focus-visible {
-      outline: 2px solid var(--main-accent-accent-100);
-      outline-offset: 3px;
-    }
+  //   &:focus-visible {
+  //     outline: 2px solid var(--main-accent-accent-100);
+  //     outline-offset: 3px;
+  //   }
 
-    &:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
+  //   &:disabled {
+  //     opacity: 0.4;
+  //     cursor: not-allowed;
+  //     pointer-events: none;
+  //   }
 
-    svg {
-      display: block;
-    }
-  }
+  //   svg {
+  //     display: block;
+  //   }
+  // }
 }

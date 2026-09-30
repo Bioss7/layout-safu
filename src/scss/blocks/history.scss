@@ -1,0 +1,150 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.history {
+    --history-blue: #0B2D4E;
+    --history-white-500: rgba(255, 255, 255, 0.5);
+    --history-dot-bg: #CCEFFC;
+}
+
+.history-timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+
+    &__line {
+        position: absolute;
+        top: 22%;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 2px;
+        }
+    }
+
+    &__points {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+    }
+
+    /* Кнопка-точка */
+    &__point {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        /* отступ от точки до даты */
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    /* Кружок */
+    &__dot {
+        display: block;
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+        transition: width 0.2s ease, height 0.2s ease;
+
+        &--active {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    /* Год */
+    &__year {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.06em;
+        transition: color 0.2s ease;
+
+        &--active {
+            font-weight: 600;
+        }
+    }
+
+    /* Наведение: точка становится активной */
+    &__point:hover &__dot {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.history-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: var(--main-white-white--500-opacity);
+
+    margin-top: 40px;
+    padding: 40px;
+
+    width: 100%;
+    max-width: 1723px;
+    min-height: 398px;
+
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    &__text {
+        max-width: 900px;
+    }
+
+    &__year {
+        margin: 0 0 20px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 163%;
+        letter-spacing: 0.06em;
+    }
+
+    &__descr {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.06em;
+    }
+
+    &__media {
+        flex: 0 0 auto;
+        width: 556px;
+        height: 314px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
