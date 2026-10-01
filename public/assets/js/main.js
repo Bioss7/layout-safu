@@ -27,3 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+(function () {
+    const circle = document.querySelector('.pulse-circle');
+    if (!circle) return;
+
+    const dots = circle.querySelectorAll('.pulse-circle__dot');
+
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            dots.forEach((d) => d.classList.remove('pulse-circle__dot--active'));
+            dot.classList.add('pulse-circle__dot--active');
+        });
+    });
+
+    // по умолчанию активна первая
+    if (dots.length && !circle.querySelector('.pulse-circle__dot--active')) {
+        dots[0].classList.add('pulse-circle__dot--active');
+    }
+})();

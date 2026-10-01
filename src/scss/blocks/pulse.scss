@@ -66,7 +66,6 @@
         border-radius: 100%;
         background: var(--main-blue-blue-70);
         box-sizing: border-box;
-        transform-origin: center;
         z-index: 2;
         cursor: pointer;
         transition: background 0.2s ease;
@@ -75,34 +74,199 @@
             background: var(--main-blue-blue-100);
         }
 
-        &--1 {
-            top: 22px;
-            left: 85px;
+        /* ====== Сектор и хвост внутри точки ====== */
+        &>.pulse-circle__sector,
+        &>.pulse-circle__tail {
+            position: absolute;
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+            z-index: 3;
+
+            svg {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
         }
 
-        &--2 {
-            top: 178px;
-            left: 1px;
+        /* Сектор появляется из центра точки */
+        &>.pulse-circle__sector {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        &--3 {
-            top: 312px;
-            left: 86px;
+        /* Хвост начинается от правого-нижнего края точки */
+        &>.pulse-circle__tail {
+            top: 100%;
+            left: 100%;
         }
 
-        &--4 {
-            top: 312px;
-            right: 86px;
+        /* ============ АКТИВНАЯ ТОЧКА ============ */
+        &--active {
+            background: var(--main-blue-blue-100);
+
+            &>.pulse-circle__sector,
+            &>.pulse-circle__tail {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    /* ============ ПОЗИЦИИ ТОЧЕК (ваши настройки) ============ */
+    &__dot--1 {
+        top: 22px;
+        left: 85px;
+    }
+
+    &__dot--2 {
+        top: 178px;
+        left: 1px;
+    }
+
+    &__dot--3 {
+        top: 312px;
+        left: 86px;
+    }
+
+    &__dot--4 {
+        top: 312px;
+        right: 86px;
+    }
+
+    &__dot--5 {
+        top: 178px;
+        right: 0;
+    }
+
+    &__dot--6 {
+        top: 17px;
+        right: 94px;
+    }
+
+    /* ============ ИНДИВИДУАЛЬНЫЕ СМЕЩЕНИЯ СЕКТОРА И ХВОСТА ============ */
+
+    /* Точка 1 — правый верх */
+    &__dot--1 {
+        .pulse-circle__sector {
+            width: 76px;
+            height: 73px;
+            transform: translate(-50%, -50%) translate(36px, 22px) rotate(15deg);
         }
 
-        &--5 {
-            top: 178px;
-            right: 0;
+        .pulse-circle__tail {
+            width: 63px;
+            height: 36px;
+            transform: translate(6px, 6px);
+        }
+    }
+
+    /* Точка 2 — левый центр */
+    &__dot--2 {
+        .pulse-circle__sector {
+            width: 76px;
+            height: 73px;
+            transform: translate(-50%, -50%) translate(-40px, 30px) rotate(-40deg);
         }
 
-        &--6 {
-            top: 17px;
-            right: 94px;
+        .pulse-circle__tail {
+            width: 27px;
+            height: 36px;
+            transform: translate(10px, 8px);
+        }
+    }
+
+    /* Точка 3 — левый низ */
+    &__dot--3 {
+        .pulse-circle__sector {
+            width: 100px;
+            height: 166px;
+            transform: translate(-50%, -50%) translate(-52px, 46px) rotate(-80deg);
+        }
+
+        .pulse-circle__tail {
+            width: 63px;
+            height: 36px;
+            transform: translate(0, -34px) rotate(180deg);
+        }
+    }
+
+    /* Точка 4 — правый низ */
+    &__dot--4 {
+        .pulse-circle__sector {
+            width: 100px;
+            height: 307px;
+            transform: translate(-50%, -50%) translate(-52px, 60px) rotate(-130deg);
+        }
+
+        .pulse-circle__tail {
+            width: 63px;
+            height: 36px;
+            transform: translate(6px, -38px) rotate(180deg);
+        }
+    }
+
+    /* Точка 5 — правый центр */
+    &__dot--5 {
+        .pulse-circle__sector {
+            width: 261px;
+            height: 329px;
+            transform: translate(-50%, -50%) translate(-130px, 40px) rotate(-170deg);
+        }
+
+        .pulse-circle__tail {
+            width: 27px;
+            height: 36px;
+            transform: translate(-32px, -34px) rotate(180deg);
+        }
+    }
+
+    /* Точка 6 — правый верх */
+    &__dot--6 {
+        .pulse-circle__sector {
+            width: 350px;
+            height: 329px;
+            transform: translate(-50%, -50%) translate(-175px, 40px) rotate(-220deg);
+        }
+
+        .pulse-circle__tail {
+            width: 57px;
+            height: 30px;
+            transform: translate(-56px, -32px) rotate(180deg);
+        }
+    }
+
+    /* Точка 7 */
+    &__dot--7 {
+        .pulse-circle__sector {
+            width: 350px;
+            height: 329px;
+            transform: translate(-50%, -50%) translate(170px, 60px) rotate(-280deg);
+        }
+
+        .pulse-circle__tail {
+            width: 57px;
+            height: 30px;
+            transform: translate(-56px, -32px) rotate(180deg);
+        }
+    }
+
+    /* Точка 8 */
+    &__dot--8 {
+        .pulse-circle__sector {
+            width: 100px;
+            height: 307px;
+            transform: translate(-50%, -50%) translate(60px, 60px) rotate(-310deg);
+        }
+
+        .pulse-circle__tail {
+            width: 27px;
+            height: 36px;
+            transform: translate(10px, 8px);
         }
     }
 
@@ -117,9 +281,8 @@
 
     &__title {
         position: relative;
-        z-index: 3;
-        max-width: 289px;
         margin-bottom: 8px;
+        max-width: 289px;
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 20px;
