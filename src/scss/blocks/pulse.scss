@@ -29,8 +29,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 352px;
-        height: 352px;
+        width: 350px;
+        height: 350px;
     }
 }
 
@@ -41,11 +41,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 352px;
-    height: 352px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     text-align: center;
-    padding: 24px;
 
     /* Внешнее кольцо */
     &__ring {
@@ -60,8 +59,6 @@
     /* Точки по кругу (кликабельные) */
     &__dot {
         position: absolute;
-        top: 50%;
-        left: 50%;
         width: 17px;
         height: 17px;
         padding: 0;
@@ -79,35 +76,33 @@
         }
 
         &--1 {
-            transform: translate(-50%, -50%) rotate(0deg) translateY(-176px) rotate(0deg);
+            top: 22px;
+            left: 85px;
         }
 
         &--2 {
-            transform: translate(-50%, -50%) rotate(45deg) translateY(-176px) rotate(-45deg);
+            top: 178px;
+            left: 1px;
         }
 
         &--3 {
-            transform: translate(-50%, -50%) rotate(90deg) translateY(-176px) rotate(-90deg);
+            top: 312px;
+            left: 86px;
         }
 
         &--4 {
-            transform: translate(-50%, -50%) rotate(135deg) translateY(-176px) rotate(-135deg);
+            top: 312px;
+            right: 86px;
         }
 
         &--5 {
-            transform: translate(-50%, -50%) rotate(180deg) translateY(-176px) rotate(-180deg);
+            top: 178px;
+            right: 0;
         }
 
         &--6 {
-            transform: translate(-50%, -50%) rotate(225deg) translateY(-176px) rotate(-225deg);
-        }
-
-        &--7 {
-            transform: translate(-50%, -50%) rotate(270deg) translateY(-176px) rotate(-270deg);
-        }
-
-        &--8 {
-            transform: translate(-50%, -50%) rotate(315deg) translateY(-176px) rotate(-315deg);
+            top: 17px;
+            right: 94px;
         }
     }
 
@@ -123,24 +118,27 @@
     &__title {
         position: relative;
         z-index: 3;
-        margin: 0 0 8px;
+        max-width: 289px;
+        margin-bottom: 8px;
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 24px;
-        line-height: 133%;
+        font-size: 20px;
+        line-height: 140%;
         letter-spacing: 0.06em;
+        text-align: center;
         color: var(--main-blue-blue-100);
     }
 
     &__text {
         position: relative;
         z-index: 3;
-        margin: 0;
+        max-width: 269px;
         font-family: var(--font-family);
-        font-weight: 400;
+        font-weight: 600;
         font-size: 14px;
         line-height: 143%;
-        color: var(--main-blue-blue-90);
+        text-align: center;
+        color: var(--main-blue-blue-70);
     }
 }
 
@@ -198,7 +196,7 @@
 .pulse__col--left {
     .pulse-card--edu {
         margin-left: 26px;
-        margin-right: 13px;
+        margin-right: 14px;
         margin-bottom: 79px;
     }
 
@@ -209,14 +207,14 @@
 
     .pulse-card--university {
         margin-left: 26px;
-        margin-right: 13px;
+        margin-right: 14px;
     }
 }
 
 /* Правая колонка */
 .pulse__col--right {
     .pulse-card--safu {
-        margin-left: 13px;
+        margin-left: 14px;
         margin-bottom: 79px;
     }
 
@@ -226,7 +224,7 @@
     }
 
     .pulse-card--life {
-        margin-left: 13px;
+        margin-left: 14px;
     }
 }
 
