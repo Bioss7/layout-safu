@@ -1056,127 +1056,163 @@
             <!-- Основной блок -->
             <div class="pulse">
 
-                <!-- Левая колонка -->
-                <div class="pulse__col pulse__col--left">
+                <!-- Обёртка: левая колонка + круг + правая колонка -->
+                <div class="pulse__wrap">
 
-                    <a class="pulse-card" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">Образование</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            Исследования, научные центры, экспедиции и возможности для учёных
-                        </p>
-                    </a>
+                    <!-- Левая колонка -->
+                    <div class="pulse__col pulse__col--left">
 
-                    <a class="pulse-card" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">Наука</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            Исследования, научные центры, экспедиции и возможности для учёных
-                        </p>
-                    </a>
+                        <a class="pulse-card pulse-card--edu" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">Образование</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                Исследования, научные центры, экспедиции и возможности для учёных
+                            </p>
+                        </a>
 
-                    <a class="pulse-card" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">Университет</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            О САФУ, его структуре, развитии и официальных документах
-                        </p>
-                    </a>
+                        <a class="pulse-card pulse-card--science" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">Наука</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                Исследования, научные центры, экспедиции и возможности для учёных
+                            </p>
+                        </a>
 
-                </div>
+                        <a class="pulse-card pulse-card--university" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">Университет</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                О САФУ, его структуре, развитии и официальных документах
+                            </p>
+                        </a>
 
-                <!-- Центральный круг -->
-                <div class="pulse__center">
-                    <div class="pulse-circle">
-                        <h3 class="pulse-circle__title">Университет, где Арктика — это профессия</h3>
-                        <p class="pulse-circle__text">
-                            Образование, наука, и технологии для развития Арктики и страны
-                        </p>
-                        <svg class="pulse-circle__glow" width="350" height="350" viewBox="0 0 350 350" fill="none"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="175" cy="175" r="175" fill="url(#paint0_radial_4033_2651)" fill-opacity="0.2" />
-                            <defs>
-                                <radialGradient id="paint0_radial_4033_2651" cx="0" cy="0" r="1"
-                                    gradientUnits="userSpaceOnUse"
-                                    gradientTransform="translate(175 181) rotate(-90) scale(165 189.153)">
-                                    <stop offset="0.474151" stop-color="white" />
-                                    <stop offset="1" stop-color="#105598" />
-                                </radialGradient>
-                            </defs>
-                        </svg>
                     </div>
+
+                    <!-- Центральный круг -->
+                    <div class="pulse__center">
+                        <div class="pulse-circle">
+
+                            <!-- Внешнее кольцо -->
+                            <svg class="pulse-circle__ring" width="352" height="352" viewBox="0 0 350 350" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M350 175C350 271.65 271.65 350 175 350C78.3502 350 0 271.65 0 175C0 78.3502 78.3502 0 175 0C271.65 0 350 78.3502 350 175ZM16.9206 175C16.9206 262.305 87.6951 333.079 175 333.079C262.305 333.079 333.079 262.305 333.079 175C333.079 87.6951 262.305 16.9206 175 16.9206C87.6951 16.9206 16.9206 87.6951 16.9206 175Z"
+                                    fill="#0B2D4E" fill-opacity="0.2" />
+                            </svg>
+
+                            <!-- Точки по кругу (кликабельные) -->
+                            <button class="pulse-circle__dot pulse-circle__dot--1" type="button"
+                                aria-label="Точка 1"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--2" type="button"
+                                aria-label="Точка 2"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--3" type="button"
+                                aria-label="Точка 3"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--4" type="button"
+                                aria-label="Точка 4"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--5" type="button"
+                                aria-label="Точка 5"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--6" type="button"
+                                aria-label="Точка 6"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--7" type="button"
+                                aria-label="Точка 7"></button>
+                            <button class="pulse-circle__dot pulse-circle__dot--8" type="button"
+                                aria-label="Точка 8"></button>
+
+                            <!-- Свечение -->
+                            <svg class="pulse-circle__glow" width="350" height="350" viewBox="0 0 350 350" fill="none"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="175" cy="175" r="175" fill="url(#paint0_radial_4033_2651)"
+                                    fill-opacity="0.2" />
+                                <defs>
+                                    <radialGradient id="paint0_radial_4033_2651" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(175 181) rotate(-90) scale(165 189.153)">
+                                        <stop offset="0.474151" stop-color="white" />
+                                        <stop offset="1" stop-color="#105598" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+
+                            <h3 class="pulse-circle__title">Университет, где Арктика — это профессия</h3>
+                            <p class="pulse-circle__text">
+                                Образование, наука, и технологии для развития Арктики и страны
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка -->
+                    <div class="pulse__col pulse__col--right">
+
+                        <a class="pulse-card pulse-card--safu" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">САФУ для всех</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                Возможности, сервисы и поддержка для каждого в САФУ
+                            </p>
+                        </a>
+
+                        <a class="pulse-card pulse-card--international" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">international</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                Обучение, сотрудничество и международные возможности САФУ
+                            </p>
+                        </a>
+
+                        <a class="pulse-card pulse-card--life" href="#">
+                            <div class="pulse-card__head">
+                                <h3 class="pulse-card__title">Жизнь САФУ</h3>
+                                <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <p class="pulse-card__text">
+                                Кампус, сообщества, творчество, спорт и поддержка студентов
+                            </p>
+                        </a>
+
+                    </div>
+
                 </div>
-
-                <!-- Правая колонка -->
-                <div class="pulse__col pulse__col--right">
-
-                    <a class="pulse-card pulse-card--right" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">САФУ для всех</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            Возможности, сервисы и поддержка для каждого в САФУ
-                        </p>
-                    </a>
-
-                    <a class="pulse-card pulse-card--right" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">international</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            Обучение, сотрудничество и международные возможности САФУ
-                        </p>
-                    </a>
-
-                    <a class="pulse-card pulse-card--right" href="#">
-                        <div class="pulse-card__head">
-                            <h3 class="pulse-card__title">Жизнь САФУ</h3>
-                            <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.52876 3.52876C5.78911 3.26841 6.21112 3.26841 6.47147 3.52876L10.4715 7.52876C10.7318 7.78911 10.7318 8.21112 10.4715 8.47147L6.47147 12.4715C6.21112 12.7318 5.78911 12.7318 5.52876 12.4715C5.26841 12.2111 5.26841 11.7891 5.52876 11.5288L9.0574 8.00011L5.52876 4.47147C5.26841 4.21112 5.26841 3.78911 5.52876 3.52876Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p class="pulse-card__text">
-                            Кампус, сообщества, творчество, спорт и поддержка студентов
-                        </p>
-                    </a>
-
-                </div>
+                <!-- /Обёртка -->
 
                 <!-- Правая панель -->
                 <aside class="pulse-panel">
@@ -1708,6 +1744,421 @@
 
         </div>
     </section>
+
+    <footer class="footer">
+
+        <!-- Верхний раскрывающийся блок -->
+        <div class="footer__top">
+            <button class="footer__toggle js-footer-toggle" type="button" aria-expanded="false"
+                aria-controls="footer-details">
+                <div class="container footer__toggle-inner">
+                    <span class="footer__toggle-text">Дополнительные сведения и важные ссылки</span>
+                    <svg class="footer__toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                            d="M17.2929 8.29289C17.6834 7.90237 18.3164 7.90237 18.707 8.29289C19.0975 8.68342 19.0975 9.31643 18.707 9.70696L12.707 15.707C12.3164 16.0975 11.6834 16.0975 11.2929 15.707L5.29289 9.70696C4.90237 9.31643 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31643 7.90237 6.70696 8.29289L11.9999 13.5859L17.2929 8.29289Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </button>
+
+            <!-- Раскрывающийся блок -->
+            <div class="footer__details js-footer-details" id="footer-details" hidden>
+                <div class="footer__details-inner">
+                    <div class="container footer__details-content">
+                        <!-- Колонка 1 -->
+                        <ul class="footer__details-list">
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Сведения об образовательной организации</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Сайты министерств и ведомств</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Фонд целевого капитала САФУ</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Противодействие коррупции</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Колонка 2 -->
+                        <ul class="footer__details-list">
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Антитеррористическая защищённость</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Меры поддержки СВО</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Противодействие экстремизму</span>
+                                </a>
+                            </li>
+                            <li class="footer__details-item">
+                                <a class="footer__details-link" href="#">
+                                    <svg class="footer__details-icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M8.29295 5.29289C8.68348 4.90237 9.31649 4.90237 9.70702 5.29289L15.707 11.2929C16.0975 11.6834 16.0975 12.3164 15.707 12.707L9.70702 18.707C9.31649 19.0975 8.68348 19.0975 8.29295 18.707C7.90243 18.3164 7.90243 17.6834 8.29295 17.2929L13.5859 11.9999L8.29295 6.70696C7.90243 6.31643 7.90243 5.68342 8.29295 5.29289Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span class="footer__details-text">Доступная среда</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основной контент футера -->
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__grid">
+                    <!-- Колонка 1: Логотип -->
+                    <div class="footer__col footer__col--logo">
+                        <a class="footer__logo" href="/">
+                            <img class="footer__logo-img" src="../public/assets/img/footer/logo.png" alt="Логотип САФУ">
+                        </a>
+                    </div>
+
+                    <!-- Обертка с 3 колонками -->
+                    <div class="footer__cols">
+                        <!-- Колонка 2: Полное наименование и адрес -->
+                        <div class="footer__col footer__col--info">
+                            <h3 class="footer__title">Полное наименование</h3>
+                            <p class="footer__text">
+                                Федеральное государственное автономное образовательное учреждение высшего
+                                образования
+                                «Северный (Арктический) федеральный университет имени М. В. Ломоносова»
+                            </p>
+
+                            <h3 class="footer__title">Адрес</h3>
+                            <p class="footer__text">
+                                163002, Российская Федерация, г. Архангельск, набережная Северной Двины, 17
+                            </p>
+                        </div>
+
+                        <!-- Колонка 3: Посетителям и контакты -->
+                        <div class="footer__col footer__col--visitors">
+                            <a class="footer__title footer__title--with-icon" href="#">
+                                <span>Посетителям</span>
+                                <svg class="footer__title-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path
+                                        d="M5.52876 3.52827C5.78911 3.26792 6.21112 3.26792 6.47147 3.52827L10.4715 7.52827C10.7318 7.78862 10.7318 8.21063 10.4715 8.47098L6.47147 12.471C6.21112 12.7313 5.78911 12.7313 5.52876 12.471C5.26841 12.2106 5.26841 11.7886 5.52876 11.5283L9.0574 7.99962L5.52876 4.47098C5.26841 4.21063 5.26841 3.78862 5.52876 3.52827Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <p class="footer__text">
+                                Абитуриентам, студентам, родителям, выпускникам и партнерам университета
+                            </p>
+
+                            <h3 class="footer__title">Контакты приемной комиссии</h3>
+                            <a class="footer__contact" href="tel:+79581542558">+7 (958) 154-25-58</a>
+                            <a class="footer__contact" href="mailto:priem@narfu.ru">priem@narfu.ru</a>
+                        </div>
+
+                        <!-- Колонка 4: Помощь и обращения -->
+                        <div class="footer__col footer__col--help">
+                            <h3 class="footer__title">Помощь и обращения</h3>
+
+                            <a href="#" class="link-arrow link-arrow--header">
+                                <span class="link-arrow__text">Все программы</span>
+                                <svg class="link-arrow__icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 9.16667C10 9.6269 9.6269 10 9.16667 10C8.70643 10 8.33333 9.6269 8.33333 9.16667V2.84505L1.42253 9.75586C1.09709 10.0813 0.569577 10.0813 0.244141 9.75586C-0.0812963 9.43042 -0.0812963 8.90291 0.244141 8.57747L7.15495 1.66667H0.833333C0.373096 1.66667 0 1.29357 0 0.833333C0 0.373096 0.373096 0 0.833333 0H9.16667C9.6269 0 10 0.373096 10 0.833333V9.16667Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </a>
+
+                            <button class="footer__btn" type="button">
+                                <span>Обратная связь</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path
+                                        d="M12 11.3333C12 11.7015 11.7015 12 11.3333 12C10.9651 12 10.6667 11.7015 10.6667 11.3333V6.27604L5.13802 11.8047C4.87767 12.065 4.45566 12.065 4.19531 11.8047C3.93496 11.5443 3.93496 11.1223 4.19531 10.862L9.72396 5.33333H4.66667C4.29848 5.33333 4 5.03486 4 4.66667C4 4.29848 4.29848 4 4.66667 4H11.3333C11.7015 4 12 4.29848 12 4.66667V11.3333Z"
+                                        fill="#0B2D4E" />
+                                </svg>
+                            </button>
+
+                            <h3 class="footer__title">Мы в социальных сетях</h3>
+
+                            <div class="footer__socials">
+                                <!-- MAX -->
+                                <a class="footer__social" href="#" aria-label="Max">
+                                    <!-- дефолтная (серая) -->
+                                    <svg class="footer__social-icon footer__social-icon--default" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_1610)">
+                                            <path
+                                                d="M30.0128 0H9.98724C4.47144 0 0 4.47144 0 9.98724V30.0128C0 35.5286 4.47144 40 9.98724 40H30.0128C35.5286 40 40 35.5286 40 30.0128V9.98724C40 4.47144 35.5286 0 30.0128 0Z"
+                                                fill="#D6EAF8" fill-opacity="0.4" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M20.3284 35.1334C17.3281 35.1334 15.9339 34.6954 13.5103 32.9434C11.9773 34.9144 7.12287 36.4547 6.91115 33.8194C6.91115 31.8412 6.47315 30.1695 5.97675 28.3445C5.38547 26.0961 4.71387 23.5922 4.71387 19.9642C4.71387 11.2991 11.824 4.78027 20.2481 4.78027C28.6795 4.78027 35.286 11.6203 35.286 20.0444C35.3143 28.3383 28.6222 35.0892 20.3284 35.1334ZM20.4525 12.27C16.35 12.0583 13.1526 14.898 12.4445 19.351C11.8605 23.0374 12.8971 27.5269 13.7804 27.7605C14.2038 27.8627 15.2696 27.0013 15.9339 26.337C17.0323 27.0958 18.3115 27.5516 19.6423 27.6583C23.8932 27.8628 27.5255 24.6265 27.8109 20.3803C27.977 16.125 24.7041 12.5208 20.4525 12.2773V12.27Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_1610">
+                                                <rect width="40" height="40" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <!-- цветная (hover) -->
+                                    <svg class="footer__social-icon footer__social-icon--hover" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_2011_2323)">
+                                            <path
+                                                d="M30.0128 0H9.98724C4.47144 0 0 4.47144 0 9.98724V30.0128C0 35.5286 4.47144 40 9.98724 40H30.0128C35.5286 40 40 35.5286 40 30.0128V9.98724C40 4.47144 35.5286 0 30.0128 0Z"
+                                                fill="url(#paint0_linear_2011_2323)" />
+                                            <path
+                                                d="M30.0128 0H9.98724C4.47144 0 0 4.47144 0 9.98724V30.0128C0 35.5286 4.47144 40 9.98724 40H30.0128C35.5286 40 40 35.5286 40 30.0128V9.98724C40 4.47144 35.5286 0 30.0128 0Z"
+                                                fill="url(#paint1_radial_2011_2323)" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M20.3284 35.1331C17.3281 35.1331 15.9339 34.6951 13.5103 32.9431C11.9773 34.9141 7.12287 36.4545 6.91115 33.8191C6.91115 31.8409 6.47315 30.1692 5.97675 28.3442C5.38547 26.0958 4.71387 23.5919 4.71387 19.9639C4.71387 11.2989 11.824 4.78003 20.2481 4.78003C28.6795 4.78003 35.286 11.6201 35.286 20.0442C35.3143 28.338 28.6222 35.0889 20.3284 35.1331ZM20.4525 12.2697C16.35 12.0581 13.1526 14.8977 12.4445 19.3507C11.8605 23.0372 12.8971 27.5266 13.7804 27.7602C14.2038 27.8624 15.2696 27.001 15.9339 26.3368C17.0323 27.0956 18.3115 27.5513 19.6423 27.658C23.8932 27.8625 27.5255 24.6263 27.8109 20.38C27.977 16.1247 24.7041 12.5206 20.4525 12.2771V12.2697Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_2011_2323" x1="4.71388" y1="30.4214"
+                                                x2="40" y2="20" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#44CCFF" />
+                                                <stop offset="0.662" stop-color="#5533EE" />
+                                                <stop offset="1" stop-color="#9933DD" />
+                                            </linearGradient>
+                                            <radialGradient id="paint1_radial_2011_2323" cx="0" cy="0" r="1"
+                                                gradientUnits="userSpaceOnUse"
+                                                gradientTransform="translate(-0.951632 -17.5674) rotate(51.356) scale(48.5407 20)">
+                                                <stop stop-color="#0000FF" />
+                                                <stop offset="1" stop-opacity="0" />
+                                            </radialGradient>
+                                            <clipPath id="clip0_2011_2323">
+                                                <rect width="40" height="40" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+
+                                <!-- VK -->
+                                <a class="footer__social" href="#" aria-label="VK">
+                                    <!-- дефолтная -->
+                                    <svg class="footer__social-icon footer__social-icon--default" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_1611)">
+                                            <path
+                                                d="M0.254883 19.2599C0.254883 10.2986 0.254883 5.81788 3.03882 3.03394C5.82276 0.25 10.3034 0.25 19.2648 0.25H20.8489C29.8103 0.25 34.291 0.25 37.0749 3.03394C39.8588 5.81788 39.8588 10.2986 39.8588 19.2599V20.8441C39.8588 29.8054 39.8588 34.2861 37.0749 37.07C34.291 39.854 29.8103 39.854 20.8489 39.854H19.2648C10.3034 39.854 5.82276 39.854 3.03882 37.07C0.254883 34.2861 0.254883 29.8054 0.254883 20.8441V19.2599Z"
+                                                fill="#D6EAF8" fill-opacity="0.4" />
+                                            <path
+                                                d="M21.3274 28.781C12.301 28.781 7.15252 22.5929 6.93799 12.2959H11.4595C11.608 19.8536 14.9412 23.0549 17.5815 23.715V12.2959H21.8391V18.814C24.4463 18.5335 27.1852 15.5632 28.1094 12.2959H32.3669C31.6573 16.3223 28.687 19.2926 26.5748 20.5137C28.687 21.5038 32.07 24.0946 33.3572 28.781H28.6705C27.6639 25.6457 25.1559 23.22 21.8391 22.8899V28.781H21.3274Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_1611">
+                                                <rect width="40" height="40" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <!-- цветная (hover) -->
+                                    <svg class="footer__social-icon footer__social-icon--hover" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_2011_2328)">
+                                            <path
+                                                d="M0.254639 19.2599C0.254639 10.2986 0.254639 5.81788 3.03858 3.03394C5.82252 0.25 10.3032 0.25 19.2645 0.25H20.8487C29.81 0.25 34.2907 0.25 37.0747 3.03394C39.8586 5.81788 39.8586 10.2986 39.8586 19.2599V20.8441C39.8586 29.8054 39.8586 34.2861 37.0747 37.07C34.2907 39.854 29.81 39.854 20.8487 39.854H19.2645C10.3032 39.854 5.82252 39.854 3.03858 37.07C0.254639 34.2861 0.254639 29.8054 0.254639 20.8441V19.2599Z"
+                                                fill="#0077FF" />
+                                            <path
+                                                d="M21.3274 28.7815C12.301 28.7815 7.15252 22.5934 6.93799 12.2964H11.4595C11.608 19.8541 14.9412 23.0554 17.5815 23.7155V12.2964H21.8391V18.8145C24.4463 18.534 27.1852 15.5637 28.1094 12.2964H32.3669C31.6573 16.3228 28.687 19.2931 26.5748 20.5142C28.687 21.5043 32.07 24.095 33.3572 28.7815H28.6705C27.6639 25.6462 25.1559 23.2205 21.8391 22.8904V28.7815H21.3274Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2011_2328">
+                                                <rect width="40" height="40" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+
+                                <!-- Rutube -->
+                                <a class="footer__social" href="#" aria-label="Rutube">
+                                    <svg class="footer__social-icon footer__social-icon--default" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_1612)">
+                                            <path d="M40 0H0V40H40V0Z" fill="#D6EAF8" fill-opacity="0.4" />
+                                            <path
+                                                d="M24.708 19.0873H12.8898V14.4109H24.708C25.3989 14.4109 25.878 14.5309 26.1189 14.7409C26.3598 14.9509 26.5098 15.3409 26.5098 15.91V17.5891C26.5098 18.1891 26.3598 18.5782 26.1189 18.7891C25.878 18.9982 25.398 19.0891 24.708 19.0891V19.0873ZM25.5189 10.0018H7.87891V30H12.8907V23.4936H22.1271L26.5089 30H32.1207L27.2889 23.4636C29.0707 23.2 29.8707 22.6536 30.5298 21.7536C31.1889 20.8536 31.5207 19.4155 31.5207 17.4955V15.9955C31.5207 14.8573 31.3998 13.9582 31.1898 13.2682C30.9791 12.5824 30.609 11.9562 30.1098 11.4409C29.58 10.9366 28.9442 10.557 28.2489 10.33C27.528 10.1209 26.628 10 25.5189 10V10.0018Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_1612">
+                                                <rect width="40" height="40" rx="10" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <svg class="footer__social-icon footer__social-icon--hover" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <g clip-path="url(#clip0_2011_2335)">
+                                            <path d="M40 0H0V40H40V0Z" fill="#100943" />
+                                            <path
+                                                d="M40 20C51.0455 20 60 11.0455 60 0C60 -11.0455 51.0455 -20 40 -20C28.9545 -20 20 -11.0455 20 0C20 11.0455 28.9545 20 40 20Z"
+                                                fill="#ED143B" />
+                                            <path
+                                                d="M24.7082 19.0873H12.8901V14.4109H24.7082C25.3992 14.4109 25.8782 14.5309 26.1192 14.7409C26.3601 14.9509 26.5101 15.3409 26.5101 15.91V17.5891C26.5101 18.1891 26.3601 18.5782 26.1192 18.7891C25.8782 18.9982 25.3982 19.0891 24.7082 19.0891V19.0873ZM25.5191 10.0018H7.87915V30H12.891V23.4936H22.1273L26.5092 30H32.121L27.2892 23.4636C29.071 23.2 29.871 22.6536 30.5301 21.7536C31.1892 20.8536 31.521 19.4155 31.521 17.4955V15.9955C31.521 14.8573 31.4001 13.9582 31.1901 13.2682C30.9793 12.5824 30.6092 11.9562 30.1101 11.4409C29.5803 10.9366 28.9445 10.557 28.2492 10.33C27.5282 10.1209 26.6282 10 25.5191 10V10.0018Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2011_2335">
+                                                <rect width="40" height="40" rx="10" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+
+                                <!-- Dzen -->
+                                <a class="footer__social" href="#" aria-label="Dzen">
+                                    <svg class="footer__social-icon footer__social-icon--default" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M5 4L18.5 0H21L35 5L40 19V21L32.5 38L20.7899 40H19.5L6.5 37L0 21V19L5 4Z"
+                                            fill="white" />
+                                        <path
+                                            d="M23.8571 23.8571C20.7143 27.1 20.4857 31.1429 20.2143 40C28.4714 40 34.1714 39.9714 37.1143 37.1143C39.9714 34.1714 40 28.2 40 20.2143C31.1429 20.5 27.1 20.7143 23.8571 23.8571ZM0 20.2143C0 28.2 0.0285714 34.1714 2.88571 37.1143C5.82857 39.9714 11.5286 40 19.7857 40C19.5 31.1429 19.2857 27.1 16.1429 23.8571C12.9 20.7143 8.85714 20.4857 0 20.2143ZM19.7857 0C11.5429 0 5.82857 0.0285714 2.88571 2.88571C0.0285714 5.82857 0 11.8 0 19.7857C8.85714 19.5 12.9 19.2857 16.1429 16.1429C19.2857 12.9 19.5143 8.85714 19.7857 0ZM23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0C28.4714 0 34.1714 0.0285714 37.1143 2.88571C39.9714 5.82857 40 11.8 40 19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429Z"
+                                            fill="#2C3036" />
+                                        <path
+                                            d="M23.8571 23.8571C20.7143 27.1 20.4857 31.1429 20.2143 40C28.4714 40 34.1714 39.9714 37.1143 37.1143C39.9714 34.1714 40 28.2 40 20.2143C31.1429 20.5 27.1 20.7143 23.8571 23.8571ZM0 20.2143C0 28.2 0.0285714 34.1714 2.88571 37.1143C5.82857 39.9714 11.5286 40 19.7857 40C19.5 31.1429 19.2857 27.1 16.1429 23.8571C12.9 20.7143 8.85714 20.4857 0 20.2143ZM19.7857 0C11.5429 0 5.82857 0.0285714 2.88571 2.88571C0.0285714 5.82857 0 11.8 0 19.7857C8.85714 19.5 12.9 19.2857 16.1429 16.1429C19.2857 12.9 19.5143 8.85714 19.7857 0ZM23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0C28.4714 0 34.1714 0.0285714 37.1143 2.88571C39.9714 5.82857 40 11.8 40 19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429Z"
+                                            fill="#6B869C" />
+                                    </svg>
+
+                                    <svg class="footer__social-icon footer__social-icon--hover" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M5 4L18.5 0H21L35 5L40 19V21L32.5 38L20.7899 40H19.5L6.5 37L0 21V19L5 4Z"
+                                            fill="white" />
+                                        <path
+                                            d="M23.8571 23.8571C20.7143 27.1 20.4857 31.1429 20.2143 40C28.4714 40 34.1714 39.9714 37.1143 37.1143C39.9714 34.1714 40 28.2 40 20.2143C31.1429 20.5 27.1 20.7143 23.8571 23.8571ZM0 20.2143C0 28.2 0.0285714 34.1714 2.88571 37.1143C5.82857 39.9714 11.5286 40 19.7857 40C19.5 31.1429 19.2857 27.1 16.1429 23.8571C12.9 20.7143 8.85714 20.4857 0 20.2143ZM19.7857 0C11.5429 0 5.82857 0.0285714 2.88571 2.88571C0.0285714 5.82857 0 11.8 0 19.7857C8.85714 19.5 12.9 19.2857 16.1429 16.1429C19.2857 12.9 19.5143 8.85714 19.7857 0ZM23.8571 16.1429C20.7143 12.9 20.4857 8.85714 20.2143 0C28.4714 0 34.1714 0.0285714 37.1143 2.88571C39.9714 5.82857 40 11.8 40 19.7857C31.1429 19.5 27.1 19.2857 23.8571 16.1429Z"
+                                            fill="#2C3036" />
+                                    </svg>
+                                </a>
+
+                                <!-- Telegram -->
+                                <a class="footer__social" href="#" aria-label="Telegram">
+                                    <svg class="footer__social-icon footer__social-icon--default" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M0.120117 19.14C0.120117 10.14 0.120117 5.62004 2.90012 2.82004C5.72012 0.0400393 10.2201 0.0400391 19.2401 0.0400391H20.8401C29.8401 0.0400391 34.3601 0.0400393 37.1601 2.82004C39.9401 5.60004 39.9401 10.14 39.9401 19.14V20.74C39.9401 29.74 39.9401 34.26 37.1601 37.06C34.3801 39.84 29.8401 39.84 20.8401 39.84H19.2401C10.2401 39.84 5.72012 39.84 2.92012 37.06C0.120117 34.26 0.120117 29.76 0.120117 20.74V19.14Z"
+                                            fill="#D6EAF8" fill-opacity="0.4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.27108 19.7889C15.1744 17.2487 19.1108 15.574 21.0804 14.7649C26.7041 12.4547 27.8726 12.0534 28.6342 12.0402C28.8018 12.0373 29.1763 12.0783 29.4189 12.2727C29.6238 12.4369 29.6802 12.6587 29.7071 12.8143C29.7341 12.97 29.7677 13.3246 29.741 13.6017C29.4363 16.7641 28.1176 24.4386 27.4468 27.9806C27.1629 29.4794 26.604 29.9819 26.0629 30.0311C24.8869 30.138 23.9939 29.2636 22.855 28.5262C21.0727 27.3723 20.0659 26.654 18.3359 25.528C16.3365 24.2268 17.6326 23.5116 18.772 22.3428C19.0702 22.0369 24.2515 17.3823 24.3518 16.9601C24.3643 16.9072 24.376 16.7104 24.2575 16.6065C24.1391 16.5025 23.9644 16.5381 23.8383 16.5663C23.6595 16.6064 20.8123 18.4651 15.2967 22.1423C14.4885 22.6904 13.7565 22.9574 13.1007 22.9434C12.3777 22.928 10.9868 22.5397 9.9529 22.2077C8.68475 21.8006 7.67684 21.5853 7.7646 20.8939C7.81032 20.5337 8.31248 20.1654 9.27108 19.7889Z"
+                                            fill="white" />
+                                    </svg>
+
+                                    <svg class="footer__social-icon footer__social-icon--hover" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <rect width="40" height="40" rx="20" fill="url(#paint0_linear_2011_2355)" />
+                                        <path
+                                            d="M0.120117 19.14C0.120117 10.14 0.120117 5.62004 2.90012 2.82004C5.72012 0.0400393 10.2201 0.0400391 19.2401 0.0400391H20.8401C29.8401 0.0400391 34.3601 0.0400393 37.1601 2.82004C39.9401 5.60004 39.9401 10.14 39.9401 19.14V20.74C39.9401 29.74 39.9401 34.26 37.1601 37.06C34.3801 39.84 29.8401 39.84 20.8401 39.84H19.2401C10.2401 39.84 5.72012 39.84 2.92012 37.06C0.120117 34.26 0.120117 29.76 0.120117 20.74V19.14Z"
+                                            fill="url(#paint1_linear_2011_2355)" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.27108 19.7889C15.1744 17.2487 19.1108 15.574 21.0804 14.7649C26.7041 12.4547 27.8726 12.0534 28.6342 12.0402C28.8018 12.0373 29.1763 12.0783 29.4189 12.2727C29.6238 12.4369 29.6802 12.6587 29.7071 12.8143C29.7341 12.97 29.7677 13.3246 29.741 13.6017C29.4363 16.7641 28.1176 24.4386 27.4468 27.9806C27.1629 29.4794 26.604 29.9819 26.0629 30.0311C24.8869 30.138 23.9939 29.2636 22.855 28.5262C21.0727 27.3723 20.0659 26.654 18.3359 25.528C16.3365 24.2268 17.6326 23.5116 18.772 22.3428C19.0702 22.0369 24.2515 17.3823 24.3518 16.9601C24.3643 16.9072 24.376 16.7104 24.2575 16.6065C24.1391 16.5025 23.9644 16.5381 23.8383 16.5663C23.6595 16.6064 20.8123 18.4651 15.2967 22.1423C14.4885 22.6904 13.7565 22.9574 13.1007 22.9434C12.3777 22.928 10.9868 22.5397 9.9529 22.2077C8.68475 21.8006 7.67684 21.5853 7.7646 20.8939C7.81032 20.5337 8.31248 20.1654 9.27108 19.7889Z"
+                                            fill="white" />
+                                        <defs>
+                                            <linearGradient id="paint0_linear_2011_2355" x1="2000" y1="0" x2="2000"
+                                                y2="3970.33" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#2AABEE" />
+                                                <stop offset="1" stop-color="#229ED9" />
+                                            </linearGradient>
+                                            <linearGradient id="paint1_linear_2011_2355" x1="1991.12" y1="0.0400391"
+                                                x2="1991.12" y2="3950.52" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#2AABEE" />
+                                                <stop offset="1" stop-color="#229ED9" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Нижняя строка -->
+                <div class="footer__bottom">
+                    <p class="footer__copyright">
+                        © ФГАОУВО «Северный (Арктический) федеральный университет имени М.В. Ломоносова»
+                    </p>
+
+                    <a class="footer__made-by" href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="footer__made-by-img" src="../public/assets/img/footer/sibteh.png" alt="Сибтех">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../public/assets/js/modal.js"></script>
     <script src="../public/assets/js/main.js"></script>

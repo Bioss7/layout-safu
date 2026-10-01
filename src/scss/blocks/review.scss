@@ -172,7 +172,9 @@
     transition: opacity 0.3s ease;
 
     &:hover {
-      opacity: 0.8;
+      .review-card__link-icon {
+        transform: translateX(4px);
+      }
     }
 
     &:focus-visible {
@@ -184,5 +186,6 @@
   &__link-icon {
     display: block;
     flex-shrink: 0;
+    transition: transform 0.2s ease;
   }
 }
