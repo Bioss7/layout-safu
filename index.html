@@ -287,14 +287,14 @@
                     </ul>
 
                     <div class="hero__arrows">
-                        <button class="hero__arrow arrow-btn" type="button" aria-label="Предыдущий слайд">
+                        <button class="arrow-btn" type="button" aria-label="Предыдущий слайд">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="M7 1 1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </button>
 
-                        <button class="hero__arrow arrow-btn" type="button" aria-label="Следующий слайд">
+                        <button class="arrow-btn" type="button" aria-label="Следующий слайд">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="m1 1 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -1491,17 +1491,17 @@
             </div>
 
             <!-- Слайдер -->
-            <div class="reviews-slider">
-                <div class="reviews-slider__viewport">
-                    <ul class="reviews-slider__track">
+            <div class="reviews-slider swiper">
+                <div class="reviews-slider__viewport swiper-wrapper">
 
-                        <!-- Карточка 1 -->
-                        <li class="reviews-slider__slide">
+                    <div class="reviews-slider__slide swiper-slide">
+                        <div class="reviews-slider__group">
+
+                            <!-- Карточка 1 -->
                             <article class="review-card">
                                 <div class="review-card__media">
                                     <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
                                         playsinline preload="none"></video>
-
                                     <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
                                         <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1511,9 +1511,7 @@
                                         </svg>
                                     </button>
                                 </div>
-
                                 <h3 class="review-card__title">Николай Иванов</h3>
-
                                 <div class="review-card__meta">
                                     <span class="review-card__meta-item">Выпуск 2024</span>
                                     <span class="review-card__meta-dot">·</span>
@@ -1521,13 +1519,9 @@
                                     <span class="review-card__meta-dot">·</span>
                                     <span class="review-card__meta-item">Росатом</span>
                                 </div>
-
-                                <p class="review-card__text">
-                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
-                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
-                                    узнали о профессиях, связанных с морем...
-                                </p>
-
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
                                 <a href="#" class="review-card__link">
                                     <span class="review-card__link-text">Читать далее</span>
                                     <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
@@ -1538,15 +1532,12 @@
                                     </svg>
                                 </a>
                             </article>
-                        </li>
 
-                        <!-- Карточка 2 -->
-                        <li class="reviews-slider__slide">
+                            <!-- Карточка 2 -->
                             <article class="review-card">
                                 <div class="review-card__media">
                                     <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
                                         playsinline preload="none"></video>
-
                                     <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
                                         <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1556,9 +1547,7 @@
                                         </svg>
                                     </button>
                                 </div>
-
                                 <h3 class="review-card__title">Анна Петрова</h3>
-
                                 <div class="review-card__meta">
                                     <span class="review-card__meta-item">Выпуск 2024</span>
                                     <span class="review-card__meta-dot">·</span>
@@ -1566,13 +1555,9 @@
                                     <span class="review-card__meta-dot">·</span>
                                     <span class="review-card__meta-item">Росатом</span>
                                 </div>
-
-                                <p class="review-card__text">
-                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
-                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
-                                    узнали о профессиях, связанных с морем...
-                                </p>
-
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
                                 <a href="#" class="review-card__link">
                                     <span class="review-card__link-text">Читать далее</span>
                                     <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
@@ -1583,15 +1568,12 @@
                                     </svg>
                                 </a>
                             </article>
-                        </li>
 
-                        <!-- Карточка 3 -->
-                        <li class="reviews-slider__slide">
+                            <!-- Карточка 3 -->
                             <article class="review-card">
                                 <div class="review-card__media">
                                     <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
                                         playsinline preload="none"></video>
-
                                     <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
                                         <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1601,9 +1583,7 @@
                                         </svg>
                                     </button>
                                 </div>
-
                                 <h3 class="review-card__title">Сергей Смирнов</h3>
-
                                 <div class="review-card__meta">
                                     <span class="review-card__meta-item">Выпуск 2024</span>
                                     <span class="review-card__meta-dot">·</span>
@@ -1611,13 +1591,9 @@
                                     <span class="review-card__meta-dot">·</span>
                                     <span class="review-card__meta-item">Росатом</span>
                                 </div>
-
-                                <p class="review-card__text">
-                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
-                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
-                                    узнали о профессиях, связанных с морем...
-                                </p>
-
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
                                 <a href="#" class="review-card__link">
                                     <span class="review-card__link-text">Читать далее</span>
                                     <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
@@ -1628,15 +1604,12 @@
                                     </svg>
                                 </a>
                             </article>
-                        </li>
 
-                        <!-- Карточка 4 -->
-                        <li class="reviews-slider__slide">
+                            <!-- Карточка 4 -->
                             <article class="review-card">
                                 <div class="review-card__media">
                                     <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
                                         playsinline preload="none"></video>
-
                                     <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
                                         <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1646,9 +1619,7 @@
                                         </svg>
                                     </button>
                                 </div>
-
                                 <h3 class="review-card__title">Елена Кузнецова</h3>
-
                                 <div class="review-card__meta">
                                     <span class="review-card__meta-item">Выпуск 2024</span>
                                     <span class="review-card__meta-dot">·</span>
@@ -1656,13 +1627,9 @@
                                     <span class="review-card__meta-dot">·</span>
                                     <span class="review-card__meta-item">Росатом</span>
                                 </div>
-
-                                <p class="review-card__text">
-                                    Студенты узнали о профессиях, связанных с морем и судостроением в Арктике
-                                    от инженеров-судостроителей, проектирующих ледокольные суда. Студенты
-                                    узнали о профессиях, связанных с морем...
-                                </p>
-
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
                                 <a href="#" class="review-card__link">
                                     <span class="review-card__link-text">Читать далее</span>
                                     <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
@@ -1673,9 +1640,610 @@
                                     </svg>
                                 </a>
                             </article>
-                        </li>
 
-                    </ul>
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider__slide swiper-slide">
+                        <div class="reviews-slider__group">
+
+                            <!-- Карточка 1 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Николай Иванов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 2 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Анна Петрова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 3 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Сергей Смирнов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 4 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Елена Кузнецова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider__slide swiper-slide">
+                        <div class="reviews-slider__group">
+
+                            <!-- Карточка 1 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Николай Иванов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 2 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Анна Петрова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 3 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Сергей Смирнов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 4 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Елена Кузнецова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider__slide swiper-slide">
+                        <div class="reviews-slider__group">
+
+                            <!-- Карточка 1 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Николай Иванов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 2 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Анна Петрова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 3 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Сергей Смирнов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 4 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Елена Кузнецова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <div class="reviews-slider__slide swiper-slide">
+                        <div class="reviews-slider__group">
+
+                            <!-- Карточка 1 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/01.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Николай Иванов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 2 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/02.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Анна Петрова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 3 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/03.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Сергей Смирнов</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Судовой механик</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                            <!-- Карточка 4 -->
+                            <article class="review-card">
+                                <div class="review-card__media">
+                                    <video class="review-card__video" poster="../public/assets/img/review/04.png" muted
+                                        playsinline preload="none"></video>
+                                    <button class="review-card__play" type="button" aria-label="Воспроизвести видео">
+                                        <svg width="24" height="27" viewBox="0 0 24 27" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M22.2384 10.9891C23.5691 11.7305 23.6157 13.6278 22.323 14.4336L3.60811 26.0991C2.29457 26.9179 0.588752 25.9983 0.550757 24.4509L0.000759503 2.05243C-0.0372362 0.505061 1.62139 -0.497129 2.97354 0.256187L22.2384 10.9891Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="review-card__title">Елена Кузнецова</h3>
+                                <div class="review-card__meta">
+                                    <span class="review-card__meta-item">Выпуск 2024</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Инженер-судостроитель</span>
+                                    <span class="review-card__meta-dot">·</span>
+                                    <span class="review-card__meta-item">Росатом</span>
+                                </div>
+                                <p class="review-card__text">Студенты узнали о профессиях, связанных с морем и
+                                    судостроением в Арктике от инженеров-судостроителей, проектирующих ледокольные суда.
+                                    Студенты узнали о профессиях, связанных с морем...</p>
+                                <a href="#" class="review-card__link">
+                                    <span class="review-card__link-text">Читать далее</span>
+                                    <svg class="review-card__link-icon" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M6.21967 3.96967C6.51256 3.67678 6.98732 3.67678 7.28022 3.96967L11.7802 8.46967C12.0731 8.76256 12.0731 9.23732 11.7802 9.53022L7.28022 14.0302C6.98732 14.3231 6.51256 14.3231 6.21967 14.0302C5.92678 13.7373 5.92678 13.2626 6.21967 12.9697L10.1894 8.99994L6.21967 5.03022C5.92678 4.73732 5.92678 4.26256 6.21967 3.96967Z"
+                                            fill="#00AEEF" />
+                                    </svg>
+                                </a>
+                            </article>
+
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Пагинация -->
@@ -1699,28 +2267,7 @@
                             </svg>
                         </button>
 
-                        <ul class="dots" role="tablist" aria-label="Слайды">
-                            <li>
-                                <button class="dots__dot dots__dot--active" type="button" aria-label="Слайд 1"
-                                    aria-selected="true" role="tab"></button>
-                            </li>
-                            <li>
-                                <button class="dots__dot" type="button" aria-label="Слайд 2" aria-selected="false"
-                                    role="tab"></button>
-                            </li>
-                            <li>
-                                <button class="dots__dot" type="button" aria-label="Слайд 3" aria-selected="false"
-                                    role="tab"></button>
-                            </li>
-                            <li>
-                                <button class="dots__dot" type="button" aria-label="Слайд 4" aria-selected="false"
-                                    role="tab"></button>
-                            </li>
-                            <li>
-                                <button class="dots__dot" type="button" aria-label="Слайд 5" aria-selected="false"
-                                    role="tab"></button>
-                            </li>
-                        </ul>
+                        <ul class="slider-dots" role="tablist" aria-label="Слайды"></ul>
 
                         <button class="arrow-btn arrow-btn--blue reviews-slider__arrow--next" type="button"
                             aria-label="Следующий слайд">
@@ -2326,6 +2873,7 @@
 
     <script src="../public/assets/js/modal.js"></script>
     <script src="../public/assets/js/main.js"></script>
+    <script src="../public/assets/vendor/swiper-bundle.min.js"></script>
     <script src="../public/assets/js/slider.js"></script>
     <script src="../public/assets/js/slider-tabs.js"></script>
 </body>

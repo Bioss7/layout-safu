@@ -28,12 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* ============================================================
-   ПУЛЬС АРКТИКИ — прогресс-круг + смена контента панели
-   ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* ---------- футер (ваш существующий блок) ---------- */
     const toggle = document.querySelector('.js-footer-toggle');
     const details = document.querySelector('.js-footer-details');
 
@@ -60,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ============================================================
-       ПУЛЬС АРКТИКИ
-       ============================================================ */
+    // Круг
     const progress = document.querySelector('.pulse-circle__progress');
     const dots = document.querySelectorAll('.pulse-circle__dot[data-tab]');
     const cards = document.querySelectorAll('.pulse-card[data-tab]');
@@ -70,14 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!progress || !dots.length || !tabs.length) return;
 
-    /* ---------- параметры анимации круга ---------- */
     const TARGETS = {
-        education:     { progress: 16,  angle: 27 },
-        science:       { progress: 34,  angle: 27 },
-        university:    { progress: 50,  angle: 27 },
-        life:          { progress: 66,  angle: 27 },
-        international: { progress: 82,  angle: 28 },
-        safu:          { progress: 100, angle: 28 },
+        education: { progress: 16, angle: 27 },
+        science: { progress: 34, angle: 27 },
+        university: { progress: 50, angle: 27 },
+        life: { progress: 66, angle: 27 },
+        international: { progress: 82, angle: 28 },
+        safu: { progress: 100, angle: 28 },
     };
 
     const DURATION = 800;
@@ -87,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentAngle = 27;
     let rafId = null;
 
-    /* ---------- анимация круга ---------- */
     function animateCircle(toProgress, toAngle, duration = DURATION) {
         if (rafId !== null) cancelAnimationFrame(rafId);
 
@@ -113,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         rafId = requestAnimationFrame(frame);
     }
 
-    /* ---------- смена контента панели ---------- */
     let activeTabKey = null;
 
     function switchTab(key) {
@@ -126,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
         activeTabKey = key;
     }
 
-    /* ---------- активация точки/карточки ---------- */
     function activate(key) {
         if (!TARGETS[key]) return;
 
@@ -148,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         switchTab(key);
     }
 
-    /* ---------- обработчики ---------- */
     dots.forEach((dot) => {
         dot.addEventListener('click', (e) => {
             e.preventDefault();
@@ -163,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- инициализация ---------- */
     currentProgress = 0;
     currentAngle = 27;
     activate('education');

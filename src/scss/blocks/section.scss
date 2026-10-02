@@ -105,9 +105,8 @@
   }
 }
 
-/* Точки (используются в нескольких местах) */
-.dots {
-  display: inline-flex;
+.slider-dots {
+  display: flex;
   align-items: center;
   gap: 8px;
   margin: 0;
@@ -142,6 +141,13 @@
       outline: 2px solid var(--main-blue-blue-100);
       outline-offset: 2px;
     }
+  }
+
+  li {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
