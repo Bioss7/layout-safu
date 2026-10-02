@@ -1,40 +1,25 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-.pulse {
-    display: grid;
-    grid-template-columns: 990px 706px;
-    align-items: center;
-    gap: 24px;
-
-    &__wrap {
-        display: flex;
-        align-items: center;
-    }
-
-    &__col {
-        display: flex;
-        flex-direction: column;
-
-        &--left {
-            align-items: flex-start;
-        }
-
-        &--right {
-            align-items: flex-start;
-        }
-    }
-
-    &__center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 350px;
-        height: 350px;
-    }
+/* ============================================================
+   РЕГИСТРАЦИЯ КАСТОМНЫХ СВОЙСТВ ДЛЯ АНИМАЦИИ
+   ============================================================ */
+@property --progress {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
 }
 
-/* ================== КРУГ ================== */
+@property --from-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+
+/* ============================================================
+   БАЗОВЫЙ КРУГ
+   ============================================================ */
 .pulse-circle {
     position: relative;
     display: flex;
@@ -46,7 +31,6 @@
     border-radius: 50%;
     text-align: center;
 
-    /* Внешнее кольцо */
     &__ring {
         position: absolute;
         inset: 0;
@@ -54,220 +38,6 @@
         height: 100%;
         z-index: 0;
         pointer-events: none;
-    }
-
-    /* Точки по кругу (кликабельные) */
-    &__dot {
-        position: absolute;
-        width: 17px;
-        height: 17px;
-        padding: 0;
-        border: 4px solid var(--main-blue-blue-40);
-        border-radius: 100%;
-        background: var(--main-blue-blue-70);
-        box-sizing: border-box;
-        z-index: 2;
-        cursor: pointer;
-        transition: background 0.2s ease;
-
-        &:hover {
-            background: var(--main-blue-blue-100);
-        }
-
-        /* ====== Сектор и хвост внутри точки ====== */
-        &>.pulse-circle__sector,
-        &>.pulse-circle__tail {
-            position: absolute;
-            display: block;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
-            z-index: 3;
-
-            svg {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        /* Сектор появляется из центра точки */
-        &>.pulse-circle__sector {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* Хвост начинается от правого-нижнего края точки */
-        &>.pulse-circle__tail {
-            top: 100%;
-            left: 100%;
-        }
-
-        /* ============ АКТИВНАЯ ТОЧКА ============ */
-        &--active {
-            background: var(--main-blue-blue-100);
-
-            &>.pulse-circle__sector,
-            &>.pulse-circle__tail {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-
-    /* ============ ПОЗИЦИИ ТОЧЕК (ваши настройки) ============ */
-    &__dot--1 {
-        top: 22px;
-        left: 85px;
-    }
-
-    &__dot--2 {
-        top: 178px;
-        left: 1px;
-    }
-
-    &__dot--3 {
-        top: 312px;
-        left: 86px;
-    }
-
-    &__dot--4 {
-        top: 312px;
-        right: 86px;
-    }
-
-    &__dot--5 {
-        top: 178px;
-        right: 0;
-    }
-
-    &__dot--6 {
-        top: 17px;
-        right: 94px;
-    }
-
-    /* ============ ИНДИВИДУАЛЬНЫЕ СМЕЩЕНИЯ СЕКТОРА И ХВОСТА ============ */
-
-    /* Точка 1 — правый верх */
-    &__dot--1 {
-        .pulse-circle__sector {
-            width: 76px;
-            height: 73px;
-            transform: translate(-50%, -50%) translate(36px, 22px) rotate(15deg);
-        }
-
-        .pulse-circle__tail {
-            width: 63px;
-            height: 36px;
-            transform: translate(6px, 6px);
-        }
-    }
-
-    /* Точка 2 — левый центр */
-    &__dot--2 {
-        .pulse-circle__sector {
-            width: 76px;
-            height: 73px;
-            transform: translate(-50%, -50%) translate(-40px, 30px) rotate(-40deg);
-        }
-
-        .pulse-circle__tail {
-            width: 27px;
-            height: 36px;
-            transform: translate(10px, 8px);
-        }
-    }
-
-    /* Точка 3 — левый низ */
-    &__dot--3 {
-        .pulse-circle__sector {
-            width: 100px;
-            height: 166px;
-            transform: translate(-50%, -50%) translate(-52px, 46px) rotate(-80deg);
-        }
-
-        .pulse-circle__tail {
-            width: 63px;
-            height: 36px;
-            transform: translate(0, -34px) rotate(180deg);
-        }
-    }
-
-    /* Точка 4 — правый низ */
-    &__dot--4 {
-        .pulse-circle__sector {
-            width: 100px;
-            height: 307px;
-            transform: translate(-50%, -50%) translate(-52px, 60px) rotate(-130deg);
-        }
-
-        .pulse-circle__tail {
-            width: 63px;
-            height: 36px;
-            transform: translate(6px, -38px) rotate(180deg);
-        }
-    }
-
-    /* Точка 5 — правый центр */
-    &__dot--5 {
-        .pulse-circle__sector {
-            width: 261px;
-            height: 329px;
-            transform: translate(-50%, -50%) translate(-130px, 40px) rotate(-170deg);
-        }
-
-        .pulse-circle__tail {
-            width: 27px;
-            height: 36px;
-            transform: translate(-32px, -34px) rotate(180deg);
-        }
-    }
-
-    /* Точка 6 — правый верх */
-    &__dot--6 {
-        .pulse-circle__sector {
-            width: 350px;
-            height: 329px;
-            transform: translate(-50%, -50%) translate(-175px, 40px) rotate(-220deg);
-        }
-
-        .pulse-circle__tail {
-            width: 57px;
-            height: 30px;
-            transform: translate(-56px, -32px) rotate(180deg);
-        }
-    }
-
-    /* Точка 7 */
-    &__dot--7 {
-        .pulse-circle__sector {
-            width: 350px;
-            height: 329px;
-            transform: translate(-50%, -50%) translate(170px, 60px) rotate(-280deg);
-        }
-
-        .pulse-circle__tail {
-            width: 57px;
-            height: 30px;
-            transform: translate(-56px, -32px) rotate(180deg);
-        }
-    }
-
-    /* Точка 8 */
-    &__dot--8 {
-        .pulse-circle__sector {
-            width: 100px;
-            height: 307px;
-            transform: translate(-50%, -50%) translate(60px, 60px) rotate(-310deg);
-        }
-
-        .pulse-circle__tail {
-            width: 27px;
-            height: 36px;
-            transform: translate(10px, 8px);
-        }
     }
 
     &__glow {
@@ -281,7 +51,8 @@
 
     &__title {
         position: relative;
-        margin-bottom: 8px;
+        z-index: 3;
+        margin: 0 0 8px;
         max-width: 289px;
         font-family: var(--second-family);
         font-weight: 400;
@@ -296,6 +67,7 @@
         position: relative;
         z-index: 3;
         max-width: 269px;
+        margin: 0;
         font-family: var(--font-family);
         font-weight: 600;
         font-size: 14px;
@@ -303,9 +75,113 @@
         text-align: center;
         color: var(--main-blue-blue-70);
     }
+
+
+    /* ========================================================
+       ПРОГРЕСС-КРУГ
+       ======================================================== */
+    &__progress {
+        --progress: 0%;
+        --from-angle: 27deg;
+        --ring-thickness: 16px;
+
+        position: absolute;
+        inset: 0;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        z-index: 2;
+        pointer-events: none;
+
+        background-image: conic-gradient(from var(--from-angle),
+                transparent 0 calc(100% - var(--progress)),
+                var(--main-accent-accent-100) calc(100% - var(--progress)) 100%);
+
+        -webkit-mask: radial-gradient(farthest-side,
+                transparent calc(100% - var(--ring-thickness)),
+                #000 calc(100% - var(--ring-thickness)));
+        mask: radial-gradient(farthest-side,
+                transparent calc(100% - var(--ring-thickness)),
+                #000 calc(100% - var(--ring-thickness)));
+    }
+
+
+    /* ========================================================
+       ТОЧКИ
+       ======================================================== */
+    &__dot {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        padding: 0;
+        border: 4px solid var(--main-blue-blue-40);
+        border-radius: 100%;
+        background: var(--main-blue-blue-70);
+        box-sizing: border-box;
+        z-index: 4;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: var(--main-blue-blue-100);
+        }
+
+        &--active {
+            background: var(--main-blue-blue-100);
+        }
+    }
+
+    /* ---------- ПОЗИЦИИ ТОЧЕК ---------- */
+    &__dot--1 { top: 22px;  left: 85px; }
+    &__dot--2 { top: 178px; left: 1px;   }
+    &__dot--3 { top: 312px; left: 86px;  }
+    &__dot--4 { top: 312px; right: 86px; }
+    &__dot--5 { top: 178px; right: 0;    }
+    &__dot--6 { top: 17px;  right: 94px; }
+
+
+    /* ========================================================
+       ВЫНЕСЕННЫЕ TAIL (хвосты)
+       ======================================================== */
+    &__tail {
+        position: absolute;
+        display: block;
+        z-index: 3;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &--1 { left: 23px;   top: -18px;    width: 63px; height: 36px; }
+        &--2 { left: -34px;  top: 155px;    width: 27px; height: 36px; }
+        &--3 { left: 11px;   bottom: -7px;  width: 63px; height: 36px; }
+        &--4 { right: 24px;  bottom: -15px; width: 63px; height: 36px; }
+        &--5 { right: -32px; bottom: 172px; width: 27px; height: 36px; }
+        &--6 { right: 31px;  top: -15px;    width: 57px; height: 30px; }
+    }
+
+    /* Показ tail, когда точка активна */
+    &__dot--1.pulse-circle__dot--active ~ &__tail--1,
+    &__dot--2.pulse-circle__dot--active ~ &__tail--2,
+    &__dot--3.pulse-circle__dot--active ~ &__tail--3,
+    &__dot--4.pulse-circle__dot--active ~ &__tail--4,
+    &__dot--5.pulse-circle__dot--active ~ &__tail--5,
+    &__dot--6.pulse-circle__dot--active ~ &__tail--6 {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
-/* ================== КАРТОЧКИ ================== */
+
+/* ============================================================
+   КАРТОЧКИ
+   ============================================================ */
 .pulse-card {
     display: block;
     border-radius: 4px;
@@ -317,6 +193,11 @@
     transition: background 0.2s ease;
 
     &:hover {
+        background: var(--main-accent-accent-300-opacity);
+    }
+
+    /* Активная карточка (совпадает с активным табом) */
+    &.is-active {
         background: var(--main-accent-accent-300-opacity);
     }
 
@@ -353,45 +234,63 @@
     }
 }
 
-/* ================== ОТСТУПЫ КАРТОЧЕК ================== */
 
-/* Левая колонка */
+/* ============================================================
+   КОНТЕЙНЕР pulse И КОЛОНКИ
+   ============================================================ */
+.pulse {
+    display: grid;
+    grid-template-columns: 990px 706px;
+    align-items: center;
+    gap: 24px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        &--left {
+            align-items: flex-start;
+        }
+
+        &--right {
+            align-items: flex-start;
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 350px;
+    }
+}
+
+
+/* ============================================================
+   ОТСТУПЫ КАРТОЧЕК
+   ============================================================ */
 .pulse__col--left {
-    .pulse-card--edu {
-        margin-left: 26px;
-        margin-right: 14px;
-        margin-bottom: 79px;
-    }
-
-    .pulse-card--science {
-        margin-right: 39px;
-        margin-bottom: 79px;
-    }
-
-    .pulse-card--university {
-        margin-left: 26px;
-        margin-right: 14px;
-    }
+    .pulse-card--edu        { margin-left: 26px; margin-right: 14px; margin-bottom: 79px; }
+    .pulse-card--science    { margin-right: 39px; margin-bottom: 79px; }
+    .pulse-card--university { margin-left: 26px; margin-right: 14px; }
 }
 
-/* Правая колонка */
 .pulse__col--right {
-    .pulse-card--safu {
-        margin-left: 14px;
-        margin-bottom: 79px;
-    }
-
-    .pulse-card--international {
-        margin-left: 39px;
-        margin-bottom: 79px;
-    }
-
-    .pulse-card--life {
-        margin-left: 14px;
-    }
+    .pulse-card--safu          { margin-left: 14px; margin-bottom: 79px; }
+    .pulse-card--international { margin-left: 39px; margin-bottom: 79px; }
+    .pulse-card--life          { margin-left: 14px; }
 }
 
-/* ================== ПАНЕЛЬ ================== */
+
+/* ============================================================
+   ПАНЕЛЬ
+   ============================================================ */
 .pulse-panel {
     position: relative;
     border-radius: 4px;
@@ -418,9 +317,10 @@
     &__content {
         position: relative;
         z-index: 1;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        min-height: 354px; /* 410 - 2*28 = 354 */
     }
 
     &__title {
@@ -446,7 +346,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
-        margin-top: auto;
     }
 
     &__col {
@@ -456,6 +355,41 @@
     }
 }
 
+
+/* ============================================================
+   ТАБЫ ПАНЕЛИ — плавная смена контента (grid-стек)
+   ============================================================ */
+.pulse-panel__tab {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    // transform: translateY(6px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0s linear 0.3s;
+    pointer-events: none;
+}
+
+.pulse-panel__tab.is-active {
+    opacity: 1;
+    visibility: visible;
+    // transform: translateY(0);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0s linear 0s;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+
+/* ============================================================
+   ССЫЛКИ ПАНЕЛИ
+   ============================================================ */
 .pulse-link {
     display: flex;
     align-items: center;
