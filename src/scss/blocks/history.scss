@@ -3,7 +3,7 @@
 
 .history {
     --history-blue: #0B2D4E;
-    --history-white-500: rgba(255, 255, 255, 0.5);
+    --history-blue-hover: #00AEEF;
     --history-dot-bg: #CCEFFC;
 }
 
@@ -40,75 +40,90 @@
         flex: 0 0 auto;
     }
 
-    /* Кнопка-точка */
     &__point {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 12px;
-        /* отступ от точки до даты */
         padding: 0;
         border: 0;
         background: transparent;
         cursor: pointer;
-        transition: transform 0.2s ease;
-
-        &:hover {
-            transform: translateY(-2px);
-        }
     }
 
-    /* Кружок */
-    &__dot {
+    /* Обычная (неактивная) точка */
+    &__dot:not(&__dot--active) {
         display: block;
         width: 15px;
         height: 15px;
         flex: 0 0 auto;
-        transition: width 0.2s ease, height 0.2s ease;
 
-        &--active {
-            width: 32px;
-            height: 32px;
+        circle {
+            fill: var(--history-dot-bg);
+            stroke: var(--history-blue);
+            stroke-width: 2px;
+            transition: stroke 0.2s ease;
         }
     }
 
-    /* Год */
+    /* Активная точка: задаём только размеры, цвета — инлайново в SVG */
+    &__dot--active {
+        display: block;
+        width: 32px;
+        height: 32px;
+        flex: 0 0 auto;
+    }
+
     &__year {
         font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0.06em;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 144%;
+        color: var(--main-blue-blue-100);
         transition: color 0.2s ease;
 
         &--active {
+            font-family: var(--font-family);
             font-weight: 600;
+            font-size: 24px;
+            line-height: 133%;
+            color: var(--main-blue-blue-100);
         }
     }
 
-    /* Наведение: точка становится активной */
-    &__point:hover &__dot {
-        width: 32px;
-        height: 32px;
+    /* Hover только для неактивных точек */
+    &__item:hover &__point:not(&__point--active) &__dot:not(&__dot--active) circle {
+        stroke: var(--history-blue-hover);
+    }
+
+    &__item:hover &__point:not(&__point--active) &__year {
+        color: var(--history-blue-hover);
     }
 }
 
+.history-cards {
+    position: relative;
+    margin-top: 40px;
+}
+
 .history-card {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
     background: var(--main-white-white--500-opacity);
 
-    margin-top: 40px;
     padding: 40px;
-
     width: 100%;
     max-width: 1723px;
     min-height: 398px;
 
     border-radius: 12px;
     box-sizing: border-box;
+
+    &--active {
+        display: flex;
+    }
 
     &__text {
         max-width: 900px;
@@ -147,4 +162,3 @@
         }
     }
 }
-

@@ -155,3 +155,63 @@ document.addEventListener('DOMContentLoaded', () => {
     currentAngle = 27;
     activate('education');
 });
+
+// 
+document.addEventListener('DOMContentLoaded', () => {
+    const points = document.querySelectorAll('.history-timeline__point');
+    const cards = document.querySelectorAll('[data-history-card]');
+
+    // SVG для обычной точки
+    const dotDefault = `
+        <svg class="history-timeline__dot" width="15" height="15" viewBox="0 0 15 15" fill="none"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#CCEFFC" stroke="#0B2D4E" stroke-width="2" />
+        </svg>`;
+
+    // SVG для активной точки — полностью заменяет предыдущую
+    const dotActive = `
+    <svg class="history-timeline__dot history-timeline__dot--active" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="16" fill="#0B2D4E" fill-opacity="0.1" />
+        <circle cx="16" cy="16" r="12" fill="#0B2D4E" fill-opacity="0.5" />
+        <circle cx="16" cy="16" r="7" fill="#0B2D4E" stroke="#0B2D4E" stroke-width="2" />
+    </svg>
+    `;
+
+    function setActive(activePoint) {
+        const target = activePoint.dataset.target;
+        if (!target) return;
+
+        // Сбрасываем все точки
+        points.forEach(point => {
+            const dot = point.querySelector('.history-timeline__dot');
+            const yearEl = point.querySelector('.history-timeline__year');
+
+            point.classList.remove('history-timeline__point--active');
+            point.setAttribute('aria-selected', 'false');
+
+            // Полностью заменяем SVG на обычный
+            if (dot) dot.outerHTML = dotDefault;
+            if (yearEl) yearEl.classList.remove('history-timeline__year--active');
+        });
+
+        // Активируем выбранную точку
+        activePoint.classList.add('history-timeline__point--active');
+        activePoint.setAttribute('aria-selected', 'true');
+
+        // Полностью заменяем SVG на активный
+        const activeDot = activePoint.querySelector('.history-timeline__dot');
+        if (activeDot) activeDot.outerHTML = dotActive;
+
+        const activeYear = activePoint.querySelector('.history-timeline__year');
+        if (activeYear) activeYear.classList.add('history-timeline__year--active');
+
+        // Переключаем карточки
+        cards.forEach(card => {
+            card.classList.toggle('history-card--active', card.dataset.historyCard === target);
+        });
+    }
+
+    points.forEach(point => {
+        point.addEventListener('click', () => setActive(point));
+    });
+});
