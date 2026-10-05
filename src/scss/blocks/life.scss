@@ -89,34 +89,13 @@
     color: var(--main-white-white-100);
 }
 
-.life-tabs__all {
-    display: flex;
-    align-items: center;
-    padding: 14px 16px;
-    gap: 10px;
-    padding: 14px 16px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: var(--main-blue-blue-100);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.life-tabs__all:hover {
-    opacity: 0.7;
-}
-
-.life-tabs__all svg {
-    flex-shrink: 0;
-}
-
-.life-grid {
-    display: flex;
+.life-panel {
+    display: none;
     gap: 20px;
+}
+
+.life-panel--active {
+    display: flex;
 }
 
 .life-card {
@@ -127,6 +106,8 @@
     border-radius: 3px;
     background: var(--main-white-white--500-opacity);
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

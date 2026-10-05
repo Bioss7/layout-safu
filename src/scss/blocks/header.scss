@@ -58,6 +58,16 @@
     &--search,
     &--theme {
       padding: 10px;
+      transition: .2s linear all;
+
+      &:hover {
+        background: var(--main-accent-accent-100);
+        border-radius: 4px;
+
+        svg path {
+          fill: var(--main-white-white-100);
+        }
+      }
     }
 
     &--branch {
@@ -69,8 +79,7 @@
     }
   }
 
-  &__control-text {
-  }
+  &__control-text {}
 
   &__icon {
     display: block;
@@ -175,8 +184,7 @@
     }
   }
 
-  &__menu-btn-text {
-  }
+  &__menu-btn-text {}
 
   &__menu-btn-icon {
     display: block;
