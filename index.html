@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../public/assets/css/style.css">
     <link rel="stylesheet" href="../public/assets/vendor/swiper-bundle.min.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script> -->
 
     <title>Document</title>
 </head>
@@ -682,15 +683,10 @@
                         <p class="stat-card__subtitle">Иностранных студентов</p>
 
                         <div class="stat-card__media">
-                            <!-- Вариант А: картинка -->
-                            <img src="../public/assets/img/stats/01.png" alt="География студентов">
-
-                            <!-- Вариант Б: графика (раскомментировать при необходимости) -->
-                            <!--
-            <div class="stat-card__media stat-card__media--chart">
-              <canvas id="students-geo-chart"></canvas>
-            </div>
-            -->
+                            <canvas class="stat-card__chart" data-chart="bar"
+                                data-labels="2021,2022,2023,2024,2025, 2026" data-values="890,1020,1180,1350,1610, 1870"
+                                data-label="Студенты">
+                            </canvas>
                         </div>
 
                         <a href="#" class="stat-card__link">
@@ -712,15 +708,11 @@
                         <p class="stat-card__subtitle">Объём НИР</p>
 
                         <div class="stat-card__media">
-                            <!-- Вариант А: картинка -->
-                            <img src="../public/assets/img/stats/02.png" alt="Объём НИР">
-
-                            <!-- Вариант Б: графика (раскомментировать при необходимости) -->
-                            <!--
-            <div class="stat-card__media stat-card__media--chart">
-              <canvas id="nir-chart"></canvas>
-            </div>
-            -->
+                            <canvas class="stat-card__chart" data-chart="doughnut"
+                                data-labels="Хоз. договор,Гранты,Госзадание"
+                                data-values="70268872.71,127000000.00,97228800,00"
+                                data-colors="#00AEEF,#CCEFFC,#80D6F7">
+                            </canvas>
                         </div>
 
                         <a href="#" class="stat-card__link">
@@ -775,51 +767,23 @@
 
             <div class="life-tabs">
                 <div class="life-tabs__list" role="tablist" aria-label="Категории новостей">
-                    <button
-                        class="life-tabs__tab life-tabs__tab--active"
-                        id="life-tab-news"
-                        type="button"
-                        role="tab"
-                        aria-selected="true"
-                        aria-controls="life-panel-news"
-                        tabindex="0"
-                        data-life-tab="news"
+                    <button class="life-tabs__tab life-tabs__tab--active" id="life-tab-news" type="button" role="tab"
+                        aria-selected="true" aria-controls="life-panel-news" tabindex="0" data-life-tab="news"
                         data-life-all="Все новости">
                         Новости
                     </button>
-                    <button
-                        class="life-tabs__tab"
-                        id="life-tab-announces"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        aria-controls="life-panel-announces"
-                        tabindex="-1"
-                        data-life-tab="announces"
-                        data-life-all="Все анонсы">
+                    <button class="life-tabs__tab" id="life-tab-announces" type="button" role="tab"
+                        aria-selected="false" aria-controls="life-panel-announces" tabindex="-1"
+                        data-life-tab="announces" data-life-all="Все анонсы">
                         Анонсы
                     </button>
-                    <button
-                        class="life-tabs__tab"
-                        id="life-tab-events"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        aria-controls="life-panel-events"
-                        tabindex="-1"
-                        data-life-tab="events"
+                    <button class="life-tabs__tab" id="life-tab-events" type="button" role="tab" aria-selected="false"
+                        aria-controls="life-panel-events" tabindex="-1" data-life-tab="events"
                         data-life-all="Все события">
                         События
                     </button>
-                    <button
-                        class="life-tabs__tab"
-                        id="life-tab-projects"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        aria-controls="life-panel-projects"
-                        tabindex="-1"
-                        data-life-tab="projects"
+                    <button class="life-tabs__tab" id="life-tab-projects" type="button" role="tab" aria-selected="false"
+                        aria-controls="life-panel-projects" tabindex="-1" data-life-tab="projects"
                         data-life-all="Все проекты">
                         Проекты
                     </button>
@@ -837,15 +801,13 @@
             </div>
 
             <!-- ================= СЕТКА КАРТОЧЕК ================= -->
-            <div class="life-panel life-panel--active"
-                id="life-panel-news"
-                data-life-panel="news"
-                role="tabpanel"
+            <div class="life-panel life-panel--active" id="life-panel-news" data-life-panel="news" role="tabpanel"
                 aria-labelledby="life-tab-news">
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/01.png" alt="Экспедиция САФУ продолжает исследования в Арктике">
+                        <img src="../public/assets/img/life/01.png"
+                            alt="Экспедиция САФУ продолжает исследования в Арктике">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Жизнь университета</h3>
@@ -864,7 +826,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/02.png" alt="Студенты САФУ представили свои проекты на Дне науки">
+                        <img src="../public/assets/img/life/02.png"
+                            alt="Студенты САФУ представили свои проекты на Дне науки">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Жизнь университета</h3>
@@ -883,7 +846,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/03.png" alt="Новый корпус института открыл двери для студентов">
+                        <img src="../public/assets/img/life/03.png"
+                            alt="Новый корпус института открыл двери для студентов">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Жизнь университета</h3>
@@ -902,7 +866,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/04.png" alt="Преподаватели САФУ получили грант на исследования">
+                        <img src="../public/assets/img/life/04.png"
+                            alt="Преподаватели САФУ получили грант на исследования">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Жизнь университета</h3>
@@ -920,15 +885,13 @@
                 </a>
             </div>
 
-            <div class="life-panel"
-                id="life-panel-announces"
-                data-life-panel="announces"
-                role="tabpanel"
+            <div class="life-panel" id="life-panel-announces" data-life-panel="announces" role="tabpanel"
                 aria-labelledby="life-tab-announces">
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/02.png" alt="Открыта регистрация на летнюю арктическую школу">
+                        <img src="../public/assets/img/life/02.png"
+                            alt="Открыта регистрация на летнюю арктическую школу">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Анонсы</h3>
@@ -947,7 +910,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/03.png" alt="Старт приёма в магистратуру: дедлайн — 20 июня">
+                        <img src="../public/assets/img/life/03.png"
+                            alt="Старт приёма в магистратуру: дедлайн — 20 июня">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Анонсы</h3>
@@ -985,7 +949,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/04.png" alt="Публикуем расписание приёмной комиссии на июнь">
+                        <img src="../public/assets/img/life/04.png"
+                            alt="Публикуем расписание приёмной комиссии на июнь">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Анонсы</h3>
@@ -1003,15 +968,13 @@
                 </a>
             </div>
 
-            <div class="life-panel"
-                id="life-panel-events"
-                data-life-panel="events"
-                role="tabpanel"
+            <div class="life-panel" id="life-panel-events" data-life-panel="events" role="tabpanel"
                 aria-labelledby="life-tab-events">
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/03.png" alt="Форум «Арктика сегодня» пройдёт в главном корпусе">
+                        <img src="../public/assets/img/life/03.png"
+                            alt="Форум «Арктика сегодня» пройдёт в главном корпусе">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">События</h3>
@@ -1030,7 +993,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/04.png" alt="День открытых дверей: программа для абитуриентов">
+                        <img src="../public/assets/img/life/04.png"
+                            alt="День открытых дверей: программа для абитуриентов">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">События</h3>
@@ -1086,15 +1050,13 @@
                 </a>
             </div>
 
-            <div class="life-panel"
-                id="life-panel-projects"
-                data-life-panel="projects"
-                role="tabpanel"
+            <div class="life-panel" id="life-panel-projects" data-life-panel="projects" role="tabpanel"
                 aria-labelledby="life-tab-projects">
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/04.png" alt="Проект «Арктический маршрут» объединил четыре региона">
+                        <img src="../public/assets/img/life/04.png"
+                            alt="Проект «Арктический маршрут» объединил четыре региона">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Проекты</h3>
@@ -1113,7 +1075,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/01.png" alt="Учёные САФУ создали датчик для полярных станций">
+                        <img src="../public/assets/img/life/01.png"
+                            alt="Учёные САФУ создали датчик для полярных станций">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Проекты</h3>
@@ -1151,7 +1114,8 @@
 
                 <a class="life-card" href="#">
                     <div class="life-card__image">
-                        <img src="../public/assets/img/life/03.png" alt="Экологический проект очистил берег Белого моря">
+                        <img src="../public/assets/img/life/03.png"
+                            alt="Экологический проект очистил берег Белого моря">
                     </div>
                     <div class="life-card__content">
                         <h3 class="life-card__title">Проекты</h3>
@@ -3459,7 +3423,7 @@
                 <!-- Нижняя строка -->
                 <div class="footer__bottom">
                     <p class="footer__copyright">
-                       © ФГАОУВО «Северный (Арктический)<br>федеральный университет имени М.В. Ломоносова»
+                        © ФГАОУВО «Северный (Арктический)<br>федеральный университет имени М.В. Ломоносова»
                     </p>
 
                     <a class="footer__made-by" href="#" target="_blank" rel="noopener noreferrer">
@@ -3473,9 +3437,11 @@
     <script src="../public/assets/js/modal.js"></script>
     <script src="../public/assets/js/main.js"></script>
     <script src="../public/assets/vendor/swiper-bundle.min.js"></script>
+    <script src="../public/assets/vendor/chart.umd.min.js"></script>
     <script src="../public/assets/js/hero.js"></script>
-<script src="../public/assets/js/life-tabs.js"></script>
+    <script src="../public/assets/js/life-tabs.js"></script>
     <script src="../public/assets/js/reviews-slider.js"></script>
+    <script src="../public/assets/js/charts.js"></script>
 </body>
 
 </html>
