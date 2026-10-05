@@ -76,11 +76,6 @@
   flex-shrink: 0;
 }
 
-.arrow-btn--disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
 /* ================= КАРТОЧКА ================= */
 
 .review-card {
@@ -114,8 +109,7 @@
   &__play {
     position: absolute;
     bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
+    right: 70px;
     display: inline-flex;
     align-items: center;
     justify-content: center;

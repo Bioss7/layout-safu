@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -120,136 +120,363 @@
                 <div class="hero__tabs" role="tablist" aria-label="Разделы">
                     <button class="hero__tab hero__tab--active" role="tab" id="hero-tab-1" aria-selected="true"
                         aria-controls="hero-panel-1" type="button">
-                        <span class="hero__tab-link">Абитуриенту</span>
+                        <span class="hero__tab-label">Абитуриенту</span>
                     </button>
-
                     <button class="hero__tab" role="tab" id="hero-tab-2" aria-selected="false"
                         aria-controls="hero-panel-2" tabindex="-1" type="button">
-                        <span class="hero__tab-link">Школьникам</span>
+                        <span class="hero__tab-label">Школьникам</span>
                     </button>
-
                     <button class="hero__tab" role="tab" id="hero-tab-3" aria-selected="false"
                         aria-controls="hero-panel-3" tabindex="-1" type="button">
-                        <span class="hero__tab-link">Студенту</span>
+                        <span class="hero__tab-label">Студенту</span>
                     </button>
-
                     <button class="hero__tab" role="tab" id="hero-tab-4" aria-selected="false"
                         aria-controls="hero-panel-4" tabindex="-1" type="button">
-                        <span class="hero__tab-link">Партнёру</span>
+                        <span class="hero__tab-label">Партнёру</span>
                     </button>
                 </div>
 
-                <!-- ================= СЛАЙДЕР ================= -->
-                <div class="hero__slider">
+                <!-- ================= SWIPER-ОБЁРТКА ================= -->
+                <div class="hero__panelr">
 
-                    <!-- Панель 1 -->
-                    <div class="hero__slide hero__slide--active" role="tabpanel" id="hero-panel-1"
+                    <!-- ПАНЕЛЬ 1 -->
+                    <div class="hero__panel hero__panel--active" role="tabpanel" id="hero-panel-1"
                         aria-labelledby="hero-tab-1" tabindex="0">
-                        <h1 class="hero__title">Университет, где Арктика — это профессия</h1>
-                        <p class="hero__subtitle">
-                            Образование, наука и технологии для развития Арктики <br>и карьеры в условиях Севера
-                        </p>
-
-                        <div class="hero__actions">
-                            <button class="hero__btn hero__btn--primary" type="button">
-                                <span>Поступить</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <button class="hero__btn hero__btn--secondary" type="button">
-                                <span>Направления обучения</span>
-                            </button>
+                        <div class="swiper hero__swiper" data-hero-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Университет, где Арктика — это профессия</h1>
+                                    <p class="hero__subtitle">
+                                        Образование, наука и технологии для развития Арктики<br>и карьеры в условиях
+                                        Севера
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Поступить</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Направления обучения</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Приёмная кампания 2025</h1>
+                                    <p class="hero__subtitle">
+                                        Подайте документы онлайн и следите за статусом зачисления в личном кабинете.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Подать документы</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Условия приёма</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Дни открытых дверей</h1>
+                                    <p class="hero__subtitle">
+                                        Познакомьтесь с кампусом, преподавателями и студентами университета.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Записаться</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Расписание</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Стипендии и гранты</h1>
+                                    <p class="hero__subtitle">
+                                        Финансовая поддержка талантливых студентов и молодых исследователей.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Узнать больше</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Все программы</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Панель 2 -->
-                    <div class="hero__slide" role="tabpanel" id="hero-panel-2" aria-labelledby="hero-tab-2" tabindex="0"
+                    <!-- ПАНЕЛЬ 2 -->
+                    <div class="hero__panel" role="tabpanel" id="hero-panel-2" aria-labelledby="hero-tab-2" tabindex="0"
                         hidden>
-                        <h1 class="hero__title">Школьникам</h1>
-                        <p class="hero__subtitle">
-                            Профориентация, олимпиады и подготовительные курсы для старшеклассников.
-                        </p>
-
-                        <div class="hero__actions">
-                            <button class="hero__btn hero__btn--primary" type="button">
-                                <span>Записаться на курс</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <button class="hero__btn hero__btn--secondary" type="button">
-                                <span>Смотреть программы</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                        <div class="swiper hero__swiper" data-hero-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Школьникам</h1>
+                                    <p class="hero__subtitle">
+                                        Профориентация, олимпиады и подготовительные курсы для старшеклассников.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Записаться на курс</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Смотреть программы</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Олимпиады</h1>
+                                    <p class="hero__subtitle">
+                                        Участвуйте в олимпиадах и получите преимущества при поступлении.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Участвовать</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Список олимпиад</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Подготовительные курсы</h1>
+                                    <p class="hero__subtitle">
+                                        Готовьтесь к ЕГЭ и ОГЭ вместе с преподавателями университета.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Выбрать курс</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Расписание</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Экскурсии в кампус</h1>
+                                    <p class="hero__subtitle">
+                                        Посмотрите, как учатся студенты, и задайте вопросы преподавателям.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Записаться</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Подробнее</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Панель 3 -->
-                    <div class="hero__slide" role="tabpanel" id="hero-panel-3" aria-labelledby="hero-tab-3" tabindex="0"
+                    <!-- ПАНЕЛЬ 3 -->
+                    <div class="hero__panel" role="tabpanel" id="hero-panel-3" aria-labelledby="hero-tab-3" tabindex="0"
                         hidden>
-                        <h1 class="hero__title">Студенту</h1>
-                        <p class="hero__subtitle">
-                            Расписание, стипендии, общежитие и студенческая жизнь в одном месте.
-                        </p>
-
-                        <div class="hero__actions">
-                            <button class="hero__btn hero__btn--primary" type="button">
-                                <span>Личный кабинет</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <button class="hero__btn hero__btn--secondary" type="button">
-                                <span>Расписание занятий</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                        <div class="swiper hero__swiper" data-hero-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Студенту</h1>
+                                    <p class="hero__subtitle">
+                                        Расписание, стипендии, общежитие и студенческая жизнь в одном месте.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Личный кабинет</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Расписание занятий</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Стипендии</h1>
+                                    <p class="hero__subtitle">
+                                        Узнайте, какие выплаты и льготы положены студентам.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Подробнее</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Все выплаты</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Общежитие</h1>
+                                    <p class="hero__subtitle">
+                                        Комфортные комнаты, кухни, учебные зоны и всё для жизни в кампусе.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Заселиться</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Правила проживания</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Студенческая жизнь</h1>
+                                    <p class="hero__subtitle">
+                                        Клубы, секции, мероприятия и возможности для самореализации.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Присоединиться</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Все клубы</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Панель 4 -->
-                    <div class="hero__slide" role="tabpanel" id="hero-panel-4" aria-labelledby="hero-tab-4" tabindex="0"
+                    <!-- ПАНЕЛЬ 4 -->
+                    <div class="hero__panel" role="tabpanel" id="hero-panel-4" aria-labelledby="hero-tab-4" tabindex="0"
                         hidden>
-                        <h1 class="hero__title">Партнёру</h1>
-                        <p class="hero__subtitle">
-                            Сотрудничество, стажировки и проекты для компаний и организаций.
-                        </p>
-
-                        <div class="hero__actions">
-                            <button class="hero__btn hero__btn--primary" type="button">
-                                <span>Стать партнёром</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <button class="hero__btn hero__btn--secondary" type="button">
-                                <span>Наши проекты</span>
-                                <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    aria-hidden="true">
-                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                        <div class="swiper hero__swiper" data-hero-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Партнёру</h1>
+                                    <p class="hero__subtitle">
+                                        Сотрудничество, стажировки и проекты для компаний и организаций.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Стать партнёром</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Наши проекты</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Стажировки</h1>
+                                    <p class="hero__subtitle">
+                                        Предложите студентам стажировки и наймите лучших выпускников.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Разместить</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Все стажировки</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Совместные проекты</h1>
+                                    <p class="hero__subtitle">
+                                        Научные и прикладные проекты с участием университета и бизнеса.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Предложить проект</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Портфолио</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h1 class="hero__title">Контакты для партнёров</h1>
+                                    <p class="hero__subtitle">
+                                        Свяжитесь с нами, чтобы обсудить сотрудничество и условия.
+                                    </p>
+                                    <div class="hero__actions">
+                                        <button class="hero__btn hero__btn--primary" type="button">
+                                            <span>Написать</span>
+                                            <svg class="hero__btn-icon" width="16" height="16" viewBox="0 0 16 16"
+                                                fill="none" aria-hidden="true">
+                                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="hero__btn hero__btn--secondary" type="button">
+                                            <span>Все контакты</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -258,50 +485,22 @@
 
                 <!-- ================= ПАГИНАЦИЯ ================= -->
                 <div class="hero__pagination">
-
-                    <ul class="hero__dots" role="tablist" aria-label="Слайды">
-                        <li>
-                            <button class="hero__dot hero__dot--active" role="tab" aria-selected="true"
-                                aria-controls="hero-panel-1" aria-label="Слайд 1" type="button">
-                                <span class="hero__dot-num">01</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="hero__dot" role="tab" aria-selected="false" aria-controls="hero-panel-2"
-                                aria-label="Слайд 2" type="button">
-                                <span class="hero__dot-num">02</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="hero__dot" role="tab" aria-selected="false" aria-controls="hero-panel-3"
-                                aria-label="Слайд 3" type="button">
-                                <span class="hero__dot-num">03</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="hero__dot" role="tab" aria-selected="false" aria-controls="hero-panel-4"
-                                aria-label="Слайд 4" type="button">
-                                <span class="hero__dot-num">04</span>
-                            </button>
-                        </li>
-                    </ul>
+                    <ul class="hero__dots" aria-label="Слайды" data-hero-dots></ul>
 
                     <div class="hero__arrows">
-                        <button class="arrow-btn" type="button" aria-label="Предыдущий слайд">
+                        <button class="hero__arrow" type="button" aria-label="Предыдущий слайд" data-hero-prev>
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="M7 1 1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </button>
-
-                        <button class="arrow-btn" type="button" aria-label="Следующий слайд">
+                        <button class="hero__arrow" type="button" aria-label="Следующий слайд" data-hero-next>
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                                 <path d="m1 1 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
-
                 </div>
                 <!-- ================= /ПАГИНАЦИЯ ================= -->
 
@@ -2541,7 +2740,7 @@
                         </p>
                     </div>
                     <div class="history-card__media">
-                        <img src="../public/assets/img/history/2011.png" alt="2011 год">
+                        <img src="../public/assets/img/history/01.png" alt="2011 год">
                     </div>
                 </article>
 
@@ -2554,7 +2753,7 @@
                         </p>
                     </div>
                     <div class="history-card__media">
-                        <img src="../public/assets/img/history/2012.png" alt="2012 год">
+                        <img src="../public/assets/img/history/01.png" alt="2012 год">
                     </div>
                 </article>
 
@@ -2567,7 +2766,7 @@
                         </p>
                     </div>
                     <div class="history-card__media">
-                        <img src="../public/assets/img/history/2021.png" alt="2021 год">
+                        <img src="../public/assets/img/history/01.png" alt="2021 год">
                     </div>
                 </article>
 
@@ -2580,7 +2779,7 @@
                         </p>
                     </div>
                     <div class="history-card__media">
-                        <img src="../public/assets/img/history/2026.png" alt="2026 год">
+                        <img src="../public/assets/img/history/01.png" alt="2026 год">
                     </div>
                 </article>
 
@@ -3007,8 +3206,8 @@
     <script src="../public/assets/js/modal.js"></script>
     <script src="../public/assets/js/main.js"></script>
     <script src="../public/assets/vendor/swiper-bundle.min.js"></script>
-    <script src="../public/assets/js/slider.js"></script>
-    <script src="../public/assets/js/slider-tabs.js"></script>
+    <script src="../public/assets/js/hero.js"></script>
+    <script src="../public/assets/js/reviews-slider.js"></script>
 </body>
 
 </html>

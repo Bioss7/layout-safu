@@ -119,20 +119,16 @@
         transition: opacity 0.2s ease;
 
         &:hover {
-            opacity: 0.7;
+            color: var(--main-accent-accent-100);
         }
     }
 
-    /* Ссылка «Посмотреть» снизу */
     &__link {
         align-self: flex-start;
         padding: 0;
     }
 }
 
-/* ============================================================
-   КОМПОНЕНТ: ГРАДИЕНТНАЯ КНОПКА
-   ============================================================ */
 .button-gradient {
     display: flex;
     align-items: center;

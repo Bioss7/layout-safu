@@ -8,8 +8,7 @@
   background:
     linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
     linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-    var(--main-white-white-700-opacity) url("../img/hero.png") center center /
-      cover no-repeat;
+    var(--main-white-white-700-opacity) url("../img/hero.png") center center / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -23,11 +22,8 @@
     max-width: 928px;
   }
 
-  &__slider {
-    position: relative;
-  }
-
-  &__slide {
+  // ---------- Панели (табы) ----------
+  &__panel {
     display: none;
 
     &--active {
@@ -38,6 +34,34 @@
       outline: 2px solid var(--main-accent-accent-100);
       outline-offset: 4px;
       border-radius: 4px;
+    }
+  }
+
+  // ---------- Слайдер ----------
+  &__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: hidden;
+
+    // fade-эффект
+    .swiper-slide {
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+    }
+    .swiper-slide-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    // высота по контенту
+    .swiper-wrapper {
+      align-items: stretch;
     }
   }
 
@@ -53,7 +77,6 @@
   }
 
   &__tab {
-    // сброс стилей кнопки
     appearance: none;
     -webkit-appearance: none;
     background: none;
@@ -64,7 +87,6 @@
     color: inherit;
     cursor: pointer;
     text-align: left;
-
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -88,7 +110,7 @@
     }
   }
 
-  &__tab-link {
+  &__tab-label {
     display: inline-block;
     font-family: var(--second-family);
     font-weight: 400;
@@ -97,19 +119,15 @@
     letter-spacing: 0.06em;
     color: var(--main-blue-blue-100);
     opacity: 0.7;
-    transition:
-      color 0.2s ease,
-      opacity 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease;
 
     .hero__tab:hover & {
       opacity: 1;
       color: var(--main-accent-accent-100);
     }
-
     .hero__tab:active & {
       color: var(--main-blue-blue-90);
     }
-
     .hero__tab--active & {
       opacity: 1;
       font-weight: 600;
@@ -155,9 +173,7 @@
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    transition:
-      background 0.2s ease,
-      color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 
     &:focus-visible {
       outline: 2px solid var(--main-accent-accent-100);
@@ -168,7 +184,6 @@
       cursor: not-allowed;
     }
 
-    // ----- Primary -----
     &--primary {
       padding: 18px 24px;
       width: 231px;
@@ -184,20 +199,11 @@
       color: var(--main-white-white-100);
       white-space: nowrap;
 
-      &:hover {
-        background: var(--main-accent-accent-100);
-      }
-
-      &:active {
-        background: var(--main-blue-blue-90);
-      }
-
-      &:disabled {
-        background: var(--main-blue-blue-30);
-      }
+      &:hover { background: var(--main-accent-accent-100); }
+      &:active { background: var(--main-blue-blue-90); }
+      &:disabled { background: var(--main-blue-blue-30); }
     }
 
-    // ----- Secondary -----
     &--secondary {
       padding: 18px 24px;
       max-width: 377px;
@@ -217,15 +223,11 @@
         background: var(--main-accent-accent-100);
         color: var(--main-white-white-100);
       }
-
       &:active {
         background: var(--main-blue-blue-30);
         color: var(--main-white-white-100);
       }
-
-      &:disabled {
-        background: var(--main-blue-blue-20);
-      }
+      &:disabled { background: var(--main-blue-blue-20); }
     }
   }
 
@@ -245,7 +247,7 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 24px;
-    flex-wrap: wrap;
+    margin-top: 24px;
   }
 
   // ----- Точки -----
@@ -255,14 +257,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
 
-    > li {
-      display: flex;
-    }
+  &__dot-item {
+    display: flex;
   }
 
   &__dot {
-    // сброс стилей кнопки
     appearance: none;
     -webkit-appearance: none;
     background: none;
@@ -273,14 +274,14 @@
     cursor: pointer;
 
     position: relative;
+    display: flex;
+    align-items: flex-end;
     padding: 0 0 10px;
     font-size: 15px;
     opacity: 0.5;
     transition: opacity 0.2s ease;
 
-    &:hover {
-      opacity: 0.8;
-    }
+    &:hover { opacity: 0.8; }
 
     &:focus-visible {
       outline: 2px solid var(--main-accent-accent-100);
@@ -303,7 +304,7 @@
     }
   }
 
-  &__dot-num {
+  &__dot-number {
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 16px;
@@ -319,53 +320,53 @@
     gap: 12px;
   }
 
-  // &__arrow {
-  //   display: inline-flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 40px;
-  //   height: 40px;
-  //   padding: 0;
-  //   border: none;
-  //   border-radius: 4px;
-  //   color: var(--main-blue-blue-100);
-  //   cursor: pointer;
-  //   transition:
-  //     background 0.3s ease,
-  //     color 0.3s ease;
-  //   background: var(--main-white-white--500-opacity);
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    color: var(--main-blue-blue-100);
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+    background: var(--main-white-white--500-opacity);
 
-  //   &:hover {
-  //     background: var(--main-accent-accent-60);
-  //     color: var(--main-white-white-100);
+    &:hover {
+      background: var(--main-accent-accent-60);
+      color: var(--main-white-white-100);
 
-  //     svg path {
-  //       stroke: currentColor;
-  //     }
-  //   }
+      svg path {
+        stroke: currentColor;
+      }
+    }
 
-  //   &:active {
-  //     background: var(--main-accent-accent-100);
-  //     color: var(--main-white-white-100);
+    &:active {
+      background: var(--main-accent-accent-100);
+      color: var(--main-white-white-100);
 
-  //     svg path {
-  //       stroke: currentColor;
-  //     }
-  //   }
+      svg path {
+        stroke: currentColor;
+      }
+    }
 
-  //   &:focus-visible {
-  //     outline: 2px solid var(--main-accent-accent-100);
-  //     outline-offset: 3px;
-  //   }
+    &:focus-visible {
+      outline: 2px solid var(--main-accent-accent-100);
+      outline-offset: 3px;
+    }
 
-  //   &:disabled {
-  //     opacity: 0.4;
-  //     cursor: not-allowed;
-  //     pointer-events: none;
-  //   }
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
 
-  //   svg {
-  //     display: block;
-  //   }
-  // }
+    svg {
+      display: block;
+    }
+  }
 }
