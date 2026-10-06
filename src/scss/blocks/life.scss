@@ -1,13 +1,17 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
 .button-max {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 597px;
+    width: 100%;
     height: 48px;
     padding: 14px 16px;
     border-radius: 4px;
-    background:
-        var(--main-white-white-700-opacity) url("../img/life/button-bg.png") center center / cover no-repeat;
+    background: url("../img/life/button-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -92,6 +96,10 @@
 .life-panel {
     display: none;
     gap: 20px;
+
+    @include breakpoint($bp-1440) {
+        gap: 16px;
+    }
 }
 
 .life-panel--active {
@@ -102,13 +110,17 @@
     display: flex;
     flex-direction: column;
     width: 415px;
-    height: 392px;
+    min-height: 378px;
     border-radius: 3px;
     background: var(--main-white-white--500-opacity);
     overflow: hidden;
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    @include breakpoint($bp-1440) {
+        min-height: 310px;
+    }
 }
 
 .life-card:hover {
@@ -116,11 +128,15 @@
 }
 
 .life-card__image {
-    width: 415px;
+    width: 100%;
     height: 234px;
     border-radius: 4px 4px 0 0;
     overflow: hidden;
     flex-shrink: 0;
+
+    @include breakpoint($bp-1440) {
+        height: 174px;
+    }
 }
 
 .life-card__image img {
@@ -144,6 +160,11 @@
     font-size: 14px;
     line-height: 143%;
     color: var(--main-blue-blue-80);
+
+    @include breakpoint($bp-1440) {
+        font-size: 12px;
+        line-height: 133%;
+    }
 }
 
 .life-card__text {
@@ -158,6 +179,12 @@
     -webkit-line-clamp: 3;
     color: var(--main-blue-blue-100);
     flex-grow: 1;
+
+    @include breakpoint($bp-1440) {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+    }
 }
 
 .life-card__date {

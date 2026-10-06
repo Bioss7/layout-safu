@@ -12,6 +12,11 @@
   letter-spacing: 0.06em;
   color: var(--main-blue-blue-100);
 
+  @include breakpoint($bp-1440) {
+    font-size: 32px;
+    line-height: 163%;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -39,6 +44,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
   padding: 14px 16px;
   font-family: var(--second-family);
   font-weight: 400;
@@ -125,7 +131,7 @@
 .slider-dots {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -135,6 +141,7 @@
     width: 8px;
     height: 8px;
     padding: 0;
+    margin: 10px;
     border: none;
     border-radius: 50%;
     background: var(--main-blue-blue-20);
@@ -179,16 +186,24 @@
 
 .section-header {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 80px;
+
+  @include breakpoint($bp-1440) {
+    margin-bottom: 60px;
+  }
 
   &__content {
     display: flex;
     flex-direction: column;
     flex: 0;
     min-width: 597px;
+
+    @include breakpoint($bp-1440) {
+      min-width: 524px;
+    }
   }
 
   &__content--history {
@@ -223,18 +238,27 @@
 }
 
 .section-header__descr {
-  margin-bottom: 24px;
+  margin-bottom: 0;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.06em;
   color: var(--main-blue-blue-80);
+
+  @include breakpoint($bp-1440) {
+    font-size: 14px;
+    line-height: 143%;
+  }
 }
 
 
 .section {
   padding: 120px 0;
+
+  @include breakpoint($bp-1440) {
+    padding: 100px 0;
+  }
 
   &--accent {
     background: var(--main-accent-accent-10);
@@ -255,6 +279,10 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @include breakpoint($bp-1440) {
+      background: url("../img/pulse/pulse-bg.png") center center / cover no-repeat;
+    }
   }
 
   &__cards {
@@ -263,8 +291,18 @@
     gap: 24px;
   }
 
+  &--directions {
+    padding-top: 0;
+  }
+
   &--history {
     padding-top: 0;
+  }
+
+  &--pulse {
+    @include breakpoint($bp-1440) {
+      padding-bottom: 0;
+    }
   }
 
   &__row {
@@ -282,8 +320,4 @@
 
 .section-overflow {
   overflow: hidden;
-
-  @include breakpoint($bp-md) {
-    margin-bottom: 60px;
-  }
 }

@@ -109,10 +109,8 @@
 .history-card {
     display: none;
     justify-content: space-between;
-    align-items: center;
     gap: 40px;
     background: var(--main-white-white--500-opacity);
-
     padding: 40px;
     width: 100%;
     max-width: 1723px;
@@ -120,6 +118,11 @@
 
     border-radius: 12px;
     box-sizing: border-box;
+
+    @include breakpoint($bp-1440) {
+        padding: 24px;
+        gap: 16px;
+    }
 
     &--active {
         display: flex;
@@ -130,12 +133,18 @@
     }
 
     &__year {
-        margin: 0 0 20px;
+        margin-bottom: 20px;
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 32px;
         line-height: 163%;
         letter-spacing: 0.06em;
+
+        @include breakpoint($bp-1440) {
+            font-size: 28px;
+            line-height: 143%;
+            letter-spacing: 0.06em;
+        }
     }
 
     &__descr {
@@ -145,14 +154,26 @@
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.06em;
+
+        @include breakpoint($bp-1440) {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 144%;
+        }
     }
 
     &__media {
         flex: 0 0 auto;
-        width: 556px;
+        width: 100%;
+        max-width: 556px;
         height: 314px;
         border-radius: 12px;
         overflow: hidden;
+
+        @include breakpoint($bp-1440) {
+            max-width: 606px;
+            height: 342px;
+        }
 
         img {
             display: block;

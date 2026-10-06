@@ -13,6 +13,10 @@
   &__viewport {
     overflow: visible;
     margin-bottom: 60px;
+
+    @include breakpoint($bp-1440) {
+      margin-bottom: 40px;
+    }
   }
 
   /* Один слайд = одна группа из 4 карточек, ширина = 100% контейнера */
@@ -24,10 +28,13 @@
 
   /* Группа карточек внутри слайда */
   &__group {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 20px;
     width: 100%;
+
+    @include breakpoint($bp-1440) {
+      gap: 16px;
+    }
   }
 
   &__pagination {
@@ -40,7 +47,7 @@
   &__controls {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
   }
 
   // &__dots {
@@ -81,10 +88,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 415px;
   height: 514px;
   padding: 24px;
   border-radius: 4px;
   background: var(--main-white-white--500-opacity);
+
+  @include breakpoint($bp-1440) {
+    max-width: 308px;
+    height: 459px;
+    padding: 16px;
+  }
 
   &__media {
     display: flex;
@@ -96,6 +110,10 @@
     margin-bottom: 16px;
     border-radius: 4px;
     background: url("../img/review/card-bg.png") center / cover no-repeat;
+
+    @include breakpoint($bp-1440) {
+      height: 188px;
+    }
   }
 
   &__video {
@@ -103,6 +121,11 @@
     width: 240px;
     height: 240px;
     object-fit: cover;
+
+    @include breakpoint($bp-1440) {
+      width: 184px;
+      height: 184px;
+    }
   }
 
   &__play {
@@ -121,6 +144,12 @@
     cursor: pointer;
     transition: background 0.3s ease;
     backdrop-filter: blur(2px);
+
+    @include breakpoint($bp-1440) {
+      width: 60px;
+      height: 60px;
+      right: 50px;
+    }
 
     svg {
       display: block;
@@ -148,12 +177,18 @@
     font-size: 20px;
     line-height: 140%;
     color: var(--main-blue-blue-100);
+
+    @include breakpoint($bp-1440) {
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__meta {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-bottom: 16px;
     font-family: var(--font-family);
     font-weight: 500;
@@ -164,6 +199,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include breakpoint($bp-1440) {
+      row-gap: 8px;
+    }
   }
 
   &__meta-item {
@@ -190,6 +229,12 @@
     line-height: 150%;
     letter-spacing: 0.06em;
     color: var(--main-blue-blue-100);
+
+    @include breakpoint($bp-1440) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+    }
   }
 
   &__link {

@@ -20,9 +20,12 @@
     border-radius: 4px;
     background: var(--main-white-white-700-opacity);
     max-width: 928px;
+
+    @include breakpoint($bp-1440) {
+      max-width: 816px
+    }
   }
 
-  // ---------- Панели (табы) ----------
   &__panel {
     display: none;
 
@@ -54,6 +57,7 @@
       transition: opacity 0.45s ease;
       pointer-events: none;
     }
+
     .swiper-slide-active {
       opacity: 1;
       pointer-events: auto;
@@ -91,6 +95,30 @@
     display: flex;
     align-items: flex-end;
 
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid var(--main-accent-accent-100);
+      }
+    }
+
+    &:active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid var(--main-blue-blue-100);
+      }
+    }
+
     &:focus-visible {
       outline: 2px solid var(--main-accent-accent-100);
       outline-offset: 4px;
@@ -125,28 +153,36 @@
       opacity: 1;
       color: var(--main-accent-accent-100);
     }
+
     .hero__tab:active & {
       color: var(--main-blue-blue-90);
     }
+
     .hero__tab--active & {
       opacity: 1;
       font-weight: 600;
     }
   }
 
-  // ---------- Заголовок и подзаголовок ----------
   &__title {
-    margin: 0 0 28px;
+    margin-bottom: 28px;
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 56px;
     line-height: 121%;
     letter-spacing: 0.06em;
     color: var(--main-blue-blue-100);
+
+    @include breakpoint($bp-1440) {
+      font-size: 40px;
+      line-height: 120%;
+      letter-spacing: 0.06em;
+      color: var(--main-blue-blue-100);
+    }
   }
 
   &__subtitle {
-    margin: 0 0 40px;
+    margin-bottom: 40px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
@@ -154,7 +190,6 @@
     color: var(--main-blue-blue-80);
   }
 
-  // ---------- Кнопки действий ----------
   &__actions {
     display: flex;
     flex-wrap: wrap;
@@ -199,9 +234,17 @@
       color: var(--main-white-white-100);
       white-space: nowrap;
 
-      &:hover { background: var(--main-accent-accent-100); }
-      &:active { background: var(--main-blue-blue-90); }
-      &:disabled { background: var(--main-blue-blue-30); }
+      &:hover {
+        background: var(--main-accent-accent-100);
+      }
+
+      &:active {
+        background: var(--main-blue-blue-90);
+      }
+
+      &:disabled {
+        background: var(--main-blue-blue-30);
+      }
     }
 
     &--secondary {
@@ -223,11 +266,15 @@
         background: var(--main-accent-accent-100);
         color: var(--main-white-white-100);
       }
+
       &:active {
         background: var(--main-blue-blue-30);
         color: var(--main-white-white-100);
       }
-      &:disabled { background: var(--main-blue-blue-20); }
+
+      &:disabled {
+        background: var(--main-blue-blue-20);
+      }
     }
   }
 
@@ -241,16 +288,13 @@
     }
   }
 
-  // ---------- Пагинация ----------
   &__pagination {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 24px;
-    margin-top: 24px;
   }
 
-  // ----- Точки -----
   &__dots {
     display: flex;
     gap: 24px;
@@ -281,7 +325,9 @@
     opacity: 0.5;
     transition: opacity 0.2s ease;
 
-    &:hover { opacity: 0.8; }
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:focus-visible {
       outline: 2px solid var(--main-accent-accent-100);

@@ -7,19 +7,15 @@
     gap: 16px;
     align-items: stretch;
 
-    @include breakpoint($bp-lg) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include breakpoint($bp-md) {
-        grid-template-columns: 1fr;
-    }
-
     &__col {
         display: flex;
         flex-direction: column;
         gap: 16px;
         height: 100%;
+
+        @include breakpoint($bp-1440) {
+            gap: 11px;
+        }
     }
 }
 
@@ -36,14 +32,27 @@
     background: var(--main-white-white-50-opacity);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    /* Safari */
+
+    @include breakpoint($bp-1440) {
+        padding: 16px;
+    }
 
     &--tall {
         min-height: 434px;
+
+        @include breakpoint($bp-1440) {
+            min-height: 320px;
+        }
+
     }
 
     &--short {
         min-height: 209px;
+
+        @include breakpoint($bp-1440) {
+            min-height: 154px;
+        }
+
     }
 
     &__title {
@@ -54,6 +63,11 @@
         line-height: 143%;
         letter-spacing: 0.06em;
         color: var(--main-white-white-100);
+
+        @include breakpoint($bp-1440) {
+            font-size: 20px;
+            line-height: 140%;
+        }
 
         &--spaced {
             margin-bottom: 12px;
@@ -68,6 +82,14 @@
         line-height: 150%;
         letter-spacing: 0.06em;
         color: var(--main-accent-accent-100);
+
+        @include breakpoint($bp-1440) {
+            margin-bottom: 8px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+        }
     }
 
     &__text {
@@ -119,6 +141,11 @@
         color: var(--main-accent-accent-100);
         text-decoration: none;
         transition: opacity 0.2s ease;
+
+        @include breakpoint($bp-1440) {
+            font-size: 14px;
+            line-height: 143%;
+        }
 
         &:hover {
             svg {

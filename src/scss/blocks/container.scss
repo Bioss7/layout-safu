@@ -2,36 +2,27 @@
 @use "../_vars" as *;
 
 .container {
-  max-width: 1718px;
   width: 100%;
+  max-width: 1720px;
   margin: 0 auto;
 
-  @include breakpoint(1600px) {
-    padding: 0 20px;
+  @include breakpoint($bp-1440) {
+    max-width: 1280px;
   }
 
-  @include breakpoint($bp-lg) {
-    max-width: 1084px;
-    padding: 0;
+  @include breakpoint($bp-1200) {
+    max-width: 1136px;
   }
 
-  @include breakpoint($bp-md) {
-    max-width: 535px;
-    padding: 0 20px;
+  @include breakpoint($bp-992) {
+    max-width: 944px;
   }
 
-  @include breakpoint(576px) {
-    &--mobile {
-      max-width: 100%;
-    }
+  @include breakpoint($bp-768) {
+    max-width: 736px;
   }
 
-  @include breakpoint($bp-sm) {
-    max-width: 320px;
-    padding: 0;
-
-    &--mobile {
-      max-width: 360px;
-    }
+  @include breakpoint($bp-390) {
+    max-width: 358px;
   }
 }

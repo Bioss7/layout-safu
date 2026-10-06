@@ -113,12 +113,35 @@
     }
 
     /* ---------- ПОЗИЦИИ ТОЧЕК ---------- */
-    &__dot--1 { top: 22px;  left: 85px; }
-    &__dot--2 { top: 178px; left: 1px;   }
-    &__dot--3 { top: 312px; left: 86px;  }
-    &__dot--4 { top: 312px; right: 86px; }
-    &__dot--5 { top: 178px; right: 0;    }
-    &__dot--6 { top: 17px;  right: 94px; }
+    &__dot--1 {
+        top: 22px;
+        left: 85px;
+    }
+
+    &__dot--2 {
+        top: 178px;
+        left: 1px;
+    }
+
+    &__dot--3 {
+        top: 312px;
+        left: 86px;
+    }
+
+    &__dot--4 {
+        top: 312px;
+        right: 86px;
+    }
+
+    &__dot--5 {
+        top: 178px;
+        right: 0;
+    }
+
+    &__dot--6 {
+        top: 17px;
+        right: 94px;
+    }
 
 
     /* ========================================================
@@ -139,21 +162,56 @@
             height: auto;
         }
 
-        &--1 { left: 23px;   top: -18px;    width: 63px; height: 36px; }
-        &--2 { left: -34px;  top: 155px;    width: 27px; height: 36px; }
-        &--3 { left: 11px;   bottom: -7px;  width: 63px; height: 36px; }
-        &--4 { right: 24px;  bottom: -15px; width: 63px; height: 36px; }
-        &--5 { right: -32px; bottom: 172px; width: 27px; height: 36px; }
-        &--6 { right: 31px;  top: -15px;    width: 57px; height: 30px; }
+        &--1 {
+            left: 23px;
+            top: -18px;
+            width: 63px;
+            height: 36px;
+        }
+
+        &--2 {
+            left: -34px;
+            top: 155px;
+            width: 27px;
+            height: 36px;
+        }
+
+        &--3 {
+            left: 11px;
+            bottom: -7px;
+            width: 63px;
+            height: 36px;
+        }
+
+        &--4 {
+            right: 24px;
+            bottom: -15px;
+            width: 63px;
+            height: 36px;
+        }
+
+        &--5 {
+            right: -32px;
+            bottom: 172px;
+            width: 27px;
+            height: 36px;
+        }
+
+        &--6 {
+            right: 31px;
+            top: -15px;
+            width: 57px;
+            height: 30px;
+        }
     }
 
     /* Показ tail, когда точка активна */
-    &__dot--1.pulse-circle__dot--active ~ &__tail--1,
-    &__dot--2.pulse-circle__dot--active ~ &__tail--2,
-    &__dot--3.pulse-circle__dot--active ~ &__tail--3,
-    &__dot--4.pulse-circle__dot--active ~ &__tail--4,
-    &__dot--5.pulse-circle__dot--active ~ &__tail--5,
-    &__dot--6.pulse-circle__dot--active ~ &__tail--6 {
+    &__dot--1.pulse-circle__dot--active~&__tail--1,
+    &__dot--2.pulse-circle__dot--active~&__tail--2,
+    &__dot--3.pulse-circle__dot--active~&__tail--3,
+    &__dot--4.pulse-circle__dot--active~&__tail--4,
+    &__dot--5.pulse-circle__dot--active~&__tail--5,
+    &__dot--6.pulse-circle__dot--active~&__tail--6 {
         opacity: 1;
         visibility: visible;
     }
@@ -225,6 +283,12 @@
     align-items: center;
     gap: 24px;
 
+    @include breakpoint($bp-1440) {
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+
     &__wrap {
         display: flex;
         align-items: center;
@@ -257,15 +321,71 @@
    ОТСТУПЫ КАРТОЧЕК
    ============================================================ */
 .pulse__col--left {
-    .pulse-card--edu        { margin-left: 26px; margin-right: 14px; margin-bottom: 79px; }
-    .pulse-card--science    { margin-right: 39px; margin-bottom: 79px; }
-    .pulse-card--university { margin-left: 26px; margin-right: 14px; }
+    .pulse-card--edu {
+        margin-left: 26px;
+        margin-right: 14px;
+        margin-bottom: 79px;
+    }
+
+    .pulse-card--science {
+        margin-right: 39px;
+        margin-bottom: 79px;
+    }
+
+    .pulse-card--university {
+        margin-left: 26px;
+        margin-right: 14px;
+    }
+
+    @include breakpoint($bp-1440) {
+        .pulse-card--edu {
+            margin-left: 40px;
+            margin-right: 48px;
+            margin-bottom: 79px;
+        }
+
+        .pulse-card--science {
+            margin-right: 0;
+            margin-bottom: 79px;
+        }
+
+        .pulse-card--university {
+            margin-left: 40px;
+            margin-right: 48px;
+        }
+    }
 }
 
 .pulse__col--right {
-    .pulse-card--safu          { margin-left: 14px; margin-bottom: 79px; }
-    .pulse-card--international { margin-left: 39px; margin-bottom: 79px; }
-    .pulse-card--life          { margin-left: 14px; }
+    .pulse-card--safu {
+        margin-left: 14px;
+        margin-bottom: 79px;
+    }
+
+    .pulse-card--international {
+        margin-left: 39px;
+        margin-bottom: 79px;
+    }
+
+    .pulse-card--life {
+        margin-left: 14px;
+    }
+
+    @include breakpoint($bp-1440) {
+        .pulse-card--safu {
+            margin-left: 58px;
+            margin-bottom: 79px;
+        }
+
+        .pulse-card--international {
+            margin-left: auto;
+            margin-bottom: 79px;
+        }
+
+        .pulse-card--life {
+            margin-left: 58px;
+        }
+    }
 }
 
 
@@ -279,6 +399,11 @@
     width: 706px;
     min-height: 410px;
     background: var(--main-white-white-400-opacity);
+
+    @include breakpoint($bp-1440) {
+        min-height: 320px;
+        width: 100%;
+    }
 
     &__decor {
         position: absolute;
@@ -301,7 +426,11 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        min-height: 354px; /* 410 - 2*28 = 354 */
+        min-height: 354px;
+
+        @include breakpoint($bp-1440) {
+            min-height: 100%;
+        }
     }
 
     &__title {
@@ -324,15 +453,18 @@
     }
 
     &__links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         gap: 12px;
     }
 
     &__col {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 12px;
+
+        @include breakpoint($bp-1440) {
+            gap: 16px;
+        }
     }
 }
 
@@ -370,11 +502,16 @@
     gap: 12px;
     border-radius: 4px;
     padding: 18px 12px;
-    width: 316px;
+    max-width: 316px;
+    width: 100%;
     min-height: 74px;
     background: var(--main-white-white-100);
     text-decoration: none;
     transition: background 0.2s ease;
+
+    @include breakpoint($bp-1440) {
+        max-width: 397px;
+    }
 
     &:hover {
         background: var(--main-accent-accent-300-opacity);

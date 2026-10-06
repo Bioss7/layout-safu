@@ -1,104 +1,104 @@
-@use "../_mixins" as *;
-@use "../_vars" as *;
+// @use "../_mixins" as *;
+// @use "../_vars" as *;
 
-.tooltip {
-  position: relative;
-  z-index: 100;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+// .tooltip {
+//   position: relative;
+//   z-index: 100;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   transition: transform 0.2s ease;
 
-  @include breakpoint($bp-md) {
-    align-self: baseline;
-  }
-}
+//   @include breakpoint($bp-md) {
+//     align-self: baseline;
+//   }
+// }
 
-.tooltip svg {
-  display: block;
-  width: 16px;
-  height: 16px;
-  fill: var(--color-tooltip-icon);
-  transition: fill 0.3s ease;
-}
+// .tooltip svg {
+//   display: block;
+//   width: 16px;
+//   height: 16px;
+//   fill: var(--color-tooltip-icon);
+//   transition: fill 0.3s ease;
+// }
 
-.tooltip:hover svg {
-  fill: var(--color-white);
-}
+// .tooltip:hover svg {
+//   fill: var(--color-white);
+// }
 
-.tooltip__text {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%);
+// .tooltip__text {
+//   position: absolute;
+//   top: calc(100% + 12px);
+//   left: 50%;
+//   transform: translateX(-50%);
 
-  width: 465px;
-  padding: 24px;
+//   width: 465px;
+//   padding: 24px;
 
-  background: var(--color-white);
-  border-radius: 16px;
+//   background: var(--color-white);
+//   border-radius: 16px;
 
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
-  color: var(--color-tooltip-text);
-  user-select: text;
+//   font-family: $second-family;
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 143%;
+//   color: var(--color-tooltip-text);
+//   user-select: text;
 
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    visibility 0.25s;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition:
+//     opacity 0.25s ease,
+//     transform 0.25s ease,
+//     visibility 0.25s;
 
-  text-align: left;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  z-index: 10000;
+//   text-align: left;
+//   font-weight: 400;
+//   letter-spacing: 0.01em;
+//   z-index: 10000;
 
-  a {
-    color: var(--color-primary-blue);
-  }
+//   a {
+//     color: var(--color-primary-blue);
+//   }
 
-  @include breakpoint($bp-lg) {
-    width: 433px;
-  }
+//   @include breakpoint($bp-lg) {
+//     width: 433px;
+//   }
 
-  @include breakpoint($bp-md) {
-    transform: translateX(-85%);
-    width: 320px;
-    left: 0;
-  }
-}
+//   @include breakpoint($bp-md) {
+//     transform: translateX(-85%);
+//     width: 320px;
+//     left: 0;
+//   }
+// }
 
-.tooltip__text {
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: -1px;
+// .tooltip__text {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 100%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     margin-bottom: -1px;
 
-    border: 8px solid transparent;
-    border-bottom-color: var(--color-white);
+//     border: 8px solid transparent;
+//     border-bottom-color: var(--color-white);
 
-    @include breakpoint($bp-md) {
-      top: -15px;
-      left: 85%;
-      transform: translateX(0);
-    }
-  }
-}
+//     @include breakpoint($bp-md) {
+//       top: -15px;
+//       left: 85%;
+//       transform: translateX(0);
+//     }
+//   }
+// }
 
-.tooltip:hover .tooltip__text {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%);
+// .tooltip:hover .tooltip__text {
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translateX(-50%);
 
-  @include breakpoint($bp-md) {
-    transform: translateX(-85%);
-  }
-}
+//   @include breakpoint($bp-md) {
+//     transform: translateX(-85%);
+//   }
+// }
