@@ -121,12 +121,16 @@
         transition: opacity 0.2s ease;
 
         &:hover {
-            opacity: 0.7;
+            svg {
+                transform: translateX(4px);
+            }
         }
 
         svg {
             flex-shrink: 0;
             display: block;
+            transition: transform 0.3s ease;
+            will-change: transform;
         }
     }
 }

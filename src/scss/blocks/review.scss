@@ -61,8 +61,7 @@
 }
 
 /* Принудительно задаём ширину слайда для Swiper */
-.reviews-slider.swiper .swiper-wrapper {
-}
+.reviews-slider.swiper .swiper-wrapper {}
 
 .reviews-slider.swiper .swiper-slide {
   width: 100% !important;
@@ -221,6 +220,7 @@
   &__link-icon {
     display: block;
     flex-shrink: 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    will-change: transform;
   }
 }
