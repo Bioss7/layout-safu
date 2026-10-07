@@ -11,12 +11,26 @@
   background: var(--main-white-white-700-opacity);
   color: var(--color-text);
 
+  &__inner {
+    @include breakpoint($bp-1200) {
+      padding-top: 68px;
+      padding-bottom: 24px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: right;
     padding: 24px 0 16px;
     gap: 24px;
+
+    @include breakpoint($bp-1200) {
+      padding: 0;
+    }
   }
 
   &__controls {
@@ -196,6 +210,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 0 24px;
+
+    @include breakpoint($bp-1200) {
+      padding: 0;
+    }
   }
 
   &__logo {
@@ -221,6 +239,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include breakpoint($bp-1200) {
+      display: none;
+    }
   }
 
   &__nav-item {

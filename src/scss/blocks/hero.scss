@@ -13,6 +13,10 @@
   background-position: center center;
   background-size: cover;
 
+  @include breakpoint($bp-1200) {
+    padding: 215px 0 73px;
+  }
+
   &__inner {
     position: relative;
     z-index: 1;
@@ -22,7 +26,12 @@
     max-width: 928px;
 
     @include breakpoint($bp-1440) {
+      padding: 24px;
       max-width: 816px
+    }
+
+    @include breakpoint($bp-1200) {
+      max-width: 848px;
     }
   }
 
@@ -78,6 +87,10 @@
     margin: 0 0 40px;
     padding: 0;
     list-style: none;
+
+    @include breakpoint($bp-1200) {
+      margin: 0 0 32px;
+    }
   }
 
   &__tab {
@@ -176,8 +189,12 @@
     @include breakpoint($bp-1440) {
       font-size: 40px;
       line-height: 120%;
-      letter-spacing: 0.06em;
       color: var(--main-blue-blue-100);
+    }
+
+    @include breakpoint($bp-1200) {
+      font-size: 32px;
+      line-height: 163%;
     }
   }
 
@@ -188,6 +205,10 @@
     font-size: 20px;
     line-height: 140%;
     color: var(--main-blue-blue-80);
+
+    @include breakpoint($bp-1200) {
+      margin-bottom: 32px;
+    }
   }
 
   &__actions {
@@ -195,6 +216,10 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 40px;
+
+    @include breakpoint($bp-1200) {
+      margin-bottom: 32px;
+    }
   }
 
   &__btn {

@@ -17,6 +17,11 @@
     line-height: 163%;
   }
 
+  @include breakpoint($bp-1200) {
+    font-size: 28px;
+    line-height: 143%;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -214,6 +219,10 @@
 
 .section-title {
   margin-bottom: 80px;
+
+  @include breakpoint($bp-1440) {
+    margin-bottom: 60px;
+  }
 }
 
 .section-descr {

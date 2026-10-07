@@ -17,13 +17,53 @@
             gap: 11px;
         }
     }
+
+    /* ===== 1200px: 2 колонки, карточки 3 и 4 друг под другом справа ===== */
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+
+        /* Левая колонка: col1 сверху, col2 снизу */
+        .stats__col:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .stats__col:nth-child(2) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        /* Правая колонка: col3 сверху, col4 снизу */
+        .stats__col:nth-child(3) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .stats__col:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        /* Карточка «Программ» (1-я колонка) — высота 154px */
+        .stats__col:nth-child(1) .stat-card {
+            min-height: 154px;
+        }
+
+        /* Карточки «Иностранных студентов» и «Объём НИР» */
+        .stats__col:nth-child(3) .stat-card,
+        .stats__col:nth-child(4) .stat-card {
+            width: 561px;
+            max-width: 100%;
+            min-height: 250px;
+        }
+    }
 }
 
 .stat-card {
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* карточка растягивается на всю доступную высоту колонки */
     width: 100%;
     min-height: 434px;
     padding: 32px;
@@ -44,6 +84,9 @@
             min-height: 320px;
         }
 
+        @include breakpoint($bp-1200) {
+            min-height: 180px;
+        }
     }
 
     &--short {
@@ -52,7 +95,6 @@
         @include breakpoint($bp-1440) {
             min-height: 154px;
         }
-
     }
 
     &__title {
@@ -99,6 +141,11 @@
         line-height: 150%;
         letter-spacing: 0.06em;
         color: var(--main-white-white-700-opacity);
+
+        @include breakpoint($bp-1200) {
+            font-size: 14px;
+            line-height: 143%;
+        }
     }
 
     &__media {
@@ -120,7 +167,6 @@
             height: auto;
         }
 
-        /* Запасной вариант: график (если нет картинки) */
         &--chart {
             align-items: stretch;
             justify-content: stretch;
