@@ -2,10 +2,26 @@
 @use "../_vars" as *;
 
 .stats {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     align-items: stretch;
+
+    &__row {
+        display: flex;
+        width: 100%;
+        gap: 16px;
+
+        &:first-child {
+            flex-direction: column;
+        }
+
+        @include breakpoint($bp-1440) {
+            &:last-child {
+                flex-direction: column;
+            }
+        }
+    }
 
     &__col {
         display: flex;
@@ -78,6 +94,7 @@
     }
 
     &--tall {
+        max-width: 418px;
         min-height: 434px;
 
         @include breakpoint($bp-1440) {
@@ -85,15 +102,22 @@
         }
 
         @include breakpoint($bp-1200) {
+            max-width: 100%;
             min-height: 180px;
         }
     }
 
     &--short {
+        max-width: 418px;
         min-height: 209px;
 
         @include breakpoint($bp-1440) {
             min-height: 154px;
+        }
+
+        @include breakpoint($bp-1200) {
+            min-height: 100%;
+            max-width: 100%;
         }
     }
 
