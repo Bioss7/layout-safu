@@ -224,3 +224,25 @@
         color: var(--main-white-white-100);
     }
 }
+
+@include breakpoint($bp-1440) {
+  .admission__column { min-width: 0; }
+  .admission__row .admission-card { width: calc((100% - 16px) / 2); }
+}
+@include breakpoint($bp-1200) {
+  .admission-card__title { font-size: 24px; line-height: 32px; }
+  .admission-card__subtitle { font-size: 16px; line-height: 24px; }
+}
+@include breakpoint($bp-768) {
+  .admission__column:last-child { flex-direction: column; }
+  .admission-card--lg { height: 240px; }
+  .admission-card--lg-sm { flex: auto; max-width: none; }
+  .admission-card__title { font-size: clamp(18px, 3.125vw, 24px); line-height: 1.333; }
+  .admission-card__content { max-width: 100%; }
+}
+@include breakpoint($bp-390) {
+  .admission__row { flex-direction: column; }
+  .admission__row .admission-card, .admission-card { width: 100%; max-width: none; height: 290px; padding: 16px; }
+  .admission-card__title { font-size: 20px; line-height: 28px; }
+  .admission-card__subtitle { font-size: 16px; line-height: 24px; }
+}

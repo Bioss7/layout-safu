@@ -202,3 +202,41 @@
 .life-card__date svg {
     flex-shrink: 0;
 }
+
+@include breakpoint($bp-1200) {
+  .section--life .section-header__content { min-width: 0; flex: 0 1 calc(50% - 8px); width: calc(50% - 8px); }
+  .life-tabs__tab { width: auto; padding-inline: 20px; }
+  .life-panel--active { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .life-card { width: 100%; min-width: 0; min-height: 343px; }
+  .life-card:nth-child(n + 4) { display: none; }
+  .life-card__image { height: auto; aspect-ratio: 16 / 9; }
+  .section--life .section-header { margin-bottom: 60px; }
+}
+@include breakpoint($bp-992) {
+  .life-card { min-height: 307px; }
+  .section--life .section-header { margin-bottom: 40px; }
+}
+
+
+@include breakpoint($bp-992) {
+  .life-tabs { flex-wrap: wrap; gap: 16px; }
+  .life-tabs__list { flex-wrap: wrap; gap: 12px; }
+}
+@include breakpoint($bp-768) {
+  .section--life .section-header { flex-direction: column; gap: 32px; }
+  .section--life .section-header__content { flex: auto; width: 100%; gap: 24px; }
+  .life-tabs { flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
+  .life-panel--active { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .life-card:nth-child(n + 3) { display: none; }
+  .life-card { min-height: 329px; }
+}
+@include breakpoint($bp-390) {
+  .section--life .section-header { gap: 16px; margin-bottom: 32px; }
+  .section--life .section-header__content { gap: 16px; }
+  .life-tabs { margin-bottom: 16px; }
+  .life-tabs__tab { padding: 11px 14px; font-size: 12px; }
+  .life-panel--active { grid-template-columns: minmax(0, 1fr); }
+  .life-card:nth-child(3) { display: flex; }
+  .life-card { min-height: 340px; }
+  .life-card__image { height: 202px; }
+}

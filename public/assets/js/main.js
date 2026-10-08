@@ -29,31 +29,14 @@
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.js-footer-toggle');
-    const details = document.querySelector('.js-footer-details');
-
-    if (toggle && details) {
-        toggle.addEventListener('click', () => {
-            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-
-            if (isOpen) {
-                details.classList.remove('is-open');
-                toggle.setAttribute('aria-expanded', 'false');
-
-                const onClose = () => {
-                    details.hidden = true;
-                    details.removeEventListener('transitionend', onClose);
-                };
-                details.addEventListener('transitionend', onClose, { once: true });
-            } else {
-                details.hidden = false;
-                requestAnimationFrame(() => {
-                    details.classList.add('is-open');
-                });
-                toggle.setAttribute('aria-expanded', 'true');
-            }
-        });
-    }
+    const toggle = document.querySelector('[data-footer-toggle]');
+    const details = document.querySelector('[data-footer-details]');
+    toggle?.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        details.hidden = !expanded;
+        details.classList.toggle('footer__details--open', expanded);
+    });
 
     // Круг
     const progress = document.querySelector('.pulse-circle__progress');
@@ -110,7 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (key === activeTabKey) return;
 
         tabs.forEach((tab) => {
-            tab.classList.toggle('is-active', tab.dataset.tabContent === key);
+            tab.classList.toggle('pulse-panel__tab--active', tab.dataset.tabContent === key);
+            tab.setAttribute('aria-hidden', String(tab.dataset.tabContent !== key));
         });
 
         activeTabKey = key;
@@ -126,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // карточки
         cards.forEach((c) => {
-            c.classList.toggle('is-active', c.dataset.tab === key);
+            c.classList.toggle('pulse-card--active', c.dataset.tab === key);
+            c.setAttribute('aria-pressed', String(c.dataset.tab === key));
         });
 
         // круг

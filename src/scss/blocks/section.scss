@@ -330,3 +330,38 @@
 .section-overflow {
   overflow: hidden;
 }
+
+@include breakpoint($bp-1200) {
+  .section { padding-block: 80px; }
+  .section--life, .section--directions { padding-bottom: 0; }
+  .section--reviews { padding-block: 0; }
+  .section-header, .section-title { margin-bottom: 60px; }
+}
+@include breakpoint($bp-992) {
+  .section { padding-block: 60px; }
+  .section--life, .section--directions { padding-bottom: 0; }
+  .section--reviews { padding-block: 0; }
+  .section-header, .section-title { margin-bottom: 40px; }
+  .section-header__content { min-width: 0; }
+}
+@include breakpoint($bp-768) {
+  .section { padding-block: 52px; }
+  .section--life, .section--directions { padding-bottom: 0; }
+  .section--reviews { padding-block: 0; }
+  .title-2 { font-size: clamp(20px, 3.125vw, 24px); line-height: 1.333; gap: 12px; min-width: 0; }
+  .title-2::before { width: 10px; height: 10px; flex: 0 0 10px; }
+  .section-header { gap: 24px; }
+  .section-header__content { flex: 1 1 auto; width: 100%; }
+  .section-header__descr { font-size: 14px; line-height: 20px; }
+  .section-header--life .title-2 { flex-shrink: 1; }
+}
+@include breakpoint($bp-390) {
+  .section { padding-block: 80px; }
+  .section--stats { padding-block: 60px; }
+  .section--life, .section--directions { padding-bottom: 0; }
+  .section--reviews { padding-block: 0; }
+  .section-header, .section-title { margin-bottom: 32px; }
+  .section-header { flex-direction: column; gap: 16px; }
+  .title-2 { font-size: 20px; line-height: 28px; gap: 14px; }
+  .title-2::before { flex-basis: 12px; width: 12px; height: 12px; }
+}

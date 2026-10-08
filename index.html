@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../public/assets/css/style.css">
     <link rel="stylesheet" href="../public/assets/vendor/swiper-bundle.min.css" />
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script> -->
@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-header>
         <div class="container">
             <div class="header__inner">
                 <div class="header__top">
                     <div class="header__controls">
-                        <button class="header__control header__control--search" type="button" aria-label="Поиск">
+                        <button class="header__control header__control--search" type="button" aria-label="Поиск" data-header-toggle="search" aria-controls="header-search" aria-expanded="false">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -41,7 +41,7 @@
 
                         <span class="header__separator"></span>
 
-                        <div class="header__dropdown">
+                        <div class="header__dropdown header__dropdown--branches" data-header-dropdown>
                             <button class="header__control header__control--branch" type="button">
                                 <span class="header__control-text">Филиал</span>
                                 <svg class="header__icon header__icon--arrow" width="16" height="16" viewBox="0 0 16 16"
@@ -66,7 +66,7 @@
 
                         <span class="header__separator"></span>
 
-                        <div class="header__dropdown">
+                        <div class="header__dropdown" data-header-dropdown>
                             <button class="header__control header__control--lang" type="button">
                                 <span class="header__control-text">RU</span>
                                 <svg class="header__icon header__icon--arrow" width="16" height="16" viewBox="0 0 16 16"
@@ -86,8 +86,8 @@
                         <span class="header__separator"></span>
                     </div>
 
-                    <button class="header__menu-btn" type="button" aria-label="Меню">
-                        <span class="header__menu-btn-text">Меню</span>
+                    <button class="header__menu-btn" type="button" aria-label="Меню" data-header-toggle="menu" aria-controls="header-menu" aria-expanded="false">
+                        <span class="header__menu-btn-text">Меню</span><img class="header__close-icon" src="../public/assets/img/header-close.svg" alt="">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.0002 9.66667C14.3684 9.66667 14.6668 9.96514 14.6668 10.3333C14.6668 10.7015 14.3684 11 14.0002 11H2.00016C1.63197 11 1.3335 10.7015 1.3335 10.3333C1.3335 9.96514 1.63197 9.66667 2.00016 9.66667H14.0002ZM14.0002 5C14.3684 5 14.6668 5.29848 14.6668 5.66667C14.6668 6.03486 14.3684 6.33333 14.0002 6.33333H2.00016C1.63197 6.33333 1.3335 6.03486 1.3335 5.66667C1.3335 5.29848 1.63197 5 2.00016 5H14.0002Z"
@@ -98,7 +98,7 @@
 
                 <div class="header__bottom">
                     <a class="header__logo" href="/">
-                        <img class="header__logo-img" src="../public/assets/img/logo.png" alt="Логотип">
+                        <img class="header__logo-img" src="../public/assets/img/logo.png" alt="Северный Арктический федеральный университет"><img class="header__logo-mobile" src="../public/assets/img/header-logo.svg" alt="САФУ">
                     </a>
 
                     <nav class="header__nav">
@@ -114,6 +114,63 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="header__menu" id="header-menu" data-header-panel="menu" hidden>
+                <h2 class="header__menu-heading">Меню сайта</h2>
+                <nav class="header__menu-list" aria-label="Разделы сайта">
+                    <div class="header__menu-item header__menu-branches">
+                        <button class="header__section-btn" type="button" data-header-section="branches" aria-controls="header-branches" aria-expanded="false">Филиалы<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></button>
+                        <div class="header__submenu" id="header-branches" data-header-submenu="branches" hidden>
+                            <ul class="header__submenu-list">
+                                <li><a class="header__submenu-link" href="#">Архангельск</a></li>
+                                <li><a class="header__submenu-link" href="#">Северодвинск</a></li>
+                                <li><a class="header__submenu-link" href="#">Нарьян-Мар</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__menu-item">
+                        <button class="header__section-btn header__section-btn--active" type="button" data-header-section="university" aria-controls="header-university" aria-expanded="true">Университет<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></button>
+                        <div class="header__submenu" id="header-university" data-header-submenu="university">
+                            <h3 class="header__submenu-title">Университет</h3>
+                            <ul class="header__submenu-list">
+                                <li><a class="header__submenu-link" href="#">О САФУ: миссия и история<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                                <li><a class="header__submenu-link" href="#">Стратегический технологический проект<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                                <li><a class="header__submenu-link" href="#">Программа развития САФУ<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                                <li><a class="header__submenu-link" href="#">Структура и филиалы<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                                <li><a class="header__submenu-link" href="#">Документы<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                                <li><a class="header__submenu-link" href="#">Сведения об ОО<img src="../public/assets/img/header-chevron-right.svg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="header__section-link" href="#">Наука<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></a>
+                    <a class="header__section-link" href="#">Образование<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></a>
+                    <a class="header__section-link" href="#">Жизнь САФУ<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></a>
+                    <a class="header__section-link" href="#">International<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></a>
+                    <a class="header__section-link" href="#">САФУ для всех<img class="header__section-arrow" src="../public/assets/img/header-chevron-down.svg" alt=""></a>
+                </nav>
+            </div>
+            <!-- Static preview: add header__search--results or header__search--empty to this panel. -->
+            <div class="header__search" id="header-search" data-header-panel="search" hidden>
+                <h2 class="header__search-title">Поиск</h2>
+                <form data-header-search-form role="search" aria-label="Поиск по сайту">
+                    <div class="header__search-field">
+                        <img src="../public/assets/img/header-search.svg" alt="">
+                        <input class="header__search-input" data-header-query type="search" name="query" aria-label="Поиск по сайту" placeholder="Поиск по сайту" autocomplete="off">
+                        <button class="header__search-clear" data-header-clear type="button" aria-label="Очистить поиск"><img src="../public/assets/img/header-clear.svg" alt=""></button>
+                    </div>
+                </form>
+                <div class="header__search-results">
+                    <p class="header__search-count">Найдено: 4</p>
+                    <a class="header__result" href="#"><span class="header__result-title">Поступление 2027</span><span>Прием заявок на 2027 год открыт — начните свой путь к успеху уже сегодня!</span></a>
+                    <a class="header__result" href="#"><span class="header__result-title">Поступление 2027</span><span>Прием заявок на 2027 год открыт — начните свой путь к успеху уже сегодня!</span></a>
+                    <a class="header__result" href="#"><span class="header__result-title">Поступление 2027</span><span>Прием заявок на 2027 год открыт — начните свой путь к успеху уже сегодня!</span></a>
+                    <a class="header__result" href="#"><span class="header__result-title">Поступление 2027</span><span>Прием заявок на 2027 год открыт — начните свой путь к успеху уже сегодня!</span></a>
+                </div>
+                <div class="header__search-empty">Ничего не найдено</div>
+            </div>
+        </div>
+
     </header>
 
     <section class="hero">
@@ -714,13 +771,11 @@
                             <h3 class="stat-card__title stat-card__title--spaced">294 млн ₽</h3>
                             <p class="stat-card__subtitle">Объём НИР</p>
 
-                            <div class="stat-card__media">
-                                <canvas class="stat-card__chart" data-chart="doughnut"
+                            <div class="stat-card__media stat-card__media--donut"><div class="stat-card__donut"><canvas class="stat-card__chart" data-chart="doughnut"
                                     data-labels="Хоз. договор,Гранты,Госзадание"
-                                    data-values="70268872.71,127000000.00,97228800,00"
+                                    data-values="70268872.71,127000000.00,97228800.00"
                                     data-colors="#00AEEF,#CCEFFC,#80D6F7">
-                                </canvas>
-                            </div>
+                                </canvas></div><ul class="stat-card__legend"><li class="stat-card__legend-item">Хоз. договор<span class="stat-card__legend-value">70 268 872,71 ₽</span></li><li class="stat-card__legend-item stat-card__legend-item--grants">Гранты<span class="stat-card__legend-value">127 000 000,00 ₽</span></li><li class="stat-card__legend-item stat-card__legend-item--state">Госзадание<span class="stat-card__legend-value">97 228 800,00 ₽</span></li></ul></div>
 
                             <a href="#" class="stat-card__link">
                                 <span>Динамика НИР</span>
@@ -1464,9 +1519,9 @@
                 <div class="pulse__wrap">
 
                     <div class="pulse__col pulse__col--left">
-                        <a class="pulse-card pulse-card--edu" href="#" data-tab="education">
+                        <button type="button" class="pulse-card pulse-card--edu" data-tab="education">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">Образование</h3>
+                                <span class="pulse-card__title">Образование</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1474,14 +1529,14 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 Исследования, научные центры, экспедиции и возможности для учёных
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
-                        <a class="pulse-card pulse-card--science" href="#" data-tab="science">
+                        <button type="button" class="pulse-card pulse-card--science" data-tab="science">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">Наука</h3>
+                                <span class="pulse-card__title">Наука</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1489,14 +1544,14 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 Исследования, научные центры, экспедиции и возможности для учёных
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
-                        <a class="pulse-card pulse-card--university" href="#" data-tab="university">
+                        <button type="button" class="pulse-card pulse-card--university" data-tab="university">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">Университет</h3>
+                                <span class="pulse-card__title">Университет</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1504,10 +1559,10 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 О САФУ, его структуре, развитии и официальных документах
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
                     </div>
 
@@ -1630,9 +1685,9 @@
                     <!-- Правая колонка -->
                     <div class="pulse__col pulse__col--right">
 
-                        <a class="pulse-card pulse-card--safu" href="#" data-tab="safu">
+                        <button type="button" class="pulse-card pulse-card--safu" data-tab="safu">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">САФУ для всех</h3>
+                                <span class="pulse-card__title">САФУ для всех</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1640,14 +1695,14 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 Возможности, сервисы и поддержка для каждого в САФУ
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
-                        <a class="pulse-card pulse-card--international" href="#" data-tab="international">
+                        <button type="button" class="pulse-card pulse-card--international" data-tab="international">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">international</h3>
+                                <span class="pulse-card__title">international</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1655,14 +1710,14 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 Обучение, сотрудничество и международные возможности САФУ
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
-                        <a class="pulse-card pulse-card--life" href="#" data-tab="life">
+                        <button type="button" class="pulse-card pulse-card--life" data-tab="life">
                             <div class="pulse-card__head">
-                                <h3 class="pulse-card__title">Жизнь САФУ</h3>
+                                <span class="pulse-card__title">Жизнь САФУ</span>
                                 <svg class="pulse-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1670,10 +1725,10 @@
                                         fill="currentColor" />
                                 </svg>
                             </div>
-                            <p class="pulse-card__text">
+                            <span class="pulse-card__text">
                                 Кампус, сообщества, творчество, спорт и поддержка студентов
-                            </p>
-                        </a>
+                            </span>
+                        </button>
 
                     </div>
 
@@ -1693,7 +1748,7 @@
                     </svg>
 
                     <div class="pulse-panel__content">
-                        <div class="pulse-panel__tab is-active" data-tab-content="education">
+                        <div class="pulse-panel__tab pulse-panel__tab--active" data-tab-content="education">
                             <h3 class="pulse-panel__title">Образование</h3>
                             <p class="pulse-panel__text">
                                 Выберите подходящую образовательную программу, познакомьтесь
@@ -1901,15 +1956,15 @@
         </div>
     </section>
 
-    <section class="section section--accent">
+    <section class="section section--accent section--reviews">
         <div class="container">
 
             <div class="section-header">
                 <h2 class="title-2">Гордость САФУ</h2>
             </div>
 
-            <div class="reviews-slider swiper">
-                <div class="reviews-slider__viewport swiper-wrapper">
+            <div class="reviews-slider swiper" data-reviews-slider>
+                <div class="reviews-slider__viewport swiper-wrapper" data-reviews-viewport>
 
                     <div class="reviews-slider__slide swiper-slide">
                         <div class="reviews-slider__group">
@@ -3007,7 +3062,7 @@
     <footer class="footer">
 
         <div class="footer__top">
-            <button class="footer__toggle js-footer-toggle" type="button" aria-expanded="false"
+            <button class="footer__toggle js-footer-toggle" data-footer-toggle type="button" aria-expanded="false"
                 aria-controls="footer-details">
                 <div class="container footer__toggle-inner">
                     <span class="footer__toggle-text">Дополнительные сведения и важные ссылки</span>
@@ -3020,7 +3075,7 @@
                 </div>
             </button>
 
-            <div class="footer__details js-footer-details" id="footer-details" hidden>
+            <div class="footer__details js-footer-details" data-footer-details id="footer-details" hidden>
                 <div class="footer__details-inner">
                     <div class="container footer__details-content">
                         <!-- Колонка 1 -->
@@ -3405,6 +3460,7 @@
 
     <script src="../public/assets/js/modal.js"></script>
     <script src="../public/assets/js/main.js"></script>
+    <script src="../public/assets/js/header.js"></script>
     <script src="../public/assets/vendor/swiper-bundle.min.js"></script>
     <script src="../public/assets/vendor/chart.umd.min.js"></script>
     <script src="../public/assets/js/hero.js"></script>

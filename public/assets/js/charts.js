@@ -118,102 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (type === 'doughnut') {
             config = {
                 type: 'doughnut',
-                data: {
-                    labels,
-                    datasets: [{
-                        data: values,
-                        backgroundColor: colors,
-                        borderWidth: 0,
-                        hoverOffset: 4,
-                    }]
-                },
+                data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 0, hoverOffset: 4 }] },
                 options: {
-                    ...common,
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    // Освобождаем место справа под легенду
-                    layout: {
-                        padding: {
-                            right: 160,   // <-- ключевой параметр
-                            left: 0,
-                            top: 0,
-                            bottom: 0,
-                        }
-                    },
-                    cutout: '65%',
-                    plugins: {
-                        ...common.plugins,
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: (ctx) => ` ${ctx.label}: ${fmtRub(ctx.parsed)}`
-                            }
-                        }
-                    }
-                },
-                plugins: [{
-                    id: 'doughnutRightLegend',
-                    afterDraw(chart) {
-                        const { ctx, chartArea } = chart;
-                        const ds = chart.data.datasets[0];
-                        const items = chart.data.labels.map((label, i) => ({
-                            label,
-                            value: ds.data[i],
-                            color: ds.backgroundColor[i],
-                        }));
-
-                        const dotSize = 8;
-                        const gapDotText = 10;
-                        const gapBetweenItems = 16;
-                        const labelLineHeight = 20;   // 14px * 1.43
-                        const valueLineHeight = 16;   // 12px * 1.33
-
-                        // Стартовая точка — сразу справа от области диаграммы
-                        const startX = chartArea.right + 16;
-                        const centerY = (chartArea.top + chartArea.bottom) / 2;
-
-                        const itemHeight = labelLineHeight + valueLineHeight;
-                        const totalHeight =
-                            items.length * itemHeight +
-                            (items.length - 1) * gapBetweenItems;
-
-                        let y = centerY - totalHeight / 2;
-
-                        ctx.save();
-                        ctx.textAlign = 'left';
-                        ctx.textBaseline = 'top';
-
-                        items.forEach((item) => {
-                            // Точка
-                            ctx.beginPath();
-                            ctx.fillStyle = item.color;
-                            ctx.arc(
-                                startX + dotSize / 2,
-                                y + labelLineHeight / 2,
-                                dotSize / 2,
-                                0,
-                                Math.PI * 2
-                            );
-                            ctx.fill();
-
-                            const textX = startX + dotSize + gapDotText;
-
-                            // Название категории — 600 / 14px / #fff
-                            ctx.font = "600 14px 'Montserrat', sans-serif";
-                            ctx.fillStyle = '#FFFFFF';
-                            ctx.fillText(item.label, textX, y);
-
-                            // Значение — 400 / 12px / rgba(255,255,255,0.7)
-                            ctx.font = "400 12px 'Montserrat', sans-serif";
-                            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
-                            ctx.fillText(fmtRub(item.value), textX, y + labelLineHeight);
-
-                            y += itemHeight + gapBetweenItems;
-                        });
-
-                        ctx.restore();
-                    }
-                }]
+                    ...common, responsive: true, maintainAspectRatio: false, cutout: '65%',
+                    plugins: { ...common.plugins, legend: { display: false },
+                        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtRub(ctx.parsed)}` } } }
+                }
             };
         }
 

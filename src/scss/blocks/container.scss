@@ -7,22 +7,29 @@
   margin: 0 auto;
 
   @include breakpoint($bp-1440) {
+    width: 100%;
     max-width: 1280px;
   }
 
   @include breakpoint($bp-1200) {
+    width: calc(100vw - 64px);
     max-width: 1136px;
   }
 
   @include breakpoint($bp-992) {
+    width: calc(100vw - 48px);
     max-width: 944px;
   }
 
   @include breakpoint($bp-768) {
+    width: calc(100vw - 32px);
     max-width: 736px;
   }
 
   @include breakpoint($bp-390) {
     max-width: 358px;
   }
+}
+@include breakpoint($bp-1200) {
+  html { scrollbar-gutter: auto; }
 }
