@@ -278,7 +278,7 @@ html.page--header-open { overflow: hidden; }
     backdrop-filter: blur(18px);
   }
   &--open &__inner {
-    padding: 68px 0 24px;
+    padding: 60px 0 24px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -307,7 +307,7 @@ html.page--header-open { overflow: hidden; }
     column-gap: 40px;
     grid-template-rows: repeat(6, 80px);
     align-content: start;
-    padding: 52px 0 80px;
+    padding: 0 0 120px;
     min-height: calc(100dvh - var(--header-height));
   }
   &__menu-heading {
@@ -441,30 +441,33 @@ html.page--header-open { overflow: hidden; }
 
   @include breakpoint($bp-1200) {
     --header-height: 142px;
-    &__inner { align-items: center; gap: 24px; }
+    &__inner { align-items: center; gap: 16px; }
     &__top { gap: 16px; }
-    &__controls { gap: 16px; }
-    &__menu { grid-template-columns: minmax(260px, 36%) minmax(0, 1fr); }
-    &__section-btn, &__section-link { padding-inline: 24px; }
+    &__controls { gap: 24px; }
+    &__menu { grid-template-columns: 332px minmax(0, 1fr); padding-top: 56px; padding-bottom: 80px; }
+    &__section-btn, &__section-link { padding: 24px 32px; font-size: 20px; line-height: 28px; }
+    &__submenu-title, &__search-title { margin-bottom: 32px; font-size: 20px; line-height: 28px; }
   }
   @include breakpoint($bp-992) {
-    &__controls { gap: 8px; }
-    &__section-btn, &__section-link { font-size: 20px; padding-inline: 16px; }
+    &__separator { display: none; }
+    &__controls { gap: 24px; }
+    &__menu { grid-template-columns: 304px minmax(0, 1fr); column-gap: 32px; padding-top: 48px; padding-bottom: 40px; }
+    &__section-btn, &__section-link { min-height: 72px; padding: 24px; font-size: 16px; line-height: 24px; }
+    &__submenu-title, &__search-title { margin-bottom: 20px; font-size: 16px; line-height: 24px; }
   }
   @include breakpoint($bp-768) {
-    --header-height: 112px;
-    &__inner, &--open &__inner { padding: 50px 0 16px; gap: 8px; }
+    --header-height: 106px;
+    &__inner, &--open &__inner { padding: 50px 0 16px; gap: 16px; }
     &__controls { gap: 8px; }
     &__top { gap: 8px; }
     &__logo-img { display: none; }
     &__logo-mobile { display: block; }
     &__logo { height: 40px; display: flex; align-items: flex-end; }
     &__separator, &__dropdown--branches { display: none; }
-    &__control--lang { padding-inline: 14px; }
+    &__control--lang { padding-inline: 12px; }
     &__menu-btn { width: 44px; height: 44px; justify-content: center; }
     &__menu-btn-text { display: none; }
-    &--open { background: var(--main-blue-blue-5); backdrop-filter: none; }
-    &__menu { display: block; min-height: 0; padding: 22px 0 60px; }
+    &__menu { display: block; min-height: 0; padding: 38px 0 60px; }
     &__menu-list { display: block; }
     &__menu-item { display: block; }
     &__menu-branches { display: block; }
@@ -480,6 +483,7 @@ html.page--header-open { overflow: hidden; }
     &__section-btn--active &__section-arrow { transform: rotate(180deg); filter: brightness(0) invert(1); }
     &__submenu { padding: 16px; background: var(--main-white-white-100); }
     &__submenu-title { display: none; }
+    &__submenu-list { gap: 12px; }
     &__submenu-link { width: 100%; justify-content: space-between; padding: 12px 0; }
     &__search { padding: 16px 0 60px; }
     &__search-title, &__search-field > img { display: none; }

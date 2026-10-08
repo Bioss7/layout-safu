@@ -17,14 +17,10 @@
     line-height: 163%;
   }
 
-  @include breakpoint($bp-1200) {
-    font-size: 28px;
-    line-height: 143%;
-  }
-
   &::before {
     content: "";
     display: block;
+    flex: 0 0 14px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -233,14 +229,6 @@
   color: var(--main-white-white-700-opacity);
 }
 
-// .section-header--life {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-start;
-//   gap: 40px;
-//   margin-bottom: 40px;
-// }
-
 .section-header--life .title-2 {
   margin: 0;
   flex-shrink: 0;
@@ -284,13 +272,27 @@
   &--pulse {
     padding: 0 0 120px;
     width: 100%;
-    background: url("../img/pulse/pulse-bg.png") center center / cover no-repeat;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background: url("../img/pulse/pulse-bg-1920.png") center center / cover no-repeat;
 
     @include breakpoint($bp-1440) {
-      background: url("../img/pulse/pulse-bg.png") center center / cover no-repeat;
+      padding-bottom: 0;
+      background-image: url("../img/pulse/pulse-bg-1440.png");
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image: url("../img/pulse/pulse-bg-1200.png");
+    }
+
+    @include breakpoint($bp-992) {
+      background-image: url("../img/pulse/pulse-bg-992.png");
+    }
+
+    @include breakpoint($bp-768) {
+      background-image: url("../img/pulse/pulse-bg-768.png");
+    }
+
+    @include breakpoint($bp-390) {
+      background-image: url("../img/pulse/pulse-bg-390.png");
     }
   }
 
@@ -306,12 +308,6 @@
 
   &--history {
     padding-top: 0;
-  }
-
-  &--pulse {
-    @include breakpoint($bp-1440) {
-      padding-bottom: 0;
-    }
   }
 
   &__row {

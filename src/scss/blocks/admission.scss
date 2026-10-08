@@ -68,6 +68,7 @@
 
     @include breakpoint($bp-1440) {
         max-width: 362px;
+        padding: 16px;
     }
 
     @include breakpoint($bp-1200) {
@@ -143,36 +144,36 @@
 
     &--bg-3 {
         background-image:
-            url('../img/admission/04.png'),
+            url('../img/admission/03.png'),
             linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
 
         &:hover {
             background-image:
-                url('../img/admission/04-hover.png'),
+                url('../img/admission/03-hover.png'),
                 linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
         }
     }
 
     &--bg-4 {
         background-image:
-            url('../img/admission/05.png'),
+            url('../img/admission/04.png'),
             linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
 
         &:hover {
             background-image:
-                url('../img/admission/05-hover.png'),
+                url('../img/admission/04-hover.png'),
                 linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
         }
     }
 
     &--bg-5 {
         background-image:
-            url('../img/admission/03.png'),
+            url('../img/admission/05.png'),
             linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
 
         &:hover {
             background-image:
-                url('../img/admission/03-hover.png'),
+                url('../img/admission/05-hover.png'),
                 linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
         }
     }
@@ -231,18 +232,29 @@
 }
 @include breakpoint($bp-1200) {
   .admission-card__title { font-size: 24px; line-height: 32px; }
-  .admission-card__subtitle { font-size: 16px; line-height: 24px; }
+  .admission-card__subtitle { font-size: 20px; line-height: 28px; }
 }
 @include breakpoint($bp-768) {
   .admission__column:last-child { flex-direction: column; }
   .admission-card--lg { height: 240px; }
   .admission-card--lg-sm { flex: auto; max-width: none; }
-  .admission-card__title { font-size: clamp(18px, 3.125vw, 24px); line-height: 1.333; }
+  .admission-card__title { font-size: 20px; line-height: 28px; }
+  .admission-card__subtitle { font-size: 16px; line-height: 24px; }
   .admission-card__content { max-width: 100%; }
 }
 @include breakpoint($bp-390) {
-  .admission__row { flex-direction: column; }
-  .admission__row .admission-card, .admission-card { width: 100%; max-width: none; height: 290px; padding: 16px; }
-  .admission-card__title { font-size: 20px; line-height: 28px; }
+  .admission__column,
+  .admission__row { display: contents; }
+  .admission__column:first-child .admission-card:nth-child(1) { order: 1; }
+  .admission__column:first-child .admission-card:nth-child(2) { order: 2; }
+  .admission__column:last-child > .admission-card:first-child { order: 3; }
+  .admission__column:first-child .admission-card:nth-child(3) { order: 4; }
+  .admission__column:first-child .admission-card:nth-child(4) { order: 5; }
+  .admission__column:last-child > .admission-card:nth-child(2) { order: 6; }
+  .admission__column:last-child > .admission-card:nth-child(3) { order: 7; }
+  .admission__row .admission-card,
+  .admission-card { flex: 0 0 auto; width: 100%; max-width: none; height: 290px; padding: 16px; }
+  .admission-card__content { max-width: 100%; }
+  .admission-card__title { margin-bottom: 8px; font-size: 16px; line-height: 24px; }
   .admission-card__subtitle { font-size: 16px; line-height: 24px; }
 }

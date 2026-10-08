@@ -70,6 +70,14 @@
 
         &--spaced {
             margin-bottom: 12px;
+
+            @include breakpoint($bp-1440) {
+                margin-bottom: 3px;
+            }
+
+            @include breakpoint($bp-390) {
+                margin-bottom: 4px;
+            }
         }
     }
 
@@ -99,6 +107,11 @@
         letter-spacing: 0.06em;
         color: var(--main-white-white-700-opacity);
 
+        @include breakpoint($bp-1440) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
         @include breakpoint($bp-1200) {
             font-size: 14px;
             line-height: 143%;
@@ -115,6 +128,11 @@
         align-items: flex-end;
         justify-content: center;
         overflow: hidden;
+
+        @include breakpoint($bp-1440) {
+            max-width: 233px;
+            height: 111px;
+        }
 
         img,
         svg,
@@ -168,20 +186,48 @@
 .stat-card {
   min-width: 0;
   &--tall, &--short { max-width: none; }
-  &__media--donut { display: flex; align-items: center; gap: 16px; overflow: visible; }
-  &__donut { position: relative; flex: 0 0 44%; min-width: 0; height: 140px; }
-  &__legend { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; list-style: none; }
-  &__legend-item { position: relative; padding-left: 16px; color: var(--main-white-white-100); font: 600 12px/16px var(--font-family); }
+  &__media--donut {
+    display: flex; align-items: center; gap: 16px; overflow: visible;
+
+    @include breakpoint($bp-1440) { gap: 13px; }
+    @include breakpoint($bp-390) { gap: 18px; }
+  }
+  &__donut {
+    position: relative; flex: 0 0 44%; min-width: 0; height: 140px;
+
+    @include breakpoint($bp-1440) { flex: 0 0 103px; width: 103px; height: 103px; }
+    @include breakpoint($bp-1200) { flex: 0 0 130px; width: 130px; height: 130px; }
+    @include breakpoint($bp-768) { flex: 0 0 110px; width: 110px; height: 110px; }
+    @include breakpoint($bp-390) { flex: 0 0 140px; width: 140px; height: 140px; }
+  }
+  &__legend {
+    flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; list-style: none;
+
+    @include breakpoint($bp-1440) { gap: 9px; }
+    @include breakpoint($bp-390) { gap: 12px; }
+  }
+  &__legend-item {
+    position: relative; padding-left: 16px; color: var(--main-white-white-100); font: 600 12px/16px var(--font-family);
+
+    @include breakpoint($bp-1200) { font: 600 14px/20px var(--font-family); }
+    @include breakpoint($bp-390) { font: 600 14px/20px var(--font-family); }
+  }
   &__legend-item::before { content: ""; position: absolute; top: 4px; left: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--main-accent-accent-100); }
   &__legend-item--grants::before { background: var(--main-accent-accent-20); }
   &__legend-item--state::before { background: var(--main-accent-accent-50); }
-  &__legend-value { display: block; color: var(--main-white-white-700-opacity); font-size: 10px; font-weight: 400; white-space: nowrap; }
+  &__legend-value {
+    display: block; color: var(--main-white-white-700-opacity); font-size: 10px; font-weight: 400; white-space: nowrap;
+
+    @include breakpoint($bp-1440) { font-size: 12px; }
+  }
+  @include breakpoint($bp-390) {
+    &__legend-item::before { width: 10px; height: 10px; }
+  }
 }
 @include breakpoint($bp-1440) {
   .stat-card { min-height: 320px; }
   .stat-card--short { min-height: 154px; }
   .stats__col { gap: 12px; }
-  .stat-card__donut { height: 120px; }
 }
 @include breakpoint($bp-1200) {
   .stats__row { grid-template-columns: minmax(0, 1fr); }
@@ -189,20 +235,32 @@
   .stats__row:first-child .stat-card { min-height: 154px; }
   .stats__row:first-child .stat-card--tall { min-height: 180px; }
   .stats__row:last-child .stat-card {
-    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 60%);
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: auto auto 1fr auto;
     column-gap: 12px; min-height: 250px; padding: 20px;
   }
   .stats__row:last-child .stat-card__title { grid-column: 1; margin-bottom: 4px; }
   .stats__row:last-child .stat-card__subtitle { grid-column: 1; }
-  .stats__row:last-child .stat-card__media { grid-column: 2; grid-row: 1 / 5; align-self: center; margin: 0; height: 160px; max-width: none; }
+  .stats__row:last-child .stat-card__media { grid-column: 2; grid-row: 1 / 5; align-self: center; margin: 0; width: 233px; height: 111px; max-width: none; }
+  .stats__row:last-child .stat-card__media--donut { width: auto; height: auto; }
   .stats__row:last-child .stat-card__link { grid-column: 1; grid-row: 4; font-size: 14px; }
   .section--stats .section-header { gap: 16px; align-items: center; }
   .section--stats .section-descr { font-size: 18px; }
 }
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .stats__row:last-child .stat-card {
+    grid-template-rows: auto auto auto;
+    align-content: center;
+  }
+  .stats__row:last-child .stat-card__title { grid-row: 1; margin-bottom: 3px; align-self: center; }
+  .stats__row:last-child .stat-card__subtitle { grid-row: 2; width: 161px; margin-bottom: 0; align-self: center; }
+  .stats__row:last-child .stat-card__link { grid-row: 3; margin-top: 25px; align-self: center; }
+  .stats__row:last-child .stat-card__media { grid-row: 1 / 4; }
+  .stats__row:last-child .stat-card__media--donut ~ .stat-card__link { margin-top: 64px; }
+}
 @include breakpoint($bp-768) {
   .stats { grid-template-columns: minmax(0, 1fr); }
-  .stats__row:last-child .stat-card { min-height: 200px; grid-template-columns: minmax(0, 1fr) minmax(0, 45%); }
+  .stats__row:last-child .stat-card { min-height: 200px; }
   .section--stats .section-header { flex-wrap: wrap; justify-content: space-between; margin-bottom: 60px; }
   .section--stats .section-descr { font-size: 14px; line-height: 20px; }
 }
@@ -212,8 +270,10 @@
   .stats__row:first-child .stat-card, .stats__row:first-child .stat-card--tall { min-height: 0; }
   .stat-card, .stats__row:last-child .stat-card { display: flex; flex-direction: column; min-height: 0; padding: 16px; }
   .stat-card__title, .stat-card__subtitle { font-size: 16px; line-height: 24px; }
+  .stats__row:first-child .stat-card__title { font-size: 20px; line-height: 28px; }
   .stat-card__text { font-size: 16px; line-height: 24px; }
   .stat-card__link, .stats__row:last-child .stat-card__link { font-size: 18px; line-height: 26px; margin-top: 24px; }
-  .stats__row:last-child .stat-card__media { margin: 16px 0 0; height: 140px; }
+  .stats__row:last-child .stat-card__media { margin: 16px 0 0; width: 100%; height: 123px; }
+  .stats__row:last-child .stat-card__media--donut { width: 100%; height: 140px; }
   .stat-card__donut { height: 140px; }
 }

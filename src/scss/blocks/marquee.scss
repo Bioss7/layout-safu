@@ -2,9 +2,17 @@
 @use "../_vars" as *;
 
 .marquee {
-  padding: 20px 0;
+  padding: 33px 0;
   overflow: hidden;
   width: 100%;
+
+  @include breakpoint($bp-1440) {
+    padding: 25px 0;
+  }
+
+  @include breakpoint($bp-1200) {
+    padding: 17px 0;
+  }
 
   &__track {
     display: flex;
@@ -27,6 +35,13 @@
     letter-spacing: 0.06em;
     color: var(--main-blue-blue-100);
     white-space: nowrap;
+
+    @include breakpoint($bp-1200) {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__dot {
@@ -51,6 +66,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }

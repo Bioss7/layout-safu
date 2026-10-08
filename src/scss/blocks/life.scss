@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 24px;
     width: 100%;
     height: 48px;
     padding: 14px 16px;
@@ -63,7 +64,7 @@
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
-    width: 160px;
+    width: auto;
     height: 48px;
     border: none;
     border-radius: 4px;
@@ -203,40 +204,151 @@
     flex-shrink: 0;
 }
 
+@include breakpoint($bp-1440) {
+  .life-panel--active {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .life-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .life-card__image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .life-card__text {
+    -webkit-line-clamp: 2;
+  }
+}
+
 @include breakpoint($bp-1200) {
-  .section--life .section-header__content { min-width: 0; flex: 0 1 calc(50% - 8px); width: calc(50% - 8px); }
-  .life-tabs__tab { width: auto; padding-inline: 20px; }
-  .life-panel--active { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .life-card { width: 100%; min-width: 0; min-height: 343px; }
-  .life-card:nth-child(n + 4) { display: none; }
-  .life-card__image { height: auto; aspect-ratio: 16 / 9; }
-  .section--life .section-header { margin-bottom: 60px; }
-}
-@include breakpoint($bp-992) {
-  .life-card { min-height: 307px; }
-  .section--life .section-header { margin-bottom: 40px; }
+  .section--life {
+    padding-bottom: 80px;
+  }
+
+  .section--life .section-header__content {
+    flex: 0 1 464px;
+    width: 464px;
+    min-width: 0;
+  }
+
+  .life-panel--active {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .life-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 343px;
+  }
+
+  .life-card:nth-child(n + 4) {
+    display: none;
+  }
 }
 
-
 @include breakpoint($bp-992) {
-  .life-tabs { flex-wrap: wrap; gap: 16px; }
-  .life-tabs__list { flex-wrap: wrap; gap: 12px; }
+  .section--life {
+    padding-bottom: 60px;
+  }
+
+  .life-card {
+    min-height: 307px;
+  }
 }
+
 @include breakpoint($bp-768) {
-  .section--life .section-header { flex-direction: column; gap: 32px; }
-  .section--life .section-header__content { flex: auto; width: 100%; gap: 24px; }
-  .life-tabs { flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
-  .life-panel--active { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .life-card:nth-child(n + 3) { display: none; }
-  .life-card { min-height: 329px; }
+  .section--life {
+    padding-bottom: 52px;
+  }
+
+  .section--life .section-header {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section--life .section-header__content {
+    flex: 1 1 auto;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .life-tabs {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .life-tabs__list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .life-panel--active {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .life-card {
+    min-height: 338px;
+  }
+
+  .life-card:nth-child(n + 3) {
+    display: none;
+  }
 }
+
 @include breakpoint($bp-390) {
-  .section--life .section-header { gap: 16px; margin-bottom: 32px; }
-  .section--life .section-header__content { gap: 16px; }
-  .life-tabs { margin-bottom: 16px; }
-  .life-tabs__tab { padding: 11px 14px; font-size: 12px; }
-  .life-panel--active { grid-template-columns: minmax(0, 1fr); }
-  .life-card:nth-child(3) { display: flex; }
-  .life-card { min-height: 340px; }
-  .life-card__image { height: 202px; }
+  .section--life {
+    padding-bottom: 80px;
+  }
+
+  .section--life .section-header {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section--life .section-header__content {
+    gap: 16px;
+  }
+
+  .section--life .section-header__descr {
+    color: var(--main-blue-blue-100);
+  }
+
+  .life-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .life-tabs__list {
+    align-self: stretch;
+    gap: 12px;
+  }
+
+  .life-tabs__tab {
+    flex: 1 1 calc(50% - 6px);
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .life-panel--active {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .life-card {
+    min-height: 340px;
+    border-radius: 4px;
+  }
+
+  .life-card__image {
+    height: 200px;
+    aspect-ratio: auto;
+  }
 }

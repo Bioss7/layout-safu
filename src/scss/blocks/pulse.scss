@@ -58,9 +58,6 @@
     }
 
 
-    /* ========================================================
-       ПРОГРЕСС-КРУГ
-       ======================================================== */
     &__progress {
         --progress: 0%;
         --from-angle: 27deg;
@@ -87,9 +84,6 @@
     }
 
 
-    /* ========================================================
-       ТОЧКИ
-       ======================================================== */
     &__dot {
         position: absolute;
         width: 17px;
@@ -112,7 +106,6 @@
         }
     }
 
-    /* ---------- ПОЗИЦИИ ТОЧЕК ---------- */
     &__dot--1 {
         top: 22px;
         left: 85px;
@@ -144,9 +137,6 @@
     }
 
 
-    /* ========================================================
-       ВЫНЕСЕННЫЕ TAIL (хвосты)
-       ======================================================== */
     &__tail {
         position: absolute;
         display: block;
@@ -205,7 +195,6 @@
         }
     }
 
-    /* Показ tail, когда точка активна */
     &__dot--1.pulse-circle__dot--active~&__tail--1,
     &__dot--2.pulse-circle__dot--active~&__tail--2,
     &__dot--3.pulse-circle__dot--active~&__tail--3,
@@ -218,9 +207,6 @@
 }
 
 
-/* ============================================================
-   КАРТОЧКИ
-   ============================================================ */
 .pulse-card {
     display: block;
     border-radius: 4px;
@@ -235,7 +221,6 @@
         background: var(--main-accent-accent-300-opacity);
     }
 
-    /* Активная карточка (совпадает с активным табом) */
     &--active {
         background: var(--main-accent-accent-300-opacity);
     }
@@ -249,11 +234,10 @@
     }
 
     &__title {
-        margin: 0;
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 16px;
-        line-height: 125%;
+        font-size: 14px;
+        line-height: 143%;
         letter-spacing: 0.06em;
         color: var(--main-blue-blue-100);
     }
@@ -264,30 +248,20 @@
     }
 
     &__text {
-        margin: 0;
         font-family: var(--font-family);
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
         line-height: 133%;
-        color: var(--main-blue-blue-90);
+        color: var(--main-blue-blue-80);
     }
 }
 
 
-/* ============================================================
-   КОНТЕЙНЕР pulse И КОЛОНКИ
-   ============================================================ */
 .pulse {
     display: grid;
     grid-template-columns: 990px 706px;
     align-items: center;
     gap: 24px;
-
-    @include breakpoint($bp-1440) {
-        display: flex;
-        flex-direction: column;
-        gap: 62px;
-    }
 
     &__wrap {
         display: flex;
@@ -317,9 +291,6 @@
 }
 
 
-/* ============================================================
-   ОТСТУПЫ КАРТОЧЕК
-   ============================================================ */
 .pulse__col--left {
     .pulse-card--edu {
         margin-left: 26px;
@@ -335,24 +306,6 @@
     .pulse-card--university {
         margin-left: 26px;
         margin-right: 14px;
-    }
-
-    @include breakpoint($bp-1440) {
-        .pulse-card--edu {
-            margin-left: 40px;
-            margin-right: 48px;
-            margin-bottom: 79px;
-        }
-
-        .pulse-card--science {
-            margin-right: 0;
-            margin-bottom: 79px;
-        }
-
-        .pulse-card--university {
-            margin-left: 40px;
-            margin-right: 48px;
-        }
     }
 }
 
@@ -370,28 +323,9 @@
     .pulse-card--life {
         margin-left: 14px;
     }
-
-    @include breakpoint($bp-1440) {
-        .pulse-card--safu {
-            margin-left: 58px;
-            margin-bottom: 79px;
-        }
-
-        .pulse-card--international {
-            margin-left: auto;
-            margin-bottom: 79px;
-        }
-
-        .pulse-card--life {
-            margin-left: 58px;
-        }
-    }
 }
 
 
-/* ============================================================
-   ПАНЕЛЬ
-   ============================================================ */
 .pulse-panel {
     position: relative;
     border-radius: 4px;
@@ -434,7 +368,7 @@
     }
 
     &__title {
-        margin: 0 0 8px;
+        margin-bottom: 12px;
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 24px;
@@ -444,7 +378,7 @@
     }
 
     &__text {
-        margin: 0 0 27px;
+        margin-bottom: 16px;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 14px;
@@ -460,6 +394,7 @@
     &__col {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         gap: 12px;
 
         @include breakpoint($bp-1440) {
@@ -475,10 +410,8 @@
 
     opacity: 0;
     visibility: hidden;
-    // transform: translateY(6px);
     transition:
         opacity 0.3s ease,
-        transform 0.3s ease,
         visibility 0s linear 0.3s;
     pointer-events: none;
 }
@@ -486,10 +419,8 @@
 .pulse-panel__tab--active {
     opacity: 1;
     visibility: visible;
-    // transform: translateY(0);
     transition:
         opacity 0.3s ease,
-        transform 0.3s ease,
         visibility 0s linear 0s;
     pointer-events: auto;
     z-index: 2;
@@ -501,17 +432,13 @@
     justify-content: space-between;
     gap: 12px;
     border-radius: 4px;
-    padding: 18px 12px;
+    padding: 27px 12px;
     max-width: 316px;
     width: 100%;
     min-height: 74px;
     background: var(--main-white-white-100);
     text-decoration: none;
     transition: background 0.2s ease;
-
-    @include breakpoint($bp-1440) {
-        max-width: 397px;
-    }
 
     &:hover {
         background: var(--main-accent-accent-300-opacity);
@@ -531,92 +458,542 @@
     }
 }
 
+@include breakpoint($bp-1440) {
+    .section--pulse {
+        padding-bottom: 100px;
+    }
+
+    .section--pulse .section-header__content {
+        min-width: 0;
+        flex: 0 1 597px;
+        width: 597px;
+    }
+
+    .pulse {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pulse__wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 416px) 350px minmax(0, 1fr);
+        column-gap: 48px;
+        width: 100%;
+    }
+
+    .pulse__center {
+        width: 350px;
+        height: 350px;
+    }
+
+    .pulse__col {
+        min-width: 0;
+        height: 432px;
+        justify-content: flex-start;
+    }
+
+    .pulse__col .pulse-card {
+        width: auto;
+        margin: 0 0 79px;
+        min-height: 84px;
+    }
+
+    .pulse__col .pulse-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .pulse__col--left .pulse-card--edu,
+    .pulse__col--left .pulse-card--university {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+
+    .pulse__col--left .pulse-card--science {
+        width: calc(100% - 108px);
+    }
+
+    .pulse__col--right .pulse-card--safu,
+    .pulse__col--right .pulse-card--life {
+        width: calc(100% - 50px);
+        margin-left: 10px;
+    }
+
+    .pulse__col--right .pulse-card--international {
+        width: calc(100% - 108px);
+        align-self: flex-end;
+    }
+
+    .pulse-panel {
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .pulse-panel__text {
+        max-width: 519px;
+        margin-bottom: 16px;
+    }
+
+    .pulse-panel__links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pulse-panel__col {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
+    .pulse-link {
+        max-width: none;
+        flex: 1 1 0;
+    }
+}
+
 @include breakpoint($bp-1200) {
-  .section--pulse { padding: 80px 0; }
-  .section--pulse .section-header { margin-bottom: 40px; }
-  .section--pulse .section-header__content { min-width: 0; flex: 0 1 464px; width: 464px; }
-  .pulse { gap: 40px; }
-  .pulse__wrap { display: grid; grid-template-columns: minmax(0, 1fr) 350px minmax(0, 1fr); width: 100%; }
-  .pulse__center { width: 350px; }
-  .pulse__col { min-width: 0; height: 432px; gap: 0; justify-content: space-between; }
-  .pulse__col .pulse-card { width: calc(100% - 64px); margin: 0; min-height: 84px; }
-  .pulse__col--left .pulse-card--edu,
-  .pulse__col--left .pulse-card--university { align-self: flex-start; margin-left: 40px; }
-  .pulse__col--left .pulse-card--science { width: calc(100% - 84px); }
-  .pulse__col--right .pulse-card { margin-left: 24px; }
-  .pulse__col--right .pulse-card--international { align-self: flex-end; width: calc(100% - 84px); margin: 0; }
-  .pulse-panel { min-height: 316px; }
-  .pulse-panel__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .pulse-panel__col { display: contents; }
-  .pulse-link { max-width: none; }
+    .section--pulse {
+        padding: 80px 0;
+    }
+
+    .section--pulse .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section--pulse .section-header__content {
+        min-width: 0;
+        flex: 0 1 464px;
+        width: 464px;
+    }
+
+    .pulse {
+        gap: 40px;
+    }
+
+    .pulse__wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 368px) 350px minmax(0, 1fr);
+        column-gap: 24px;
+        width: 100%;
+    }
+
+    .pulse__center {
+        width: 350px;
+        height: 350px;
+    }
+
+    .pulse__col {
+        min-width: 0;
+        height: 432px;
+        justify-content: flex-start;
+    }
+
+    .pulse__col .pulse-card {
+        width: auto;
+        margin: 0 0 79px;
+        min-height: 84px;
+    }
+
+    .pulse__col .pulse-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .pulse__col--left .pulse-card--edu,
+    .pulse__col--left .pulse-card--university {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+
+    .pulse__col--left .pulse-card--science {
+        width: calc(100% - 60px);
+    }
+
+    .pulse__col--right .pulse-card--safu,
+    .pulse__col--right .pulse-card--life {
+        width: calc(100% - 40px);
+    }
+
+    .pulse__col--right .pulse-card--international {
+        width: calc(100% - 60px);
+        align-self: flex-end;
+    }
+
+    .pulse-panel {
+        min-height: 316px;
+    }
+
+    .pulse-panel__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .pulse-panel__text {
+        max-width: 519px;
+    }
+
+    .pulse-panel__links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .pulse-panel__col {
+        display: contents;
+    }
+
+    .pulse-link {
+        max-width: none;
+    }
 }
+
 @include breakpoint($bp-992) {
-  .section--pulse { padding-block: 60px; }
-  .section--pulse .section-header { flex-direction: column; gap: 24px; }
-  .section--pulse .section-header__content { flex-basis: auto; width: 100%; max-width: 750px; }
-  .pulse__wrap { grid-template-columns: minmax(0, 1fr) 304px minmax(0, 1fr); }
-  .pulse__center { width: 304px; height: 304px; }
-  .pulse__col .pulse-card { width: calc(100% - 32px); margin-left: 16px; }
-  .pulse__col--left .pulse-card--science,
-  .pulse__col--right .pulse-card--international { width: calc(100% - 58px); margin: 0; }
-  .pulse-circle { width: 304px; height: 304px; }
-  .pulse-circle__progress { width: 100%; height: 100%; }
-  .pulse-circle__title { max-width: 260px; font-size: 18px; line-height: 24px; }
-  .pulse-circle__text { max-width: 245px; font-size: 12px; line-height: 16px; }
-  .pulse-circle__dot--1 { top: 6.286%; left: 24.286%; }
-  .pulse-circle__dot--2 { top: 50.857%; left: .286%; }
-  .pulse-circle__dot--3 { top: 89.143%; left: 24.571%; }
-  .pulse-circle__dot--4 { top: 89.143%; right: 24.571%; }
-  .pulse-circle__dot--5 { top: 50.857%; right: 0; }
-  .pulse-circle__dot--6 { top: 4.857%; right: 26.857%; }
+    .section--pulse {
+        padding-block: 60px;
+    }
+
+    .section--pulse .section-header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .section--pulse .section-header__content {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .pulse__wrap {
+        grid-template-columns: minmax(0, 304px) 304px minmax(0, 1fr);
+        column-gap: 16px;
+    }
+
+    .pulse__center {
+        width: 304px;
+        height: 304px;
+    }
+
+    .pulse__col {
+        justify-content: space-between;
+    }
+
+    .pulse__col .pulse-card {
+        margin: 0;
+    }
+
+    .pulse__col--left .pulse-card--edu,
+    .pulse__col--left .pulse-card--university {
+        width: calc(100% - 16px);
+        margin-left: 16px;
+    }
+
+    .pulse__col--left .pulse-card--science,
+    .pulse__col--right .pulse-card--international {
+        width: calc(100% - 42px);
+    }
+
+    .pulse__col--right .pulse-card--safu,
+    .pulse__col--right .pulse-card--life {
+        width: calc(100% - 16px);
+        margin-left: 0;
+    }
+
+    .pulse__col--right .pulse-card--international {
+        align-self: flex-end;
+    }
+
+    .pulse-circle {
+        width: 304px;
+        height: 304px;
+    }
+
+    .pulse-circle__progress {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pulse-circle__title {
+        max-width: 268px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .pulse-circle__text {
+        max-width: 269px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .pulse-circle__tail {
+        display: none;
+    }
+
+    .pulse-circle__dot {
+        width: 15px;
+        height: 15px;
+        border-width: 3.5px;
+    }
+
+    .pulse-circle__dot--1 {
+        top: 6.25%;
+        left: 24.43%;
+    }
+
+    .pulse-circle__dot--2 {
+        top: 50.85%;
+        left: .28%;
+    }
+
+    .pulse-circle__dot--3 {
+        top: 88.92%;
+        left: 24.43%;
+    }
+
+    .pulse-circle__dot--4 {
+        top: 88.92%;
+        right: 24.43%;
+    }
+
+    .pulse-circle__dot--5 {
+        top: 50.85%;
+        right: .28%;
+    }
+
+    .pulse-circle__dot--6 {
+        top: 5.11%;
+        right: 26.7%;
+    }
 }
-@include breakpoint($bp-992) {
-  .pulse__wrap { grid-template-columns: minmax(0, 1fr) min(32vw, 304px) minmax(0, 1fr); }
-  .pulse__center, .pulse-circle { width: min(32vw, 304px); height: min(32vw, 304px); }
-  .pulse-card__title { font-size: 14px; line-height: 20px; overflow-wrap: anywhere; }
-}
+
 @include breakpoint($bp-768) {
-  .section--pulse { padding-block: 52px; }
-  .section--pulse .section-header { gap: 16px; margin-bottom: 40px; }
-  .pulse { gap: 32px; }
-  .pulse__wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
-  .pulse__center { grid-column: 1 / -1; grid-row: 1; justify-self: center; width: 304px; height: 304px; }
-  .pulse-circle { width: 304px; height: 304px; }
-  .pulse-circle__title { font-size: 16px; line-height: 24px; }
-  .pulse-circle__tail { display: none; }
-  .pulse__col { height: auto; gap: 12px; }
-  .pulse__col .pulse-card { width: 100%; min-height: 84px; margin: 0; padding: 12px; }
-  .pulse-card__title { font-size: 16px; line-height: 20px; }
-  .pulse-panel { padding: 28px; min-height: 0; }
-  .pulse-panel__links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .pulse-panel__title { font-size: 20px; line-height: 28px; }
-  .pulse-panel__text { margin-bottom: 16px; }
-  .pulse-panel__tab { display: none; }
-  .pulse-panel__tab--active { display: flex; }
+    .section--pulse {
+        padding-block: 52px;
+    }
+
+    .section--pulse .section-header {
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .pulse {
+        gap: 32px;
+    }
+
+    .pulse__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+    }
+
+    .pulse__center {
+        order: 0;
+        flex: 0 0 auto;
+        width: 304px;
+        height: 304px;
+    }
+
+    .pulse__col {
+        display: contents;
+    }
+
+    .pulse-card--edu {
+        order: 1;
+    }
+
+    .pulse-card--safu {
+        order: 2;
+    }
+
+    .pulse-card--science {
+        order: 3;
+    }
+
+    .pulse-card--international {
+        order: 4;
+    }
+
+    .pulse-card--university {
+        order: 5;
+    }
+
+    .pulse-card--life {
+        order: 6;
+    }
+
+    .pulse__wrap .pulse-card {
+        width: 100%;
+        min-height: 84px;
+        margin: 0;
+    }
+
+    .pulse-panel {
+        padding: 28px;
+        min-height: 0;
+    }
+
+    .pulse-panel__links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .pulse-panel__text {
+        max-width: 519px;
+        margin-bottom: 16px;
+    }
+
+    .pulse-panel__tab {
+        display: none;
+    }
+
+    .pulse-panel__tab--active {
+        display: flex;
+    }
 }
+
 @include breakpoint($bp-390) {
-  .section--pulse { padding-block: 80px; }
-  .section--pulse .section-header { margin-bottom: 24px; }
-  .section--pulse .section-header__descr { font-size: 16px; line-height: 24px; }
-  .pulse { gap: 24px; }
-  .pulse__wrap { gap: 24px 8px; }
-  .pulse__center, .pulse-circle { width: 248px; height: 248px; }
-  .pulse-circle__title { max-width: 202px; font-size: 12px; line-height: 18px; margin-bottom: 4px; }
-  .pulse-circle__text { max-width: 216px; font-size: 12px; line-height: 16px; }
-  .pulse-circle__dot { width: 12px; height: 12px; border-width: 3px; }
-  .pulse-circle__progress { --ring-thickness: 12px; }
-  .pulse__col { gap: 8px; }
-  .pulse__col .pulse-card { min-height: 34px; padding: 8px; }
-  .pulse-card__head { margin: 0; gap: 4px; }
-  .pulse-card__title { font-size: 12px; line-height: 18px; }
-  .pulse-card__icon { width: 12px; height: 12px; }
-  .pulse-card__text { display: none; }
-  .pulse-panel { padding: 24px; }
-  .pulse-panel__title { font-size: 14px; line-height: 20px; }
-  .pulse-panel__links { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .pulse-link { padding: 14px 12px; min-height: 44px; }
-  .pulse-link__text { font-size: 12px; line-height: 16px; }
+    .section--pulse {
+        padding-block: 80px;
+    }
+
+    .section--pulse .section-header {
+        margin-bottom: 24px;
+    }
+
+    .section--pulse .section-header__descr {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .pulse {
+        gap: 24px;
+    }
+
+    .pulse__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 8px;
+        align-items: start;
+    }
+
+    .pulse__center {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+        width: 248px;
+        height: 248px;
+    }
+
+    .pulse__col {
+        display: flex;
+        height: auto;
+        gap: 8px;
+    }
+
+    .pulse__col .pulse-card {
+        width: 175px;
+        height: 34px;
+        min-height: 0;
+        padding: 8px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .pulse-card__head {
+        margin: 0;
+        gap: 4px;
+        height: 100%;
+    }
+
+    .pulse-card__title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        overflow: hidden;
+    }
+
+    .pulse-card__icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .pulse-card__text {
+        display: none;
+    }
+
+    .pulse-panel {
+        padding: 24px;
+    }
+
+    .pulse-panel__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .pulse-panel__text {
+        max-width: none;
+    }
+
+    .pulse-panel__links {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .pulse-link {
+        padding: 12px;
+        min-height: 0;
+    }
+
+    .pulse-link__text {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
-.pulse-card { border: 0; text-align: left; font: inherit; cursor: pointer; }
-.pulse-card__title { display: block; }
-.pulse-card:focus-visible, .pulse-circle__dot:focus-visible, .history-timeline__point:focus-visible { outline: 2px solid var(--main-accent-accent-100); outline-offset: 3px; }
+
+@include breakpoint($bp-390) {
+    .pulse-circle {
+        width: 248px;
+        height: 248px;
+    }
+
+    .pulse-circle__title {
+        max-width: 202px;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 4px;
+    }
+
+    .pulse-circle__text {
+        max-width: 216px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .pulse-circle__dot {
+        width: 12px;
+        height: 12px;
+        border-width: 3px;
+    }
+
+    .pulse-circle__progress {
+        --ring-thickness: 12px;
+    }
+}
+
+.pulse-card {
+    border: 0;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.pulse-card__title {
+    display: block;
+}
+
+.pulse-card:focus-visible,
+.pulse-circle__dot:focus-visible,
+.history-timeline__point:focus-visible {
+    outline: 2px solid var(--main-accent-accent-100);
+    outline-offset: 3px;
+}
