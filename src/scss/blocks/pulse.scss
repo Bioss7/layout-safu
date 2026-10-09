@@ -339,19 +339,30 @@
         width: 100%;
     }
 
-    &__decor {
+    &::before,
+    &::after {
+        content: "";
         position: absolute;
         pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-        &--top {
-            top: 8px;
-            left: 0;
-        }
+    &::before {
+        top: 8px;
+        left: 0;
+        width: 30px;
+        height: 18px;
+        background-image: url("../img/pulse/pulse-decor-top.svg");
+    }
 
-        &--bottom {
-            bottom: 14px;
-            right: 0;
-        }
+    &::after {
+        bottom: 14px;
+        right: 0;
+        width: 30px;
+        height: 18px;
+        background-image: url("../img/pulse/pulse-decor-bottom.svg");
     }
 
     &__content {
@@ -459,10 +470,6 @@
 }
 
 @include breakpoint($bp-1440) {
-    .section--pulse {
-        padding-bottom: 100px;
-    }
-
     .section--pulse .section-header__content {
         min-width: 0;
         flex: 0 1 597px;
@@ -541,21 +548,17 @@
 
     .pulse-panel__col {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 16px;
     }
 
     .pulse-link {
-        max-width: none;
-        flex: 1 1 0;
+        max-width: 397px;
+        height: 74px;
     }
 }
 
 @include breakpoint($bp-1200) {
-    .section--pulse {
-        padding: 80px 0;
-    }
-
     .section--pulse .section-header {
         margin-bottom: 40px;
     }
@@ -647,10 +650,6 @@
 }
 
 @include breakpoint($bp-992) {
-    .section--pulse {
-        padding-block: 60px;
-    }
-
     .section--pulse .section-header {
         flex-direction: column;
         gap: 24px;
@@ -765,10 +764,6 @@
 }
 
 @include breakpoint($bp-768) {
-    .section--pulse {
-        padding-block: 52px;
-    }
-
     .section--pulse .section-header {
         gap: 24px;
         margin-bottom: 40px;
@@ -779,15 +774,20 @@
     }
 
     .pulse__wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 360px));
+        justify-content: center;
+        justify-items: center;
+        column-gap: 16px;
+        row-gap: 24px;
         width: 100%;
     }
 
     .pulse__center {
+        grid-column: 1 / -1;
+        grid-row: 1;
         order: 0;
+        justify-self: center;
         flex: 0 0 auto;
         width: 304px;
         height: 304px;
@@ -795,6 +795,16 @@
 
     .pulse__col {
         display: contents;
+    }
+
+    .pulse-panel__links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pulse-link {
+        max-width: 332px;
     }
 
     .pulse-card--edu {
@@ -823,6 +833,7 @@
 
     .pulse__wrap .pulse-card {
         width: 100%;
+        max-width: 360px;
         min-height: 84px;
         margin: 0;
     }
@@ -852,12 +863,9 @@
 }
 
 @include breakpoint($bp-390) {
-    .section--pulse {
-        padding-block: 80px;
-    }
-
     .section--pulse .section-header {
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+        gap: 16px;
     }
 
     .section--pulse .section-header__descr {
@@ -901,13 +909,13 @@
 
     .pulse-card__head {
         margin: 0;
-        gap: 4px;
+        justify-content: space-between;
         height: 100%;
     }
 
     .pulse-card__title {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 150%;
         overflow: hidden;
     }
@@ -923,15 +931,17 @@
 
     .pulse-panel {
         padding: 24px;
+        overflow: hidden;
     }
 
     .pulse-panel__title {
+        margin-bottom: 8px;
         font-size: 14px;
         line-height: 20px;
     }
 
     .pulse-panel__text {
-        max-width: none;
+        margin-bottom: 24px;
     }
 
     .pulse-panel__links {
@@ -942,11 +952,24 @@
     .pulse-link {
         padding: 12px;
         min-height: 0;
+        height: 56px;
     }
 
     .pulse-link__text {
         font-size: 12px;
         line-height: 16px;
+    }
+
+    .pulse-panel::before {
+        width: 20px;
+        height: 12px;
+        background-image: url("../img/pulse/pulse-decor-top-390.svg");
+    }
+
+    .pulse-panel::after {
+        width: 19px;
+        height: 13px;
+        background-image: url("../img/pulse/pulse-decor-bottom-390.svg");
     }
 }
 

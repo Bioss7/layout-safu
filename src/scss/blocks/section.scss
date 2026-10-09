@@ -17,6 +17,15 @@
     line-height: 163%;
   }
 
+  @include breakpoint($bp-992) {
+    font-size: 28px;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 24px;
+    line-height: 133%;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -59,20 +68,24 @@
 
   &:hover {
     color: var(--main-accent-accent-100);
-
-    svg path {
-      fill: var(--main-accent-accent-100);
-    }
   }
 
   &:active {
     color: var(--main-blue-blue-90);
-
-    svg path {
-      fill: var(--main-blue-blue-90);
-    }
   }
 
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/link-arrow.svg") center / contain no-repeat;
+  }
+
+  &--header::after {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .arrow-btn {
@@ -196,6 +209,10 @@
     margin-bottom: 60px;
   }
 
+  @include breakpoint($bp-1200) {
+    margin-bottom: 40px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -216,8 +233,8 @@
 .section-title {
   margin-bottom: 80px;
 
-  @include breakpoint($bp-1440) {
-    margin-bottom: 60px;
+  @include breakpoint($bp-992) {
+    margin-bottom: 40px;
   }
 }
 
@@ -227,6 +244,12 @@
   font-size: 18px;
   line-height: 144%;
   color: var(--main-white-white-700-opacity);
+
+  @include breakpoint($bp-390) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+  }
 }
 
 .section-header--life .title-2 {
@@ -257,6 +280,14 @@
     padding: 100px 0;
   }
 
+  @include breakpoint($bp-992) {
+    padding: 60px 0;
+  }
+
+  @include breakpoint($bp-768) {
+    padding: 52px 0;
+  }
+
   &--accent {
     background: var(--main-accent-accent-10);
   }
@@ -275,11 +306,11 @@
     background: url("../img/pulse/pulse-bg-1920.png") center center / cover no-repeat;
 
     @include breakpoint($bp-1440) {
-      padding-bottom: 0;
       background-image: url("../img/pulse/pulse-bg-1440.png");
     }
 
     @include breakpoint($bp-1200) {
+      padding-bottom: 60px;
       background-image: url("../img/pulse/pulse-bg-1200.png");
     }
 
@@ -292,7 +323,21 @@
     }
 
     @include breakpoint($bp-390) {
+      padding: 80px 0 74px;
       background-image: url("../img/pulse/pulse-bg-390.png");
+    }
+  }
+
+  &--reviews {
+
+    @include breakpoint($bp-992) {
+      padding-top: 0;
+    }
+  }
+
+  &--life {
+    @include breakpoint($bp-768) {
+      padding-bottom: 80px;
     }
   }
 
@@ -304,10 +349,18 @@
 
   &--directions {
     padding-top: 0;
+
+    @include breakpoint($bp-992) {
+      padding-bottom: 60px;
+    }
   }
 
   &--history {
     padding-top: 0;
+
+    @include breakpoint($bp-768) {
+      padding-bottom: 80px;
+    }
   }
 
   &__row {
@@ -327,37 +380,71 @@
   overflow: hidden;
 }
 
-@include breakpoint($bp-1200) {
-  .section { padding-block: 80px; }
-  .section--life, .section--directions { padding-bottom: 0; }
-  .section--reviews { padding-block: 0; }
-  .section-header, .section-title { margin-bottom: 60px; }
-}
 @include breakpoint($bp-992) {
-  .section { padding-block: 60px; }
-  .section--life, .section--directions { padding-bottom: 0; }
-  .section--reviews { padding-block: 0; }
-  .section-header, .section-title { margin-bottom: 40px; }
-  .section-header__content { min-width: 0; }
+  .section-header__content {
+    min-width: 0;
+  }
 }
+
 @include breakpoint($bp-768) {
-  .section { padding-block: 52px; }
-  .section--life, .section--directions { padding-bottom: 0; }
-  .section--reviews { padding-block: 0; }
-  .title-2 { font-size: clamp(20px, 3.125vw, 24px); line-height: 1.333; gap: 12px; min-width: 0; }
-  .title-2::before { width: 10px; height: 10px; flex: 0 0 10px; }
-  .section-header { gap: 24px; }
-  .section-header__content { flex: 1 1 auto; width: 100%; }
-  .section-header__descr { font-size: 14px; line-height: 20px; }
-  .section-header--life .title-2 { flex-shrink: 1; }
+  .title-2::before {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+  }
+
+  .section-header {
+    gap: 24px;
+  }
+
+  .section-header__content {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .section-header__descr {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .section-header--life .title-2 {
+    flex-shrink: 1;
+  }
 }
+
 @include breakpoint($bp-390) {
-  .section { padding-block: 80px; }
-  .section--stats { padding-block: 60px; }
-  .section--life, .section--directions { padding-bottom: 0; }
-  .section--reviews { padding-block: 0; }
-  .section-header, .section-title { margin-bottom: 32px; }
-  .section-header { flex-direction: column; gap: 16px; }
-  .title-2 { font-size: 20px; line-height: 28px; gap: 14px; }
-  .title-2::before { flex-basis: 12px; width: 12px; height: 12px; }
+  .section--stats {
+    padding-block: 60px;
+  }
+
+  .section-header,
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .title-2 {
+    font-size: 20px;
+    line-height: 28px;
+    gap: 14px;
+  }
+
+  .title-2::before {
+    flex-basis: 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .link-arrow::after {
+    background-image: url("../img/icons/link-arrow-390.svg");
+  }
+
+  .link-arrow:not(.link-arrow--header)::after {
+    width: 16px;
+    height: 16px;
+  }
 }

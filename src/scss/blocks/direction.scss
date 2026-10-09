@@ -302,6 +302,7 @@
 
 @include breakpoint($bp-390) {
   .section--directions .section-header {
+    margin-bottom: 32px;
     align-items: flex-start;
     gap: 16px;
   }
@@ -312,7 +313,7 @@
   }
 
   .directions {
-    gap: 16px;
+    gap: 32px;
   }
 
   .direction-card {
@@ -340,7 +341,7 @@
     }
 
     &__title {
-      margin-bottom: 0;
+      margin-bottom: 16px;
       font-size: 16px;
       line-height: 24px;
     }
@@ -351,6 +352,7 @@
     }
 
     &__aside-title {
+      margin-bottom: 16px;
       font-size: 14px;
       line-height: 20px;
     }

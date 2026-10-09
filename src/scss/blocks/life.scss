@@ -2,206 +2,220 @@
 @use "../_vars" as *;
 
 .button-max {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  width: 100%;
+  height: 48px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  background: url("../img/life/button-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  @include breakpoint($bp-992) {
     margin-top: 24px;
-    width: 100%;
-    height: 48px;
-    padding: 14px 16px;
-    border-radius: 4px;
-    background: url("../img/life/button-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+    background: url("../img/life/button-bg-992.png");
+  }
+
+  @include breakpoint($bp-768) {
+    background: url("../img/life/button-bg-768.png");
+  }
+
+  @include breakpoint($bp-390) {
+    background: url("../img/life/button-bg-390.png");
+  }
 }
 
 .button-max:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .button-max__logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .button-max__logo-text {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: var(--main-white-white-100);
-    text-transform: uppercase;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--main-white-white-100);
+  text-transform: uppercase;
 }
 
 .button-max__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 /* ================= ТАБЫ ================= */
 .life-tabs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .life-tabs__list {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .life-tabs__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    width: auto;
-    height: 48px;
-    border: none;
-    border-radius: 4px;
-    background: var(--main-blue-blue-40);
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.06em;
-    color: var(--main-blue-blue-100);
-    cursor: pointer;
-    transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  width: auto;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background: var(--main-blue-blue-40);
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-100);
+  cursor: pointer;
+  transition: background 0.2s ease;
 
-    &:hover {
-        background: var(--main-accent-accent-100);
-        color: var(--main-white-white-100);
-    }
+  &:hover {
+    background: var(--main-accent-accent-100);
+    color: var(--main-white-white-100);
+  }
 
-    &:active {
-        background: var(--main-blue-blue-100);
-        color: var(--main-white-white-100);
-    }
+  &:active {
+    background: var(--main-blue-blue-100);
+    color: var(--main-white-white-100);
+  }
 }
 
 .life-tabs__tab--active {
-    background: var(--main-blue-blue-100);
-    color: var(--main-white-white-100);
+  background: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
 }
 
 .life-panel {
-    display: none;
-    gap: 20px;
+  display: none;
+  gap: 20px;
 
-    @include breakpoint($bp-1440) {
-        gap: 16px;
-    }
+  @include breakpoint($bp-1440) {
+    gap: 16px;
+  }
 }
 
 .life-panel--active {
-    display: flex;
+  display: flex;
 }
 
 .life-card {
-    display: flex;
-    flex-direction: column;
-    width: 415px;
-    min-height: 378px;
-    border-radius: 3px;
-    background: var(--main-white-white--500-opacity);
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  width: 415px;
+  min-height: 378px;
+  border-radius: 3px;
+  background: var(--main-white-white--500-opacity);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    @include breakpoint($bp-1440) {
-        min-height: 310px;
-    }
+  @include breakpoint($bp-1440) {
+    min-height: 310px;
+  }
 }
 
 .life-card:hover {
-    box-shadow: 0 8px 24px rgba(11, 45, 78, 0.15);
+  box-shadow: 0 8px 24px rgba(11, 45, 78, 0.15);
 }
 
 .life-card__image {
-    width: 100%;
-    height: 234px;
-    border-radius: 4px 4px 0 0;
-    overflow: hidden;
-    flex-shrink: 0;
+  width: 100%;
+  height: 234px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
 
-    @include breakpoint($bp-1440) {
-        height: 174px;
-    }
+  @include breakpoint($bp-1440) {
+    height: 174px;
+  }
 }
 
 .life-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .life-card__content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
 }
 
 .life-card__title {
-    margin-bottom: 12px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 143%;
-    color: var(--main-blue-blue-80);
+  margin-bottom: 12px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--main-blue-blue-80);
 
-    @include breakpoint($bp-1440) {
-        font-size: 12px;
-        line-height: 133%;
-    }
+  @include breakpoint($bp-1440) {
+    font-size: 12px;
+    line-height: 133%;
+  }
 }
 
 .life-card__text {
-    margin-bottom: 12px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 144%;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    color: var(--main-blue-blue-100);
-    flex-grow: 1;
+  margin-bottom: 12px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 144%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: var(--main-blue-blue-100);
+  flex-grow: 1;
 
-    @include breakpoint($bp-1440) {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-    }
+  @include breakpoint($bp-1440) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
 }
 
 .life-card__date {
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    gap: 3px;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 133%;
-    color: var(--main-blue-blue-80);
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  gap: 3px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: var(--main-blue-blue-80);
 }
 
 .life-card__date svg {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 @include breakpoint($bp-1440) {
@@ -227,10 +241,6 @@
 }
 
 @include breakpoint($bp-1200) {
-  .section--life {
-    padding-bottom: 80px;
-  }
-
   .section--life .section-header__content {
     flex: 0 1 464px;
     width: 464px;
@@ -254,20 +264,12 @@
 }
 
 @include breakpoint($bp-992) {
-  .section--life {
-    padding-bottom: 60px;
-  }
-
   .life-card {
     min-height: 307px;
   }
 }
 
 @include breakpoint($bp-768) {
-  .section--life {
-    padding-bottom: 52px;
-  }
-
   .section--life .section-header {
     flex-direction: column;
     gap: 32px;
@@ -282,11 +284,11 @@
   .life-tabs {
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 32px;
   }
 
   .life-tabs__list {
     flex-wrap: wrap;
-    gap: 12px;
   }
 
   .life-panel--active {
@@ -303,10 +305,6 @@
 }
 
 @include breakpoint($bp-390) {
-  .section--life {
-    padding-bottom: 80px;
-  }
-
   .section--life .section-header {
     gap: 16px;
     margin-bottom: 32px;
@@ -332,8 +330,8 @@
   }
 
   .life-tabs__tab {
-    flex: 1 1 calc(50% - 6px);
-    padding: 12px 20px;
+    width: 173px;
+    padding: 12px 27px;
     font-size: 16px;
     line-height: 150%;
   }
