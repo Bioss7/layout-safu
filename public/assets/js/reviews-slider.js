@@ -11,9 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobile = window.matchMedia('(max-width: 768px)');
   let swiper;
   let groupSize;
-  function updateDots(index) {
+  const DOTS = 5;
+  // Точек всегда DOTS, слайдов может быть больше (1 на мобильном).
+  // Точка i ведёт на слайд round(i * (slides-1) / (DOTS-1)).
+  function slideForDot(i, slides) {
+    return slides <= DOTS ? i : Math.round(i * (slides - 1) / (DOTS - 1));
+  }
+  function dotForSlide(index, slides) {
+    if (slides <= 1) return 0;
+    return slides <= DOTS ? index : Math.round(index * (DOTS - 1) / (slides - 1));
+  }
+  function updateDots(index, slides) {
+    const active = dotForSlide(index, slides);
     dotsList?.querySelectorAll('.slider-dots__dot').forEach(dot => {
-      const selected = Number(dot.dataset.slide) === index;
+      const selected = Number(dot.dataset.slide) === active;
       dot.classList.toggle('slider-dots__dot--active', selected);
       dot.setAttribute('aria-current', String(selected));
     });
@@ -33,14 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
       viewport.append(slide);
     }
     dotsList?.replaceChildren();
-    for (let i = 0; i < Math.ceil(cards.length / groupSize); i += 1) {
+    const slides = Math.ceil(cards.length / groupSize);
+    for (let i = 0; i < Math.min(DOTS, slides); i += 1) {
       const item = document.createElement('li');
       const dot = document.createElement('button');
       dot.type = 'button';
       dot.className = 'slider-dots__dot';
       dot.setAttribute('aria-label', `Слайд ${i + 1}`);
       dot.dataset.slide = String(i);
-      dot.addEventListener('click', () => swiper.slideTo(i));
+      dot.addEventListener('click', () => swiper.slideTo(slideForDot(i, slides)));
       item.append(dot);
       dotsList?.append(item);
     }
@@ -50,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
       allowTouchMove: true,
       keyboard: { enabled: true, onlyInViewport: true },
       a11y: { enabled: true },
-      on: { slideChange(sw) { updateDots(sw.realIndex); } }
+      on: { slideChange(sw) { updateDots(sw.realIndex, slides); } }
     });
-    updateDots(swiper.realIndex);
+    updateDots(swiper.realIndex, slides);
   }
   prevBtn?.addEventListener('click', () => swiper.slidePrev());
   nextBtn?.addEventListener('click', () => swiper.slideNext());
