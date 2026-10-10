@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             panel.classList.toggle('life-panel--active', isActive);
             panel.setAttribute('aria-hidden', String(!isActive));
+            panel.hidden = !isActive;
         });
 
         const allLabel = activeTab?.dataset.lifeAll;

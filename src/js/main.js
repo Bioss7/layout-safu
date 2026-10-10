@@ -197,6 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     points.forEach(point => {
+        point.setAttribute('tabindex', '0');
         point.addEventListener('click', () => setActive(point));
+        point.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setActive(point);
+            }
+        });
     });
 });

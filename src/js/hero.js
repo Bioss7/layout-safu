@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!hero) return;
   if (typeof Swiper === 'undefined') return;
 
+  const tabsList = hero.querySelector('[data-hero-tabs]');
   const tabs     = [...hero.querySelectorAll('.hero__tab')];
   const panels   = [...hero.querySelectorAll('.hero__panel')];
   const dotsList = hero.querySelector('[data-hero-dots]');
@@ -86,6 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
   nextBtn?.addEventListener('click', () => swipers[activeIndex]?.slideNext());
 
   // ============ ТАБЫ ============
+
+  if (tabsList) tabsList.setAttribute('role', 'tablist');
+  tabs.forEach((tab, i) => {
+    tab.setAttribute('role', 'tab');
+    const panel = panels[i];
+    if (panel) {
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', `hero-tab-${i}`);
+      tab.setAttribute('aria-controls', `hero-panel-${i}`);
+      tab.id = `hero-tab-${i}`;
+    }
+  });
 
   function activateTab(index, { focus = false } = {}) {
     if (index === activeIndex) return;
