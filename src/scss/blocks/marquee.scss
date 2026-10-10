@@ -13,57 +13,52 @@
   @include breakpoint($bp-1200) {
     padding: 17px 0;
   }
+}
 
-  &__track {
-    display: flex;
-    width: max-content;
-    animation: marquee-scroll 30s linear infinite;
-    will-change: transform;
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee__text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-100);
+  white-space: nowrap;
+
+  @include breakpoint($bp-1200) {
+    font-size: 20px;
+    line-height: 140%;
   }
 
-  &__group {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+  @include breakpoint($bp-768) {
+    font-size: 16px;
   }
+}
 
-  &__text {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 133%;
-    letter-spacing: 0.06em;
-    color: var(--main-blue-blue-100);
-    white-space: nowrap;
+.marquee__dot {
+  flex-shrink: 0;
+  margin: 0 68px;
+}
 
-    @include breakpoint($bp-1200) {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 140%;
-      letter-spacing: 0.06em;
-    }
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
 
-    @include breakpoint($bp-768) {
-      font-weight: 400;
-      font-size: 16px;
-    }
-  }
-
-  &__dot {
-    flex-shrink: 0;
-    margin: 0 68px;
-  }
-
-  // Пауза при наведении (опционально)
-  &:hover &__track {
-    animation-play-state: paused;
-  }
-
-  // Уважение к настройкам пользователя
-  @media (prefers-reduced-motion: reduce) {
-    &__track {
-      animation: none;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
   }
 }
 

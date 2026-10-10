@@ -26,6 +26,7 @@
 
 - Компонентный подход: компонент = секция в `index.html` + `src/scss/blocks/<block>.scss` + при необходимости `src/js/<block>.js` (подключается тегом `<script>` в `index.html`); новый блок подключается в `style.scss` через `@use "blocks/<block>";`.
 - БЭМ: блок `.hero`, элементы `&__title`, модификаторы `--active`; JS переключает только модификаторы, связь через `data-*`-атрибуты.
+- SCSS-файлы блоков — плоские: элементы выносить в `.block__element`, внутри блока оставлять только модификаторы и псевдоклассы; один класс — одно правило (без дублей); общие элементы и типографика — `common.scss` / `typography.scss`.
 - Цвета и токены — только `var(--main-*)` из `:root` в `_vars.scss`; размеры/брейкпоинты — SCSS-переменные и `@include breakpoint($bp-*)`.
 - Семантика: `header/nav/main/section/article/footer`, заголовки по уровню, интерактив — `button`/`a` с `:focus-visible` и `aria-*`.
 
@@ -34,6 +35,7 @@
 ВАЖНО: при подходящей задаче сначала прочитай нужный файл через Read (не загружай оба сразу) и следуй ему:
 
 - Верстка, стили, JS-компоненты → `.agents/skills/bem-component/SKILL.md`
+- Структура SCSS, вложенность, дубликаты (поверх bem-component) → `.agents/skills/scss-architecture/SKILL.md`
 - Любые запросы к Figma MCP → `.agents/skills/figma-mcp/SKILL.md` (прочитать ДО первого вызова инструмента)
 
 ## Экономия токенов

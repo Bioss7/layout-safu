@@ -1,0 +1,102 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.title-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-100);
+
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--main-blue-blue-100);
+  }
+
+  &--white {
+    color: var(--main-white-white-100);
+
+    &::before {
+      background-color: var(--main-white-white-100);
+    }
+  }
+
+  @include breakpoint($bp-1440) {
+    font-size: 32px;
+    line-height: 163%;
+  }
+
+  @include breakpoint($bp-992) {
+    font-size: 28px;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 24px;
+    line-height: 133%;
+
+    &::before {
+      flex: 0 0 10px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @include breakpoint($bp-390) {
+    gap: 14px;
+    font-size: 20px;
+    line-height: 28px;
+
+    &::before {
+      flex-basis: 12px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.section-descr {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--main-white-white-700-opacity);
+
+  @include breakpoint($bp-390) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+
+.section-header__descr {
+  margin-bottom: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  color: var(--main-blue-blue-80);
+
+  &--pulse {
+    color: var(--main-blue-blue-100);
+  }
+
+  @include breakpoint($bp-1440) {
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

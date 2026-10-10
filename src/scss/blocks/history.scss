@@ -2,111 +2,109 @@
 @use "../_vars" as *;
 
 .section--history {
-    --history-blue: #0B2D4E;
-    --history-blue-hover: #00AEEF;
-    --history-dot-bg: #CCEFFC;
+    --history-blue: #0b2d4e;
+    --history-blue-hover: #00aeef;
+    --history-dot-bg: #cceffc;
 }
 
 .history-timeline {
     position: relative;
     width: 100%;
     margin-top: 60px;
+}
 
-    &__line {
-        position: absolute;
-        top: 15px;
-        left: 0;
+.history-timeline__line {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+
+    svg {
+        display: block;
         width: 100%;
-        pointer-events: none;
+        height: 2px;
+    }
+}
 
-        svg {
-            display: block;
-            width: 100%;
-            height: 2px;
-        }
+.history-timeline__points {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-timeline__item {
+    flex: 0 0 auto;
+}
+
+.history-timeline__point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:not(&--active) {
+        margin-top: 8px;
     }
 
-    &__points {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    &--active {
+        gap: 12px;
     }
+}
 
-    &__item {
-        flex: 0 0 auto;
+/* Обычная (неактивная) точка */
+.history-timeline__dot:not(.history-timeline__dot--active) {
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+
+    circle {
+        fill: var(--history-dot-bg);
+        stroke: var(--history-blue);
+        stroke-width: 2px;
+        transition: stroke 0.2s ease;
     }
+}
 
-    &__point {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-        border: 0;
-        background: transparent;
-        cursor: pointer;
+/* Активная точка: задаём только размеры, цвета — инлайново в SVG */
+.history-timeline__dot--active {
+    display: block;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+}
 
-        &:not(&--active) {
-            margin-top: 8px;
-        }
+.history-timeline__year {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 144%;
+    color: var(--main-blue-blue-100);
+    transition: color 0.2s ease;
 
-        &--active {
-            gap: 12px;
-        }
-    }
-
-    /* Обычная (неактивная) точка */
-    &__dot:not(&__dot--active) {
-        display: block;
-        width: 15px;
-        height: 15px;
-        flex: 0 0 auto;
-
-        circle {
-            fill: var(--history-dot-bg);
-            stroke: var(--history-blue);
-            stroke-width: 2px;
-            transition: stroke 0.2s ease;
-        }
-    }
-
-    /* Активная точка: задаём только размеры, цвета — инлайново в SVG */
-    &__dot--active {
-        display: block;
-        width: 32px;
-        height: 32px;
-        flex: 0 0 auto;
-    }
-
-    &__year {
-        font-family: var(--font-family);
+    &--active {
         font-weight: 600;
-        font-size: 18px;
-        line-height: 144%;
-        color: var(--main-blue-blue-100);
-        transition: color 0.2s ease;
-
-        &--active {
-            font-family: var(--font-family);
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 133%;
-            color: var(--main-blue-blue-100);
-        }
+        font-size: 24px;
+        line-height: 133%;
     }
+}
 
-    /* Hover только для неактивных точек */
-    &__item:hover &__point:not(&__point--active) &__dot:not(&__dot--active) circle {
-        stroke: var(--history-blue-hover);
-    }
+/* Hover только для неактивных точек */
+.history-timeline__item:hover .history-timeline__point:not(.history-timeline__point--active) .history-timeline__dot:not(.history-timeline__dot--active) circle {
+    stroke: var(--history-blue-hover);
+}
 
-    &__item:hover &__point:not(&__point--active) &__year {
-        color: var(--history-blue-hover);
-    }
+.history-timeline__item:hover .history-timeline__point:not(.history-timeline__point--active) .history-timeline__year {
+    color: var(--history-blue-hover);
 }
 
 .history-cards {
@@ -122,8 +120,6 @@
     padding: 40px;
     width: 100%;
     max-width: 1723px;
-    // min-height: 398px;
-
     border-radius: 12px;
     box-sizing: border-box;
 
@@ -132,67 +128,61 @@
         gap: 16px;
     }
 
-    @include breakpoint($bp-1440) {
-
-    }
-
     &--active {
         display: flex;
     }
+}
 
-    &__text {
-        max-width: 827px;
+.history-card__text {
+    max-width: 827px;
+}
+
+.history-card__year {
+    margin-bottom: 20px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 163%;
+    letter-spacing: 0.06em;
+
+    @include breakpoint($bp-1440) {
+        font-size: 28px;
+        line-height: 143%;
     }
+}
 
-    &__year {
-        margin-bottom: 20px;
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 163%;
-        letter-spacing: 0.06em;
+.history-card__descr {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
 
-        @include breakpoint($bp-1440) {
-            font-size: 28px;
-            line-height: 143%;
-            letter-spacing: 0.06em;
-        }
+    @include breakpoint($bp-1440) {
+        font-size: 18px;
+        line-height: 144%;
     }
+}
 
-    &__descr {
-        margin: 0;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0.06em;
+.history-card__media {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 556px;
+    height: 314px;
+    border-radius: 12px;
+    overflow: hidden;
 
-        @include breakpoint($bp-1440) {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 144%;
-        }
-    }
-
-    &__media {
-        flex: 0 0 auto;
+    img {
+        display: block;
         width: 100%;
-        max-width: 556px;
-        height: 314px;
-        border-radius: 12px;
-        overflow: hidden;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        @include breakpoint($bp-1440) {
-            max-width: 606px;
-            height: 342px;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    @include breakpoint($bp-1440) {
+        max-width: 606px;
+        height: 342px;
     }
 }
 
@@ -268,10 +258,6 @@
 
     .history-cards {
         margin-top: 24px;
-    }
-
-    .history-card {
-        min-height: 0;
     }
 
     .history-card__year {

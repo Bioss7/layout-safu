@@ -2,648 +2,648 @@
 @use "../_vars" as *;
 
 .admission {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 
-    @include breakpoint($bp-1200) {
-        flex-direction: column;
+  @include breakpoint($bp-1200) {
+    flex-direction: column;
+  }
+}
+
+.admission__column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 50%;
+  max-width: 852px;
+
+  @include breakpoint($bp-1440) {
+    &:first-child {
+      max-width: 740px;
     }
 
-    &__column {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        flex: 1 1 50%;
-        max-width: 852px;
+    &:last-child {
+      max-width: 524px;
+    }
+  }
 
-        @include breakpoint($bp-1440) {
-            &:first-child {
-                max-width: 740px;
-            }
-
-            &:last-child {
-                max-width: 524px;
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            &:first-child {
-                max-width: 100%;
-            }
-
-            &:last-child {
-                max-width: 100%;
-                flex-wrap: wrap;
-                flex-direction: row;
-            }
-        }
+  @include breakpoint($bp-1200) {
+    &:first-child {
+      max-width: 100%;
     }
 
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
+    &:last-child {
+      max-width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
     }
+  }
+}
+
+.admission__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .admission-card {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 418px;
+  height: 340px;
+  padding: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-decoration: none;
+  color: inherit;
+
+  flex: 0 0 auto;
+
+  @include breakpoint($bp-1440) {
+    max-width: 362px;
+    padding: 16px;
+  }
+
+  @include breakpoint($bp-1200) {
+    max-width: 560px;
     width: 100%;
-    max-width: 418px;
+    height: 240px;
+    padding: 16px;
+  }
+
+  // Индустриальный партнёр — на всю ширину колонки, 340px
+  &--lg {
+    max-width: 100%;
+    width: 100%;
     height: 340px;
-    padding: 24px;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    text-decoration: none;
-    color: inherit;
-
-    flex: 0 0 auto;
 
     @include breakpoint($bp-1440) {
-        max-width: 362px;
-        padding: 16px;
+      max-width: 524px;
     }
 
     @include breakpoint($bp-1200) {
-        max-width: 560px;
-        width: 100%;
-        height: 240px;
-        padding: 16px;
+      max-width: 100%;
+      width: 100%;
+      height: 280px;
+    }
+  }
+
+  // Доп. образование и Сотруднику — на всю ширину колонки, 162px
+  &--lg-sm {
+    max-width: 100%;
+    width: 100%;
+    height: 162px;
+
+    @include breakpoint($bp-1440) {
+      max-width: 524px;
     }
 
-    &__content {
-        position: relative;
-        z-index: 1;
-        max-width: 484px;
+    @include breakpoint($bp-1200) {
+      max-width: 560px;
+      width: 100%;
+      flex: 1 1 calc(50% - 8px);
+    }
+  }
+
+  &--bg-1 {
+    background-image:
+      url('/assets/img/admission/01.png'),
+      linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/01-hover.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
     }
 
-    // Индустриальный партнёр — на всю ширину колонки, 340px
-    &--lg {
-        max-width: 100%;
-        width: 100%;
-        height: 340px;
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/01-1440.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
 
-        @include breakpoint($bp-1440) {
-            max-width: 524px;
-        }
-
-        @include breakpoint($bp-1200) {
-            max-width: 100%;
-            width: 100%;
-            height: 280px;
-        }
-    }
-
-    // Доп. образование и Сотруднику — на всю ширину колонки, 162px
-    &--lg-sm {
-        max-width: 100%;
-        width: 100%;
-        height: 162px;
-
-        @include breakpoint($bp-1440) {
-            max-width: 524px;
-        }
-
-        @include breakpoint($bp-1200) {
-            max-width: 560px;
-            width: 100%;
-            flex: 1 1 calc(50% - 8px);
-        }
-    }
-
-    &--bg-1 {
+      &:hover {
         background-image:
-            url('/assets/img/admission/01.png'),
-            linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/01-hover.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/01-1440.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/01-1440-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/01-1200.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/01-1200-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/01-992.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/01-992-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/01-768.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/01-768-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/01.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/01.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
+          url('/assets/img/admission/1440/01-1440-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &--bg-2 {
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/01-1200.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/02.png'),
-            linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/02-hover.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/02-1440.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/02-1440-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/02-1200.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/02-1200-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/02-992.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/02-992-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/02-768.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/02-768-hover.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/02.png'),
-                linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/02.png'),
-                    linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
-            }
-        }
+          url('/assets/img/admission/1200/01-1200-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &--bg-3 {
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/01-992.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/03.png'),
-            linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/03-hover.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/03-1440.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/03-1440-hover.png'),
-                    linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/03-1200.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/03-1200-hover.png'),
-                    linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/03-992.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/03-992-hover.png'),
-                    linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/03-768.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/03-768-hover.png'),
-                    linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/03.png'),
-                linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/03.png'),
-                    linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
-            }
-        }
+          url('/assets/img/admission/992/01-992-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &--bg-4 {
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/01-768.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/04.png'),
-            linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/04-hover.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/04-1440.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/04-1440-hover.png'),
-                    linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/4-1200.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/04-1200-hover.png'),
-                    linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/04-992.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/04-992-hover.png'),
-                    linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/04-768.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/04-768-hover.png'),
-                    linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/04.png'),
-                linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/04.png'),
-                    linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
-            }
-        }
+          url('/assets/img/admission/768/01-768-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .5) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &--bg-5 {
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/01.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/05.png'),
-            linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+          url('/assets/img/admission/390/01.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
+    }
+  }
 
-        &:hover {
-            background-image:
-                url('/assets/img/admission/05-hover.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-        }
+  &--bg-2 {
+    background-image:
+      url('/assets/img/admission/02.png'),
+      linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
 
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/05-1440.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/05-1440-hover.png'),
-                    linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/5-1200.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/05-1200-hover.png'),
-                    linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/05-992.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/05-992-hover.png'),
-                    linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/05-768.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/05-768-hover.png'),
-                    linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/05.png'),
-                linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/05.png'),
-                    linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
-            }
-        }
+    &:hover {
+      background-image:
+        url('/assets/img/admission/02-hover.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
     }
 
-    &--bg-6 {
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/02-1440.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/06.png'),
-            linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/06-hover.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/06-1440.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/06-1440-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/6-1200.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/06-1200-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/06-992.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/06-992-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/06-768.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/06-768-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/06.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/06.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
+          url('/assets/img/admission/1440/02-1440-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &--bg-7 {
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/02-1200.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
         background-image:
-            url('/assets/img/admission/07.png'),
-            linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-        &:hover {
-            background-image:
-                url('/assets/img/admission/07-hover.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-        }
-
-        @include breakpoint($bp-1440) {
-            background-image:
-                url('/assets/img/admission/1440/07-1440.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1440/07-1440-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-1200) {
-            background-image:
-                url('/assets/img/admission/1200/7-1200.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/1200/07-1200-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-992) {
-            background-image:
-                url('/assets/img/admission/992/07-992.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/992/07-992-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-768) {
-            background-image:
-                url('/assets/img/admission/768/07-768.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/768/07-768-hover.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
-
-        @include breakpoint($bp-390) {
-            background-image:
-                url('/assets/img/admission/390/07.png'),
-                linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-
-            &:hover {
-                background-image:
-                    url('/assets/img/admission/390/07.png'),
-                    linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
-            }
-        }
+          url('/assets/img/admission/1200/02-1200-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &__title {
-        margin-bottom: 12px;
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 143%;
-        letter-spacing: 0.06em;
-        color: var(--main-white-white-100);
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/02-992.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
 
-        @include breakpoint($bp-1440) {
-            font-size: 24px;
-            line-height: 133%;
-        }
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/02-992-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
 
-    &__subtitle {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 140%;
-        color: var(--main-white-white-100);
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/02-768.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/02-768-hover.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
     }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/02.png'),
+        linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/02.png'),
+          linear-gradient(101.53deg, rgba(43, 125, 166, .85) 3.75%, rgba(35, 156, 216, .85) 97.74%);
+      }
+    }
+  }
+
+  &--bg-3 {
+    background-image:
+      url('/assets/img/admission/03.png'),
+      linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/03-hover.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+    }
+
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/03-1440.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1440/03-1440-hover.png'),
+          linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/03-1200.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1200/03-1200-hover.png'),
+          linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/03-992.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/03-992-hover.png'),
+          linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/03-768.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/03-768-hover.png'),
+          linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/03.png'),
+        linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/03.png'),
+          linear-gradient(90deg, rgba(84, 169, 184, .85) 0%, rgba(138, 187, 199, .85) 100%);
+      }
+    }
+  }
+
+  &--bg-4 {
+    background-image:
+      url('/assets/img/admission/04.png'),
+      linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/04-hover.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+    }
+
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/04-1440.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1440/04-1440-hover.png'),
+          linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/4-1200.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1200/04-1200-hover.png'),
+          linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/04-992.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/04-992-hover.png'),
+          linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/04-768.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/04-768-hover.png'),
+          linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/04.png'),
+        linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/04.png'),
+          linear-gradient(90deg, rgba(129, 132, 204, .85) 0%, rgba(159, 159, 209, .85) 100%);
+      }
+    }
+  }
+
+  &--bg-5 {
+    background-image:
+      url('/assets/img/admission/05.png'),
+      linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/05-hover.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+    }
+
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/05-1440.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1440/05-1440-hover.png'),
+          linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+      }
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/5-1200.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1200/05-1200-hover.png'),
+          linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+      }
+    }
+
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/05-992.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/05-992-hover.png'),
+          linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+      }
+    }
+
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/05-768.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/05-768-hover.png'),
+          linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+      }
+    }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/05.png'),
+        linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/05.png'),
+          linear-gradient(101.53deg, rgba(7, 57, 105, .85) 0%, rgba(10, 81, 150, .85) 96.86%);
+      }
+    }
+  }
+
+  &--bg-6 {
+    background-image:
+      url('/assets/img/admission/06.png'),
+      linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/06-hover.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+    }
+
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/06-1440.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1440/06-1440-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/6-1200.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1200/06-1200-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/06-992.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/06-992-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/06-768.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/06-768-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/06.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/06.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+  }
+
+  &--bg-7 {
+    background-image:
+      url('/assets/img/admission/07.png'),
+      linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+    &:hover {
+      background-image:
+        url('/assets/img/admission/07-hover.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+    }
+
+    @include breakpoint($bp-1440) {
+      background-image:
+        url('/assets/img/admission/1440/07-1440.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1440/07-1440-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-1200) {
+      background-image:
+        url('/assets/img/admission/1200/7-1200.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/1200/07-1200-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-992) {
+      background-image:
+        url('/assets/img/admission/992/07-992.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/992/07-992-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-768) {
+      background-image:
+        url('/assets/img/admission/768/07-768.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/768/07-768-hover.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+
+    @include breakpoint($bp-390) {
+      background-image:
+        url('/assets/img/admission/390/07.png'),
+        linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+
+      &:hover {
+        background-image:
+          url('/assets/img/admission/390/07.png'),
+          linear-gradient(90deg, rgba(69, 108, 154, .85) 0%, rgba(96, 124, 161, .85) 100%);
+      }
+    }
+  }
+}
+
+.admission-card__content {
+  position: relative;
+  z-index: 1;
+  max-width: 484px;
+}
+
+.admission-card__title {
+  margin-bottom: 12px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 143%;
+  letter-spacing: 0.06em;
+  color: var(--main-white-white-100);
+
+  @include breakpoint($bp-1440) {
+    font-size: 24px;
+    line-height: 133%;
+  }
+}
+
+.admission-card__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--main-white-white-100);
 }
 
 @include breakpoint($bp-1440) {

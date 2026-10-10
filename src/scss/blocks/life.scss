@@ -35,30 +35,6 @@
   opacity: 0.9;
 }
 
-.button-max__logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.button-max__logo-text {
-  font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: var(--main-white-white-100);
-  text-transform: uppercase;
-}
-
-.button-max__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
 /* ================= ТАБЫ ================= */
 .life-tabs {
   display: flex;
@@ -196,7 +172,6 @@
   flex-grow: 1;
 
   @include breakpoint($bp-1440) {
-    font-weight: 600;
     font-size: 16px;
     line-height: 150%;
   }
@@ -332,8 +307,6 @@
   .life-tabs__tab {
     width: 173px;
     padding: 12px 27px;
-    font-size: 16px;
-    line-height: 150%;
   }
 
   .life-panel--active {
