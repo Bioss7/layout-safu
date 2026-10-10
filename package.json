@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Bioss7/landing-moscow-transport#readme",
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
     "autoprefixer": "^10.5.4",
     "sass": "^1.102.0",
     "sharp": "^0.35.3",

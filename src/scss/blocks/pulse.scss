@@ -468,6 +468,114 @@
   color: var(--main-blue-blue-100);
 }
 
+@media screen and (max-width: 1024px) {
+  .section--pulse {
+    overflow: hidden;
+  }
+
+  .section--pulse .container {
+    overflow: hidden;
+  }
+
+  .section--pulse .section-header {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .pulse {
+    gap: 32px;
+  }
+
+  .pulse__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: center;
+    justify-items: center;
+    column-gap: 16px;
+    row-gap: 24px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .pulse__center {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    order: 0;
+    justify-self: center;
+    flex: 0 0 auto;
+    width: 304px;
+    height: 304px;
+  }
+
+  .pulse__col {
+    display: contents;
+  }
+
+  .pulse-panel__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .pulse-link {
+    max-width: 332px;
+  }
+
+  .pulse-card--edu {
+    order: 1;
+  }
+
+  .pulse-card--safu {
+    order: 2;
+  }
+
+  .pulse-card--science {
+    order: 3;
+  }
+
+  .pulse-card--international {
+    order: 4;
+  }
+
+  .pulse-card--university {
+    order: 5;
+  }
+
+  .pulse-card--life {
+    order: 6;
+  }
+
+  .pulse__wrap .pulse-card {
+    width: 100%;
+    max-width: 360px;
+    min-height: 84px;
+    margin: 0;
+  }
+
+  .pulse-panel {
+    padding: 28px;
+    min-height: 0;
+  }
+
+  .pulse-panel__links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .pulse-panel__text {
+    max-width: 519px;
+    margin-bottom: 16px;
+  }
+
+  .pulse-panel__tab {
+    display: none;
+  }
+
+  .pulse-panel__tab--active {
+    display: flex;
+  }
+}
+
 @include breakpoint($bp-1440) {
   .section--pulse .section-header__content {
     min-width: 0;

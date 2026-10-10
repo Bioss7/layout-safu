@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!tabPanel) return;
       tabPanel.classList.toggle('hero__panel--active', selected);
       tabPanel.hidden = !selected;
+      tabPanel.setAttribute('aria-hidden', String(!selected));
     });
 
     // 2. Синхронный update: панель уже видима, браузер ещё не рисовал кадр,

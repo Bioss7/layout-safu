@@ -70,7 +70,33 @@ dist/                → результат сборки (гитигноритс
 - `sass` — SCSS → CSS
 - `autoprefixer` — вендорные префиксы (конфиг: `.browserslistrc`)
 - `sharp` — ручные скрипты WebP/оптимизации
+- `@playwright/test` — визуальное тестирование
 
 Сторонние библиотеки (swiper, chart.js) — локальные файлы в `public/assets/vendor/`, без npm-зависимостей.
 
-Пример сайта: https://moscowcareer.mguu.ru/itgorod/
+## Тестирование
+
+Визуальные тесты на Playwright проверяют вёрстку на всех ключевых вьюпортах (1920, 1024, 768, 375) и работу интерактивных элементов (табы, слайдеры, выпадашки).
+
+### Установка браузеров (один раз)
+
+```bash
+npx playwright install chromium
+```
+
+### Запуск тестов
+
+```bash
+npx playwright test
+```
+
+### Полезные команды
+
+```bash
+npx playwright test --ui      # интерактивный режим с браузером
+npx playwright test --debug  # пошаговая отладка
+npx playwright show-report   # открыть HTML-отчёт после прогона
+```
+
+Тесты автоматически собирают проект (`pnpm build`) и запускают preview-сервер на порту 4173.
+
