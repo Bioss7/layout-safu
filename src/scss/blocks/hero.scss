@@ -8,7 +8,7 @@
   background:
     linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
     linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-    var(--main-white-white-700-opacity) url("../img/hero-bg.png") center center / cover no-repeat;
+    var(--main-white-white-700-opacity) url("/assets/img/hero-bg.png") center center / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -18,7 +18,7 @@
     background:
       linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
       linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("../img/hero-bg-1440.png") center center / cover no-repeat;
+      var(--main-white-white-700-opacity) url("/assets/img/hero-bg-1440.png") center center / cover no-repeat;
   }
 
   @include breakpoint($bp-1200) {
@@ -26,7 +26,7 @@
     background:
       linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
       linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("../img/hero-bg-1200.png") center center / cover no-repeat;
+      var(--main-white-white-700-opacity) url("/assets/img/hero-bg-1200.png") center center / cover no-repeat;
   }
 
   @include breakpoint($bp-992) {
@@ -34,14 +34,14 @@
     background:
       linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
       linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("../img/hero-bg-992.png") center center / cover no-repeat;
+      var(--main-white-white-700-opacity) url("/assets/img/hero-bg-992.png") center center / cover no-repeat;
   }
 
   @include breakpoint($bp-390) {
     background:
       linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
       linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("../img/hero-bg-390.png") center center / cover no-repeat;
+      var(--main-white-white-700-opacity) url("/assets/img/hero-bg-390.png") center center / cover no-repeat;
   }
 
   &__inner {

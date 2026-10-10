@@ -1,21 +1,22 @@
-# Правила агента — layout-safu (лендинг на Gulp)
+# Правила агента — layout-safu (лендинг на Vite + pnpm)
 
 Файл читается всеми инструментами (opencode, ChatGPT desktop и др.). Детальные правила лежат в скиллах и подключаются лениво — только под задачу.
 
 ## Проект
 
-- Gulp 5: `npm run dev` — сборка в `dist/` + live server; `npx gulp build` — разовая сборка; `npx gulp styles` — только SCSS.
-- Разметка: `index.html` в корне.
-- Стили: `src/scss/` — `style.scss` (единственный вход), `blocks/` (БЭМ-блоки), `_vars.scss`, `_mixins.scss`.
-- JS и ассеты: `public/assets/{js,img,fonts,vendor}`; результат сборки — `dist/`.
-- В HTML пути идут как `../public/assets/...` — сохранять этот префикс (Gulp переписывает их в `assets/...` для dist).
+- Vite 7 + pnpm: `pnpm dev` — dev-сервер с HMR; `pnpm build` — сборка в `dist/`; `pnpm preview` — просмотр сборки.
+- Разметка: `index.html` в корне — точка входа Vite.
+- Стили: `src/scss/` — `style.scss` (единственный вход, в `index.html` подключён как `<link href="/src/scss/style.scss">`), `blocks/` (БЭМ-блоки), `_vars.scss`, `_mixins.scss`.
+- JS: `src/js/` — скрипты блоков, каждый подключается отдельным `<script type="module" src="/src/js/<block>.js">` в `index.html`.
+- Ассеты: `public/assets/{css,img,fonts,vendor}` (копируются в `dist/assets/` как есть); swiper/chart.js — локальные файлы в `public/assets/vendor/`, подключаются обычными `<script>`.
+- В HTML пути к ассетам — абсолютные `/assets/...`; в SCSS `url()` — тоже `/assets/...`.
 
 ## Запрещено
 
-- Не открывать `node_modules/`, `dist/`, `package-lock.json`, `gulp_out.txt`, `gulp_err.txt`.
-- Большие файлы (`index.html`, `public/assets/css/style.css`) не читать целиком: сначала grep, потом Read с offset/limit.
-- Не запускать `npm run dev` как проверку — процесс вечно висит на watch + сервере. Проверка: `npx gulp styles` или `npx gulp build`.
-- Без явной просьбы не трогать `gulpfile.js` и `package.json`.
+- Не открывать `node_modules/`, `dist/`.
+- Большие файлы (`index.html`, собранный CSS) не читать целиком: сначала grep, потом Read с offset/limit.
+- Не запускать `pnpm dev` как проверку — процесс вечно висит на watch + сервере. Проверка: `pnpm build`.
+- Без явной просьбы не трогать `vite.config.js`, `postcss.config.js` и `package.json`.
 
 ## Перед любой работой — план
 
@@ -23,7 +24,7 @@
 
 ## Конвенции (кратко)
 
-- Компонентный подход: компонент = секция в `index.html` + `src/scss/blocks/<block>.scss` + при необходимости `public/assets/js/<block>.js`; новый блок подключается в `style.scss` через `@use "blocks/<block>";`.
+- Компонентный подход: компонент = секция в `index.html` + `src/scss/blocks/<block>.scss` + при необходимости `src/js/<block>.js` (подключается тегом `<script>` в `index.html`); новый блок подключается в `style.scss` через `@use "blocks/<block>";`.
 - БЭМ: блок `.hero`, элементы `&__title`, модификаторы `--active`; JS переключает только модификаторы, связь через `data-*`-атрибуты.
 - Цвета и токены — только `var(--main-*)` из `:root` в `_vars.scss`; размеры/брейкпоинты — SCSS-переменные и `@include breakpoint($bp-*)`.
 - Семантика: `header/nav/main/section/article/footer`, заголовки по уровню, интерактив — `button`/`a` с `:focus-visible` и `aria-*`.

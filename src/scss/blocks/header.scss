@@ -281,7 +281,7 @@ html.page--header-open {
     height: 100dvh;
     overflow-y: auto;
     overscroll-behavior: contain;
-    background: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("../img/header-menu-bg.png") center / cover no-repeat;
+    background: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("/assets/img/header-menu-bg.png") center / cover no-repeat;
     backdrop-filter: blur(18px);
   }
 
@@ -314,7 +314,7 @@ html.page--header-open {
   }
 
   &--search-open {
-    background-image: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("../img/header-search-bg.png");
+    background-image: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("/assets/img/header-search-bg.png");
   }
 
   &--search-open &__control--search svg path {

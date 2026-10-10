@@ -354,7 +354,7 @@
         left: 0;
         width: 30px;
         height: 18px;
-        background-image: url("../img/pulse/pulse-decor-top.svg");
+        background-image: url("/assets/img/pulse/pulse-decor-top.svg");
     }
 
     &::after {
@@ -362,7 +362,7 @@
         right: 0;
         width: 30px;
         height: 18px;
-        background-image: url("../img/pulse/pulse-decor-bottom.svg");
+        background-image: url("/assets/img/pulse/pulse-decor-bottom.svg");
     }
 
     &__content {
@@ -963,13 +963,13 @@
     .pulse-panel::before {
         width: 20px;
         height: 12px;
-        background-image: url("../img/pulse/pulse-decor-top-390.svg");
+        background-image: url("/assets/img/pulse/pulse-decor-top-390.svg");
     }
 
     .pulse-panel::after {
         width: 19px;
         height: 13px;
-        background-image: url("../img/pulse/pulse-decor-bottom-390.svg");
+        background-image: url("/assets/img/pulse/pulse-decor-bottom-390.svg");
     }
 }
 

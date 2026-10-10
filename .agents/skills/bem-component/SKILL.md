@@ -1,6 +1,6 @@
 ---
 name: bem-component
-description: Использовать при любой верстке и стилях в layout-safu — создание/изменение секций index.html, БЭМ-классов, SCSS-блоков в src/scss/blocks/, JS-компонентов в public/assets/js/. Содержит правила БЭМ, Sass, семантической разметки и компонентного подхода.
+description: Использовать при любой верстке и стилях в layout-safu — создание/изменение секций index.html, БЭМ-классов, SCSS-блоков в src/scss/blocks/, JS-компонентов в src/js/. Содержит правила БЭМ, Sass, семантической разметки и компонентного подхода.
 ---
 
 # БЭМ + Sass + семантика + компонентный подход (layout-safu)
@@ -11,7 +11,7 @@ description: Использовать при любой верстке и сти
 
 1. Секция в `index.html` — `<section class="block-name">…</section>` в общем потоке страницы.
 2. `src/scss/blocks/<block-name>.scss` — стили блока.
-3. `public/assets/js/<block-name>.js` — только если нужна логика (табы, слайдер, модалка).
+3. `src/js/<block-name>.js` — только если нужна логика (табы, слайдер, модалка); подключается отдельным `<script type="module" src="/src/js/<block-name>.js">` в `index.html` (в конец `<body>`, рядом с другими скриптами).
 
 Новый блок обязательно подключается в `src/scss/style.scss`:
 
@@ -72,7 +72,7 @@ description: Использовать при любой верстке и сти
 
 ## JS-компонент
 
-Шаблон (пример — `public/assets/js/life-tabs.js`):
+Шаблон (пример — `src/js/life-tabs.js`):
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-- Один файл — один блок; без библиотек (исключение — `public/assets/vendor/`: swiper, chart.js).
+- Один файл — один блок; без библиотек (swiper/chart.js — локальные файлы `public/assets/vendor/`, подключаются обычными `<script>` до скриптов блоков и доступны как глобали `Swiper`/`Chart`).
 - aria-состояния синхронизируются вместе с модификаторами.
 
 ## Чек-лист нового компонента
@@ -91,6 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
 1. Секция в `index.html` (семантические теги, классы по БЭМ).
 2. `src/scss/blocks/<block>.scss` (подключить в `style.scss`).
 3. Токены — в `_vars.scss`, если их там ещё нет.
-4. `public/assets/js/<block>.js` — при необходимости логики; файл попадает в сборку автоматически.
-5. Проверка: `npx gulp styles` (не `npm run dev`).
-6. Пути к ассетам в HTML — `../public/assets/...`.
+4. `src/js/<block>.js` — при необходимости логики; добавить `<script type="module" src="/src/js/<block>.js">` в `index.html`.
+5. Проверка: `pnpm build` (не `pnpm dev`).
+6. Пути к ассетам в HTML и SCSS — `/assets/...`.

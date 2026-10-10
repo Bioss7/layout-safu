@@ -109,7 +109,7 @@
     height: 241px;
     margin-bottom: 16px;
     border-radius: 4px;
-    background: url("../img/review/card-bg.png") center / cover no-repeat;
+    background: url("/assets/img/review/card-bg.png") center / cover no-repeat;
 
     @include breakpoint($bp-1440) {
       height: 184px;

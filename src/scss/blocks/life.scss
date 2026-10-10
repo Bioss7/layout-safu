@@ -10,7 +10,7 @@
   height: 48px;
   padding: 14px 16px;
   border-radius: 4px;
-  background: url("../img/life/button-bg.png");
+  background: url("/assets/img/life/button-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,15 +19,15 @@
 
   @include breakpoint($bp-992) {
     margin-top: 24px;
-    background: url("../img/life/button-bg-992.png");
+    background: url("/assets/img/life/button-bg-992.png");
   }
 
   @include breakpoint($bp-768) {
-    background: url("../img/life/button-bg-768.png");
+    background: url("/assets/img/life/button-bg-768.png");
   }
 
   @include breakpoint($bp-390) {
-    background: url("../img/life/button-bg-390.png");
+    background: url("/assets/img/life/button-bg-390.png");
   }
 }
 

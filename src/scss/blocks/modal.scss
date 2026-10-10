@@ -72,7 +72,7 @@
 //     display: block;
 //     width: 490px;
 //     height: 115px;
-//     background: url(../img/modal-points-bg-1.svg) no-repeat;
+//     background: url(/assets/img/modal-points-bg-1.svg) no-repeat;
 //     background-size: cover;
 //     position: absolute;
 //     right: 0;
@@ -130,7 +130,7 @@
 //       display: block;
 //       width: 580px;
 //       height: 157px;
-//       background: url(../img/modal-app-points-bg.svg) no-repeat;
+//       background: url(/assets/img/modal-app-points-bg.svg) no-repeat;
 //       background-size: cover;
 //       position: absolute;
 //       right: 0;
@@ -140,14 +140,14 @@
 //       @include breakpoint($bp-lg) {
 //         width: 448px;
 //         height: 133px;
-//         background: url(../img/modal-app-points-bg-md.svg) no-repeat;
+//         background: url(/assets/img/modal-app-points-bg-md.svg) no-repeat;
 //         background-size: cover;
 //       }
 
 //       @include breakpoint($bp-md) {
 //         width: 360px;
 //         height: 102px;
-//         background: url(../img/modal-app-points-bg-sm.svg) no-repeat;
+//         background: url(/assets/img/modal-app-points-bg-sm.svg) no-repeat;
 //         background-size: cover;
 //         bottom: 0;
 //         right: 3px;
