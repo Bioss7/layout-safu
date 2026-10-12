@@ -1,0 +1,21 @@
+.program-admission {
+ &__columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+ &__group { background: #f2fbfe; border-radius: 16px; padding: 20px; h3 { font-size: 16px; line-height: 26px; margin: 0 0 20px; } }
+ &__list { display: grid; gap: 8px; div { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 16px; background: white; border-radius: 4px; font-size: 18px; font-weight: 600; line-height: 24px; } dd { color: var(--accent); font-weight: 600; } }
+ &__choice { margin-top: 8px; summary { display: flex; justify-content: space-between; cursor: pointer; padding: 8px 16px; list-style: none; &::-webkit-details-marker { display: none; } } &[open] summary img { transform: rotate(180deg); } }
+ &__secondary { display: grid; grid-template-columns: 560fr 1140fr; gap: 20px; }
+ &__more { min-height: 444px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 40px; border-radius: 4px; .button { width: 100%; } }
+}
+.program-scores {
+ padding: 40px; border-radius: 4px;
+ .program-detail__text { margin-top: 20px; }
+ &__grid { display: grid; grid-template-columns: minmax(165px,222px) repeat(5,minmax(0,1fr)); gap: 12px; margin-top: 40px; }
+ &__labels { display: flex; flex-direction: column; justify-content: end; gap: 16px; font: 12px/48px var(--display); text-align: right; padding-right: 20px; }
+ &__year { min-width: 0; text-align: center; h3 { margin: 0 0 24px; font: 24px/40px var(--display); } dl { display: grid; gap: 16px; } dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } dd { background: #ffffff26; padding: 8px; border-radius: 4px; font: 24px/32px var(--display); } }
+}
+@media(max-width:1300px) { .program-admission__secondary { grid-template-columns: 1fr; } .program-admission__more { min-height: 240px; } }
+@media(max-width:700px) { .program-admission__columns { grid-template-columns: 1fr; } .program-scores__grid { grid-template-columns: 1fr; gap: 24px; } .program-scores__labels { display: none; } .program-scores__year { h3 { margin-bottom: 16px; } dl { gap: 8px; } dl > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; } dt { position: static; width: auto; height: auto; overflow: visible; clip-path: none; font-size: 14px; } dd { min-width: 100px; font-size: 20px; } } }
+@media(max-width:460px) {
+ .program-admission { padding: 0; background: none; &__columns { margin-top: 24px; gap: 24px; } &__group { padding: 16px; h3 { font-size: 18px; line-height: 28px; } } &__list div { font-size: 18px; line-height: 24px; padding: 8px; } &__more { padding: 16px; min-height: 284px; } }
+ .program-scores { padding: 16px; &__grid { margin-top: 32px; } &__year h3 { font-size: 20px; line-height: 32px; } }
+}

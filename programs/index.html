@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="САФУ — каталог программ обучения.">
+
+    <link rel="stylesheet" href="/src/scss/programs/style.scss">
+
+    <title>САФУ — Каталог программ обучения</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header">
+ <div class="site-header__inner container">
+  <div class="site-header__tools">
+   <button class="icon-button" type="button" aria-label="Открыть поиск" aria-expanded="false" aria-controls="header-search" data-disclosure><img src="/programs/assets/img/220-2665/imgIconSearch.svg" alt=""></button>
+   <span class="site-header__divider" aria-hidden="true"></span>
+   <button class="icon-button" type="button" aria-label="Повысить контрастность" aria-pressed="false" data-contrast><img src="/programs/assets/img/220-2665/imgIconEye.svg" alt=""></button>
+   <span class="site-header__divider" aria-hidden="true"></span>
+   <div class="disclosure site-header__branches">
+    <button class="disclosure__trigger" type="button" aria-controls="header-branches" aria-expanded="false" data-disclosure>Филиалы<img src="/programs/assets/img/220-2665/imgIconChevronDown.svg" alt=""></button>
+    <div id="header-branches" class="disclosure__panel" hidden><a href="https://narfu.ru/">Архангельск</a><a href="https://narfu.ru/sf/">Северодвинск</a><a href="https://narfu.ru/nao/">Нарьян-Мар</a></div>
+   </div>
+   <span class="site-header__divider" aria-hidden="true"></span>
+   <div class="disclosure site-header__language">
+    <button class="disclosure__trigger" type="button" aria-label="Выбрать язык" aria-controls="header-languages" aria-expanded="false" data-disclosure>RU<img src="/programs/assets/img/220-2665/imgIconChevronDown.svg" alt=""></button>
+    <div id="header-languages" class="disclosure__panel" hidden><a href="/programs/" lang="ru" aria-current="true">Русский</a><a href="https://narfu.ru/en/" lang="en">English</a></div>
+   </div>
+   <button class="button site-header__menu" type="button" aria-label="Меню" aria-expanded="false" aria-controls="header-menu" data-disclosure><span class="site-header__menu-label">Меню</span><img src="/programs/assets/img/220-2665/imgIconMenu.svg" alt=""></button>
+  </div>
+  <div class="site-header__bottom">
+   <a class="brand" href="/" aria-label="САФУ — главная">
+    <picture class="brand__mark"><source media="(max-width: 900px)" srcset="/programs/assets/img/244-7939/imgLogo2.svg"><img src="/programs/assets/img/220-2665/img1.svg" alt=""></picture>
+    <span class="brand__text">Северный Арктический федеральный университет имени М.В. Ломоносова</span>
+   </a>
+   <nav class="site-header__nav" aria-label="Основная навигация"><a href="https://narfu.ru/university/">Университет</a><a href="https://narfu.ru/science/">Наука</a><a href="/programs/">Образование</a><a href="https://narfu.ru/life/">Студенческая жизнь</a><a href="https://narfu.ru/life/news/">Новости</a></nav>
+  </div>
+ </div>
+ <div class="site-header__drawer" id="header-menu" hidden><nav class="container" aria-label="Меню сайта"><a href="https://narfu.ru/university/">Университет</a><a href="https://narfu.ru/science/">Наука</a><a href="/programs/">Образование</a><a href="https://narfu.ru/life/">Студенческая жизнь</a><a href="https://narfu.ru/life/news/">Новости</a></nav></div>
+ <div class="site-header__drawer" id="header-search" hidden><div class="container"><form class="site-header__search" action="/programs/" method="get"><label class="sr-only" for="site-search">Поиск программ</label><input id="site-search" type="search" name="q" placeholder="Найти программу"><button class="button" type="submit">Найти</button></form></div></div>
+</header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="catalog-title">
+            <picture class="hero__background" aria-hidden="true">
+                <source media="(max-width:460px)" type="image/webp" srcset="/programs/assets/img/244-7939/imgBg.webp">
+                <source type="image/webp" srcset="/programs/assets/img/220-2665/img-1920.webp 1920w, /programs/assets/img/220-2665/img.webp 4092w" sizes="(min-width:1920px) 1920px, 100vw">
+                <img src="/programs/assets/img/220-2665/img.png" alt="">
+            </picture>
+            <div class="hero__inner container">
+                <nav class="hero__breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><img src="/programs/assets/img/220-2665/imgIconChevronRight.svg" alt=""><a href="https://narfu.ru/abiturient/">Абитуриент</a><img src="/programs/assets/img/220-2665/imgIconChevronRight1.svg" alt=""><span aria-current="page">Каталог программ</span></nav>
+                <h1 id="catalog-title" class="hero__title">Каталог<span>программ обучения</span></h1>
+                <p class="hero__description">Перечень образовательных программ по различным направлениям подготовки</p>
+                <picture class="hero__figure">
+                    <source media="(max-width:460px)" type="image/webp" srcset="/programs/assets/img/244-7939/imgChatGptImage1020261437551.webp">
+                    <source type="image/webp" srcset="/programs/assets/img/220-2665/imgImg-780.webp 780w, /programs/assets/img/220-2665/imgImg-1060.webp 1060w" sizes="(min-width:1251px) 530px, (min-width:751px) 38vw, 300px">
+                    <img src="/programs/assets/img/220-2665/imgImg.png" alt="" fetchpriority="high">
+                </picture>
+            </div>
+        </section>
+
+        <section class="catalog container" data-catalog aria-labelledby="results-title">
+<form class="filters" id="program-filters" aria-label="Поиск и фильтры программ">
+ <div class="filters__search"><img src="/programs/assets/img/241-2462/imgIconSearch.svg" alt=""><label class="sr-only" for="program-search">Поиск программ</label><input id="program-search" name="q" type="search" placeholder="Поиск" autocomplete="off"><button type="button" aria-label="Очистить поиск" data-clear-search hidden><img src="/programs/assets/img/241-2462/imgX.svg" alt=""></button></div>
+ <div class="filters__heading"><h2>Фильтры</h2><button class="filters__reset" type="reset" disabled>Сбросить</button></div>
+ <div class="filters__groups">
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-level" data-filter-toggle><span>Уровень образования <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-level" hidden><legend class="sr-only">Уровень образования</legend><label class="filters__option"><input type="checkbox" name="level[]" value="Бакалавриат"><span>Бакалавриат</span></label><label class="filters__option"><input type="checkbox" name="level[]" value="Специалитет"><span>Специалитет</span></label><label class="filters__option"><input type="checkbox" name="level[]" value="Магистратура"><span>Магистратура</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-area" data-filter-toggle><span>Область знаний <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-area" hidden><legend class="sr-only">Область знаний</legend><label class="filters__option"><input type="checkbox" name="area[]" value="Гуманитарные науки"><span>Гуманитарные науки</span></label><label class="filters__option"><input type="checkbox" name="area[]" value="Инженерное дело, технологии и технические науки"><span>Инженерное дело, технологии и технические науки</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-institute" data-filter-toggle><span>Институт <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-institute" hidden><legend class="sr-only">Институт</legend><label class="filters__option"><input type="checkbox" name="institute[]" value="Высшая инженерная школа"><span>Высшая инженерная школа</span></label><label class="filters__option"><input type="checkbox" name="institute[]" value="Высшая школа социально-гуманитарных наук"><span>Высшая школа социально-гуманитарных наук</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-direction" data-filter-toggle><span>Направление подготовки <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-direction" hidden><legend class="sr-only">Направление подготовки</legend><label class="filters__option"><input type="checkbox" name="direction[]" value="5.7.7. Социальная и политическая философия"><span>5.7.7. Социальная и политическая философия</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-exam" data-filter-toggle><span>Предметы ЕГЭ <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-exam" hidden><legend class="sr-only">Предметы ЕГЭ</legend><label class="filters__option"><input type="checkbox" name="exam[]" value="Русский язык"><span>Русский язык</span></label><label class="filters__option"><input type="checkbox" name="exam[]" value="Физика"><span>Физика</span></label><label class="filters__option"><input type="checkbox" name="exam[]" value="Математика (профиль)"><span>Математика (профиль)</span></label><label class="filters__option"><input type="checkbox" name="exam[]" value="Информатика"><span>Информатика</span></label><label class="filters__option"><input type="checkbox" name="exam[]" value="Химия"><span>Химия</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-format" data-filter-toggle><span>Форма обучения <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-format" hidden><legend class="sr-only">Форма обучения</legend><label class="filters__option"><input type="checkbox" name="format[]" value="Очно"><span>Очно</span></label><label class="filters__option"><input type="checkbox" name="format[]" value="Заочно"><span>Заочно</span></label><label class="filters__option"><input type="checkbox" name="format[]" value="Очно-заочно"><span>Очно-заочно</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-spo" data-filter-toggle><span>На базе СПО <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-spo" hidden><legend class="sr-only">На базе СПО</legend><label class="filters__option"><input type="checkbox" name="spo[]" value="Да"><span>Да</span></label><label class="filters__option"><input type="checkbox" name="spo[]" value="Нет"><span>Нет</span></label></fieldset>
+  </div>
+  <div class="filters__group">
+   <button type="button" class="filters__toggle" aria-expanded="false" aria-controls="filter-price" data-filter-toggle><span>Стоимость обучения <span class="filters__count" data-filter-count></span></span><img src="/programs/assets/img/241-2462/imgIconChevronDown.svg" alt=""></button>
+   <fieldset class="filters__options" id="filter-price" hidden><legend class="sr-only">Стоимость обучения</legend><label class="filters__option"><input type="checkbox" name="price[]" value="До 150 000 ₽"><span>До 150 000 ₽</span></label><label class="filters__option"><input type="checkbox" name="price[]" value="150 000–200 000 ₽"><span>150 000–200 000 ₽</span></label><label class="filters__option"><input type="checkbox" name="price[]" value="Более 200 000 ₽"><span>Более 200 000 ₽</span></label></fieldset>
+  </div>
+ </div>
+</form>
+            <div class="catalog__results">
+                <div class="catalog__toolbar"><div><h2 class="sr-only" id="results-title">Программы обучения</h2><p class="catalog__count" aria-live="polite" data-results-count>Найдено: 15 программ</p></div><label><span class="sr-only">Сортировка программ</span><select class="catalog__sort" data-sort><option value="default">Сортировка</option><option value="name">По названию</option><option value="price">По стоимости</option><option value="saved">Избранное</option></select></label></div>
+                <div class="catalog__cards">   <article class="program-card" data-program="1" aria-labelledby="program-title-1">
+    <div class="program-card__top"><span class="program-card__category program-card__category--humanities">Гуманитарные науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="1"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-1">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas" open><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="2" aria-labelledby="program-title-2">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="2"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-2">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="3" aria-labelledby="program-title-3">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="3"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-3">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="4" aria-labelledby="program-title-4">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="4"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-4">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="5" aria-labelledby="program-title-5">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="5"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-5">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="6" aria-labelledby="program-title-6">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="6"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-6">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="7" aria-labelledby="program-title-7">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="7"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-7">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="8" aria-labelledby="program-title-8">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="8"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-8">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="9" aria-labelledby="program-title-9">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="9"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-9">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="10" aria-labelledby="program-title-10">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="10"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-10">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="11" aria-labelledby="program-title-11">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="11"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-11">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="12" aria-labelledby="program-title-12">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="12"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-12">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="13" aria-labelledby="program-title-13">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="13"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-13">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="14" aria-labelledby="program-title-14">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="14"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-14">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article>
+   <article class="program-card" data-program="15" aria-labelledby="program-title-15">
+    <div class="program-card__top"><span class="program-card__category">Инженерное дело, технологии и технические науки</span><span class="program-card__accreditation"><img src="/programs/assets/img/233-7474/imgIcon.svg" alt="">Без государственной аккредитации</span><button class="icon-button program-card__save" type="button" aria-label="Добавить программу в избранное" aria-pressed="false" data-save="15"><img src="/programs/assets/img/233-7474/imgAddIcon.svg" alt=""></button></div>
+    <div class="program-card__body">
+     <div class="program-card__content">
+      <p class="program-card__direction">5.7.7. Социальная и политическая философия</p>
+      <h3 class="program-card__title" id="program-title-15">Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов</h3>
+      <div class="program-card__profile"><h4>Профиль:</h4><p>Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.</p></div>
+      <div class="program-card__exams"><div class="program-card__tags"><span class="program-card__tag">Русский язык</span><span class="program-card__tag">Физика</span></div><div class="program-card__tags"><span>+1 на выбор</span><span class="program-card__tag program-card__tag--choice">Математика (профиль)</span><span class="program-card__tag program-card__tag--choice">Информатика</span><span class="program-card__tag program-card__tag--choice">Химия</span></div></div>
+     </div>
+     <div class="program-card__facts">
+      <div class="program-card__fact">Форма обучения <span class="program-card__value">Очно-заочно</span></div>
+      <div class="program-card__fact">Срок обучения <span class="program-card__value">5 лет</span></div>
+      <details class="program-card__quotas"><summary>Бюджетные места <span class="program-card__value">30</span><img src="/programs/assets/img/233-7474/imgIconChevronDown.svg" alt=""></summary><p>Целевая квота <span>15 мест</span></p><p>Отдельная квота <span>15 мест</span></p></details>
+      <div class="program-card__fact">Места по договору <span class="program-card__value">75</span></div>
+      <div class="program-card__fact">Стоимость обучения в год <span class="program-card__value">170 000 ₽</span></div>
+     </div>
+    </div>
+   </article></div>
+                <div class="catalog__empty" hidden><h3>Программы не найдены</h3><p>Попробуйте изменить запрос или сбросить фильтры.</p></div>
+                <nav class="pagination" aria-label="Страницы каталога" hidden><button type="button" class="pagination__button pagination__button--previous" aria-label="Предыдущая страница" data-page-previous><img src="/programs/assets/img/244-3278/imgIconChevronRight.svg" alt=""></button><div class="pagination__pages" data-pages></div><button type="button" class="pagination__button pagination__button--next" aria-label="Следующая страница" data-page-next><img src="/programs/assets/img/244-3278/imgIconChevronRight.svg" alt=""></button></nav>
+            </div>
+        </section>
+
+        <script type="application/json" id="programs-data">[{"id":1,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Бакалавриат","area":"Гуманитарные науки","institute":"Высшая школа социально-гуманитарных наук","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":2,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Специалитет","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Заочно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":3,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Магистратура","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":4,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Бакалавриат","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":5,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Специалитет","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":6,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Магистратура","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":7,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Бакалавриат","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":8,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Специалитет","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Заочно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":9,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Магистратура","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":10,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Бакалавриат","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":11,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Специалитет","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":12,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Магистратура","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":13,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Бакалавриат","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":14,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Специалитет","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Заочно","spo":"Нет","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75},{"id":15,"title":"Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов","direction":"5.7.7. Социальная и политическая философия","profile":"Nibh nullam vitae semper pharetra sit enim id. Ut eu non massa nec. Proin eget semper orci suspendisse in ornare adipiscing phasellus mauris. Velit faucibus at habitasse tempor sit odio ac commodo dui.","level":"Магистратура","area":"Инженерное дело, технологии и технические науки","institute":"Высшая инженерная школа","exam":["Русский язык","Физика","Математика (профиль)","Информатика","Химия"],"format":"Очно-заочно","spo":"Да","price":"150 000–200 000 ₽","cost":170000,"duration":"5 лет","budget":30,"contract":75}]</script>
+
+        <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+            <picture class="contacts__background" aria-hidden="true"><source type="image/webp" srcset="/programs/assets/img/220-2851/imgCta-780.webp 780w, /programs/assets/img/220-2851/imgCta.webp 1905w" sizes="(min-width:1920px) 1920px, 100vw"><img src="/programs/assets/img/220-2851/imgCta.png" alt="" loading="lazy"></picture>
+            <div class="contacts__glow contacts__glow--left" aria-hidden="true"><img src="/programs/assets/img/220-2851/imgAuroraGlowLeft.svg" alt="" loading="lazy"></div>
+            <div class="contacts__glow contacts__glow--right" aria-hidden="true"><img src="/programs/assets/img/220-2851/imgAuroraGlowLeft1.svg" alt="" loading="lazy"></div>
+            <div class="contacts__inner container">
+                <div><h2 class="contacts__title" id="contacts-title">Контакты приемной комиссии</h2><p class="contacts__intro">Отвечаем в течение одного рабочего дня и публикуем ответ, если вопрос пригодится другим.</p>
+                    <div class="contacts__details"><div class="contacts__info"><p><span class="contacts__label">ДИРЕКТОР</span>Шанина Ольга Николаевна</p><p><span class="contacts__label">ТЕЛЕФОН</span><a href="tel:+7882412886">+7-882-41-28-86</a></p><p><span class="contacts__label">ПОЧТА</span><a href="mailto:fdp@narfu.ru">fdp@narfu.ru</a></p></div><div><p class="contacts__label">СОЦИАЛЬНЫЕ СЕТИ</p><div class="contacts__socials"><span class="contacts__social"><img src="/programs/assets/img/220-2851/imgVk.svg" alt="">Группа в Контакте</span><span class="contacts__social"><img src="/programs/assets/img/220-2851/imgMax.svg" alt="">Канал «Поступай в САФУ»</span><span class="contacts__social"><img src="/programs/assets/img/220-2851/imgTelegram.svg" alt="">Чат-бот «Поступай в САФУ»</span></div></div></div>
+                </div>
+                <form class="contact-form" novalidate data-contact-form>
+                    <div class="contact-form__fields">
+                        <div class="contact-form__field contact-form__topic" data-topic><span class="sr-only" id="topic-label">Тема вопроса</span><input type="hidden" name="topic" value="" data-required><button class="contact-form__input contact-form__topic-trigger" type="button" role="combobox" aria-labelledby="topic-label" aria-required="true" aria-haspopup="listbox" aria-expanded="false" aria-controls="topic-options" aria-describedby="error-topic"><span data-topic-label>Выберите тему вопроса</span><img src="/programs/assets/img/220-2851/imgIconChevronDown.svg" alt=""></button><div class="contact-form__topic-options" id="topic-options" role="listbox" aria-labelledby="topic-label" hidden><div class="contact-form__topic-option" id="topic-admission" role="option" aria-selected="false" data-value="admission">Поступление</div><div class="contact-form__topic-option" id="topic-programs" role="option" aria-selected="false" data-value="programs">Образовательные программы</div><div class="contact-form__topic-option" id="topic-fees" role="option" aria-selected="false" data-value="fees">Стоимость обучения</div><div class="contact-form__topic-option" id="topic-other" role="option" aria-selected="false" data-value="other">Другой вопрос</div></div><span class="contact-form__error" id="error-topic"></span></div>
+                        <div class="contact-form__row contact-form__row--name"><label class="contact-form__field"><span class="sr-only">Фамилия</span><input class="contact-form__input" name="surname" placeholder="Фамилия" autocomplete="family-name" maxlength="100" required aria-describedby="error-surname"><span class="contact-form__error" id="error-surname"></span></label><label class="contact-form__field"><span class="sr-only">Имя</span><input class="contact-form__input" name="name" placeholder="Имя" autocomplete="given-name" maxlength="100" required aria-describedby="error-name"><span class="contact-form__error" id="error-name"></span></label><label class="contact-form__field"><span class="sr-only">Отчество</span><input class="contact-form__input" name="patronymic" placeholder="Отчество" autocomplete="additional-name" maxlength="100" aria-describedby="error-patronymic"><span class="contact-form__error" id="error-patronymic"></span></label></div>
+                        <div class="contact-form__row"><label class="contact-form__field"><span class="sr-only">Телефон</span><input class="contact-form__input" name="phone" type="tel" placeholder="Телефон" autocomplete="tel" maxlength="30" required aria-describedby="error-phone"><span class="contact-form__error" id="error-phone"></span></label><label class="contact-form__field"><span class="sr-only">Эл. почта</span><input class="contact-form__input" type="email" name="email" placeholder="Эл.почта" autocomplete="email" maxlength="254" required aria-describedby="error-email"><span class="contact-form__error" id="error-email"></span></label></div>
+                        <label class="contact-form__field"><span class="sr-only">Ваш вопрос</span><textarea class="contact-form__input contact-form__input--textarea" name="message" required maxlength="5000" placeholder="Ваш вопрос, например: учитывается ли волонтёрская книжка, если я подаю документы на инженерное направление?" aria-describedby="error-message"></textarea><span class="contact-form__error" id="error-message"></span></label>
+                    </div>
+                    <div class="contact-form__actions"><label class="contact-form__consent"><input type="checkbox" name="consent" required aria-describedby="error-consent"><span>Нажимая кнопку «Отправить», вы соглашаетесь с <span>политикой конфиденциальности</span> и даёте <span>согласие на обработку ваших персональных данных</span></span></label><span class="contact-form__error" id="error-consent"></span><button class="button button--light contact-form__submit" type="submit">Отправить заявку</button><p class="contact-form__promise"><img src="/programs/assets/img/220-2851/imgIcon.svg" alt="">Гарантируем обратную связь в течение 24 часов</p></div>
+                    <p class="contact-form__status" role="status" hidden></p>
+                    <noscript><p>Для обращения напишите на <a href="mailto:fdp@narfu.ru">fdp@narfu.ru</a>.</p></noscript>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+ <details class="site-footer__information">
+  <summary class="container">Дополнительные сведения и важные ссылки<img src="/programs/assets/img/244-3131/imgIconChevronDown.svg" alt=""></summary>
+  <div class="site-footer__links container"><a href="https://narfu.ru/sveden/">Сведения об образовательной организации</a><a href="https://narfu.ru/abiturient/">Информация для поступающих</a></div>
+ </details>
+ <div class="site-footer__content container">
+  <div class="site-footer__top">
+   <a class="brand site-footer__brand" href="/"><img src="/programs/assets/img/244-3131/imgLogo2.svg" alt="САФУ"><span class="brand__text">Северный Арктический федеральный университет имени М.В. Ломоносова</span></a>
+   <div class="site-footer__column"><div class="site-footer__group"><p class="site-footer__label">Полное наименование</p><p>Федеральное государственное автономное образовательное учреждение высшего образования «Северный (Арктический) федеральный университет имени М. В. Ломоносова»</p></div><div class="site-footer__group"><p class="site-footer__label">Адрес</p><p>163002, Российская Федерация, г. Архангельск, набережная Северной Двины, 17</p></div></div>
+   <div class="site-footer__column"><div><details class="site-footer__audience"><summary>Посетителям<img src="/programs/assets/img/244-3131/imgIconChevronRight.svg" alt=""></summary><a href="/programs/">Абитуриентам</a><a href="https://narfu.ru/life/">Студентам и выпускникам</a></details><p>Абитуриентам, студентам, родителям, выпускникам и партнерам университета</p></div><div class="site-footer__group"><p class="site-footer__label">Контакты приемной комиссии</p><p><a href="tel:+79581542558">+7 (958) 154-25-58</a><br><a href="mailto:priem@narfu.ru">priem@narfu.ru</a></p></div></div>
+   <div class="site-footer__column"><div class="site-footer__group"><p class="site-footer__label">Помощь и обращения</p><a class="button button--light" href="/programs/#contacts">Обратная связь<img src="/programs/assets/img/244-3131/imgIconArrowUpRight.svg" alt=""></a></div><div class="site-footer__group"><p class="site-footer__label">Социальные сети</p><div class="site-footer__socials">
+     <span title="MAX"><img src="/programs/assets/img/244-3131/imgMax.svg" alt="MAX"></span><span title="ВКонтакте"><img src="/programs/assets/img/244-3131/imgStateDefault3.svg" alt="ВКонтакте"></span><span title="Rutube"><img src="/programs/assets/img/244-3131/imgStateDefault2.svg" alt="Rutube"></span><span title="Дзен"><img src="/programs/assets/img/244-3131/imgStateDefault1.svg" alt="Дзен"></span><span title="Telegram"><img src="/programs/assets/img/244-3131/imgStateDefault.svg" alt="Telegram"></span>
+    </div></div></div>
+  </div>
+  <div class="site-footer__bottom"><p class="site-footer__copyright">© ФГАОУВО «Северный (Арктический)<br>федеральный университет имени М.В. Ломоносова»</p><span class="site-footer__credit"><span class="site-footer__pixels" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><img src="/programs/assets/img/244-3131/imgLine86.svg" alt="">Сделано в Сибтехе</span></div>
+  </div>
+</footer>
+
+    <script type="module" src="/src/js/programs/header.js"></script>
+    <script type="module" src="/src/js/programs/catalog.js"></script>
+    <script type="module" src="/src/js/programs/contact-form.js"></script>
+</body>
+
+</html>

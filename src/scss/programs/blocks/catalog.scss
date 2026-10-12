@@ -1,0 +1,12 @@
+.catalog { display:grid; grid-template-columns:minmax(280px,415px) minmax(0,1fr); gap:20px; padding-block:60px;
+ &__results { min-width:0; }
+ &__toolbar { display:flex; justify-content:space-between; align-items:center; gap:24px; min-height:78px; margin-bottom:28px; padding:16px 24px; border-radius:4px; background:white; }
+ &__title { font:24px/36px var(--display); }
+ &__count { font-size:16px; line-height:20px; font-weight:500; }
+ &__sort { border:1px solid #0b2d4e1a; background:white; border-radius:4px; padding:12px; font-weight:500; color:var(--navy); max-width:200px; }
+ &__cards { display:flex; flex-direction:column; gap:20px; }
+ &__empty { background:white; padding:40px; border-radius:4px; text-align:center; h3 { font-size:20px; margin-bottom:12px; } }
+}
+@media(max-width:1250px) { .catalog { grid-template-columns:280px minmax(0,1fr); } }
+@media(max-width:900px) { .catalog { grid-template-columns:1fr; gap:32px; padding-block:32px; } }
+@media(max-width:460px) { .catalog__toolbar { gap:12px; margin-bottom:24px; min-height:76px; padding:16px; } .catalog__count { font-size:14px; line-height:22px; } .catalog__sort { max-width:143px; font-size:14px; padding:11px 8px; } .catalog__cards { gap:16px; } }

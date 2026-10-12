@@ -12,6 +12,8 @@ export default defineConfig({
         // HTML-страницы
         index: resolve('index.html'),
         about: resolve('about/index.html'),
+        programs: resolve('programs/index.html'),
+        'programs-detail': resolve('programs/detail/index.html'),
         // Скрипты главной страницы
         modal: resolve('src/js/main/modal.js'),
         main: resolve('src/js/main/main.js'),
@@ -23,6 +25,11 @@ export default defineConfig({
         // Скрипты страницы «О вузе»
         'about-header': resolve('src/js/about/header.js'),
         'about-page': resolve('src/js/about/about.js'),
+        // Скрипты страницы «Программы обучения»
+        'programs-header': resolve('src/js/programs/header.js'),
+        'programs-catalog': resolve('src/js/programs/catalog.js'),
+        'programs-contact-form': resolve('src/js/programs/contact-form.js'),
+        'programs-detail-page': resolve('src/js/programs/detail.js'),
       },
       output: {
         entryFileNames: 'assets/js/[name].js',

@@ -1,0 +1,7 @@
+.program-materials {
+ &__grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 40px; }
+ &__item { padding: 20px; background: #f2fbfe; border-radius: 4px; h3 { font-size: 16px; line-height: 24px; margin: 16px 0 12px; font-weight: 600; } p { font-size: 14px; line-height: 22px; color: #0b2d4eb3; } }
+ &__icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: white; border-radius: 4px; }
+}
+@media(max-width:1100px) { .program-materials__grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:460px) { .program-materials { &__grid { grid-template-columns: 1fr; margin-top: 24px; gap: 16px; } &__item { padding: 16px; h3 { font-size: 14px; line-height: 22px; margin-block: 12px 8px; } p { font-size: 12px; line-height: 18px; } } } }

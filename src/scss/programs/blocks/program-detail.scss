@@ -1,0 +1,32 @@
+.program-detail {
+ background: #f8f9fa;
+ --detail-gap: clamp(40px, 4.1667vw, 80px);
+ &__content { display: flex; flex-direction: column; gap: var(--detail-gap); padding-block: var(--detail-gap); }
+ &__heading { font: 24px/40px var(--display); letter-spacing: .96px; }
+ &__text { font-size: 16px; line-height: 26px; color: #0b2d4eb3; }
+ &__panel { padding: 28px; background: white; border-radius: 4px; }
+ &__dark { color: white; background: #0b2d4e url('/programs/assets/img/220-2851/imgCta.webp') center/cover; }
+ &__dark &__text { color: #ffffffb3; }
+ section[id] { scroll-margin-top: 32px; }
+ dl, dd { margin: 0; }
+}
+.program-nav {
+ display: flex; gap: 16px; padding: 28px; background: white; border-radius: 4px;
+ &__link { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px 16px; background: #f2fbfe; font: 12px/24px var(--display); letter-spacing: .48px; border-radius: 4px; &:hover { background: #d9f5ff; } }
+}
+.program-related {
+ &__cards { display: grid; grid-template-columns: minmax(0,1fr); gap: 40px; margin-top: 40px; }
+ .program-card--related { min-width: 0; }
+ .program-card:nth-child(2) .program-card__category { background: linear-gradient(90deg,#d7e15a,#48b749); }
+ .program-card:nth-child(3) { display: none; }
+ .program-card__body { grid-template-columns: minmax(0,1fr) 372px; }
+}
+@media(max-width:1100px) {
+ .program-nav { flex-wrap: wrap; }
+ .program-related .program-card__body { grid-template-columns: 1fr; }
+}
+@media(max-width:460px) {
+ .program-detail { --detail-gap: 60px; &__heading { font-size: 20px; line-height: 32px; letter-spacing: .8px; } &__panel { padding: 16px; } &__text { font-size: 14px; line-height: 22px; } }
+ .program-nav { flex-direction: column; padding: 0; gap: 10px; background: none; &__link { flex: auto; min-height: 72px; padding: 24px 12px; } }
+ .program-related { &__cards { gap: 24px; margin-top: 24px; } .program-card:nth-child(3) { display: block; .program-card__category { background: linear-gradient(90deg,#e02b37,#fd5c60); } } }
+}
