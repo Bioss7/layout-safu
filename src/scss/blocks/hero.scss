@@ -4,13 +4,16 @@
 .hero {
   padding: 207px 0 63px;
   width: 100%;
-  min-height: 100svh;
+  height: 900px;
   background:
     linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
     linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-    var(--main-white-white-700-opacity) url("/assets/img/hero-bg.png") center center / cover no-repeat;
+    var(--main-white-white-700-opacity) url("/assets/img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include breakpoint($bp-1440) {
+    height: auto;
     padding: 224px 0 63px;
     background:
       linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
@@ -55,10 +58,11 @@
   padding: 40px;
   border-radius: 4px;
   background: var(--main-white-white-700-opacity);
-  max-width: 928px;
+  max-width: 929px;
+  backdrop-filter: blur(5px);
 
   @include breakpoint($bp-1440) {
-    max-width: 808px;
+    max-width: 816px;
   }
 
   @include breakpoint($bp-1200) {
@@ -405,6 +409,7 @@
   }
 
   @include breakpoint($bp-1200) {
+
     &--primary,
     &--secondary {
       padding: 14px 16px;

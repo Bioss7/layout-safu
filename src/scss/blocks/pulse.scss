@@ -332,6 +332,7 @@
   width: 706px;
   min-height: 410px;
   background: var(--main-white-white-400-opacity);
+  backdrop-filter: blur(12px);
 
   @include breakpoint($bp-1440) {
     min-height: 320px;
@@ -666,10 +667,6 @@
 }
 
 @include breakpoint($bp-1200) {
-  .section--pulse .section-header {
-    margin-bottom: 40px;
-  }
-
   .section--pulse .section-header__content {
     min-width: 0;
     flex: 0 1 464px;

@@ -2,8 +2,6 @@
 @use "../_vars" as *;
 
 .header {
-  --header-height: 178px;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -215,7 +213,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0 24px;
+  padding: 8px 0 24px;
 
   @include breakpoint($bp-1200) {
     padding: 0;
