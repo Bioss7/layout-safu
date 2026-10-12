@@ -102,10 +102,12 @@
                 </div>
 
                 <div class="header__bottom">
-                    <a class="header__logo" href="/">
-                        <img class="header__logo-img" src="/main/assets/img/logo.png"
-                            alt="Северный Арктический федеральный университет"><img class="header__logo-mobile"
-                            src="/main/assets/img/header-logo.svg" alt="САФУ">
+                    <a class="header__logo" href="/" aria-label="САФУ — главная">
+                        <picture class="header__logo-mark">
+                            <source media="(max-width: 900px)" srcset="/main/assets/img/header-mark-mobile.svg">
+                            <img src="/main/assets/img/header-mark.svg" alt="">
+                        </picture>
+                        <span class="header__logo-text">Северный Арктический федеральный университет имени М.В. Ломоносова</span>
                     </a>
 
                     <nav class="header__nav">
