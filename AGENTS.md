@@ -5,11 +5,11 @@
 ## Проект
 
 - Vite 7 + pnpm: `pnpm dev` — dev-сервер с HMR; `pnpm build` — сборка в `dist/`; `pnpm preview` — просмотр сборки.
-- Разметка: `index.html` в корне — точка входа Vite.
-- Стили: `src/scss/` — `style.scss` (единственный вход, в `index.html` подключён как `<link href="/src/scss/style.scss">`), `blocks/` (БЭМ-блоки), `_vars.scss`, `_mixins.scss`.
-- JS: `src/js/` — скрипты блоков, каждый подключается отдельным `<script type="module" src="/src/js/<block>.js">` в `index.html`.
-- Ассеты: `public/assets/{css,img,fonts,vendor}` (копируются в `dist/assets/` как есть); swiper/chart.js — локальные файлы в `public/assets/vendor/`, подключаются обычными `<script>`.
-- В HTML пути к ассетам — абсолютные `/assets/...`; в SCSS `url()` — тоже `/assets/...`.
+- Многостраничность: страницы = HTML-файл (`index.html` — главная, `about/index.html` и т.д.). Каждая страница полностью самодостаточна: `src/scss/<page>/`, `src/js/<page>/`, `public/<page>/assets/`. Входы — в `vite.config.js` (`build.rollupOptions.input`).
+- Стили: `src/scss/<page>/` — свои `_vars.scss`, `_mixins.scss`, `_fonts.scss`, `reset.scss`, `blocks/` и вход `style.scss` (в HTML — `<link href="/src/scss/<page>/style.scss">`). Общих блоков нет — `blocks/` копируются в каждую страницу.
+- JS: `src/js/<page>/` — каждый файл подключается `<script type="module" src="/src/js/<page>/<block>.js">` в HTML страницы; `header.js` тоже свой на каждой странице.
+- Ассеты: `public/<page>/assets/{img,fonts}` → `dist/<page>/assets/` (копируются как есть); шрифты и картинки — свои у каждой страницы. Общий только `public/assets/vendor/` (swiper/chart.js) → `dist/assets/vendor/`.
+- В HTML пути к ассетам — абсолютные: `/<page>/assets/...`, вендоры `/assets/vendor/...`; в SCSS `url()` — так же (`/<page>/assets/...`).
 
 ## Запрещено
 
@@ -24,7 +24,7 @@
 
 ## Конвенции (кратко)
 
-- Компонентный подход: компонент = секция в `index.html` + `src/scss/blocks/<block>.scss` + при необходимости `src/js/<block>.js` (подключается тегом `<script>` в `index.html`); новый блок подключается в `style.scss` через `@use "blocks/<block>";`.
+- Компонентный подход: компонент = секция в HTML страницы + `src/scss/<page>/blocks/<block>.scss` + при необходимости `src/js/<page>/<block>.js` (подключается тегом `<script>` в HTML страницы); новый блок подключается в `src/scss/<page>/style.scss` через `@use "blocks/<block>";`.
 - БЭМ: блок `.hero`, элементы `&__title`, модификаторы `--active`; JS переключает только модификаторы, связь через `data-*`-атрибуты.
 - SCSS-файлы блоков — плоские: элементы выносить в `.block__element`, внутри блока оставлять только модификаторы и псевдоклассы; один класс — одно правило (без дублей); общие элементы и типографика — `common.scss` / `typography.scss`.
 - Цвета и токены — только `var(--main-*)` из `:root` в `_vars.scss`; размеры/брейкпоинты — SCSS-переменные и `@include breakpoint($bp-*)`.

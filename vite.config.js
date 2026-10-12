@@ -9,21 +9,27 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
+        // HTML-страницы
         index: resolve('index.html'),
-        modal: resolve('src/js/modal.js'),
-        main: resolve('src/js/main.js'),
-        header: resolve('src/js/header.js'),
-        hero: resolve('src/js/hero.js'),
-        'life-tabs': resolve('src/js/life-tabs.js'),
-        'reviews-slider': resolve('src/js/reviews-slider.js'),
-        charts: resolve('src/js/charts.js'),
+        about: resolve('about/index.html'),
+        // Скрипты главной страницы
+        modal: resolve('src/js/main/modal.js'),
+        main: resolve('src/js/main/main.js'),
+        'main-header': resolve('src/js/main/header.js'),
+        hero: resolve('src/js/main/hero.js'),
+        'life-tabs': resolve('src/js/main/life-tabs.js'),
+        'reviews-slider': resolve('src/js/main/reviews-slider.js'),
+        charts: resolve('src/js/main/charts.js'),
+        // Скрипты страницы «О вузе»
+        'about-header': resolve('src/js/about/header.js'),
+        'about-page': resolve('src/js/about/about.js'),
       },
       output: {
         entryFileNames: 'assets/js/[name].js',
         chunkFileNames: 'assets/js/[name].js',
         assetFileNames: ({ names }) => {
           const name = names?.[0] ?? '';
-          if (name.endsWith('.css')) return 'assets/css/style[extname]';
+          if (name.endsWith('.css')) return 'assets/css/[name][extname]';
           return 'assets/[name][extname]';
         },
       },

@@ -2,8 +2,7 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const SRC_DIR = path.resolve('public/assets/img');
-const OUT_DIR = path.resolve('public/assets/img/optimized');
+const PUBLIC_DIR = path.resolve('public');
 const WEBP_QUALITY = 100;
 const WEBP_QUALITY_PHOTO = 100;
 
@@ -18,11 +17,23 @@ function isPhoto(relPath) {
   return PHOTO_PATTERNS.some(p => relPath.includes(p));
 }
 
+// Папки изображений каждой страницы: public/<page>/assets/img
+function getPageImgDirs() {
+  const dirs = [];
+  for (const entry of fs.readdirSync(PUBLIC_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const imgDir = path.join(PUBLIC_DIR, entry.name, 'assets', 'img');
+    if (fs.existsSync(imgDir)) dirs.push(imgDir);
+  }
+  return dirs;
+}
+
 function getAllPngFiles(dir, base = '') {
   const results = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const rel = path.join(base, entry.name);
     if (entry.isDirectory()) {
+      if (entry.name === 'optimized' || entry.name === 'webp') continue;
       results.push(...getAllPngFiles(path.join(dir, entry.name), rel));
     } else if (entry.name.endsWith('.png')) {
       results.push(rel);
@@ -36,10 +47,11 @@ function formatKB(bytes) {
 }
 
 async function main() {
-  const files = getAllPngFiles(SRC_DIR);
+  const srcDirs = getPageImgDirs();
 
-  if (!fs.existsSync(OUT_DIR)) {
-    fs.mkdirSync(OUT_DIR, { recursive: true });
+  if (!srcDirs.length) {
+    console.log('Не найдено папок public/<page>/assets/img');
+    return;
   }
 
   const stats = [];
@@ -47,52 +59,63 @@ async function main() {
   let totalOptPng = 0;
   let totalWebp = 0;
 
-  for (const rel of files) {
-    const srcPath = path.join(SRC_DIR, rel);
-    const outDir = path.dirname(path.join(OUT_DIR, rel));
-    if (!fs.existsSync(outDir)) {
-      fs.mkdirSync(outDir, { recursive: true });
+  for (const srcDir of srcDirs) {
+    const outDirRoot = path.join(srcDir, 'optimized');
+    const files = getAllPngFiles(srcDir);
+    if (!files.length) continue;
+
+    if (!fs.existsSync(outDirRoot)) {
+      fs.mkdirSync(outDirRoot, { recursive: true });
     }
 
-    const pngOut = path.join(OUT_DIR, rel);
-    const webpOut = path.join(OUT_DIR, rel.replace('.png', '.webp'));
+    for (const rel of files) {
+      const srcPath = path.join(srcDir, rel);
+      const relLabel = path.relative(PUBLIC_DIR, srcPath);
+      const outDir = path.dirname(path.join(outDirRoot, rel));
+      if (!fs.existsSync(outDir)) {
+        fs.mkdirSync(outDir, { recursive: true });
+      }
 
-    const originalSize = fs.statSync(srcPath).size;
-    totalOriginal += originalSize;
+      const pngOut = path.join(outDirRoot, rel);
+      const webpOut = path.join(outDirRoot, rel.replace('.png', '.webp'));
 
-    const quality = isPhoto(rel) ? WEBP_QUALITY_PHOTO : WEBP_QUALITY;
+      const originalSize = fs.statSync(srcPath).size;
+      totalOriginal += originalSize;
 
-    let optPngSize = 0;
-    let webpSize = 0;
+      const quality = isPhoto(rel) ? WEBP_QUALITY_PHOTO : WEBP_QUALITY;
 
-    try {
-      await sharp(srcPath)
-        .png({ compressionLevel: 9, adaptiveFiltering: true })
-        .toFile(pngOut);
-      optPngSize = fs.statSync(pngOut).size;
+      let optPngSize = 0;
+      let webpSize = 0;
 
-      await sharp(srcPath)
-        .webp({ quality, effort: 6 })
-        .toFile(webpOut);
-      webpSize = fs.statSync(webpOut).size;
-    } catch (err) {
-      console.error(`  ERROR: ${rel} — ${err.message}`);
-      continue;
+      try {
+        await sharp(srcPath)
+          .png({ compressionLevel: 9, adaptiveFiltering: true })
+          .toFile(pngOut);
+        optPngSize = fs.statSync(pngOut).size;
+
+        await sharp(srcPath)
+          .webp({ quality, effort: 6 })
+          .toFile(webpOut);
+        webpSize = fs.statSync(webpOut).size;
+      } catch (err) {
+        console.error(`  ERROR: ${relLabel} — ${err.message}`);
+        continue;
+      }
+
+      totalOptPng += optPngSize;
+      totalWebp += webpSize;
+
+      const savings = ((1 - webpSize / originalSize) * 100).toFixed(0);
+      stats.push({
+        file: relLabel,
+        original: originalSize,
+        optPng: optPngSize,
+        webp: webpSize,
+        savings
+      });
+
+      console.log(`  ✓ ${relLabel}  →  PNG: ${formatKB(optPngSize)} KB,  WebP: ${formatKB(webpSize)} KB  (${savings}% saving)`);
     }
-
-    totalOptPng += optPngSize;
-    totalWebp += webpSize;
-
-    const savings = ((1 - webpSize / originalSize) * 100).toFixed(0);
-    stats.push({
-      file: rel,
-      original: originalSize,
-      optPng: optPngSize,
-      webp: webpSize,
-      savings
-    });
-
-    console.log(`  ✓ ${rel}  →  PNG: ${formatKB(optPngSize)} KB,  WebP: ${formatKB(webpSize)} KB  (${savings}% saving)`);
   }
 
   console.log('\n═══════════════════════════════════════════════════════════');

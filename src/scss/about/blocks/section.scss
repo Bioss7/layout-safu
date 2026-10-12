@@ -1,0 +1,26 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.section {
+  padding: 120px 0;
+
+  @include breakpoint($bp-1440) {
+    padding: 100px 0;
+  }
+
+  @include breakpoint($bp-1200) {
+    padding: 80px 0;
+  }
+
+  @include breakpoint($bp-992) {
+    padding: 60px 0;
+  }
+
+  @include breakpoint($bp-768) {
+    padding: 52px 0;
+  }
+
+  &--accent {
+    background: var(--main-accent-accent-10);
+  }
+}

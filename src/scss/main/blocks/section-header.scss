@@ -1,0 +1,11 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.section-header__content--history {
+  gap: 32px;
+  min-width: 812px;
+}
+
+.section-header__descr--pulse {
+  color: var(--main-blue-blue-100);
+}

@@ -1,19 +1,21 @@
 ---
 name: bem-component
-description: Использовать при любой верстке и стилях в layout-safu — создание/изменение секций index.html, БЭМ-классов, SCSS-блоков в src/scss/blocks/, JS-компонентов в src/js/. Содержит правила БЭМ, Sass, семантической разметки и компонентного подхода.
+description: Использовать при любой верстке и стилях в layout-safu — создание/изменение секций HTML страницы, БЭМ-классов, SCSS-блоков в src/scss/<page>/blocks/, JS-компонентов в src/js/<page>/. Содержит правила БЭМ, Sass, семантической разметки и компонентного подхода.
 ---
 
 # БЭМ + Sass + семантика + компонентный подход (layout-safu)
 
 ## Компонент — из чего состоит
 
-Один компонент затрагивает до трёх файлов:
+Один компонент затрагивает до трёх файлов (всё — в папке своей страницы `<page>`):
 
-1. Секция в `index.html` — `<section class="block-name">…</section>` в общем потоке страницы.
-2. `src/scss/blocks/<block-name>.scss` — стили блока.
-3. `src/js/<block-name>.js` — только если нужна логика (табы, слайдер, модалка); подключается отдельным `<script type="module" src="/src/js/<block-name>.js">` в `index.html` (в конец `<body>`, рядом с другими скриптами).
+1. Секция в HTML страницы (`index.html`, `about/index.html`, …) — `<section class="block-name">…</section>` в общем потоке.
+2. `src/scss/<page>/blocks/<block-name>.scss` — стили блока.
+3. `src/js/<page>/<block-name>.js` — только если нужна логика (табы, слайдер, модалка); подключается `<script type="module" src="/src/js/<page>/<block-name>.js">` в HTML страницы (в конец `<body>`, рядом с другими скриптами).
 
-Новый блок обязательно подключается в `src/scss/style.scss`:
+Общих блоков нет: `header`/`footer` и остальные блоки физически скопированы в каждую страницу — правки вносите в папку нужной страницы.
+
+Новый блок обязательно подключается в `src/scss/<page>/style.scss`:
 
 ```scss
 @use "blocks/<block-name>";
@@ -72,7 +74,7 @@ description: Использовать при любой верстке и сти
 
 ## JS-компонент
 
-Шаблон (пример — `src/js/life-tabs.js`):
+Шаблон (пример — `src/js/main/life-tabs.js`):
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,9 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ## Чек-лист нового компонента
 
-1. Секция в `index.html` (семантические теги, классы по БЭМ).
-2. `src/scss/blocks/<block>.scss` (подключить в `style.scss`).
-3. Токены — в `_vars.scss`, если их там ещё нет.
-4. `src/js/<block>.js` — при необходимости логики; добавить `<script type="module" src="/src/js/<block>.js">` в `index.html`.
+1. Секция в HTML нужной страницы (семантические теги, классы по БЭМ).
+2. `src/scss/<page>/blocks/<block>.scss` (подключить в `src/scss/<page>/style.scss`).
+3. Токены — в `src/scss/<page>/_vars.scss`, если их там ещё нет.
+4. `src/js/<page>/<block>.js` — при необходимости логики; добавить `<script type="module" src="/src/js/<page>/<block>.js">` в HTML страницы.
 5. Проверка: `pnpm build` (не `pnpm dev`).
-6. Пути к ассетам в HTML и SCSS — `/assets/...`.
+6. Пути к ассетам в HTML и SCSS — `/<page>/assets/...`; вендоры — `/assets/vendor/...`.

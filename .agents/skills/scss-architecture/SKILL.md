@@ -9,17 +9,17 @@ description: Использовать при любой работе с SCSS в 
 
 ## Структура файлов
 
-- Единственная точка входа — `src/scss/style.scss`, компилируется через `@use`.
-- Каждый блок — `src/scss/blocks/<block>.scss` и начинается с:
+- Точка входа — `src/scss/<page>/style.scss` (своя на каждую страницу), компилируется через `@use`.
+- Каждый блок — `src/scss/<page>/blocks/<block>.scss` и начинается с:
 
   ```scss
   @use "../_mixins" as *;
   @use "../_vars" as *;
   ```
 
-- Новый блок подключается в `style.scss` в конец списка: `@use "blocks/<block>";`
+- Новый блок подключается в `src/scss/<page>/style.scss` в конец списка: `@use "blocks/<block>";`
 - `_vars.scss` (токены) НЕ менять при рефакторинге — только использовать `var(--main-*)`.
-- Типовые общие элементы (`.section-header`, `.link-arrow`, `.arrow-btn`, `.slider-dots`) — в едином `blocks/common.scss`. Типографика (`.title-2`, `.section-descr`, `.section-header__descr`) — в `blocks/typography.scss`.
+- Типовые общие элементы (`.section-header`, `.link-arrow`, `.arrow-btn`, `.slider-dots`) — в `src/scss/<page>/blocks/common.scss`. Типографика (`.title-2`, `.section-descr`, `.section-header__descr`) — в `src/scss/<page>/blocks/typography.scss`.
 
 ## Вложенность — только модификаторы и псевдоклассы
 

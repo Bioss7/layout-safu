@@ -36,32 +36,43 @@
 
 ## Что собирается
 
-- **HTML**: `index.html` — точка входа Vite. Подключения файлов — явные теги прямо в разметке (видно при переносе в шаблоны):
-  - `<link rel="stylesheet" href="/src/scss/style.scss">` — SCSS-вход;
-  - `<link rel="stylesheet" href="/assets/vendor/swiper-bundle.min.css">` + `<script src="/assets/vendor/...">` — локальные вендоры;
-  - `<script type="module" src="/src/js/<block>.js">` — скрипты блоков.
-- **SCSS → CSS**: Vite компилирует `src/scss/style.scss` (`sass`), прогоняет через PostCSS/`autoprefixer` (браузеры из `.browserslistrc`), минифицирует и кладёт в `dist/assets/css/style.css`. `url()` в SCSS указывают на `/assets/...`.
-- **JS**: каждый файл из `src/js/` собирается в отдельный `dist/assets/js/<name>.js` (минифицированный). Сторонние swiper/chart.js остаются локальными файлами в `public/assets/vendor/` и копируются как есть.
-- **Ассеты**: `public/assets/{css,img,fonts,vendor}` копируются в `dist/assets/` как есть (файлы в `public/` не хэшируются).
+- **HTML**: страницы — `index.html` (главная) и `about/index.html` (пример отдельной страницы). Подключения файлов — явные теги прямо в разметке (видно при переносе в шаблоны):
+  - `<link rel="stylesheet" href="/src/scss/main/style.scss">` — SCSS-вход страницы;
+  - `<link rel="stylesheet" href="/assets/vendor/swiper-bundle.min.css">` + `<script src="/assets/vendor/...">` — общие вендоры;
+  - `<script type="module" src="/src/js/main/<block>.js">` — скрипты блоков страницы.
+- **SCSS → CSS**: у каждой страницы свой полный SCSS (`src/scss/<page>/` — свои `_vars/_mixins/_fonts/reset` и `blocks/`). Vite компилирует `src/scss/<page>/style.scss`, прогоняет через PostCSS/`autoprefixer` (браузеры из `.browserslistrc`), минифицирует и кладёт в `dist/assets/css/<page>.css` (главная → `index.css`). `url()` в SCSS указывают на `/<page>/assets/...`.
+- **JS**: каждый файл собирается в отдельный `dist/assets/js/<name>.js` (минифицированный). Скрипты полностью по страницам — `src/js/<page>/` (включая собственный `header.js`). Общие вендоры swiper/chart.js — локальные файлы в `public/assets/vendor/`.
+- **Ассеты**: шрифты и изображения — свои у каждой страницы: `public/<page>/assets/{img,fonts}` → `dist/<page>/assets/`. Общий только `public/assets/vendor/` → `dist/assets/vendor/`.
 
-При переносе в Bitrix достаточно взять разметку из собранного `dist/index.html` и подключить файлы из `dist/assets/` своими штатными методами (или скопировать `assets/` как есть).
+При переносе в Bitrix достаточно взять разметку из собранного `dist/<page>/index.html` и подключить файлы из `dist/<page>/assets/` и `dist/assets/vendor/` своими штатными методами.
+
+## Общее и страничное (полная изоляция)
+
+- Каждая страница самодостаточна: `src/scss/<page>/` (включая копии `_vars/_mixins/_fonts/reset` и всех нужных `blocks/`), `src/js/<page>/`, `public/<page>/assets/`.
+- Единственное общее — вендоры `public/assets/vendor/` (swiper, chart.js).
+- Общие блоки (header/footer) физически скопированы в каждую страницу — правки вносите в каждую копию.
+- Входы страниц прописаны в `vite.config.js` → `build.rollupOptions.input`.
 
 ## Структура исходников
 
 ```
-index.html           → точка входа Vite; здесь явные подключения CSS/JS
+index.html                → главная страница (точка входа Vite)
+about/index.html          → пример отдельной страницы («О вузе»)
 src/
-  scss/              → style.scss (вход), blocks/, _vars, _mixins, _fonts, reset
-  js/                → скрипты блоков (каждый подключается в index.html отдельно)
-public/assets/
-  css/               → accessibility.css (подключается на страницах отдельно)
-  img/               → изображения (PNG/SVG)
-  fonts/             → шрифты
-  vendor/            → swiper-bundle, chart.js (локальные файлы)
-vite.config.js       → конфиг Vite (publicDir: public, outDir: dist)
-postcss.config.js    → autoprefixer
-*.mjs                → ручные утилиты WebP/оптимизации
-dist/                → результат сборки (гитигнорится)
+  scss/
+    main/                 → _vars, _mixins, _fonts, reset, style.scss, blocks/ (все блоки главной)
+    about/                → _vars, _mixins, _fonts, reset, style.scss, blocks/ (блоки страницы)
+  js/
+    main/                 → скрипты главной (main, modal, header, hero, life-tabs, reviews-slider, charts)
+    about/                → скрипты страницы (about, header)
+public/
+  assets/vendor/          → ОБЩИЕ вендоры (swiper-bundle, chart.js)
+  main/assets/{img,fonts} → ассеты главной (свои шрифты и картинки, включая header/footer)
+  about/assets/{img,fonts}→ ассеты страницы «О вузе»
+vite.config.js            → конфиг Vite (входы HTML/JS, publicDir: public, outDir: dist)
+postcss.config.js         → autoprefixer
+*.mjs                     → ручные утилиты WebP/оптимизации
+dist/                     → результат сборки (гитигнорится)
 ```
 
 ## Зависимости (devDependencies)
