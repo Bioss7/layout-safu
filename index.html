@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -121,9 +121,11 @@
                 </div>
             </div>
         </div>
+    </header>
 
-        <div class="container">
-            <div class="header__menu" id="header-menu" data-header-panel="menu" hidden>
+    <div class="header__panels" data-header-panels>
+        <div class="header__menu" id="header-menu" data-header-panel="menu" hidden>
+            <div class="container">
                 <h2 class="header__menu-heading">Меню сайта</h2>
                 <nav class="header__menu-list" aria-label="Разделы сайта">
                     <div class="header__menu-item header__menu-branches">
@@ -207,8 +209,8 @@
                     </div>
                     <div class="header__menu-item">
                         <button class="header__section-btn" type="button" data-header-section="life"
-                            aria-controls="header-life" aria-expanded="false">Жизнь САФУ<img
-                                class="header__section-arrow" src="/main/assets/img/header-chevron-down.svg" alt=""></button>
+                            aria-controls="header-life" aria-expanded="false">Жизнь САФУ<img class="header__section-arrow"
+                                src="/main/assets/img/header-chevron-down.svg" alt=""></button>
                         <div class="header__submenu" id="header-life" data-header-submenu="life" hidden>
                             <h3 class="header__submenu-title">Жизнь САФУ</h3>
                             <ul class="header__submenu-list">
@@ -231,8 +233,7 @@
                         <button class="header__section-btn" type="button" data-header-section="international"
                             aria-controls="header-international" aria-expanded="false">International<img
                                 class="header__section-arrow" src="/main/assets/img/header-chevron-down.svg" alt=""></button>
-                        <div class="header__submenu" id="header-international" data-header-submenu="international"
-                            hidden>
+                        <div class="header__submenu" id="header-international" data-header-submenu="international" hidden>
                             <h3 class="header__submenu-title">International</h3>
                             <ul class="header__submenu-list">
                                 <li><a class="header__submenu-link" href="#">Международная деятельность в цифрах<img
@@ -253,8 +254,8 @@
                     </div>
                     <div class="header__menu-item">
                         <button class="header__section-btn" type="button" data-header-section="forall"
-                            aria-controls="header-forall" aria-expanded="false">САФУ для всех<img
-                                class="header__section-arrow" src="/main/assets/img/header-chevron-down.svg" alt=""></button>
+                            aria-controls="header-forall" aria-expanded="false">САФУ для всех<img class="header__section-arrow"
+                                src="/main/assets/img/header-chevron-down.svg" alt=""></button>
                         <div class="header__submenu" id="header-forall" data-header-submenu="forall" hidden>
                             <h3 class="header__submenu-title">САФУ для всех</h3>
                             <ul class="header__submenu-list">
@@ -275,16 +276,18 @@
                     </div>
                 </nav>
             </div>
-            <!-- Static preview: add header__search--results or header__search--empty to this panel. -->
-            <div class="header__search" id="header-search" data-header-panel="search" hidden>
+        </div>
+        <!-- Static preview: add header__search--results or header__search--empty to this panel. -->
+        <div class="header__search" id="header-search" data-header-panel="search" hidden>
+            <div class="container">
                 <h2 class="header__search-title">Поиск</h2>
                 <form data-header-search-form role="search" aria-label="Поиск по сайту">
                     <div class="header__search-field">
                         <img src="/main/assets/img/header-search.svg" alt="">
                         <input class="header__search-input" data-header-query type="search" name="query"
                             aria-label="Поиск по сайту" placeholder="Поиск по сайту" autocomplete="off">
-                        <button class="header__search-clear" data-header-clear type="button"
-                            aria-label="Очистить поиск"><img src="/main/assets/img/header-clear.svg" alt=""></button>
+                        <button class="header__search-clear" data-header-clear type="button" aria-label="Очистить поиск"><img
+                                src="/main/assets/img/header-clear.svg" alt=""></button>
                     </div>
                 </form>
                 <div class="header__search-results">
@@ -305,8 +308,7 @@
                 <div class="header__search-empty">Ничего не найдено</div>
             </div>
         </div>
-
-    </header>
+    </div>
 
     <main>
         <section class="hero">

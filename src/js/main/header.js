@@ -2,18 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('[data-header]');
   if (!header) return;
   const buttons = [...header.querySelectorAll('[data-header-toggle]')];
-  const panels = [...header.querySelectorAll('[data-header-panel]')];
-  const menuSections = [...header.querySelectorAll('[data-header-section]')];
-  const input = header.querySelector('[data-header-query]');
-  const clear = header.querySelector('[data-header-clear]');
+  const panelsWrap = document.querySelector('[data-header-panels]');
+  const panels = [...document.querySelectorAll('[data-header-panel]')];
+  const menuSections = [...document.querySelectorAll('[data-header-section]')];
+  const input = document.querySelector('[data-header-query]');
+  const clear = document.querySelector('[data-header-clear]');
   let active = null;
   let opener = null;
   const background = [...document.body.children].filter(el =>
-    el !== header && el.tagName !== 'SCRIPT');
+    el !== header && el !== panelsWrap && el.tagName !== 'SCRIPT');
   const inertBefore = new Map();
-  const focusable = () => [...header.querySelectorAll(
+  const focusable = () => [...document.querySelectorAll(
     'a[href], button, input, [tabindex="0"]'
-  )].filter(el => !el.closest('[hidden]') && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden' && !el.disabled);
+  )].filter(el => !el.closest('[hidden], [inert]') && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden' && !el.disabled);
 
   function close(restoreFocus = true) {
     panels.forEach(panel => { panel.hidden = true; });
@@ -22,22 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.remove('page--header-open');
     background.forEach(el => { el.inert = inertBefore.get(el) ?? false; });
     inertBefore.clear();
-    header.removeAttribute('role');
-    header.removeAttribute('aria-modal');
     header.removeAttribute('aria-label');
     active = null;
-    if (restoreFocus) opener?.focus();
+    if (restoreFocus) opener?.focus({ preventScroll: true });
   }
 
   function selectSection(button) {
-    const target = button.dataset.headerSection;
     const wasOpen = button.getAttribute('aria-expanded') === 'true';
     const mobile = window.matchMedia('(max-width: 768px)').matches;
     menuSections.forEach(item => {
       const selected = item === button && !(mobile && wasOpen);
       item.classList.toggle('header__section-btn--active', selected);
       item.setAttribute('aria-expanded', String(selected));
-      header.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
+      document.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
     });
   }
 
@@ -52,8 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
       inertBefore.set(el, el.inert);
       el.inert = true;
     });
-    header.setAttribute('role', 'dialog');
-    header.setAttribute('aria-modal', 'true');
     header.setAttribute('aria-label', name === 'menu' ? 'Меню сайта' : 'Поиск по сайту');
     buttons.forEach(item => item.setAttribute('aria-expanded', String(item === button)));
     panels.forEach(panel => { panel.hidden = panel.dataset.headerPanel !== name; });
@@ -62,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selected = item.dataset.headerSection === 'university';
         item.classList.toggle('header__section-btn--active', selected);
         item.setAttribute('aria-expanded', String(selected));
-        header.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
+        document.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
       });
       menuSections.find(item => item.dataset.headerSection === 'university')?.focus();
     } else input?.focus();
@@ -70,12 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttons.forEach(button => button.addEventListener('click', () => open(button.dataset.headerToggle, button)));
   menuSections.forEach(button => button.addEventListener('click', () => selectSection(button)));
-  header.querySelector('[data-header-search-form]')?.addEventListener('submit', event => event.preventDefault());
+  document.querySelector('[data-header-search-form]')?.addEventListener('submit', event => event.preventDefault());
   clear?.addEventListener('click', () => { input.value = ''; input.focus(); });
 
   header.querySelectorAll('[data-header-dropdown]').forEach(dropdown => {
     const toggle = dropdown.querySelector('button');
-    const list = dropdown.querySelector('ul');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') !== 'true';

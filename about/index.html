@@ -122,9 +122,11 @@
                 </div>
             </div>
         </div>
+    </header>
 
-        <div class="container">
-            <div class="header__menu" id="header-menu" data-header-panel="menu" hidden>
+    <div class="header__panels" data-header-panels>
+        <div class="header__menu" id="header-menu" data-header-panel="menu" hidden>
+            <div class="container">
                 <h2 class="header__menu-heading">Меню сайта</h2>
                 <nav class="header__menu-list" aria-label="Разделы сайта">
                     <div class="header__menu-item header__menu-branches">
@@ -281,8 +283,10 @@
                     </div>
                 </nav>
             </div>
-            <!-- Static preview: add header__search--results or header__search--empty to this panel. -->
-            <div class="header__search" id="header-search" data-header-panel="search" hidden>
+        </div>
+        <!-- Static preview: add header__search--results or header__search--empty to this panel. -->
+        <div class="header__search" id="header-search" data-header-panel="search" hidden>
+            <div class="container">
                 <h2 class="header__search-title">Поиск</h2>
                 <form data-header-search-form role="search" aria-label="Поиск по сайту">
                     <div class="header__search-field">
@@ -311,8 +315,7 @@
                 <div class="header__search-empty">Ничего не найдено</div>
             </div>
         </div>
-
-    </header>
+    </div>
     <!--
       Общая разметка header/footer одинакова для всех страниц.
       Скопируйте <header class="header" data-header> ... </header> с главной (index.html)
