@@ -17,6 +17,11 @@
   text-decoration: none;
   transition: opacity 0.2s ease;
 
+  @include breakpoint($bp-1440) {
+    margin-top: 24px;
+    background: url("/main/assets/img/life/button-bg-1440.png");
+  }
+
   @include breakpoint($bp-1200) {
     margin-top: 24px;
     background: url("/main/assets/img/life/button-bg-1200.png");
