@@ -11,7 +11,7 @@ description: Использовать при любой верстке и сти
 
 1. Секция в HTML страницы (`index.html`, `about/index.html`, …) — `<section class="block-name">…</section>` в общем потоке.
 2. `src/scss/<page>/blocks/<block-name>.scss` — стили блока.
-3. `src/js/<page>/<block-name>.js` — только если нужна логика (табы, слайдер, модалка); подключается `<script type="module" src="/src/js/<page>/<block-name>.js">` в HTML страницы (в конец `<body>`, рядом с другими скриптами).
+
 
 Общих блоков нет: `header`/`footer` и остальные блоки физически скопированы в каждую страницу — правки вносите в папку нужной страницы.
 
@@ -93,6 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 1. Секция в HTML нужной страницы (семантические теги, классы по БЭМ).
 2. `src/scss/<page>/blocks/<block>.scss` (подключить в `src/scss/<page>/style.scss`).
 3. Токены — в `src/scss/<page>/_vars.scss`, если их там ещё нет.
-4. `src/js/<page>/<block>.js` — при необходимости логики; добавить `<script type="module" src="/src/js/<page>/<block>.js">` в HTML страницы.
+4. `src/js/<page>/<block>.js` — при необходимости логики; добавить `<script src="/src/js/<page>/<block>.js">` в HTML страницы.
 5. Проверка: `pnpm build` (не `pnpm dev`).
 6. Пути к ассетам в HTML и SCSS — `/<page>/assets/...`; вендоры — `/assets/vendor/...`.

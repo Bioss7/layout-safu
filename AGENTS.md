@@ -7,7 +7,7 @@
 - Vite 7 + pnpm: `pnpm dev` — dev-сервер с HMR; `pnpm build` — сборка в `dist/`; `pnpm preview` — просмотр сборки.
 - Многостраничность: страницы = HTML-файл (`index.html` — главная, `about/index.html` и т.д.). Каждая страница полностью самодостаточна: `src/scss/<page>/`, `src/js/<page>/`, `public/<page>/assets/`. Входы — в `vite.config.js` (`build.rollupOptions.input`).
 - Стили: `src/scss/<page>/` — свои `_vars.scss`, `_mixins.scss`, `_fonts.scss`, `reset.scss`, `blocks/` и вход `style.scss` (в HTML — `<link href="/src/scss/<page>/style.scss">`). Общих блоков нет — `blocks/` копируются в каждую страницу.
-- JS: `src/js/<page>/` — каждый файл подключается `<script type="module" src="/src/js/<page>/<block>.js">` в HTML страницы; `header.js` тоже свой на каждой странице.
+- JS: `src/js/<page>/` — каждый файл подключается `<script src="/src/js/<page>/<block>.js">` в HTML страницы; `header.js` тоже свой на каждой странице.
 - Ассеты: `public/<page>/assets/{img,fonts}` → `dist/<page>/assets/` (копируются как есть); шрифты и картинки — свои у каждой страницы. Общий только `public/assets/vendor/` (swiper/chart.js) → `dist/assets/vendor/`.
 - В HTML пути к ассетам — абсолютные: `/<page>/assets/...`, вендоры `/assets/vendor/...`; в SCSS `url()` — так же (`/<page>/assets/...`).
 

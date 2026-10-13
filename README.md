@@ -39,7 +39,7 @@
 - **HTML**: страницы — `index.html` (главная) и `about/index.html` (пример отдельной страницы). Подключения файлов — явные теги прямо в разметке (видно при переносе в шаблоны):
   - `<link rel="stylesheet" href="/src/scss/main/style.scss">` — SCSS-вход страницы;
   - `<link rel="stylesheet" href="/assets/vendor/swiper-bundle.min.css">` + `<script src="/assets/vendor/...">` — общие вендоры;
-  - `<script type="module" src="/src/js/main/<block>.js">` — скрипты блоков страницы.
+  - `<script src="/src/js/main/<block>.js">` — скрипты блоков страницы.
 - **SCSS → CSS**: у каждой страницы свой полный SCSS (`src/scss/<page>/` — свои `_vars/_mixins/_fonts/reset` и `blocks/`). Vite компилирует `src/scss/<page>/style.scss`, прогоняет через PostCSS/`autoprefixer` (браузеры из `.browserslistrc`), минифицирует и кладёт в `dist/assets/css/<page>.css` (главная → `index.css`). `url()` в SCSS указывают на `/<page>/assets/...`.
 - **JS**: каждый файл собирается в отдельный `dist/assets/js/<name>.js` (минифицированный). Скрипты полностью по страницам — `src/js/<page>/` (включая собственный `header.js`). Общие вендоры swiper/chart.js — локальные файлы в `public/assets/vendor/`.
 - **Ассеты**: шрифты и изображения — свои у каждой страницы: `public/<page>/assets/{img,fonts}` → `dist/<page>/assets/`. Общий только `public/assets/vendor/` → `dist/assets/vendor/`.
