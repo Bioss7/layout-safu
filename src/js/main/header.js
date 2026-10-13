@@ -3,12 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!header) return;
   const buttons = [...header.querySelectorAll('[data-header-toggle]')];
   const panelsWrap = document.querySelector('[data-header-panels]');
-  const panels = [...document.querySelectorAll('[data-header-panel]')];
-  const menuSections = [...document.querySelectorAll('[data-header-section]')];
-  const input = document.querySelector('[data-header-query]');
-  const clear = document.querySelector('[data-header-clear]');
+  const panels = [...(panelsWrap?.querySelectorAll('[data-header-panel]') ?? [])];
+  const menuSections = [...(panelsWrap?.querySelectorAll('[data-header-section]') ?? [])];
+  const input = panelsWrap?.querySelector('[data-header-query]');
+  const clear = panelsWrap?.querySelector('[data-header-clear]');
+  const searchPanel = panelsWrap?.querySelector('[data-header-panel="search"]');
+  const searchCount = searchPanel?.querySelector('[data-header-search-count]');
+  const normalizeSearchText = text => text.toLocaleLowerCase('ru').replace(/ё/g, 'е').replace(/\s+/g, ' ').trim();
+  // Local search stub uses the existing preview cards as its demo index.
+  const searchItems = [...(searchPanel?.querySelectorAll('[data-header-result]') ?? [])].map(element => ({
+    element,
+    text: normalizeSearchText(element.textContent),
+  }));
   let active = null;
   let opener = null;
+  let searchTimer;
+  let searchController;
+  let searchVersion = 0;
   const background = [...document.body.children].filter(el =>
     el !== header && el !== panelsWrap && el.tagName !== 'SCRIPT');
   const inertBefore = new Map();
@@ -16,7 +27,72 @@ document.addEventListener('DOMContentLoaded', () => {
     'a[href], button, input, [tabindex="0"]'
   )].filter(el => !el.closest('[hidden], [inert]') && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden' && !el.disabled);
 
+  function renderSearch(state = 'idle', matches = []) {
+    if (!input || !searchPanel) return;
+    searchItems.forEach(item => {
+      item.element.classList.toggle('header-panels__result--hidden', !matches.includes(item));
+    });
+    ['loading', 'results', 'empty'].forEach(name => {
+      searchPanel.classList.toggle('header-panels__search--' + name, state === name);
+    });
+    searchPanel.setAttribute('aria-busy', String(state === 'loading'));
+    const status = state === 'idle' ? '' : state === 'loading' ? 'Поиск…' : `Найдено: ${matches.length}`;
+    if (searchCount && searchCount.textContent !== status) searchCount.textContent = status;
+    clear?.classList.toggle('search-input__clear--hidden', input.value.length === 0);
+  }
+
+  function cancelSearch() {
+    clearTimeout(searchTimer);
+    searchController?.abort();
+    searchController = null;
+    searchVersion += 1;
+  }
+
+  function mockSearch(query, signal) {
+    return new Promise((resolve, reject) => {
+      const abort = () => {
+        clearTimeout(timer);
+        reject(new DOMException('Search cancelled', 'AbortError'));
+      };
+      const timer = setTimeout(() => {
+        signal.removeEventListener('abort', abort);
+        resolve(searchItems.filter(item => item.text.includes(query)));
+      }, 600);
+      signal.addEventListener('abort', abort, { once: true });
+      if (signal.aborted) abort();
+    });
+  }
+
+  async function requestSearch(query, version) {
+    if (active !== 'search' || version !== searchVersion) return;
+    const controller = new AbortController();
+    searchController = controller;
+    renderSearch('loading');
+    try {
+      const matches = await mockSearch(query, controller.signal);
+      if (version !== searchVersion || active !== 'search' || controller.signal.aborted) return;
+      renderSearch(matches.length ? 'results' : 'empty', matches);
+    } catch (error) {
+      if (error.name !== 'AbortError') throw error;
+    } finally {
+      if (searchController === controller) searchController = null;
+    }
+  }
+
+  function startSearch(debounce = false) {
+    cancelSearch();
+    renderSearch();
+    const query = normalizeSearchText(input?.value ?? '');
+    if (!query || active !== 'search') return;
+    const version = searchVersion;
+    if (debounce) searchTimer = setTimeout(() => requestSearch(query, version), 300);
+    else requestSearch(query, version);
+  }
+
   function close(restoreFocus = true) {
+    panelsWrap?.classList.remove('header-panels--open');
+    cancelSearch();
+    renderSearch();
     panels.forEach(panel => { panel.hidden = true; });
     buttons.forEach(button => button.setAttribute('aria-expanded', 'false'));
     header.classList.remove('header--menu-open', 'header--search-open', 'header--open');
@@ -33,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobile = window.matchMedia('(max-width: 768px)').matches;
     menuSections.forEach(item => {
       const selected = item === button && !(mobile && wasOpen);
-      item.classList.toggle('header__section-btn--active', selected);
+      item.classList.toggle('header-panels__section-btn--active', selected);
       item.setAttribute('aria-expanded', String(selected));
-      document.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
+      panelsWrap.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
     });
   }
 
@@ -43,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active === name) { close(); return; }
     if (active) close(false);
     active = name;
+    panelsWrap?.classList.add('header-panels--open');
     opener = button;
     header.classList.add('header--open', 'header--' + name + '-open');
     document.documentElement.classList.add('page--header-open');
@@ -56,18 +133,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (name === 'menu') {
       menuSections.forEach(item => {
         const selected = item.dataset.headerSection === 'university';
-        item.classList.toggle('header__section-btn--active', selected);
+        item.classList.toggle('header-panels__section-btn--active', selected);
         item.setAttribute('aria-expanded', String(selected));
-        document.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
+        panelsWrap.querySelector('[data-header-submenu="' + item.dataset.headerSection + '"]').hidden = !selected;
       });
       menuSections.find(item => item.dataset.headerSection === 'university')?.focus();
-    } else input?.focus();
+    } else {
+      startSearch();
+      input?.focus();
+    }
   }
 
   buttons.forEach(button => button.addEventListener('click', () => open(button.dataset.headerToggle, button)));
   menuSections.forEach(button => button.addEventListener('click', () => selectSection(button)));
-  document.querySelector('[data-header-search-form]')?.addEventListener('submit', event => event.preventDefault());
-  clear?.addEventListener('click', () => { input.value = ''; input.focus(); });
+  input?.addEventListener('input', () => startSearch(true));
+  panelsWrap?.querySelector('[data-header-search-form]')?.addEventListener('submit', event => {
+    event.preventDefault();
+    startSearch();
+  });
+  clear?.addEventListener('click', () => {
+    if (!input) return;
+    input.value = '';
+    startSearch();
+    input.focus();
+  });
+  renderSearch();
 
   header.querySelectorAll('[data-header-dropdown]').forEach(dropdown => {
     const toggle = dropdown.querySelector('button');
