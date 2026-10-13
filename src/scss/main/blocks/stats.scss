@@ -118,10 +118,7 @@
     @include breakpoint($bp-1440) {
         font-size: 14px;
         line-height: 20px;
-    }
-
-    @include breakpoint($bp-1200) {
-        line-height: 143%;
+        letter-spacing: normal;
     }
 }
 

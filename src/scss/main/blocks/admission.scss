@@ -644,6 +644,10 @@
   font-size: 20px;
   line-height: 140%;
   color: var(--main-white-white-100);
+
+  @include breakpoint($bp-768) {
+    letter-spacing: 0.06em;
+  }
 }
 
 @include breakpoint($bp-1440) {

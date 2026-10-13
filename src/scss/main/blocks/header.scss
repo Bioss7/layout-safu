@@ -253,12 +253,7 @@
   line-height: 16px;
   font-weight: 600;
 
-  @include breakpoint($bp-992) {
-    max-width: 209px;
-    font-size: 12px;
-  }
-
-  @include breakpoint($bp-390) {
+  @include breakpoint($bp-768) {
     display: none;
   }
 }

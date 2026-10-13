@@ -355,12 +355,9 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
-  line-height: 133%;
+  line-height: 16px;
   color: var(--main-white-white-700-opacity);
 
-  @include breakpoint($bp-768) {
-    font-weight: 500;
-  }
 }
 
 .footer__made-by {

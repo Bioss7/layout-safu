@@ -32,16 +32,17 @@
 
   @include breakpoint($bp-1440) {
     font-size: 32px;
-    line-height: 163%;
+    line-height: 52px;
   }
 
   @include breakpoint($bp-992) {
     font-size: 28px;
+    line-height: 40px;
   }
 
   @include breakpoint($bp-768) {
     font-size: 24px;
-    line-height: 133%;
+    line-height: 32px;
 
     &::before {
       flex: 0 0 10px;
@@ -94,5 +95,66 @@
   @include breakpoint($bp-768) {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+.section--life .section-header__descr,
+.section-header__descr--pulse {
+  @include breakpoint($bp-1440) {
+    line-height: 20px;
+    letter-spacing: normal;
+  }
+}
+
+.section-title,
+.section--stats .title-2,
+.section--life .title-2 {
+  @include breakpoint($bp-1200) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include breakpoint($bp-390) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.br {
+  display: inline;
+}
+
+.br-390 {
+  display: none;
+
+  @include breakpoint($bp-390) {
+    display: inline;
+  }
+}
+
+.br-1440 {
+  display: none;
+
+  @include breakpoint($bp-1440) {
+    display: inline;
+  }
+}
+
+.br-above-1440 {
+  display: inline;
+
+  @include breakpoint($bp-1440) {
+    display: none;
+  }
+}
+
+.br-hide-390 {
+  @include breakpoint($bp-390) {
+    display: none;
   }
 }
