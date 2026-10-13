@@ -33,8 +33,8 @@
     border: 1px solid var(--main-white-white-200-opacity);
     border-radius: 4px;
     background: var(--main-white-white-50-opacity);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
     @include breakpoint($bp-1440) {
         padding: 16px;
