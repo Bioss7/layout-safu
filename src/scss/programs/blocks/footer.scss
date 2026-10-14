@@ -98,15 +98,20 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  color: var(--main-white-white-100);
+  transition: color 0.2s ease;
 
   &:hover {
-    opacity: 0.8;
+    color: var(--main-accent-accent-100);
   }
 }
 
 .footer__details-icon {
   flex-shrink: 0;
+}
+
+.footer__details-link:hover .footer__details-text {
+  transform: translateX(4px);
 }
 
 .footer__details-text {
@@ -115,7 +120,8 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.06em;
-  color: var(--main-white-white-100);
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
 /* ============ Основной контент ============ */

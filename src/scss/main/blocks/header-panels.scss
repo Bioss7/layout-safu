@@ -324,6 +324,11 @@
   background: var(--main-white-white-100);
   color: var(--main-blue-blue-100);
   text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--main-blue-blue-5);
+  }
 
   &--hidden {
     display: none;

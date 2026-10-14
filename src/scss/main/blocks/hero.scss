@@ -464,9 +464,9 @@
   transition: transform 0.2s ease;
 }
 
-.hero__btn:hover .hero__btn-icon {
-  transform: translateX(2px);
-}
+// .hero__btn:hover .hero__btn-icon {
+//   transform: translateX(2px);
+// }
 
 .hero__pagination {
   display: flex;
@@ -506,7 +506,7 @@
   border: 0;
   margin: 0;
   font: inherit;
-  color: inherit;
+  color: var(--main-blue-blue-100);
   cursor: pointer;
 
   position: relative;
@@ -515,10 +515,23 @@
   padding: 0 0 10px;
   font-size: 15px;
   opacity: 0.5;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 33px;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
 
   &:hover {
-    opacity: 0.8;
+    color: var(--main-accent-accent-100);
+    opacity: 1;
   }
 
   &:focus-visible {
@@ -529,23 +542,18 @@
 
   &--active {
     opacity: 1;
+  }
 
+  @include breakpoint($bp-390) {
     &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 33px;
-      height: 0;
-      border-bottom: 2px solid var(--main-blue-blue-100);
-    }
-
-    @include breakpoint($bp-390) {
-      &::after {
-        width: 24px;
-      }
+      width: 24px;
     }
   }
+}
+
+.hero__dot:hover::after,
+.hero__dot--active::after {
+  opacity: 1;
 }
 
 .hero__dot-number {
@@ -554,7 +562,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.06em;
-  color: var(--main-blue-blue-100);
+  color: inherit;
 
   @include breakpoint($bp-768) {
     font-size: 14px;

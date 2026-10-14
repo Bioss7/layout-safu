@@ -567,14 +567,6 @@
     max-width: 519px;
     margin-bottom: 16px;
   }
-
-  .pulse-panel__tab {
-    display: none;
-  }
-
-  .pulse-panel__tab--active {
-    display: flex;
-  }
 }
 
 @include breakpoint($bp-1440) {
@@ -955,14 +947,6 @@
   .pulse-panel__text {
     max-width: 519px;
     margin-bottom: 16px;
-  }
-
-  .pulse-panel__tab {
-    display: none;
-  }
-
-  .pulse-panel__tab--active {
-    display: flex;
   }
 }
 

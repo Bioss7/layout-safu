@@ -36,6 +36,14 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
+    &:hover {
+        background:
+            linear-gradient(var(--main-white-white-50-opacity), var(--main-white-white-50-opacity)),
+            radial-gradient(104.77% 98.57% at 100% 100%, rgba(0, 174, 239, 0.25) 50.48%, rgba(0, 174, 239, 0) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
     @include breakpoint($bp-1440) {
         padding: 16px;
     }
@@ -261,23 +269,22 @@
     line-height: 144%;
     color: var(--main-accent-accent-100);
     text-decoration: none;
-    transition: opacity 0.2s ease;
-
-    &:hover svg {
-        transform: translateX(4px);
-    }
-
-    svg {
-        flex-shrink: 0;
-        display: block;
-        transition: transform 0.3s ease;
-        will-change: transform;
-    }
 
     @include breakpoint($bp-1440) {
         font-size: 14px;
         line-height: 143%;
     }
+}
+
+.stat-card__link-icon {
+    flex-shrink: 0;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.stat-card__link:hover .stat-card__link-icon,
+.stat-card__link:focus-visible .stat-card__link-icon {
+    transform: translateX(4px);
 }
 
 @include breakpoint($bp-1440) {

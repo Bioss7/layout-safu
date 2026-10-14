@@ -228,6 +228,11 @@
   flex-shrink: 0;
   color: var(--main-blue-blue-100);
   text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   &:focus-visible {
     outline: 3px solid var(--main-accent-accent-100);
