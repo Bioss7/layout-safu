@@ -272,7 +272,10 @@
   overscroll-behavior-y: contain;
   color: var(--main-blue-blue-100);
   padding: 52px 0 80px;
-  background: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("/main/assets/img/header-search-bg.png") center/cover no-repeat;
+  background-image: url("/main/assets/img/header-search-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 
@@ -280,8 +283,25 @@
     display: none;
   }
 
+  @include breakpoint($bp-1440) {
+    background-image: url("/main/assets/img/header-search-bg-1440.png");
+  }
+
+  @include breakpoint($bp-1200) {
+    background-image: url("/main/assets/img/header-search-bg-1200.png");
+  }
+
+  @include breakpoint($bp-992) {
+    background-image: url("/main/assets/img/header-search-bg-992.png");
+  }
+
   @include breakpoint($bp-768) {
+    background-image: url("/main/assets/img/header-search-bg-768.png");
     padding: 16px 0 60px;
+  }
+
+  @include breakpoint($bp-390) {
+    background-image: url("/main/assets/img/header-search-bg-390.png");
   }
 }
 

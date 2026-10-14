@@ -31,6 +31,26 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
+  @include breakpoint($bp-1440) {
+    background: url("/main/assets/img/stats/stats-bg-1440.png") center center / cover no-repeat;
+  }
+
+  @include breakpoint($bp-1200) {
+    background: url("/main/assets/img/stats/stats-bg-1200.png") center center / cover no-repeat;
+  }
+
+  @include breakpoint($bp-992) {
+    background: url("/main/assets/img/stats/stats-bg-992.png") center center / cover no-repeat;
+  }
+
+  @include breakpoint($bp-768) {
+    background: url("/main/assets/img/stats/stats-bg-768.png") center center / cover no-repeat;
+  }
+
+  @include breakpoint($bp-390) {
+    background: url("/main/assets/img/stats/stats-bg-390.png") center center / cover no-repeat;
+  }
 }
 
 .section--directions {

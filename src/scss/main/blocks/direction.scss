@@ -152,7 +152,9 @@
   text-align: center;
   color: var(--main-white-white-100);
   text-decoration: none;
+  transition: background-color 0.2s ease;
   cursor: pointer;
+
   &:hover {
     background: var(--main-accent-accent-100);
   }
