@@ -2,6 +2,8 @@
 @use "_fonts";
 
 @use "blocks/base";
+@use "blocks/legacy-header";
+@use "blocks/legacy-footer";
 @use "blocks/header";
 @use "blocks/footer";
 @use "blocks/hero";
@@ -17,3 +19,7 @@
 @use "blocks/program-teachers";
 @use "blocks/program-materials";
 @use "blocks/program-contacts";
+
+@use "blocks/header-panels";
+@use "blocks/search-input";
+@use "blocks/site-frame";

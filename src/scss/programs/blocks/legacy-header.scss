@@ -1,0 +1,15 @@
+.site-header { position:relative; z-index:30; background:white; box-shadow:0 2px 10px #0b2d4e33;
+ &__inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-block:24px; }
+ &__tools { display:flex; align-items:center; justify-content:flex-end; gap:24px; width:100%; height:46px; }
+ &__divider { height:23px; border-left:1px solid #0b2d4e33; }
+ &__branches,&__language { font-weight:500; letter-spacing:.96px; }
+ &__bottom { display:flex; align-items:center; justify-content:space-between; gap:32px; width:100%; min-height:58px; }
+ &__nav { display:flex; gap:clamp(12px,2.083vw,40px); align-items:center; font-weight:500; a { padding:14px 11px; } }
+ &__menu { font-family:Montserrat,sans-serif; font-size:16px; font-weight:500; letter-spacing:.96px; padding:12px 16px; }
+ &__drawer { border-top:1px solid #0b2d4e1a; padding-block:24px; background:white; box-shadow:0 12px 16px #0b2d4e16; position:absolute; width:100%; nav { display:flex; gap:24px; flex-wrap:wrap; } }
+ &__search { display:flex; gap:12px; max-width:800px; margin:auto; input { min-width:0; flex:1; border:1px solid #0b2d4e33; padding:12px; border-radius:4px; } }
+}
+.brand { display:inline-flex; align-items:center; gap:16px; flex-shrink:0; &__mark { display:flex; align-items:flex-end; height:50px; } &__text { max-width:209px; font-size:14px; line-height:16px; font-weight:600; } }
+@media(max-width:1150px) { .site-header__nav { gap:4px; font-size:13px; a { padding-inline:5px; } } .brand__text { max-width:175px; font-size:12px; } }
+@media(max-width:900px) { .site-header__inner { flex-wrap:nowrap; align-items:flex-end; padding-top:50px; padding-bottom:16px; gap:12px; } .site-header__tools { order:2; width:auto; height:46px; gap:8px; } .site-header__bottom { width:auto; min-height:46px; } .site-header__nav,.site-header__branches,.site-header__divider,.brand__text,.site-header__menu-label { display:none; } .brand__mark { height:40px; } .site-header__menu { width:44px; height:44px; min-height:44px; padding:14px; } .site-header__language { font-size:14px; } .site-header__drawer nav { flex-direction:column; } }
+@media(max-width:360px) { .site-header__tools { gap:2px; } .site-header .icon-button { width:32px; padding:6px; } }
