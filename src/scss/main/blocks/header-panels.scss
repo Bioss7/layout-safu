@@ -19,7 +19,10 @@
   overscroll-behavior-y: contain;
   color: var(--main-blue-blue-100);
   padding: 56px 0 120px;
-  background: linear-gradient(var(--main-white-white-900-opacity), var(--main-white-white-900-opacity)), url("/main/assets/img/header-menu-bg.png") center/cover no-repeat;
+  background-image: url("/main/assets/img/header-menu-bg.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 
@@ -27,19 +30,30 @@
     display: none;
   }
 
+  @include breakpoint($bp-1440) {
+    background-image: url("/main/assets/img/header-menu-bg-1440.png");
+  }
+
   @include breakpoint($bp-1200) {
+    background-image: url("/main/assets/img/header-menu-bg-1200.png");
     padding-top: 56px;
     padding-bottom: 80px;
   }
 
   @include breakpoint($bp-992) {
+    background-image: url("/main/assets/img/header-menu-bg-992.png");
     padding-top: 48px;
     padding-bottom: 40px;
   }
 
   @include breakpoint($bp-768) {
+    background-image: url("/main/assets/img/header-menu-bg-768.png");
     display: block;
     padding: 38px 0 60px;
+  }
+
+  @include breakpoint($bp-390) {
+    background-image: url("/main/assets/img/header-menu-bg-390.png");
   }
 }
 
@@ -215,6 +229,7 @@
   line-height: 24px;
   letter-spacing: .06em;
   text-decoration: none;
+  transition: color 0.2s ease;
 
   &:hover {
     color: var(--main-accent-accent-100);
@@ -225,6 +240,21 @@
     justify-content: space-between;
     padding: 12px 0;
   }
+}
+
+.header-panels__submenu-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  -webkit-mask: url("/main/assets/img/header-chevron-right.svg") center / contain no-repeat;
+  mask: url("/main/assets/img/header-chevron-right.svg") center / contain no-repeat;
+  transition: transform 0.2s ease;
+}
+
+.header-panels__submenu-link:hover .header-panels__submenu-icon {
+  transform: translateX(4px);
 }
 
 .header-panels__menu-branches {

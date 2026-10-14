@@ -78,7 +78,7 @@
   text-align: center;
   color: var(--main-blue-blue-100);
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
 
   &:hover {
     color: var(--main-accent-accent-100);
@@ -93,7 +93,9 @@
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    background: url("/main/assets/img/icons/link-arrow.svg") center / contain no-repeat;
+    background-color: currentColor;
+    -webkit-mask: url("/main/assets/img/icons/link-arrow.svg") center / contain no-repeat;
+    mask: url("/main/assets/img/icons/link-arrow.svg") center / contain no-repeat;
   }
 
   &--header::after {
@@ -103,7 +105,8 @@
 
   @include breakpoint($bp-390) {
     &::after {
-      background-image: url("/main/assets/img/icons/link-arrow-390.svg");
+      -webkit-mask-image: url("/main/assets/img/icons/link-arrow-390.svg");
+      mask-image: url("/main/assets/img/icons/link-arrow-390.svg");
     }
 
     &:not(&--header)::after {

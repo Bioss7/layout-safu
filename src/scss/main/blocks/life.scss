@@ -1,50 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-.button-max {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 24px;
-  width: 100%;
-  height: 48px;
-  padding: 14px 16px;
-  border-radius: 4px;
-  background: url("/main/assets/img/life/button-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-
-  @include breakpoint($bp-1440) {
-    margin-top: 24px;
-    background: url("/main/assets/img/life/button-bg-1440.png");
-  }
-
-  @include breakpoint($bp-1200) {
-    margin-top: 24px;
-    background: url("/main/assets/img/life/button-bg-1200.png");
-  }
-
-  @include breakpoint($bp-992) {
-    margin-top: 24px;
-    background: url("/main/assets/img/life/button-bg-992.png");
-  }
-
-  @include breakpoint($bp-768) {
-    background: url("/main/assets/img/life/button-bg-768.png");
-  }
-
-  @include breakpoint($bp-390) {
-    background: url("/main/assets/img/life/button-bg-390.png");
-  }
-}
-
-.button-max:hover {
-  opacity: 0.9;
-}
-
 /* ================= ТАБЫ ================= */
 .life-tabs {
   display: flex;
