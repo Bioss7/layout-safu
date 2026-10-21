@@ -1,0 +1,84 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 2px solid var(--main-white-white-100);
+  box-shadow: 3px 4px var(--main-black);
+  font-variant: normal;
+  font-stretch: normal;
+
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 160ms,
+    color 160ms;
+  &:hover {
+    background-color: var(--main-accent-accent-100);
+    color: var(--main-white-white-100);
+  }
+  &:active {
+    background-color: var(--main-blue-blue-90);
+  }
+  &:disabled {
+    cursor: default;
+    background-color: var(--main-blue-blue-30);
+    color: var(--main-white-white-100);
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-768) {
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.button--primary {
+  background-color: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
+}
+.button--light {
+  background-color: var(--main-white-white-100);
+  color: var(--main-blue-blue-100);
+}
+.button--text {
+  padding: 0;
+  min-height: 42px;
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--main-blue-blue-100);
+  font-size: 14px;
+  line-height: 20px;
+  &:hover {
+    background-color: transparent;
+    color: var(--main-accent-accent-100);
+  }
+  &:active {
+    background-color: transparent;
+    color: var(--main-blue-blue-90);
+  }
+  &:disabled {
+    background-color: transparent;
+    color: var(--main-blue-blue-30);
+  }
+}
+.button--light:active {
+  background-color: var(--main-blue-blue-30);
+}
+.button--light:disabled {
+  background-color: var(--main-blue-blue-20);
+}

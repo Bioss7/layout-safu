@@ -1,0 +1,84 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+// Соседние секции складывают свои половины интервала; значения заданы явно.
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include breakpoint($bp-1440) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @include breakpoint($bp-1200) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include breakpoint($bp-992) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @include breakpoint($bp-900) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.section--banner,
+.section--admission + .section {
+  padding-top: 120px;
+  @include breakpoint($bp-1440) {
+    padding-top: 90px;
+  }
+  @include breakpoint($bp-1200) {
+    padding-top: 80px;
+  }
+  @include breakpoint($bp-992) {
+    padding-top: 64px;
+  }
+  @include breakpoint($bp-900) {
+    padding-top: 60px;
+  }
+}
+.section--education {
+  padding-bottom: 120px;
+  @include breakpoint($bp-1440) {
+    padding-bottom: 90px;
+  }
+  @include breakpoint($bp-1200) {
+    padding-bottom: 80px;
+  }
+  @include breakpoint($bp-992) {
+    padding-bottom: 64px;
+  }
+  @include breakpoint($bp-900) {
+    padding-bottom: 60px;
+  }
+}
+.section-header {
+  margin-bottom: clamp(32px, 4.167vw, 80px);
+}
+// Figma: собственная белая заливка поверх общей сетки страницы.
+.section--contacts,
+.section--question {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--main-white-white-100);
+  @include breakpoint($bp-768) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.section--contacts .section-header {
+  margin-bottom: 80px;
+  @include breakpoint($bp-1440) {
+    margin-bottom: 48px;
+  }
+  @include breakpoint($bp-768) {
+    margin-bottom: 40px;
+  }
+}
+.section--education .section-header,
+.section--opportunities .section-header {
+  @include breakpoint($bp-768) {
+    margin-bottom: 40px;
+  }
+}

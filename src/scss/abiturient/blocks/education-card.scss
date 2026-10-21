@@ -1,0 +1,235 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.education-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  @include breakpoint($bp-1200) {
+    flex-direction: column;
+  }
+  @include breakpoint($bp-768) {
+    gap: 16px;
+  }
+}
+.education-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 calc(66.666667% - 6.666667px);
+  gap: 20px;
+  min-width: 0;
+  @include breakpoint($bp-768) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.education-list > .education-card {
+  flex: 0 1 calc(50% - 10px);
+  min-height: 339px;
+  @include breakpoint($bp-768) {
+    flex-basis: auto;
+    min-height: 358px;
+  }
+}
+.education-card {
+  // Замечание: отсутствие стиля [abiturient-education-card] — ui/data/remarks.json.
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  min-width: 0;
+  padding: 36px;
+  background-color: var(--main-blue-blue-5);
+  border: 4px solid var(--main-white-white-100);
+  box-shadow: 3px 3px var(--main-black);
+  text-decoration: none;
+  transition:
+    background-color 180ms,
+    color 180ms,
+    box-shadow 180ms;
+  &:hover,
+  &:focus-visible {
+    background-color: var(--main-blue-blue-100);
+    color: var(--main-white-white-100);
+    box-shadow: 3px 3px var(--main-accent-accent-100);
+  }
+  @include breakpoint($bp-1440) {
+    padding: 24px;
+    min-height: 330px;
+  }
+  @include breakpoint($bp-768) {
+    padding: 20px;
+    min-height: 358px;
+  }
+}
+.education-card--accent {
+  background-color: var(--main-accent-accent-100);
+  color: var(--main-white-white-100);
+}
+.education-card--international {
+  flex: 0 1 calc(33.333333% - 13.333333px);
+  background-color: var(--main-panel);
+  @include breakpoint($bp-1200) {
+    flex-basis: auto;
+    min-height: 340px;
+  }
+  @include breakpoint($bp-768) {
+    min-height: 380px;
+  }
+}
+.education-card__meta {
+  transition: color 180ms;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--font-family);
+  color: rgba(11, 45, 78, 0.4);
+}
+.education-card__title {
+  margin: 0 0 12px;
+  font-variant: normal;
+  font-stretch: normal;
+
+  overflow-wrap: anywhere;
+  @include breakpoint($bp-768) {
+    overflow-wrap: normal;
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(28px, calc(0.833333vw + 16px), 32px);
+  line-height: clamp(36px, calc(0.833333vw + 24px), 40px);
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(28px, calc(-3.333333vw + 76px), 36px);
+    line-height: clamp(36px, calc(-5vw + 108px), 48px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(20px, calc(3.703704vw - 8.444444px), 36px);
+    line-height: clamp(32px, calc(3.703704vw + 3.555556px), 48px);
+    letter-spacing: 0em;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.education-card__description {
+  transition: color 180ms;
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(14px, calc(0.416667vw + 8px), 16px);
+  line-height: clamp(20px, calc(0.833333vw + 8px), 24px);
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(14px, calc(-0.833333vw + 26px), 16px);
+    line-height: clamp(20px, calc(-1.666667vw + 44px), 24px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include breakpoint($bp-768) {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 0.6);
+}
+.education-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.education-card__count {
+  transition:
+    color 180ms,
+    background-color 180ms,
+    box-shadow 180ms;
+  padding: 6px 14px;
+  border: 2px solid currentColor;
+  background-color: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
+  box-shadow: 3px 3px var(--main-black);
+  font-variant: normal;
+  font-stretch: normal;
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 0px #000;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(16px, calc(-3.333333vw + 64px), 24px);
+    line-height: clamp(24px, calc(-3.333333vw + 72px), 32px);
+    text-shadow: 1.5143px 1.5143px 0px #000;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(18px, calc(1.388889vw + 7.333333px), 24px);
+    line-height: 32px;
+    letter-spacing: 0;
+    text-shadow: 1.9429px 1.9429px 0px #000;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 18px;
+    line-height: normal;
+    text-shadow: 2px 2px 0px #000;
+  }
+}
+.education-card--accent .education-card__description,
+.education-card--accent .education-card__meta,
+.education-card:hover .education-card__description,
+.education-card:hover .education-card__meta {
+  color: rgba(255, 255, 255, 0.8);
+}
+.education-card--accent .education-card__count {
+  background-color: var(--main-accent-accent-100);
+}
+.education-card:hover .education-card__count {
+  text-shadow: none;
+  background-color: var(--main-white-white-100);
+  color: var(--main-blue-blue-100);
+  box-shadow: 3px 3px var(--main-accent-accent-100);
+}
+.education-card:hover .card-arrow {
+  color: var(--main-white-white-100);
+  mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
+  -webkit-mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
+}
+
+.education-card--accent .education-card__title,
+.education-card:hover .education-card__title,
+.education-card:focus-visible .education-card__title {
+  color: #fff;
+}

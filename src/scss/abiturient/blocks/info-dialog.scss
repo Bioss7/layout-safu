@@ -1,0 +1,56 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.info-dialog {
+  width: min(640px, calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  padding: 24px;
+  border: 2px solid var(--main-white-white-100);
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-100);
+  box-shadow: 4px 4px var(--main-black);
+  &::backdrop {
+    background-color: var(--main-blue-blue-500-opacity);
+  }
+}
+.info-dialog__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.info-dialog__title {
+  margin: 0;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: var(--main-font-display);
+  @include breakpoint($bp-768) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.info-dialog__close {
+  transition: color 160ms;
+  border: 0;
+  background-color: transparent;
+  font-size: 32px;
+  line-height: 32px;
+  color: inherit;
+  &:hover {
+    color: var(---Accent-Accent-100, #00aeef);
+  }
+}
+.info-dialog__body {
+  margin-bottom: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-family);
+}

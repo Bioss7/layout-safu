@@ -1,0 +1,187 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.title-2 {
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+
+  text-transform: uppercase;
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(40px, calc(2.5vw + 4px), 52px);
+  line-height: clamp(48px, calc(2.083333vw + 18px), 58px);
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1440) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(28px, calc(2.777778vw + 6.666667px), 40px);
+    line-height: clamp(36px, calc(2.777778vw + 14.666667px), 48px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.12px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.title-2--white {
+  color: var(--main-white-white-100);
+  text-shadow: 3px 4px var(--main-black);
+}
+.card-arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  mask-image: url("/abiturient/assets/img/icons/icon-arrow-up-right.svg");
+  -webkit-mask-image: url("/abiturient/assets/img/icons/icon-arrow-up-right.svg");
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  transition: background-color 0.2s ease;
+}
+
+.br {
+  display: inline;
+}
+.br-390 {
+  display: none;
+  @include breakpoint($bp-390) {
+    display: inline;
+  }
+}
+.br-1440 {
+  display: none;
+  @include breakpoint($bp-1440) {
+    display: inline;
+  }
+}
+.br-above-1440 {
+  display: inline;
+  @include breakpoint($bp-1440) {
+    display: none;
+  }
+}
+.br-hide-390 {
+  @include breakpoint($bp-390) {
+    display: none;
+  }
+}
+.br-above-900 {
+  display: inline;
+  @include breakpoint($bp-900) {
+    display: none;
+  }
+}
+
+#faq .title-2 {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(40px, calc(2.5vw + 4px), 52px);
+  line-height: clamp(48px, calc(4.166667vw - 12px), 68px);
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(28px, calc(2.777778vw + 6.666667px), 40px);
+    line-height: clamp(36px, calc(2.777778vw + 14.666667px), 48px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.12px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+
+.contacts .title-2 {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(40px, calc(2.5vw + 4px), 52px);
+  line-height: clamp(48px, calc(2.083333vw + 18px), 58px);
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1440) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: 40px;
+    max-width: 906.857px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 28px;
+    max-width: none;
+    line-height: 36px;
+    letter-spacing: -1.12px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+
+.section--reviews .title-2 {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(40px, calc(2.5vw + 4px), 52px);
+  line-height: clamp(48px, calc(2.083333vw + 18px), 58px);
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(36px, calc(1.666667vw + 16px), 40px);
+    line-height: 48px;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(28px, calc(1.851852vw + 13.777778px), 36px);
+    line-height: clamp(36px, calc(2.777778vw + 14.666667px), 48px);
+    letter-spacing: 0em;
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.12px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+
+.br-1200-above-768 {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-1200) {
+    display: inline;
+  }
+}

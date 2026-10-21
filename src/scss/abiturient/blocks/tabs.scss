@@ -1,0 +1,101 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.tabs {
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 0 4px 6px 0;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include breakpoint($bp-768) {
+    gap: 16px;
+  }
+}
+.tabs__tab {
+  transition:
+    color 160ms,
+    background-color 160ms,
+    border-color 160ms;
+  flex-shrink: 0;
+  padding: 10px 18px;
+  border: 2px solid var(--main-white-white-100);
+  box-shadow: 3px 4px var(--main-black);
+  background-color: var(--main-panel);
+  font-variant: normal;
+  font-stretch: normal;
+
+  white-space: nowrap;
+  &:hover:not(:disabled):not(.tabs__tab--active) {
+    background-color: var(--main-blue-blue-40);
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(16px, calc(-0.462963vw + 21.555556px), 18px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.72px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.tabs__tab--active {
+  background-color: var(--main-accent-accent-100);
+  color: var(--main-white-white-100);
+}
+.tabs--line {
+  gap: 0;
+  padding: 0;
+}
+.tabs--line .tabs__tab {
+  padding: 12px 16px 16px;
+  border: 0;
+  border-bottom: 2px solid var(--main-panel);
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--main-blue-blue-100);
+  &:hover {
+    color: var(--main-accent-accent-100);
+  }
+}
+.tabs--line .tabs__tab--active {
+  border-color: var(--main-accent-accent-100);
+  color: var(--main-accent-accent-100);
+}
+.tabs--dragging,
+.tabs--dragging .tabs__tab {
+  cursor: grabbing;
+  user-select: none;
+}
+.tabs--scrollable,
+.tabs--scrollable .tabs__tab {
+  cursor: grab;
+}
+.tabs--scrollable.tabs--dragging,
+.tabs--scrollable.tabs--dragging .tabs__tab {
+  cursor: grabbing;
+}
+.tabs--line .tabs__tab:hover {
+  border-color: var(--main-accent-accent-100);
+}
+.tabs__tab:disabled {
+  cursor: not-allowed;
+}
+// Замечание: отсутствие стиля [abiturient-tabs] — ui/data/remarks.json.

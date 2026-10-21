@@ -1,0 +1,96 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.faq__panel {
+  margin-top: 40px;
+  @include breakpoint($bp-768) {
+    margin-top: 24px;
+  }
+}
+.faq__columns {
+  display: flex;
+  gap: 24px;
+  @include breakpoint($bp-768) {
+    flex-direction: column;
+  }
+}
+.faq__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  align-content: start;
+  gap: 16px;
+}
+.accordion {
+  background-color: var(--main-panel);
+  box-shadow: 2px 2px var(--main-black);
+}
+.accordion__heading {
+  margin: 0;
+}
+.accordion__trigger {
+  // Замечание: отсутствие стиля [abiturient-accordion] — ui/data/remarks.json.
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 100px;
+  padding: 24px;
+  border: 0;
+  background-color: transparent;
+  color: var(--main-blue-blue-100);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: var(--font-family);
+  text-align: left;
+  transition: background-color 160ms;
+  &:hover {
+    background-color: var(--main-blue-blue-40);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.accordion__icon {
+  transition: transform 160ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--main-white-white-100);
+  flex-shrink: 0;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 24px;
+  line-height: 1;
+  font-family: var(--font-family);
+}
+.accordion--open .accordion__icon {
+  transform: rotate(180deg);
+}
+.accordion__chevron {
+  width: 24px;
+  height: 24px;
+}
+.accordion__body {
+  padding: 0 24px 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-family);
+}
+.accordion__body p {
+  margin: 0;
+}

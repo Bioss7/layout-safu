@@ -1,0 +1,83 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.topic-select {
+  z-index: 3;
+}
+.topic-select__trigger {
+  transition: color 160ms;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--main-blue-blue-100);
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: var(--font-family);
+}
+.topic-select__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 5;
+  max-height: min(260px, var(--topic-space, 40dvh));
+  @include accent-scrollbar;
+  overflow-y: auto;
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  background-color: var(--main-white-white-100);
+  border: 1px solid var(--main-blue-blue-40);
+  box-shadow: 2px 2px var(--main-black);
+}
+.topic-select__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.topic-select__option {
+  transition:
+    color 160ms,
+    background-color 160ms;
+  padding: 10px 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-family);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--main-panel);
+  }
+}
+.topic-select__option--active {
+  background-color: var(--main-panel);
+}
+.topic-select--up .topic-select__list {
+  top: auto;
+  bottom: 100%;
+}
+.topic-select:hover {
+  background-color: var(--main-blue-blue-40);
+}
+.topic-select--open,
+.topic-select--open:hover {
+  background-color: var(--main-panel);
+}
+.topic-select__option[aria-selected="true"] {
+  background-color: var(--main-panel);
+}
+// Замечание: отсутствие стиля [abiturient-topic-select] — ui/data/remarks.json.
+.topic-select__trigger:disabled {
+  cursor: not-allowed;
+}

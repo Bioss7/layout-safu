@@ -5,11 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm run project:data:check && pnpm run remarks:md && vite build && pnpm run format:css:build",
+    "project:data:check": "node tools/project-data.mjs",
+    "remarks:md": "node tools/project-data.mjs --remarks-md",
+    "check:project-data": "node --test tools/project-data.test.mjs",
+    "format:styles": "prettier --write \"src/scss/abiturient/**/*.scss\" ui/ui.css",
+    "format:styles:check": "prettier --check \"src/scss/abiturient/**/*.scss\" ui/ui.css",
+    "format:css:build": "prettier --write --ignore-path .prettierignore dist/assets/css/abiturient.css \"dist/ui/**/*.css\"",
     "preview": "vite preview",
+    "stats": "node tools/ai-statistics.mjs",
+    "check:statistics": "node --test tools/ai-statistics.test.mjs",
+    "check:abiturient": "node tools/check-abiturient.mjs",
     "webp": "node convert-to-webp.mjs",
     "optimize": "node optimize-images.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check:typography": "node tools/check-typography.mjs"
   },
   "repository": {
     "type": "git",
@@ -25,6 +35,7 @@
   "devDependencies": {
     "@playwright/test": "^1.64.0",
     "autoprefixer": "^10.5.4",
+    "prettier": "3.9.10",
     "sass": "^1.102.0",
     "sharp": "^0.35.3",
     "vite": "^7.1.0"

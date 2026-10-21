@@ -1,0 +1,105 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+:root {
+  --main-font-display: "Unbounded", sans-serif;
+  --main-panel: #e8eef6;
+  --main-black: #000;
+  --main-banner-start: #003366;
+  --main-banner-end: #0066cc;
+  --main-error: #7e0909;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  max-width: 1920px;
+  margin-inline: auto;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-100);
+}
+body.no-scroll {
+  overflow: hidden;
+}
+main {
+  // Подтверждённый экспорт повторяющегося узла Perspective Grid, Figma 4200:16802.
+  background-image: url("/abiturient/assets/img/page/page-bg-grid.svg");
+  background-position: -40px 0;
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  @include breakpoint($bp-1440) {
+    background-position: -32px 0;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+button,
+input,
+textarea {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:is(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--main-accent-accent-100);
+  outline-offset: 4px;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+  @include breakpoint($bp-1440) {
+    width: calc(100% - 160px);
+  }
+  @include breakpoint($bp-1200) {
+    width: calc(100% - 64px);
+  }
+  @include breakpoint($bp-992) {
+    width: calc(100% - 48px);
+  }
+  @include breakpoint($bp-768) {
+    width: calc(100% - 32px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

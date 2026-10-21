@@ -11,7 +11,7 @@
 
 2. Режим разработки — dev-сервер с HMR:
    ```bash
-   pnpm dev
+   pnpm dev --host
    ```
 
 3. Продакшн-сборка в `dist/`:

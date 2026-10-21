@@ -1,0 +1,212 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.section--reviews .link-arrow--stories {
+  text-transform: uppercase;
+  padding: 14px 16px;
+  border: 2px solid var(--main-white-white-100);
+
+  @include breakpoint($bp-768) {
+    border: 0;
+    padding: 11px 14px;
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(14px, calc(0.462963vw + 10.444444px), 16px);
+    line-height: clamp(20px, calc(0.925926vw + 12.888889px), 24px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.56px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.section--reviews .reviews-slider {
+  // Содержимое сохраняет прежнюю ширину, дополнительные 4px вмещают правую тень.
+  width: calc(100% + 4px);
+  padding-right: 4px;
+}
+
+.section--reviews .review-card {
+  min-width: 0;
+  border: 2px solid var(--main-white-white-100);
+  border-radius: 0;
+  box-shadow: 3px 4px 0 0 var(--main-black);
+  background-color: var(--main-panel);
+  height: 522px;
+  @include breakpoint($bp-768) {
+    height: 463px;
+    box-shadow: 4px 4px 0 0 var(--main-black);
+    max-width: 314px;
+    padding: 16px;
+  }
+}
+.section--reviews .review-card__media {
+  border-radius: 0;
+}
+.section--reviews .reviews-slider__viewport {
+  @include breakpoint($bp-768) {
+    margin-bottom: 24px;
+  }
+}
+.section--reviews .review-card__title {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(16px, calc(0.833333vw + 4px), 20px);
+  line-height: clamp(24px, calc(0.833333vw + 12px), 28px);
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(16px, calc(-1.666667vw + 40px), 20px);
+    line-height: clamp(24px, calc(-1.666667vw + 48px), 28px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(16px, calc(0.925926vw + 8.888889px), 20px);
+    line-height: clamp(24px, calc(0.925926vw + 16.888889px), 28px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.96px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+.section--reviews .reviews-slider__pagination {
+  @include breakpoint($bp-768) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.section--reviews .reviews-slider__controls {
+  @include breakpoint($bp-768) {
+    justify-content: center;
+  }
+}
+.section--reviews .button {
+  @include breakpoint($bp-768) {
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 42px;
+    padding: 9px 12px;
+  }
+}
+
+.section--reviews .link-arrow--stories::after {
+  width: 11px;
+  height: 11px;
+  mask-image: url("/abiturient/assets/img/reviews/icon-arrow-up-right.svg");
+  -webkit-mask-image: url("/abiturient/assets/img/reviews/icon-arrow-up-right.svg");
+}
+
+.section--reviews .review-card__meta-item {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(12px, calc(0.416667vw + 6px), 14px);
+  line-height: clamp(16px, calc(0.833333vw + 4px), 20px);
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-weight: 500;
+    font-size: clamp(12px, calc(-0.833333vw + 24px), 14px);
+    line-height: clamp(16px, calc(-2.5vw + 52px), 22px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: 14px;
+    line-height: clamp(20.02px, calc(0.458333vw + 16.5px), 22px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-weight: 400;
+    line-height: 20.02px;
+    letter-spacing: 0.96px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 0.6);
+}
+
+.section--reviews .review-card__text {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-weight: 400;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-weight: 500;
+    font-size: clamp(14px, calc(0.462963vw + 10.444444px), 16px);
+    line-height: clamp(20.02px, calc(0.921296vw + 12.944444px), 24px);
+  }
+
+  @include breakpoint($bp-768) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.02px;
+    letter-spacing: 0.84px;
+    text-shadow: none;
+  }
+
+  color: rgba(11, 45, 78, 1);
+}
+
+.section--reviews .review-card__link {
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(16px, calc(0.416667vw + 10px), 18px);
+  line-height: clamp(24px, calc(0.416667vw + 18px), 26px);
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(16px, calc(-0.833333vw + 28px), 18px);
+    line-height: clamp(24px, calc(-0.833333vw + 36px), 26px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: 18px;
+    line-height: clamp(25.92px, calc(0.018519vw + 25.777778px), 26px);
+  }
+
+  @include breakpoint($bp-768) {
+    line-height: 25.92px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  color: rgba(0, 174, 239, 1);
+}
+
+.section--reviews .link-arrow--stories:hover {
+  color: var(---Accent-Accent-100, #00aeef);
+}
+.section--reviews .link-arrow--stories:active {
+  color: var(--main-blue-blue-90);
+}

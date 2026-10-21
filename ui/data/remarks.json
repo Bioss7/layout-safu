@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "remarks": [
+    {
+      "id": "abiturient-accordion",
+      "page": "abiturient",
+      "block": "Вопросы и ответы",
+      "selector": ".accordion__trigger",
+      "states": [
+        ":active",
+        ":disabled"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/accordion.scss"
+    },
+    {
+      "id": "abiturient-admission",
+      "page": "abiturient",
+      "block": "Всё для поступления",
+      "selector": ".study-card",
+      "states": [
+        ":active"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/admission.scss"
+    },
+    {
+      "id": "abiturient-education-card",
+      "page": "abiturient",
+      "block": "Уровни образования",
+      "selector": ".education-card",
+      "states": [
+        ":active"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/education-card.scss"
+    },
+    {
+      "id": "abiturient-feature-card",
+      "page": "abiturient",
+      "block": "Больше возможностей",
+      "selector": ".feature-card",
+      "states": [
+        ":active"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/feature-card.scss"
+    },
+    {
+      "id": "abiturient-form-field",
+      "page": "abiturient",
+      "block": "Задать вопрос",
+      "selector": ".form-field__input",
+      "states": [
+        ":disabled",
+        ":read-only"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/form-field.scss"
+    },
+    {
+      "id": "abiturient-tabs",
+      "page": "abiturient",
+      "block": "Вкладки",
+      "selector": ".tabs__tab",
+      "states": [
+        ":disabled",
+        ":active"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/tabs.scss"
+    },
+    {
+      "id": "abiturient-topic-select",
+      "page": "abiturient",
+      "block": "Выбор темы",
+      "selector": ".topic-select__trigger",
+      "states": [
+        ":disabled",
+        ":active"
+      ],
+      "fallback": "сохранено базовое оформление",
+      "file": "src/scss/abiturient/blocks/topic-select.scss"
+    },
+    {
+      "id": "abiturient-hero-description-copy",
+      "page": "abiturient",
+      "block": "Hero абитуриента",
+      "selector": ".applicant-hero__description",
+      "states": [],
+      "description": "в локальных эталонах расходится окончание описания: в 1920 нет финальной точки, в 390 точка есть; требуется согласовать единый текст или отдельные текстовые варианты",
+      "fallback": "до уточнения сохранён текст настольного эталона без финальной точки",
+      "file": "src/scss/abiturient/blocks/applicant-hero.scss"
+    },
+    {
+      "id": "abiturient-contact-map-1440",
+      "page": "abiturient",
+      "block": "Контакты приёмной комиссии — карта на 1440",
+      "selector": ".contact-map",
+      "states": [],
+      "description": "Figma 4193:5045: карта 420×422px. Сохранённые групповые экспорты квадратные 560×560px; нужен отдельный чистый экспорт для 1440. Текущий MCP use_figma отклонён сервером с требованием Full seat.",
+      "fallback": "Карта масштабируется до 420×420px без растяжения; тень 4px задаётся отдельно в CSS.",
+      "file": "src/scss/abiturient/blocks/contacts.scss"
+    }
+  ]
+}

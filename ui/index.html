@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI — каталог страниц САФУ</title>
+    <link rel="stylesheet" href="/ui/ui.css" />
+  </head>
+  <body>
+    <main class="service">
+      <nav class="service__nav">
+        <a href="/ui/" aria-current="page">Каталог</a><a href="/ui/statistics/">Статистика</a>
+      </nav>
+      <h1>Каталог страниц</h1>
+      <p>Локальные страницы вёрстки и замечания к состояниям из макета.</p>
+      <div class="catalog js-catalog"></div>
+      <section>
+        <h2>Замечания к стилям</h2>
+        <p>Единый источник: ui/data/remarks.json. <a href="/__ui/remarks">Данные JSON</a></p>
+        <p class="js-remarks-status" role="status">Загрузка…</p>
+        <ul class="remarks js-remarks"></ul>
+      </section>
+    </main>
+    <script type="module" src="/ui/catalog.js"></script>
+  </body>
+</html>

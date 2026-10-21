@@ -1,0 +1,1664 @@
+{
+  "checkedAt": "2026-10-21",
+  "source": "aVwbPxZ5FUxYkvTcvME566",
+  "frames": {
+    "1200": "4193:6888",
+    "1440": "4193:4780",
+    "1920": "4200:19138"
+  },
+  "mobileSource": "Локальный эталон 390: abiturient/figma/mobile-390.png и context.json; актуального полного фрейма 390 на странице нет.",
+  "entries": [
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": ".title-2",
+      "sourceStyles": {
+        "1200": 47,
+        "1440": 47,
+        "1920": 11
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px",
+          "letter-spacing": "-1.12px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": "#faq .title-2",
+      "sourceStyles": {
+        "1200": 47,
+        "1440": 47,
+        "1920": 34
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px",
+          "letter-spacing": "-1.12px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "68px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": ".contacts .title-2",
+      "sourceStyles": {
+        "1200": 62,
+        "1440": 47,
+        "1920": 11
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px",
+          "letter-spacing": "-1.12px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      },
+      "sourceNote": "Актуальный контекст 4193:7172: 40/48, letter-spacing 1.6px; контакты проверены повторно 2026-10-21."
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": ".section--reviews .title-2",
+      "sourceStyles": {
+        "1200": 62,
+        "1440": 47,
+        "1920": 11
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px",
+          "letter-spacing": "-1.12px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "36px",
+          "line-height": "48px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "selector": ".applicant-hero__title",
+      "sourceStyles": {
+        "1200": 60,
+        "1440": 45,
+        "1920": 3
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "-1.6px",
+          "text-shadow": "rgb(0, 0, 0) 3px 4px 0px"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "64px",
+          "line-height": "64px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "3px 4px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "80px",
+          "line-height": "80px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "3px 4px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "104px",
+          "line-height": "104px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "3px 4px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "selector": ".hero-link",
+      "sourceStyles": {
+        "1200": 5,
+        "1440": 5,
+        "1920": 5
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.64px",
+          "text-shadow": "rgb(0, 0, 0) 2px 2px 0px"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 2px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 2px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 2px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "selector": ".applicant-hero__status",
+      "sourceStyles": {
+        "1200": 59,
+        "1440": 2,
+        "1920": 2
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "12px",
+          "line-height": "16px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "selector": ".applicant-hero__description",
+      "sourceStyles": {
+        "1200": 4,
+        "1440": 4,
+        "1920": 4
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/apply-banner.scss",
+      "selector": ".apply-banner__title",
+      "sourceStyles": {
+        "1200": 61,
+        "1440": 46,
+        "1920": 8
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "900",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "24px",
+          "line-height": "36px",
+          "letter-spacing": "0em",
+          "text-shadow": "2px 3px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 3px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 3px 0px #000",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/apply-banner.scss",
+      "selector": ".apply-banner__text",
+      "sourceStyles": {
+        "1200": 7,
+        "1440": 7,
+        "1920": 9
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/button.scss",
+      "selector": ".button",
+      "sourceStyles": {
+        "1200": 10,
+        "1440": 10,
+        "1920": 10
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "selector": ".education-card__title",
+      "sourceStyles": {
+        "1200": 62,
+        "1440": 48,
+        "1920": 12
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "32px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "36px",
+          "line-height": "48px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "selector": ".education-card__description",
+      "sourceStyles": {
+        "1200": 13,
+        "1440": 38,
+        "1920": 13
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/admission.scss",
+      "selector": ".study-card__title",
+      "sourceStyles": {
+        "1200": 44,
+        "1440": 10,
+        "1920": 17
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "32px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/admission.scss",
+      "selector": ".study-card__description",
+      "sourceStyles": {
+        "1200": 25,
+        "1440": 32,
+        "1920": 18
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/admission.scss",
+      "selector": ".admission-note h3",
+      "sourceStyles": {
+        "1200": 26,
+        "1440": 40,
+        "1920": 19
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/admission.scss",
+      "selector": ".admission-note p",
+      "sourceStyles": {
+        "1200": 2,
+        "1440": 9,
+        "1920": 20
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/feature-card.scss",
+      "selector": ".feature-card__title",
+      "sourceStyles": {
+        "1200": 65,
+        "1440": 19,
+        "1920": 14
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "32px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "32px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/feature-card.scss",
+      "selector": ".feature-card__description",
+      "sourceStyles": {
+        "1200": 4,
+        "1440": 21,
+        "1920": 21
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/tabs.scss",
+      "selector": ".tabs__tab",
+      "sourceStyles": {
+        "1200": 10,
+        "1440": 10,
+        "1920": 10
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "18px",
+          "line-height": "24px",
+          "letter-spacing": "0.72px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      },
+      "sampleSelector": ".tabs__tab:not([aria-selected=\"true\"])"
+    },
+    {
+      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "selector": ".section--reviews .review-card__title",
+      "sourceStyles": {
+        "1200": 29,
+        "1440": 24,
+        "1920": 29
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "selector": ".section--reviews .review-card__meta-item",
+      "sourceStyles": {
+        "1200": 71,
+        "1440": 56,
+        "1920": 30
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "14px",
+          "line-height": "20.02px",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "12px",
+          "line-height": "16px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "selector": ".section--reviews .review-card__text",
+      "sourceStyles": {
+        "1200": 32,
+        "1440": 37,
+        "1920": 32
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "14px",
+          "line-height": "20.02px",
+          "letter-spacing": "0.84px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "selector": ".section--reviews .review-card__link",
+      "sourceStyles": {
+        "1200": 33,
+        "1440": 57,
+        "1920": 33
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "25.92px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(0, 174, 239, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(0, 174, 239, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(0, 174, 239, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "selector": ".section--reviews .link-arrow--stories",
+      "sourceStyles": {
+        "1200": 10,
+        "1440": 10,
+        "1920": 10
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".question-form__description",
+      "sourceStyles": {
+        "1200": 72,
+        "1440": 18,
+        "1920": 18
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".question-form__submit",
+      "sourceStyles": {
+        "1200": 40,
+        "1440": 40,
+        "1920": 40
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".answers-card__label",
+      "sourceStyles": {
+        "1200": 27,
+        "1440": 30,
+        "1920": 41
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "12px",
+          "line-height": "16px",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "12px",
+          "line-height": "16px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".answers-card__count",
+      "sourceStyles": {
+        "1200": 74,
+        "1440": 11,
+        "1920": 42
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "900",
+          "font-size": "32px",
+          "line-height": "48px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px",
+          "letter-spacing": "-0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "900",
+          "font-size": "104px",
+          "line-height": "90px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".answers-card__title",
+      "sourceStyles": {
+        "1200": 75,
+        "1440": 58,
+        "1920": 43
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "18px",
+          "line-height": "24px",
+          "letter-spacing": "0.72px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "18px",
+          "line-height": "normal",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "32px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".answers-card__link",
+      "sourceStyles": {
+        "1200": 32,
+        "1440": 18,
+        "1920": 18
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/question.scss",
+      "selector": ".answers-card .button--text",
+      "sourceStyles": {
+        "1200": 44,
+        "1440": 44,
+        "1920": 44
+      },
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "700",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0.04em",
+          "color": "rgba(11, 45, 78, 1)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/form-field.scss",
+      "selector": ".form-field__label",
+      "sourceStyles": {
+        "1200": 41,
+        "1440": 38,
+        "1920": 38
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "22px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px",
+          "letter-spacing": "0em",
+          "color": "rgba(11, 45, 78, 0.6)"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/form-field.scss",
+      "selector": ".form-field__input",
+      "sourceStyles": {
+        "1200": 73,
+        "1440": 39,
+        "1920": 39
+      },
+      "expected": {
+        "390": {
+          "font-family": "Montserrat, sans-serif",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "18px",
+          "line-height": "28px",
+          "letter-spacing": "normal",
+          "text-shadow": "none"
+        },
+        "1200": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "400",
+          "font-size": "18px",
+          "line-height": "28px",
+          "letter-spacing": "0em"
+        },
+        "1440": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em"
+        },
+        "1920": {
+          "font-family": "var(--font-family)",
+          "font-style": "normal",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em"
+        }
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "selector": ".education-card__count",
+      "expected": {
+        "390": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "18px",
+          "line-height": "normal",
+          "letter-spacing": "0",
+          "text-shadow": "2px 2px 0px #000",
+          "color": "rgb(255, 255, 255)"
+        },
+        "1200": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px",
+          "letter-spacing": "0",
+          "text-shadow": "1.9429px 1.9429px 0px #000",
+          "color": "rgb(255, 255, 255)"
+        },
+        "1440": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "1.5143px 1.5143px 0px #000",
+          "color": "rgb(255, 255, 255)"
+        },
+        "1920": {
+          "font-family": "var(--main-font-display)",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 2px 0px #000",
+          "color": "rgb(255, 255, 255)"
+        }
+      }
+    }
+  ]
+}

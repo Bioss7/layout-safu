@@ -1,0 +1,334 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.applicant-hero {
+  position: relative;
+  min-height: clamp(610px, 37.76vw, 725px);
+  overflow: hidden;
+  color: var(--main-white-white-100);
+  background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    background-image: url("/abiturient/assets/img/hero/hero-transition-1920.svg");
+    background-position: bottom center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  @include breakpoint($bp-1440) {
+    background-size: cover;
+  }
+  // На 900px текст и группа людей перестают помещаться в две колонки.
+  @include breakpoint($bp-900) {
+    min-height: 0;
+    background-image: url("/abiturient/assets/img/hero/hero-bg-390.png");
+    background-size: auto 126.73%;
+    background-position: 60% bottom;
+    &::after {
+      height: 52px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-390.svg");
+    }
+  }
+}
+.applicant-hero__inner {
+  position: relative;
+  min-height: inherit;
+}
+.applicant-hero__copy {
+  position: relative;
+  z-index: 2;
+  width: 1072px;
+  max-width: 62%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @include breakpoint($bp-1200) {
+    max-width: 62%;
+    padding-top: 32px;
+  }
+  @include breakpoint($bp-900) {
+    width: 100%;
+    max-width: none;
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+}
+.applicant-hero__status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  font-variant: normal;
+  font-stretch: normal;
+  @include breakpoint($bp-900) {
+    flex-direction: column;
+    gap: 6px;
+
+    text-transform: uppercase;
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-1440) {
+    line-height: clamp(20px, calc(-0.833333vw + 32px), 22px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(12px, calc(0.666667vw + 6px), 14px);
+    line-height: clamp(16px, calc(2vw - 2px), 22px);
+  }
+
+  @include breakpoint($bp-900) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  color: rgba(255, 255, 255, 1);
+}
+.applicant-hero__status li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-white-white-100);
+    box-shadow: 0 0 10px 4px var(--main-accent-accent-30);
+    flex-shrink: 0;
+  }
+  @include breakpoint($bp-900) {
+    gap: 6px;
+    &::before {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+.applicant-hero__title {
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(80px, calc(5vw + 8px), 104px);
+  line-height: clamp(80px, calc(5vw + 8px), 104px);
+  letter-spacing: 0.04em;
+  text-shadow: 3px 4px 0px #000;
+
+  @include breakpoint($bp-1440) {
+    font-size: clamp(64px, calc(6.666667vw - 16px), 80px);
+    line-height: clamp(64px, calc(6.666667vw - 16px), 80px);
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: clamp(40px, calc(8vw - 32px), 64px);
+    line-height: clamp(48px, calc(5.333333vw - 0px), 64px);
+  }
+
+  @include breakpoint($bp-900) {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.6px;
+    text-shadow: rgb(0, 0, 0) 3px 4px 0px;
+  }
+
+  color: rgba(255, 255, 255, 1);
+}
+.applicant-hero__year {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 12px;
+  @include breakpoint($bp-900) {
+    margin-top: 12px;
+  }
+}
+.applicant-hero__badge {
+  filter: drop-shadow(3px 3px 0 #000);
+  display: block;
+  width: clamp(180px, 12.5vw, 240px);
+  height: auto;
+}
+.applicant-hero__year picture {
+  display: block;
+}
+.applicant-hero__description {
+  // Замечание: отсутствие стиля [abiturient-hero-description-copy] — ui/data/remarks.json.
+  margin: 24px 0 40px;
+  font-variant: normal;
+  font-stretch: normal;
+
+  @include breakpoint($bp-900) {
+    max-width: 500px;
+    margin: 24px 0 48px;
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+
+  @include breakpoint($bp-900) {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  color: rgba(255, 255, 255, 1);
+}
+.applicant-hero__links {
+  width: 625px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @include breakpoint($bp-900) {
+    width: 100%;
+    gap: 16px;
+  }
+}
+.hero-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 20px 0;
+  border-bottom: 3px solid var(--main-white-white-100);
+  box-shadow: 0 3px var(--main-black);
+  text-decoration: none;
+  font-variant: normal;
+  font-stretch: normal;
+
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(---Accent-Accent-100, #00aeef);
+  }
+  @include breakpoint($bp-900) {
+    padding: 8px 16px 12px 0;
+  }
+
+  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 0px #000;
+
+  @include breakpoint($bp-900) {
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    text-shadow: rgb(0, 0, 0) 2px 2px 0px;
+  }
+
+  color: rgba(255, 255, 255, 1);
+}
+.hero-link .card-arrow {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  mask-image: none;
+  -webkit-mask-image: none;
+  // Тень на обёртке: маска дочернего элемента не обрезает смещённый контур.
+  filter: drop-shadow(2px 2px 0 #000);
+}
+.hero-link .card-arrow::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/abiturient/assets/img/hero/icon-arrow-up-right.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/abiturient/assets/img/hero/icon-arrow-up-right.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.applicant-hero__art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  @include breakpoint($bp-900) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-top: 50px;
+  }
+}
+.applicant-hero__building {
+  position: absolute;
+  width: 1222px;
+  height: 811px;
+  left: 53.78%;
+  top: 29px;
+  background-color: var(--main-white-white-100);
+  mask-image: url("/abiturient/assets/img/hero/hero-building-1920.png");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  @include breakpoint($bp-1440) {
+    width: clamp(686px, 69.44vw, 1000px);
+    height: 665px;
+    left: 50%;
+    top: 40px;
+  }
+  @include breakpoint($bp-900) {
+    width: 176%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    mask-image: url("/abiturient/assets/img/hero/hero-building-390.png");
+    mask-position: left top;
+  }
+}
+.applicant-hero__people {
+  position: absolute;
+  display: block;
+  flex-shrink: 0;
+  width: clamp(350px, 34.8958vw, 670px);
+  left: 53.49%;
+  bottom: 0;
+  @include breakpoint($bp-900) {
+    position: relative;
+    left: auto;
+    width: clamp(440px, 65vw, 590px);
+    max-width: none;
+  }
+}
+.applicant-hero__people img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}

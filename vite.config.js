@@ -1,10 +1,20 @@
 import { dirname, relative, resolve } from 'node:path';
 import { defineConfig } from 'vite';
+import { uiPreview } from './tools/ui-preview.mjs';
 
 const toPosix = (value) => value.replace(/\\/g, '/');
 
 // JS-входы: ключ = имя собранного файла assets/js/<ключ>.js
 const jsInputs = {
+  'abiturient-header': resolve('src/js/abiturient/header.js'),
+  'abiturient-footer': resolve('src/js/abiturient/footer.js'),
+  'abiturient-tabs': resolve('src/js/abiturient/tabs.js'),
+  'abiturient-drag-scroll': resolve('src/js/abiturient/drag-scroll.js'),
+  'abiturient-accordion': resolve('src/js/abiturient/accordion.js'),
+  'abiturient-topic-select': resolve('src/js/abiturient/topic-select.js'),
+  'abiturient-question-form': resolve('src/js/abiturient/question-form.js'),
+  'abiturient-reviews': resolve('src/js/abiturient/reviews.js'),
+  'abiturient-info-dialog': resolve('src/js/abiturient/info-dialog.js'),
   modal: resolve('src/js/main/modal.js'),
   main: resolve('src/js/main/main.js'),
   'main-header': resolve('src/js/main/header.js'),
@@ -59,25 +69,30 @@ function relativeClassicScripts() {
 export default defineConfig({
   base: './',
   publicDir: 'public',
-  plugins: [relativeClassicScripts()],
+  plugins: [relativeClassicScripts(), uiPreview()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    modulePreload: { polyfill: false },
     rollupOptions: {
       input: {
         // HTML-страницы
         index: resolve('index.html'),
         about: resolve('about/index.html'),
         programs: resolve('programs/index.html'),
+        abiturient: resolve('abiturient/index.html'),
+        'ui-catalog': resolve('ui/index.html'),
+        'ui-statistics': resolve('ui/statistics/index.html'),
         'programs-detail': resolve('programs/detail/index.html'),
         // JS-скрипты страниц
         ...jsInputs,
       },
       output: {
-        entryFileNames: 'assets/js/[name].js',
-        chunkFileNames: 'assets/js/[name].js',
+        entryFileNames: ({ name }) => name.startsWith('ui-') ? 'ui/assets/js/[name].js' : 'assets/js/[name].js',
+        chunkFileNames: ({ name }) => /^(?:ui|pages)/.test(name) ? 'ui/assets/js/[name].js' : 'assets/js/[name].js',
         assetFileNames: ({ names }) => {
           const name = names?.[0] ?? '';
+          if (/^(?:ui|pages)/.test(name)) return 'ui/assets/[name][extname]';
           if (name.endsWith('.css')) return 'assets/css/[name][extname]';
           return 'assets/[name][extname]';
         },

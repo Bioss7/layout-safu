@@ -1,0 +1,53 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--main-accent-accent-100);
+  color: var(--main-white-white-100);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 52px;
+  @include breakpoint($bp-768) {
+    height: 40px;
+  }
+}
+.marquee__text {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: var(--main-font-display);
+  white-space: nowrap;
+}
+.marquee__dot {
+  width: 8px;
+  height: 8px;
+  margin-inline: 16px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Статистика проекта САФУ</title>
+    <link rel="stylesheet" href="/ui/ui.css" />
+  </head>
+  <body>
+    <main class="service">
+      <nav class="service__nav">
+        <a href="/ui/">Каталог</a><a href="/ui/statistics/" aria-current="page">Статистика</a>
+      </nav>
+      <h1>Статистика проекта</h1>
+      <p><a href="/__ui/statistics">Отчёт JSON</a></p>
+      <p>
+        Только зарегистрированные локальные журналы. Обновление запускает Node.js-сборщик без
+        запросов к модели и Figma.
+      </p>
+      <div class="filters">
+        <label
+          >Страница<select class="js-page-filter">
+            <option value="">Все страницы</option>
+          </select></label
+        ><label
+          >Этап<select class="js-phase-filter">
+            <option value="">Все этапы</option>
+            <option value="planning">Планирование</option>
+            <option value="implementation">Реализация</option>
+            <option value="verification">Проверка</option>
+            <option value="unknown">Не определён</option>
+          </select></label
+        ><label>С даты<input type="date" class="js-date-from" /></label
+        ><label>По дату<input type="date" class="js-date-to" /></label
+        ><button class="js-refresh" type="button">Обновить статистику</button>
+      </div>
+      <p class="js-report-status" role="status" aria-live="polite">Загрузка…</p>
+      <div class="metrics js-metrics"></div>
+      <section>
+        <h2>Блоки вёрстки</h2>
+        <p class="js-block-note"></p>
+        <div class="metrics js-block-metrics"></div>
+        <details>
+          <summary>Реестр компонентов</summary>
+          <div class="table-scroll" tabindex="0" aria-label="БЭМ-компоненты">
+            <table>
+              <thead>
+                <tr>
+                  <th>Компонент</th>
+                  <th>БЭМ-блок</th>
+                  <th>Страница</th>
+                  <th>Происхождение</th>
+                  <th>Добавлен</th>
+                  <th>Этап</th>
+                  <th>Назначение</th>
+                  <th>Исходники</th>
+                  <th>Компонент-источник</th>
+                </tr>
+              </thead>
+              <tbody class="js-blocks"></tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>Примеры для переиспользования (не увеличивают счётчики)</summary>
+          <ul class="js-reusable-components"></ul>
+        </details>
+      </section>
+      <section>
+        <h2>По задачам и этапам</h2>
+        <div class="table-scroll" tabindex="0" aria-label="Таблица статистики">
+          <table>
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Задача</th>
+                <th>Страница</th>
+                <th>Этап</th>
+                <th>Ответы модели</th>
+                <th>MCP / ошибки</th>
+                <th>Входные</th>
+                <th>Кэш*</th>
+                <th>Выходные</th>
+                <th>Reasoning*</th>
+                <th>Время</th>
+              </tr>
+            </thead>
+            <tbody class="js-records"></tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>Источники и ограничения</h2>
+        <div class="js-sources"></div>
+        <ul class="js-notes"></ul>
+        <h2>Лимиты аккаунта</h2>
+        <p class="js-limits"></p>
+        <p>Лимиты общие для аккаунта. По их изменению расход страницы не вычисляется.</p>
+      </section>
+    </main>
+    <script type="module" src="/ui/statistics.js"></script>
+  </body>
+</html>

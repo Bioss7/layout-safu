@@ -1,0 +1,38 @@
+[
+  {
+    "id": "main",
+    "name": "Главная",
+    "url": "/",
+    "status": "Реализована",
+    "design": "https://www.figma.com/design/AYZNvmZNeWcin2GmQmDOdh/?node-id=7-2641"
+  },
+  {
+    "id": "about",
+    "name": "Об университете",
+    "url": "/about/",
+    "status": "Реализована",
+    "design": null
+  },
+  {
+    "id": "programs",
+    "name": "Каталог программ",
+    "url": "/programs/",
+    "status": "Реализована",
+    "design": null
+  },
+  {
+    "id": "programs-detail",
+    "name": "Страница программы",
+    "url": "/programs/detail/",
+    "status": "Реализована",
+    "design": null
+  },
+  {
+    "id": "abiturient",
+    "name": "Абитуриент",
+    "url": "/abiturient/",
+    "status": "Реализована; есть замечания к отсутствующим состояниям",
+    "design": "https://www.figma.com/design/aVwbPxZ5FUxYkvTcvME566/?node-id=4147-4873",
+    "remarksReport": "abiturient/STYLE-REMARKS.md"
+  }
+]
