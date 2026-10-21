@@ -373,7 +373,7 @@ html.page--header-open body > footer {
 }
 @media (min-width: 1201px) and (max-width: 1440px) {
   .header__nav-list {
-    gap: clamp(8px, 2vw, 28px);
+    gap: 28px;
   }
   .header__nav-item {
     padding-inline: 8px;

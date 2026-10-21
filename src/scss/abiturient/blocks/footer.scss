@@ -442,7 +442,7 @@
 @media (min-width: 1441px) {
   .footer__cols {
     min-width: 0;
-    gap: clamp(20px, 2.083vw, 40px);
+    gap: 2.083vw;
   }
   .footer__col--info {
     flex: 1.65 1 0;

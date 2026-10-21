@@ -6,12 +6,12 @@
   padding-top: 60px;
   padding-bottom: 60px;
   @include breakpoint($bp-1440) {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
   @include breakpoint($bp-1200) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
   @include breakpoint($bp-992) {
     padding-top: 32px;
@@ -26,10 +26,10 @@
 .section--admission + .section {
   padding-top: 120px;
   @include breakpoint($bp-1440) {
-    padding-top: 90px;
+    padding-top: 96px;
   }
   @include breakpoint($bp-1200) {
-    padding-top: 80px;
+    padding-top: 72px;
   }
   @include breakpoint($bp-992) {
     padding-top: 64px;
@@ -41,10 +41,10 @@
 .section--education {
   padding-bottom: 120px;
   @include breakpoint($bp-1440) {
-    padding-bottom: 90px;
+    padding-bottom: 96px;
   }
   @include breakpoint($bp-1200) {
-    padding-bottom: 80px;
+    padding-bottom: 72px;
   }
   @include breakpoint($bp-992) {
     padding-bottom: 64px;
@@ -54,7 +54,16 @@
   }
 }
 .section-header {
-  margin-bottom: clamp(32px, 4.167vw, 80px);
+  margin-bottom: 80px;
+  @include breakpoint($bp-1440) {
+    margin-bottom: 48px;
+  }
+  @include breakpoint($bp-768) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-bottom: 40px;
+  }
 }
 // Figma: собственная белая заливка поверх общей сетки страницы.
 .section--contacts,
@@ -75,10 +84,38 @@
   @include breakpoint($bp-768) {
     margin-bottom: 40px;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-bottom: 40px;
+  }
 }
 .section--education .section-header,
 .section--opportunities .section-header {
   @include breakpoint($bp-768) {
     margin-bottom: 40px;
+  }
+}
+// Между секциями с собственной заливкой остаётся фон страницы.
+.section--opportunities,
+.section--reviews {
+  @include breakpoint($bp-1440) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  @include breakpoint($bp-1200) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  @include breakpoint($bp-992) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @include breakpoint($bp-900) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+.section--reviews {
+  @include breakpoint($bp-900) {
+    padding-top: 30px;
   }
 }

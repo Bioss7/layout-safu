@@ -33,15 +33,14 @@
 
       function open() {
         if (trigger.disabled || input.disabled || input.readOnly) return;
-        // Выбираем направление по свободному месту, размеры ограничивает CSS.
+        // Выбираем направление и ограничиваем список свободным местом и высотой 260px.
         const bounds = root.getBoundingClientRect();
         const below = innerHeight - bounds.bottom - 12;
         const above = bounds.top - 12;
         root.classList.toggle("topic-select--up", below < 180 && above > below);
-        root.style.setProperty(
-          "--topic-space",
-          `${Math.max(80, Math.floor(below < 180 && above > below ? above : below))}px`,
-        );
+        const availableSpace = Math.floor(below < 180 && above > below ? above : below);
+        const listHeight = availableSpace < 80 ? 80 : availableSpace > 260 ? 260 : availableSpace;
+        root.style.setProperty("--topic-space", `${listHeight}px`);
         list.hidden = false;
         root.classList.add("topic-select--open");
         trigger.setAttribute("aria-expanded", "true");

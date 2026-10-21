@@ -37,6 +37,12 @@ main {
   @include breakpoint($bp-1440) {
     background-position: -32px 0;
   }
+  @include breakpoint($bp-1200) {
+    background-position: 0 0;
+  }
+  @include breakpoint($bp-992) {
+    background-position: -32px 0;
+  }
 }
 *,
 *::before,
@@ -89,6 +95,29 @@ img {
   }
   @include breakpoint($bp-768) {
     width: calc(100% - 32px);
+  }
+}
+// Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
+main > section > .container {
+  @include breakpoint($bp-1440) {
+    width: calc(100% - 128px);
+  }
+  @include breakpoint($bp-1200) {
+    width: calc(100% - 96px);
+  }
+  @include breakpoint($bp-992) {
+    width: calc(100% - 48px);
+  }
+  @include breakpoint($bp-768) {
+    width: calc(100% - 32px);
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: calc(100% - 64px);
+  }
+  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
+    &.applicant-hero__inner {
+      width: calc(100% - 48px);
+    }
   }
 }
 @media (prefers-reduced-motion: reduce) {

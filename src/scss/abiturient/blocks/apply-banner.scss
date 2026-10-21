@@ -15,6 +15,22 @@
     var(--main-banner-start) 9%,
     var(--main-banner-end) 91%
   );
+  @include breakpoint($bp-1440) {
+    min-height: 134px;
+    background-image: linear-gradient(
+      134.395deg,
+      var(--main-banner-start) 9.0909%,
+      var(--main-banner-end) 90.909%
+    );
+  }
+  @include breakpoint($bp-1200) {
+    min-height: 138px;
+    background-image: linear-gradient(
+      128.66deg,
+      var(--main-banner-start) 9.0909%,
+      var(--main-banner-end) 90.909%
+    );
+  }
   @include breakpoint($bp-1150) {
     align-items: start;
     flex-direction: column;
@@ -24,9 +40,23 @@
     padding: 16px;
     gap: 40px;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background-image: linear-gradient(
+      123.9194deg,
+      var(--main-banner-start) 9.0909%,
+      var(--main-banner-end) 90.909%
+    );
+  }
 }
 .apply-banner__copy {
   min-width: 0;
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex: 1;
+  }
 }
 .apply-banner__title {
   margin: 0 0 10px;
@@ -36,23 +66,23 @@
     margin-bottom: 16px;
   }
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
-  font-size: clamp(24px, calc(1.666667vw + 0px), 32px);
-  line-height: clamp(32px, calc(1.666667vw + 8px), 40px);
+  font-size: 32px;
+  line-height: 40px;
   letter-spacing: 0.04em;
   text-shadow: 2px 3px 0px #000;
 
   @include breakpoint($bp-1440) {
     font-size: 24px;
-    line-height: clamp(32px, calc(-1.666667vw + 56px), 36px);
+    line-height: 32px;
   }
 
   @include breakpoint($bp-1200) {
     font-weight: 700;
-    line-height: clamp(32px, calc(0.925926vw + 24.888889px), 36px);
+    line-height: 36px;
     letter-spacing: 0em;
   }
 
@@ -64,13 +94,19 @@
   }
 
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
 }
 .apply-banner__text {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -88,11 +124,22 @@
   }
 
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .apply-banner .button {
   flex-shrink: 0;
+  white-space: nowrap;
+
   @include breakpoint($bp-768) {
     width: 100%;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex: 0 0 260px;
+    width: 260px;
+    min-height: 52px;
   }
 }
 

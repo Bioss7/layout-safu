@@ -67,7 +67,7 @@ try {
           linksDirection: getComputedStyle(section.querySelector('.contacts__links')).flexDirection,
         };
       })(),
-      questionBackground: getComputedStyle(document.querySelector('.section--question')).backgroundColor,
+      questionBackground: getComputedStyle(document.querySelector(innerWidth > 768 && innerWidth <= 1440 ? '.question__surface' : '.section--question')).backgroundColor,
       answersCard: (() => {
         const card = document.querySelector('.answers-card');
         const title = card.querySelector('.answers-card__title');
@@ -104,7 +104,7 @@ try {
     }));
     metrics.push(metric);
     assert.equal(metric.contacts.background, 'rgb(255, 255, 255)', 'Белый фон контактов поверх сетки');
-    assert.equal(metric.questionBackground, 'rgb(255, 255, 255)', 'Белый фон секции вопроса поверх сетки');
+    assert.equal(metric.questionBackground, 'rgb(255, 255, 255)', 'Белый фон содержимого вопроса поверх сетки');
     assert.equal(metric.contacts.paddingTop, width <= 768 ? 30 : 40);
     assert.equal(metric.contacts.paddingBottom, width <= 768 ? 30 : 40);
     const contactsReference = {
@@ -137,7 +137,7 @@ try {
     assert.ok(metric.loadedImages, `Missing image at ${width}`);
     assert.ok(metric.fontReady, `Unbounded unavailable at ${width}`);
     assert.deepEqual(metric.scripts, expectedScripts, 'На всех ширинах подключён одинаковый набор компонентов');
-    if (width === 1920 || width === 390) {
+    if ([1920, 1440, 1200, 390].includes(width)) {
       await page.screenshot({ path: fileURLToPath(new URL(`${width}.png`, output)), fullPage: true, animations: 'disabled' });
       await page.locator('.applicant-hero').screenshot({ path: fileURLToPath(new URL(`hero-${width}.png`, output)), animations: 'disabled' });
     }

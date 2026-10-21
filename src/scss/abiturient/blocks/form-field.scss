@@ -28,7 +28,7 @@
   font-variant: normal;
   font-stretch: normal;
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -37,7 +37,7 @@
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
-    line-height: clamp(20px, calc(-0.833333vw + 32px), 22px);
+    line-height: 20px;
   }
 
   @include breakpoint($bp-1200) {
@@ -77,7 +77,7 @@
     outline: none;
   }
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -86,7 +86,7 @@
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
-    line-height: clamp(26px, calc(-0.833333vw + 38px), 28px);
+    line-height: 26px;
   }
 
   @include breakpoint($bp-1200) {

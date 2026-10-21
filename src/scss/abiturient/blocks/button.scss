@@ -30,7 +30,7 @@
     color: var(--main-white-white-100);
   }
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;

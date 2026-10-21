@@ -12,6 +12,9 @@
   line-height: 24px;
   font-family: var(--font-family);
   color: var(--main-white-white-100);
+  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
+    padding-top: 36px;
+  }
 }
 .breadcrumbs__list {
   display: flex;

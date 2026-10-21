@@ -22,7 +22,7 @@
   display: flex;
   align-items: flex-end;
   min-width: 0;
-  min-height: clamp(342px, calc(22.5vw + 18px), 450px);
+  min-height: 450px;
   // В Figma отступ включает внутреннюю обводку 3px.
   padding: 37px;
   overflow: hidden;
@@ -52,7 +52,7 @@
   }
 
   @include breakpoint($bp-1440) {
-    min-height: clamp(287px, calc(22.916667vw + 12px), 342px);
+    min-height: 342px;
     padding: 21px;
   }
 
@@ -64,6 +64,11 @@
   @include breakpoint($bp-768) {
     min-height: 358px;
     padding: 21px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    min-height: 240.488px;
+    padding: 16.759px;
+    border-width: 2.514px;
   }
 }
 
@@ -78,6 +83,9 @@
   @include breakpoint($bp-768) {
     flex-basis: auto;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex-basis: calc((100% - 16px) * 0.5845076754);
+  }
 }
 
 .feature-card--2,
@@ -90,6 +98,9 @@
 
   @include breakpoint($bp-768) {
     flex-basis: auto;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex-basis: calc((100% - 16px) * 0.4132993421);
   }
 }
 
@@ -121,6 +132,10 @@
     right: 20px;
     top: 20px;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    top: 20.11px;
+    right: 20.11px;
+  }
 }
 
 .feature-card:hover .card-arrow {
@@ -136,6 +151,10 @@
     width: 40px;
     height: 40px;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .feature-card__body {
@@ -146,22 +165,25 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    gap: 6.703px;
+  }
 }
 
 .feature-card__title {
   font-variant: normal;
   font-stretch: normal;
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
-  font-size: clamp(24px, calc(1.666667vw + 0px), 32px);
-  line-height: clamp(32px, calc(1.666667vw + 8px), 40px);
+  font-size: 32px;
+  line-height: 40px;
   letter-spacing: 0.04em;
 
   @include breakpoint($bp-1440) {
-    font-size: clamp(20px, calc(1.666667vw + 0px), 24px);
+    font-size: 24px;
     line-height: 32px;
   }
 
@@ -176,13 +198,18 @@
   }
 
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
 }
 
 .feature-card__description {
   font-variant: normal;
   font-stretch: normal;
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -191,8 +218,8 @@
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
-    font-size: clamp(16px, calc(0.833333vw + 6px), 18px);
-    line-height: clamp(24px, calc(0.833333vw + 14px), 26px);
+    font-size: 18px;
+    line-height: 26px;
   }
 
   @include breakpoint($bp-1200) {
@@ -208,6 +235,11 @@
   }
 
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
 }
 
 // Ширины текстовых групп из макета определяют естественные переносы.
@@ -220,6 +252,9 @@
   @include breakpoint($bp-768) {
     max-width: none;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    max-width: 398.891px;
+  }
 }
 .feature-card--2 .feature-card__body,
 .feature-card--3 .feature-card__body {
@@ -228,6 +263,9 @@
   }
   @include breakpoint($bp-768) {
     max-width: none;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    max-width: 270.668px;
   }
 }
 
@@ -244,11 +282,36 @@
   @include breakpoint($bp-768) {
     width: calc(100% - 32px);
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: calc(100% - 64px);
+  }
 }
 
 .feature-card__news-phrase {
   // Неразрывное «и объявления» присутствует только в эталоне 1440.
   @media screen and (min-width: ($bp-1200 + 1px)) and (max-width: $bp-1440) {
     white-space: nowrap;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    white-space: nowrap;
+  }
+}
+.feature-card__description .br-1200-above-768 {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    display: none;
+  }
+}
+
+.feature-card--1 .feature-card__title,
+.feature-card--4 .feature-card__title {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    max-width: 372px;
+  }
+}
+
+.feature-card--2 .feature-card__title,
+.feature-card--3 .feature-card__title {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    max-width: 253px;
   }
 }

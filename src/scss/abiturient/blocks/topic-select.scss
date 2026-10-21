@@ -28,7 +28,7 @@
   right: 0;
   top: 100%;
   z-index: 5;
-  max-height: min(260px, var(--topic-space, 40dvh));
+  max-height: var(--topic-space, 40dvh);
   @include accent-scrollbar;
   overflow-y: auto;
   margin: 0;

@@ -1,16 +1,31 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+.section--reviews .section-header {
+  @include breakpoint($bp-1440) {
+    margin-bottom: 48px;
+  }
+  @include breakpoint($bp-768) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-bottom: 40px;
+  }
+}
 .section--reviews .link-arrow--stories {
   text-transform: uppercase;
   padding: 14px 16px;
   border: 2px solid var(--main-white-white-100);
+  @include breakpoint($bp-1440) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
   @include breakpoint($bp-768) {
     border: 0;
     padding: 11px 14px;
   }
 
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -19,8 +34,8 @@
   letter-spacing: 0.04em;
 
   @include breakpoint($bp-1200) {
-    font-size: clamp(14px, calc(0.462963vw + 10.444444px), 16px);
-    line-height: clamp(20px, calc(0.925926vw + 12.888889px), 24px);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include breakpoint($bp-768) {
@@ -32,6 +47,12 @@
   }
 
   color: rgba(11, 45, 78, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 14px;
+    line-height: 20px;
+    border: 0;
+    padding: 11px 16px;
+  }
 }
 .section--reviews .reviews-slider {
   // Содержимое сохраняет прежнюю ширину, дополнительные 4px вмещают правую тень.
@@ -46,38 +67,105 @@
   box-shadow: 3px 4px 0 0 var(--main-black);
   background-color: var(--main-panel);
   height: 522px;
+  @include breakpoint($bp-1440) {
+    max-width: none;
+    flex: 1 1 0;
+    height: 398px;
+    padding: 13.716px;
+    border-width: 2.284px;
+    box-shadow: 2.284px 3.046px var(--main-black);
+  }
+  @include breakpoint($bp-1200) {
+    height: 500px;
+    padding: 17px;
+    border-width: 3px;
+    box-shadow: 3px 4px var(--main-black);
+  }
   @include breakpoint($bp-768) {
     height: 463px;
     box-shadow: 4px 4px 0 0 var(--main-black);
     max-width: 314px;
     padding: 16px;
+    border-width: 2px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    flex: 0 0 calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+    height: 564.766px;
+    padding: 20px;
   }
 }
 .section--reviews .review-card__media {
   border-radius: 0;
+  @include breakpoint($bp-1200) {
+    height: 208px;
+    margin-bottom: 16px;
+  }
+  @include breakpoint($bp-768) {
+    height: 184px;
+    margin-bottom: 10px;
+  }
+  @include breakpoint($bp-390) {
+    height: 188px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: calc(100% + 6px);
+    max-width: none;
+    height: 272.667px;
+    align-self: flex-start;
+  }
+}
+.section--reviews .review-card__video {
+  @include breakpoint($bp-1200) {
+    width: 208px;
+    height: 208px;
+  }
+  @include breakpoint($bp-768) {
+    width: 184px;
+    height: 184px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: 263.943px;
+    height: 263.943px;
+    position: absolute;
+    left: calc(50% + 9.51px);
+    top: 0.71px;
+    transform: translateX(-50%);
+  }
 }
 .section--reviews .reviews-slider__viewport {
+  @include breakpoint($bp-1440) {
+    margin-bottom: 32px;
+  }
+  @include breakpoint($bp-1200) {
+    // На 1200 ряд включает 4px снизу под тень карточек.
+    padding-bottom: 4px;
+  }
   @include breakpoint($bp-768) {
     margin-bottom: 24px;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-bottom: 60px;
   }
 }
 .section--reviews .review-card__title {
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
-  font-size: clamp(16px, calc(0.833333vw + 4px), 20px);
-  line-height: clamp(24px, calc(0.833333vw + 12px), 28px);
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
-    font-size: clamp(16px, calc(-1.666667vw + 40px), 20px);
-    line-height: clamp(24px, calc(-1.666667vw + 48px), 28px);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include breakpoint($bp-1200) {
-    font-size: clamp(16px, calc(0.925926vw + 8.888889px), 20px);
-    line-height: clamp(24px, calc(0.925926vw + 16.888889px), 28px);
+    font-size: 20px;
+    line-height: 28px;
   }
 
   @include breakpoint($bp-768) {
@@ -117,23 +205,23 @@
 }
 
 .section--reviews .review-card__meta-item {
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
-  font-size: clamp(12px, calc(0.416667vw + 6px), 14px);
-  line-height: clamp(16px, calc(0.833333vw + 4px), 20px);
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
     font-weight: 500;
-    font-size: clamp(12px, calc(-0.833333vw + 24px), 14px);
-    line-height: clamp(16px, calc(-2.5vw + 52px), 22px);
+    font-size: 12px;
+    line-height: 16px;
   }
 
   @include breakpoint($bp-1200) {
     font-size: 14px;
-    line-height: clamp(20.02px, calc(0.458333vw + 16.5px), 22px);
+    line-height: 22px;
   }
 
   @include breakpoint($bp-768) {
@@ -147,7 +235,7 @@
 }
 
 .section--reviews .review-card__text {
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -161,8 +249,8 @@
 
   @include breakpoint($bp-1200) {
     font-weight: 500;
-    font-size: clamp(14px, calc(0.462963vw + 10.444444px), 16px);
-    line-height: clamp(20.02px, calc(0.921296vw + 12.944444px), 24px);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include breakpoint($bp-768) {
@@ -174,25 +262,32 @@
   }
 
   color: rgba(11, 45, 78, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    -webkit-line-clamp: 4;
+    height: 96px;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+    width: calc(100% + 6px);
+  }
 }
 
 .section--reviews .review-card__link {
-  // Значения 1920/1440/1200 сверены с Figma; между ними — линейное масштабирование.
+  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
-  font-size: clamp(16px, calc(0.416667vw + 10px), 18px);
-  line-height: clamp(24px, calc(0.416667vw + 18px), 26px);
+  font-size: 18px;
+  line-height: 26px;
   letter-spacing: 0em;
 
   @include breakpoint($bp-1440) {
-    font-size: clamp(16px, calc(-0.833333vw + 28px), 18px);
-    line-height: clamp(24px, calc(-0.833333vw + 36px), 26px);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include breakpoint($bp-1200) {
     font-size: 18px;
-    line-height: clamp(25.92px, calc(0.018519vw + 25.777778px), 26px);
+    line-height: 26px;
   }
 
   @include breakpoint($bp-768) {
@@ -202,6 +297,9 @@
   }
 
   color: rgba(0, 174, 239, 1);
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-top: 0;
+  }
 }
 
 .section--reviews .link-arrow--stories:hover {

@@ -1,7 +1,55 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+@use "sass:list";
+.section--faq {
+  @include breakpoint($bp-1440) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--main-white-white-100);
+  }
+  @include breakpoint($bp-1200) {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+  @include breakpoint($bp-768) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.faq__content {
+  @include breakpoint($bp-1440) {
+    background-color: var(--main-white-white-100);
+  }
+  @include breakpoint($bp-768) {
+    background-color: transparent;
+  }
+}
+.faq .tabs__tab {
+  @include breakpoint($bp-1440) {
+    padding-bottom: 14px;
+    $tab-widths: 354px, 352px, 466px, 252px, 222px, 149px, 181px, 242px;
+    @for $index from 1 through list.length($tab-widths) {
+      &:nth-child(#{$index}) {
+        width: list.nth($tab-widths, $index);
+      }
+    }
+  }
+  @include breakpoint($bp-768) {
+    padding-bottom: 16px;
+    &:nth-child(n) {
+      width: auto;
+    }
+  }
+}
 .faq__panel {
   margin-top: 40px;
+  @include breakpoint($bp-1440) {
+    margin-top: 32px;
+  }
+  @include breakpoint($bp-1200) {
+    margin-top: 40px;
+  }
   @include breakpoint($bp-768) {
     margin-top: 24px;
   }
@@ -9,8 +57,17 @@
 .faq__columns {
   display: flex;
   gap: 24px;
+  @include breakpoint($bp-1200) {
+    gap: 16px;
+  }
+  @include breakpoint($bp-768) {
+    gap: 24px;
+  }
   @include breakpoint($bp-768) {
     flex-direction: column;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    gap: 24px;
   }
 }
 .faq__column {
@@ -73,9 +130,27 @@
   font-size: 24px;
   line-height: 1;
   font-family: var(--font-family);
+  @include breakpoint($bp-1440) {
+    width: 24px;
+    height: 24px;
+  }
+  @include breakpoint($bp-1200) {
+    width: 32px;
+    height: 32px;
+  }
 }
 .accordion--open .accordion__icon {
   transform: rotate(180deg);
+}
+.accordion--open .accordion__trigger {
+  @include breakpoint($bp-1440) {
+    min-height: 0;
+    padding-bottom: 16px;
+  }
+  @include breakpoint($bp-768) {
+    min-height: 100px;
+    padding-bottom: 24px;
+  }
 }
 .accordion__chevron {
   width: 24px;
