@@ -1,31 +1,10 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
-.section--reviews .section-header {
-  @include breakpoint($bp-1440) {
-    margin-bottom: 48px;
-  }
-  @include breakpoint($bp-768) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-  }
-}
+
 .section--reviews .link-arrow--stories {
   text-transform: uppercase;
   padding: 14px 16px;
   border: 2px solid var(--main-white-white-100);
-  @include breakpoint($bp-1440) {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  @include breakpoint($bp-768) {
-    border: 0;
-    padding: 11px 14px;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -33,39 +12,15 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1200) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.56px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 14px;
-    line-height: 20px;
-    border: 0;
-    padding: 11px 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding: 11px 16px;
-    font-weight: 800;
-  }
+  color: #0b2d4e;
 }
+
 .section--reviews .reviews-slider {
   // Содержимое сохраняет прежнюю ширину, дополнительные 4px вмещают правую тень.
   width: calc(100% + 4px);
   padding-right: 4px;
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    // Фрейм показывает начало третьей карточки до правого края экрана.
-    width: calc(100% + 24px);
-    padding-right: 24px;
-  }
 }
+
 .section--reviews .review-card {
   min-width: 0;
   border: 2px solid var(--main-white-white-100);
@@ -73,119 +28,12 @@
   box-shadow: 3px 4px 0 0 var(--main-black);
   background-color: var(--main-panel);
   height: 522px;
-  @include breakpoint($bp-1440) {
-    max-width: none;
-    flex: 1 1 0;
-    height: 398px;
-    padding: 13.716px;
-    border-width: 2.284px;
-    box-shadow: 2.284px 3.046px var(--main-black);
-  }
-  @include breakpoint($bp-1200) {
-    height: 500px;
-    padding: 17px;
-    border-width: 3px;
-    box-shadow: 3px 4px var(--main-black);
-  }
-  @include breakpoint($bp-768) {
-    height: 463px;
-    box-shadow: 4px 4px 0 0 var(--main-black);
-    max-width: 314px;
-    padding: 16px;
-    border-width: 2px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    flex: 0 0 calc((100% - 30px) / 2);
-    width: calc((100% - 30px) / 2);
-    height: 536px;
-    padding: 17px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex: 1 1 0;
-    width: 100%;
-    max-width: none;
-    height: 404.667px;
-    padding: 13px;
-    border-width: 3px;
-    box-shadow: 3px 4px var(--main-black);
-  }
 }
+
 .section--reviews .review-card__media {
   border-radius: 0;
-  @include breakpoint($bp-1200) {
-    height: 208px;
-    margin-bottom: 16px;
-  }
-  @include breakpoint($bp-768) {
-    height: 184px;
-    margin-bottom: 10px;
-  }
-  @include breakpoint($bp-390) {
-    height: 188px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    max-width: none;
-    width: calc(100% - 6px);
-    height: 268px;
-    margin-top: 3px;
-    margin-bottom: 16px;
-    align-self: center;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 280px;
-    max-width: 100%;
-    height: 186.667px;
-    margin-top: 3px;
-    margin-bottom: 12px;
-  }
 }
-.section--reviews .review-card__video {
-  @include breakpoint($bp-1200) {
-    width: 208px;
-    height: 208px;
-  }
-  @include breakpoint($bp-768) {
-    width: 184px;
-    height: 184px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 263.943px;
-    height: 263.943px;
-    position: absolute;
-    left: calc(50% + 9.51px);
-    top: 0.71px;
-    transform: translateX(-50%);
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    position: absolute;
-    width: 180.695px;
-    height: 180.695px;
-    left: calc(50% + 6.512px);
-    top: 0.483px;
-    transform: translateX(-50%);
-    max-width: 100%;
-  }
-}
-.section--reviews .reviews-slider__viewport {
-  @include breakpoint($bp-1440) {
-    margin-bottom: 32px;
-  }
-  @include breakpoint($bp-1200) {
-    // На 1200 ряд включает 4px снизу под тень карточек.
-    padding-bottom: 4px;
-  }
-  @include breakpoint($bp-768) {
-    margin-bottom: 24px;
-    padding-bottom: 0;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-    padding-bottom: 4px;
-  }
-}
+
 .section--reviews .review-card__title {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
@@ -194,61 +42,16 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.96px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0;
-  }
+  color: #0b2d4e;
 }
-.section--reviews .reviews-slider__pagination {
-  @include breakpoint($bp-768) {
-    flex-direction: column;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex-direction: row;
-    gap: 0;
-    flex-wrap: wrap;
-    row-gap: 16px;
-  }
-}
-.section--reviews .reviews-slider__controls {
-  @include breakpoint($bp-768) {
-    justify-content: center;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
-    gap: 16px;
-  }
-}
-.section--reviews .button {
-  @include breakpoint($bp-768) {
-    font-size: 14px;
-    line-height: 20px;
-    min-height: 42px;
-    padding: 9px 12px;
-  }
-}
+
 .section--reviews .link-arrow--stories::after {
   width: 11px;
   height: 11px;
   mask-image: url("/abiturient/assets/img/reviews/icon-arrow-up-right.svg");
   -webkit-mask-image: url("/abiturient/assets/img/reviews/icon-arrow-up-right.svg");
 }
+
 .section--reviews .review-card__meta-item {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
@@ -257,29 +60,9 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 400;
-    line-height: 20.02px;
-    letter-spacing: 0.96px;
-    text-shadow: none;
-  }
   color: rgba(11, 45, 78, 0.6);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0;
-    font-weight: 500;
-  }
 }
+
 .section--reviews .review-card__text {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
@@ -288,37 +71,9 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-weight: 400;
-  }
-  @include breakpoint($bp-1200) {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20.02px;
-    letter-spacing: 0.84px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    -webkit-line-clamp: 4;
-    height: 96px;
-    flex-shrink: 0;
-    margin-bottom: 12px;
-    width: 100%;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0;
-    margin-bottom: 12px;
-    -webkit-line-clamp: 3;
-  }
+  color: #0b2d4e;
 }
+
 .section--reviews .review-card__link {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
@@ -327,44 +82,550 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  @include breakpoint($bp-768) {
-    line-height: 25.92px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(0, 174, 239, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-top: 0;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-top: auto;
-    line-height: 26px;
-  }
+  color: #00aeef;
 }
+
 .section--reviews .link-arrow--stories:hover {
   color: var(---Accent-Accent-100, #00aeef);
 }
+
 .section--reviews .link-arrow--stories:active {
   color: var(--main-blue-blue-90);
 }
-.section--reviews .slider-dots__dot--active {
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
-    background-color: var(--main-accent-accent-100);
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .section--reviews .section-header {
+    margin-bottom: 48px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .section--reviews .review-card {
+    max-width: none;
+    flex: 1 1 0;
+    height: 398px;
+    padding: 14px;
+    border-width: 2px;
+    box-shadow: 2px 3px var(--main-black);
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    margin-bottom: 32px;
+  }
+
+  .section--reviews .review-card__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section--reviews .review-card__meta-item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .section--reviews .review-card__text {
+    font-weight: 400;
+  }
+
+  .section--reviews .review-card__link {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
-.section--reviews .arrow-btn {
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .section--reviews .link-arrow--stories {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section--reviews .review-card {
+    height: 500px;
+    padding: 17px;
+    border-width: 3px;
+    box-shadow: 3px 4px var(--main-black);
+  }
+
+  .section--reviews .review-card__media {
+    height: 208px;
+    margin-bottom: 16px;
+  }
+
+  .section--reviews .review-card__video {
+    width: 208px;
+    height: 208px;
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    // На 1200 ряд включает 4px снизу под тень карточек.
+    padding-bottom: 4px;
+  }
+
+  .section--reviews .review-card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .section--reviews .review-card__meta-item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .section--reviews .review-card__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section--reviews .review-card__link {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .section--reviews .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    border: 0;
+    padding: 11px 14px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .section--reviews .review-card {
+    height: 463px;
+    box-shadow: 4px 4px 0 0 var(--main-black);
+    max-width: 314px;
+    padding: 16px;
+    border-width: 2px;
+  }
+
+  .section--reviews .review-card__media {
+    height: 184px;
+    margin-bottom: 10px;
+  }
+
+  .section--reviews .review-card__video {
+    width: 184px;
+    height: 184px;
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    margin-bottom: 24px;
+    padding-bottom: 0;
+  }
+
+  .section--reviews .review-card__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .section--reviews .reviews-slider__pagination {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section--reviews .reviews-slider__controls {
+    justify-content: center;
+  }
+
+  .section--reviews .button {
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 42px;
+    padding: 9px 12px;
+  }
+
+  .section--reviews .review-card__meta-item {
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .section--reviews .review-card__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .section--reviews .review-card__link {
+    line-height: 26px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+}
+// 390 px
+
+@include breakpoint($bp-390) {
+  .section--reviews .review-card__media {
+    height: 188px;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .section--reviews .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    font-size: 14px;
+    line-height: 20px;
+    border: 0;
+    padding: 11px 16px;
+  }
+
+  .section--reviews .review-card {
+    flex: 0 0 calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+    height: 536px;
+    padding: 17px;
+  }
+
+  .section--reviews .review-card__media {
+    max-width: none;
+    width: calc(100% - 6px);
+    height: 268px;
+    margin-top: 3px;
+    margin-bottom: 16px;
+    align-self: center;
+  }
+
+  .section--reviews .review-card__video {
+    width: 264px;
+    height: 264px;
+    position: absolute;
+    left: calc(50% + 10px);
+    top: 1px;
+    transform: translateX(-50%);
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    margin-bottom: 40px;
+  }
+
+  .section--reviews .review-card__text {
+    -webkit-line-clamp: 4;
+    height: 96px;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .section--reviews .review-card__link {
+    margin-top: 0;
+  }
+}
+// 992 px
+
+@include screen-compact {
+  .section--reviews .reviews-slider__controls {
+    gap: 16px;
+  }
+
+  .section--reviews .slider-dots__dot--active {
+    background-color: var(--main-accent-accent-100);
+  }
+
+  .section--reviews .arrow-btn {
     background-color: var(--main-panel);
     &:hover {
       background-color: var(--main-accent-accent-60);
     }
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .section--reviews .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    padding: 11px 16px;
+    font-weight: 800;
+  }
+
+  .section--reviews .reviews-slider {
+    // Фрейм показывает начало третьей карточки до правого края экрана.
+    width: calc(100% + 24px);
+    padding-right: 24px;
+  }
+
+  .section--reviews .review-card {
+    flex: 1 1 0;
+    width: 100%;
+    max-width: none;
+    height: 405px;
+    padding: 13px;
+    border-width: 3px;
+    box-shadow: 3px 4px var(--main-black);
+  }
+
+  .section--reviews .review-card__media {
+    width: 280px;
+    max-width: 100%;
+    height: 187px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+  }
+
+  .section--reviews .review-card__video {
+    position: absolute;
+    width: 181px;
+    height: 181px;
+    left: calc(50% + 7px);
+    top: 0px;
+    transform: translateX(-50%);
+    max-width: 100%;
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    margin-bottom: 32px;
+    padding-bottom: 4px;
+  }
+
+  .section--reviews .review-card__title {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+
+  .section--reviews .reviews-slider__pagination {
+    flex-direction: row;
+    gap: 0;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .section--reviews .review-card__meta-item {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .section--reviews .review-card__text {
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+    -webkit-line-clamp: 3;
+  }
+
+  .section--reviews .review-card__link {
+    margin-top: auto;
+    line-height: 26px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .section--reviews .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    min-height: 48px;
+    line-height: 20px;
+    font-size: 14px;
+    width: 199px;
+    white-space: nowrap;
+  }
+
+  .section--reviews .reviews-slider {
+    width: calc(100% + 4px);
+    padding-right: 4px;
+  }
+
+  .section--reviews .review-card {
+    flex: 0 0 348px;
+    width: 348px;
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    padding-bottom: 0px;
+    margin-bottom: 36px;
+  }
+
+  .section--reviews .reviews-slider__pagination {
+    flex-wrap: nowrap;
+    gap: 12px;
+    row-gap: 0;
+  }
+
+  .section--reviews .link-arrow--stories::after {
+    width: 20px;
+    height: 20px;
+    mask-size: 11px 11px;
+    -webkit-mask-size: 11px 11px;
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  .section--reviews .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .section--reviews .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section--reviews .reviews-slider {
+    width: calc(100% + 16px);
+    padding-right: 16px;
+  }
+
+  .section--reviews .reviews-slider.swiper .swiper-slide {
+    width: 348px !important;
+    max-width: 100%;
+  }
+
+  .section--reviews .review-card {
+    flex: 0 0 348px;
+    width: 348px;
+    max-width: 100%;
+    height: 405px;
+    padding: 13px;
+    border-width: 3px;
+    box-shadow: 3px 4px var(--main-black);
+  }
+
+  .section--reviews .review-card__media {
+    flex-shrink: 0;
+    width: 280px;
+    max-width: 100%;
+    height: 187px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+    align-self: center;
+  }
+
+  .section--reviews .review-card__video {
+    position: absolute;
+    width: 181px;
+    height: 181px;
+    left: calc(50% + 7px);
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .section--reviews .review-card__play {
+    width: 60px;
+    height: 60px;
+    right: auto;
+    left: calc(50% + 23px);
+    bottom: 5px;
+  }
+
+  .section--reviews .review-card__title {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+
+  .section--reviews .review-card__meta {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+
+  .section--reviews .review-card__meta-item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+
+  .section--reviews .review-card__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    // Слот Figma 66px: три строки по 20px и 6px до следующего интервала.
+    margin-bottom: 18px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .section--reviews .review-card__link {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+
+  .section--reviews .reviews-slider__viewport {
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+  }
+
+  .section--reviews .reviews-slider__pagination {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .section--reviews .link-arrow--stories {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .section--reviews .link-arrow--stories::after {
+    width: 20px;
+    height: 20px;
+    mask-size: 11px 11px;
+    -webkit-mask-size: 11px 11px;
+  }
+
+  .section--reviews .reviews-slider__controls {
+    gap: 12px;
+  }
+
+  .section--reviews .arrow-btn {
+    background-color: var(--main-panel);
+  }
+
+  .section--reviews .slider-dots {
+    gap: 4px;
+  }
+
+  .section--reviews .slider-dots__dot {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  }
+
+  .section--reviews .slider-dots__dot--active {
+    background-color: var(--main-accent-accent-100);
   }
 }

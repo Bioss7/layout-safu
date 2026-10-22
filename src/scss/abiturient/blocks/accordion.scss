@@ -1,95 +1,16 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 @use "sass:list";
-.section--faq {
-  @include breakpoint($bp-1440) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: var(--main-white-white-100);
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: transparent;
-  }
-  @include breakpoint($bp-768) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-.faq__content {
-  @include breakpoint($bp-1440) {
-    background-color: var(--main-white-white-100);
-  }
-  @include breakpoint($bp-768) {
-    background-color: transparent;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    background-color: var(--main-white-white-100);
-  }
-}
-.faq .tabs__tab {
-  @include breakpoint($bp-1440) {
-    padding-bottom: 14px;
-    $tab-widths: 354px, 352px, 466px, 252px, 222px, 149px, 181px, 242px;
-    @for $index from 1 through list.length($tab-widths) {
-      &:nth-child(#{$index}) {
-        width: list.nth($tab-widths, $index);
-      }
-    }
-  }
-  @include breakpoint($bp-768) {
-    padding-bottom: 16px;
-    &:nth-child(n) {
-      width: auto;
-    }
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-bottom: 14px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
-}
+
 .faq__panel {
   margin-top: 40px;
-  @include breakpoint($bp-1440) {
-    margin-top: 32px;
-  }
-  @include breakpoint($bp-1200) {
-    margin-top: 40px;
-  }
-  @include breakpoint($bp-768) {
-    margin-top: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-top: 40px;
-  }
 }
+
 .faq__columns {
   display: flex;
   gap: 24px;
-  @include breakpoint($bp-1200) {
-    gap: 16px;
-  }
-  @include breakpoint($bp-768) {
-    gap: 24px;
-  }
-  @include breakpoint($bp-768) {
-    flex-direction: column;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    gap: 16px;
-  }
 }
+
 .faq__column {
   display: flex;
   flex-direction: column;
@@ -98,13 +19,16 @@
   align-content: start;
   gap: 16px;
 }
+
 .accordion {
   background-color: var(--main-panel);
   box-shadow: 2px 2px var(--main-black);
 }
+
 .accordion__heading {
   margin: 0;
 }
+
 .accordion__trigger {
   // Замечание: отсутствие стиля [abiturient-accordion] — ui/data/remarks.json.
   display: flex;
@@ -132,6 +56,7 @@
     cursor: not-allowed;
   }
 }
+
 .accordion__icon {
   transition: transform 160ms;
   display: flex;
@@ -150,36 +75,17 @@
   font-size: 24px;
   line-height: 1;
   font-family: var(--font-family);
-  @include breakpoint($bp-1440) {
-    width: 24px;
-    height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    width: 32px;
-    height: 32px;
-  }
 }
+
 .accordion--open .accordion__icon {
   transform: rotate(180deg);
 }
-.accordion--open .accordion__trigger {
-  @include breakpoint($bp-1440) {
-    min-height: 0;
-    padding-bottom: 16px;
-  }
-  @include breakpoint($bp-768) {
-    min-height: 100px;
-    padding-bottom: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    min-height: 0;
-    padding-bottom: 16px;
-  }
-}
+
 .accordion__chevron {
   width: 24px;
   height: 24px;
 }
+
 .accordion__body {
   padding: 0 24px 24px;
   font-style: normal;
@@ -190,6 +96,192 @@
   line-height: 24px;
   font-family: var(--font-family);
 }
+
 .accordion__body p {
   margin: 0;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .section--faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--main-white-white-100);
+  }
+
+  .faq__content {
+    background-color: var(--main-white-white-100);
+  }
+
+  .faq .tabs__tab {
+    padding-bottom: 14px;
+    $tab-widths: 354px, 352px, 466px, 252px, 222px, 149px, 181px, 242px;
+    @for $index from 1 through list.length($tab-widths) {
+      &:nth-child(#{$index}) {
+        width: list.nth($tab-widths, $index);
+      }
+    }
+  }
+
+  .faq__panel {
+    margin-top: 32px;
+  }
+
+  .accordion__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .accordion--open .accordion__trigger {
+    min-height: 0;
+    padding-bottom: 16px;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .section--faq {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+
+  .faq__panel {
+    margin-top: 40px;
+  }
+
+  .faq__columns {
+    gap: 16px;
+  }
+
+  .accordion__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .section--faq {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .faq__content {
+    background-color: transparent;
+  }
+
+  .faq .tabs__tab {
+    padding-bottom: 16px;
+    &:nth-child(n) {
+      width: auto;
+    }
+  }
+
+  .faq__panel {
+    margin-top: 24px;
+  }
+
+  .faq__columns {
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  .accordion--open .accordion__trigger {
+    min-height: 100px;
+    padding-bottom: 24px;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .faq__columns {
+    gap: 24px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .section--faq {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .faq__content {
+    background-color: var(--main-white-white-100);
+  }
+
+  .faq .tabs__tab {
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .faq__panel {
+    margin-top: 40px;
+  }
+
+  .faq__columns {
+    gap: 16px;
+  }
+
+  .accordion--open .accordion__trigger {
+    min-height: 0;
+    padding-bottom: 16px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .faq .tabs__tab {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-shrink: 0;
+  }
+
+  .section--faq {
+    padding-bottom: 0;
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  #faq .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .faq .tabs__tab {
+    padding: 12px 16px 14px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    &:nth-child(-n + 2) {
+      width: 320px;
+    }
+  }
+
+  .accordion__trigger {
+    // В закрытой карточке Figma высотой 100px три строки по 26px центрированы.
+    padding: 11px 16px;
+  }
+
+  #faq-panel-budget .faq__column:nth-child(2) .accordion:nth-child(3) .accordion__trigger {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .accordion--open .accordion__trigger {
+    min-height: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .accordion__body {
+    padding: 0 16px 16px;
+  }
 }

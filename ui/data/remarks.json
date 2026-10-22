@@ -101,6 +101,16 @@
       "description": "Figma 4193:5045: карта 420×422px. Сохранённые групповые экспорты квадратные 560×560px; нужен отдельный чистый экспорт для 1440. Текущий MCP use_figma отклонён сервером с требованием Full seat.",
       "fallback": "Карта масштабируется до 420×420px без растяжения; тень 4px задаётся отдельно в CSS.",
       "file": "src/scss/abiturient/blocks/contacts.scss"
+    },
+    {
+      "id": "abiturient-390-bachelor-copy",
+      "page": "abiturient",
+      "block": "Уровни образования, 390 px",
+      "selector": ".education-card--accent",
+      "states": [],
+      "description": "В Figma 4209:32116 карточка бакалавриата повторяет описание СПО. Сохранён существующий текст про программы: высота242px вместо222px; следующие секции сдвинуты на20px.",
+      "fallback": "Сохранены содержательные данные страницы; высота карточки определяется текстом.",
+      "file": "src/scss/abiturient/blocks/education-card.scss"
     }
   ]
 }

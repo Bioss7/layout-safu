@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .apply-banner {
   display: flex;
   align-items: center;
@@ -15,72 +16,16 @@
     var(--main-banner-start) 9%,
     var(--main-banner-end) 91%
   );
-  @include breakpoint($bp-1440) {
-    min-height: 134px;
-    background-image: linear-gradient(
-      134.395deg,
-      var(--main-banner-start) 9.0909%,
-      var(--main-banner-end) 90.909%
-    );
-  }
-  @include breakpoint($bp-1200) {
-    min-height: 138px;
-    background-image: linear-gradient(
-      128.66deg,
-      var(--main-banner-start) 9.0909%,
-      var(--main-banner-end) 90.909%
-    );
-  }
-  @include breakpoint($bp-1150) {
-    align-items: start;
-    flex-direction: column;
-  }
-  @include breakpoint($bp-768) {
-    min-height: 280px;
-    padding: 16px;
-    gap: 40px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    padding: 24px;
-    background-image: linear-gradient(
-      123.9194deg,
-      var(--main-banner-start) 9.0909%,
-      var(--main-banner-end) 90.909%
-    );
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex-direction: row;
-    align-items: center;
-    min-height: 138px;
-    padding: 24px;
-    gap: 0;
-    background-image: linear-gradient(
-      117.02817deg,
-      var(--main-banner-start) 9.0909%,
-      var(--main-banner-end) 90.909%
-    );
-  }
 }
+
 .apply-banner__copy {
   min-width: 0;
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    flex: 1;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex: 1;
-    min-width: 0;
-  }
 }
+
 .apply-banner__title {
   margin: 0 0 10px;
   font-variant: normal;
   font-stretch: normal;
-  @include breakpoint($bp-768) {
-    margin-bottom: 16px;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -89,37 +34,9 @@
   line-height: 40px;
   letter-spacing: 0.04em;
   text-shadow: 2px 3px 0px #000;
-  @include breakpoint($bp-1440) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  @include breakpoint($bp-1200) {
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0em;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 900;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 28px;
-    letter-spacing: 0.04em;
-    margin-bottom: 10px;
-    text-shadow: 2px 3px #000;
-  }
+  color: #ffffff;
 }
+
 .apply-banner__text {
   margin: 0;
   font-variant: normal;
@@ -131,37 +48,162 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
+  color: #ffffff;
+}
+
+.apply-banner .button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .apply-banner {
+    min-height: 134px;
+    background-image: linear-gradient(
+      134.395deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .apply-banner__text {
     font-weight: 600;
   }
-  @include breakpoint($bp-768) {
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .apply-banner {
+    min-height: 138px;
+    background-image: linear-gradient(
+      128.66deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__title {
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+  }
+}
+// 1150 px
+
+@include breakpoint($bp-1150) {
+  .apply-banner {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .apply-banner {
+    min-height: 280px;
+    padding: 16px;
+    gap: 40px;
+  }
+
+  .apply-banner__title {
+    margin-bottom: 16px;
+    font-weight: 900;
+    line-height: 32px;
     letter-spacing: normal;
     text-shadow: none;
   }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+
+  .apply-banner__text {
+    letter-spacing: normal;
+    text-shadow: none;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .apply-banner .button {
+    width: 100%;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .apply-banner {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background-image: linear-gradient(
+      123.9194deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__copy {
+    flex: 1;
+  }
+
+  .apply-banner__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .apply-banner__text {
     font-size: 14px;
     line-height: 20px;
   }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+
+  .apply-banner .button {
+    flex: 0 0 260px;
+    width: 260px;
+    min-height: 52px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .apply-banner {
+    flex-direction: row;
+    align-items: center;
+    min-height: 138px;
+    padding: 24px;
+    gap: 0;
+    background-image: linear-gradient(
+      117.02817deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .apply-banner__title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    text-shadow: 2px 3px #000;
+  }
+
+  .apply-banner__text {
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
     color: var(--main-white-white-100);
   }
-}
-.apply-banner .button {
-  flex-shrink: 0;
-  white-space: nowrap;
-  @include breakpoint($bp-768) {
-    width: 100%;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    flex: 0 0 260px;
-    width: 260px;
-    min-height: 52px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+
+  .apply-banner .button {
     flex: 0 1 260px;
     width: 260px;
     min-width: 0;
@@ -172,14 +214,85 @@
     font-size: 16px;
     line-height: 20px;
   }
-}
-@media screen and (max-width: $bp-768) {
-  .apply-banner__text {
-    color: rgba(255, 255, 255, 0.8);
+
+  .section--banner > .container {
+    width: calc(100% - 64px);
   }
 }
-.section--banner > .container {
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: calc(100% - 64px);
+// 576 px
+
+@include screen-576 {
+  .apply-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    min-height: 214px;
+    background-image: linear-gradient(
+      104.2628deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__copy {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .apply-banner__title {
+    margin-bottom: 10px;
+  }
+
+  .apply-banner .button {
+    flex: 0 0 auto;
+    width: 263px;
+    padding: 12px 16px;
+    line-height: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .section--banner > .container {
+    width: calc(100% - 32px);
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  .apply-banner {
+    min-height: 232px;
+    padding: 24px;
+    justify-content: flex-start;
+    gap: 24px;
+    background-image: linear-gradient(
+      99deg,
+      var(--main-banner-start) 9.09%,
+      var(--main-banner-end) 90.91%
+    );
+  }
+
+  .apply-banner__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-shadow: 2px 3px var(--main-black);
+  }
+
+  .apply-banner__text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--main-white-white-100);
+  }
+
+  .apply-banner .button {
+    min-height: 42px;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.04em;
   }
 }

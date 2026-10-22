@@ -1,8 +1,10 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .topic-select {
   z-index: 3;
 }
+
 .topic-select__trigger {
   transition: color 160ms;
   display: flex;
@@ -22,6 +24,7 @@
   line-height: 28px;
   font-family: var(--font-family);
 }
+
 .topic-select__list {
   position: absolute;
   top: 100%;
@@ -43,16 +46,19 @@
   background-color: var(--main-panel);
   list-style: none;
 }
+
 .topic-select__icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
+
 .topic-select__arrow {
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
 }
+
 .topic-select__option {
   transition:
     color 160ms,
@@ -75,10 +81,12 @@
     background-color: var(--main-blue-blue-40);
   }
 }
+
 .topic-select__option--active {
   color: var(--main-accent-accent-100);
   background-color: var(--main-blue-blue-40);
 }
+
 .topic-select:hover {
   background-color: var(--main-blue-blue-40);
 }
@@ -86,10 +94,12 @@
 .topic-select--open:hover {
   background-color: var(--main-panel);
 }
+
 .topic-select__option[aria-selected="true"] {
   background-color: var(--main-panel);
 }
 // Замечание: отсутствие стиля [abiturient-topic-select] — ui/data/remarks.json.
+
 .topic-select__trigger:disabled {
   cursor: not-allowed;
 }
@@ -98,6 +108,7 @@
   min-width: 0;
   overflow-wrap: anywhere;
 }
+
 .topic-select__option::before {
   content: "";
   flex-shrink: 0;
@@ -109,6 +120,7 @@
   mask-position: center;
   mask-repeat: no-repeat;
 }
+
 .topic-select__option[aria-selected="true"]::before {
   background-color: transparent;
   background-image: url("/abiturient/assets/img/question/icon-check-square.svg");
@@ -117,6 +129,7 @@
   background-repeat: no-repeat;
   mask-image: none;
 }
+
 .topic-select--open .topic-select__icon {
   transform: scaleY(-1);
 }

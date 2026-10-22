@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .search-input {
   display: flex;
   align-items: center;
@@ -8,10 +9,8 @@
   border-radius: 4px;
   padding: 0 14px;
   background-color: var(--main-white-white-100);
-  @include breakpoint($bp-768) {
-    background-color: var(--main-accent-accent-10);
-  }
 }
+
 .search-input__field {
   flex: 1;
   min-width: 0;
@@ -35,6 +34,7 @@
     outline-offset: 2px;
   }
 }
+
 .search-input__clear {
   border: 0;
   background-color: transparent;
@@ -54,8 +54,14 @@
     outline-offset: 2px;
   }
 }
-.search-input__icon {
-  @include breakpoint($bp-768) {
+// 768 px
+
+@include breakpoint($bp-768) {
+  .search-input {
+    background-color: var(--main-accent-accent-10);
+  }
+
+  .search-input__icon {
     display: none;
   }
 }

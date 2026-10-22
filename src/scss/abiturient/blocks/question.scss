@@ -1,86 +1,17 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
-.question__surface > .container {
-  @include breakpoint($bp-1440) {
-    width: calc(100% - 128px);
-  }
-  @include breakpoint($bp-1200) {
-    width: calc(100% - 96px);
-  }
-  @include breakpoint($bp-992) {
-    width: calc(100% - 48px);
-  }
-  @include breakpoint($bp-768) {
-    width: calc(100% - 32px);
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: calc(100% - 64px);
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: calc(100% - 48px);
-  }
-}
-.section--question {
-  @include breakpoint($bp-1440) {
-    padding-top: 96px;
-    padding-bottom: 96px;
-    background-color: transparent;
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-  @include breakpoint($bp-992) {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-  @include breakpoint($bp-768) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: var(--main-white-white-100);
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 64px;
-    padding-bottom: 64px;
-    background-color: transparent;
-  }
-}
-.question__surface {
-  @include breakpoint($bp-1440) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: var(--main-white-white-100);
-  }
-  @include breakpoint($bp-768) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
+
 .question__layout {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  @include breakpoint($bp-1200) {
-    gap: 32px;
-  }
-  @include breakpoint($bp-992) {
-    flex-direction: column;
-    gap: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    gap: 32px;
-  }
 }
+
 .question-form {
   flex: 1 1 0;
   min-width: 0;
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 100%;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 100%;
-  }
 }
+
 .question-form__description {
   margin: 0 0 32px;
   font-variant: normal;
@@ -92,109 +23,22 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    line-height: 26px;
-  }
-  @include breakpoint($bp-1200) {
-    line-height: 28px;
-  }
-  @include breakpoint($bp-768) {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    max-width: 548px;
-  }
+  color: #0b2d4e;
 }
+
 .question-form__fields {
   margin-bottom: 32px;
 }
-.question-form .form-field {
-  @include breakpoint($bp-1440) {
-    // Нижняя линия входит в размер поля в макете.
-    padding-bottom: 23px;
-  }
-  @include breakpoint($bp-1200) {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  @include breakpoint($bp-768) {
-    padding: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding-right: 28px;
-    padding-left: 28px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-bottom: 15px;
-  }
-}
-.question-form .topic-select {
-  @include breakpoint($bp-1440) {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 19px;
-    padding-left: 20px;
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-bottom: 23px;
-    padding-left: 24px;
-  }
-  @include breakpoint($bp-768) {
-    padding: 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-bottom: 15px;
-  }
-}
-.question-form .topic-select__trigger {
-  @include breakpoint($bp-1440) {
-    line-height: 26px;
-  }
-  @include breakpoint($bp-1200) {
-    line-height: 28px;
-  }
-}
-.question-form textarea.form-field__input {
-  @include breakpoint($bp-1200) {
-    min-height: 84px;
-  }
-  @include breakpoint($bp-768) {
-    min-height: 112px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    min-height: 56px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    min-height: 56px;
-  }
-}
+
 .question-form__bottom {
   display: flex;
   align-items: center;
   gap: 16px;
-  @include breakpoint($bp-1200) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  @include breakpoint($bp-768) {
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    gap: 12px;
-  }
 }
+
 .question-form__submit {
   flex: 1 1 auto;
   min-height: 64px;
-  @include breakpoint($bp-768) {
-    min-height: 42px;
-    padding: 9px 12px;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -202,29 +46,9 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1200) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.56px;
-    text-shadow: none;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding: 18px 24px;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    min-height: 64px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+  color: #ffffff;
 }
+
 .question-form__consent {
   flex: 0 1 287px;
   margin: 0;
@@ -236,35 +60,13 @@
   font-size: 14px;
   line-height: 22px;
   font-family: var(--font-family);
-  @include breakpoint($bp-1440) {
-    flex-basis: 216.167px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  @include breakpoint($bp-1200) {
-    flex-basis: auto;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
-  }
-  @include breakpoint($bp-768) {
-    align-self: center;
-    max-width: 287px;
-    text-align: center;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    align-self: center;
-    text-align: center;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    max-width: none;
-  }
 }
+
 .question-form__status {
   padding: 16px;
   background-color: var(--main-panel);
 }
+
 .answers-card {
   // Ширина карточки: 680/640/536px в макетах 1920/1440/1200.
   flex: 0 0 680px;
@@ -277,51 +79,19 @@
   background-color: var(--main-panel);
   box-shadow: 2px 2px var(--main-black);
   min-width: 0;
-  @include breakpoint($bp-1440) {
-    flex-basis: 640px;
-    padding: 22px;
-  }
-  @include breakpoint($bp-1200) {
-    flex-basis: calc((100% - 32px) / 2);
-    padding: 14px;
-    gap: 16px;
-  }
-  @include breakpoint($bp-992) {
-    flex-basis: auto;
-    width: 100%;
-  }
-  @include breakpoint($bp-768) {
-    gap: 20px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 20.2388px;
-    border-width: 2px;
-    padding: 18.2388px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    border-width: 2px;
-    gap: 20px;
-    padding: 18px;
-  }
 }
+
 .answers-card__header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 10.1194px;
-  }
 }
+
 .answers-card__divider {
   height: 2px;
   background-color: var(--main-blue-blue-100-opacity);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    height: 1.6866px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    height: 1.6866px;
-  }
 }
+
 .answers-card__label {
   margin: 0;
   font-variant: normal;
@@ -333,23 +103,9 @@
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  @include breakpoint($bp-768) {
-    letter-spacing: 0.96px;
-    text-shadow: none;
-  }
   color: rgba(11, 45, 78, 0.6);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    letter-spacing: 0;
-  }
 }
+
 .answers-card__count {
   margin: 0;
   font-variant: normal;
@@ -361,34 +117,9 @@
   font-size: 104px;
   line-height: 90px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-weight: 800;
-    font-size: 52px;
-    line-height: 58px;
-    letter-spacing: 0.04em;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.04em;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 900;
-    font-size: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
+  color: #0b2d4e;
 }
+
 .answers-card__title {
   margin: 0;
   font-variant: normal;
@@ -400,34 +131,9 @@
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 24px;
-    letter-spacing: 0.04em;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 18px;
-    line-height: normal;
-    letter-spacing: 0em;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.72px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
+  color: #0b2d4e;
 }
+
 .answers-card__links {
   display: flex;
   flex-direction: column;
@@ -438,19 +144,13 @@
   padding: 0;
   list-style: none;
 }
+
 .answers-card__link {
   transition: color 160ms;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0;
-  @include breakpoint($bp-1200) {
-    // В макете 1200 текст 452px, стрелка 24px и промежуток 28px.
-    gap: 28px;
-  }
-  @include breakpoint($bp-768) {
-    gap: 0;
-  }
   padding: 12px 0;
   border-bottom: 1px solid var(--main-blue-blue-100-opacity);
   text-decoration: none;
@@ -466,50 +166,23 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 18px;
-    line-height: 26px;
-    gap: 0;
-  }
+  color: #0b2d4e;
 }
+
 .answers-card__link span:first-child {
   min-width: 0;
   flex: 1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  // На 1440 длинный вопрос показан целиком, на 1920/1200/390 — одна строка.
-  @include breakpoint($bp-1440) {
-    white-space: normal;
-  }
-  @include breakpoint($bp-1200) {
-    white-space: nowrap;
-  }
 }
+
 .answers-card .button {
   align-self: start;
   padding: 11px 0;
   min-height: 42px;
 }
+
 .answers-card__arrow {
   flex-shrink: 0;
   width: 24px;
@@ -524,6 +197,7 @@
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
 }
+
 .answers-card .button--text {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -532,19 +206,569 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-768) {
-    font-weight: 700;
-    letter-spacing: 0.56px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-weight: 800;
-  }
+  color: #0b2d4e;
 }
+
 .answers-card .button--text:hover {
   color: var(---Accent-Accent-100, #00aeef);
 }
+
 .answers-card .button--text:active {
   color: var(--main-blue-blue-90);
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .question__surface > .container {
+    width: calc(100% - 128px);
+  }
+
+  .section--question {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: transparent;
+  }
+
+  .question__surface {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--main-white-white-100);
+  }
+
+  .question-form__description {
+    line-height: 26px;
+  }
+
+  .question-form .form-field {
+    // Нижняя линия входит в размер поля в макете.
+    padding-bottom: 23px;
+  }
+
+  .question-form .topic-select {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+  }
+
+  .question-form .topic-select__trigger {
+    line-height: 26px;
+  }
+
+  .question-form__consent {
+    flex-basis: 216px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .answers-card {
+    flex-basis: 640px;
+    padding: 22px;
+  }
+
+  .answers-card__label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .answers-card__count {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__title {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__link {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .answers-card__link span:first-child {
+    white-space: normal;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .question__surface > .container {
+    width: calc(100% - 96px);
+  }
+
+  .section--question {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .question__layout {
+    gap: 32px;
+  }
+
+  .question-form__description {
+    line-height: 28px;
+  }
+
+  .question-form .form-field {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .question-form .topic-select {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 23px;
+    padding-left: 24px;
+  }
+
+  .question-form .topic-select__trigger {
+    line-height: 28px;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 84px;
+  }
+
+  .question-form__bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .question-form__submit {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .question-form__consent {
+    flex-basis: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .answers-card {
+    flex-basis: calc((100% - 32px) / 2);
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .answers-card__label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .answers-card__count {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+  }
+
+  .answers-card__title {
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0em;
+  }
+
+  .answers-card__link {
+    // В макете 1200 текст 452px, стрелка 24px и промежуток 28px.
+    gap: 28px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .answers-card__link span:first-child {
+    white-space: nowrap;
+  }
+}
+// 992 px
+
+@include breakpoint($bp-992) {
+  .question__surface > .container {
+    width: calc(100% - 48px);
+  }
+
+  .section--question {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .question__layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .answers-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .question__surface > .container {
+    width: calc(100% - 32px);
+  }
+
+  .section--question {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--main-white-white-100);
+  }
+
+  .question__surface {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .question-form__description {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .question-form .form-field {
+    padding: 16px;
+  }
+
+  .question-form .topic-select {
+    padding: 16px;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 112px;
+  }
+
+  .question-form__bottom {
+    gap: 16px;
+  }
+
+  .question-form__submit {
+    min-height: 42px;
+    padding: 9px 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .question-form__consent {
+    align-self: center;
+    max-width: 287px;
+    text-align: center;
+  }
+
+  .answers-card {
+    gap: 20px;
+  }
+
+  .answers-card__label {
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .answers-card__count {
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .answers-card__title {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  .answers-card__link {
+    gap: 0;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .answers-card .button--text {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .question__surface > .container {
+    width: calc(100% - 64px);
+  }
+
+  .question-form {
+    width: 100%;
+  }
+
+  .question-form__description {
+    max-width: 548px;
+  }
+
+  .question-form .form-field {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 56px;
+  }
+
+  .question-form__consent {
+    align-self: center;
+    text-align: center;
+  }
+
+  .answers-card {
+    gap: 20px;
+    border-width: 2px;
+    padding: 18px;
+  }
+
+  .answers-card__header {
+    gap: 10px;
+  }
+
+  .answers-card__divider {
+    height: 2px;
+  }
+
+  .answers-card__count {
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__link {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .question__surface > .container {
+    width: calc(100% - 48px);
+  }
+
+  .section--question {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: transparent;
+  }
+
+  .question__layout {
+    gap: 32px;
+  }
+
+  .question-form {
+    width: 100%;
+  }
+
+  .question-form .form-field {
+    padding-bottom: 15px;
+  }
+
+  .question-form .topic-select {
+    padding-bottom: 15px;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 56px;
+  }
+
+  .question-form__bottom {
+    gap: 12px;
+  }
+
+  .question-form__submit {
+    padding: 18px 24px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    min-height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .question-form__consent {
+    max-width: none;
+  }
+
+  .answers-card {
+    border-width: 2px;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .answers-card__divider {
+    height: 2px;
+  }
+
+  .answers-card__label {
+    letter-spacing: 0;
+  }
+
+  .answers-card__count {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__link {
+    font-size: 18px;
+    line-height: 26px;
+    gap: 0;
+  }
+
+  .answers-card .button--text {
+    font-weight: 800;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .question__surface > .container {
+    width: calc(100% - 40px);
+  }
+
+  .section--question {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--main-white-white-100);
+  }
+
+  .section--question .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 84px;
+  }
+
+  .question-form__submit {
+    min-height: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .question-form__consent {
+    width: 100%;
+    max-width: 383px;
+  }
+
+  .answers-card__link span:first-child {
+    .answers-card__links li:last-child & {
+      white-space: normal;
+    }
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  .section--question .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .question__layout {
+    gap: 32px;
+  }
+
+  .question-form {
+    width: 100%;
+  }
+
+  .question-form .form-field {
+    padding-bottom: 15px;
+  }
+
+  .question-form .topic-select__trigger,
+  .question-form .form-field__input {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  .question-form .form-field__label {
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .question-form textarea.form-field__input {
+    min-height: 104px;
+  }
+
+  .question-form__submit {
+    min-height: 52px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .question-form__consent {
+    text-align: left;
+  }
+
+  .answers-card__label {
+    letter-spacing: 0;
+  }
+
+  .answers-card__count {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .answers-card__link {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .answers-card__link span:first-child {
+    white-space: normal;
+  }
+
+  .answers-card .button--text {
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
 }

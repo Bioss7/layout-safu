@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .title-2 {
   margin: 0;
   font-variant: normal;
@@ -12,37 +13,14 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -1.12px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: calc(28px + (100vw - 390px) * 4 / 378);
-    line-height: calc(36px + (100vw - 390px) * 4 / 378);
-    letter-spacing: calc(-1.12px + (100vw - 390px) * 2.4 / 378);
-    text-shadow: none;
-  }
+  color: #0b2d4e;
 }
+
 .title-2--white {
   color: var(--main-white-white-100);
   text-shadow: 3px 4px var(--main-black);
 }
+
 .card-arrow {
   display: block;
   width: 40px;
@@ -59,37 +37,25 @@
   -webkit-mask-repeat: no-repeat;
   transition: background-color 0.2s ease;
 }
+
 .br {
   display: inline;
 }
+
 .br-390 {
   display: none;
-  @include breakpoint($bp-390) {
-    display: inline;
-  }
 }
+
 .br-1440 {
   display: none;
-  @include breakpoint($bp-1440) {
-    display: inline;
-  }
 }
+
 .br-above-1440 {
   display: inline;
-  @include breakpoint($bp-1440) {
-    display: none;
-  }
 }
-.br-hide-390 {
-  @include breakpoint($bp-390) {
-    display: none;
-  }
-}
+
 .br-above-900 {
   display: inline;
-  @include breakpoint($bp-900) {
-    display: none;
-  }
 }
 #faq .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
@@ -99,33 +65,9 @@
   font-size: 52px;
   line-height: 68px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -1.12px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0.04em;
-  }
+  color: #0b2d4e;
 }
+
 .contacts .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -134,35 +76,9 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 40px;
-    max-width: 906.857px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 28px;
-    max-width: none;
-    line-height: 36px;
-    letter-spacing: -1.12px;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0.04em;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0.04em;
-  }
+  color: #0b2d4e;
 }
+
 .section--reviews .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -171,53 +87,236 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
+  color: #0b2d4e;
+}
+
+.br-992-above-768 {
+  display: none;
+}
+
+.br-tablet {
+  display: none;
+}
+
+.br-576 {
+  display: none;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .title-2 {
     font-size: 40px;
     line-height: 48px;
   }
-  @include breakpoint($bp-1200) {
+
+  .br-1440 {
+    display: inline;
+  }
+
+  .br-above-1440 {
+    display: none;
+  }
+
+  #faq .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  .contacts .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .section--reviews .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  #faq .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .contacts .title-2 {
+    font-size: 40px;
+    max-width: 907px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  .section--reviews .title-2 {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0em;
   }
-  @include breakpoint($bp-768) {
+}
+// 900 px
+
+@include breakpoint($bp-900) {
+  .br-above-900 {
+    display: none;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .title-2 {
     font-size: 28px;
     line-height: 36px;
-    letter-spacing: -1.12px;
+    letter-spacing: -1px;
     text-shadow: none;
   }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+
+  #faq .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-shadow: none;
+  }
+
+  .contacts .title-2 {
+    font-size: 28px;
+    max-width: none;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-shadow: none;
+  }
+
+  .section--reviews .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-shadow: none;
+  }
+}
+// 390 px
+
+@include breakpoint($bp-390) {
+  .br-390 {
+    display: inline;
+  }
+
+  .br-hide-390 {
+    display: none;
+  }
+}
+// 1200 px
+
+@include screen-1200 {
+  .br-1200-above-768 {
+    display: inline;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .title-2 {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: calc(28px + (100vw - 390px) * 12 / 378);
-    line-height: calc(36px + (100vw - 390px) * 12 / 378);
+
+  #faq .title-2 {
+    font-size: 32px;
+    line-height: 40px;
     letter-spacing: 0.04em;
   }
-}
-.br-1200-above-768 {
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-1200) {
-    display: inline;
-  }
-}
-.br-992-above-768 {
-  display: none;
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    display: inline;
-  }
-}
 
-.br-768 {
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+  .contacts .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .section--reviews .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .br-992-above-768 {
     display: inline;
   }
 }
-.br-tablet {
-  display: none;
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
+// 992 px
+
+@include screen-compact {
+  .br-tablet {
+    display: inline;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
+
+  #faq .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .contacts .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .section--reviews .title-2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  .br-768 {
+    display: inline;
+  }
+  .title-2--white {
+    text-shadow: 3px 4px var(--main-black);
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+  }
+
+  #faq .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+  }
+
+  .contacts .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+  }
+
+  .section--reviews .title-2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+  }
+
+  .br-576 {
     display: inline;
   }
 }

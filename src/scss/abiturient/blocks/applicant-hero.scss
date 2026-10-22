@@ -1,8 +1,9 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .applicant-hero {
   position: relative;
-  min-height: 724.992px;
+  min-height: 725px;
   overflow: hidden;
   color: var(--main-white-white-100);
   background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
@@ -23,52 +24,13 @@
     background-repeat: no-repeat;
     pointer-events: none;
   }
-  @include breakpoint($bp-1440) {
-    min-height: 696px;
-    background-size: cover;
-    &::after {
-      height: 70px;
-    }
-  }
-  @include breakpoint($bp-1200) {
-    min-height: 698px;
-    &::after {
-      height: 58.125px;
-    }
-  }
-  // На 900px текст и группа людей перестают помещаться в две колонки.
-  @include breakpoint($bp-900) {
-    min-height: 0;
-    background-image: url("/abiturient/assets/img/hero/hero-bg-390.png");
-    background-size: auto 126.73%;
-    background-position: 60% bottom;
-    &::after {
-      height: 52px;
-      background-image: url("/abiturient/assets/img/hero/hero-transition-390.svg");
-    }
-  }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    min-height: 741px;
-    &::after {
-      height: 73px;
-      background-image: url("/abiturient/assets/img/hero/hero-transition-992.svg");
-    }
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    min-height: calc(850px + (100vw - 390px) * 296.671 / 378);
-    background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
-    background-size: cover;
-    background-position: center bottom;
-    &::after {
-      height: 73px;
-      background-image: url("/abiturient/assets/img/hero/hero-transition-768.svg");
-    }
-  }
 }
+
 .applicant-hero__inner {
   position: relative;
   min-height: inherit;
 }
+
 .applicant-hero__copy {
   position: relative;
   z-index: 2;
@@ -76,33 +38,8 @@
   max-width: 62%;
   padding-top: 40px;
   padding-bottom: 60px;
-  @include breakpoint($bp-1440) {
-    width: 872px;
-    max-width: 100%;
-    padding-top: 44px;
-    padding-bottom: 88px;
-  }
-  @include breakpoint($bp-1200) {
-    width: 840px;
-    max-width: 100%;
-    padding-top: 44px;
-  }
-  @include breakpoint($bp-900) {
-    width: 100%;
-    max-width: none;
-    padding-top: 32px;
-    padding-bottom: 0;
-  }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 600px;
-    padding-top: 36px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 600px;
-    max-width: 100%;
-    padding-top: 40px;
-  }
 }
+
 .applicant-hero__status {
   display: flex;
   flex-wrap: wrap;
@@ -112,11 +49,6 @@
   list-style: none;
   font-variant: normal;
   font-stretch: normal;
-  @include breakpoint($bp-900) {
-    flex-direction: column;
-    gap: 6px;
-    text-transform: uppercase;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -124,42 +56,9 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    flex-wrap: nowrap;
-    margin-bottom: 16px;
-    line-height: 20px;
-  }
-  @include breakpoint($bp-1200) {
-    margin-bottom: 24px;
-    font-size: 14px;
-    line-height: 22px;
-  }
-  @include breakpoint($bp-900) {
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 760px;
-    max-width: calc(100vw - 48px);
-    font-size: 12px;
-    line-height: 20px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 600px;
-    max-width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-weight: 500;
-    text-transform: none;
-  }
+  color: #ffffff;
 }
+
 .applicant-hero__status li {
   display: flex;
   align-items: center;
@@ -173,36 +72,8 @@
     box-shadow: 0 0 10px 4px var(--main-accent-accent-30);
     flex-shrink: 0;
   }
-  @include breakpoint($bp-900) {
-    gap: 6px;
-    &::before {
-      width: 8px;
-      height: 8px;
-    }
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    gap: 12px;
-    &::before {
-      width: 8px;
-      height: 8px;
-      margin: 6px;
-      box-shadow:
-        0 0 0 3px rgba(255, 255, 255, 0.2),
-        0 0 0 6px rgba(255, 255, 255, 0.1);
-    }
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 12px;
-    &::before {
-      width: 8px;
-      height: 8px;
-      margin: 6px;
-      box-shadow:
-        0 0 0 3px rgba(255, 255, 255, 0.2),
-        0 0 0 6px rgba(255, 255, 255, 0.1);
-    }
-  }
 }
+
 .applicant-hero__title {
   margin: 0;
   font-variant: normal;
@@ -215,111 +86,31 @@
   line-height: 104px;
   letter-spacing: 0.04em;
   text-shadow: 3px 4px 0px #000;
-  @include breakpoint($bp-1440) {
-    font-size: 80px;
-    line-height: 80px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 64px;
-    line-height: 64px;
-  }
-  @include breakpoint($bp-900) {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -1.6px;
-    text-shadow: rgb(0, 0, 0) 3px 4px 0px;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: calc(40px + (100vw - 390px) * 24 / 378);
-    line-height: 1;
-    letter-spacing: calc(-1.6px + (100vw - 390px) * 4.16 / 378);
-  }
+  color: #ffffff;
 }
+
 .applicant-hero__year {
   display: flex;
   align-items: center;
   gap: 24px;
   margin-top: 12px;
-  @include breakpoint($bp-1200) {
-    margin-top: 24px;
-  }
-  @include breakpoint($bp-900) {
-    margin-top: 12px;
-  }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    margin-top: 12px;
-  }
 }
+
 .applicant-hero__badge {
-  filter: drop-shadow(3px 3px 0 #000);
   display: block;
   width: 240px;
   height: auto;
-  @include breakpoint($bp-1440) {
-    width: 230.086px;
-  }
-  @include breakpoint($bp-900) {
-    width: 180px;
-  }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 231px;
-    height: 68px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: calc(180px + (100vw - 390px) * 51 / 378);
-    height: 68px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    position: absolute;
-    width: calc(var(--badge-width) * 234 / 231);
-    max-width: none;
-    height: auto;
-    filter: none;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    position: absolute;
-    width: calc(var(--badge-width) * 234 / 231);
-    max-width: none;
-    height: auto;
-    filter: none;
-  }
 }
+
 .applicant-hero__year picture {
   display: block;
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    --badge-width: calc(180px + (100vw - 390px) * 51 / 378);
-    position: relative;
-    width: var(--badge-width);
-    height: calc(var(--badge-width) * 68 / 231);
-    flex-shrink: 0;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    --badge-width: 231px;
-    position: relative;
-    width: var(--badge-width);
-    height: 68px;
-    flex-shrink: 0;
-  }
 }
+
 .applicant-hero__description {
   // Замечание: отсутствие стиля [abiturient-hero-description-copy] — ui/data/remarks.json.
   margin: 24px 0 40px;
   font-variant: normal;
   font-stretch: normal;
-  @include breakpoint($bp-1440) {
-    max-width: 568px;
-    margin-top: 16px;
-    margin-bottom: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    max-width: 575px;
-    margin-top: 24px;
-  }
-  @include breakpoint($bp-900) {
-    max-width: 500px;
-    margin: 24px 0 48px;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -327,47 +118,17 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  @include breakpoint($bp-900) {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    max-width: 503px;
-    margin-bottom: 28px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    max-width: 503px;
-    margin-top: 24px;
-    margin-bottom: 28px;
-  }
+  color: #ffffff;
 }
-.applicant-hero__description .br {
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    display: none;
-  }
-}
+
 .applicant-hero__links {
   width: 625px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  @include breakpoint($bp-1200) {
-    width: 522px;
-  }
-  @include breakpoint($bp-900) {
-    width: 100%;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 448px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 448px;
-    gap: 12px;
-  }
 }
+
 .hero-link {
   display: flex;
   align-items: center;
@@ -382,9 +143,6 @@
   &:hover {
     color: var(---Accent-Accent-100, #00aeef);
   }
-  @include breakpoint($bp-900) {
-    padding: 8px 16px 12px 0;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -393,18 +151,9 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-shadow: 2px 2px 0px #000;
-  @include breakpoint($bp-900) {
-    font-weight: 700;
-    letter-spacing: 0.64px;
-    text-shadow: rgb(0, 0, 0) 2px 2px 0px;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-weight: 800;
-    padding-top: 14px;
-    padding-bottom: 18px;
-  }
+  color: #ffffff;
 }
+
 .hero-link .card-arrow {
   width: 16px;
   height: 16px;
@@ -413,15 +162,8 @@
   -webkit-mask-image: none;
   // Тень на обёртке: маска дочернего элемента не обрезает смещённый контур.
   filter: drop-shadow(2px 2px 0 #000);
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 28px;
-    height: 28px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 28px;
-    height: 28px;
-  }
 }
+
 .hero-link .card-arrow::before {
   content: "";
   display: block;
@@ -436,38 +178,14 @@
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 28px;
-    height: 28px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 16px;
-    height: 16px;
-    margin: 6px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin: 6px;
-  }
 }
+
 .applicant-hero__art {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  @include breakpoint($bp-900) {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: calc(100% + 32px);
-    margin-left: -16px;
-    margin-top: 50px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    position: absolute;
-    inset: 0 -24px;
-    width: auto;
-    margin: 0;
-  }
 }
+
 .applicant-hero__building {
   position: absolute;
   width: 1222px;
@@ -479,18 +197,215 @@
   mask-position: center;
   mask-size: contain;
   mask-repeat: no-repeat;
-  @include breakpoint($bp-1440) {
-    width: 976.654px;
+}
+
+.applicant-hero__people {
+  position: absolute;
+  display: block;
+  flex-shrink: 0;
+  width: 34.9vw;
+  min-width: 350px;
+  max-width: 670px;
+  left: 53.49%;
+  bottom: 0;
+}
+
+.applicant-hero__people img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .applicant-hero {
+    min-height: 696px;
+    background-size: cover;
+    &::after {
+      height: 70px;
+    }
+  }
+
+  .applicant-hero__copy {
+    width: 872px;
+    max-width: 100%;
+    padding-top: 44px;
+    padding-bottom: 88px;
+  }
+
+  .applicant-hero__status {
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    line-height: 20px;
+  }
+
+  .applicant-hero__title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .applicant-hero__badge {
+    width: 230px;
+  }
+
+  .applicant-hero__description {
+    max-width: 568px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .applicant-hero__building {
+    width: 977px;
     height: auto;
     aspect-ratio: 1222 / 811;
-    left: calc(78.2667vw - 393.05px);
+    left: calc(78.27vw - 393px);
     top: 117px;
   }
-  @include breakpoint($bp-1200) {
-    width: 1013.733px;
+
+  .applicant-hero__people {
+    width: 535px;
+    left: calc(78.33vw - 398px);
+    top: 121px;
+    bottom: auto;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .applicant-hero {
+    min-height: 698px;
+    &::after {
+      height: 58px;
+    }
+  }
+
+  .applicant-hero__copy {
+    width: 840px;
+    max-width: 100%;
+    padding-top: 44px;
+  }
+
+  .applicant-hero__status {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .applicant-hero__title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .applicant-hero__year {
+    margin-top: 24px;
+  }
+
+  .applicant-hero__description {
+    max-width: 575px;
+    margin-top: 24px;
+  }
+
+  .applicant-hero__links {
+    width: 522px;
+  }
+
+  .applicant-hero__building {
+    width: 1014px;
     top: 142px;
   }
-  @include breakpoint($bp-900) {
+
+  .applicant-hero__people {
+    width: 555px;
+    top: 146px;
+  }
+}
+// 900 px
+
+@include breakpoint($bp-900) {
+  .applicant-hero {
+    min-height: 0;
+    background-image: url("/abiturient/assets/img/hero/hero-bg-390.png");
+    background-size: auto 126.73%;
+    background-position: 60% bottom;
+    &::after {
+      height: 52px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-390.svg");
+    }
+  }
+
+  .applicant-hero__copy {
+    width: 100%;
+    max-width: none;
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+
+  .applicant-hero__status {
+    flex-direction: column;
+    gap: 6px;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .applicant-hero__status li {
+    gap: 6px;
+    &::before {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .applicant-hero__title {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    text-shadow: #000000 3px 4px 0px;
+  }
+
+  .applicant-hero__year {
+    margin-top: 12px;
+  }
+
+  .applicant-hero__badge {
+    width: 180px;
+  }
+
+  .applicant-hero__description {
+    max-width: 500px;
+    margin: 24px 0 48px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .applicant-hero__links {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .hero-link {
+    padding: 8px 16px 12px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: #000000 2px 2px 0px;
+  }
+
+  .applicant-hero__art {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-top: 50px;
+  }
+
+  .applicant-hero__building {
     width: 176%;
     height: 100%;
     left: 0;
@@ -498,43 +413,8 @@
     mask-image: url("/abiturient/assets/img/hero/hero-building-390.png");
     mask-position: left top;
   }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 785.965px;
-    left: 457px;
-    top: 258px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 116.40625vw;
-    height: 70.396224vw;
-    aspect-ratio: auto;
-    left: 14.322917%;
-    top: 82.942708vw;
-    bottom: auto;
-    mask-image: url("/abiturient/assets/img/hero/hero-building-768.png");
-    mask-position: left top;
-    mask-size: 100% auto;
-  }
-}
-.applicant-hero__people {
-  position: absolute;
-  display: block;
-  flex-shrink: 0;
-  width: 34.8958vw;
-  min-width: 350px;
-  max-width: 670px;
-  left: 53.49%;
-  bottom: 0;
-  @include breakpoint($bp-1440) {
-    width: 534.517px;
-    left: calc(78.333333vw - 398px);
-    top: 120.99px;
-    bottom: auto;
-  }
-  @include breakpoint($bp-1200) {
-    width: 555.354px;
-    top: 146.15px;
-  }
-  @include breakpoint($bp-900) {
+
+  .applicant-hero__people {
     position: relative;
     left: auto;
     top: auto;
@@ -543,24 +423,433 @@
     min-width: 440px;
     max-width: 590px;
   }
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    width: 430.575px;
-    left: 494.78px;
-    top: 261.22px;
+}
+// 992 px
+
+@include screen-tablet-wide {
+  .applicant-hero {
+    min-height: 741px;
+    &::after {
+      height: 73px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-992.svg");
+    }
   }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    position: absolute;
-    width: 63.776vw;
-    min-width: 0;
-    max-width: none;
-    left: 19.9193%;
-    top: auto;
-    bottom: -9.75px;
+
+  .applicant-hero__copy {
+    width: 600px;
+    padding-top: 36px;
+  }
+
+  .applicant-hero__status {
+    width: 760px;
+    max-width: calc(100vw - 48px);
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .applicant-hero__year {
+    margin-top: 12px;
+  }
+
+  .applicant-hero__badge {
+    width: 231px;
+    height: 68px;
+  }
+
+  .applicant-hero__description {
+    max-width: 503px;
+    margin-bottom: 28px;
+  }
+
+  .applicant-hero__description .br {
+    display: none;
+  }
+
+  .applicant-hero__links {
+    width: 448px;
+  }
+
+  .applicant-hero__building {
+    width: 786px;
+    left: 457px;
+    top: 258px;
+  }
+
+  .applicant-hero__people {
+    width: 431px;
+    left: 495px;
+    top: 261px;
   }
 }
-.applicant-hero__people img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
+// 992 px
+
+@include screen-tablet {
+  .applicant-hero__status li {
+    gap: 12px;
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.2),
+        0 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .applicant-hero__badge {
+    position: absolute;
+    width: calc(var(--badge-width) * 234 / 231);
+    max-width: none;
+    height: auto;
+    filter: none;
+  }
+
+  .applicant-hero__year picture {
+    --badge-width: 231px;
+    position: relative;
+    width: var(--badge-width);
+    height: 68px;
+    flex-shrink: 0;
+  }
+
+  .hero-link .card-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero-link .card-arrow::before {
+    margin: 6px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .applicant-hero {
+    min-height: 1147px;
+    background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
+    background-size: cover;
+    background-position: center bottom;
+    &::after {
+      height: 73px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-768.svg");
+    }
+  }
+
+  .applicant-hero__copy {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 40px;
+  }
+
+  .applicant-hero__status {
+    width: 600px;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  .applicant-hero__status li {
+    gap: 12px;
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.2),
+        0 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .applicant-hero__title {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 3px;
+  }
+
+  .applicant-hero__badge {
+    position: absolute;
+    width: calc(var(--badge-width) * 234 / 231);
+    max-width: none;
+    height: auto;
+    filter: none;
+  }
+
+  .applicant-hero__year picture {
+    --badge-width: 231px;
+    position: relative;
+    width: var(--badge-width);
+    height: calc(var(--badge-width) * 68 / 231);
+    flex-shrink: 0;
+  }
+
+  .applicant-hero__description {
+    max-width: 503px;
+    margin-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .applicant-hero__links {
+    width: 448px;
+    gap: 12px;
+  }
+
+  .hero-link {
+    font-weight: 800;
+    padding-top: 14px;
+    padding-bottom: 18px;
+  }
+
+  .hero-link .card-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero-link .card-arrow::before {
+    width: 16px;
+    height: 16px;
+    margin: 6px;
+  }
+
+  .applicant-hero__art {
+    position: absolute;
+    inset: 0 -24px;
+    width: auto;
+    margin: 0;
+  }
+
+  .applicant-hero__building {
+    width: 116.41vw;
+    height: 70.4vw;
+    aspect-ratio: auto;
+    left: 14.32%;
+    top: 82.94vw;
+    bottom: auto;
+    mask-image: url("/abiturient/assets/img/hero/hero-building-768.png");
+    mask-position: left top;
+    mask-size: 100% auto;
+  }
+
+  .applicant-hero__people {
+    position: absolute;
+    width: 63.78vw;
+    min-width: 0;
+    max-width: none;
+    left: 19.92%;
+    top: auto;
+    bottom: -10px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .applicant-hero {
+    min-height: 1099px;
+  }
+
+  .applicant-hero__copy {
+    padding-top: 16px;
+  }
+
+  .applicant-hero__status {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .applicant-hero__title {
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+
+  .applicant-hero__year {
+    gap: 16px;
+  }
+
+  .applicant-hero__year picture {
+    --badge-width: 230px;
+  }
+
+  .applicant-hero__description {
+    max-width: 488px;
+    margin-bottom: 24px;
+  }
+
+  .applicant-hero__links {
+    width: 100%;
+  }
+
+  .hero-link {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    border-bottom-width: 0;
+    box-shadow: none;
+  }
+
+  // Обводка Figma лежит внутри строки и не увеличивает её высоту.
+  .hero-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-white-white-100);
+    box-shadow: 3px 3px var(--main-black);
+    pointer-events: none;
+  }
+
+  .applicant-hero__art {
+    inset: 0 -20px;
+  }
+
+  .applicant-hero__building {
+    left: 2.78%;
+    top: 117vw;
+    width: 131.78vw;
+    height: 87.41vw;
+  }
+
+  .applicant-hero__people {
+    width: 72.22vw;
+    left: 9.11%;
+    top: 117.55vw;
+    bottom: auto;
+  }
+}
+
+// Intermediate hero widths: explicit type steps replace viewport interpolation.
+@include breakpoint($bp-680) {
+  .applicant-hero__title {
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0.04em;
+  }
+}
+@include breakpoint($bp-540) {
+  .applicant-hero__title {
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .applicant-hero__year picture {
+    --badge-width: 200px;
+  }
+}
+@include breakpoint($bp-460) {
+  .applicant-hero__title {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1px;
+  }
+  .applicant-hero__year picture {
+    --badge-width: 180px;
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  .applicant-hero {
+    min-height: 1147px;
+  }
+
+  .applicant-hero .breadcrumbs__list {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .applicant-hero__copy {
+    padding-top: 28px;
+  }
+
+  .applicant-hero__status {
+    gap: 8px;
+  }
+
+  .applicant-hero__status li::before {
+    width: 4px;
+    height: 4px;
+    margin: 4px;
+  }
+
+  .applicant-hero__title {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+  }
+
+  .applicant-hero__year {
+    gap: 24px;
+    margin-top: 4px;
+  }
+
+  .applicant-hero__year picture {
+    position: relative;
+    width: 180px;
+    height: 53px;
+    flex-shrink: 0;
+  }
+
+  .applicant-hero__badge {
+    position: absolute;
+    width: 183px;
+    max-width: none;
+  }
+
+  .applicant-hero__description {
+    margin-top: 24px;
+    margin-bottom: 56px;
+  }
+
+  .hero-link {
+    position: relative;
+    border-bottom-width: 0;
+    box-shadow: none;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-white-white-100);
+    box-shadow: 3px 3px var(--main-black);
+    pointer-events: none;
+  }
+
+  .hero-link .card-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero-link .card-arrow::before {
+    margin: 6px;
+  }
+
+  .applicant-hero__art {
+    display: block;
+    height: 463px;
+    margin-top: 47px;
+  }
+
+  .applicant-hero__building {
+    width: 686px;
+    height: 455px;
+    left: -8px;
+  }
+
+  .applicant-hero__people {
+    position: absolute;
+    width: 440px;
+    min-width: 0;
+    max-width: none;
+    left: -15px;
+    top: 0;
+  }
 }

@@ -7,10 +7,10 @@
     const dots = root.querySelector(".js-reviews-dots");
     const previous = root.querySelector(".js-reviews-prev");
     const next = root.querySelector(".js-reviews-next");
-    const queries = [1200, 992, 768].map((width) => window.matchMedia(`(max-width: ${width}px)`));
+    const queries = [1200, 992, 768, 390].map((width) => window.matchMedia(`(max-width: ${width}px)`));
     let swiper;
     let groupSize = 4;
-    const maxDots = 5;
+    let maxDots = 5;
 
     function targetSlide(index, slideCount) {
       return slideCount <= maxDots ? index : Math.round((index * (slideCount - 1)) / (maxDots - 1));
@@ -34,6 +34,7 @@
       const firstCard = (swiper?.realIndex || 0) * groupSize;
       swiper?.destroy(true, true);
       groupSize = queries[2].matches ? 1 : queries[1].matches ? 2 : queries[0].matches ? 3 : 4;
+      maxDots = queries[3].matches ? 3 : 5;
       viewport.replaceChildren();
       for (let index = 0; index < cards.length; index += groupSize) {
         const slide = document.createElement("div");

@@ -1,81 +1,22 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 // Соседние секции складывают свои половины интервала; значения заданы явно.
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @include breakpoint($bp-1440) {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-  @include breakpoint($bp-992) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-  @include breakpoint($bp-900) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
 }
 .section--banner,
 .section--admission + .section {
   padding-top: 120px;
-  @include breakpoint($bp-1440) {
-    padding-top: 96px;
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 72px;
-  }
-  @include breakpoint($bp-992) {
-    padding-top: 64px;
-  }
-  @include breakpoint($bp-900) {
-    padding-top: 60px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 64px;
-  }
 }
+
 .section--education {
   padding-bottom: 120px;
-  @include breakpoint($bp-1440) {
-    padding-bottom: 96px;
-  }
-  @include breakpoint($bp-1200) {
-    padding-bottom: 72px;
-  }
-  @include breakpoint($bp-992) {
-    padding-bottom: 64px;
-  }
-  @include breakpoint($bp-900) {
-    padding-bottom: 60px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-bottom: 64px;
-  }
 }
+
 .section-header {
   margin-bottom: 80px;
-  @include breakpoint($bp-1440) {
-    margin-bottom: 48px;
-  }
-  @include breakpoint($bp-768) {
-    margin-bottom: 32px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-  }
 }
 // Figma: собственная белая заливка поверх общей сетки страницы.
 .section--contacts,
@@ -83,68 +24,254 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: var(--main-white-white-100);
-  @include breakpoint($bp-768) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
+
 .section--contacts .section-header {
   margin-bottom: 80px;
-  @include breakpoint($bp-1440) {
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  // Соседние секции складывают свои половины интервала; значения заданы явно.
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 96px;
+  }
+
+  .section--education {
+    padding-bottom: 96px;
+  }
+
+  .section-header {
     margin-bottom: 48px;
   }
-  @include breakpoint($bp-768) {
-    margin-bottom: 40px;
+
+  .section--contacts .section-header {
+    margin-bottom: 48px;
   }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-  }
-}
-.section--education .section-header,
-.section--opportunities .section-header {
-  @include breakpoint($bp-768) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-  }
-}
-// Между секциями с собственной заливкой остаётся фон страницы.
-.section--opportunities,
-.section--reviews {
-  @include breakpoint($bp-1440) {
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
     padding-top: 96px;
     padding-bottom: 96px;
   }
-  @include breakpoint($bp-1200) {
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  // Соседние секции складывают свои половины интервала; значения заданы явно.
+  .section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 72px;
+  }
+
+  .section--education {
+    padding-bottom: 72px;
+  }
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
     padding-top: 72px;
     padding-bottom: 72px;
   }
-  @include breakpoint($bp-992) {
+}
+// 992 px
+
+@include breakpoint($bp-992) {
+  // Соседние секции складывают свои половины интервала; значения заданы явно.
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 64px;
+  }
+
+  .section--education {
+    padding-bottom: 64px;
+  }
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  @include breakpoint($bp-900) {
+}
+// 900 px
+
+@include breakpoint($bp-900) {
+  // Соседние секции складывают свои половины интервала; значения заданы явно.
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 60px;
+  }
+
+  .section--education {
+    padding-bottom: 60px;
+  }
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
     padding-top: 60px;
     padding-bottom: 30px;
   }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+
+  .section--reviews {
+    padding-top: 30px;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .section-header {
+    margin-bottom: 32px;
+  }
+  // Figma: собственная белая заливка поверх общей сетки страницы.
+  .section--contacts,
+  .section--question {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .section--contacts .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section--education .section-header,
+  .section--opportunities .section-header {
+    margin-bottom: 40px;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section--contacts .section-header {
+    margin-bottom: 40px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  // Соседние секции складывают свои половины интервала; значения заданы явно.
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 64px;
+  }
+
+  .section--education {
+    padding-bottom: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+  // Figma: собственная белая заливка поверх общей сетки страницы.
+  .section--contacts,
+  .section--question {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section--contacts .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section--education .section-header,
+  .section--opportunities .section-header {
+    margin-bottom: 32px;
+  }
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
     padding-bottom: 64px;
     padding-top: 64px;
   }
-}
-.section--reviews {
-  @include breakpoint($bp-900) {
-    padding-top: 30px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+
+  .section--reviews {
     padding-top: 64px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .section--banner,
+  .section--admission + .section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section--contacts,
+  .section--question {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .section--contacts .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section--education .section-header,
+  .section--opportunities .section-header {
+    margin-bottom: 32px;
+  }
+  // Между секциями с собственной заливкой остаётся фон страницы.
+  .section--opportunities,
+  .section--reviews {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section--reviews {
+    padding-top: 0;
+    overflow: hidden;
+  }
+}
+
+// 390 px — интервалы между секциями задаёт main, внутри остаются отступы заливок.
+@include breakpoint($bp-390) {
+  main > .section:not(.section--admission):not(.section--contacts):not(.section--question) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  main > .section--contacts,
+  main > .section--question {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .section--education .section-header,
+  .section--opportunities .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section--reviews {
+    overflow: hidden;
   }
 }

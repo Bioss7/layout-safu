@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -11,7 +12,6 @@
   box-shadow: 3px 4px var(--main-black);
   font-variant: normal;
   font-stretch: normal;
-
   text-align: center;
   text-decoration: none;
   transition:
@@ -29,7 +29,6 @@
     background-color: var(--main-blue-blue-30);
     color: var(--main-white-white-100);
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -37,23 +36,19 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-
-  @include breakpoint($bp-768) {
-    font-weight: 700;
-    letter-spacing: 0.64px;
-    text-shadow: none;
-  }
-
-  color: rgba(11, 45, 78, 1);
+  color: #0b2d4e;
 }
+
 .button--primary {
   background-color: var(--main-blue-blue-100);
   color: var(--main-white-white-100);
 }
+
 .button--light {
   background-color: var(--main-white-white-100);
   color: var(--main-blue-blue-100);
 }
+
 .button--text {
   padding: 0;
   min-height: 42px;
@@ -76,9 +71,20 @@
     color: var(--main-blue-blue-30);
   }
 }
+
 .button--light:active {
   background-color: var(--main-blue-blue-30);
 }
+
 .button--light:disabled {
   background-color: var(--main-blue-blue-20);
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .button {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: none;
+  }
 }

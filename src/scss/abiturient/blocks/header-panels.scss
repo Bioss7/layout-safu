@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .header-panels {
   display: none;
   flex-direction: column;
@@ -9,6 +10,7 @@
     display: flex;
   }
 }
+
 .header-panels__menu {
   flex: 1;
   min-height: 0;
@@ -25,45 +27,16 @@
   &[hidden] {
     display: none;
   }
-  @include breakpoint($bp-1440) {
-    background-image: url("/abiturient/assets/img/header/header-bg-1440.png");
-  }
-  @include breakpoint($bp-1200) {
-    background-image: url("/abiturient/assets/img/header/header-bg-1200.png");
-    padding-top: 56px;
-    padding-bottom: 80px;
-  }
-  @include breakpoint($bp-992) {
-    background-image: url("/abiturient/assets/img/header-menu-bg-992.png");
-    padding-top: 48px;
-    padding-bottom: 40px;
-  }
-  @include breakpoint($bp-768) {
-    background-image: url("/abiturient/assets/img/header-menu-bg-768.png");
-    display: block;
-    padding: 38px 0 60px;
-  }
-  @include breakpoint($bp-390) {
-    background-image: url("/abiturient/assets/img/header-menu-bg-390.png");
-  }
 }
+
 .header-panels__menu-list {
   --menu-column-width: 416px;
   --menu-column-gap: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
-  @include breakpoint($bp-1200) {
-    --menu-column-width: 332px;
-  }
-  @include breakpoint($bp-992) {
-    --menu-column-width: 304px;
-    --menu-column-gap: 32px;
-  }
-  @include breakpoint($bp-768) {
-    display: block;
-  }
 }
+
 .header-panels__menu-heading {
   position: absolute;
   width: 1px;
@@ -71,14 +44,12 @@
   overflow: hidden;
   clip-path: inset(50%);
 }
+
 .header-panels__menu-item {
   display: flex;
   min-height: 80px;
-  @include breakpoint($bp-768) {
-    display: block;
-    min-height: 0;
-  }
 }
+
 .header-panels__section-btn {
   display: flex;
   align-items: center;
@@ -109,35 +80,12 @@
       color: var(--main-white-white-100);
     }
   }
-  @include breakpoint($bp-1200) {
-    padding: 24px 32px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include breakpoint($bp-992) {
-    min-height: 72px;
-    padding: 24px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    width: 100%;
-    min-height: 56px;
-    padding: 16px;
-    font-size: 16px;
-    line-height: 24px;
-    background-color: transparent;
-    &--active {
-      background-color: var(--main-accent-accent-100);
-    }
-  }
 }
+
 .header-panels__section-arrow {
   display: none;
-  @include breakpoint($bp-768) {
-    display: block;
-  }
 }
+
 .header-panels__submenu {
   position: absolute;
   top: 0;
@@ -146,11 +94,6 @@
   padding: 0;
   &[hidden] {
     display: none;
-  }
-  @include breakpoint($bp-768) {
-    position: static;
-    padding: 16px;
-    background-color: var(--main-white-white-100);
   }
 }
 .header-panels__submenu-title,
@@ -161,20 +104,8 @@
   line-height: 32px;
   letter-spacing: 0.06em;
   font-weight: 400;
-  @include breakpoint($bp-1200) {
-    margin-bottom: 32px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include breakpoint($bp-992) {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    display: none;
-  }
 }
+
 .header-panels__submenu-list {
   display: flex;
   flex-direction: column;
@@ -182,10 +113,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  @include breakpoint($bp-768) {
-    gap: 12px;
-  }
 }
+
 .header-panels__submenu-link {
   display: inline-flex;
   align-items: center;
@@ -202,12 +131,8 @@
   &:hover {
     color: var(--main-accent-accent-100);
   }
-  @include breakpoint($bp-768) {
-    width: 100%;
-    justify-content: space-between;
-    padding: 12px 0;
-  }
 }
+
 .header-panels__submenu-icon {
   display: block;
   flex-shrink: 0;
@@ -224,15 +149,15 @@
   mask-repeat: no-repeat;
   transition: transform 0.2s ease;
 }
+
 .header-panels__submenu-link:hover .header-panels__submenu-icon {
   transform: translateX(4px);
 }
+
 .header-panels__menu-branches {
   display: none;
-  @include breakpoint($bp-768) {
-    display: block;
-  }
 }
+
 .header-panels__search {
   flex: 1;
   min-height: 0;
@@ -249,32 +174,20 @@
   &[hidden] {
     display: none;
   }
-  @include breakpoint($bp-1440) {
-    background-image: url("/abiturient/assets/img/header-search-bg-1440.png");
-  }
-  @include breakpoint($bp-1200) {
-    background-image: url("/abiturient/assets/img/header-search-bg-1200.png");
-  }
-  @include breakpoint($bp-992) {
-    background-image: url("/abiturient/assets/img/header-search-bg-992.png");
-  }
-  @include breakpoint($bp-768) {
-    background-image: url("/abiturient/assets/img/header-search-bg-768.png");
-    padding: 16px 0 60px;
-  }
-  @include breakpoint($bp-390) {
-    background-image: url("/abiturient/assets/img/header-search-bg-390.png");
-  }
 }
+
 .header-panels__search-results {
   display: none;
 }
+
 .header-panels__search--results .header-panels__search-results {
   display: block;
 }
+
 .header-panels__search--empty .header-panels__search-empty {
   display: flex;
 }
+
 .header-panels__search-count {
   display: none;
   margin: 32px 0 16px;
@@ -288,6 +201,7 @@
 .header-panels__search--empty .header-panels__search-count {
   display: block;
 }
+
 .header-panels__result {
   display: flex;
   flex-direction: column;
@@ -312,6 +226,7 @@
     outline-offset: 2px;
   }
 }
+
 .header-panels__result-title {
   display: block;
   font-family: var(--font-family);
@@ -319,30 +234,16 @@
   font-size: 20px;
   line-height: 140%;
   color: var(--main-blue-blue-100);
-  @include breakpoint($bp-768) {
-    font-size: 16px;
-  }
-  @include breakpoint($bp-390) {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 143%;
-  }
 }
+
 .header-panels__result-text {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: var(--main-blue-blue-100);
-  @include breakpoint($bp-768) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  @include breakpoint($bp-390) {
-    font-size: 14px;
-    line-height: 143%;
-  }
 }
+
 .header-panels__search-empty {
   display: none;
   flex-direction: column;
@@ -353,13 +254,8 @@
   justify-content: center;
   border-radius: 4px;
   background-color: var(--main-white-white-100);
-  @include breakpoint($bp-390) {
-    width: 100%;
-    max-width: 358px;
-    height: 448px;
-    padding: 16px;
-  }
 }
+
 .header-panels__search-empty-title {
   margin: 0;
   font-family: var(--font-family);
@@ -367,25 +263,202 @@
   font-size: 20px;
   line-height: 28px;
   color: var(--main-blue-blue-100);
-  @include breakpoint($bp-390) {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-  }
 }
+
 .header-panels__search-empty-text {
   margin: 0;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  @include breakpoint($bp-390) {
-    display: none;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .header-panels__menu {
+    background-image: url("/abiturient/assets/img/header/header-bg-1440.png");
+  }
+
+  .header-panels__search {
+    background-image: url("/abiturient/assets/img/header-search-bg-1440.png");
   }
 }
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .header-panels__menu {
+    background-image: url("/abiturient/assets/img/header/header-bg-1200.png");
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  .header-panels__menu-list {
+    --menu-column-width: 332px;
+  }
+
+  .header-panels__section-btn {
+    padding: 24px 32px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .header-panels__submenu-title,
+  .header-panels__search-title {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .header-panels__search {
+    background-image: url("/abiturient/assets/img/header-search-bg-1200.png");
+  }
+}
+// 992 px
+
+@include breakpoint($bp-992) {
+  .header-panels__menu {
+    background-image: url("/abiturient/assets/img/header-menu-bg-992.png");
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  .header-panels__menu-list {
+    --menu-column-width: 304px;
+    --menu-column-gap: 32px;
+  }
+
+  .header-panels__section-btn {
+    min-height: 72px;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header-panels__submenu-title,
+  .header-panels__search-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header-panels__search {
+    background-image: url("/abiturient/assets/img/header-search-bg-992.png");
+  }
+}
+// 768 px
+
 @include breakpoint($bp-768) {
+  .header-panels__menu {
+    background-image: url("/abiturient/assets/img/header-menu-bg-768.png");
+    display: block;
+    padding: 38px 0 60px;
+  }
+
+  .header-panels__menu-list {
+    display: block;
+  }
+
+  .header-panels__menu-item {
+    display: block;
+    min-height: 0;
+  }
+
+  .header-panels__section-btn {
+    width: 100%;
+    min-height: 56px;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: transparent;
+    &--active {
+      background-color: var(--main-accent-accent-100);
+    }
+  }
+
+  .header-panels__section-arrow {
+    display: block;
+  }
+
+  .header-panels__submenu {
+    position: static;
+    padding: 16px;
+    background-color: var(--main-white-white-100);
+  }
+
+  .header-panels__submenu-title,
+  .header-panels__search-title {
+    display: none;
+  }
+
+  .header-panels__submenu-list {
+    gap: 12px;
+  }
+
+  .header-panels__submenu-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+
+  .header-panels__menu-branches {
+    display: block;
+  }
+
+  .header-panels__search {
+    background-image: url("/abiturient/assets/img/header-search-bg-768.png");
+    padding: 16px 0 60px;
+  }
+
+  .header-panels__result-title {
+    font-size: 16px;
+  }
+
+  .header-panels__result-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .header-panels__section-btn--active .header-panels__section-arrow {
     transform: rotate(180deg);
     filter: brightness(0) invert(1);
+  }
+}
+// 390 px
+
+@include breakpoint($bp-390) {
+  .header-panels__menu {
+    background-image: url("/abiturient/assets/img/header-menu-bg-390.png");
+  }
+
+  .header-panels__search {
+    background-image: url("/abiturient/assets/img/header-search-bg-390.png");
+  }
+
+  .header-panels__result-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  .header-panels__result-text {
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  .header-panels__search-empty {
+    width: 100%;
+    max-width: 358px;
+    height: 448px;
+    padding: 16px;
+  }
+
+  .header-panels__search-empty-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  .header-panels__search-empty-text {
+    display: none;
   }
 }

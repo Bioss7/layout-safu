@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .section--admission {
   position: relative;
   padding-top: 120px;
@@ -26,61 +27,8 @@
     bottom: -1px;
     background-image: url("/abiturient/assets/img/admission/admission-transition-bottom.svg");
   }
-  @include breakpoint($bp-1440) {
-    padding-top: 96.75px;
-    padding-bottom: 96.25px;
-    &::before,
-    &::after {
-      height: 57px;
-    }
-  }
-  @include breakpoint($bp-1200) {
-    padding-top: 96px;
-    padding-bottom: 96px;
-    &::before,
-    &::after {
-      height: 47.5px;
-    }
-  }
-  @include breakpoint($bp-992) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  @include breakpoint($bp-768) {
-    padding-top: 88px;
-    padding-bottom: 88px;
-    &::before,
-    &::after {
-      height: 32px;
-    }
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding-bottom: 88px;
-    &::before {
-      display: block;
-      height: 39.267px;
-      background-image: url("/abiturient/assets/img/admission/admission-transition-top-992.svg");
-    }
-    &::after {
-      height: 39.267px;
-      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-992.svg");
-    }
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 64px;
-    padding-bottom: 64px;
-    &::before,
-    &::after {
-      height: 30.4px;
-    }
-    &::before {
-      background-image: url("/abiturient/assets/img/admission/admission-transition-top-768.svg");
-    }
-    &::after {
-      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-768.svg");
-    }
-  }
 }
+
 .admission-background {
   position: absolute;
   z-index: -1;
@@ -90,67 +38,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   transform: rotate(180deg);
-  @include breakpoint($bp-768) {
-    background-image: url("/abiturient/assets/img/admission/admission-bg-390.png");
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    background-image: url("/abiturient/assets/img/admission/admission-bg-1920.png");
-  }
-  // Масштаб и смещение исходной заливки из transform Figma, поворот задан выше.
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
-    background-size: 135.76% 116.43%;
-    background-position: 73.2383% 99.8783%;
-  }
 }
-.section--admission .section-header {
-  @include breakpoint($bp-768) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 32px;
-  }
-}
+
 .admission-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  @include breakpoint($bp-1440) {
-    gap: 16px;
-  }
-  @include breakpoint($bp-768) {
-    flex-direction: column;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex-direction: row;
-    gap: 16px;
-  }
 }
+
 .admission-list > * {
   flex: 0 1 calc(25% - 15px);
   min-width: 0;
-  @include breakpoint($bp-1440) {
-    flex-basis: calc(25% - 12px);
-  }
-  // На планшете две колонки; адаптив 1200 сохраняет четыре позиции в ряду.
-  @include breakpoint($bp-992) {
-    flex-basis: calc(50% - 10px);
-  }
-  @include breakpoint($bp-768) {
-    flex-basis: auto;
-    min-height: 358px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    flex-basis: calc(50% - 12px);
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex: 0 1 calc(50% - 8px);
-    min-height: 0;
-  }
 }
+
 .study-card {
   // Замечание: отсутствие стиля [abiturient-admission] — ui/data/remarks.json.
   position: relative;
@@ -175,170 +75,45 @@
   &:hover {
     color: var(--main-blue-blue-100);
   }
-  @include breakpoint($bp-1440) {
-    padding: 16px;
-    filter: drop-shadow(4.788px 4.788px 0 var(--main-black));
-  }
-  @include breakpoint($bp-1200) {
-    padding: 12px;
-    filter: drop-shadow(4px 4px 0 var(--main-black));
-  }
-  @include breakpoint($bp-768) {
-    min-height: 358px;
-    aspect-ratio: auto;
-    padding: 24px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    aspect-ratio: 1;
-    padding: 16px;
-    min-height: min-content;
-  }
 }
+
 .study-card__arrow {
   position: absolute;
   right: 20px;
   top: 20px;
-  @include breakpoint($bp-1440) {
-    right: 16px;
-    top: 16px;
-  }
-  @include breakpoint($bp-1200) {
-    right: 12px;
-    top: 12px;
-  }
-  @include breakpoint($bp-768) {
-    right: 20px;
-    top: 20px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    top: 24px;
-    right: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    right: 16px;
-    top: 16px;
-  }
 }
+
 .study-card__arrow .card-arrow {
   width: 40px;
   height: 40px;
-  @include breakpoint($bp-1440) {
-    width: 24px;
-    height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    width: 20px;
-    height: 20px;
-  }
-  @include breakpoint($bp-768) {
-    width: 40px;
-    height: 40px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 48px;
-    height: 48px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 32px;
-    height: 32px;
-  }
 }
+
 .study-card:hover .card-arrow {
   color: var(---Accent-Accent-100, #00aeef);
   mask-image: url("/abiturient/assets/img/admission/icon-arrow-right.svg");
   -webkit-mask-image: url("/abiturient/assets/img/admission/icon-arrow-right.svg");
 }
+
 .study-card__body {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  @include breakpoint($bp-1440) {
-    gap: 6px;
-  }
-  @include breakpoint($bp-768) {
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 12px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    gap: 12px;
-  }
 }
+
 .study-card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
   height: 150px;
-  @include breakpoint($bp-1440) {
-    width: 76px;
-    height: 76px;
-  }
-  @include breakpoint($bp-1200) {
-    width: 64px;
-    height: 64px;
-  }
-  @include breakpoint($bp-768) {
-    width: 120px;
-    height: 120px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 150px;
-    height: 150px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 112px;
-    height: 112px;
-  }
 }
+
 .study-card__icon img {
   max-width: 100%;
   max-height: 100%;
-  // Размеры исходных SVG сохраняются; масштаб всей иллюстрации взят из Figma.
-  @include breakpoint($bp-1440) {
-    max-width: none;
-    max-height: none;
-    flex-shrink: 0;
-    transform: scale(0.510708);
-  }
-  @include breakpoint($bp-1200) {
-    transform: scale(0.426667);
-  }
-  @include breakpoint($bp-768) {
-    max-width: 100%;
-    max-height: 100%;
-    flex-shrink: 1;
-    transform: none;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    max-width: 100%;
-    max-height: 100%;
-    flex-shrink: 1;
-    transform: none;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    max-width: none;
-    max-height: none;
-    flex-shrink: 0;
-    transform: scale(0.746667);
-  }
 }
-.study-card__joined-text {
-  @include breakpoint($bp-1440) {
-    white-space: nowrap;
-  }
-  @include breakpoint($bp-768) {
-    white-space: normal;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-900) {
-    white-space: normal;
-  }
-}
+
 .study-card__title {
   margin: 0;
   font-variant: normal;
@@ -351,32 +126,9 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.04em;
-    overflow-wrap: anywhere;
-  }
+  color: #0b2d4e;
 }
+
 .study-card__description {
   margin: 0;
   font-variant: normal;
@@ -388,31 +140,9 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-1200) {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-  }
-  @include breakpoint($bp-768) {
-    font-weight: 500;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 500;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 14px;
-    line-height: 20px;
-  }
+  color: #0b2d4e;
 }
+
 .admission-note {
   display: flex;
   flex-direction: column;
@@ -422,29 +152,8 @@
   text-align: center;
   color: var(--main-white-white-100);
   padding: 32px;
-  @include breakpoint($bp-1440) {
-    gap: 12px;
-    padding: 12px;
-  }
-  @include breakpoint($bp-1200) {
-    gap: 8px;
-  }
-  @include breakpoint($bp-768) {
-    min-height: 358px;
-    padding: 24px 10px;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding: 24px;
-    gap: 12px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding: 16px;
-    aspect-ratio: 1;
-    gap: 12px;
-    min-height: min-content;
-  }
 }
+
 .admission-note h3 {
   margin: 0;
   font-variant: normal;
@@ -456,31 +165,9 @@
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.04em;
-  }
+  color: #ffffff;
 }
+
 .admission-note p {
   margin: 0;
   font-variant: normal;
@@ -492,102 +179,667 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
+  color: #ffffff;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .section--admission {
+    padding-top: 97px;
+    padding-bottom: 96px;
+    &::before,
+    &::after {
+      height: 57px;
+    }
+  }
+
+  .admission-list {
+    gap: 16px;
+  }
+
+  .admission-list > * {
+    flex-basis: calc(25% - 12px);
+  }
+
+  .study-card {
+    padding: 16px;
+    filter: drop-shadow(5px 5px 0 var(--main-black));
+  }
+
+  .study-card__arrow {
+    right: 16px;
+    top: 16px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .study-card__body {
+    gap: 6px;
+  }
+
+  .study-card__icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .study-card__icon img {
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
+    transform: scale(0.510708);
+  }
+
+  .study-card__joined-text {
+    white-space: nowrap;
+  }
+
+  .study-card__title {
     font-size: 16px;
     line-height: 24px;
   }
-  @include breakpoint($bp-1200) {
+
+  .study-card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .admission-note {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .admission-note h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .admission-note p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .section--admission {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    &::before,
+    &::after {
+      height: 48px;
+    }
+  }
+
+  .study-card {
+    padding: 12px;
+    filter: drop-shadow(4px 4px 0 var(--main-black));
+  }
+
+  .study-card__arrow {
+    right: 12px;
+    top: 12px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .study-card__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .study-card__icon img {
+    transform: scale(0.426667);
+  }
+
+  .study-card__title {
     font-size: 14px;
     line-height: 20px;
   }
-  @include breakpoint($bp-768) {
+
+  .study-card__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .admission-note {
+    gap: 8px;
+  }
+
+  .admission-note h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .admission-note p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+// 992 px
+
+@include breakpoint($bp-992) {
+  .section--admission {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .admission-list > * {
+    flex-basis: calc(50% - 10px);
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .section--admission {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    &::before,
+    &::after {
+      height: 32px;
+    }
+  }
+
+  .admission-background {
+    background-image: url("/abiturient/assets/img/admission/admission-bg-390.png");
+  }
+
+  .section--admission .section-header {
+    margin-bottom: 40px;
+  }
+
+  .admission-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .admission-list > * {
+    flex-basis: auto;
+    min-height: 358px;
+  }
+
+  .study-card {
+    min-height: 358px;
+    aspect-ratio: auto;
+    padding: 24px;
+  }
+
+  .study-card__arrow {
+    right: 20px;
+    top: 20px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .study-card__body {
+    gap: 16px;
+  }
+
+  .study-card__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .study-card__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    transform: none;
+  }
+
+  .study-card__joined-text {
+    white-space: normal;
+  }
+
+  .study-card__title {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .study-card__description {
+    font-weight: 500;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .admission-note {
+    min-height: 358px;
+    padding: 24px 10px;
+    gap: 16px;
+  }
+
+  .admission-note h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .admission-note p {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: normal;
     text-shadow: none;
   }
-  color: rgba(255, 255, 255, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+
+  .admission-note--first {
+    order: 1;
+  }
+
+  .admission-note--second {
+    order: 6;
+  }
+
+  .study-card--catalog {
+    order: 0;
+  }
+
+  .study-card--lists {
+    order: 2;
+  }
+
+  .study-card--rules {
+    order: 3;
+  }
+
+  .study-card--target {
+    order: 4;
+  }
+
+  .study-card--paid {
+    order: 5;
+  }
+
+  .study-card--results {
+    order: 7;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .section--admission {
+    padding-bottom: 88px;
+    &::before {
+      display: block;
+      height: 39px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-top-992.svg");
+    }
+    &::after {
+      height: 39px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-992.svg");
+    }
+  }
+
+  .admission-list {
+    gap: 24px;
+  }
+
+  .admission-list > * {
+    flex-basis: calc(50% - 12px);
+  }
+
+  .study-card {
+    padding: 24px;
+  }
+
+  .study-card__arrow {
+    top: 24px;
+    right: 24px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .study-card__body {
+    gap: 12px;
+  }
+
+  .study-card__icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .study-card__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    transform: none;
+  }
+
+  .study-card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .study-card__description {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  .admission-note {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .admission-note h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .admission-note p {
     font-size: 18px;
     line-height: 26px;
   }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+
+  .admission-note--second .br {
+    display: none;
+  }
+
+  .study-card--target {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
+
+  .study-card--paid {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
+
+  .study-card--results {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
+  // В макете 992 нижние карточки выровнены от строки со стрелкой, а не от низа.
+  .study-card--target .study-card__body,
+  .study-card--paid .study-card__body,
+  .study-card--results .study-card__body {
+    margin-top: calc((100vw - 768px) * 40 / 224);
+  }
+
+  .study-card--target .study-card__arrow .card-arrow,
+  .study-card--paid .study-card__arrow .card-arrow,
+  .study-card--results .study-card__arrow .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+}
+// 992 px
+
+@include screen-compact {
+  .admission-background {
+    background-size: 135.76% 116.43%;
+    background-position: 73.24% 99.88%;
+  }
+}
+// 900 px
+
+@include screen-900 {
+  .study-card__joined-text {
+    white-space: normal;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .section--admission {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &::before,
+    &::after {
+      height: 30px;
+    }
+    &::before {
+      background-image: url("/abiturient/assets/img/admission/admission-transition-top-768.svg");
+    }
+    &::after {
+      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-768.svg");
+    }
+  }
+
+  .admission-background {
+    background-image: url("/abiturient/assets/img/admission/admission-bg-1920.png");
+  }
+
+  .section--admission .section-header {
+    margin-bottom: 32px;
+  }
+
+  .admission-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .admission-list > * {
+    flex: 0 1 calc(50% - 8px);
+    min-height: 0;
+  }
+
+  .study-card {
+    aspect-ratio: 1;
+    padding: 16px;
+    min-height: min-content;
+  }
+
+  .study-card__arrow {
+    right: 16px;
+    top: 16px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .study-card__body {
+    gap: 12px;
+  }
+
+  .study-card__icon {
+    width: 112px;
+    height: 112px;
+  }
+
+  .study-card__icon img {
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
+    transform: scale(0.746667);
+  }
+
+  .study-card__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .admission-note {
+    padding: 16px;
+    aspect-ratio: 1;
+    gap: 12px;
+    min-height: min-content;
+  }
+
+  .admission-note h3 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+
+  .admission-note p {
     font-size: 16px;
     line-height: 24px;
   }
 }
-.admission-note--first {
-  @include breakpoint($bp-768) {
-    order: 1;
+// 576 px
+
+@include screen-576 {
+  .section--admission {
+    padding-bottom: 83px;
+    &::before,
+    &::after {
+      height: 51px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-576.svg");
+    }
+    padding-top: 81px;
+  }
+
+  .study-card {
+    padding: 12px;
+    aspect-ratio: 1;
+    min-height: min-content;
+  }
+
+  .study-card__arrow {
+    top: 12px;
+    right: 12px;
+  }
+
+  .study-card__body {
+    gap: 4px;
+  }
+
+  .study-card__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .study-card__icon img {
+    transform: scale(0.533333);
+  }
+
+  .study-card__title {
+    font-size: 14px;
+    line-height: 20px;
+    overflow-wrap: normal;
+  }
+
+  .study-card__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .admission-note {
+    padding: 12px;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .admission-note h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .admission-note p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
-.admission-note--second {
-  @include breakpoint($bp-768) {
-    order: 6;
+
+// 390 px
+@include breakpoint($bp-390) {
+  .section--admission .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+    text-shadow: 3px 4px var(--main-black);
   }
-}
-.admission-note--second .br {
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+
+  .section--admission {
+    padding-top: 88px;
+    padding-bottom: 83px;
+    &::before,
+    &::after {
+      height: 48px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-390.svg");
+    }
+  }
+
+  .section--admission .section-header {
+    margin-bottom: 40px;
+  }
+
+  .study-card {
+    padding: 24px;
+    filter: drop-shadow(4px 4px 0 var(--main-black));
+  }
+
+  .study-card__arrow {
+    right: 24px;
+    top: 24px;
+  }
+
+  .study-card__body {
+    gap: 0;
+  }
+
+  .study-card__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+  }
+
+  .study-card--lists .study-card__title,
+  .study-card--rules .study-card__title {
+    margin-bottom: 6px;
+  }
+
+  .study-card__first-line {
+    white-space: nowrap;
+  }
+
+  .study-card--lists .study-card__joined-text {
+    display: block;
+  }
+
+  .study-card--paid .study-card__title,
+  .study-card--results .study-card__title {
+    margin-bottom: 8px;
+  }
+
+  .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .admission-note {
+    padding: 0 2px;
+    gap: 12px;
+  }
+
+  .admission-note h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+  }
+
+  .admission-note p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .admission-note p .br {
     display: none;
-  }
-}
-.study-card--catalog {
-  @include breakpoint($bp-768) {
-    order: 0;
-  }
-}
-.study-card--lists {
-  @include breakpoint($bp-768) {
-    order: 2;
-  }
-}
-.study-card--rules {
-  @include breakpoint($bp-768) {
-    order: 3;
-  }
-}
-.study-card--target {
-  @include breakpoint($bp-768) {
-    order: 4;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    justify-content: flex-start;
-    min-height: min-content;
-  }
-}
-.study-card--paid {
-  @include breakpoint($bp-768) {
-    order: 5;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    justify-content: flex-start;
-    min-height: min-content;
-  }
-}
-.study-card--results {
-  @include breakpoint($bp-768) {
-    order: 7;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    justify-content: flex-start;
-    min-height: min-content;
-  }
-}
-
-// В макете 992 нижние карточки выровнены от строки со стрелкой, а не от низа.
-.study-card--target .study-card__body,
-.study-card--paid .study-card__body,
-.study-card--results .study-card__body {
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    margin-top: calc((100vw - 768px) * 40 / 224);
-  }
-}
-
-.study-card--target .study-card__arrow .card-arrow,
-.study-card--paid .study-card__arrow .card-arrow,
-.study-card--results .study-card__arrow .card-arrow {
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 32px;
-    height: 32px;
   }
 }

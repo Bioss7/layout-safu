@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .form-field {
   position: relative;
   display: flex;
@@ -16,10 +17,8 @@
   &:focus-within {
     background-color: var(--main-panel);
   }
-  @include breakpoint($bp-768) {
-    padding: 16px;
-  }
 }
+
 .form-field__label {
   transition:
     color 160ms,
@@ -27,7 +26,6 @@
     line-height 160ms;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -35,23 +33,9 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
-
-  @include breakpoint($bp-1440) {
-    line-height: 20px;
-  }
-
-  @include breakpoint($bp-1200) {
-    font-weight: 600;
-    line-height: 22px;
-  }
-
-  @include breakpoint($bp-768) {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
   color: rgba(11, 45, 78, 0.6);
 }
+
 .form-field__input {
   transition:
     color 160ms,
@@ -68,7 +52,6 @@
   color: var(--main-blue-blue-100);
   font-variant: normal;
   font-stretch: normal;
-
   &::placeholder {
     color: var(--main-blue-blue-40);
     opacity: 1;
@@ -76,7 +59,6 @@
   &:focus {
     outline: none;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -84,21 +66,8 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-
-  @include breakpoint($bp-1440) {
-    line-height: 26px;
-  }
-
-  @include breakpoint($bp-1200) {
-    font-weight: 400;
-    line-height: 28px;
-  }
-
-  @include breakpoint($bp-768) {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
 }
+
 .form-field__error {
   color: var(--main-error);
   font-style: normal;
@@ -112,6 +81,7 @@
     display: none;
   }
 }
+
 .form-field--error {
   border-color: var(--main-error);
 }
@@ -119,28 +89,31 @@ textarea.form-field__input {
   overflow-y: auto;
   max-height: 320px;
   @include accent-scrollbar;
-  @include breakpoint($bp-768) {
-    min-height: 112px;
-  }
 }
+
 .form-field:hover .form-field__input::placeholder {
   color: var(--main-accent-accent-100);
 }
+
 .form-field:focus-within .form-field__label {
   font-size: 12px;
   line-height: 16px;
 }
+
 .form-field:focus-within .form-field__input {
   font-size: 22px;
   line-height: 32px;
 }
+
 .form-field__input::placeholder {
   transition: color 160ms;
 }
 // Замечание: отсутствие стиля [abiturient-form-field] — ui/data/remarks.json.
+
 .form-field__input:disabled {
   cursor: not-allowed;
 }
+
 .form-field__input:read-only {
   resize: none;
 }
@@ -152,4 +125,48 @@ textarea.form-field__input {
 .form-field__input:focus-visible {
   outline: 2px solid var(--main-accent-accent-100);
   outline-offset: 4px;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .form-field__label {
+    line-height: 20px;
+  }
+
+  .form-field__input {
+    line-height: 26px;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .form-field__label {
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .form-field__input {
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .form-field {
+    padding: 16px;
+  }
+
+  .form-field__label {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .form-field__input {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+  textarea.form-field__input {
+    min-height: 112px;
+  }
 }

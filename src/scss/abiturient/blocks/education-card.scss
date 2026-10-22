@@ -1,67 +1,25 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .education-layout {
   display: flex;
   align-items: stretch;
   gap: 20px;
-  @include breakpoint($bp-1200) {
-    width: calc(100% - 2px);
-    flex-direction: column;
-    gap: 16px;
-  }
-  @include breakpoint($bp-768) {
-    width: 100%;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 100%;
-  }
 }
+
 .education-list {
   display: flex;
   flex-wrap: wrap;
-  flex: 0 1 calc(66.666667% - 6.666667px);
+  flex: 0 1 calc(66.67% - 7px);
   gap: 20px;
   min-width: 0;
-  @include breakpoint($bp-1440) {
-    flex-basis: calc(66.666667% - 2.666667px);
-  }
-  @include breakpoint($bp-1200) {
-    flex-basis: auto;
-    gap: 16px;
-  }
-  @include breakpoint($bp-768) {
-    flex-direction: column;
-    gap: 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex-direction: row;
-  }
 }
+
 .education-list > .education-card {
   flex: 0 1 calc(50% - 10px);
   min-height: 339px;
-  @include breakpoint($bp-1440) {
-    flex-basis: calc(50% - 12px);
-    min-height: 256px;
-  }
-  @include breakpoint($bp-1200) {
-    flex-basis: calc(50% - 8px);
-    min-height: 328px;
-  }
-  @include breakpoint($bp-768) {
-    flex-basis: auto;
-    min-height: 358px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    min-height: 275px;
-    padding: 17px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex: 0 1 calc(50% - 8px);
-    min-height: 220px;
-  }
 }
+
 .education-card {
   // Замечание: отсутствие стиля [abiturient-education-card] — ui/data/remarks.json.
   display: flex;
@@ -84,66 +42,18 @@
     color: var(--main-white-white-100);
     box-shadow: 3px 3px var(--main-accent-accent-100);
   }
-  @include breakpoint($bp-1440) {
-    padding: 18px;
-    border-width: 2px;
-    gap: 10.914px;
-  }
-  @include breakpoint($bp-1200) {
-    padding: 21px;
-    border-width: 3px;
-    gap: 16px;
-  }
-  @include breakpoint($bp-768) {
-    padding: 20px;
-    min-height: 358px;
-    border-width: 4px;
-    gap: 24px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding: 14px;
-    min-height: 220px;
-    border-width: 2.607px;
-    gap: 12px;
-  }
 }
+
 .education-card--accent {
   background-color: var(--main-accent-accent-100);
   color: var(--main-white-white-100);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    .education-card__meta {
-      margin-bottom: 13.393px;
-    }
-    .education-card__title {
-      margin-bottom: 10.044px;
-    }
-  }
 }
+
 .education-card--international {
-  flex: 0 1 calc(33.333333% - 13.333333px);
+  flex: 0 1 calc(33.33% - 13px);
   background-color: var(--main-panel);
-  @include breakpoint($bp-1440) {
-    flex-basis: calc(33.333333% - 17.333333px);
-    min-height: 532px;
-  }
-  @include breakpoint($bp-1200) {
-    flex-basis: auto;
-    min-height: 328px;
-  }
-  @include breakpoint($bp-768) {
-    min-height: 380px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    min-height: 275px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    min-height: 220px;
-    flex-basis: auto;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding: 17px;
-  }
 }
+
 .education-card__meta {
   transition: color 180ms;
   display: flex;
@@ -158,39 +68,13 @@
   line-height: 16px;
   font-family: var(--font-family);
   color: rgba(11, 45, 78, 0.4);
-  @include breakpoint($bp-1440) {
-    margin-bottom: 12px;
-  }
-  @include breakpoint($bp-1200) {
-    margin-bottom: 15.543px;
-    font-size: 14px;
-    line-height: 22px;
-  }
-  @include breakpoint($bp-768) {
-    margin-bottom: 16px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 12px;
-    line-height: 16px;
-    margin-bottom: 16px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    margin-bottom: 10.43px;
-    flex-wrap: wrap;
-    font-size: 12px;
-    line-height: 16px;
-  }
 }
+
 .education-card__title {
   margin: 0 0 12px;
   font-variant: normal;
   font-stretch: normal;
   overflow-wrap: anywhere;
-  @include breakpoint($bp-768) {
-    overflow-wrap: normal;
-  }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -198,39 +82,9 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-  @include breakpoint($bp-1440) {
-    margin-bottom: 9.086px;
-    font-size: 28px;
-    line-height: 36px;
-  }
-  @include breakpoint($bp-1200) {
-    margin-bottom: 11.657px;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0em;
-  }
-  @include breakpoint($bp-768) {
-    margin-bottom: 12px;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-  color: rgba(11, 45, 78, 1);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.04em;
-    margin-bottom: 12px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.04em;
-    margin-bottom: 7.822px;
-    overflow-wrap: anywhere;
-  }
+  color: #0b2d4e;
 }
+
 .education-card__description {
   transition: color 180ms;
   margin: 0;
@@ -243,59 +97,16 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  @include breakpoint($bp-1440) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  @include breakpoint($bp-1200) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
   color: rgba(11, 45, 78, 0.6);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    font-size: 14px;
-    line-height: 20px;
-  }
 }
+
 .education-card__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    flex-wrap: wrap;
-  }
 }
-.education-card__bottom .card-arrow {
-  @include breakpoint($bp-1440) {
-    width: 16px;
-    height: 16px;
-  }
-  @include breakpoint($bp-1200) {
-    width: 24px;
-    height: 24px;
-  }
-  @include breakpoint($bp-768) {
-    width: 40px;
-    height: 40px;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    width: 33.481px;
-    height: 33.481px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    width: 32px;
-    height: 32px;
-  }
-}
+
 .education-card__count {
   transition:
     color 180ms,
@@ -316,46 +127,6 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-shadow: 2px 2px 0px #000;
-  @include breakpoint($bp-1440) {
-    padding: 4px 10px;
-    font-size: 16px;
-    line-height: 24px;
-    text-shadow: 1.5143px 1.5143px 0px #000;
-  }
-  @include breakpoint($bp-1200) {
-    padding: 6px 14px;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0;
-    text-shadow: 1.9429px 1.9429px 0px #000;
-  }
-  @include breakpoint($bp-768) {
-    font-size: 18px;
-    line-height: normal;
-    text-shadow: 2px 2px 0px #000;
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.04em;
-    padding: 8px 14px;
-    border-width: 1.674px;
-    border-color: var(--main-blue-blue-100);
-    text-shadow: 2px 2px #000;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    text-transform: uppercase;
-    line-height: 18px;
-    padding: 6px 12px;
-    letter-spacing: 0.04em;
-    font-size: calc(10px + (100vw - 390px) * 2 / 378);
-  }
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding: 6px 12px;
-    border-width: 2px;
-    border-color: var(--main-white-white-100);
-    text-transform: uppercase;
-  }
 }
 .education-card--accent .education-card__description,
 .education-card--accent .education-card__meta,
@@ -363,18 +134,18 @@
 .education-card:hover .education-card__meta {
   color: rgba(255, 255, 255, 0.8);
 }
+
 .education-card--accent .education-card__count {
   background-color: var(--main-accent-accent-100);
-  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    border-color: var(--main-white-white-100);
-  }
 }
+
 .education-card:hover .education-card__count {
   text-shadow: none;
   background-color: var(--main-white-white-100);
   color: var(--main-blue-blue-100);
   box-shadow: 3px 3px var(--main-accent-accent-100);
 }
+
 .education-card:hover .card-arrow {
   color: var(--main-white-white-100);
   mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
@@ -384,4 +155,428 @@
 .education-card:hover .education-card__title,
 .education-card:focus-visible .education-card__title {
   color: #fff;
+}
+// 1440 px
+
+@include breakpoint($bp-1440) {
+  .education-list {
+    flex-basis: calc(66.67% - 3px);
+  }
+
+  .education-list > .education-card {
+    flex-basis: calc(50% - 12px);
+    min-height: 256px;
+  }
+
+  .education-card {
+    padding: 18px;
+    border-width: 2px;
+    gap: 11px;
+  }
+
+  .education-card--international {
+    flex-basis: calc(33.33% - 17px);
+    min-height: 532px;
+  }
+
+  .education-card__meta {
+    margin-bottom: 12px;
+  }
+
+  .education-card__title {
+    margin-bottom: 9px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .education-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .education-card__count {
+    padding: 4px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-shadow: 2px 2px 0px #000;
+  }
+}
+// 1200 px
+
+@include breakpoint($bp-1200) {
+  .education-layout {
+    width: calc(100% - 2px);
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .education-list {
+    flex-basis: auto;
+    gap: 16px;
+  }
+
+  .education-list > .education-card {
+    flex-basis: calc(50% - 8px);
+    min-height: 328px;
+  }
+
+  .education-card {
+    padding: 21px;
+    border-width: 3px;
+    gap: 16px;
+  }
+
+  .education-card--international {
+    flex-basis: auto;
+    min-height: 328px;
+  }
+
+  .education-card__meta {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .education-card__title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0em;
+  }
+
+  .education-card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .education-card__count {
+    padding: 6px 14px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-shadow: 2px 2px 0px #000;
+  }
+}
+// 768 px
+
+@include breakpoint($bp-768) {
+  .education-layout {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .education-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .education-list > .education-card {
+    flex-basis: auto;
+    min-height: 358px;
+  }
+
+  .education-card {
+    padding: 20px;
+    min-height: 358px;
+    border-width: 4px;
+    gap: 24px;
+  }
+
+  .education-card--international {
+    min-height: 380px;
+  }
+
+  .education-card__meta {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .education-card__title {
+    overflow-wrap: normal;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .education-card__description {
+    letter-spacing: normal;
+    text-shadow: none;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .education-card__count {
+    font-size: 18px;
+    line-height: normal;
+    text-shadow: 2px 2px 0px #000;
+  }
+}
+// 992 px
+
+@include screen-tablet {
+  .education-layout {
+    width: 100%;
+  }
+
+  .education-list > .education-card {
+    min-height: 275px;
+    padding: 17px;
+  }
+
+  .education-card--accent {
+    .education-card__meta {
+      margin-bottom: 13px;
+    }
+    .education-card__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .education-card--international {
+    min-height: 275px;
+    padding: 17px;
+  }
+
+  .education-card__meta {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  .education-card__title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .education-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 33px;
+    height: 33px;
+  }
+
+  .education-card__count {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-shadow: 2px 2px #000;
+    padding: 6px 12px;
+    border-width: 2px;
+    border-color: var(--main-white-white-100);
+    text-transform: uppercase;
+  }
+
+  .education-card--accent .education-card__count {
+    border-color: var(--main-white-white-100);
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .education-list {
+    flex-direction: row;
+  }
+
+  .education-list > .education-card {
+    flex: 0 1 calc(50% - 8px);
+    min-height: 220px;
+  }
+
+  .education-card {
+    padding: 14px;
+    min-height: 220px;
+    border-width: 3px;
+    gap: 12px;
+  }
+
+  .education-card--international {
+    min-height: 220px;
+    flex-basis: auto;
+  }
+
+  .education-card__meta {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .education-card__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+  }
+
+  .education-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .education-card__bottom {
+    flex-wrap: wrap;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .education-card__count {
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 6px 12px;
+    letter-spacing: 0.04em;
+    font-size: 12px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .education-list {
+    flex-direction: column;
+  }
+
+  .education-list > .education-card {
+    flex-basis: auto;
+    min-height: 296px;
+    padding: 21px;
+    box-shadow: 5px 5px var(--main-black);
+  }
+
+  .education-card {
+    padding: 24px;
+    min-height: 296px;
+    border-width: 3px;
+    gap: 40px;
+  }
+
+  .education-card--international {
+    height: auto;
+    min-height: 296px;
+    padding: 21px;
+    gap: 12px;
+  }
+
+  .section--education {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section--education .section-header {
+    margin-bottom: 32px;
+  }
+
+  .education-card__title {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+    overflow-wrap: normal;
+  }
+
+  .education-card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .education-card__count {
+    text-transform: none;
+    line-height: 24px;
+    padding: 9px 17px;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    border-width: 3px;
+    box-shadow: 5px 5px var(--main-black);
+    text-shadow: 3px 3px var(--main-black);
+  }
+
+  .education-card__meta {
+    margin-bottom: 16px;
+  }
+}
+
+// 390 px
+@include breakpoint($bp-390) {
+  // Замечание: отсутствие стиля [abiturient-390-bachelor-copy] — ui/data/remarks.json.
+  .section--education .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
+
+  .education-list > .education-card {
+    min-height: 222px;
+  }
+
+  .education-card {
+    min-height: 222px;
+    padding: 14px;
+    border-width: 2px;
+    gap: 24px;
+    box-shadow: 3px 3px var(--main-black);
+  }
+
+  .education-card--international {
+    min-height: 290px;
+  }
+
+  .education-card__meta {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .education-card__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+
+  .education-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .education-card__count {
+    padding: 6px 12px;
+    border-width: 2px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-shadow: 2px 2px var(--main-black);
+  }
+
+  .education-card__bottom .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
 }

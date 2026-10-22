@@ -1,5 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
+
 .breadcrumbs {
   position: relative;
   z-index: 2;
@@ -12,13 +13,8 @@
   line-height: 24px;
   font-family: var(--font-family);
   color: var(--main-white-white-100);
-  @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
-    padding-top: 36px;
-  }
-  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
-    padding-top: 40px;
-  }
 }
+
 .breadcrumbs__list {
   display: flex;
   align-items: center;
@@ -27,6 +23,7 @@
   padding: 0;
   list-style: none;
 }
+
 .breadcrumbs__link {
   text-decoration: none;
   transition: color 160ms;
@@ -34,6 +31,7 @@
     color: var(---Accent-Accent-100, #00aeef);
   }
 }
+
 .breadcrumbs__current {
   display: flex;
   align-items: center;
@@ -46,5 +44,32 @@
     border-top: 2px solid currentColor;
     border-right: 2px solid currentColor;
     transform: rotate(45deg);
+  }
+}
+// 992 px
+
+@include screen-tablet-wide {
+  .breadcrumbs {
+    padding-top: 36px;
+  }
+}
+// 768 px
+
+@include screen-768 {
+  .breadcrumbs {
+    padding-top: 40px;
+  }
+}
+// 576 px
+
+@include screen-576 {
+  .breadcrumbs {
+    padding-top: 32px;
+    margin-left: -4px;
+  }
+
+  .breadcrumbs__list {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }

@@ -5,7 +5,7 @@
       const tabs = [...list.querySelectorAll(".js-tab")];
       const panels = [...root.querySelectorAll(".js-tab-panel")];
 
-      function activate(tab, moveFocus = false) {
+      function activate(tab, moveFocus = false, revealTab = true) {
         const selectedKey = tab.dataset.tab;
         tabs.forEach((item) => {
           const selected = item === tab;
@@ -25,7 +25,10 @@
         }
         root.dispatchEvent(new CustomEvent("tabchange", { detail: { key: selectedKey } }));
         if (moveFocus) tab.focus({ preventScroll: true });
-        // Прокручиваем только вкладки, сохраняя положение страницы.
+        // Начальный кадр сохраняет начало ленты, как в макете.
+        if (!revealTab) return;
+
+        // После действия прокручиваем только вкладки, сохраняя положение страницы.
         const left = tab.offsetLeft - list.offsetLeft;
         if (left < list.scrollLeft) list.scrollLeft = left;
         if (left + tab.offsetWidth > list.scrollLeft + list.clientWidth) {
@@ -49,7 +52,16 @@
       });
 
       const active = tabs.find((tab) => tab.getAttribute("aria-selected") === "true") || tabs[0];
-      activate(active);
+      activate(active, false, false);
+      // В кадре FAQ 390 лента начинается с выбранной категории «Бюджет».
+      if (root.classList.contains("faq") && window.matchMedia("(max-width: 390px)").matches) {
+        // Загруженный шрифт меняет ширины: позицию вычисляем после его загрузки.
+        document.fonts.ready.then(() => {
+          if (active.getAttribute("aria-selected") === "true") {
+            list.scrollLeft = active.offsetLeft - list.offsetLeft;
+          }
+        });
+      }
     });
   }
 
