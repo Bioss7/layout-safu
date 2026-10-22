@@ -59,7 +59,7 @@
   text-decoration: none;
   transition: color 0.2s ease;
   &:hover {
-    color: var(---Accent-Accent-100, #00aeef);
+    color: var(--main-accent-accent-100);
   }
 }
 
@@ -102,7 +102,7 @@
   text-align: left;
   transition: color 0.2s ease;
   &:hover {
-    color: var(---Accent-Accent-100, #00aeef);
+    color: var(--main-accent-accent-100);
   }
 }
 .contact-link__icon,
@@ -152,7 +152,7 @@
 
 .contact-map {
   // Замечание: отсутствие стиля [abiturient-contact-map-1440] — ui/data/remarks.json.
-  box-shadow: 4px 4px 0 0 #000;
+  box-shadow: 4px 4px 0 0 var(--main-black);
   flex: 0 0 560px;
   min-width: 0;
 }

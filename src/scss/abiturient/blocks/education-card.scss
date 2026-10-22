@@ -82,7 +82,7 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .education-card__description {
@@ -126,7 +126,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  text-shadow: 2px 2px 0px #000;
+  text-shadow: 2px 2px 0px var(--main-black);
 }
 .education-card--accent .education-card__description,
 .education-card--accent .education-card__meta,
@@ -154,7 +154,7 @@
 .education-card--accent .education-card__title,
 .education-card:hover .education-card__title,
 .education-card:focus-visible .education-card__title {
-  color: #fff;
+  color: var(--main-white-white-100);
 }
 // 1440 px
 
@@ -203,7 +203,7 @@
     padding: 4px 10px;
     font-size: 16px;
     line-height: 24px;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 2px 0px var(--main-black);
   }
 }
 // 1200 px
@@ -264,7 +264,7 @@
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 2px 0px var(--main-black);
   }
 }
 // 768 px
@@ -324,7 +324,7 @@
   .education-card__count {
     font-size: 18px;
     line-height: normal;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 2px 0px var(--main-black);
   }
 }
 // 992 px
@@ -380,7 +380,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.04em;
-    text-shadow: 2px 2px #000;
+    text-shadow: 2px 2px var(--main-black);
     padding: 6px 12px;
     border-width: 2px;
     border-color: var(--main-white-white-100);

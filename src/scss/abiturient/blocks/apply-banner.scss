@@ -33,8 +33,8 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-  text-shadow: 2px 3px 0px #000;
-  color: #ffffff;
+  text-shadow: 2px 3px 0px var(--main-black);
+  color: var(--main-white-white-100);
 }
 
 .apply-banner__text {
@@ -48,7 +48,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .apply-banner .button {
@@ -193,7 +193,7 @@
     line-height: 28px;
     letter-spacing: 0.04em;
     margin-bottom: 10px;
-    text-shadow: 2px 3px #000;
+    text-shadow: 2px 3px var(--main-black);
   }
 
   .apply-banner__text {

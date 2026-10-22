@@ -56,7 +56,7 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .applicant-hero__status li {
@@ -85,8 +85,8 @@
   font-size: 104px;
   line-height: 104px;
   letter-spacing: 0.04em;
-  text-shadow: 3px 4px 0px #000;
-  color: #ffffff;
+  text-shadow: 3px 4px 0px var(--main-black);
+  color: var(--main-white-white-100);
 }
 
 .applicant-hero__year {
@@ -118,7 +118,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .applicant-hero__links {
@@ -141,7 +141,7 @@
   font-stretch: normal;
   transition: color 0.2s ease;
   &:hover {
-    color: var(---Accent-Accent-100, #00aeef);
+    color: var(--main-accent-accent-100);
   }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -150,8 +150,8 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  text-shadow: 2px 2px 0px #000;
-  color: #ffffff;
+  text-shadow: 2px 2px 0px var(--main-black);
+  color: var(--main-white-white-100);
 }
 
 .hero-link .card-arrow {
@@ -161,7 +161,7 @@
   mask-image: none;
   -webkit-mask-image: none;
   // Тень на обёртке: маска дочернего элемента не обрезает смещённый контур.
-  filter: drop-shadow(2px 2px 0 #000);
+  filter: drop-shadow(2px 2px 0 var(--main-black));
 }
 
 .hero-link .card-arrow::before {
@@ -366,7 +366,7 @@
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -2px;
-    text-shadow: #000000 3px 4px 0px;
+    text-shadow: var(--main-black) 3px 4px 0px;
   }
 
   .applicant-hero__year {
@@ -393,7 +393,7 @@
     padding: 8px 16px 12px 0;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: #000000 2px 2px 0px;
+    text-shadow: var(--main-black) 2px 2px 0px;
   }
 
   .applicant-hero__art {

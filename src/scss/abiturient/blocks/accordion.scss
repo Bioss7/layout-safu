@@ -1,6 +1,5 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
-@use "sass:list";
 
 .faq__panel {
   margin-top: 40px;
@@ -115,11 +114,30 @@
 
   .faq .tabs__tab {
     padding-bottom: 14px;
-    $tab-widths: 354px, 352px, 466px, 252px, 222px, 149px, 181px, 242px;
-    @for $index from 1 through list.length($tab-widths) {
-      &:nth-child(#{$index}) {
-        width: list.nth($tab-widths, $index);
-      }
+    // Ширины вкладок сверены с Figma; значения заданы явно по порядку вкладок.
+    &:nth-child(1) {
+      width: 354px;
+    }
+    &:nth-child(2) {
+      width: 352px;
+    }
+    &:nth-child(3) {
+      width: 466px;
+    }
+    &:nth-child(4) {
+      width: 252px;
+    }
+    &:nth-child(5) {
+      width: 222px;
+    }
+    &:nth-child(6) {
+      width: 149px;
+    }
+    &:nth-child(7) {
+      width: 181px;
+    }
+    &:nth-child(8) {
+      width: 242px;
     }
   }
 
@@ -266,8 +284,7 @@
   }
 
   .accordion__trigger {
-    // В закрытой карточке Figma высотой 100px три строки по 26px центрированы.
-    padding: 11px 16px;
+    padding: 16px;
   }
 
   #faq-panel-budget .faq__column:nth-child(2) .accordion:nth-child(3) .accordion__trigger {

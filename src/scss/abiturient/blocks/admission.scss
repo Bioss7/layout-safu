@@ -89,7 +89,7 @@
 }
 
 .study-card:hover .card-arrow {
-  color: var(---Accent-Accent-100, #00aeef);
+  color: var(--main-accent-accent-100);
   mask-image: url("/abiturient/assets/img/admission/icon-arrow-right.svg");
   -webkit-mask-image: url("/abiturient/assets/img/admission/icon-arrow-right.svg");
 }
@@ -126,7 +126,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .study-card__description {
@@ -140,7 +140,7 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .admission-note {
@@ -165,7 +165,7 @@
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .admission-note p {
@@ -179,7 +179,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 // 1440 px
 
@@ -781,6 +781,7 @@
 
   .study-card {
     padding: 24px;
+    width: 100%;
     filter: drop-shadow(4px 4px 0 var(--main-black));
   }
 

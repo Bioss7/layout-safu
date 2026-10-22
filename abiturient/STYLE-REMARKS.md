@@ -2,7 +2,7 @@
 
 Сгенерировано из `ui/data/remarks.json` командой `pnpm remarks:md`. Этот Markdown не редактируется вручную. В коде находятся только ссылки по ID; номера строк вычисляются автоматически.
 
-- Замечание: отсутствие стиля — блок «Вопросы и ответы», элемент .accordion__trigger: в макете отсутствует оформление :active и :disabled; сохранено базовое оформление. [src/scss/abiturient/blocks/accordion.scss:33](../src/scss/abiturient/blocks/accordion.scss#L33)
+- Замечание: отсутствие стиля — блок «Вопросы и ответы», элемент .accordion__trigger: в макете отсутствует оформление :active и :disabled; сохранено базовое оформление. [src/scss/abiturient/blocks/accordion.scss:32](../src/scss/abiturient/blocks/accordion.scss#L32)
 - Замечание: отсутствие стиля — блок «Всё для поступления», элемент .study-card: в макете отсутствует оформление :active; сохранено базовое оформление. [src/scss/abiturient/blocks/admission.scss:55](../src/scss/abiturient/blocks/admission.scss#L55)
 - Замечание: отсутствие стиля — блок «Уровни образования», элемент .education-card: в макете отсутствует оформление :active; сохранено базовое оформление. [src/scss/abiturient/blocks/education-card.scss:24](../src/scss/abiturient/blocks/education-card.scss#L24)
 - Замечание: отсутствие стиля — блок «Больше возможностей», элемент .feature-card: в макете отсутствует оформление :active; сохранено базовое оформление. [src/scss/abiturient/blocks/feature-card.scss:11](../src/scss/abiturient/blocks/feature-card.scss#L11)

@@ -104,7 +104,7 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .feature-card__description {
@@ -117,7 +117,7 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 // Ширины текстовых групп из макета определяют естественные переносы.
 .feature-card--1 .feature-card__body,

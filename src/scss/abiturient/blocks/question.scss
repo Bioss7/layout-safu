@@ -23,7 +23,7 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .question-form__fields {
@@ -46,7 +46,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-white-white-100);
 }
 
 .question-form__consent {
@@ -117,7 +117,7 @@
   font-size: 104px;
   line-height: 90px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .answers-card__title {
@@ -131,7 +131,7 @@
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .answers-card__links {
@@ -157,7 +157,7 @@
   font-variant: normal;
   font-stretch: normal;
   &:hover {
-    color: var(---Accent-Accent-100, #00aeef);
+    color: var(--main-accent-accent-100);
   }
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
@@ -166,7 +166,7 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .answers-card__link span:first-child {
@@ -206,11 +206,11 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.04em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .answers-card .button--text:hover {
-  color: var(---Accent-Accent-100, #00aeef);
+  color: var(--main-accent-accent-100);
 }
 
 .answers-card .button--text:active {

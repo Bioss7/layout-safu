@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .section--reviews .reviews-slider {
@@ -42,7 +42,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .section--reviews .link-arrow--stories::after {
@@ -71,7 +71,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-  color: #0b2d4e;
+  color: var(--main-blue-blue-100);
 }
 
 .section--reviews .review-card__link {
@@ -82,16 +82,17 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-  color: #00aeef;
+  color: var(--main-accent-accent-100);
 }
 
 .section--reviews .link-arrow--stories:hover {
-  color: var(---Accent-Accent-100, #00aeef);
+  color: var(--main-accent-accent-100);
 }
 
 .section--reviews .link-arrow--stories:active {
   color: var(--main-blue-blue-90);
 }
+
 // 1440 px
 
 @include breakpoint($bp-1440) {
@@ -137,6 +138,7 @@
     line-height: 24px;
   }
 }
+
 // 1200 px
 
 @include breakpoint($bp-1200) {
@@ -188,6 +190,7 @@
     line-height: 26px;
   }
 }
+
 // 768 px
 
 @include breakpoint($bp-768) {
@@ -272,6 +275,7 @@
     text-shadow: none;
   }
 }
+
 // 390 px
 
 @include breakpoint($bp-390) {
@@ -279,6 +283,7 @@
     height: 188px;
   }
 }
+
 // 992 px
 
 @include screen-tablet {
@@ -334,6 +339,7 @@
     margin-top: 0;
   }
 }
+
 // 992 px
 
 @include screen-compact {
@@ -347,11 +353,13 @@
 
   .section--reviews .arrow-btn {
     background-color: var(--main-panel);
+
     &:hover {
       background-color: var(--main-accent-accent-60);
     }
   }
 }
+
 // 768 px
 
 @include screen-768 {
@@ -436,6 +444,7 @@
     line-height: 26px;
   }
 }
+
 // 576 px
 
 @include screen-576 {
@@ -592,17 +601,18 @@
 
   .section--reviews .link-arrow--stories {
     padding: 10px 0;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    font-style: normal;
     font-weight: 800;
-    letter-spacing: 0.04em;
+    line-height: 18px;
+    letter-spacing: 0.48px;
     gap: 10px;
     white-space: nowrap;
   }
 
   .section--reviews .link-arrow--stories::after {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     mask-size: 11px 11px;
     -webkit-mask-size: 11px 11px;
   }
