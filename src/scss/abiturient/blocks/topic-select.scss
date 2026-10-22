@@ -24,30 +24,44 @@
 }
 .topic-select__list {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 100%;
+  right: 0;
+  left: 0;
   z-index: 5;
-  max-height: var(--topic-space, 40dvh);
-  @include accent-scrollbar;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   overflow-y: auto;
+  max-height: 260px;
+  @include accent-scrollbar;
   margin: 0;
-  padding: 12px;
+  padding: 12px 0;
+  padding-right: inherit;
+  padding-bottom: inherit;
+  padding-left: inherit;
+  border-bottom: 1px solid var(--main-blue-blue-40);
+  background-color: var(--main-panel);
   list-style: none;
-  background-color: var(--main-white-white-100);
-  border: 1px solid var(--main-blue-blue-40);
-  box-shadow: 2px 2px var(--main-black);
 }
 .topic-select__icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
+.topic-select__arrow {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
 .topic-select__option {
   transition:
     color 160ms,
     background-color 160ms;
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  color: var(--main-blue-blue-100);
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
@@ -57,15 +71,13 @@
   font-family: var(--font-family);
   cursor: pointer;
   &:hover {
-    background-color: var(--main-panel);
+    color: var(--main-accent-accent-100);
+    background-color: var(--main-blue-blue-40);
   }
 }
 .topic-select__option--active {
-  background-color: var(--main-panel);
-}
-.topic-select--up .topic-select__list {
-  top: auto;
-  bottom: 100%;
+  color: var(--main-accent-accent-100);
+  background-color: var(--main-blue-blue-40);
 }
 .topic-select:hover {
   background-color: var(--main-blue-blue-40);
@@ -80,4 +92,36 @@
 // Замечание: отсутствие стиля [abiturient-topic-select] — ui/data/remarks.json.
 .topic-select__trigger:disabled {
   cursor: not-allowed;
+}
+
+.topic-select__value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.topic-select__option::before {
+  content: "";
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/abiturient/assets/img/question/icon-square.svg");
+  mask-size: 16px 16px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+.topic-select__option[aria-selected="true"]::before {
+  background-color: transparent;
+  background-image: url("/abiturient/assets/img/question/icon-check-square.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: none;
+}
+.topic-select--open .topic-select__icon {
+  transform: scaleY(-1);
+}
+.topic-select .form-field__label,
+.topic-select:focus-within .form-field__label {
+  font-size: 14px;
+  line-height: 22px;
 }

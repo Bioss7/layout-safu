@@ -2720,37 +2720,17 @@
                       ТЕМА
                     </label>
                     <button class="topic-select__trigger js-topic-trigger" type="button" role="combobox" aria-expanded="false" aria-controls="topic-options" aria-haspopup="listbox" aria-labelledby="topic-label topic-value" aria-describedby="error-topic" id="applicant-topic">
-                      <span id="topic-value" class="js-topic-value">
+                      <span id="topic-value" class="topic-select__value js-topic-value">
                         Выберите тему вопроса
                       </span>
-                      <picture><img class="topic-select__icon" src="/abiturient/assets/img/header/icon-chevron-down.svg" alt="" aria-hidden="true"></picture>
+                      <picture class="topic-select__arrow"><img class="topic-select__icon" src="/abiturient/assets/img/header/icon-chevron-down.svg" width="24" height="24" alt="" aria-hidden="true"></picture>
                     </button>
                     <input class="js-field-input" type="hidden" name="topic" required="">
-                    <ul class="topic-select__list js-topic-list" id="topic-options" role="listbox" aria-labelledby="topic-label" hidden="">
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-contract" data-value="contract" aria-selected="false">
-                        Поступление - договор
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-budget" data-value="budget" aria-selected="false">
-                        Поступление - бюджет
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-achievements" data-value="achievements" aria-selected="false">
-                        Индивидуальные достижения
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-exams" data-value="exams" aria-selected="false">
-                        Вступительные
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-special" data-value="special" aria-selected="false">
-                        Особая квота
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-target" data-value="target" aria-selected="false">
-                        Целевое
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-olympiads" data-value="olympiads" aria-selected="false">
-                        Олимпиады
-                      </li>
-                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-separate" data-value="separate" aria-selected="false">
-                        Отдельная квота
-                      </li>
+                    <ul class="topic-select__list js-topic-list" id="topic-options" role="listbox" aria-multiselectable="true" aria-labelledby="topic-label" hidden="">
+                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-general" data-value="general" aria-selected="false">Общая</li>
+                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-budget" data-value="budget" aria-selected="false">Поступление - бюджет</li>
+                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-exams" data-value="exams" aria-selected="false">Вступительные</li>
+                      <li class="topic-select__option js-topic-option" role="option" id="topic-option-quota" data-value="quota" aria-selected="false">Квота</li>
                     </ul>
                     <span class="form-field__error" id="error-topic" aria-live="polite"></span>
                   </div>

@@ -236,7 +236,7 @@
       "addedAt": null,
       "phase": null,
       "taskId": null,
-      "purpose": "Выбор темы",
+      "purpose": "Выбор нескольких тем вопроса: раскрытие поверх полей формы, чекбоксы и управление с клавиатуры",
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/topic-select.scss",

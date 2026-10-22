@@ -241,6 +241,13 @@ try {
   await page.locator('.js-topic-trigger').click();
   await page.locator('.js-topic-trigger').press('ArrowDown');
   await page.locator('.js-topic-trigger').press('Enter');
+  assert.ok(await page.locator('.js-topic-list').isVisible(), 'Мультиселект остаётся открытым после выбора');
+  await page.locator('.js-topic-trigger').press('End');
+  await page.locator('.js-topic-trigger').press('Space');
+  assert.equal(await page.locator('.js-topic .js-field-input').inputValue(), 'budget,quota');
+  await page.locator('#topic-option-budget').click();
+  assert.equal(await page.locator('.js-topic .js-field-input').inputValue(), 'quota');
+  await page.locator('.js-topic-trigger').press('Escape');
   await page.locator('#applicant-name').fill('Тестовый абитуриент');
   await page.locator('#applicant-email').fill('invalid');
   await page.locator('#applicant-question').fill('Как подать документы?');
@@ -257,8 +264,8 @@ try {
   await page.locator('.js-topic-trigger').click();
   assert.equal(await page.locator('.js-topic-list').evaluate(element => getComputedStyle(element).overflowY), 'auto');
   assert.ok(await page.locator('.js-topic-list').evaluate(element => {
-    const bounds = element.getBoundingClientRect(); return bounds.top >= 0 && bounds.bottom <= innerHeight;
-  }), 'Список тем помещается в доступное пространство');
+    return getComputedStyle(element).position === 'absolute' && element.scrollHeight === element.clientHeight;
+  }), 'Список тем раскрывается поверх полей формы и показывает все пункты');
   await page.locator('.js-topic-trigger').press('Escape');
 
   await page.locator('.js-footer-toggle').click();
