@@ -57,10 +57,27 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     padding-bottom: 88px;
     &::before {
-      display: none;
+      display: block;
+      height: 39.267px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-top-992.svg");
     }
     &::after {
       height: 39.267px;
+      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-992.svg");
+    }
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &::before,
+    &::after {
+      height: 30.4px;
+    }
+    &::before {
+      background-image: url("/abiturient/assets/img/admission/admission-transition-top-768.svg");
+    }
+    &::after {
+      background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-768.svg");
     }
   }
 }
@@ -76,10 +93,21 @@
   @include breakpoint($bp-768) {
     background-image: url("/abiturient/assets/img/admission/admission-bg-390.png");
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    background-image: url("/abiturient/assets/img/admission/admission-bg-1920.png");
+  }
+  // Масштаб и смещение исходной заливки из transform Figma, поворот задан выше.
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
+    background-size: 135.76% 116.43%;
+    background-position: 73.2383% 99.8783%;
+  }
 }
 .section--admission .section-header {
   @include breakpoint($bp-768) {
     margin-bottom: 40px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    margin-bottom: 32px;
   }
 }
 .admission-list {
@@ -95,6 +123,10 @@
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     gap: 24px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    flex-direction: row;
+    gap: 16px;
   }
 }
 .admission-list > * {
@@ -113,6 +145,10 @@
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     flex-basis: calc(50% - 12px);
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    flex: 0 1 calc(50% - 8px);
+    min-height: 0;
   }
 }
 .study-card {
@@ -155,6 +191,11 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     padding: 24px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    aspect-ratio: 1;
+    padding: 16px;
+    min-height: min-content;
+  }
 }
 .study-card__arrow {
   position: absolute;
@@ -176,6 +217,10 @@
     top: 24px;
     right: 24px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    right: 16px;
+    top: 16px;
+  }
 }
 .study-card__arrow .card-arrow {
   width: 40px;
@@ -196,6 +241,10 @@
     width: 48px;
     height: 48px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 32px;
+    height: 32px;
+  }
 }
 .study-card:hover .card-arrow {
   color: var(---Accent-Accent-100, #00aeef);
@@ -214,6 +263,9 @@
     gap: 16px;
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    gap: 12px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
     gap: 12px;
   }
 }
@@ -238,6 +290,10 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     width: 150px;
     height: 150px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 112px;
+    height: 112px;
   }
 }
 .study-card__icon img {
@@ -265,6 +321,12 @@
     flex-shrink: 1;
     transform: none;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
+    transform: scale(0.746667);
+  }
 }
 .study-card__joined-text {
   @include breakpoint($bp-1440) {
@@ -281,9 +343,7 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   text-transform: uppercase;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -291,35 +351,36 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 14px;
     line-height: 20px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 20px;
     line-height: 32px;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 20px;
     line-height: 28px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
   }
 }
 .study-card__description {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -327,29 +388,29 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-1200) {
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
   }
-
   @include breakpoint($bp-768) {
     font-weight: 500;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 18px;
     line-height: 26px;
     font-weight: 500;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 .admission-note {
@@ -377,12 +438,17 @@
     padding: 24px;
     gap: 12px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding: 16px;
+    aspect-ratio: 1;
+    gap: 12px;
+    min-height: min-content;
+  }
 }
 .admission-note h3 {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -390,35 +456,35 @@
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 20px;
     line-height: 28px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 20px;
     line-height: 28px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
   }
 }
 .admission-note p {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -426,28 +492,28 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 14px;
     line-height: 20px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 18px;
     line-height: 26px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 .admission-note--first {
@@ -484,14 +550,44 @@
   @include breakpoint($bp-768) {
     order: 4;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
 }
 .study-card--paid {
   @include breakpoint($bp-768) {
     order: 5;
   }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
 }
 .study-card--results {
   @include breakpoint($bp-768) {
     order: 7;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
+}
+
+// В макете 992 нижние карточки выровнены от строки со стрелкой, а не от низа.
+.study-card--target .study-card__body,
+.study-card--paid .study-card__body,
+.study-card--results .study-card__body {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin-top: calc((100vw - 768px) * 40 / 224);
+  }
+}
+
+.study-card--target .study-card__arrow .card-arrow,
+.study-card--paid .study-card__arrow .card-arrow,
+.study-card--results .study-card__arrow .card-arrow {
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: 32px;
+    height: 32px;
   }
 }

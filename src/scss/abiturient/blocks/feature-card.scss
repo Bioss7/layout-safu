@@ -1,21 +1,20 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
-
 .opportunities-list {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-
   @include breakpoint($bp-1200) {
     gap: 16px;
   }
-
   @include breakpoint($bp-768) {
     flex-direction: column;
     gap: 16px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    gap: 24px;
+  }
 }
-
 .feature-card {
   // Замечание: отсутствие стиля [abiturient-feature-card] — ui/data/remarks.json.
   position: relative;
@@ -32,7 +31,6 @@
   background-color: var(--main-blue-blue-100);
   text-align: left;
   text-decoration: none;
-
   &::after {
     content: "";
     position: absolute;
@@ -46,40 +44,47 @@
     opacity: 0.8;
     transition: opacity 200ms;
   }
-
   &:hover::after {
     opacity: 1;
   }
-
   @include breakpoint($bp-1440) {
     min-height: 342px;
     padding: 21px;
   }
-
   @include breakpoint($bp-1200) {
     min-height: 287px;
     padding: 17px;
   }
-
   @include breakpoint($bp-768) {
     min-height: 358px;
     padding: 21px;
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    min-height: 240.488px;
-    padding: 16.759px;
+    border-width: 2.514px;
+    min-height: 240px;
+    padding: 16px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    min-height: 325px;
+    padding: 16px;
     border-width: 2.514px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
+    &::after {
+      background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 32.823%),
+        linear-gradient(179.873deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.755%);
+      opacity: 1;
+    }
+  }
 }
-
 .feature-card--1,
 .feature-card--4 {
   flex: 0 1 calc((100% - 18px) * 0.58578143);
-
   @include breakpoint($bp-1200) {
     flex-basis: calc((100% - 16px) * 0.5847150735);
   }
-
   @include breakpoint($bp-768) {
     flex-basis: auto;
   }
@@ -87,15 +92,12 @@
     flex-basis: calc((100% - 16px) * 0.5845076754);
   }
 }
-
 .feature-card--2,
 .feature-card--3 {
   flex: 0 1 calc((100% - 18px) * 0.41421857);
-
   @include breakpoint($bp-1200) {
     flex-basis: calc((100% - 16px) * 0.4152849265);
   }
-
   @include breakpoint($bp-768) {
     flex-basis: auto;
   }
@@ -103,12 +105,10 @@
     flex-basis: calc((100% - 16px) * 0.4132993421);
   }
 }
-
 .feature-card__picture {
   position: absolute;
   inset: 0;
 }
-
 .feature-card__image {
   position: absolute;
   inset: 0;
@@ -117,17 +117,14 @@
   object-fit: cover;
   transition: transform 250ms;
 }
-
 .feature-card:hover .feature-card__image {
   transform: scale(1.21);
 }
-
 .feature-card__arrow {
   position: absolute;
   z-index: 2;
   right: 40px;
   top: 40px;
-
   @include breakpoint($bp-768) {
     right: 20px;
     top: 20px;
@@ -136,17 +133,18 @@
     top: 20.11px;
     right: 20.11px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    right: 17.486px;
+    top: 17.486px;
+  }
 }
-
 .feature-card:hover .card-arrow {
   mask-image: url("/abiturient/assets/img/contacts/icon-arrow-right.svg");
   -webkit-mask-image: url("/abiturient/assets/img/contacts/icon-arrow-right.svg");
 }
-
 .feature-card .card-arrow {
   width: 60px;
   height: 60px;
-
   @include breakpoint($bp-768) {
     width: 40px;
     height: 40px;
@@ -156,7 +154,6 @@
     height: 40px;
   }
 }
-
 .feature-card__body {
   width: 100%;
   min-width: 0;
@@ -166,14 +163,15 @@
   flex-direction: column;
   gap: 8px;
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    gap: 6.703px;
+    gap: 6px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    gap: 6px;
   }
 }
-
 .feature-card__title {
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -181,34 +179,33 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 24px;
     line-height: 32px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 20px;
     letter-spacing: 0em;
   }
-
   @include breakpoint($bp-768) {
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.04em;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
 }
-
 .feature-card__description {
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -216,32 +213,32 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 18px;
     line-height: 26px;
   }
-
   @include breakpoint($bp-1200) {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-768) {
     font-weight: 500;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 475px;
+  }
 }
-
 // Ширины текстовых групп из макета определяют естественные переносы.
 .feature-card--1 .feature-card__body,
 .feature-card--4 .feature-card__body {
@@ -268,7 +265,6 @@
     max-width: 270.668px;
   }
 }
-
 .section--opportunities .container {
   @include breakpoint($bp-1440) {
     width: calc(100% - 128px);
@@ -285,8 +281,10 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     width: calc(100% - 64px);
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: calc(100% - 48px);
+  }
 }
-
 .feature-card__news-phrase {
   // Неразрывное «и объявления» присутствует только в эталоне 1440.
   @media screen and (min-width: ($bp-1200 + 1px)) and (max-width: $bp-1440) {
@@ -301,17 +299,31 @@
     display: none;
   }
 }
-
 .feature-card--1 .feature-card__title,
 .feature-card--4 .feature-card__title {
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     max-width: 372px;
   }
 }
-
 .feature-card--2 .feature-card__title,
 .feature-card--3 .feature-card__title {
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     max-width: 253px;
+  }
+}
+
+.feature-card--2 .feature-card__description {
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: 453px;
+  }
+}
+.feature-card--3 .feature-card__description {
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: 499px;
+  }
+}
+.feature-card--4 .feature-card__description {
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: 503px;
   }
 }

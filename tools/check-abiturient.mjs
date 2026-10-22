@@ -67,7 +67,7 @@ try {
           linksDirection: getComputedStyle(section.querySelector('.contacts__links')).flexDirection,
         };
       })(),
-      questionBackground: getComputedStyle(document.querySelector(innerWidth > 768 && innerWidth <= 1440 ? '.question__surface' : '.section--question')).backgroundColor,
+      questionBackground: getComputedStyle(document.querySelector(innerWidth > 390 && innerWidth <= 1440 ? '.question__surface' : '.section--question')).backgroundColor,
       answersCard: (() => {
         const card = document.querySelector('.answers-card');
         const title = card.querySelector('.answers-card__title');
@@ -105,8 +105,8 @@ try {
     metrics.push(metric);
     assert.equal(metric.contacts.background, 'rgb(255, 255, 255)', 'Белый фон контактов поверх сетки');
     assert.equal(metric.questionBackground, 'rgb(255, 255, 255)', 'Белый фон содержимого вопроса поверх сетки');
-    assert.equal(metric.contacts.paddingTop, width <= 768 ? 30 : 40);
-    assert.equal(metric.contacts.paddingBottom, width <= 768 ? 30 : 40);
+    assert.equal(metric.contacts.paddingTop, width <= 390 ? 30 : width <= 768 ? 0 : 40);
+    assert.equal(metric.contacts.paddingBottom, width <= 390 ? 30 : width <= 768 ? 0 : 40);
     const contactsReference = {
       1920: { titleGap: 80, containerLeft: 100, mapWidth: 560, height: 778, linksDirection: 'row' },
       1440: { titleGap: 48, containerLeft: 64, mapWidth: 420, height: 630, linksDirection: 'row' },

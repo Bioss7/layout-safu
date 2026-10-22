@@ -34,6 +34,9 @@
     flex-direction: column;
     gap: 16px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    flex-direction: row;
+  }
 }
 .education-list > .education-card {
   flex: 0 1 calc(50% - 10px);
@@ -52,9 +55,11 @@
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     min-height: 275px;
-
-    padding: 20px;
     padding: 17px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    flex: 0 1 calc(50% - 8px);
+    min-height: 220px;
   }
 }
 .education-card {
@@ -95,6 +100,12 @@
     border-width: 4px;
     gap: 24px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding: 14px;
+    min-height: 220px;
+    border-width: 2.607px;
+    gap: 12px;
+  }
 }
 .education-card--accent {
   background-color: var(--main-accent-accent-100);
@@ -124,6 +135,13 @@
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     min-height: 275px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    min-height: 220px;
+    flex-basis: auto;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    padding: 17px;
   }
 }
 .education-card__meta {
@@ -158,17 +176,21 @@
     line-height: 16px;
     margin-bottom: 16px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    margin-bottom: 10.43px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .education-card__title {
   margin: 0 0 12px;
   font-variant: normal;
   font-stretch: normal;
-
   overflow-wrap: anywhere;
   @include breakpoint($bp-768) {
     overflow-wrap: normal;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -176,20 +198,17 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     margin-bottom: 9.086px;
     font-size: 28px;
     line-height: 36px;
   }
-
   @include breakpoint($bp-1200) {
     margin-bottom: 11.657px;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0em;
   }
-
   @include breakpoint($bp-768) {
     margin-bottom: 12px;
     font-size: 20px;
@@ -197,7 +216,6 @@
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 20px;
@@ -205,13 +223,19 @@
     letter-spacing: 0.04em;
     margin-bottom: 12px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    margin-bottom: 7.822px;
+    overflow-wrap: anywhere;
+  }
 }
 .education-card__description {
   transition: color 180ms;
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -219,24 +243,24 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 14px;
     line-height: 20px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-768) {
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 0.6);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
     font-size: 14px;
     line-height: 20px;
   }
@@ -246,6 +270,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    flex-wrap: wrap;
+  }
 }
 .education-card__bottom .card-arrow {
   @include breakpoint($bp-1440) {
@@ -264,6 +291,10 @@
     width: 33.481px;
     height: 33.481px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 32px;
+    height: 32px;
+  }
 }
 .education-card__count {
   transition:
@@ -277,7 +308,6 @@
   box-shadow: 3px 3px var(--main-black);
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -286,14 +316,12 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-shadow: 2px 2px 0px #000;
-
   @include breakpoint($bp-1440) {
     padding: 4px 10px;
     font-size: 16px;
     line-height: 24px;
     text-shadow: 1.5143px 1.5143px 0px #000;
   }
-
   @include breakpoint($bp-1200) {
     padding: 6px 14px;
     font-size: 24px;
@@ -301,7 +329,6 @@
     letter-spacing: 0;
     text-shadow: 1.9429px 1.9429px 0px #000;
   }
-
   @include breakpoint($bp-768) {
     font-size: 18px;
     line-height: normal;
@@ -315,6 +342,19 @@
     border-width: 1.674px;
     border-color: var(--main-blue-blue-100);
     text-shadow: 2px 2px #000;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 6px 12px;
+    letter-spacing: 0.04em;
+    font-size: calc(10px + (100vw - 390px) * 2 / 378);
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    padding: 6px 12px;
+    border-width: 2px;
+    border-color: var(--main-white-white-100);
+    text-transform: uppercase;
   }
 }
 .education-card--accent .education-card__description,
@@ -340,7 +380,6 @@
   mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
   -webkit-mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
 }
-
 .education-card--accent .education-card__title,
 .education-card:hover .education-card__title,
 .education-card:focus-visible .education-card__title {

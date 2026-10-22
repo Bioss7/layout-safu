@@ -15,6 +15,9 @@
   @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
     padding-top: 36px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding-top: 40px;
+  }
 }
 .breadcrumbs__list {
   display: flex;

@@ -4,9 +4,7 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   text-transform: uppercase;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -14,29 +12,31 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 40px;
     line-height: 48px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 40px;
     line-height: 48px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -1.12px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: calc(28px + (100vw - 390px) * 4 / 378);
+    line-height: calc(36px + (100vw - 390px) * 4 / 378);
+    letter-spacing: calc(-1.12px + (100vw - 390px) * 2.4 / 378);
+    text-shadow: none;
   }
 }
 .title-2--white {
@@ -59,7 +59,6 @@
   -webkit-mask-repeat: no-repeat;
   transition: background-color 0.2s ease;
 }
-
 .br {
   display: inline;
 }
@@ -92,7 +91,6 @@
     display: none;
   }
 }
-
 #faq .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -101,33 +99,33 @@
   font-size: 52px;
   line-height: 68px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0.04em;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 40px;
     line-height: 48px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -1.12px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
 }
-
 .contacts .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -136,19 +134,16 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 40px;
     line-height: 48px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 40px;
     max-width: 906.857px;
     line-height: 48px;
     letter-spacing: 0.04em;
   }
-
   @include breakpoint($bp-768) {
     font-size: 28px;
     max-width: none;
@@ -156,15 +151,18 @@
     letter-spacing: -1.12px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+  }
 }
-
 .section--reviews .title-2 {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -173,33 +171,33 @@
   font-size: 52px;
   line-height: 58px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1440) {
     font-size: 40px;
     line-height: 48px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0em;
   }
-
   @include breakpoint($bp-768) {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -1.12px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: calc(28px + (100vw - 390px) * 12 / 378);
+    line-height: calc(36px + (100vw - 390px) * 12 / 378);
+    letter-spacing: 0.04em;
+  }
 }
-
 .br-1200-above-768 {
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-1200) {
     display: inline;
@@ -208,6 +206,18 @@
 .br-992-above-768 {
   display: none;
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    display: inline;
+  }
+}
+
+.br-768 {
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    display: inline;
+  }
+}
+.br-tablet {
+  display: none;
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-992) {
     display: inline;
   }
 }

@@ -43,6 +43,10 @@ main {
   @include breakpoint($bp-992) {
     background-position: -32px 0;
   }
+  // В полном фрейме 768 отсутствует фоновая сетка варианта 992.
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    background-image: none;
+  }
 }
 *,
 *::before,
@@ -118,6 +122,9 @@ main > section > .container {
     &.applicant-hero__inner {
       width: calc(100% - 48px);
     }
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: calc(100% - 48px);
   }
 }
 @media (prefers-reduced-motion: reduce) {

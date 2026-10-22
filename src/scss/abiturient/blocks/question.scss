@@ -16,6 +16,9 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     width: calc(100% - 64px);
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: calc(100% - 48px);
+  }
 }
 .section--question {
   @include breakpoint($bp-1440) {
@@ -35,6 +38,11 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--main-white-white-100);
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: transparent;
   }
 }
 .question__surface {
@@ -59,6 +67,9 @@
     flex-direction: column;
     gap: 24px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    gap: 32px;
+  }
 }
 .question-form {
   flex: 1 1 0;
@@ -66,12 +77,14 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     width: 100%;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 100%;
+  }
 }
 .question-form__description {
   margin: 0 0 32px;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -79,20 +92,16 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     line-height: 26px;
   }
-
   @include breakpoint($bp-1200) {
     line-height: 28px;
   }
-
   @include breakpoint($bp-768) {
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     max-width: 548px;
@@ -117,6 +126,9 @@
     padding-right: 28px;
     padding-left: 28px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding-bottom: 15px;
+  }
 }
 .question-form .topic-select {
   @include breakpoint($bp-1440) {
@@ -133,6 +145,9 @@
   }
   @include breakpoint($bp-768) {
     padding: 16px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding-bottom: 15px;
   }
 }
 .question-form .topic-select__trigger {
@@ -153,6 +168,9 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     min-height: 56px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    min-height: 56px;
+  }
 }
 .question-form__bottom {
   display: flex;
@@ -166,16 +184,17 @@
   @include breakpoint($bp-768) {
     gap: 16px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    gap: 12px;
+  }
 }
 .question-form__submit {
   flex: 1 1 auto;
   min-height: 64px;
   @include breakpoint($bp-768) {
     min-height: 42px;
-
     padding: 9px 12px;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -183,12 +202,10 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-1200) {
     font-size: 20px;
     line-height: 28px;
   }
-
   @include breakpoint($bp-768) {
     font-weight: 700;
     font-size: 14px;
@@ -196,8 +213,17 @@
     letter-spacing: 0.56px;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    padding: 18px 24px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    min-height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 .question-form__consent {
   flex: 0 1 287px;
@@ -230,6 +256,9 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     align-self: center;
     text-align: center;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: none;
   }
 }
 .question-form__status {
@@ -265,11 +294,14 @@
     gap: 20px;
   }
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
-    padding: 18.5522px;
-    border-width: 1.6866px;
     gap: 20.2388px;
     border-width: 2px;
     padding: 18.2388px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    border-width: 2px;
+    gap: 20px;
+    padding: 18px;
   }
 }
 .answers-card__header {
@@ -286,12 +318,14 @@
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     height: 1.6866px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    height: 1.6866px;
+  }
 }
 .answers-card__label {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -299,29 +333,27 @@
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 14px;
     line-height: 20px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 12px;
     line-height: 16px;
   }
-
   @include breakpoint($bp-768) {
     letter-spacing: 0.96px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 0.6);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    letter-spacing: 0;
+  }
 }
 .answers-card__count {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -329,29 +361,31 @@
   font-size: 104px;
   line-height: 90px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-weight: 800;
     font-size: 52px;
     line-height: 58px;
     letter-spacing: 0.04em;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.04em;
   }
-
   @include breakpoint($bp-768) {
     font-weight: 900;
     font-size: 32px;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 800;
     letter-spacing: 0.04em;
   }
 }
@@ -359,7 +393,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Явные размеры по макетам 1920/1440/1200: 20/24/18px.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -367,29 +400,31 @@
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 24px;
     letter-spacing: 0.04em;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 18px;
     line-height: normal;
     letter-spacing: 0em;
   }
-
   @include breakpoint($bp-768) {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.72px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 20px;
     line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
     letter-spacing: 0.04em;
   }
 }
@@ -421,11 +456,9 @@
   text-decoration: none;
   font-variant: normal;
   font-stretch: normal;
-
   &:hover {
     color: var(---Accent-Accent-100, #00aeef);
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -433,28 +466,29 @@
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     font-size: 18px;
     line-height: 26px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 16px;
     line-height: 24px;
   }
-
   @include breakpoint($bp-768) {
     font-size: 14px;
     line-height: 22px;
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
   @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
     font-size: 18px;
     line-height: 26px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: 18px;
+    line-height: 26px;
+    gap: 0;
   }
 }
 .answers-card__link span:first-child {
@@ -476,7 +510,6 @@
   padding: 11px 0;
   min-height: 42px;
 }
-
 .answers-card__arrow {
   flex-shrink: 0;
   width: 24px;
@@ -491,7 +524,6 @@
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
 }
-
 .answers-card .button--text {
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
@@ -500,16 +532,16 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.04em;
-
   @include breakpoint($bp-768) {
     font-weight: 700;
     letter-spacing: 0.56px;
     text-shadow: none;
   }
-
   color: rgba(11, 45, 78, 1);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-weight: 800;
+  }
 }
-
 .answers-card .button--text:hover {
   color: var(---Accent-Accent-100, #00aeef);
 }

@@ -51,6 +51,17 @@
     min-height: 741px;
     &::after {
       height: 73px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-992.svg");
+    }
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    min-height: calc(850px + (100vw - 390px) * 296.671 / 378);
+    background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
+    background-size: cover;
+    background-position: center bottom;
+    &::after {
+      height: 73px;
+      background-image: url("/abiturient/assets/img/hero/hero-transition-768.svg");
     }
   }
 }
@@ -86,6 +97,11 @@
     width: 600px;
     padding-top: 36px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 600px;
+    max-width: 100%;
+    padding-top: 40px;
+  }
 }
 .applicant-hero__status {
   display: flex;
@@ -99,10 +115,8 @@
   @include breakpoint($bp-900) {
     flex-direction: column;
     gap: 6px;
-
     text-transform: uppercase;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -110,19 +124,16 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-1440) {
     flex-wrap: nowrap;
     margin-bottom: 16px;
     line-height: 20px;
   }
-
   @include breakpoint($bp-1200) {
     margin-bottom: 24px;
     font-size: 14px;
     line-height: 22px;
   }
-
   @include breakpoint($bp-900) {
     flex-wrap: wrap;
     margin-bottom: 24px;
@@ -132,13 +143,21 @@
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
     width: 760px;
     max-width: calc(100vw - 48px);
     font-size: 12px;
     line-height: 20px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 600px;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-weight: 500;
+    text-transform: none;
   }
 }
 .applicant-hero__status li {
@@ -161,12 +180,33 @@
       height: 8px;
     }
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    gap: 12px;
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.2),
+        0 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    gap: 12px;
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.2),
+        0 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+  }
 }
 .applicant-hero__title {
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -175,25 +215,26 @@
   line-height: 104px;
   letter-spacing: 0.04em;
   text-shadow: 3px 4px 0px #000;
-
   @include breakpoint($bp-1440) {
     font-size: 80px;
     line-height: 80px;
   }
-
   @include breakpoint($bp-1200) {
     font-size: 64px;
     line-height: 64px;
   }
-
   @include breakpoint($bp-900) {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -1.6px;
     text-shadow: rgb(0, 0, 0) 3px 4px 0px;
   }
-
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-size: calc(40px + (100vw - 390px) * 24 / 378);
+    line-height: 1;
+    letter-spacing: calc(-1.6px + (100vw - 390px) * 4.16 / 378);
+  }
 }
 .applicant-hero__year {
   display: flex;
@@ -225,9 +266,41 @@
     width: 231px;
     height: 68px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: calc(180px + (100vw - 390px) * 51 / 378);
+    height: 68px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    position: absolute;
+    width: calc(var(--badge-width) * 234 / 231);
+    max-width: none;
+    height: auto;
+    filter: none;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    position: absolute;
+    width: calc(var(--badge-width) * 234 / 231);
+    max-width: none;
+    height: auto;
+    filter: none;
+  }
 }
 .applicant-hero__year picture {
   display: block;
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    --badge-width: calc(180px + (100vw - 390px) * 51 / 378);
+    position: relative;
+    width: var(--badge-width);
+    height: calc(var(--badge-width) * 68 / 231);
+    flex-shrink: 0;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    --badge-width: 231px;
+    position: relative;
+    width: var(--badge-width);
+    height: 68px;
+    flex-shrink: 0;
+  }
 }
 .applicant-hero__description {
   // Замечание: отсутствие стиля [abiturient-hero-description-copy] — ui/data/remarks.json.
@@ -243,12 +316,10 @@
     max-width: 575px;
     margin-top: 24px;
   }
-
   @include breakpoint($bp-900) {
     max-width: 500px;
     margin: 24px 0 48px;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
@@ -256,15 +327,18 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0em;
-
   @include breakpoint($bp-900) {
     letter-spacing: normal;
     text-shadow: none;
   }
-
   color: rgba(255, 255, 255, 1);
   @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
     max-width: 503px;
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    max-width: 503px;
+    margin-top: 24px;
     margin-bottom: 28px;
   }
 }
@@ -289,6 +363,10 @@
   @media screen and (min-width: ($bp-900 + 1px)) and (max-width: $bp-992) {
     width: 448px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 448px;
+    gap: 12px;
+  }
 }
 .hero-link {
   display: flex;
@@ -300,7 +378,6 @@
   text-decoration: none;
   font-variant: normal;
   font-stretch: normal;
-
   transition: color 0.2s ease;
   &:hover {
     color: var(---Accent-Accent-100, #00aeef);
@@ -308,7 +385,6 @@
   @include breakpoint($bp-900) {
     padding: 8px 16px 12px 0;
   }
-
   // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
@@ -317,14 +393,17 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-shadow: 2px 2px 0px #000;
-
   @include breakpoint($bp-900) {
     font-weight: 700;
     letter-spacing: 0.64px;
     text-shadow: rgb(0, 0, 0) 2px 2px 0px;
   }
-
   color: rgba(255, 255, 255, 1);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    font-weight: 800;
+    padding-top: 14px;
+    padding-bottom: 18px;
+  }
 }
 .hero-link .card-arrow {
   width: 16px;
@@ -334,6 +413,14 @@
   -webkit-mask-image: none;
   // Тень на обёртке: маска дочернего элемента не обрезает смещённый контур.
   filter: drop-shadow(2px 2px 0 #000);
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 28px;
+    height: 28px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    width: 28px;
+    height: 28px;
+  }
 }
 .hero-link .card-arrow::before {
   content: "";
@@ -349,8 +436,19 @@
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 28px;
+    height: 28px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 16px;
+    height: 16px;
+    margin: 6px;
+  }
+  @media screen and (min-width: ($bp-768 + 1px)) and (max-width: $bp-992) {
+    margin: 6px;
+  }
 }
-
 .applicant-hero__art {
   position: absolute;
   inset: 0;
@@ -362,6 +460,12 @@
     width: calc(100% + 32px);
     margin-left: -16px;
     margin-top: 50px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    position: absolute;
+    inset: 0 -24px;
+    width: auto;
+    margin: 0;
   }
 }
 .applicant-hero__building {
@@ -399,6 +503,17 @@
     left: 457px;
     top: 258px;
   }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    width: 116.40625vw;
+    height: 70.396224vw;
+    aspect-ratio: auto;
+    left: 14.322917%;
+    top: 82.942708vw;
+    bottom: auto;
+    mask-image: url("/abiturient/assets/img/hero/hero-building-768.png");
+    mask-position: left top;
+    mask-size: 100% auto;
+  }
 }
 .applicant-hero__people {
   position: absolute;
@@ -432,6 +547,15 @@
     width: 430.575px;
     left: 494.78px;
     top: 261.22px;
+  }
+  @media screen and (min-width: ($bp-390 + 1px)) and (max-width: $bp-768) {
+    position: absolute;
+    width: 63.776vw;
+    min-width: 0;
+    max-width: none;
+    left: 19.9193%;
+    top: auto;
+    bottom: -9.75px;
   }
 }
 .applicant-hero__people img {

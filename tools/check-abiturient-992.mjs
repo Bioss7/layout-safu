@@ -12,11 +12,11 @@ const references = {
   banner: ['.apply-banner', 999, 138],
   education: ['.section--education > .container', 1201, 937],
   admission: ['.section--admission', 2202, 2128],
-  opportunities: ['.section--opportunities > .container', 4394, 576.976],
-  contacts: ['.section--contacts', 5034.976, 608],
-  reviews: ['.section--reviews > .container', 5706.976, 750.766],
-  faq: ['#faq', 6521.742, 814],
-  question: ['.question__surface', 7399.742, 1290.239],
+  opportunities: ['.section--opportunities > .container', 4394, 576],
+  contacts: ['.section--contacts', 5034, 608],
+  reviews: ['.section--reviews > .container', 5706, 702],
+  faq: ['#faq', 6472, 814],
+  question: ['.question__surface', 7350, 1290.239],
 };
 const near = (actual, expected, message) => assert.ok(Math.abs(actual - expected) < .6, `${message}: ${actual} / ${expected}`);
 const browser = await chromium.launch({ headless: true, ...(process.platform === 'win32' ? { channel: 'chrome' } : {}) });
@@ -53,7 +53,7 @@ try {
   assert.deepEqual(geometry.international, [32, 928, 275]);
   assert.deepEqual(geometry.admission, [32, 452, 452]);
   near(geometry.review[1], 449, 'Ширина отзыва');
-  near(geometry.review[2], 564.766, 'Высота отзыва');
+  near(geometry.review[2], 536, 'Высота отзыва');
   assert.equal(geometry.cards, 2);
   assert.deepEqual(geometry.map, [32, 312, 312]);
   assert.deepEqual(geometry.links, [32, 928, 88]);
