@@ -6,7 +6,6 @@
   font-variant: normal;
   font-stretch: normal;
   text-transform: uppercase;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -58,7 +57,6 @@
   display: inline;
 }
 #faq .title-2 {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -69,7 +67,6 @@
 }
 
 .contacts .title-2 {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -80,7 +77,6 @@
 }
 
 .section--reviews .title-2 {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -101,7 +97,6 @@
 .br-576 {
   display: none;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .title-2 {
@@ -133,7 +128,6 @@
     line-height: 48px;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .title-2 {
@@ -159,14 +153,12 @@
     letter-spacing: 0em;
   }
 }
-// 900 px
 
 @include breakpoint($bp-900) {
   .br-above-900 {
     display: none;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .title-2 {
@@ -198,7 +190,6 @@
     text-shadow: none;
   }
 }
-// 390 px
 
 @include breakpoint($bp-390) {
   .br-390 {
@@ -209,14 +200,12 @@
     display: none;
   }
 }
-// 1200 px
 
 @include screen-1200 {
   .br-1200-above-768 {
     display: inline;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .title-2 {
@@ -247,20 +236,18 @@
     display: inline;
   }
 }
-// 992 px
 
 @include screen-compact {
   .br-tablet {
     display: inline;
   }
 }
-// 768 px
 
 @include screen-768 {
   .title-2 {
     font-size: 32px;
     line-height: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -289,7 +276,6 @@
     text-shadow: 3px 4px var(--main-black);
   }
 }
-// 576 px
 
 @include screen-576 {
   .title-2 {

@@ -1,1664 +1,4106 @@
 {
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-10-23",
   "source": "aVwbPxZ5FUxYkvTcvME566",
   "frames": {
+    "390": "4209:32046",
+    "576": "4209:33453",
+    "768": "4209:32851",
+    "992": "4209:32247",
     "1200": "4193:6888",
     "1440": "4193:4780",
     "1920": "4200:19138"
   },
-  "mobileSource": "Локальный эталон 390: abiturient/figma/mobile-390.png и context.json; актуального полного фрейма 390 на странице нет.",
   "entries": [
     {
       "file": "src/scss/abiturient/blocks/typography.scss",
-      "selector": ".title-2",
-      "sourceStyles": {
-        "1200": 47,
-        "1440": 47,
-        "1920": 11
-      },
+      "selector": "#education-title",
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "28px",
-          "line-height": "36px",
-          "letter-spacing": "-1.12px",
-          "text-shadow": "none"
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "52px",
           "line-height": "58px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/education.json",
+          "nodeId": "4209:32117"
+        },
+        "576": {
+          "context": "figma/576/education.json",
+          "nodeId": "4209:33573"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32970.json",
+          "nodeId": "4209:32971"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32365.json",
+          "nodeId": "4209:32366"
+        },
+        "1200": {
+          "context": "figma/education-1200-current.json",
+          "nodeId": "4193:7004"
+        },
+        "1440": {
+          "context": "figma/education-1440-current.json",
+          "nodeId": "4193:4872"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
       }
     },
     {
       "file": "src/scss/abiturient/blocks/typography.scss",
       "selector": "#faq .title-2",
-      "sourceStyles": {
-        "1200": 47,
-        "1440": 47,
-        "1920": 34
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "28px",
-          "line-height": "36px",
-          "letter-spacing": "-1.12px",
-          "text-shadow": "none"
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "52px",
           "line-height": "68px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/faq.json",
+          "nodeId": "4209:32196"
+        },
+        "576": {
+          "context": "figma/576/faq.json",
+          "nodeId": "4209:33902"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33297.json",
+          "nodeId": "4209:33298"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32694.json",
+          "nodeId": "4209:32695"
+        },
+        "1200": {
+          "context": "figma/faq-1200-current.json",
+          "nodeId": "4193:7285"
+        },
+        "1440": {
+          "context": "figma/faq-1440-current.json",
+          "nodeId": "4193:5178"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 34
+        }
+      },
+      "sourceStyles": {
+        "1920": 34
       }
     },
     {
       "file": "src/scss/abiturient/blocks/typography.scss",
       "selector": ".contacts .title-2",
-      "sourceStyles": {
-        "1200": 62,
-        "1440": 47,
-        "1920": 11
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "28px",
-          "line-height": "36px",
-          "letter-spacing": "-1.12px",
-          "text-shadow": "none"
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "52px",
           "line-height": "58px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
       },
-      "sourceNote": "Актуальный контекст 4193:7172: 40/48, letter-spacing 1.6px; контакты проверены повторно 2026-10-21."
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/contacts.json",
+          "nodeId": "4209:32156"
+        },
+        "576": {
+          "context": "figma/576/contacts.json",
+          "nodeId": "4209:33748"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33145.json",
+          "nodeId": "4209:33146"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32540.json",
+          "nodeId": "4209:32541"
+        },
+        "1200": {
+          "context": "figma/contacts-1200.json",
+          "nodeId": "4193:7172"
+        },
+        "1440": {
+          "context": "figma/contacts-1440.json",
+          "nodeId": "4193:5043"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
+      }
     },
     {
       "file": "src/scss/abiturient/blocks/typography.scss",
       "selector": ".section--reviews .title-2",
-      "sourceStyles": {
-        "1200": 62,
-        "1440": 47,
-        "1920": 11
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "28px",
-          "line-height": "36px",
-          "letter-spacing": "-1.12px",
-          "text-shadow": "none"
+          "line-height": "36px"
         },
-        "1200": {
-          "font-family": "var(--main-font-display)",
+        "768": {
           "font-style": "normal",
-          "font-weight": "800",
-          "font-size": "36px",
-          "line-height": "48px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
-        },
-        "1440": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "36px",
+          "line-height": "48px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "52px",
           "line-height": "58px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "4209:32177"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "4209:33800"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "4209:33196"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "4209:32593"
+        },
+        "1200": {
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "4193:7204"
+        },
+        "1440": {
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "4193:5067"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
       }
     },
     {
       "file": "src/scss/abiturient/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__title",
-      "sourceStyles": {
-        "1200": 60,
-        "1440": 45,
-        "1920": 3
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "1.44px",
+          "text-shadow": "3px 4px 0px black",
           "font-family": "Unbounded, sans-serif",
-          "font-style": "normal",
           "font-weight": "800",
-          "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "-1.6px",
-          "text-shadow": "rgb(0, 0, 0) 3px 4px 0px"
+          "font-size": "36px",
+          "line-height": "44px"
         },
-        "1200": {
-          "font-family": "var(--main-font-display)",
+        "576": {
           "font-style": "normal",
+          "letter-spacing": "2.08px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "2.56px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "64px",
-          "line-height": "64px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "3px 4px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "64px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "2.56px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "64px",
+          "line-height": "64px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "2.56px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "64px",
+          "line-height": "64px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "3.2px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "80px",
-          "line-height": "80px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "3px 4px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "80px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "104px",
           "line-height": "104px",
           "letter-spacing": "0.04em",
-          "text-shadow": "3px 4px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "3px 4px 0px #000"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/hero.json",
+          "nodeId": "4209:32072"
+        },
+        "576": {
+          "context": "figma/576/hero.json",
+          "nodeId": "4209:33489"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32852.json",
+          "nodeId": "4231:41672"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32248.json",
+          "nodeId": "4209:32283"
+        },
+        "1200": {
+          "context": "figma/hero-1200-current.json",
+          "nodeId": "4193:6921"
+        },
+        "1440": {
+          "context": "figma/hero-1440-current.json",
+          "nodeId": "4193:4813"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 3
+        }
+      },
+      "sourceStyles": {
+        "1920": 3
+      },
+      "sourceTextShadows": {
+        "390": "3px 4px 0px black",
+        "576": "3px 4px 0px black",
+        "768": "3px 4px 0px black",
+        "992": "3px 4px 0px black",
+        "1200": "3px 4px 0px black",
+        "1440": "3px 4px 0px black",
+        "1920": "3px 4px 0px #000"
       }
     },
     {
       "file": "src/scss/abiturient/blocks/applicant-hero.scss",
       "selector": ".hero-link",
-      "sourceStyles": {
-        "1200": 5,
-        "1440": 5,
-        "1920": 5
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "16px",
-          "line-height": "24px",
           "letter-spacing": "0.64px",
-          "text-shadow": "rgb(0, 0, 0) 2px 2px 0px"
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "2px 2px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "2px 2px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0.04em",
-          "text-shadow": "2px 2px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "2px 2px 0px #000"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/hero.json",
+          "nodeId": "I4209:32079;48:25448"
+        },
+        "576": {
+          "context": "figma/576/hero.json",
+          "nodeId": "I4209:33495;48:25448"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32852.json",
+          "nodeId": "I4231:41678;48:25448"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32248.json",
+          "nodeId": "I4209:32289;48:25448"
+        },
+        "1200": {
+          "context": "figma/hero-1200-current.json",
+          "nodeId": "I4193:6927;48:25448"
+        },
+        "1440": {
+          "context": "figma/hero-1440-current.json",
+          "nodeId": "I4193:4819;48:25448"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 5
+        }
+      },
+      "sourceStyles": {
+        "1920": 5
+      },
+      "sourceTextShadows": {
+        "390": "2px 2px 0px black",
+        "576": "2px 2px 0px black",
+        "768": "2px 2px 0px black",
+        "992": "2px 2px 0px black",
+        "1200": "2px 2px 0px black",
+        "1440": "2px 2px 0px black",
+        "1920": "2px 2px 0px #000"
       }
     },
     {
       "file": "src/scss/abiturient/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__status",
-      "sourceStyles": {
-        "1200": 59,
-        "1440": 2,
-        "1920": 2
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "400",
           "font-size": "12px",
-          "line-height": "16px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "16px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "22px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "12px",
+          "line-height": "16px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "12px",
+          "line-height": "16px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "22px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "20px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "14px",
           "line-height": "20px",
           "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/hero.json",
+          "nodeId": "4209:32058"
+        },
+        "576": {
+          "context": "figma/576/hero.json",
+          "nodeId": "4209:33475"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32852.json",
+          "nodeId": "4231:41658"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32248.json",
+          "nodeId": "4209:32269"
+        },
+        "1200": {
+          "context": "figma/hero-1200-current.json",
+          "nodeId": "4193:6909"
+        },
+        "1440": {
+          "context": "figma/hero-1440-current.json",
+          "nodeId": "4193:4801"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 2
+        }
+      },
+      "sourceStyles": {
+        "1920": 2
       }
     },
     {
       "file": "src/scss/abiturient/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__description",
-      "sourceStyles": {
-        "1200": 4,
-        "1440": 4,
-        "1920": 4
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "400",
           "font-size": "16px",
           "line-height": "24px",
-          "letter-spacing": "normal",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/hero.json",
+          "nodeId": "4209:32076"
+        },
+        "576": {
+          "context": "figma/576/hero.json",
+          "nodeId": "4209:33493"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32852.json",
+          "nodeId": "4231:41676"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32248.json",
+          "nodeId": "4209:32287"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "400",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/hero-1200-current.json",
+          "nodeId": "4193:6925"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "400",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/hero-1440-current.json",
+          "nodeId": "4193:4817"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "400",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 4
         }
+      },
+      "sourceStyles": {
+        "1920": 4
       }
     },
     {
       "file": "src/scss/abiturient/blocks/apply-banner.scss",
       "selector": ".apply-banner__title",
-      "sourceStyles": {
-        "1200": 61,
-        "1440": 46,
-        "1920": 8
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "900",
-          "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "letter-spacing": "0.8px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "700",
           "font-size": "24px",
-          "line-height": "36px",
-          "letter-spacing": "0em",
-          "text-shadow": "2px 3px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "36px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.96px",
+          "text-shadow": "2px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "2px 3px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "32px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "32px",
           "line-height": "40px",
           "letter-spacing": "0.04em",
-          "text-shadow": "2px 3px 0px #000",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "2px 3px 0px #000"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/banner.json",
+          "nodeId": "4282:18230"
+        },
+        "576": {
+          "context": "figma/576/banner.json",
+          "nodeId": "4244:11608"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4231-41725.json",
+          "nodeId": "4231:41728"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32359.json",
+          "nodeId": "4209:32362"
+        },
+        "1200": {
+          "context": "figma/banner-1200-current.json",
+          "nodeId": "4193:7000"
+        },
+        "1440": {
+          "context": "figma/banner-1440-current.json",
+          "nodeId": "4193:4868"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 8
+        }
+      },
+      "sourceStyles": {
+        "1920": 8
+      },
+      "sourceTextShadows": {
+        "390": "2px 3px 0px black",
+        "576": "2px 3px 0px black",
+        "768": "2px 3px 0px black",
+        "992": "2px 3px 0px black",
+        "1200": "2px 3px 0px black",
+        "1440": "2px 3px 0px black",
+        "1920": "2px 3px 0px #000"
       }
     },
     {
       "file": "src/scss/abiturient/blocks/apply-banner.scss",
       "selector": ".apply-banner__text",
-      "sourceStyles": {
-        "1200": 7,
-        "1440": 7,
-        "1920": 9
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "20px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/banner.json",
+          "nodeId": "4282:18231"
+        },
+        "576": {
+          "context": "figma/576/banner.json",
+          "nodeId": "4244:11609"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4231-41725.json",
+          "nodeId": "4231:41729"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32359.json",
+          "nodeId": "4209:32363"
+        },
+        "1200": {
+          "context": "figma/banner-1200-current.json",
+          "nodeId": "4193:7001"
+        },
+        "1440": {
+          "context": "figma/banner-1440-current.json",
+          "nodeId": "4193:4869"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 9
+        }
+      },
+      "sourceStyles": {
+        "1920": 9
       }
     },
     {
       "file": "src/scss/abiturient/blocks/button.scss",
-      "selector": ".button",
-      "sourceStyles": {
-        "1200": 10,
-        "1440": 10,
-        "1920": 10
-      },
+      "selector": ".apply-banner .button",
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "16px",
-          "line-height": "24px",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
           "letter-spacing": "0.64px",
-          "text-shadow": "none"
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/banner.json",
+          "nodeId": "I4282:18232;52:26019"
+        },
+        "576": {
+          "context": "figma/576/banner.json",
+          "nodeId": "I4244:11610;52:25963"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4231-41725.json",
+          "nodeId": "I4231:41730;52:25963"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32359.json",
+          "nodeId": "I4209:32364;52:25963"
+        },
+        "1200": {
+          "context": "figma/banner-1200-current.json",
+          "nodeId": "I4193:7002;52:25963"
+        },
+        "1440": {
+          "context": "figma/banner-1440-current.json",
+          "nodeId": "I4193:4870;52:25963"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 10
+        }
+      },
+      "sourceStyles": {
+        "1920": 10
       }
     },
     {
       "file": "src/scss/abiturient/blocks/education-card.scss",
       "selector": ".education-card__title",
-      "sourceStyles": {
-        "1200": 62,
-        "1440": 48,
-        "1920": 12
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "20px",
-          "line-height": "32px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "28px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "36px",
-          "line-height": "48px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "28px",
-          "line-height": "36px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "36px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "32px",
           "line-height": "40px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/education.json",
+          "nodeId": "4282:18247"
+        },
+        "576": {
+          "context": "figma/576/education.json",
+          "nodeId": "4244:11622"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32970.json",
+          "nodeId": "4209:32982"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32365.json",
+          "nodeId": "4209:32377"
+        },
+        "1200": {
+          "context": "figma/education-1200-current.json",
+          "nodeId": "4193:7013"
+        },
+        "1440": {
+          "context": "figma/education-1440-current.json",
+          "nodeId": "4193:4883"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 12
+        }
+      },
+      "sourceStyles": {
+        "1920": 12
       }
     },
     {
       "file": "src/scss/abiturient/blocks/education-card.scss",
       "selector": ".education-card__description",
-      "sourceStyles": {
-        "1200": 13,
-        "1440": 38,
-        "1920": 13
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "16px",
           "line-height": "24px",
-          "letter-spacing": "normal",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/education.json",
+          "nodeId": "4282:18248"
+        },
+        "576": {
+          "context": "figma/576/education.json",
+          "nodeId": "4244:11623"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32970.json",
+          "nodeId": "4209:32983"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32365.json",
+          "nodeId": "4209:32378"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "context": "figma/education-1200-current.json",
+          "nodeId": "4193:7014"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "context": "figma/education-1440-current.json",
+          "nodeId": "4193:4884"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 13
         }
+      },
+      "sourceStyles": {
+        "1920": 13
       }
     },
     {
       "file": "src/scss/abiturient/blocks/admission.scss",
       "selector": ".study-card__title",
-      "sourceStyles": {
-        "1200": 44,
-        "1440": 10,
-        "1920": 17
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0.72px",
+          "text-shadow": "none",
           "font-family": "Unbounded, sans-serif",
-          "font-style": "normal",
           "font-weight": "800",
-          "font-size": "20px",
-          "line-height": "32px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "font-size": "18px",
+          "line-height": "26px"
         },
-        "1200": {
-          "font-family": "var(--main-font-display)",
+        "576": {
           "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "20px"
         },
-        "1440": {
-          "font-family": "var(--main-font-display)",
+        "768": {
           "font-style": "normal",
-          "font-weight": "800",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
           "font-size": "16px",
           "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-size": "14px",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "line-height": "20px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-size": "16px",
+          "line-height": "24px",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "20px",
           "line-height": "28px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/admission.json",
+          "nodeId": "I4209:32134;89:7118"
+        },
+        "576": {
+          "context": "figma/576/admission.json",
+          "nodeId": "4209:33660"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33040.json",
+          "nodeId": "4209:33058"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32435.json",
+          "nodeId": "4209:32453"
+        },
+        "1200": {
+          "context": "figma/admission-1200-current.json",
+          "nodeId": "4193:7088"
+        },
+        "1440": {
+          "context": "figma/admission-1440-current.json",
+          "nodeId": "4193:4959"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 17
+        }
+      },
+      "sourceStyles": {
+        "1920": 17
       }
     },
     {
       "file": "src/scss/abiturient/blocks/admission.scss",
       "selector": ".study-card__description",
-      "sourceStyles": {
-        "1200": 25,
-        "1440": 32,
-        "1920": 18
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
           "font-family": "Montserrat, sans-serif",
-          "font-style": "normal",
           "font-weight": "500",
           "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "20px"
         },
-        "1200": {
-          "font-family": "var(--font-family)",
+        "576": {
           "font-style": "normal",
-          "font-weight": "400",
-          "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
-        },
-        "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
+          "font-size": "12px",
+          "line-height": "16px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
           "font-size": "16px",
           "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-size": "14px",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "line-height": "22px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-size": "16px",
+          "line-height": "24px",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "18px",
           "line-height": "26px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/admission.json",
+          "nodeId": "I4209:32134;89:7119"
+        },
+        "576": {
+          "context": "figma/576/admission.json",
+          "nodeId": "4209:33661"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33040.json",
+          "nodeId": "4209:33059"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32435.json",
+          "nodeId": "4209:32454"
+        },
+        "1200": {
+          "context": "figma/admission-1200-current.json",
+          "nodeId": "4193:7089"
+        },
+        "1440": {
+          "context": "figma/admission-1440-current.json",
+          "nodeId": "4193:4960"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 18
+        }
+      },
+      "sourceStyles": {
+        "1920": 18
       }
     },
     {
       "file": "src/scss/abiturient/blocks/admission.scss",
       "selector": ".admission-note h3",
-      "sourceStyles": {
-        "1200": 26,
-        "1440": 40,
-        "1920": 19
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.72px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "1920": {
           "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "24px",
           "line-height": "32px",
-          "letter-spacing": "normal",
+          "letter-spacing": "0.04em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/admission.json",
+          "nodeId": "4209:32137"
+        },
+        "576": {
+          "context": "figma/576/admission.json",
+          "nodeId": "4209:33665"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33040.json",
+          "nodeId": "4209:33063"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32435.json",
+          "nodeId": "4209:32458"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
-          "font-weight": "800",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/admission-1200-current.json",
+          "nodeId": "4193:7092"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
-          "font-weight": "800",
-          "font-size": "20px",
-          "line-height": "28px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/admission-1440-current.json",
+          "nodeId": "4193:4963"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
-          "font-weight": "800",
-          "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 19
         }
+      },
+      "sourceStyles": {
+        "1920": 19
       }
     },
     {
       "file": "src/scss/abiturient/blocks/admission.scss",
       "selector": ".admission-note p",
-      "sourceStyles": {
-        "1200": 2,
-        "1440": 9,
-        "1920": 20
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "18px",
-          "line-height": "28px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "26px"
         },
-        "1200": {
-          "font-family": "var(--font-family)",
+        "576": {
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "20px"
         },
-        "1440": {
-          "font-family": "var(--font-family)",
+        "768": {
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "20px",
           "line-height": "28px",
           "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/admission.json",
+          "nodeId": "4209:32138"
+        },
+        "576": {
+          "context": "figma/576/admission.json",
+          "nodeId": "4209:33666"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33040.json",
+          "nodeId": "4209:33064"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32435.json",
+          "nodeId": "4209:32459"
+        },
+        "1200": {
+          "context": "figma/admission-1200-current.json",
+          "nodeId": "4193:7093"
+        },
+        "1440": {
+          "context": "figma/admission-1440-current.json",
+          "nodeId": "4193:4964"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 20
+        }
+      },
+      "sourceStyles": {
+        "1920": 20
       }
     },
     {
       "file": "src/scss/abiturient/blocks/feature-card.scss",
       "selector": ".feature-card__title",
-      "sourceStyles": {
-        "1200": 65,
-        "1440": 19,
-        "1920": 14
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "20px",
-          "line-height": "32px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "28px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "20px",
-          "line-height": "32px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "32px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "32px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "32px",
           "line-height": "40px",
           "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/opportunities.json",
+          "nodeId": "I4209:32151;89:8411"
+        },
+        "576": {
+          "context": "figma/576/opportunities.json",
+          "nodeId": "4270:6076"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33118.json",
+          "nodeId": "4234:41846"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32513.json",
+          "nodeId": "4209:32520"
+        },
+        "1200": {
+          "context": "figma/opportunities-1200.json",
+          "nodeId": "4193:7151"
+        },
+        "1440": {
+          "context": "figma/opportunities-1440.json",
+          "nodeId": "4193:5022"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 14
+        }
+      },
+      "sourceStyles": {
+        "1920": 14
       }
     },
     {
       "file": "src/scss/abiturient/blocks/feature-card.scss",
       "selector": ".feature-card__description",
-      "sourceStyles": {
-        "1200": 4,
-        "1440": 21,
-        "1920": 21
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "normal",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/opportunities.json",
+          "nodeId": "I4209:32151;89:8412"
+        },
+        "576": {
+          "context": "figma/576/opportunities.json",
+          "nodeId": "4270:6077"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33118.json",
+          "nodeId": "4234:41847"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32513.json",
+          "nodeId": "4209:32521"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "400",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/opportunities-1200.json",
+          "nodeId": "4193:7152"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/opportunities-1440.json",
+          "nodeId": "4193:5023"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(255, 255, 255, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 21
         }
+      },
+      "sourceStyles": {
+        "1920": 21
       }
     },
     {
       "file": "src/scss/abiturient/blocks/tabs.scss",
-      "selector": ".tabs__tab",
-      "sourceStyles": {
-        "1200": 10,
-        "1440": 10,
-        "1920": 10
-      },
+      "selector": ".contacts .tabs__tab",
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "18px",
-          "line-height": "24px",
-          "letter-spacing": "0.72px",
-          "text-shadow": "none"
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
       },
-      "sampleSelector": ".tabs__tab:not([aria-selected=\"true\"])"
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/contacts.json",
+          "nodeId": "I4209:32161;52:26101"
+        },
+        "576": {
+          "context": "figma/576/contacts.json",
+          "nodeId": "I4272:6206;52:26101"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33145.json",
+          "nodeId": "I4237:10441;52:26101"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32540.json",
+          "nodeId": "I4224:36664;52:26101"
+        },
+        "1200": {
+          "context": "figma/contacts-1200.json",
+          "nodeId": "I4193:7178;52:26101"
+        },
+        "1440": {
+          "context": "figma/contacts-1440.json",
+          "nodeId": "I4193:5049;52:26101"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 10
+        }
+      },
+      "sourceStyles": {
+        "1920": 10
+      }
     },
     {
       "file": "src/scss/abiturient/blocks/reviews-page.scss",
       "selector": ".section--reviews .review-card__title",
-      "sourceStyles": {
-        "1200": 29,
-        "1440": 24,
-        "1920": 29
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "600",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.96px",
+          "font-size": "20px",
+          "line-height": "28px",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "4282:18434"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "4272:6321"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "4209:33211"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "4209:32608"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "20px",
-          "line-height": "28px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "4193:7219"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "4193:5082"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "20px",
-          "line-height": "28px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 29
         }
+      },
+      "sourceStyles": {
+        "1920": 29
       }
     },
     {
       "file": "src/scss/abiturient/blocks/reviews-page.scss",
       "selector": ".section--reviews .review-card__meta-item",
-      "sourceStyles": {
-        "1200": 71,
-        "1440": 56,
-        "1920": 30
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
-          "font-weight": "400",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-size": "12px",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "line-height": "16px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-size": "12px",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "line-height": "16px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-size": "12px",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "line-height": "16px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
           "font-size": "14px",
-          "line-height": "20.02px",
-          "letter-spacing": "0.96px",
-          "text-shadow": "none"
+          "line-height": "22px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "line-height": "22px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
-          "font-weight": "500",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
           "font-size": "12px",
-          "line-height": "16px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "line-height": "16px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "600",
           "font-size": "14px",
           "line-height": "20px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "4282:18436"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "4272:6323"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "4209:33213"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "4209:32610"
+        },
+        "1200": {
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "4193:7221"
+        },
+        "1440": {
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "4193:5084"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 30
+        }
+      },
+      "sourceStyles": {
+        "1920": 30
       }
     },
     {
       "file": "src/scss/abiturient/blocks/reviews-page.scss",
       "selector": ".section--reviews .review-card__text",
-      "sourceStyles": {
-        "1200": 32,
-        "1440": 37,
-        "1920": 32
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
-          "font-weight": "400",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
           "font-size": "14px",
-          "line-height": "20.02px",
-          "letter-spacing": "0.84px",
-          "text-shadow": "none"
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "400",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "4282:18441"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "4272:6328"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "4209:33218"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "4209:32615"
+        },
+        "1200": {
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "4193:7226"
+        },
+        "1440": {
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "4193:5089"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 32
+        }
+      },
+      "sourceStyles": {
+        "1920": 32
       }
     },
     {
       "file": "src/scss/abiturient/blocks/reviews-page.scss",
       "selector": ".section--reviews .review-card__link",
-      "sourceStyles": {
-        "1200": 33,
-        "1440": 57,
-        "1920": 33
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "600",
           "font-size": "18px",
-          "line-height": "25.92px",
-          "letter-spacing": "normal",
+          "line-height": "26px",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "I4282:18442;2015:3447"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "I4272:6329;2015:3447"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "I4209:33219;2015:3447"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "I4209:32616;2015:3447"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(0, 174, 239, 1)"
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "I4193:7227;2015:3447"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(0, 174, 239, 1)"
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "4193:5091"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "600",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(0, 174, 239, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 33
         }
+      },
+      "sourceStyles": {
+        "1920": 33
       }
     },
     {
       "file": "src/scss/abiturient/blocks/reviews-page.scss",
       "selector": ".section--reviews .link-arrow--stories",
-      "sourceStyles": {
-        "1200": 10,
-        "1440": 10,
-        "1920": 10
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "14px",
-          "line-height": "20px",
+          "letter-spacing": "0.48px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "12px",
+          "line-height": "18px"
+        },
+        "576": {
+          "font-style": "normal",
           "letter-spacing": "0.56px",
-          "text-shadow": "none"
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "24px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "16px",
           "line-height": "24px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/reviews.json",
+          "nodeId": "I4209:32185;52:26035"
+        },
+        "576": {
+          "context": "figma/576/reviews.json",
+          "nodeId": "4209:33890"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33195.json",
+          "nodeId": "I4237:10535;52:26035"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32592.json",
+          "nodeId": "I4224:36671;52:26035"
+        },
+        "1200": {
+          "context": "figma/reviews-1200-current.json",
+          "nodeId": "I4197:8905;52:25979"
+        },
+        "1440": {
+          "context": "figma/reviews-1440-current.json",
+          "nodeId": "I4193:5167;52:25979"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 10
+        }
+      },
+      "sourceStyles": {
+        "1920": 10
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".question-form__description",
-      "sourceStyles": {
-        "1200": 72,
-        "1440": 18,
-        "1920": 18
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "18px",
-          "line-height": "28px",
-          "letter-spacing": "normal",
+          "line-height": "26px",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "4209:32224"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4209:33957"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4209:33353"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32751"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "28px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7341"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:5205"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 18
         }
+      },
+      "sourceStyles": {
+        "1920": 18
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".question-form__submit",
-      "sourceStyles": {
-        "1200": 40,
-        "1440": 40,
-        "1920": 40
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0.56px",
-          "text-shadow": "none"
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "20px",
-          "line-height": "28px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "28px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "20px",
-          "line-height": "28px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "line-height": "28px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "20px",
           "line-height": "28px",
           "letter-spacing": "0.04em",
-          "color": "rgba(255, 255, 255, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "I4209:32231;52:25947"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "I4209:33974;52:25947"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "I4209:33370;52:25891"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "I4209:32768;52:25891"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "I4193:7358;52:25891"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "I4193:5212;52:25891"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 40
+        }
+      },
+      "sourceStyles": {
+        "1920": 40
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".answers-card__label",
-      "sourceStyles": {
-        "1200": 27,
-        "1440": 30,
-        "1920": 41
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "12px",
-          "line-height": "16px",
-          "letter-spacing": "0.96px",
-          "text-shadow": "none"
+          "line-height": "16px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "12px",
+          "line-height": "16px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "12px",
+          "line-height": "16px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "12px",
+          "line-height": "16px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "12px",
-          "line-height": "16px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "line-height": "16px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "line-height": "20px"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "600",
           "font-size": "14px",
           "line-height": "22px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "4282:18550"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4274:6441"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4237:10544"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32772"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7362"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:5216"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 41
+        }
+      },
+      "sourceStyles": {
+        "1920": 41
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".answers-card__count",
-      "sourceStyles": {
-        "1200": 74,
-        "1440": 11,
-        "1920": 42
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
           "font-family": "Unbounded, sans-serif",
-          "font-style": "normal",
-          "font-weight": "900",
-          "font-size": "32px",
-          "line-height": "48px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
-        },
-        "1200": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
           "font-weight": "800",
           "font-size": "40px",
-          "line-height": "48px",
-          "letter-spacing": "-0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "48px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "-1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "2.08px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "52px",
-          "line-height": "58px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "58px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "900",
           "font-size": "104px",
           "line-height": "90px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "4282:18551"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4274:6442"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4237:10545"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32773"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7363"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:5217"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 42
+        }
+      },
+      "sourceStyles": {
+        "1920": 42
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".answers-card__title",
-      "sourceStyles": {
-        "1200": 75,
-        "1440": 58,
-        "1920": 43
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "18px",
-          "line-height": "24px",
-          "letter-spacing": "0.72px",
-          "text-shadow": "none"
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.8px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "20px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "18px",
-          "line-height": "normal",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "normal"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.96px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "32px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "20px",
           "line-height": "32px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "4282:18553"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4274:6444"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4237:10547"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32775"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7365"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:5219"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 43
+        }
+      },
+      "sourceStyles": {
+        "1920": 43
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".answers-card__link",
-      "sourceStyles": {
-        "1200": 32,
-        "1440": 18,
-        "1920": 18
-      },
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "1920": {
           "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
-          "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "normal",
+          "font-size": "18px",
+          "line-height": "26px",
+          "letter-spacing": "0em",
           "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "I4282:18555;82:3105"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "I4274:6446;82:3105"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "I4237:10549;82:3105"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "I4224:36713;82:3105"
         },
         "1200": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7368"
         },
         "1440": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/answers-1440.json",
+          "nodeId": "I4193:5221;82:3105"
         },
         "1920": {
-          "font-family": "var(--font-family)",
-          "font-style": "normal",
-          "font-weight": "500",
-          "font-size": "18px",
-          "line-height": "26px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 1)"
+          "context": "figma/typography-current.json",
+          "styleIndex": 18
         }
+      },
+      "sourceStyles": {
+        "1920": 18
       }
     },
     {
       "file": "src/scss/abiturient/blocks/question.scss",
       "selector": ".answers-card .button--text",
-      "sourceStyles": {
-        "1200": 44,
-        "1440": 44,
-        "1920": 44
-      },
       "expected": {
         "390": {
-          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
-          "font-weight": "700",
-          "font-size": "14px",
-          "line-height": "20px",
           "letter-spacing": "0.56px",
-          "text-shadow": "none"
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "20px"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
           "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
           "font-size": "14px",
-          "line-height": "20px",
-          "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "line-height": "20px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "14px",
           "line-height": "20px",
           "letter-spacing": "0.04em",
-          "color": "rgba(11, 45, 78, 1)"
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "I4282:18558;52:26035"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "I4274:6449;52:26035"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "I4237:10552;52:26035"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "I4224:36727;52:26035"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "I4193:7376;52:26035"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "I4193:5224;52:26035"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 44
+        }
+      },
+      "sourceStyles": {
+        "1920": 44
       }
     },
     {
       "file": "src/scss/abiturient/blocks/form-field.scss",
       "selector": ".form-field__label",
-      "sourceStyles": {
-        "1200": 41,
-        "1440": 38,
-        "1920": 38
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "22px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "22px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "600",
+          "font-size": "14px",
+          "line-height": "22px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "600",
           "font-size": "14px",
-          "line-height": "22px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "line-height": "22px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
-          "font-weight": "500",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
           "font-size": "14px",
           "line-height": "20px",
-          "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "14px",
           "line-height": "20px",
           "letter-spacing": "0em",
-          "color": "rgba(11, 45, 78, 0.6)"
+          "text-shadow": "none"
         }
-      }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "I4209:32227;79:2991"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4209:33965"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4209:33361"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32759"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7349"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:4042"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 38
+        }
+      },
+      "sourceStyles": {
+        "1920": 38
+      },
+      "overrides": [
+        {
+          "selector": "#topic-label",
+          "expected": {
+            "390": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "20px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "576": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "22px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "768": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "22px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "992": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "22px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "1200": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "22px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "1440": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "20px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            },
+            "1920": {
+              "font-family": "Montserrat, sans-serif",
+              "font-weight": "500",
+              "font-size": "14px",
+              "line-height": "20px",
+              "letter-spacing": "0px",
+              "text-shadow": "none"
+            }
+          },
+          "sourceNote": "Верхняя метка ТЕМА, а не значение combobox.1920: typography-current.json style38; прочие ширины: точные контексты question/answers соответствующих фреймов."
+        }
+      ]
     },
     {
       "file": "src/scss/abiturient/blocks/form-field.scss",
       "selector": ".form-field__input",
-      "sourceStyles": {
-        "1200": 73,
-        "1440": 39,
-        "1920": 39
-      },
       "expected": {
         "390": {
-          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500",
+          "font-size": "18px",
+          "line-height": "26px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "400",
           "font-size": "18px",
-          "line-height": "28px",
-          "letter-spacing": "normal",
-          "text-shadow": "none"
+          "line-height": "28px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "18px",
+          "line-height": "28px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "400",
+          "font-size": "18px",
+          "line-height": "28px"
         },
         "1200": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
+          "font-family": "Montserrat, sans-serif",
           "font-weight": "400",
           "font-size": "18px",
-          "line-height": "28px",
-          "letter-spacing": "0em"
+          "line-height": "28px"
         },
         "1440": {
-          "font-family": "var(--font-family)",
           "font-style": "normal",
-          "font-weight": "500",
+          "letter-spacing": "0px",
+          "text-shadow": "none",
           "font-size": "18px",
           "line-height": "26px",
-          "letter-spacing": "0em"
+          "font-family": "Montserrat, sans-serif",
+          "font-weight": "500"
         },
         "1920": {
-          "font-family": "var(--font-family)",
+          "font-family": "Montserrat, sans-serif",
           "font-style": "normal",
           "font-weight": "500",
           "font-size": "18px",
           "line-height": "26px",
-          "letter-spacing": "0em"
+          "letter-spacing": "0em",
+          "text-shadow": "none"
         }
-      }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "I4209:32227;79:2992"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4209:33966"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4209:33362"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32760"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7350"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:4043"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 39
+        }
+      },
+      "sourceStyles": {
+        "1920": 39
+      },
+      "sourceNote": "Figma placeholder text; проверяется типографика input, цвет placeholder не сравнивается с цветом введённого текста."
     },
     {
       "file": "src/scss/abiturient/blocks/education-card.scss",
       "selector": ".education-card__count",
       "expected": {
         "390": {
+          "font-style": "normal",
+          "letter-spacing": "0.48px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "12px",
+          "line-height": "18px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "3px 3px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.48px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "12px",
+          "line-height": "18px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.56px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "14px",
+          "line-height": "20px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "24px",
+          "line-height": "32px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "2px 2px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1920": {
           "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
-          "font-size": "18px",
-          "line-height": "normal",
-          "letter-spacing": "0",
-          "text-shadow": "2px 2px 0px #000",
-          "color": "rgb(255, 255, 255)"
+          "font-size": "16px",
+          "line-height": "24px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "2px 2px 0px #000"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/education.json",
+          "nodeId": "4282:18251"
+        },
+        "576": {
+          "context": "figma/576/education.json",
+          "nodeId": "4244:11626"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-32970.json",
+          "nodeId": "4231:41741"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32365.json",
+          "nodeId": "4209:32381"
         },
         "1200": {
-          "font-family": "var(--main-font-display)",
-          "font-style": "normal",
-          "font-weight": "800",
-          "font-size": "24px",
-          "line-height": "32px",
-          "letter-spacing": "0",
-          "text-shadow": "1.9429px 1.9429px 0px #000",
-          "color": "rgb(255, 255, 255)"
+          "context": "figma/education-1200-current.json",
+          "nodeId": "4193:7017"
         },
         "1440": {
-          "font-family": "var(--main-font-display)",
+          "context": "figma/education-1440-current.json",
+          "nodeId": "4193:4887"
+        }
+      },
+      "sourceTextShadows": {
+        "390": "2.034px 2.034px 0px black",
+        "576": "3.045px 3.045px 0px black",
+        "768": "2px 2px 0px black",
+        "992": "2px 2px 0px black",
+        "1200": "1.943px 1.943px 0px black",
+        "1440": "1.514px 1.514px 0px black",
+        "1920": "2px 2px 0px #000"
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": "#admission-title",
+      "expected": {
+        "390": {
           "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
           "font-weight": "800",
-          "font-size": "16px",
-          "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "1.5143px 1.5143px 0px #000",
-          "color": "rgb(255, 255, 255)"
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "3px 4px 0px black",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
         },
         "1920": {
-          "font-family": "var(--main-font-display)",
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "3px 4px 0px #000"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/admission.json",
+          "nodeId": "4209:32132"
+        },
+        "576": {
+          "context": "figma/576/admission.json",
+          "nodeId": "4209:33650"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33040.json",
+          "nodeId": "4209:33048"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32435.json",
+          "nodeId": "4209:32443"
+        },
+        "1200": {
+          "context": "figma/admission-1200-current.json",
+          "nodeId": "4193:7078"
+        },
+        "1440": {
+          "context": "figma/admission-1440-current.json",
+          "nodeId": "4193:4949"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
+      },
+      "sourceTextShadows": {
+        "390": "3px 4px 0px black",
+        "576": "3px 4px 0px black",
+        "768": "3px 4px 0px black",
+        "992": "3px 4px 0px black",
+        "1200": "3px 4px 0px black",
+        "1440": "3px 4px 0px black",
+        "1920": "3px 4px 0px #000"
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": "#opportunities-title",
+      "expected": {
+        "390": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1920": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/opportunities.json",
+          "nodeId": "4209:32149"
+        },
+        "576": {
+          "context": "figma/576/opportunities.json",
+          "nodeId": "4209:33721"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33118.json",
+          "nodeId": "4209:33119"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32513.json",
+          "nodeId": "4209:32514"
+        },
+        "1200": {
+          "context": "figma/opportunities-1200.json",
+          "nodeId": "4193:7145"
+        },
+        "1440": {
+          "context": "figma/opportunities-1440.json",
+          "nodeId": "4193:5016"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/typography.scss",
+      "selector": "#question-title",
+      "expected": {
+        "390": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "1.12px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "28px",
+          "line-height": "36px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "1.28px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "32px",
+          "line-height": "40px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "1.6px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "40px",
+          "line-height": "48px"
+        },
+        "1920": {
+          "font-family": "Unbounded, sans-serif",
+          "font-style": "normal",
+          "font-weight": "800",
+          "font-size": "52px",
+          "line-height": "58px",
+          "letter-spacing": "0.04em",
+          "text-shadow": "none"
+        }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/question.json",
+          "nodeId": "4209:32221"
+        },
+        "576": {
+          "context": "figma/576/question.json",
+          "nodeId": "4209:33954"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33349.json",
+          "nodeId": "4209:33350"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32747.json",
+          "nodeId": "4209:32748"
+        },
+        "1200": {
+          "context": "figma/answers-1200.json",
+          "nodeId": "4193:7338"
+        },
+        "1440": {
+          "context": "figma/answers-1440.json",
+          "nodeId": "4193:5202"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 11
+        }
+      },
+      "sourceStyles": {
+        "1920": 11
+      }
+    },
+    {
+      "file": "src/scss/abiturient/blocks/tabs.scss",
+      "selector": "#faq .tabs__tab",
+      "expected": {
+        "390": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "576": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "768": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "992": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1200": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1440": {
+          "font-style": "normal",
+          "letter-spacing": "0.64px",
+          "text-shadow": "none",
+          "font-family": "Unbounded, sans-serif",
+          "font-weight": "800",
+          "font-size": "16px",
+          "line-height": "24px"
+        },
+        "1920": {
+          "font-family": "Unbounded, sans-serif",
           "font-style": "normal",
           "font-weight": "800",
           "font-size": "16px",
           "line-height": "24px",
-          "letter-spacing": "0.04em",
-          "text-shadow": "2px 2px 0px #000",
-          "color": "rgb(255, 255, 255)"
+          "letter-spacing": "0.64px",
+          "text-shadow": "none"
         }
+      },
+      "sourceNodes": {
+        "390": {
+          "context": "figma/390/faq.json",
+          "nodeId": "I4209:32200;75:2570"
+        },
+        "576": {
+          "context": "figma/576/faq.json",
+          "nodeId": "I4209:33905;75:2570"
+        },
+        "768": {
+          "context": "figma/audit-992-768/4209-33297.json",
+          "nodeId": "I4209:33301;75:2570"
+        },
+        "992": {
+          "context": "figma/audit-992-768/4209-32694.json",
+          "nodeId": "I4209:32698;75:2570"
+        },
+        "1200": {
+          "context": "figma/faq-1200-current.json",
+          "nodeId": "I4193:7288;75:2570"
+        },
+        "1440": {
+          "context": "figma/faq-1440-current.json",
+          "nodeId": "I4193:5181;75:2570"
+        },
+        "1920": {
+          "context": "figma/typography-current.json",
+          "styleIndex": 10
+        }
+      },
+      "sourceStyles": {
+        "1920": 10
       }
     }
-  ]
+  ],
+  "widths": [
+    1920,
+    1440,
+    1200,
+    992,
+    768,
+    576,
+    390
+  ],
+  "sourceNote": "Ожидания 390–1440 извлечены из сохранённых точных контекстов Figma (узлы указаны у каждой записи); 1920 — из typography-current.json/sourceStyles и ранее подтверждённого education-current.json. Значения не получены из CSS реализации. Цветовые варианты и hover проверяются отдельно."
 }

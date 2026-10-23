@@ -1,10 +1,8 @@
-// Colors
 $bg-dark: #301f12;
 $text-white: #ffffff;
 $primary-blue: #3f6fd1;
 $btn-primary: #3f6fd1;
 
-// Typography
 $font-family: "Montserrat", sans-serif;
 $second-family: "HS_LunaObscura", sans-serif;
 $third-family: "Golos Text", sans-serif;
@@ -12,14 +10,11 @@ $font3: "Fira Mono", sans-serif;
 $font4: "GT Walsheim Pro", sans-serif;
 $font5: "Inter", sans-serif;
 
-// Sizes
 $container-max-width: 1600px;
 $container-padding: 160px;
 $button-radius: 16px;
 
-// Breakpoints
 $bp-390: 390px;
-// Hero: readable type steps keep the heading within intermediate widths.
 $bp-460: 460px;
 $bp-540: 540px;
 $bp-680: 680px;
@@ -31,9 +26,7 @@ $bp-1150: 1150px;
 $bp-1200: 1200px;
 $bp-1440: 1440px;
 
-// CSS Custom Properties
 :root {
-  // fonts
   --font-family: #{$font-family};
   --second-family: #{$second-family};
   --third-family: #{$third-family};
@@ -76,7 +69,6 @@ $bp-1440: 1440px;
   --main-white-white-50-opacity: rgba(255, 255, 255, 0.05);
   --color: #fff;
 
-  /* Color styles */
   --main---accent---accent-100: #00aeef;
   --main---accent---accent-90: #1ab6f1;
   --main---accent---accent-80: #33bef2;
@@ -110,7 +102,6 @@ $bp-1440: 1440px;
   --main---white---white-20--opacity: #ffffff;
   --main---white---white-5--opacity: #ffffff;
 
-  /* Text-size styles */
   --main---title---title-1: 56px;
   --main---title---title-2: 40px;
   --main---title---title-3: 32px;
@@ -133,7 +124,6 @@ $bp-1440: 1440px;
   --main---text--body---x-s-12--semi-bold: 12px;
   --main---text--body---x-s-12--regular: 12px;
 
-  // transitions
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
 }

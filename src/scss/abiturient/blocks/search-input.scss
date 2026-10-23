@@ -54,7 +54,6 @@
     outline-offset: 2px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .search-input {

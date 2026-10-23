@@ -2,7 +2,7 @@
 @use "../_vars" as *;
 
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -251,7 +251,6 @@
     color: var(--main-accent-accent-100);
   }
 }
-/* ================= Раскрытое меню / поиск ================= */
 
 .header--open {
   position: static;
@@ -325,9 +324,8 @@ html.page--header-open body > main,
 html.page--header-open body > footer {
   display: none;
 }
-// 1200 px
 
-@include breakpoint($bp-1200) {
+@include breakpoint($bp-1150) {
   .header__inner {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -348,7 +346,6 @@ html.page--header-open body > footer {
     gap: 24px;
   }
 }
-// 992 px
 
 @include breakpoint($bp-992) {
   .header__separator {
@@ -359,7 +356,6 @@ html.page--header-open body > footer {
     gap: 24px;
   }
 }
-// 900 px
 
 @include breakpoint($bp-900) {
   .header__inner {
@@ -375,7 +371,6 @@ html.page--header-open body > footer {
     height: 40px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .header__logo-text {
@@ -420,18 +415,43 @@ html.page--header-open body > footer {
     display: none;
   }
 }
-// 1440 px
 
-@include screen-1440 {
+@include breakpoint($bp-1440) {
+  .header > .container {
+    width: calc(100% - 128px);
+  }
+  .header__nav {
+    flex: 0 1 762px;
+    min-width: 0;
+  }
+
   .header__nav-list {
-    gap: 28px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
   }
 
   .header__nav-item {
+    flex-shrink: 0;
     padding-inline: 8px;
   }
+
+  .header__nav-link {
+    white-space: nowrap;
+  }
 }
-// 576 px
+
+@include breakpoint($bp-1200) {
+  .header > .container {
+    width: calc(100% - 96px);
+  }
+}
+
+@include breakpoint($bp-992) {
+  .header > .container {
+    width: calc(100% - 48px);
+  }
+}
 
 @include screen-576 {
   .header__inner {
@@ -442,5 +462,12 @@ html.page--header-open body > footer {
 
   .header > .container {
     width: calc(100% - 40px);
+  }
+}
+
+@include breakpoint($bp-390) {
+  .header__inner {
+    padding-top: 32px;
+    padding-bottom: 24px;
   }
 }

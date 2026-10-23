@@ -129,19 +129,19 @@
 }
 
 .contact-link__icon--vk {
-  width: 28px;
-  height: 26px;
+  width: 48px;
+  height: 48px;
   mask-image: url("/abiturient/assets/img/contacts/icon-vk.svg");
   -webkit-mask-image: url("/abiturient/assets/img/contacts/icon-vk.svg");
+  mask-size: 24px;
+  -webkit-mask-size: 24px;
 }
 
 .contact-link__icon--max {
   width: 28px;
   height: 28px;
-  mask-image: url("/abiturient/assets/img/contacts/icon-max.svg");
-  -webkit-mask-image: url("/abiturient/assets/img/contacts/icon-max.svg");
-  mask-size: 16px;
-  -webkit-mask-size: 16px;
+  mask-image: url("/abiturient/assets/img/contacts/icon-question.svg");
+  -webkit-mask-image: url("/abiturient/assets/img/contacts/icon-question.svg");
 }
 
 .contact-link__arrow {
@@ -151,7 +151,6 @@
 }
 
 .contact-map {
-  // Замечание: отсутствие стиля [abiturient-contact-map-1440] — ui/data/remarks.json.
   box-shadow: 4px 4px 0 0 var(--main-black);
   flex: 0 0 560px;
   min-width: 0;
@@ -166,7 +165,6 @@
   width: 100%;
   height: auto;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .section--contacts > .container {
@@ -181,6 +179,17 @@
     min-height: 102px;
   }
 
+  .contact-link:where(:first-child, :last-child) {
+    padding: 12px;
+  }
+
+  .contact-link__icon--vk {
+    width: 28px;
+    height: 28px;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+  }
+
   .contact-map {
     flex-basis: 420px;
   }
@@ -189,7 +198,6 @@
     gap: 16px;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .section--contacts > .container {
@@ -220,11 +228,25 @@
     min-height: 56px;
   }
 
+  .contact-link:where(:first-child, :last-child) {
+    padding: 16px;
+  }
+
+  .contact-link__icon--vk {
+    height: 26px;
+  }
+
+  .contact-link__icon--max {
+    mask-image: url("/abiturient/assets/img/contacts/icon-max.svg");
+    -webkit-mask-image: url("/abiturient/assets/img/contacts/icon-max.svg");
+    mask-size: 16px;
+    -webkit-mask-size: 16px;
+  }
+
   .contact-map {
     flex-basis: 31.88%;
   }
 }
-// 992 px
 
 @include breakpoint($bp-992) {
   .section--contacts > .container {
@@ -243,7 +265,6 @@
     max-width: 560px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .section--contacts > .container {
@@ -270,14 +291,12 @@
     min-height: 76px;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .section--contacts > .container {
     width: calc(100% - 64px);
   }
 }
-// 992 px
 
 @include screen-tablet-wide {
   .contacts__layout {
@@ -312,7 +331,6 @@
     line-height: 20px;
   }
 }
-// 768 px
 
 @include screen-768 {
   .section--contacts > .container {
@@ -350,6 +368,10 @@
     line-height: 16px;
   }
 
+  .contact-link:where(:first-child, :last-child) {
+    padding: 12px;
+  }
+
   .contact-map {
     order: 0;
     flex: 0 0 calc((100% - 16px) / 2);
@@ -376,7 +398,6 @@
     white-space: normal;
   }
 }
-// 576 px
 
 @include screen-576 {
   .section--contacts > .container {
@@ -433,7 +454,6 @@
   }
 }
 
-// 390 px — Figma 4209:32155.
 @include breakpoint($bp-390) {
   .section--contacts > .container {
     width: calc(100% - 32px);
@@ -516,6 +536,10 @@
     padding: 16px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .contact-link:where(:first-child, :last-child) {
+    padding: 16px;
   }
 
   .contact-link__icon--vk {

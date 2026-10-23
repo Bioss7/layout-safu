@@ -2,6 +2,10 @@
 @use "../_vars" as *;
 
 .marquee {
+  position: absolute;
+  top: var(--applicant-header-height);
+  left: 0;
+  z-index: 4;
   width: 100%;
   overflow: hidden;
   background-color: var(--main-accent-accent-100);
@@ -20,7 +24,7 @@
   flex-shrink: 0;
   gap: 16px;
   padding-right: 16px;
-  height: 52px;
+  height: var(--applicant-marquee-height);
 }
 
 .marquee__text {
@@ -28,7 +32,7 @@
   font-variant: normal;
   font-weight: 800;
   font-stretch: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: var(--main-font-display);
   white-space: nowrap;
@@ -52,14 +56,6 @@
     transform: translateX(-50%);
   }
 }
-// 768 px
-
-@include breakpoint($bp-768) {
-  .marquee__group {
-    height: 40px;
-  }
-}
-// 576 px
 
 @include screen-576 {
   .marquee__group {
@@ -72,7 +68,6 @@
     letter-spacing: 0.04em;
   }
 }
-// Reduced motion
 
 @media (prefers-reduced-motion: reduce) {
   .marquee__track {

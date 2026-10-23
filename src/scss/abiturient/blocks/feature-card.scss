@@ -8,13 +8,11 @@
 }
 
 .feature-card {
-  // Замечание: отсутствие стиля [abiturient-feature-card] — ui/data/remarks.json.
   position: relative;
   display: flex;
   align-items: flex-end;
   min-width: 0;
   min-height: 450px;
-  // В Figma отступ включает внутреннюю обводку 3px.
   padding: 37px;
   overflow: hidden;
   border: 3px solid var(--main-white-white-100);
@@ -42,11 +40,11 @@
 }
 .feature-card--1,
 .feature-card--4 {
-  flex: 0 1 calc((100% - 18px) * 0.58578143);
+  flex: 0 1 calc((100% - 18px) * 0.586);
 }
 .feature-card--2,
 .feature-card--3 {
-  flex: 0 1 calc((100% - 18px) * 0.41421857);
+  flex: 0 1 calc((100% - 18px) * 0.414);
 }
 
 .feature-card__picture {
@@ -97,7 +95,6 @@
 .feature-card__title {
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -110,7 +107,6 @@
 .feature-card__description {
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -119,12 +115,10 @@
   letter-spacing: 0em;
   color: var(--main-white-white-100);
 }
-// Ширины текстовых групп из макета определяют естественные переносы.
 .feature-card--1 .feature-card__body,
 .feature-card--4 .feature-card__body {
   max-width: 752px;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .feature-card {
@@ -146,7 +140,6 @@
     width: calc(100% - 128px);
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .opportunities-list {
@@ -160,12 +153,12 @@
 
   .feature-card--1,
   .feature-card--4 {
-    flex-basis: calc((100% - 16px) * 0.5847150735);
+    flex-basis: calc((100% - 16px) * 0.585);
   }
 
   .feature-card--2,
   .feature-card--3 {
-    flex-basis: calc((100% - 16px) * 0.4152849265);
+    flex-basis: calc((100% - 16px) * 0.415);
   }
 
   .feature-card__title {
@@ -178,7 +171,6 @@
     font-size: 16px;
     line-height: 24px;
   }
-  // Ширины текстовых групп из макета определяют естественные переносы.
   .feature-card--1 .feature-card__body,
   .feature-card--4 .feature-card__body {
     max-width: 476px;
@@ -193,14 +185,12 @@
     width: calc(100% - 96px);
   }
 }
-// 992 px
 
 @include breakpoint($bp-992) {
   .section--opportunities .container {
     width: calc(100% - 48px);
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .opportunities-list {
@@ -243,7 +233,6 @@
     letter-spacing: normal;
     text-shadow: none;
   }
-  // Ширины текстовых групп из макета определяют естественные переносы.
   .feature-card--1 .feature-card__body,
   .feature-card--4 .feature-card__body {
     max-width: none;
@@ -258,14 +247,12 @@
     width: calc(100% - 32px);
   }
 }
-// 1440 px
 
 @include screen-1440 {
   .feature-card__news-phrase {
     white-space: nowrap;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .feature-card {
@@ -276,12 +263,12 @@
 
   .feature-card--1,
   .feature-card--4 {
-    flex-basis: calc((100% - 16px) * 0.5845076754);
+    flex-basis: calc((100% - 16px) * 0.585);
   }
 
   .feature-card--2,
   .feature-card--3 {
-    flex-basis: calc((100% - 16px) * 0.4132993421);
+    flex-basis: calc((100% - 16px) * 0.413);
   }
 
   .feature-card__arrow {
@@ -309,7 +296,6 @@
     line-height: 20px;
     font-weight: 500;
   }
-  // Ширины текстовых групп из макета определяют естественные переносы.
   .feature-card--1 .feature-card__body,
   .feature-card--4 .feature-card__body {
     max-width: 399px;
@@ -342,7 +328,6 @@
     max-width: 253px;
   }
 }
-// 992 px
 
 @include screen-compact {
   .feature-card {
@@ -355,7 +340,6 @@
     }
   }
 }
-// 768 px
 
 @include screen-768 {
   .opportunities-list {
@@ -405,7 +389,6 @@
     max-width: 503px;
   }
 }
-// 576 px
 
 @include screen-576 {
   .opportunities-list {
@@ -454,7 +437,6 @@
   }
 }
 
-// 390 px — Figma 4209:32148.
 @include breakpoint($bp-390) {
   .section--opportunities .container {
     width: calc(100% - 32px);
@@ -478,7 +460,6 @@
   .feature-card {
     min-height: 0;
     aspect-ratio: 1;
-    // Отступ 16px в макете включает внутреннюю обводку 3px.
     padding: 13px;
     border-width: 3px;
     box-shadow: 4px 4px var(--main-black);

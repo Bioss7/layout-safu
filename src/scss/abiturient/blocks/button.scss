@@ -29,7 +29,6 @@
     background-color: var(--main-blue-blue-30);
     color: var(--main-white-white-100);
   }
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -79,7 +78,6 @@
 .button--light:disabled {
   background-color: var(--main-blue-blue-20);
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .button {

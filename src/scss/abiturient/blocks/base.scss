@@ -1,6 +1,9 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 :root {
+  --applicant-header-height: 168px;
+  --applicant-marquee-height: 52px;
+  --section-gap: 120px;
   --main-font-display: "Unbounded", sans-serif;
   --main-panel: #e8eef6;
   --main-black: #000;
@@ -13,6 +16,8 @@ html {
   scroll-padding-top: 24px;
 }
 body {
+  position: relative;
+  max-width: 1920px;
   margin-inline: auto;
   font-style: normal;
   font-variant: normal;
@@ -28,7 +33,11 @@ body.no-scroll {
   overflow: hidden;
 }
 main {
-  // Подтверждённый экспорт повторяющегося узла Perspective Grid, Figma 4200:16802.
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-bottom: var(--section-gap);
   background-image: url("/abiturient/assets/img/page/page-bg-grid.svg");
   background-position: -40px 0;
   background-size: 400px 400px;
@@ -76,9 +85,11 @@ img {
   max-width: 1720px;
   margin-inline: auto;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
+  :root {
+    --section-gap: 96px;
+  }
   main {
     background-position: -32px 0;
   }
@@ -86,14 +97,15 @@ img {
   .container {
     width: calc(100% - 160px);
   }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 128px);
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
+  :root {
+    --section-gap: 72px;
+  }
   main {
     background-position: 0 0;
   }
@@ -101,14 +113,21 @@ img {
   .container {
     width: calc(100% - 64px);
   }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 96px);
   }
 }
-// 992 px
+
+@include breakpoint($bp-1150) {
+  :root {
+    --applicant-header-height: 142px;
+  }
+}
 
 @include breakpoint($bp-992) {
+  :root {
+    --section-gap: 64px;
+  }
   main {
     background-position: -32px 0;
   }
@@ -116,88 +135,77 @@ img {
   .container {
     width: calc(100% - 48px);
   }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 48px);
   }
 }
-// 768 px
+
+@include breakpoint($bp-900) {
+  :root {
+    --applicant-header-height: 114px;
+  }
+}
 
 @include breakpoint($bp-768) {
+  :root {
+    --applicant-header-height: 112px;
+  }
   .container {
     width: calc(100% - 32px);
   }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 32px);
   }
 }
-// 992 px
 
 @include screen-tablet {
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 64px);
   }
 }
-// 992 px
 
 @include screen-tablet-wide {
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     &.applicant-hero__inner {
       width: calc(100% - 48px);
     }
   }
 }
-// 768 px
 
 @include screen-768 {
   main {
     background-image: none;
   }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 48px);
   }
 }
-// 576 px
 
 @include screen-576 {
+  :root {
+    --applicant-header-height: 102px;
+    --section-gap: 80px;
+  }
   main {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    padding-bottom: 80px;
     background-image: url("/abiturient/assets/img/page/page-bg-grid.svg");
     background-position: center top;
   }
 
-  .marquee {
-    margin-bottom: -80px;
-  }
-  // Поля новых адаптивов относятся только к содержимому, не к шапке и подвалу.
   main > section > .container {
     width: calc(100% - 40px);
   }
 }
-// 390 px
 
 @include breakpoint($bp-390) {
+  :root {
+    --applicant-header-height: 102px;
+    --applicant-marquee-height: 40px;
+    --section-gap: 70px;
+  }
   main {
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-    padding-bottom: 70px;
     background-position: center top;
   }
-
-  main > .marquee {
-    margin-bottom: -70px;
-  }
 }
-
-// Reduced motion
 
 @media (prefers-reduced-motion: reduce) {
   html {

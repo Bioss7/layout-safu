@@ -4,7 +4,7 @@
 .section--admission {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 152px;
   isolation: isolate;
   &::before,
   &::after {
@@ -52,7 +52,6 @@
 }
 
 .study-card {
-  // Замечание: отсутствие стиля [abiturient-admission] — ui/data/remarks.json.
   position: relative;
   display: flex;
   flex-direction: column;
@@ -64,7 +63,6 @@
   text-align: left;
   text-decoration: none;
   color: var(--main-blue-blue-100);
-  // Нативная заливка button не должна заполнять прозрачный срез SVG.
   appearance: none;
   background-color: transparent;
   background-image: url("/abiturient/assets/img/admission/admission-card-bg.svg");
@@ -119,7 +117,6 @@
   font-variant: normal;
   font-stretch: normal;
   text-transform: uppercase;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -133,7 +130,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -158,7 +154,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -172,7 +167,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -181,7 +175,6 @@
   letter-spacing: 0em;
   color: var(--main-white-white-100);
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .section--admission {
@@ -261,7 +254,6 @@
     line-height: 24px;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .section--admission {
@@ -323,19 +315,16 @@
   }
 }
 
-// 992 px
-
 @include breakpoint($bp-992) {
   .section--admission {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 
   .admission-list > * {
     flex-basis: calc(50% - 10px);
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .section--admission {
@@ -466,11 +455,10 @@
     order: 7;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .section--admission {
-    padding-bottom: 88px;
+    padding-bottom: 105px;
     &::before {
       display: block;
       height: 39px;
@@ -550,35 +538,20 @@
     display: none;
   }
 
-  .study-card--target {
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
     justify-content: flex-start;
     min-height: min-content;
   }
 
-  .study-card--paid {
-    justify-content: flex-start;
-    min-height: min-content;
-  }
-
-  .study-card--results {
-    justify-content: flex-start;
-    min-height: min-content;
-  }
-  // В макете 992 нижние карточки выровнены от строки со стрелкой, а не от низа.
-  .study-card--target .study-card__body,
-  .study-card--paid .study-card__body,
-  .study-card--results .study-card__body {
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .study-card__body {
     margin-top: calc((100vw - 768px) * 40 / 224);
   }
 
-  .study-card--target .study-card__arrow .card-arrow,
-  .study-card--paid .study-card__arrow .card-arrow,
-  .study-card--results .study-card__arrow .card-arrow {
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
     width: 32px;
     height: 32px;
   }
 }
-// 992 px
 
 @include screen-compact {
   .admission-background {
@@ -586,19 +559,17 @@
     background-position: 73.24% 99.88%;
   }
 }
-// 900 px
 
 @include screen-900 {
   .study-card__joined-text {
     white-space: normal;
   }
 }
-// 768 px
 
 @include screen-768 {
   .section--admission {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 105px;
+    padding-bottom: 105px;
     &::before,
     &::after {
       height: 30px;
@@ -669,8 +640,8 @@
   }
 
   .study-card__description {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .admission-note {
@@ -691,7 +662,6 @@
     line-height: 24px;
   }
 }
-// 576 px
 
 @include screen-576 {
   .section--admission {
@@ -756,7 +726,6 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
   .section--admission .title-2 {
     font-size: 32px;

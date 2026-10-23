@@ -29,7 +29,6 @@
 }
 
 .accordion__trigger {
-  // Замечание: отсутствие стиля [abiturient-accordion] — ui/data/remarks.json.
   display: flex;
   align-items: center;
   gap: 16px;
@@ -99,12 +98,9 @@
 .accordion__body p {
   margin: 0;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .section--faq {
-    padding-top: 40px;
-    padding-bottom: 40px;
     background-color: var(--main-white-white-100);
   }
 
@@ -114,7 +110,6 @@
 
   .faq .tabs__tab {
     padding-bottom: 14px;
-    // Ширины вкладок сверены с Figma; значения заданы явно по порядку вкладок.
     &:nth-child(1) {
       width: 354px;
     }
@@ -155,7 +150,6 @@
     padding-bottom: 16px;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .section--faq {
@@ -177,14 +171,8 @@
     height: 32px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
-  .section--faq {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
   .faq__content {
     background-color: transparent;
   }
@@ -210,14 +198,12 @@
     padding-bottom: 24px;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .faq__columns {
     gap: 24px;
   }
 }
-// 768 px
 
 @include screen-768 {
   .section--faq {
@@ -250,7 +236,6 @@
     padding-bottom: 16px;
   }
 }
-// 576 px
 
 @include screen-576 {
   .faq .tabs__tab {
@@ -264,7 +249,6 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
   #faq .title-2 {
     font-size: 32px;
@@ -287,7 +271,12 @@
     padding: 16px;
   }
 
+  .accordion:not(.accordion--open) .accordion__trigger {
+    height: 100px;
+  }
+
   #faq-panel-budget .faq__column:nth-child(2) .accordion:nth-child(3) .accordion__trigger {
+    height: auto;
     padding-top: 16px;
     padding-bottom: 16px;
   }

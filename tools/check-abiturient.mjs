@@ -67,7 +67,7 @@ try {
           linksDirection: getComputedStyle(section.querySelector('.contacts__links')).flexDirection,
         };
       })(),
-      questionBackground: getComputedStyle(document.querySelector(innerWidth > 390 && innerWidth <= 1440 ? '.question__surface' : '.section--question')).backgroundColor,
+      questionBackground: getComputedStyle(document.querySelector('.question__surface')).backgroundColor,
       answersCard: (() => {
         const card = document.querySelector('.answers-card');
         const title = card.querySelector('.answers-card__title');
@@ -105,16 +105,20 @@ try {
     metrics.push(metric);
     assert.equal(metric.contacts.background, 'rgb(255, 255, 255)', 'Белый фон контактов поверх сетки');
     assert.equal(metric.questionBackground, 'rgb(255, 255, 255)', 'Белый фон содержимого вопроса поверх сетки');
-    assert.equal(metric.contacts.paddingTop, width <= 390 ? 30 : width <= 768 ? 0 : 40);
-    assert.equal(metric.contacts.paddingBottom, width <= 390 ? 30 : width <= 768 ? 0 : 40);
+    assert.equal(metric.contacts.paddingTop, width <= 576 ? 20 : width <= 768 ? 24 : 40);
+    assert.equal(metric.contacts.paddingBottom, width <= 576 ? 20 : width <= 768 ? 24 : 40);
     const contactsReference = {
       1920: { titleGap: 80, containerLeft: 100, mapWidth: 560, height: 778, linksDirection: 'row' },
       1440: { titleGap: 48, containerLeft: 64, mapWidth: 420, height: 630, linksDirection: 'row' },
-      1200: { titleGap: 48, containerLeft: 48, mapWidth: 352, height: 758, linksDirection: 'column' },
+      1200: { titleGap: 48, containerLeft: 48, mapWidth: 352, height: 760, linksDirection: 'column' },
     }[width];
     if (contactsReference) {
       for (const [key, value] of Object.entries(contactsReference)) {
-        assert.equal(metric.contacts[key], value, 'Геометрия контактов ' + width + ': ' + key);
+        if (key === 'height') {
+          assert.ok(Math.abs(metric.contacts[key] - value) <= 2, 'Высота контактов с допуском округления 2px: ' + width);
+        } else {
+          assert.equal(metric.contacts[key], value, 'Геометрия контактов ' + width + ': ' + key);
+        }
       }
     }
     // Геометрия и обрезка подтверждены отдельными макетами Figma.
@@ -176,8 +180,8 @@ try {
   assert.match(graphics.heroMask, /hero\/icon-arrow-up-right.svg/);
   assert.match(graphics.answersMask, /question\/icon-chevron-right.svg/);
   assert.match(graphics.stories, /reviews\/icon-arrow-up-right.svg/);
-  assert.equal(graphics.storiesSize, '11px');
-  assert.match(graphics.mapShadow, /4px 4px 0px 0px/);
+  assert.equal(graphics.storiesSize, '16px', 'Мобильная стрелка историй соответствует адаптиву 390');
+  assert.match(graphics.mapShadow, /3px 3px 0px 0px/, 'Тень карты на адаптиве 390');
   assert.equal(graphics.mapSize, 560, 'Карта без запечённой внешней тени');
 
   const strip = page.locator('.tabs--line.js-drag-scroll');

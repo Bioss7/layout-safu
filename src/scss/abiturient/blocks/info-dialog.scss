@@ -56,7 +56,6 @@
   line-height: 24px;
   font-family: var(--font-family);
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .info-dialog__title {

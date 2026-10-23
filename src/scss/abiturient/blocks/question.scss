@@ -1,6 +1,17 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.question__surface {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--main-white-white-100);
+}
+
+#topic-label {
+  font-weight: 500;
+  line-height: 20px;
+}
+
 .question__layout {
   display: flex;
   align-items: flex-start;
@@ -16,7 +27,6 @@
   margin: 0 0 32px;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -39,7 +49,6 @@
 .question-form__submit {
   flex: 1 1 auto;
   min-height: 64px;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -68,12 +77,10 @@
 }
 
 .answers-card {
-  // Ширина карточки: 680/640/536px в макетах 1920/1440/1200.
   flex: 0 0 680px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  // Обводка 2px входит в отступ от внешнего края в Figma.
   padding: 54px;
   border: 2px solid var(--main-white-white-100);
   background-color: var(--main-panel);
@@ -96,7 +103,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
@@ -110,7 +116,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 900;
@@ -124,7 +129,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Явные размеры по макетам 1920/1440/1200: 20/24/18px.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -159,7 +163,6 @@
   &:hover {
     color: var(--main-accent-accent-100);
   }
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -199,7 +202,6 @@
 }
 
 .answers-card .button--text {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -216,7 +218,6 @@
 .answers-card .button--text:active {
   color: var(--main-blue-blue-90);
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .question__surface > .container {
@@ -224,8 +225,6 @@
   }
 
   .section--question {
-    padding-top: 96px;
-    padding-bottom: 96px;
     background-color: transparent;
   }
 
@@ -240,7 +239,6 @@
   }
 
   .question-form .form-field {
-    // Нижняя линия входит в размер поля в макете.
     padding-bottom: 23px;
   }
 
@@ -293,16 +291,13 @@
     white-space: normal;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
+  #topic-label {
+    line-height: 22px;
+  }
   .question__surface > .container {
     width: calc(100% - 96px);
-  }
-
-  .section--question {
-    padding-top: 72px;
-    padding-bottom: 72px;
   }
 
   .question__layout {
@@ -375,7 +370,6 @@
   }
 
   .answers-card__link {
-    // В макете 1200 текст 452px, стрелка 24px и промежуток 28px.
     gap: 28px;
     font-size: 16px;
     line-height: 24px;
@@ -385,16 +379,10 @@
     white-space: nowrap;
   }
 }
-// 992 px
 
 @include breakpoint($bp-992) {
   .question__surface > .container {
     width: calc(100% - 48px);
-  }
-
-  .section--question {
-    padding-top: 64px;
-    padding-bottom: 64px;
   }
 
   .question__layout {
@@ -407,7 +395,6 @@
     width: 100%;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .question__surface > .container {
@@ -415,14 +402,12 @@
   }
 
   .section--question {
-    padding-top: 30px;
-    padding-bottom: 30px;
     background-color: var(--main-white-white-100);
   }
 
   .question__surface {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .question-form__description {
@@ -452,7 +437,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -467,7 +452,7 @@
   }
 
   .answers-card__label {
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -481,7 +466,7 @@
   .answers-card__title {
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -495,11 +480,10 @@
 
   .answers-card .button--text {
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .question__surface > .container {
@@ -557,16 +541,18 @@
     line-height: 26px;
   }
 }
-// 768 px
 
 @include screen-768 {
+  .question__surface {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
   .question__surface > .container {
     width: calc(100% - 48px);
   }
 
   .section--question {
-    padding-top: 64px;
-    padding-bottom: 64px;
     background-color: transparent;
   }
 
@@ -647,16 +633,18 @@
     font-weight: 800;
   }
 }
-// 576 px
 
 @include screen-576 {
+  .question__surface {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .question__surface > .container {
     width: calc(100% - 40px);
   }
 
   .section--question {
-    padding-top: 20px;
-    padding-bottom: 20px;
     background-color: var(--main-white-white-100);
   }
 
@@ -690,8 +678,15 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
+  #topic-label {
+    line-height: 20px;
+  }
+  .question__surface {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .section--question .title-2 {
     font-size: 32px;
     line-height: 40px;

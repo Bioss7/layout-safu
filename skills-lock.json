@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "figma-implement-design": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/figma-implement-design/SKILL.md",
+      "computedHash": "f86f7eb84aeda74334e1eb33faf08dc67e19d88ef5f2cc84eee559333e88e001"
+    },
+    "scss-best-practices": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "scss-best-practices/SKILL.md",
+      "computedHash": "411d1bcac3a96c9a9e60572285505aa10909548de43a614472fa0f0ae02b95e0"
+    }
+  }
+}

@@ -32,7 +32,6 @@
   &:hover:not(:disabled):not(.tabs__tab--active) {
     background-color: var(--main-blue-blue-40);
   }
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -53,7 +52,7 @@
 }
 
 .tabs--line .tabs__tab {
-  padding: 12px 16px 16px;
+  padding: 12px 16px 14px;
   border: 0;
   border-bottom: 2px solid var(--main-panel);
   background-color: transparent;
@@ -89,15 +88,12 @@
 .tabs__tab:disabled {
   cursor: not-allowed;
 }
-// Замечание: отсутствие стиля [abiturient-tabs] — ui/data/remarks.json.
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .tabs__tab {
     font-size: 16px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .tabs {

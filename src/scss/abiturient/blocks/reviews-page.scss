@@ -3,9 +3,8 @@
 
 .section--reviews .link-arrow--stories {
   text-transform: uppercase;
-  padding: 14px 16px;
+  padding: 12px 16px;
   border: 2px solid var(--main-white-white-100);
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -16,7 +15,6 @@
 }
 
 .section--reviews .reviews-slider {
-  // Содержимое сохраняет прежнюю ширину, дополнительные 4px вмещают правую тень.
   width: calc(100% + 4px);
   padding-right: 4px;
 }
@@ -27,7 +25,8 @@
   border-radius: 0;
   box-shadow: 3px 4px 0 0 var(--main-black);
   background-color: var(--main-panel);
-  height: 522px;
+  height: 520px;
+  padding: 22px;
 }
 
 .section--reviews .review-card__media {
@@ -35,7 +34,6 @@
 }
 
 .section--reviews .review-card__title {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
@@ -53,7 +51,6 @@
 }
 
 .section--reviews .review-card__meta-item {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
@@ -64,7 +61,6 @@
 }
 
 .section--reviews .review-card__text {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -75,7 +71,6 @@
 }
 
 .section--reviews .review-card__link {
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 600;
@@ -92,8 +87,6 @@
 .section--reviews .link-arrow--stories:active {
   color: var(--main-blue-blue-90);
 }
-
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .section--reviews .section-header {
@@ -139,8 +132,6 @@
   }
 }
 
-// 1200 px
-
 @include breakpoint($bp-1200) {
   .section--reviews .link-arrow--stories {
     font-size: 16px;
@@ -165,7 +156,6 @@
   }
 
   .section--reviews .reviews-slider__viewport {
-    // На 1200 ряд включает 4px снизу под тень карточек.
     padding-bottom: 4px;
   }
 
@@ -191,8 +181,6 @@
   }
 }
 
-// 768 px
-
 @include breakpoint($bp-768) {
   .section--reviews .section-header {
     margin-bottom: 40px;
@@ -204,7 +192,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -234,7 +222,7 @@
   .section--reviews .review-card__title {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -257,7 +245,7 @@
   .section--reviews .review-card__meta-item {
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -265,7 +253,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: none;
   }
 
@@ -276,15 +264,11 @@
   }
 }
 
-// 390 px
-
 @include breakpoint($bp-390) {
   .section--reviews .review-card__media {
     height: 188px;
   }
 }
-
-// 992 px
 
 @include screen-tablet {
   .section--reviews .section-header {
@@ -340,8 +324,6 @@
   }
 }
 
-// 992 px
-
 @include screen-compact {
   .section--reviews .reviews-slider__controls {
     gap: 16px;
@@ -360,8 +342,6 @@
   }
 }
 
-// 768 px
-
 @include screen-768 {
   .section--reviews .section-header {
     margin-bottom: 32px;
@@ -373,7 +353,6 @@
   }
 
   .section--reviews .reviews-slider {
-    // Фрейм показывает начало третьей карточки до правого края экрана.
     width: calc(100% + 24px);
     padding-right: 24px;
   }
@@ -445,8 +424,6 @@
   }
 }
 
-// 576 px
-
 @include screen-576 {
   .section--reviews .section-header {
     margin-bottom: 32px;
@@ -491,7 +468,6 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
   .section--reviews .title-2 {
     font-size: 32px;
@@ -575,7 +551,6 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
-    // Слот Figma 66px: три строки по 20px и 6px до следующего интервала.
     margin-bottom: 18px;
     height: 60px;
     flex-shrink: 0;

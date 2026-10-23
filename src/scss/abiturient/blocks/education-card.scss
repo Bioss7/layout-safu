@@ -21,13 +21,12 @@
 }
 
 .education-card {
-  // Замечание: отсутствие стиля [abiturient-education-card] — ui/data/remarks.json.
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
   min-width: 0;
-  padding: 36px;
+  padding: 40px;
   background-color: var(--main-blue-blue-5);
   border: 4px solid var(--main-white-white-100);
   box-shadow: 3px 3px var(--main-black);
@@ -75,7 +74,6 @@
   font-variant: normal;
   font-stretch: normal;
   overflow-wrap: anywhere;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -90,7 +88,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -119,7 +116,6 @@
   box-shadow: 3px 3px var(--main-black);
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -156,7 +152,6 @@
 .education-card:focus-visible .education-card__title {
   color: var(--main-white-white-100);
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .education-list {
@@ -206,7 +201,6 @@
     text-shadow: 2px 2px 0px var(--main-black);
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .education-layout {
@@ -267,7 +261,6 @@
     text-shadow: 2px 2px 0px var(--main-black);
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .education-layout {
@@ -327,7 +320,6 @@
     text-shadow: 2px 2px 0px var(--main-black);
   }
 }
-// 992 px
 
 @include screen-tablet {
   .education-layout {
@@ -391,7 +383,6 @@
     border-color: var(--main-white-white-100);
   }
 }
-// 768 px
 
 @include screen-768 {
   .education-list {
@@ -404,7 +395,7 @@
   }
 
   .education-card {
-    padding: 14px;
+    padding: 13px;
     min-height: 220px;
     border-width: 3px;
     gap: 12px;
@@ -452,7 +443,6 @@
     font-size: 12px;
   }
 }
-// 576 px
 
 @include screen-576 {
   .education-list {
@@ -523,9 +513,7 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
-  // Замечание: отсутствие стиля [abiturient-390-bachelor-copy] — ui/data/remarks.json.
   .section--education .title-2 {
     font-size: 32px;
     line-height: 40px;

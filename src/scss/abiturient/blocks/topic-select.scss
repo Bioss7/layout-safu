@@ -98,7 +98,6 @@
 .topic-select__option[aria-selected="true"] {
   background-color: var(--main-panel);
 }
-// Замечание: отсутствие стиля [abiturient-topic-select] — ui/data/remarks.json.
 
 .topic-select__trigger:disabled {
   cursor: not-allowed;

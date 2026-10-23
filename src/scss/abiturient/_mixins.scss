@@ -41,7 +41,6 @@
   }
 }
 
-// Named, non-overlapping frame variants. Component files contain no range arithmetic.
 @mixin screen-576 {
   @media screen and (390px < width <= 576px) {
     @content;

@@ -2,8 +2,11 @@
 @use "../_vars" as *;
 
 .applicant-hero {
+  --hero-height: 993px;
+  --hero-overlay-height: calc(var(--applicant-header-height) + var(--applicant-marquee-height));
   position: relative;
-  min-height: 725px;
+  min-height: var(--hero-height);
+  padding-top: var(--hero-overlay-height);
   overflow: hidden;
   color: var(--main-white-white-100);
   background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
@@ -17,7 +20,7 @@
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 76px;
+    height: 93px;
     background-image: url("/abiturient/assets/img/hero/hero-transition-1920.svg");
     background-position: bottom center;
     background-size: 100% 100%;
@@ -28,16 +31,16 @@
 
 .applicant-hero__inner {
   position: relative;
-  min-height: inherit;
+  min-height: calc(var(--hero-height) - var(--hero-overlay-height));
 }
 
 .applicant-hero__copy {
   position: relative;
   z-index: 2;
   width: 1072px;
-  max-width: 62%;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  max-width: 100%;
+  padding-top: 32px;
+  padding-bottom: 93px;
 }
 
 .applicant-hero__status {
@@ -49,7 +52,6 @@
   list-style: none;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -62,7 +64,7 @@
 .applicant-hero__status li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   &::before {
     content: "";
     width: 12px;
@@ -78,7 +80,6 @@
   margin: 0;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -107,11 +108,10 @@
 }
 
 .applicant-hero__description {
-  // Замечание: отсутствие стиля [abiturient-hero-description-copy] — ui/data/remarks.json.
-  margin: 24px 0 40px;
+  max-width: 568px;
+  margin: 24px 0 24px;
   font-variant: normal;
   font-stretch: normal;
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -130,12 +130,11 @@
 }
 
 .hero-link {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 16px 20px 0;
-  border-bottom: 3px solid var(--main-white-white-100);
-  box-shadow: 0 3px var(--main-black);
   text-decoration: none;
   font-variant: normal;
   font-stretch: normal;
@@ -143,7 +142,6 @@
   &:hover {
     color: var(--main-accent-accent-100);
   }
-  // Значения 1920/1440/1200 сверены с Figma и заданы явно на брейкпоинтах.
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -154,13 +152,24 @@
   color: var(--main-white-white-100);
 }
 
+.hero-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-white-white-100);
+  box-shadow: 3px 3px var(--main-black);
+  pointer-events: none;
+}
+
 .hero-link .card-arrow {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
   background-color: transparent;
   mask-image: none;
   -webkit-mask-image: none;
-  // Тень на обёртке: маска дочернего элемента не обрезает смещённый контур.
   filter: drop-shadow(2px 2px 0 var(--main-black));
 }
 
@@ -169,6 +178,7 @@
   display: block;
   width: 16px;
   height: 16px;
+  margin: 6px;
   background-color: currentColor;
   mask-image: url("/abiturient/assets/img/hero/icon-arrow-up-right.svg");
   mask-position: center;
@@ -189,9 +199,9 @@
 .applicant-hero__building {
   position: absolute;
   width: 1222px;
-  height: 811px;
+  height: 739px;
   left: 53.78%;
-  top: 29px;
+  top: 49px;
   background-color: var(--main-white-white-100);
   mask-image: url("/abiturient/assets/img/hero/hero-building-1920.png");
   mask-position: center;
@@ -207,7 +217,7 @@
   min-width: 350px;
   max-width: 670px;
   left: 53.49%;
-  bottom: 0;
+  top: 54px;
 }
 
 .applicant-hero__people img {
@@ -216,11 +226,10 @@
   height: auto;
   max-width: none;
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .applicant-hero {
-    min-height: 696px;
+    --hero-height: 916px;
     background-size: cover;
     &::after {
       height: 70px;
@@ -230,7 +239,7 @@
   .applicant-hero__copy {
     width: 872px;
     max-width: 100%;
-    padding-top: 44px;
+    padding-top: 28px;
     padding-bottom: 88px;
   }
 
@@ -258,7 +267,7 @@
   .applicant-hero__building {
     width: 977px;
     height: auto;
-    aspect-ratio: 1222 / 811;
+    aspect-ratio: 1222 / 739;
     left: calc(78.27vw - 393px);
     top: 117px;
   }
@@ -270,20 +279,19 @@
     bottom: auto;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .applicant-hero {
-    min-height: 698px;
+    --hero-height: 918px;
     &::after {
       height: 58px;
     }
   }
 
   .applicant-hero__copy {
-    width: 840px;
+    width: 850px;
     max-width: 100%;
-    padding-top: 44px;
+    padding-top: 28px;
   }
 
   .applicant-hero__status {
@@ -299,6 +307,15 @@
 
   .applicant-hero__year {
     margin-top: 24px;
+  }
+
+  .applicant-hero__year picture {
+    width: 230px;
+    height: 68px;
+  }
+
+  .applicant-hero__badge {
+    width: 230px;
   }
 
   .applicant-hero__description {
@@ -320,11 +337,9 @@
     top: 146px;
   }
 }
-// 900 px
 
 @include breakpoint($bp-900) {
   .applicant-hero {
-    min-height: 0;
     background-image: url("/abiturient/assets/img/hero/hero-bg-390.png");
     background-size: auto 126.73%;
     background-position: 60% bottom;
@@ -392,7 +407,7 @@
   .hero-link {
     padding: 8px 16px 12px 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.04em;
     text-shadow: var(--main-black) 2px 2px 0px;
   }
 
@@ -424,11 +439,10 @@
     max-width: 590px;
   }
 }
-// 992 px
 
 @include screen-tablet-wide {
   .applicant-hero {
-    min-height: 741px;
+    --hero-height: 935px;
     &::after {
       height: 73px;
       background-image: url("/abiturient/assets/img/hero/hero-transition-992.svg");
@@ -437,14 +451,15 @@
 
   .applicant-hero__copy {
     width: 600px;
-    padding-top: 36px;
+    padding-top: 28px;
   }
 
   .applicant-hero__status {
     width: 760px;
     max-width: calc(100vw - 48px);
     font-size: 12px;
-    line-height: 20px;
+    line-height: 16px;
+    min-height: 20px;
   }
 
   .applicant-hero__year {
@@ -471,17 +486,16 @@
 
   .applicant-hero__building {
     width: 786px;
-    left: 457px;
+    left: 433px;
     top: 258px;
   }
 
   .applicant-hero__people {
     width: 431px;
-    left: 495px;
+    left: 471px;
     top: 261px;
   }
 }
-// 992 px
 
 @include screen-tablet {
   .applicant-hero__status li {
@@ -521,11 +535,10 @@
     margin: 6px;
   }
 }
-// 768 px
 
 @include screen-768 {
   .applicant-hero {
-    min-height: 1147px;
+    --hero-height: 1311px;
     background-image: url("/abiturient/assets/img/hero/hero-bg-1920.png");
     background-size: cover;
     background-position: center bottom;
@@ -538,7 +551,7 @@
   .applicant-hero__copy {
     width: 100%;
     max-width: 100%;
-    padding-top: 40px;
+    padding-top: 32px;
   }
 
   .applicant-hero__status {
@@ -566,7 +579,7 @@
   .applicant-hero__title {
     font-size: 64px;
     line-height: 1;
-    letter-spacing: 3px;
+    letter-spacing: 0.04em;
   }
 
   .applicant-hero__badge {
@@ -598,8 +611,9 @@
 
   .hero-link {
     font-weight: 800;
-    padding-top: 14px;
-    padding-bottom: 18px;
+    letter-spacing: 0.04em;
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 
   .hero-link .card-arrow {
@@ -642,11 +656,10 @@
     bottom: -10px;
   }
 }
-// 576 px
 
 @include screen-576 {
   .applicant-hero {
-    min-height: 1099px;
+    --hero-height: 1253px;
   }
 
   .applicant-hero__copy {
@@ -689,7 +702,6 @@
     box-shadow: none;
   }
 
-  // Обводка Figma лежит внутри строки и не увеличивает её высоту.
   .hero-link::after {
     content: "";
     position: absolute;
@@ -721,7 +733,6 @@
   }
 }
 
-// Intermediate hero widths: explicit type steps replace viewport interpolation.
 @include breakpoint($bp-680) {
   .applicant-hero__title {
     font-size: 52px;
@@ -749,15 +760,9 @@
   }
 }
 
-// 390 px
 @include breakpoint($bp-390) {
   .applicant-hero {
-    min-height: 1147px;
-  }
-
-  .applicant-hero .breadcrumbs__list {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    --hero-height: 1289px;
   }
 
   .applicant-hero__copy {

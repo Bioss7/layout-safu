@@ -1,4 +1,4 @@
-import { readFile, writeFile, readdir } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { summarizeBlocks } from "../ui/ui-block-metrics.js";
@@ -20,11 +20,8 @@ export async function collectRemarks() {
     if (!file.startsWith(resolve(root, "src") + sep))
       throw new Error("Источник замечания должен находиться в src/.");
     const lines = (await readFile(file, "utf8")).split(/\r?\n/);
-    const matches = lines.flatMap((value, index) =>
-      value.includes(`Замечание: отсутствие стиля [${entry.id}]`) ? [index + 1] : [],
-    );
-    if (matches.length !== 1) throw new Error(`Нужна ровно одна ссылка на замечание ${entry.id}.`);
-    const line = matches[0];
+    const line = lines.findIndex((value) => value.includes(entry.selector) && !value.trimStart().startsWith("//")) + 1;
+    if (!line) throw new Error(`Селектор замечания ${entry.id} не найден в SCSS.`);
     const text = entry.description
       ? `Замечание — блок «${entry.block}», элемент ${entry.selector}: ${entry.description}; ${entry.fallback}.`
       : `Замечание: отсутствие стиля — блок «${entry.block}», элемент ${entry.selector}: в макете отсутствует оформление ${entry.states.join(" и ")}; ${entry.fallback}.`;
@@ -44,7 +41,7 @@ export async function writeRemarksMarkdown() {
     if (!file.startsWith(root + sep) || !file.endsWith(".md"))
       throw new Error("Отчёт должен быть Markdown-файлом внутри проекта.");
     const header =
-      "# Открытые замечания к состояниям\n\nСгенерировано из `ui/data/remarks.json` командой `pnpm remarks:md`. Этот Markdown не редактируется вручную. В коде находятся только ссылки по ID; номера строк вычисляются автоматически.\n\n";
+      "# Открытые замечания к состояниям\n\nСгенерировано из `ui/data/remarks.json` командой `pnpm remarks:md`. Этот Markdown не редактируется вручную. Номера строк вычисляются по селекторам в исходниках.\n\n";
     const content = entries.length
       ? entries
           .map(
@@ -158,30 +155,6 @@ export async function checkProjectData() {
     for (const file of [...entry.files, ...(entry.reuseSource?.files || [])])
       await readFile(resolve(root, file), "utf8");
   }
-  const knownRemarks = new Map(remarks.map((entry) => [entry.id, entry]));
-  async function checkAnchors(directory) {
-    let entries;
-    try {
-      entries = await readdir(directory, { withFileTypes: true });
-    } catch (error) {
-      if (error.code === "ENOENT") return;
-      throw error;
-    }
-    for (const entry of entries) {
-      const file = resolve(directory, entry.name);
-      if (entry.isDirectory()) await checkAnchors(file);
-      else if (entry.name.endsWith(".scss")) {
-        const lines = (await readFile(file, "utf8")).split(/\r?\n/);
-        for (const line of lines.filter((line) => line.includes("Замечание: отсутствие стиля"))) {
-          const id = line.match(/Замечание: отсутствие стиля \[([a-z0-9-]+)\]/)?.[1];
-          if (!id || knownRemarks.get(id)?.file !== relative(root, file).replaceAll("\\", "/"))
-            throw new Error("В коде осталось замечание без записи в JSON.");
-        }
-      }
-    }
-  }
-  for (const id of new Set([...inventory.auditedPages, ...remarks.map((entry) => entry.page)]))
-    await checkAnchors(resolve(root, "src/scss", id));
   for (const page of pages.filter((page) => inventory.auditedPages.includes(page.id))) {
     const html = await readFile(resolve(root, page.url.replace(/^\//, ""), "index.html"), "utf8");
     const classes = new Set(

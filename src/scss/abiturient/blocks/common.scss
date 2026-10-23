@@ -154,7 +154,6 @@
     outline-offset: 2px;
   }
 }
-// 1440 px
 
 @include breakpoint($bp-1440) {
   .section-header {
@@ -165,7 +164,6 @@
     min-width: 524px;
   }
 }
-// 1200 px
 
 @include breakpoint($bp-1200) {
   .section-header {
@@ -176,7 +174,6 @@
     margin-bottom: 60px;
   }
 }
-// 992 px
 
 @include breakpoint($bp-992) {
   .section-header__content {
@@ -187,7 +184,6 @@
     margin-bottom: 40px;
   }
 }
-// 768 px
 
 @include breakpoint($bp-768) {
   .section-header {
@@ -199,7 +195,6 @@
     width: 100%;
   }
 }
-// 390 px
 
 @include breakpoint($bp-390) {
   .section-header {
