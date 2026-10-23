@@ -22,7 +22,7 @@
     background-color 160ms,
     border-color 160ms;
   flex-shrink: 0;
-  padding: 10px 18px;
+  padding: 1      0px 18px;
   border: 2px solid var(--main-white-white-100);
   box-shadow: 3px 4px var(--main-black);
   background-color: var(--main-panel);
@@ -52,7 +52,7 @@
 }
 
 .tabs--line .tabs__tab {
-  padding: 12px 16px 14px;
+  padding: 12px 16px 16px;
   border: 0;
   border-bottom: 2px solid var(--main-panel);
   background-color: transparent;
