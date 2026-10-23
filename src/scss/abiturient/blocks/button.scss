@@ -17,18 +17,22 @@
   transition:
     background-color 160ms,
     color 160ms;
+
   &:hover {
     background-color: var(--main-accent-accent-100);
     color: var(--main-white-white-100);
   }
+
   &:active {
     background-color: var(--main-blue-blue-90);
   }
+
   &:disabled {
     cursor: default;
     background-color: var(--main-blue-blue-30);
     color: var(--main-white-white-100);
   }
+
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -44,6 +48,7 @@
 }
 
 .button--light {
+  padding: 14px 15px;
   background-color: var(--main-white-white-100);
   color: var(--main-blue-blue-100);
 }
@@ -57,14 +62,17 @@
   color: var(--main-blue-blue-100);
   font-size: 14px;
   line-height: 20px;
+
   &:hover {
     background-color: transparent;
     color: var(--main-accent-accent-100);
   }
+
   &:active {
     background-color: transparent;
     color: var(--main-blue-blue-90);
   }
+
   &:disabled {
     background-color: transparent;
     color: var(--main-blue-blue-30);

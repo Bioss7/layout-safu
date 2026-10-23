@@ -1,3 +1,6 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
 .program-contacts {
  padding-block: 40px;
  &__inner { display: grid; grid-template-columns: 700fr 980fr; gap: 40px; }
@@ -7,5 +10,5 @@
  &__label { text-transform: uppercase; font-size: 12px; line-height: 18px; color: #fff9; }
  &__note { font-size: 12px; line-height: 18px; color: #ffffffb3; }
 }
-@media(max-width:900px) { .program-contacts__inner { grid-template-columns: 1fr; gap: 24px; } }
+@include breakpoint($bp-992) { .program-contacts__inner { grid-template-columns: 1fr; gap: 24px; } }
 @media(max-width:460px) { .program-contacts { padding-block: 16px; &__intro p { font-size: 14px; line-height: 22px; } &__grid { grid-template-columns: 1fr; } } }

@@ -46,12 +46,12 @@
   color: var(--main-white-white-100);
 }
 
-.tabs.tabs--line {
+.tabs--line {
   gap: 0;
   padding: 0;
 }
 
-.tabs--line .tabs__tab {
+.tabs__tab--faq {
   padding: 12px 16px 16px;
   border: 0;
   border-bottom: 2px solid var(--main-panel);
@@ -60,13 +60,15 @@
   color: var(--main-blue-blue-100);
   &:hover {
     color: var(--main-accent-accent-100);
+    border-color: var(--main-accent-accent-100);
+  }
+
+  &[aria-selected="true"] {
+    border-color: var(--main-accent-accent-100);
+    color: var(--main-accent-accent-100);
   }
 }
 
-.tabs--line .tabs__tab--active {
-  border-color: var(--main-accent-accent-100);
-  color: var(--main-accent-accent-100);
-}
 .tabs--dragging,
 .tabs--dragging .tabs__tab {
   cursor: grabbing;
@@ -81,17 +83,51 @@
   cursor: grabbing;
 }
 
-.tabs--line .tabs__tab:hover {
-  border-color: var(--main-accent-accent-100);
-}
-
 .tabs__tab:disabled {
   cursor: not-allowed;
 }
 
+@include breakpoint($bp-1440) {
+  .tabs__tab--faq {
+    padding-bottom: 14px;
+
+    &:nth-child(1) {
+      width: 354px;
+    }
+
+    &:nth-child(2) {
+      width: 352px;
+    }
+
+    &:nth-child(3) {
+      width: 466px;
+    }
+
+    &:nth-child(4) {
+      width: 252px;
+    }
+
+    &:nth-child(5) {
+      width: 222px;
+    }
+
+    &:nth-child(6) {
+      width: 149px;
+    }
+
+    &:nth-child(7) {
+      width: 181px;
+    }
+
+    &:nth-child(8) {
+      width: 242px;
+    }
+  }
+}
+
 @include breakpoint($bp-1200) {
-  .tabs__tab {
-    font-size: 16px;
+  .tabs__tab--faq {
+    padding-bottom: 16px;
   }
 }
 
@@ -100,10 +136,34 @@
     gap: 16px;
   }
 
+  .tabs--line {
+    gap: 0;
+  }
+
   .tabs__tab {
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 1px;
     text-shadow: none;
+  }
+
+  .tabs__tab--faq {
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+
+    &:nth-child(n) {
+      width: auto;
+    }
+  }
+}
+
+@include breakpoint($bp-390) {
+  .tabs__tab--faq {
+    &:nth-child(-n + 2) {
+      width: 320px;
+    }
   }
 }

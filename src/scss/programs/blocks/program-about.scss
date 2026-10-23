@@ -1,3 +1,6 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
 .program-about {
  display: grid; grid-template-columns: 532fr 1092fr; gap: 60px;
  &__intro { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -16,7 +19,7 @@
  &__column { h3 { margin: 0 0 20px; font-size: 16px; line-height: 24px; font-weight: 600; } ul { padding-left: 20px; margin: 0; color: #ffffffb3; font-size: 14px; line-height: 22px; } li { margin-bottom: 6px; } }
 }
 @media(max-width:1100px) { .program-about { grid-template-columns: 1fr; gap: 32px; } .program-practice { grid-template-columns: 1fr 1fr; > div:first-child { grid-column: 1 / -1; } } }
-@media(max-width:900px) { .program-benefits { grid-template-columns: 1fr; gap: 24px; &__image { margin: 0 auto -28px; max-width: 471px; } } }
+@include breakpoint($bp-992) { .program-benefits { grid-template-columns: 1fr; gap: 24px; &__image { margin: 0 auto -28px; max-width: 471px; } } }
 @media(max-width:460px) {
  .program-about { &__skills { h3 { padding: 12px; font-size: 14px; line-height: 22px; } ul { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; } li { padding: 12px; font-size: 14px; line-height: 22px; } } }
  .program-benefits__image { margin-bottom: -16px; }

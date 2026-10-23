@@ -42,7 +42,10 @@
   gap: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 24px;
 
   &::before {
     content: "";
@@ -65,13 +68,13 @@
   }
 }
 
-@include screen-768 {
+@include breakpoint($bp-768) {
   .breadcrumbs {
     padding-top: 32px;
   }
 }
 
-@include screen-576 {
+@include breakpoint($bp-576) {
   .breadcrumbs {
     padding-top: 32px;
     margin-left: -4px;
@@ -81,5 +84,6 @@
 @include breakpoint($bp-390) {
   .breadcrumbs {
     padding-top: 28px;
+    margin-left: 0;
   }
 }

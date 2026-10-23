@@ -98,33 +98,7 @@
   }
 }
 
-@include breakpoint($bp-768) {
-  .apply-banner {
-    min-height: 280px;
-    padding: 16px;
-    gap: 40px;
-  }
-
-  .apply-banner__title {
-    margin-bottom: 16px;
-    font-weight: 900;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .apply-banner__text {
-    letter-spacing: normal;
-    text-shadow: none;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .apply-banner .button {
-    width: 100%;
-  }
-}
-
-@include screen-tablet {
+@include breakpoint($bp-992) {
   .apply-banner {
     flex-direction: row;
     align-items: center;
@@ -160,7 +134,7 @@
   }
 }
 
-@include screen-768 {
+@include breakpoint($bp-768) {
   .apply-banner {
     flex-direction: row;
     align-items: center;
@@ -174,11 +148,6 @@
     );
   }
 
-  .apply-banner__copy {
-    flex: 1;
-    min-width: 0;
-  }
-
   .apply-banner__title {
     font-size: 20px;
     font-weight: 800;
@@ -189,6 +158,8 @@
   }
 
   .apply-banner__text {
+    letter-spacing: normal;
+    text-shadow: none;
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
@@ -207,12 +178,17 @@
     line-height: 24px;
   }
 
+  .apply-banner__copy {
+    flex: 1;
+    min-width: 0;
+  }
+
   .section--banner > .container {
     width: calc(100% - 64px);
   }
 }
 
-@include screen-576 {
+@include breakpoint($bp-576) {
   .apply-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -259,6 +235,7 @@
       var(--main-banner-start) 9.09%,
       var(--main-banner-end) 90.91%
     );
+    align-items: start;
   }
 
   .apply-banner__title {
@@ -284,5 +261,10 @@
     font-weight: 800;
     line-height: 20px;
     letter-spacing: 0.04em;
+    width: 100%;
+    min-width: auto;
+  }
+  .apply-banner__copy {
+    flex: 0 1 auto;
   }
 }

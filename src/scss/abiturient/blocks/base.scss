@@ -81,6 +81,19 @@ img {
   margin-inline: auto;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @include breakpoint($bp-1440) {
   main {
     background-position: -32px 0;
@@ -122,11 +135,11 @@ img {
     width: calc(100% - 48px);
   }
   main > section > .container {
-    width: calc(100% - 48px);
+    width: calc(100% - 64px);
+    &.applicant-hero__inner {
+      width: calc(100% - 48px);
+    }
   }
-}
-
-@include breakpoint($bp-900) {
   :root {
     --applicant-header-height: 114px;
   }
@@ -140,34 +153,17 @@ img {
     width: calc(100% - 32px);
   }
   main > section > .container {
-    width: calc(100% - 32px);
+    width: calc(100% - 48px);
   }
-}
-
-@include screen-tablet {
-  main > section > .container {
-    width: calc(100% - 64px);
-  }
-}
-
-@include screen-tablet-wide {
-  main > section > .container {
-    &.applicant-hero__inner {
-      width: calc(100% - 48px);
-    }
-  }
-}
-
-@include screen-768 {
   main {
     background-image: none;
   }
-  main > section > .container {
+  main > section > .container.applicant-hero__inner {
     width: calc(100% - 48px);
   }
 }
 
-@include screen-576 {
+@include breakpoint($bp-576) {
   :root {
     --applicant-header-height: 102px;
   }
@@ -177,6 +173,9 @@ img {
   }
 
   main > section > .container {
+    width: calc(100% - 40px);
+  }
+  main > section > .container.applicant-hero__inner {
     width: calc(100% - 40px);
   }
 }
@@ -189,17 +188,10 @@ img {
   main {
     background-position: center top;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  main > section > .container {
+    width: calc(100% - 32px);
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  main > section > .container.applicant-hero__inner {
+    width: calc(100% - 32px);
   }
 }

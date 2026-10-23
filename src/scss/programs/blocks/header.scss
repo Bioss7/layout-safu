@@ -16,17 +16,6 @@
   flex-direction: column;
   gap: 16px;
   padding-block: 24px;
-
-  @include breakpoint($bp-1200) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding-top: 60px;
-  }
-
-  @include breakpoint($bp-900) {
-    padding-top: 50px;
-    padding-bottom: 16px;
-  }
 }
 
 .header__top {
@@ -215,10 +204,6 @@
   justify-content: space-between;
   padding: 0;
   min-height: 58px;
-
-  @include breakpoint($bp-900) {
-    min-height: 46px;
-  }
 }
 
 .header__logo {
@@ -240,10 +225,6 @@
   align-items: flex-end;
   flex-shrink: 0;
   height: 50px;
-
-  @include breakpoint($bp-900) {
-    height: 40px;
-  }
 }
 
 .header__logo-text {
@@ -252,10 +233,6 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
-
-  @include breakpoint($bp-768) {
-    display: none;
-  }
 }
 
 .header__nav {
@@ -269,10 +246,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  @include breakpoint($bp-1200) {
-    display: none;
-  }
 }
 
 .header__nav-item {
@@ -294,8 +267,6 @@
   }
 }
 
-/* ================= Раскрытое меню / поиск ================= */
-
 .header--open {
   position: static;
   flex-shrink: 0;
@@ -307,22 +278,11 @@
   align-items: flex-end;
   padding-top: 60px;
   padding-bottom: 24px;
-
-  @include breakpoint($bp-768) {
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 16px;
-  }
 }
 
 .header--open .header__bottom {
   min-height: 58px;
   align-items: flex-end;
-
-  @include breakpoint($bp-768) {
-    min-height: 46px;
-    align-items: center;
-  }
 }
 
 .header--open .header__nav {
@@ -386,7 +346,14 @@ html.page--header-open body>footer {
 }
 
 @include breakpoint($bp-1200) {
+  .header__nav-list {
+    display: none;
+  }
+
   .header__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 60px;
     align-items: center;
     gap: 16px;
   }
@@ -401,6 +368,19 @@ html.page--header-open body>footer {
 }
 
 @include breakpoint($bp-992) {
+  .header__inner {
+    padding-top: 50px;
+    padding-bottom: 16px;
+  }
+
+  .header__bottom {
+    min-height: 46px;
+  }
+
+  .header__logo-mark {
+    height: 40px;
+  }
+
   .header__separator {
     display: none;
   }
@@ -411,6 +391,21 @@ html.page--header-open body>footer {
 }
 
 @include breakpoint($bp-768) {
+  .header__logo-text {
+    display: none;
+  }
+
+  .header--open .header__inner {
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 16px;
+  }
+
+  .header--open .header__bottom {
+    min-height: 46px;
+    align-items: center;
+  }
+
   .header__controls {
     gap: 8px;
   }

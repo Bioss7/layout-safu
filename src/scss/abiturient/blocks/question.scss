@@ -160,9 +160,11 @@
   text-decoration: none;
   font-variant: normal;
   font-stretch: normal;
+
   &:hover {
     color: var(--main-accent-accent-100);
   }
+
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
@@ -289,6 +291,7 @@
   #topic-label {
     line-height: 22px;
   }
+
   .question__surface > .container {
     width: calc(100% - 96px);
   }
@@ -330,6 +333,7 @@
   .question-form__submit {
     font-size: 20px;
     line-height: 28px;
+    padding: 16px 24px;
   }
 
   .question-form__consent {
@@ -341,7 +345,7 @@
 
   .answers-card {
     flex-basis: calc((100% - 32px) / 2);
-    padding: 14px;
+    padding: 16px;
     gap: 16px;
   }
 
@@ -374,8 +378,12 @@
 }
 
 @include breakpoint($bp-992) {
+  .question-form__submit { 
+    padding: 18px 24px;
+  }
+
   .question__surface > .container {
-    width: calc(100% - 48px);
+    width: calc(100% - 64px);
   }
 
   .question__layout {
@@ -386,97 +394,9 @@
   .answers-card {
     flex-basis: auto;
     width: 100%;
-  }
-}
-
-@include breakpoint($bp-768) {
-  .question__surface > .container {
-    width: calc(100% - 32px);
-  }
-
-  .question__surface {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .question-form__description {
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .question-form .form-field {
-    padding: 16px;
-  }
-
-  .question-form .topic-select {
-    padding: 16px;
-  }
-
-  .question-form textarea.form-field__input {
-    min-height: 112px;
-  }
-
-  .question-form__bottom {
-    gap: 16px;
-  }
-
-  .question-form__submit {
-    min-height: 42px;
-    padding: 9px 12px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.04em;
-    text-shadow: none;
-  }
-
-  .question-form__consent {
-    align-self: center;
-    max-width: 287px;
-    text-align: center;
-  }
-
-  .answers-card {
     gap: 20px;
-  }
-
-  .answers-card__label {
-    letter-spacing: 0.04em;
-    text-shadow: none;
-  }
-
-  .answers-card__count {
-    font-weight: 900;
-    font-size: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .answers-card__title {
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.04em;
-    text-shadow: none;
-  }
-
-  .answers-card__link {
-    gap: 0;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .answers-card .button--text {
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-shadow: none;
-  }
-}
-
-@include screen-tablet {
-  .question__surface > .container {
-    width: calc(100% - 64px);
+    border-width: 2px;
+    padding: 20px;
   }
 
   .question-form {
@@ -490,6 +410,7 @@
   .question-form .form-field {
     padding-right: 28px;
     padding-left: 28px;
+    padding-bottom: 23px;
   }
 
   .question-form textarea.form-field__input {
@@ -499,12 +420,6 @@
   .question-form__consent {
     align-self: center;
     text-align: center;
-  }
-
-  .answers-card {
-    gap: 20px;
-    border-width: 2px;
-    padding: 18px;
   }
 
   .answers-card__header {
@@ -531,29 +446,31 @@
   }
 }
 
-@include screen-768 {
+@include breakpoint($bp-768) {
+  .question__surface > .container {
+    width: calc(100% - 48px);
+  }
+
   .question__surface {
     padding-top: 24px;
     padding-bottom: 24px;
   }
 
-  .question__surface > .container {
-    width: calc(100% - 48px);
-  }
-
-  .question__layout {
-    gap: 32px;
-  }
-
-  .question-form {
-    width: 100%;
+  .question-form__description {
+    letter-spacing: normal;
+    text-shadow: none;
+    max-width: none;
   }
 
   .question-form .form-field {
+    padding: 16px;
     padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .question-form .topic-select {
+    padding: 16px;
     padding-bottom: 15px;
   }
 
@@ -566,6 +483,7 @@
   }
 
   .question-form__submit {
+    text-shadow: none;
     padding: 18px 24px;
     font-size: 20px;
     line-height: 28px;
@@ -577,6 +495,8 @@
   }
 
   .question-form__consent {
+    align-self: center;
+    text-align: center;
     max-width: none;
   }
 
@@ -586,15 +506,13 @@
     padding: 18px;
   }
 
-  .answers-card__divider {
-    height: 2px;
-  }
-
   .answers-card__label {
+    text-shadow: none;
     letter-spacing: 0;
   }
 
   .answers-card__count {
+    text-shadow: none;
     font-size: 40px;
     line-height: 48px;
     font-weight: 800;
@@ -602,6 +520,7 @@
   }
 
   .answers-card__title {
+    text-shadow: none;
     font-size: 20px;
     line-height: 28px;
     font-weight: 800;
@@ -609,17 +528,37 @@
   }
 
   .answers-card__link {
+    letter-spacing: normal;
+    text-shadow: none;
     font-size: 18px;
     line-height: 26px;
     gap: 0;
   }
 
   .answers-card .button--text {
+    letter-spacing: 0.04em;
+    text-shadow: none;
     font-weight: 800;
+  }
+
+  .question__layout {
+    gap: 32px;
+  }
+
+  .question-form {
+    width: 100%;
+  }
+
+  .answers-card__divider {
+    height: 2px;
+  }
+
+  .answers-card__header {
+    gap: 12px;
   }
 }
 
-@include screen-576 {
+@include breakpoint($bp-576) {
   .question__surface {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -663,6 +602,7 @@
   #topic-label {
     line-height: 20px;
   }
+
   .question__surface {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -704,16 +644,18 @@
 
   .question-form__submit {
     min-height: 52px;
-    padding-top: 12px;
-    padding-bottom: 12px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
     letter-spacing: 0.04em;
+    padding: 9px 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .question-form__consent {
     text-align: left;
+    max-width: 287px;
   }
 
   .answers-card__label {
@@ -746,5 +688,21 @@
   .answers-card .button--text {
     font-weight: 800;
     letter-spacing: 0.04em;
+  }
+
+  .question-form__bottom {
+    gap: 16px;
+  }
+
+  .answers-card {
+    padding: 16px;
+  }
+
+  .question__surface > .container {
+    width: calc(100% - 32px);
+  }
+
+  .question-form .topic-select {
+    padding-bottom: 15px;
   }
 }

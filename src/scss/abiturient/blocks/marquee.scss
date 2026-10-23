@@ -57,7 +57,13 @@
   }
 }
 
-@include screen-576 {
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}
+
+@include breakpoint($bp-576) {
   .marquee__group {
     height: 52px;
   }
@@ -69,8 +75,12 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee__track {
-    animation: none;
+@include breakpoint($bp-390) {
+  .marquee__group {
+    height: var(--applicant-marquee-height);
+  }
+  .marquee__text {
+    font-weight: 800;
+    letter-spacing: normal;
   }
 }

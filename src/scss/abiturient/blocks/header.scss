@@ -324,7 +324,35 @@ html.page--header-open body > main,
 html.page--header-open body > footer {
   display: none;
 }
+@include breakpoint($bp-1440) {
+  .header > .container {
+    width: calc(100% - 128px);
+  }
+  .header__nav {
+    flex: 0 1 762px;
+    min-width: 0;
+  }
 
+  .header__nav-list {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .header__nav-item {
+    flex-shrink: 0;
+    padding-inline: 8px;
+  }
+
+  .header__nav-link {
+    white-space: nowrap;
+  }
+}
+@include breakpoint($bp-1200) {
+  .header > .container {
+    width: calc(100% - 96px);
+  }
+}
 @include breakpoint($bp-1150) {
   .header__inner {
     flex-direction: row-reverse;
@@ -346,7 +374,6 @@ html.page--header-open body > footer {
     gap: 24px;
   }
 }
-
 @include breakpoint($bp-992) {
   .header__separator {
     display: none;
@@ -355,9 +382,6 @@ html.page--header-open body > footer {
   .header__controls {
     gap: 24px;
   }
-}
-
-@include breakpoint($bp-900) {
   .header__inner {
     padding-top: 50px;
     padding-bottom: 16px;
@@ -370,8 +394,10 @@ html.page--header-open body > footer {
   .header__logo-mark {
     height: 40px;
   }
+  .header > .container {
+    width: calc(100% - 48px);
+  }
 }
-
 @include breakpoint($bp-768) {
   .header__logo-text {
     display: none;
@@ -415,45 +441,7 @@ html.page--header-open body > footer {
     display: none;
   }
 }
-
-@include breakpoint($bp-1440) {
-  .header > .container {
-    width: calc(100% - 128px);
-  }
-  .header__nav {
-    flex: 0 1 762px;
-    min-width: 0;
-  }
-
-  .header__nav-list {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0;
-  }
-
-  .header__nav-item {
-    flex-shrink: 0;
-    padding-inline: 8px;
-  }
-
-  .header__nav-link {
-    white-space: nowrap;
-  }
-}
-
-@include breakpoint($bp-1200) {
-  .header > .container {
-    width: calc(100% - 96px);
-  }
-}
-
-@include breakpoint($bp-992) {
-  .header > .container {
-    width: calc(100% - 48px);
-  }
-}
-
-@include screen-576 {
+@include breakpoint($bp-576) {
   .header__inner {
     padding-top: 32px;
     padding-bottom: 24px;
@@ -464,10 +452,12 @@ html.page--header-open body > footer {
     width: calc(100% - 40px);
   }
 }
-
 @include breakpoint($bp-390) {
   .header__inner {
     padding-top: 32px;
     padding-bottom: 24px;
+  }
+  .header > .container {
+    width: calc(100% - 48px);
   }
 }

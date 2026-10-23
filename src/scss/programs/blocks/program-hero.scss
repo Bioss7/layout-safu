@@ -1,3 +1,6 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
 .program-detail {
  &__intro { background: #f8f9fa; }
  &__breadcrumbs { display: flex; align-items: center; gap: 4px; padding-block: 50px 60px; font-size: 16px; line-height: 21px; white-space: nowrap; a { flex-shrink: 0; } img { flex-shrink: 0; } span { overflow: hidden; text-overflow: ellipsis; font-weight: 600; } }
@@ -31,7 +34,7 @@
  .program-hero { &__content { padding: 32px 24px; } &__credentials { grid-template-columns: 1fr; margin-top: 24px !important; } &__title { font-size: 24px; } }
  .program-facts { gap: 24px; grid-template-columns: repeat(3,minmax(0,1fr)); &__item { border: 0; } }
 }
-@media(max-width:900px) {
+@include breakpoint($bp-992) {
  .program-hero { grid-template-columns: 1fr; &__photo img { height: auto; min-height: 0; max-height: 600px; object-position: center 40%; } }
 }
 @media(max-width:460px) {

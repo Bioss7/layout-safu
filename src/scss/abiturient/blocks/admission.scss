@@ -6,6 +6,7 @@
   padding-top: 120px;
   padding-bottom: 152px;
   isolation: isolate;
+
   &::before,
   &::after {
     content: "";
@@ -19,10 +20,12 @@
     background-repeat: no-repeat;
     pointer-events: none;
   }
+
   &::before {
     top: -1px;
     transform: rotate(180deg);
   }
+
   &::after {
     bottom: -1px;
     background-image: url("/abiturient/assets/img/admission/admission-transition-bottom.svg");
@@ -70,6 +73,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   filter: drop-shadow(4px 4px 0 var(--main-black));
+
   &:hover {
     color: var(--main-blue-blue-100);
   }
@@ -82,8 +86,8 @@
 }
 
 .study-card__arrow .card-arrow {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .study-card:hover .card-arrow {
@@ -180,6 +184,7 @@
   .section--admission {
     padding-top: 97px;
     padding-bottom: 96px;
+
     &::before,
     &::after {
       height: 57px;
@@ -205,8 +210,8 @@
   }
 
   .study-card__arrow .card-arrow {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
   }
 
   .study-card__body {
@@ -259,6 +264,7 @@
   .section--admission {
     padding-top: 96px;
     padding-bottom: 96px;
+
     &::before,
     &::after {
       height: 48px;
@@ -276,8 +282,8 @@
   }
 
   .study-card__arrow .card-arrow {
-    width: 20px;
-    height: 20px;
+    width: 36px;
+    height: 36px;
   }
 
   .study-card__icon {
@@ -319,163 +325,25 @@
   .section--admission {
     padding-top: 105px;
     padding-bottom: 105px;
-  }
 
-  .admission-list > * {
-    flex-basis: calc(50% - 10px);
-  }
-}
-
-@include breakpoint($bp-768) {
-  .section--admission {
-    padding-top: 88px;
-    padding-bottom: 88px;
-    &::before,
-    &::after {
-      height: 32px;
-    }
-  }
-
-  .admission-background {
-    background-image: url("/abiturient/assets/img/admission/admission-bg-390.png");
-  }
-
-  .section--admission .section-header {
-    margin-bottom: 40px;
-  }
-
-  .admission-list {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .admission-list > * {
-    flex-basis: auto;
-    min-height: 358px;
-  }
-
-  .study-card {
-    min-height: 358px;
-    aspect-ratio: auto;
-    padding: 24px;
-  }
-
-  .study-card__arrow {
-    right: 20px;
-    top: 20px;
-  }
-
-  .study-card__arrow .card-arrow {
-    width: 40px;
-    height: 40px;
-  }
-
-  .study-card__body {
-    gap: 16px;
-  }
-
-  .study-card__icon {
-    width: 120px;
-    height: 120px;
-  }
-
-  .study-card__icon img {
-    max-width: 100%;
-    max-height: 100%;
-    flex-shrink: 1;
-    transform: none;
-  }
-
-  .study-card__joined-text {
-    white-space: normal;
-  }
-
-  .study-card__title {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .study-card__description {
-    font-weight: 500;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .admission-note {
-    min-height: 358px;
-    padding: 24px 10px;
-    gap: 16px;
-  }
-
-  .admission-note h3 {
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .admission-note p {
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: normal;
-    text-shadow: none;
-  }
-
-  .admission-note--first {
-    order: 1;
-  }
-
-  .admission-note--second {
-    order: 6;
-  }
-
-  .study-card--catalog {
-    order: 0;
-  }
-
-  .study-card--lists {
-    order: 2;
-  }
-
-  .study-card--rules {
-    order: 3;
-  }
-
-  .study-card--target {
-    order: 4;
-  }
-
-  .study-card--paid {
-    order: 5;
-  }
-
-  .study-card--results {
-    order: 7;
-  }
-}
-
-@include screen-tablet {
-  .section--admission {
-    padding-bottom: 105px;
     &::before {
       display: block;
       height: 39px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-top-992.svg");
     }
+
     &::after {
       height: 39px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-992.svg");
     }
   }
 
-  .admission-list {
-    gap: 24px;
-  }
-
   .admission-list > * {
     flex-basis: calc(50% - 12px);
+  }
+
+  .admission-list {
+    gap: 24px;
   }
 
   .study-card {
@@ -551,32 +419,28 @@
     width: 32px;
     height: 32px;
   }
-}
-
-@include screen-compact {
   .admission-background {
     background-size: 135.76% 116.43%;
     background-position: 73.24% 99.88%;
   }
-}
-
-@include screen-900 {
   .study-card__joined-text {
     white-space: normal;
   }
 }
 
-@include screen-768 {
+@include breakpoint($bp-768) {
   .section--admission {
-    padding-top: 105px;
-    padding-bottom: 105px;
     &::before,
     &::after {
       height: 30px;
     }
+    padding-top: 105px;
+    padding-bottom: 105px;
+
     &::before {
       background-image: url("/abiturient/assets/img/admission/admission-transition-top-768.svg");
     }
+
     &::after {
       background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-768.svg");
     }
@@ -596,6 +460,7 @@
   }
 
   .admission-list > * {
+    flex-basis: auto;
     flex: 0 1 calc(50% - 8px);
     min-height: 0;
   }
@@ -632,7 +497,12 @@
     transform: scale(0.746667);
   }
 
+  .study-card__joined-text {
+    white-space: normal;
+  }
+
   .study-card__title {
+    text-shadow: none;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
@@ -640,6 +510,9 @@
   }
 
   .study-card__description {
+    font-weight: 500;
+    letter-spacing: normal;
+    text-shadow: none;
     font-size: 16px;
     line-height: 24px;
   }
@@ -652,25 +525,75 @@
   }
 
   .admission-note h3 {
+    text-shadow: none;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.04em;
   }
 
   .admission-note p {
+    letter-spacing: normal;
+    text-shadow: none;
     font-size: 16px;
     line-height: 24px;
   }
+
+  .admission-note--first {
+    order: 1;
+  }
+
+  .admission-note--second {
+    order: 6;
+  }
+
+  .study-card--catalog {
+    order: 0;
+  }
+
+  .study-card--lists {
+    order: 2;
+  }
+
+  .study-card--rules {
+    order: 3;
+  }
+
+  .study-card--target {
+    order: 4;
+  }
+
+  .study-card--paid {
+    order: 5;
+  }
+
+  .study-card--results {
+    order: 7;
+  }
+  .admission-note--second .br {
+    display: inline;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
+    justify-content: flex-end;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .study-card__body {
+    margin-top: 0;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
 }
 
-@include screen-576 {
+@include breakpoint($bp-576) {
   .section--admission {
     padding-bottom: 83px;
+
     &::before,
     &::after {
       height: 51px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-576.svg");
     }
+
     padding-top: 81px;
   }
 
@@ -737,6 +660,7 @@
   .section--admission {
     padding-top: 88px;
     padding-bottom: 83px;
+
     &::before,
     &::after {
       height: 48px;
@@ -752,11 +676,18 @@
     padding: 24px;
     width: 100%;
     filter: drop-shadow(4px 4px 0 var(--main-black));
+    aspect-ratio: auto;
+    min-height: 358px;
   }
 
   .study-card__arrow {
     right: 24px;
     top: 24px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 40px;
+    height: 40px;
   }
 
   .study-card__body {
@@ -796,6 +727,8 @@
   .admission-note {
     padding: 0 2px;
     gap: 12px;
+    min-height: 358px;
+    aspect-ratio: auto;
   }
 
   .admission-note h3 {
@@ -811,5 +744,39 @@
 
   .admission-note p .br {
     display: none;
+  }
+
+  .admission-background {
+    background-image: url("/abiturient/assets/img/admission/admission-bg-390.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .admission-list {
+    flex-direction: column;
+  }
+
+  .admission-list > * {
+    flex: 0 1 auto;
+    min-height: 358px;
+  }
+
+  .study-card__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .study-card__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    transform: none;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
+    min-height: 358px;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
+    width: 40px;
+    height: 40px;
   }
 }
