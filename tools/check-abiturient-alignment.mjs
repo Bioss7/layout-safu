@@ -16,14 +16,14 @@ const baseURL = process.env.ABITURIENT_BASE_URL || "http://127.0.0.1:4173";
 const widths = [1920, 1440, 1200, 992, 768, 576, 390];
 const selectors = [
   ".applicant-hero",
-  ".section--banner",
-  ".section--education",
+  ".section--banner .apply-banner",
+  ".section--education > .container",
   ".section--admission",
-  ".section--opportunities",
+  ".section--opportunities > .container",
   ".section--contacts",
-  ".section--reviews",
-  ".section--faq",
-  ".section--question",
+  ".section--reviews > .container",
+  "#faq",
+  ".section--question .question__surface",
 ];
 const failures = [];
 const metrics = [];

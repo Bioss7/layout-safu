@@ -6,6 +6,25 @@
   padding-bottom: 0;
 }
 
+.section--banner {
+  padding-top: 120px;
+}
+
+.section--education {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section--opportunities {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section--question {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .section-header {
   margin-bottom: 80px;
 }
@@ -18,15 +37,91 @@
 
 .section--reviews {
   overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 @include breakpoint($bp-1440) {
+  .section--banner {
+    padding-top: 96px;
+  }
+
+  .section--education {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .section--opportunities {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .section--reviews {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .section--question {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
   .section-header {
     margin-bottom: 48px;
   }
 }
 
+@include breakpoint($bp-1200) {
+  .section--banner {
+    padding-top: 72px;
+  }
+
+  .section--education {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .section--opportunities {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .section--reviews {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .section--question {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
 @include breakpoint($bp-992) {
+  .section--banner {
+    padding-top: 64px;
+  }
+
+  .section--education {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section--opportunities {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section--reviews {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section--question {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .section-header {
     margin-bottom: 40px;
   }
@@ -44,6 +139,30 @@
 }
 
 @include breakpoint($bp-576) {
+  .section--banner {
+    padding-top: 80px;
+  }
+
+  .section--education {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section--opportunities {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section--reviews {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section--question {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   .section--contacts {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -51,6 +170,30 @@
 }
 
 @include breakpoint($bp-390) {
+  .section--banner {
+    padding-top: 70px;
+  }
+
+  .section--education {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section--opportunities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section--reviews {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section--question {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   .section--education .section-header,
   .section--opportunities .section-header {
     margin-bottom: 40px;

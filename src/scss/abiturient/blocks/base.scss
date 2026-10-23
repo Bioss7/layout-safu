@@ -3,7 +3,6 @@
 :root {
   --applicant-header-height: 168px;
   --applicant-marquee-height: 52px;
-  --section-gap: 120px;
   --main-font-display: "Unbounded", sans-serif;
   --main-panel: #e8eef6;
   --main-black: #000;
@@ -34,10 +33,6 @@ body.no-scroll {
 }
 main {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-gap);
-  padding-bottom: var(--section-gap);
   background-image: url("/abiturient/assets/img/page/page-bg-grid.svg");
   background-position: -40px 0;
   background-size: 400px 400px;
@@ -87,9 +82,6 @@ img {
 }
 
 @include breakpoint($bp-1440) {
-  :root {
-    --section-gap: 96px;
-  }
   main {
     background-position: -32px 0;
   }
@@ -103,9 +95,6 @@ img {
 }
 
 @include breakpoint($bp-1200) {
-  :root {
-    --section-gap: 72px;
-  }
   main {
     background-position: 0 0;
   }
@@ -125,9 +114,6 @@ img {
 }
 
 @include breakpoint($bp-992) {
-  :root {
-    --section-gap: 64px;
-  }
   main {
     background-position: -32px 0;
   }
@@ -184,7 +170,6 @@ img {
 @include screen-576 {
   :root {
     --applicant-header-height: 102px;
-    --section-gap: 80px;
   }
   main {
     background-image: url("/abiturient/assets/img/page/page-bg-grid.svg");
@@ -200,7 +185,6 @@ img {
   :root {
     --applicant-header-height: 102px;
     --applicant-marquee-height: 40px;
-    --section-gap: 70px;
   }
   main {
     background-position: center top;
