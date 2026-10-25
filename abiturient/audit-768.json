@@ -1,0 +1,1700 @@
+{
+  "fileKey": "aVwbPxZ5FUxYkvTcvME566",
+  "frameId": "4209:32851",
+  "retrievedAt": "2026-10-25",
+  "width": 768,
+  "note": "Exact Figma Plugin API values, correlated with detailed get_design_context and screenshots. Rects are canvas-relative; selected fields exclude HTML wrappers without matching Figma bounds. CSS rounds pixel geometry to integers.",
+  "entries": [
+    {
+      "selector": ".applicant-hero__status",
+      "nodeId": "4231:41652",
+      "rect": {
+        "x": 24,
+        "y": 268,
+        "width": 600,
+        "height": 52
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".applicant-hero__title",
+      "nodeId": "4231:41671",
+      "rect": {
+        "x": 24,
+        "y": 344,
+        "width": 600,
+        "height": 144
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".applicant-hero__year",
+      "nodeId": "4231:41673",
+      "rect": {
+        "x": 24,
+        "y": 420,
+        "width": 600,
+        "height": 68
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".applicant-hero__description",
+      "nodeId": "4231:41676",
+      "rect": {
+        "x": 24,
+        "y": 512,
+        "width": 503,
+        "height": 72
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".applicant-hero__links",
+      "nodeId": "4231:41677",
+      "rect": {
+        "x": 24,
+        "y": 612,
+        "width": 448,
+        "height": 216
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".hero-link",
+      "nodeId": "4231:41678",
+      "rect": {
+        "x": 24,
+        "y": 612,
+        "width": 448,
+        "height": 64
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".hero-link .card-arrow",
+      "nodeId": "I4231:41678;48:25609",
+      "rect": {
+        "x": 428,
+        "y": 628,
+        "width": 28,
+        "height": 28
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".applicant-hero__building",
+      "nodeId": "4231:41710",
+      "rect": {
+        "x": 110,
+        "y": 801,
+        "width": 894,
+        "height": 540.6431884765625
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32852",
+        "selector": ".applicant-hero",
+        "y": 0
+      }
+    },
+    {
+      "selector": ".apply-banner",
+      "nodeId": "4231:41726",
+      "rect": {
+        "x": 32,
+        "y": 1374.6710205078125,
+        "width": 704,
+        "height": 138
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4231:41725",
+        "selector": ".apply-banner",
+        "y": 1374.6710205078125
+      }
+    },
+    {
+      "selector": ".apply-banner__copy",
+      "nodeId": "4231:41727",
+      "rect": {
+        "x": 58,
+        "y": 1400.6710205078125,
+        "width": 392,
+        "height": 86
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4231:41725",
+        "selector": ".apply-banner",
+        "y": 1374.6710205078125
+      }
+    },
+    {
+      "selector": ".apply-banner__title",
+      "nodeId": "4231:41728",
+      "rect": {
+        "x": 58,
+        "y": 1400.6710205078125,
+        "width": 392,
+        "height": 56
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 20,
+        "fontWeight": 800,
+        "lineHeight": 28,
+        "letterSpacing": 0.8
+      },
+      "origin": {
+        "nodeId": "4231:41725",
+        "selector": ".apply-banner",
+        "y": 1374.6710205078125
+      }
+    },
+    {
+      "selector": ".apply-banner__text",
+      "nodeId": "4231:41729",
+      "rect": {
+        "x": 58,
+        "y": 1466.6710205078125,
+        "width": 596,
+        "height": 20
+      },
+      "fields": [
+        "x",
+        "y",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4231:41725",
+        "selector": ".apply-banner",
+        "y": 1374.6710205078125
+      }
+    },
+    {
+      "selector": ".apply-banner .button",
+      "nodeId": "4231:41730",
+      "rect": {
+        "x": 450,
+        "y": 1417.6710205078125,
+        "width": 260,
+        "height": 52
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4231:41725",
+        "selector": ".apply-banner",
+        "y": 1374.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card",
+      "nodeId": "4209:32975",
+      "rect": {
+        "x": 24,
+        "y": 1688.6710205078125,
+        "width": 352,
+        "height": 220
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__meta",
+      "nodeId": "4209:32978",
+      "rect": {
+        "x": 40,
+        "y": 1704.6710205078125,
+        "width": 320,
+        "height": 16
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__title",
+      "nodeId": "4209:32982",
+      "rect": {
+        "x": 40,
+        "y": 1731.1007080078125,
+        "width": 320,
+        "height": 24
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 16,
+        "fontWeight": 800,
+        "lineHeight": 24,
+        "letterSpacing": 0.64
+      },
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__description",
+      "nodeId": "4209:32983",
+      "rect": {
+        "x": 40,
+        "y": 1762.9229736328125,
+        "width": 320,
+        "height": 40
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__bottom",
+      "nodeId": "4231:41739",
+      "rect": {
+        "x": 40,
+        "y": 1858.6710205078125,
+        "width": 320,
+        "height": 34
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__count",
+      "nodeId": "4231:41740",
+      "rect": {
+        "x": 40,
+        "y": 1858.6710205078125,
+        "width": 144,
+        "height": 34
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".education-card__bottom .card-arrow",
+      "nodeId": "4231:41742",
+      "rect": {
+        "x": 328,
+        "y": 1859.6710205078125,
+        "width": 32,
+        "height": 32
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:32970",
+        "selector": ".section--education > .container",
+        "y": 1576.6710205078125
+      }
+    },
+    {
+      "selector": ".study-card--catalog",
+      "nodeId": "4209:33051",
+      "rect": {
+        "x": 24,
+        "y": 2622.0126953125,
+        "width": 352,
+        "height": 352
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--catalog .study-card__body",
+      "nodeId": "4209:33055",
+      "rect": {
+        "x": 40,
+        "y": 2750.0126953125,
+        "width": 320,
+        "height": 208
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--catalog .study-card__icon",
+      "nodeId": "4209:33056",
+      "rect": {
+        "x": 40,
+        "y": 2750.0126953125,
+        "width": 112,
+        "height": 112
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--catalog .study-card__icon img",
+      "nodeId": "I4209:33056;58:15720",
+      "rect": {
+        "x": 41.4931640625,
+        "y": 2764.946044921875,
+        "width": 108.76249694824219,
+        "height": 82.13333129882812
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--catalog .study-card__title",
+      "nodeId": "4209:33058",
+      "rect": {
+        "x": 40,
+        "y": 2874.0126953125,
+        "width": 320,
+        "height": 24
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 16,
+        "fontWeight": 800,
+        "lineHeight": 24,
+        "letterSpacing": 0.64
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--catalog .study-card__description",
+      "nodeId": "4209:33059",
+      "rect": {
+        "x": 40,
+        "y": 2910.0126953125,
+        "width": 320,
+        "height": 48
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".admission-note--first h3",
+      "nodeId": "4209:33063",
+      "rect": {
+        "x": 408,
+        "y": 2726.0126953125,
+        "width": 320,
+        "height": 84
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 20,
+        "fontWeight": 800,
+        "lineHeight": 28,
+        "letterSpacing": 0.8
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".admission-note--first p",
+      "nodeId": "4209:33064",
+      "rect": {
+        "x": 408,
+        "y": 2822.0126953125,
+        "width": 320,
+        "height": 48
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--lists .study-card__icon",
+      "nodeId": "4209:33071",
+      "rect": {
+        "x": 40,
+        "y": 3122.0126953125,
+        "width": 112,
+        "height": 112
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--lists .study-card__icon img",
+      "nodeId": "I4209:33071;58:15845",
+      "rect": {
+        "x": 60.90673828125,
+        "y": 3133.212646484375,
+        "width": 70.1866683959961,
+        "height": 89.37833404541016
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--lists .study-card__title",
+      "nodeId": "4209:33073",
+      "rect": {
+        "x": 40,
+        "y": 3246.0126953125,
+        "width": 320,
+        "height": 48
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 16,
+        "fontWeight": 800,
+        "lineHeight": 24,
+        "letterSpacing": 0.64
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--lists .study-card__description",
+      "nodeId": "4209:33074",
+      "rect": {
+        "x": 40,
+        "y": 3306.0126953125,
+        "width": 320,
+        "height": 20
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--rules .study-card__icon img",
+      "nodeId": "I4209:33080;58:15930",
+      "rect": {
+        "x": 420.693359375,
+        "y": 3084.946044921875,
+        "width": 86.61333465576172,
+        "height": 82.13333129882812
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--rules .study-card__title",
+      "nodeId": "4209:33082",
+      "rect": {
+        "x": 408,
+        "y": 3194.0126953125,
+        "width": 320,
+        "height": 72
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 16,
+        "fontWeight": 800,
+        "lineHeight": 24,
+        "letterSpacing": 0.64
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--rules .study-card__description",
+      "nodeId": "4209:33083",
+      "rect": {
+        "x": 408,
+        "y": 3278.0126953125,
+        "width": 320,
+        "height": 48
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--target .study-card__icon img",
+      "nodeId": "I4209:33090;58:16017",
+      "rect": {
+        "x": 57.17333984375,
+        "y": 3497.212646484375,
+        "width": 77.65333557128906,
+        "height": 89.48333740234375
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--paid .study-card__icon img",
+      "nodeId": "I4209:33099;58:16042",
+      "rect": {
+        "x": 422.77978515625,
+        "y": 3497.212646484375,
+        "width": 81.6941146850586,
+        "height": 89.5999984741211
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".study-card--results .study-card__icon img",
+      "nodeId": "I4209:33114;58:16085",
+      "rect": {
+        "x": 423.68017578125,
+        "y": 3865.212646484375,
+        "width": 80.63999938964844,
+        "height": 89.5999984741211
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".admission-note--second h3",
+      "nodeId": "4209:33107",
+      "rect": {
+        "x": 40,
+        "y": 3818.0126953125,
+        "width": 320,
+        "height": 84
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 20,
+        "fontWeight": 800,
+        "lineHeight": 28,
+        "letterSpacing": 0.8
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".admission-note--second p",
+      "nodeId": "4209:33108",
+      "rect": {
+        "x": 40,
+        "y": 3914.0126953125,
+        "width": 320,
+        "height": 72
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33040",
+        "selector": ".section--admission",
+        "y": 2444.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--1",
+      "nodeId": "4234:41842",
+      "rect": {
+        "x": 24,
+        "y": 4358.6708984375,
+        "width": 720,
+        "height": 325
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--1 .feature-card__body",
+      "nodeId": "4234:41845",
+      "rect": {
+        "x": 42.513671875,
+        "y": 4591.1572265625,
+        "width": 682.9723510742188,
+        "height": 74
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--1 .feature-card__description",
+      "nodeId": "4234:41847",
+      "rect": {
+        "x": 42.513671875,
+        "y": 4625.1572265625,
+        "width": 475,
+        "height": 40
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--2 .feature-card__description",
+      "nodeId": "4234:41855",
+      "rect": {
+        "x": 42.513671875,
+        "y": 4974.1572265625,
+        "width": 453,
+        "height": 40
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--3 .feature-card__description",
+      "nodeId": "4234:41866",
+      "rect": {
+        "x": 42.513671875,
+        "y": 5323.1572265625,
+        "width": 499,
+        "height": 40
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".feature-card--4 .feature-card__description",
+      "nodeId": "4234:41877",
+      "rect": {
+        "x": 42.513671875,
+        "y": 5672.1572265625,
+        "width": 503,
+        "height": 40
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33118",
+        "selector": ".section--opportunities > .container",
+        "y": 4246.6708984375
+      }
+    },
+    {
+      "selector": ".contact-map",
+      "nodeId": "4209:33156",
+      "rect": {
+        "x": 24,
+        "y": 5930.6708984375,
+        "width": 352,
+        "height": 352
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contacts__content > .tabs",
+      "nodeId": "4237:10439",
+      "rect": {
+        "x": 400,
+        "y": 5930.6708984375,
+        "width": 344,
+        "height": 164
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contacts__fields",
+      "nodeId": "4209:33158",
+      "rect": {
+        "x": 400,
+        "y": 6118.6708984375,
+        "width": 344,
+        "height": 456
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contact-item__label",
+      "nodeId": "4209:33160",
+      "rect": {
+        "x": 400,
+        "y": 6118.6708984375,
+        "width": 344,
+        "height": 16
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "lineHeight": 16,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contact-item__description",
+      "nodeId": "4209:33163",
+      "rect": {
+        "x": 400,
+        "y": 6182.6708984375,
+        "width": 344,
+        "height": 16
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "lineHeight": 16,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contact-link",
+      "nodeId": "4237:10450",
+      "rect": {
+        "x": 400,
+        "y": 6598.6708984375,
+        "width": 344,
+        "height": 67.56969451904297
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contact-link__icon--question",
+      "nodeId": "4237:10452",
+      "rect": {
+        "x": 412,
+        "y": 6618.45556640625,
+        "width": 28,
+        "height": 28
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".contact-link__arrow",
+      "nodeId": "4237:10454",
+      "rect": {
+        "x": 708,
+        "y": 6620.45556640625,
+        "width": 24,
+        "height": 24
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33145",
+        "selector": ".section--contacts",
+        "y": 5794.6708984375
+      }
+    },
+    {
+      "selector": ".swiper-slide-active .review-card",
+      "nodeId": "4209:33199",
+      "rect": {
+        "x": 24,
+        "y": 7001.3798828125,
+        "width": 348,
+        "height": 404.6666564941406
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      }
+    },
+    {
+      "selector": ".swiper-slide-active .review-card__media",
+      "nodeId": "4209:33200",
+      "rect": {
+        "x": 58,
+        "y": 7020.3798828125,
+        "width": 280,
+        "height": 186.66665649414062
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      }
+    },
+    {
+      "selector": ".swiper-slide-active .review-card__title",
+      "nodeId": "4209:33211",
+      "rect": {
+        "x": 40,
+        "y": 7219.04638671875,
+        "width": 316,
+        "height": 26
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 18,
+        "fontWeight": 600,
+        "lineHeight": 26,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      }
+    },
+    {
+      "selector": ".swiper-slide-active .review-card__meta",
+      "nodeId": "4209:33212",
+      "rect": {
+        "x": 40,
+        "y": 7255.04638671875,
+        "width": 316,
+        "height": 16
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      }
+    },
+    {
+      "selector": ".swiper-slide-active .review-card__text",
+      "nodeId": "4209:33218",
+      "rect": {
+        "x": 40,
+        "y": 7283.04638671875,
+        "width": 316,
+        "height": 66
+      },
+      "fields": [
+        "x",
+        "y",
+        "width"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      },
+      "note": "Figma excerpt is 66px; HTML clips three 20px lines and carries the remaining 6px into the following margin (18px = 12px gap + 6px reserved inset)."
+    },
+    {
+      "selector": ".swiper-slide-active .review-card__link",
+      "nodeId": "4209:33219",
+      "rect": {
+        "x": 40,
+        "y": 7361.04638671875,
+        "width": 302.8571472167969,
+        "height": 26
+      },
+      "fields": [
+        "x",
+        "y",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33195",
+        "selector": ".section--reviews > .container",
+        "y": 6921.3798828125
+      }
+    },
+    {
+      "selector": "#faq .faq__content",
+      "nodeId": "4209:33299",
+      "rect": {
+        "x": 24,
+        "y": 7620.04638671875,
+        "width": 720,
+        "height": 1188
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33297",
+        "selector": "#faq",
+        "y": 7548.04638671875
+      }
+    },
+    {
+      "selector": "#faq .tabs",
+      "nodeId": "4209:33300",
+      "rect": {
+        "x": 24,
+        "y": 7620.04638671875,
+        "width": 720,
+        "height": 52
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33297",
+        "selector": "#faq",
+        "y": 7548.04638671875
+      }
+    },
+    {
+      "selector": "#faq-panel-budget .accordion",
+      "nodeId": "4209:33311",
+      "rect": {
+        "x": 24,
+        "y": 7712.04638671875,
+        "width": 720,
+        "height": 100
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33297",
+        "selector": "#faq",
+        "y": 7548.04638671875
+      }
+    },
+    {
+      "selector": ".question-form__description",
+      "nodeId": "4209:33353",
+      "rect": {
+        "x": 24,
+        "y": 8968.046875,
+        "width": 720,
+        "height": 56
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 18,
+        "fontWeight": 500,
+        "lineHeight": 28,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".question-form__bottom",
+      "nodeId": "4209:33369",
+      "rect": {
+        "x": 24,
+        "y": 9468.046875,
+        "width": 720,
+        "height": 98
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".question-form__submit",
+      "nodeId": "4209:33370",
+      "rect": {
+        "x": 24,
+        "y": 9468.046875,
+        "width": 720,
+        "height": 64
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".question-form__consent",
+      "nodeId": "4209:33371",
+      "rect": {
+        "x": 112,
+        "y": 9544.046875,
+        "width": 544,
+        "height": 22
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 22,
+        "letterSpacing": 0
+      },
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".answers-card",
+      "nodeId": "4237:10542",
+      "rect": {
+        "x": 24,
+        "y": 9598.046875,
+        "width": 720,
+        "height": 444.6865539550781
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".answers-card__header",
+      "nodeId": "4237:10543",
+      "rect": {
+        "x": 44,
+        "y": 9618.046875,
+        "width": 680,
+        "height": 76
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".answers-card__title",
+      "nodeId": "4237:10547",
+      "rect": {
+        "x": 44,
+        "y": 9735.7333984375,
+        "width": 459,
+        "height": 28
+      },
+      "fields": [
+        "x",
+        "y",
+        "height"
+      ],
+      "typography": {
+        "fontFamily": "Unbounded",
+        "fontSize": 20,
+        "fontWeight": 800,
+        "lineHeight": 28,
+        "letterSpacing": 0.8
+      },
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".answers-card__links",
+      "nodeId": "4237:10548",
+      "rect": {
+        "x": 44,
+        "y": 9783.7333984375,
+        "width": 680,
+        "height": 177
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    },
+    {
+      "selector": ".answers-card__link",
+      "nodeId": "4237:10549",
+      "rect": {
+        "x": 44,
+        "y": 9783.7333984375,
+        "width": 680,
+        "height": 51
+      },
+      "fields": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "origin": {
+        "nodeId": "4209:33349",
+        "selector": ".question__surface",
+        "y": 8872.046875
+      }
+    }
+  ]
+}

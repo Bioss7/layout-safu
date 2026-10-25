@@ -457,7 +457,7 @@
 
   .applicant-hero__copy {
     padding-bottom: 0;
-    width: 100%;
+    width: 600px;
     max-width: 100%;
     padding-top: 32px;
   }
@@ -514,9 +514,7 @@
     letter-spacing: normal;
     text-shadow: none;
     max-width: 503px;
-    margin-top: 24px;
-    margin: 24px 0 48px;
-    margin-bottom: 28px;
+    margin: 24px 0 28px;
   }
 
   .applicant-hero__links {
@@ -525,19 +523,15 @@
   }
 
   .hero-link {
-    padding: 16px 0 20px;
+    padding: 16px 16px 20px 0;
     text-shadow: var(--main-black) 2px 2px 0px;
     font-weight: 800;
     letter-spacing: 0.04em;
-    padding-top: 16px;
-    padding-bottom: 20px;
   }
 
   .applicant-hero__art {
     display: flex;
     justify-content: center;
-    margin-left: -16px;
-    margin-top: 50px;
     position: absolute;
     inset: 0 -24px;
     width: auto;
@@ -562,8 +556,8 @@
     min-width: 0;
     max-width: none;
     left: 19.92%;
-    top: auto;
-    bottom: -10px;
+    top: 83.42vw;
+    bottom: auto;
   }
 
   .applicant-hero__year picture {
@@ -595,6 +589,13 @@
 }
 
 @include breakpoint($bp-680) {
+  .applicant-hero__copy {
+    width: 100%;
+  }
+
+  .hero-link {
+    padding-right: 0;
+  }
   .applicant-hero__title {
     font-size: 52px;
     line-height: 58px;
@@ -702,6 +703,10 @@
 }
 
 @include breakpoint($bp-390) {
+  .applicant-hero__links {
+    gap: 16px;
+  }
+
   .applicant-hero {
     --hero-height: 1289px;
     background-image: url("/abiturient/assets/img/hero/hero-bg-390.png");
@@ -764,6 +769,7 @@
 
   .hero-link {
     position: relative;
+    padding: 8px 16px 12px 0;
     border-bottom-width: 0;
     box-shadow: none;
     font-weight: 800;
@@ -794,11 +800,10 @@
   .applicant-hero__art {
     display: block;
     height: 463px;
-    margin-top: 47px;
-    position: relative;
-    inset: 0;
+    position: absolute;
+    inset: auto -16px 0;
     width: calc(100% + 32px);
-    margin-left: -16px;
+    margin: 0;
   }
 
   .applicant-hero__building {

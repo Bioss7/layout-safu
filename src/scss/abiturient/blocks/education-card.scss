@@ -15,7 +15,7 @@
   min-width: 0;
 }
 
-.education-list>.education-card {
+.education-list > .education-card {
   flex: 0 1 calc(50% - 10px);
   min-height: 339px;
 }
@@ -161,7 +161,7 @@
     flex-basis: calc(66.67% - 3px);
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     flex-basis: calc(50% - 12px);
     min-height: 256px;
   }
@@ -217,7 +217,7 @@
     gap: 16px;
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     flex-basis: calc(50% - 8px);
     min-height: 328px;
   }
@@ -270,7 +270,7 @@
     width: 100%;
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     min-height: 275px;
     padding: 20px;
   }
@@ -340,7 +340,7 @@
     flex-direction: row;
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     flex-basis: auto;
     flex: 0 1 calc(50% - 8px);
     min-height: 220px;
@@ -414,7 +414,7 @@
     flex-direction: column;
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     flex-basis: auto;
     min-height: 296px;
     padding: 21px;
@@ -477,7 +477,7 @@
   }
 
   .education-card--accent .education-card__title {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 }
 
@@ -488,7 +488,7 @@
     letter-spacing: 0.04em;
   }
 
-  .education-list>.education-card {
+  .education-list > .education-card {
     min-height: 222px;
     flex: 0 1 auto;
 

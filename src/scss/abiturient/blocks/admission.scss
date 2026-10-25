@@ -1,6 +1,10 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.br-admission-768 {
+  display: none;
+}
+
 .section--admission {
   position: relative;
   padding-top: 120px;
@@ -429,19 +433,21 @@
 }
 
 @include breakpoint($bp-768) {
+  .br-admission-768 {
+    display: inline;
+  }
   .section--admission {
-    &::before,
-    &::after {
-      height: 30px;
-    }
     padding-top: 105px;
     padding-bottom: 105px;
 
     &::before {
+      height: 74px;
+      transform: scaleY(-1);
       background-image: url("/abiturient/assets/img/admission/admission-transition-top-768.svg");
     }
 
     &::after {
+      height: 73px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-768.svg");
     }
   }
@@ -494,7 +500,7 @@
     max-width: none;
     max-height: none;
     flex-shrink: 0;
-    transform: scale(0.746667);
+    transform: none;
   }
 
   .study-card__joined-text {
@@ -517,6 +523,11 @@
     line-height: 24px;
   }
 
+  .study-card--lists .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .admission-note {
     padding: 16px;
     aspect-ratio: 1;
@@ -532,6 +543,7 @@
   }
 
   .admission-note p {
+    width: 100%;
     letter-spacing: normal;
     text-shadow: none;
     font-size: 16px;
@@ -572,6 +584,10 @@
   .admission-note--second .br {
     display: inline;
   }
+
+  .admission-note--second h3 .br {
+    display: none;
+  }
   .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
     justify-content: flex-end;
   }
@@ -585,6 +601,9 @@
 }
 
 @include breakpoint($bp-576) {
+  .br-admission-768 {
+    display: none;
+  }
   .section--admission {
     padding-bottom: 83px;
 
@@ -592,6 +611,10 @@
     &::after {
       height: 51px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-576.svg");
+    }
+
+    &::before {
+      transform: scaleY(-1);
     }
 
     padding-top: 81px;
@@ -632,6 +655,15 @@
     line-height: 16px;
   }
 
+  .study-card--lists .study-card__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .admission-note--second h3 .br {
+    display: inline;
+  }
+
   .admission-note {
     padding: 12px;
     gap: 8px;
@@ -644,12 +676,17 @@
   }
 
   .admission-note p {
+    width: auto;
     font-size: 14px;
     line-height: 20px;
   }
 }
 
 @include breakpoint($bp-390) {
+  .study-card--lists .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
   .section--admission .title-2 {
     font-size: 32px;
     line-height: 40px;

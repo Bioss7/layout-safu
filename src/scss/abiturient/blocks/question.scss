@@ -378,7 +378,7 @@
 }
 
 @include breakpoint($bp-992) {
-  .question-form__submit { 
+  .question-form__submit {
     padding: 18px 24px;
   }
 
@@ -695,7 +695,7 @@
   }
 
   .answers-card {
-    padding: 16px;
+    padding: 14px;
   }
 
   .question__surface > .container {

@@ -283,6 +283,52 @@
     height: 187px;
     margin-top: 3px;
     margin-bottom: 12px;
+    background-image: url("/abiturient/assets/img/review/review-dot-768.svg");
+    background-size: 11px 11px;
+    background-position: 242px 93px;
+  }
+
+  .section--reviews .review-card__media::before,
+  .section--reviews .review-card__media::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  .section--reviews .review-card__media::before {
+    left: 14px;
+    top: 14px;
+    width: 254px;
+    height: 147px;
+    transform: rotate(-9deg);
+    background-image: url("/abiturient/assets/img/review/review-orbit-768.svg");
+  }
+
+  .section--reviews .review-card__media::after {
+    left: 24px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    background-image: url("/abiturient/assets/img/review/review-star-768.svg");
+  }
+
+  .section--reviews .review-card__play svg {
+    display: none;
+  }
+
+  .section--reviews .review-card__play::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 21px;
+    width: 20px;
+    height: 18px;
+    transform: rotate(89deg);
+    background-image: url("/abiturient/assets/img/review/review-play-768.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .section--reviews .review-card__video {
@@ -333,23 +379,33 @@
     font-weight: 500;
   }
 
+  .section--reviews .review-card__meta {
+    column-gap: 4px;
+  }
+
+  .section--reviews .review-card__meta-dot {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
   .section--reviews .review-card__text {
     font-size: 14px;
     text-shadow: none;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     -webkit-line-clamp: 3;
     height: auto;
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 
   .section--reviews .review-card__link {
     letter-spacing: normal;
     text-shadow: none;
     line-height: 26px;
-    margin-top: auto;
+    margin-top: 0;
   }
 
   .section--reviews .reviews-slider {
@@ -359,6 +415,15 @@
 }
 
 @include breakpoint($bp-576) {
+  .section--reviews .review-card__text {
+    min-height: 66px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+
+  .section--reviews .review-card__link {
+    margin-top: 0;
+  }
   .section--reviews .section-header {
     margin-bottom: 32px;
   }
@@ -484,8 +549,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
-    margin-bottom: 18px;
-    height: 60px;
+    margin-bottom: 12px;
     flex-shrink: 0;
   }
 

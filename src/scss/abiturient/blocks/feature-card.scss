@@ -359,6 +359,11 @@
   }
 }
 @include breakpoint($bp-576) {
+  .feature-card .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
   .opportunities-list {
     gap: 16px;
   }
@@ -408,6 +413,11 @@
   }
 }
 @include breakpoint($bp-390) {
+  .feature-card .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
   .section--opportunities .container {
     width: calc(100% - 32px);
   }
