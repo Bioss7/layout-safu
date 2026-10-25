@@ -102,7 +102,7 @@ img {
   .container {
     width: calc(100% - 160px);
   }
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 128px);
   }
 }
@@ -115,7 +115,7 @@ img {
   .container {
     width: calc(100% - 64px);
   }
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 96px);
   }
 }
@@ -134,7 +134,7 @@ img {
   .container {
     width: calc(100% - 48px);
   }
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 64px);
     &.applicant-hero__inner {
       width: calc(100% - 48px);
@@ -152,13 +152,13 @@ img {
   .container {
     width: calc(100% - 32px);
   }
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 48px);
   }
   main {
     background-image: none;
   }
-  main > section > .container.applicant-hero__inner {
+  :where(main > section) > .container.applicant-hero__inner {
     width: calc(100% - 48px);
   }
 }
@@ -172,10 +172,10 @@ img {
     background-position: center top;
   }
 
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 40px);
   }
-  main > section > .container.applicant-hero__inner {
+  :where(main > section) > .container.applicant-hero__inner {
     width: calc(100% - 40px);
   }
 }
@@ -188,10 +188,10 @@ img {
   main {
     background-position: center top;
   }
-  main > section > .container {
+  :where(main > section) > .container {
     width: calc(100% - 32px);
   }
-  main > section > .container.applicant-hero__inner {
+  :where(main > section) > .container.applicant-hero__inner {
     width: calc(100% - 32px);
   }
 }

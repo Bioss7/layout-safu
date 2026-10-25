@@ -1,7 +1,7 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-.reviews-slider.swiper {
+.reviews-slider {
   overflow: hidden;
   width: 100%;
 }
@@ -36,7 +36,7 @@
   gap: 12px;
 }
 
-.reviews-slider.swiper .swiper-slide {
+.reviews-slider .swiper-slide {
   width: 100% !important;
   max-width: 100%;
   flex-shrink: 0;
@@ -238,7 +238,7 @@
 }
 
 @include breakpoint($bp-1200) {
-  .section--reviews .section-header {
+  .section-header--reviews {
     margin-bottom: 40px;
   }
 
@@ -293,7 +293,7 @@
 }
 
 @include breakpoint($bp-768) {
-  .reviews-slider.swiper .swiper-slide {
+  .reviews-slider .swiper-slide {
     width: calc((100% - 24px) / 2) !important;
   }
 
@@ -325,13 +325,13 @@
 }
 
 @include breakpoint($bp-576) {
-  .reviews-slider.swiper .swiper-slide {
+  .reviews-slider .swiper-slide {
     width: 348px !important;
   }
 }
 
 @include breakpoint($bp-390) {
-  .reviews-slider.swiper .swiper-slide {
+  .reviews-slider .swiper-slide {
     width: calc(100vw - 32px) !important;
     max-width: 314px;
   }
@@ -367,7 +367,7 @@
     gap: 24px;
   }
 
-  .reviews-slider__pagination .link-arrow {
+  .link-arrow--stories {
     padding: 11px 14px;
     font-size: 12px;
     line-height: 18px;

@@ -697,7 +697,7 @@
       </div>
     </section>
     <section class="section section--banner" aria-label="Подать документы">
-      <div class="container">
+      <div class="container container--banner">
         <div class="apply-banner">
           <div class="apply-banner__copy">
             <h2 class="apply-banner__title">
@@ -707,7 +707,7 @@
               Через личный кабинет абитуриента
             </p>
           </div>
-          <button class="button button--light js-info" type="button" data-info-title="Подать заявление"
+          <button class="button apply-banner__button button--light js-info" type="button" data-info-title="Подать заявление"
             data-info-text="Переход в личный кабинет будет подключён при интеграции страницы.">
             ПОДАТЬ ЗАЯВЛЕНИЕ
           </button>
@@ -716,14 +716,14 @@
     </section>
     <section class="section section--education" aria-labelledby="education-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="title-2" id="education-title">
+        <div class="section-header section-header--education">
+          <h2 class="title-2 title-2--education" id="education-title">
             ВЫБЕРИТЕ УРОВЕНЬ ОБРАЗОВАНИЯ
           </h2>
         </div>
         <div class="education-layout">
           <div class="education-list">
-            <a class="education-card " href="/programs/">
+            <a class="education-card" href="/programs/">
               <div class="education-card__top">
                 <div class="education-card__meta">
                   <span>
@@ -749,7 +749,7 @@
             </a>
             <a class="education-card education-card--accent" href="/programs/">
               <div class="education-card__top">
-                <div class="education-card__meta">
+                <div class="education-card__meta education-card__meta--accent">
                   <span>
                     УРОВЕНЬ 02
                   </span>
@@ -757,23 +757,23 @@
                     ОСНОВНОЙ ПОТОК
                   </span>
                 </div>
-                <h3 class="education-card__title">
+                <h3 class="education-card__title education-card__title--accent">
                   БАКАЛАВРИАТ
                   <br class="br">
                   И СПЕЦИАЛИТЕТ
                 </h3>
-                <p class="education-card__description">
+                <p class="education-card__description education-card__description--accent">
                   Более 120 программ: арктическое судостроение, лесная инженерия, лечебное дело, право, журналистика.
                 </p>
               </div>
               <div class="education-card__bottom">
-                <span class="education-card__count">
+                <span class="education-card__count education-card__count--accent">
                   24 ПРОГРАММ
                 </span>
                 <span class="card-arrow" aria-hidden="true"></span>
               </div>
             </a>
-            <a class="education-card " href="/programs/">
+            <a class="education-card" href="/programs/">
               <div class="education-card__top">
                 <div class="education-card__meta">
                   <span>
@@ -798,7 +798,7 @@
                 <span class="card-arrow" aria-hidden="true"></span>
               </div>
             </a>
-            <a class="education-card " href="/programs/">
+            <a class="education-card" href="/programs/">
               <div class="education-card__top">
                 <div class="education-card__meta">
                   <span>
@@ -851,8 +851,8 @@
     <section class="section section--admission" id="admission" aria-labelledby="admission-title">
       <div class="admission-background" aria-hidden="true"></div>
       <div class="container">
-        <div class="section-header">
-          <h2 class="title-2 title-2--white" id="admission-title">
+        <div class="section-header section-header--admission">
+          <h2 class="title-2 title-2--admission title-2--white" id="admission-title">
             ВСЕ ДЛЯ ПОСТУПЛЕНИЯ
           </h2>
         </div>
@@ -994,9 +994,9 @@
       </div>
     </section>
     <section class="section section--opportunities" aria-labelledby="opportunities-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="title-2" id="opportunities-title">
+      <div class="container container--opportunities">
+        <div class="section-header section-header--opportunities">
+          <h2 class="title-2 title-2--opportunities" id="opportunities-title">
             БОЛЬШЕ ВОЗМОЖНОСТЕЙ <br class="br-390 br-768">В САФУ
           </h2>
         </div>
@@ -1071,9 +1071,9 @@
     </section>
     <section class="section section--contacts contacts js-tabs js-contacts" id="contacts"
       aria-labelledby="contacts-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="title-2" id="contacts-title">
+      <div class="container container--contacts">
+        <div class="section-header section-header--contacts">
+          <h2 class="title-2 title-2--contacts" id="contacts-title">
             КОНТАКТЫ ПРИЕМНОЙ КОМИССИИ
           </h2>
         </div>
@@ -1084,17 +1084,17 @@
                 alt="Карта площадок САФУ: выбрана приёмная комиссия Архангельска"></picture>
           </div>
           <div class="contacts__content">
-            <div class="tabs js-tablist js-drag-scroll" role="tablist" aria-label="Площадка приёмной комиссии"
+            <div class="tabs tabs--contacts js-tablist js-drag-scroll" role="tablist" aria-label="Площадка приёмной комиссии"
               aria-description="Список можно прокручивать по горизонтали и перетаскивать мышью.">
-              <button class="tabs__tab  tabs__tab--active js-tab" type="button" role="tab" id="contacts-tab-arkhangelsk"
+              <button class="tabs__tab tabs__tab--contacts tabs__tab--active js-tab" type="button" role="tab" id="contacts-tab-arkhangelsk"
                 aria-controls="contacts-panel-arkhangelsk" aria-selected="true" tabindex="0" data-tab="arkhangelsk">
                 АРХАНГЕЛЬСК
               </button>
-              <button class="tabs__tab   js-tab" type="button" role="tab" id="contacts-tab-severodvinsk"
+              <button class="tabs__tab tabs__tab--contacts js-tab" type="button" role="tab" id="contacts-tab-severodvinsk"
                 aria-controls="contacts-panel-severodvinsk" aria-selected="false" tabindex="-1" data-tab="severodvinsk">
                 СЕВЕРОДВИНСК
               </button>
-              <button class="tabs__tab   js-tab" type="button" role="tab" id="contacts-tab-naryan-mar"
+              <button class="tabs__tab tabs__tab--contacts js-tab" type="button" role="tab" id="contacts-tab-naryan-mar"
                 aria-controls="contacts-panel-naryan-mar" aria-selected="false" tabindex="-1" data-tab="naryan-mar">
                 НАРЬЯН-МАР
               </button>
@@ -1332,8 +1332,8 @@
     </section>
     <section class="section section--reviews">
       <div class="container">
-        <div class="section-header">
-          <h2 class="title-2">
+        <div class="section-header section-header--reviews">
+          <h2 class="title-2 title-2--reviews">
             Гордость САФУ
           </h2>
         </div>
@@ -2427,7 +2427,7 @@
               </span>
             </a>
             <div class="reviews-slider__controls">
-              <button class="arrow-btn arrow-btn--blue reviews-slider__arrow--prev js-reviews-prev" type="button"
+              <button class="arrow-btn arrow-btn--stories arrow-btn--blue reviews-slider__arrow--prev js-reviews-prev" type="button"
                 aria-label="Предыдущий слайд">
                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                   <path d="M7 1 1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -2436,7 +2436,7 @@
               </button>
               <ul class="slider-dots js-reviews-dots" aria-label="Слайды">
               </ul>
-              <button class="arrow-btn arrow-btn--blue reviews-slider__arrow--next js-reviews-next" type="button"
+              <button class="arrow-btn arrow-btn--stories arrow-btn--blue reviews-slider__arrow--next js-reviews-next" type="button"
                 aria-label="Следующий слайд">
                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true">
                   <path d="m1 1 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -2451,7 +2451,7 @@
     <section class="section section--faq faq js-tabs" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-header">
-          <h2 class="title-2" id="faq-title">
+          <h2 class="title-2 title-2--faq" id="faq-title">
             ВОПРОСЫ <br class="br-390">И ОТВЕТЫ
           </h2>
         </div>
@@ -2495,7 +2495,7 @@
             aria-labelledby="faq-tab-contract" data-panel="contract" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-contract-0" id="question-contract-0">
@@ -2516,7 +2516,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-contract-1" id="question-contract-1">
@@ -2539,7 +2539,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-contract-2" id="question-contract-2">
@@ -2567,7 +2567,7 @@
             data-panel="budget" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-0" id="question-budget-0">
@@ -2607,7 +2607,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-2" id="question-budget-2">
@@ -2627,7 +2627,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-3" id="question-budget-3">
@@ -2649,7 +2649,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-4" id="question-budget-4">
@@ -2669,7 +2669,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-5" id="question-budget-5">
@@ -2689,7 +2689,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-6" id="question-budget-6">
@@ -2709,7 +2709,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-7" id="question-budget-7">
@@ -2729,7 +2729,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-budget-8" id="question-budget-8">
@@ -2756,7 +2756,7 @@
             aria-labelledby="faq-tab-achievements" data-panel="achievements" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-achievements-0" id="question-achievements-0">
@@ -2777,7 +2777,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-achievements-1" id="question-achievements-1">
@@ -2800,7 +2800,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-achievements-2" id="question-achievements-2">
@@ -2828,7 +2828,7 @@
             data-panel="exams" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-exams-0" id="question-exams-0">
@@ -2849,7 +2849,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-exams-1" id="question-exams-1">
@@ -2872,7 +2872,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-exams-2" id="question-exams-2">
@@ -2900,7 +2900,7 @@
             data-panel="special" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-special-0" id="question-special-0">
@@ -2921,7 +2921,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-special-1" id="question-special-1">
@@ -2944,7 +2944,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-special-2" id="question-special-2">
@@ -2972,7 +2972,7 @@
             data-panel="target" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-target-0" id="question-target-0">
@@ -2993,7 +2993,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-target-1" id="question-target-1">
@@ -3016,7 +3016,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-target-2" id="question-target-2">
@@ -3044,7 +3044,7 @@
             aria-labelledby="faq-tab-olympiads" data-panel="olympiads" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-olympiads-0" id="question-olympiads-0">
@@ -3065,7 +3065,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-olympiads-1" id="question-olympiads-1">
@@ -3088,7 +3088,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-olympiads-2" id="question-olympiads-2">
@@ -3116,7 +3116,7 @@
             aria-labelledby="faq-tab-separate" data-panel="separate" hidden="" data-demo="true" tabindex="0">
             <div class="faq__columns">
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-separate-0" id="question-separate-0">
@@ -3137,7 +3137,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-separate-1" id="question-separate-1">
@@ -3160,7 +3160,7 @@
                 </article>
               </div>
               <div class="faq__column">
-                <article class="accordion  js-accordion">
+                <article class="accordion js-accordion">
                   <h3 class="accordion__heading">
                     <button class="accordion__trigger js-accordion-trigger" type="button" aria-expanded="false"
                       aria-controls="answer-separate-2" id="question-separate-2">
@@ -3191,7 +3191,7 @@
       <div class="question__surface" id="question">
         <div class="container">
           <div class="section-header">
-            <h2 class="title-2" id="question-title">
+            <h2 class="title-2 title-2--question" id="question-title">
               ЗАДАТЬ ВОПРОС
             </h2>
           </div>

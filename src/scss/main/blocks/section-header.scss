@@ -1,6 +1,52 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.section-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+
+  @include breakpoint($bp-1440) {
+    margin-bottom: 60px;
+  }
+
+  @include breakpoint($bp-1200) {
+    margin-bottom: 60px;
+  }
+
+  @include breakpoint($bp-768) {
+    gap: 24px;
+  }
+
+  @include breakpoint($bp-390) {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.section-header__content {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  min-width: 598px;
+
+  @include breakpoint($bp-1440) {
+    min-width: 524px;
+  }
+
+  @include breakpoint($bp-992) {
+    min-width: 0;
+  }
+
+  @include breakpoint($bp-768) {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
 .section-header__content--history {
   gap: 32px;
   min-width: 812px;
@@ -8,4 +54,100 @@
 
 .section-header__descr--pulse {
   color: var(--main-blue-blue-100);
+}
+
+@include breakpoint($bp-1440) {
+  .section-header__content--pulse {
+    min-width: 0;
+    flex: 0 1 597px;
+    width: 597px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .section-header--stats {
+    gap: 16px;
+    align-items: center;
+  }
+  .section-header__content--life {
+    flex: 0 1 464px;
+    width: 464px;
+    min-width: 0;
+  }
+  .section-header__content--pulse {
+    min-width: 0;
+    flex: 0 1 464px;
+    width: 464px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-header--pulse {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .section-header--pulse {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .section-header__content--pulse {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 750px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .section-header--stats {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .section-header--life {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section-header__content--life {
+    flex: 1 1 auto;
+    width: 100%;
+    gap: 24px;
+  }
+  .section-header--pulse {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+@include breakpoint($bp-390) {
+  .section-header--stats {
+    align-items: flex-start;
+    margin-bottom: 48px;
+    gap: 16px;
+  }
+  .section-header--life {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-header__content--life {
+    gap: 16px;
+  }
+
+  .section-header__descr--life {
+    color: var(--main-blue-blue-100);
+  }
+  .section-header--pulse {
+    margin-bottom: 12px;
+    gap: 16px;
+  }
+
+  .section-header__descr--pulse {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

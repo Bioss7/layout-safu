@@ -1,14 +1,11 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-/* ================= СЛАЙДЕР "ГОРДОСТЬ САФУ" ================= */
-
-.reviews-slider.swiper {
+.reviews-slider {
   overflow: hidden;
   width: 100%;
 }
 
-/* swiper-wrapper — это flex-контейнер Swiper, не трогаем его gap */
 .reviews-slider__viewport {
   overflow: visible;
   margin-bottom: 60px;
@@ -18,14 +15,12 @@
   }
 }
 
-/* Один слайд = одна группа из 4 карточек, ширина = 100% контейнера */
 .reviews-slider__slide {
   width: 100%;
   flex-shrink: 0;
   box-sizing: border-box;
 }
 
-/* Группа карточек внутри слайда */
 .reviews-slider__group {
   display: flex;
   gap: 20px;
@@ -49,20 +44,16 @@
   gap: 12px;
 }
 
-/* Принудительно задаём ширину слайда для Swiper */
-.reviews-slider.swiper .swiper-slide {
+.reviews-slider__slide {
   width: 100% !important;
   max-width: 100%;
   flex-shrink: 0;
   box-sizing: border-box;
 }
 
-/* Стрелки не сжимаются */
 .reviews-slider__controls .arrow-btn {
   flex-shrink: 0;
 }
-
-/* ================= КАРТОЧКА ================= */
 
 .review-card {
   display: flex;
@@ -72,7 +63,7 @@
   height: 514px;
   padding: 24px;
   border-radius: 4px;
-  background: var(--main-white-white--500-opacity);
+  background-color: var(--main-white-white--500-opacity);
 
   @include breakpoint($bp-1440) {
     max-width: 308px;
@@ -122,7 +113,7 @@
   padding: 0;
   border: none;
   border-radius: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background 0.3s ease;
   backdrop-filter: blur(2px);
@@ -133,11 +124,11 @@
   }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   &:active {
-    background: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &:focus-visible {
@@ -195,7 +186,7 @@
 }
 
 .review-card__meta-dot {
-  margin: 0 2.5px;
+  margin: 0 3px 0 2px;
 }
 
 .review-card__text {
@@ -290,7 +281,7 @@
 }
 
 @include breakpoint($bp-768) {
-  .reviews-slider.swiper .swiper-slide {
+  .reviews-slider__slide {
     width: calc((100% - 16px) / 2) !important;
   }
 
@@ -301,7 +292,7 @@
 }
 
 @include breakpoint($bp-390) {
-  .reviews-slider.swiper .swiper-slide {
+  .reviews-slider__slide {
     width: min(314px, calc(100vw - 32px)) !important;
   }
 

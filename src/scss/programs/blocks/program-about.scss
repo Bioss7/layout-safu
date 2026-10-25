@@ -1,27 +1,176 @@
 @use "../_mixins" as *;
+
 @use "../_vars" as *;
 
 .program-about {
- display: grid; grid-template-columns: 532fr 1092fr; gap: 60px;
- &__intro { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
- &__document { font-size: 14px; line-height: 22px; small { display: block; margin-top: 4px; font-size: 12px; color: #0b2d4e80; } }
- &__curriculum { width: 100%; }
- &__skills { min-width: 0; h3 { margin: 0; padding: 0 0 16px; font-size: 16px; line-height: 26px; } ul { padding: 0; margin: 20px 0 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } li { padding: 16px; background: #f2fbfe; font-size: 14px; font-weight: 500; line-height: 22px; } }
+  display: grid;
+  grid-template-columns: 532fr 1092fr;
+  gap: 60px;
 }
+
+.program-about__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.program-about__document {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.program-about__document small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #0b2d4e80;
+}
+
+.program-about__curriculum {
+  width: 100%;
+}
+
+.program-about__skills {
+  min-width: 0;
+}
+
+.program-about__skills h3 {
+  margin: 0;
+  padding: 0 0 16px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.program-about__skills ul {
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.program-about__skills li {
+  padding: 16px;
+  background-color: #f2fbfe;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
 .program-benefits {
- display: grid; grid-template-columns: 2fr 1fr; gap: 40px; position: relative;
- &__content { .program-detail__text { margin-top: 20px; } }
- &__image { align-self: end; margin-top: -100px; margin-bottom: -28px; img { width: 100%; height: auto; display: block; } }
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  position: relative;
 }
+
+.program-benefits__text {
+  margin-top: 20px;
+}
+
+.program-benefits__image {
+  align-self: end;
+  margin-top: -100px;
+  margin-bottom: -28px;
+}
+
+.program-benefits__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .program-practice {
- display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; padding: 40px; border-radius: 4px;
- .program-detail__text { margin-top: 20px; }
- &__column { h3 { margin: 0 0 20px; font-size: 16px; line-height: 24px; font-weight: 600; } ul { padding-left: 20px; margin: 0; color: #ffffffb3; font-size: 14px; line-height: 22px; } li { margin-bottom: 6px; } }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  padding: 40px;
+  border-radius: 4px;
 }
-@media(max-width:1100px) { .program-about { grid-template-columns: 1fr; gap: 32px; } .program-practice { grid-template-columns: 1fr 1fr; > div:first-child { grid-column: 1 / -1; } } }
-@include breakpoint($bp-992) { .program-benefits { grid-template-columns: 1fr; gap: 24px; &__image { margin: 0 auto -28px; max-width: 471px; } } }
-@media(max-width:460px) {
- .program-about { &__skills { h3 { padding: 12px; font-size: 14px; line-height: 22px; } ul { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; } li { padding: 12px; font-size: 14px; line-height: 22px; } } }
- .program-benefits__image { margin-bottom: -16px; }
- .program-practice { grid-template-columns: 1fr; gap: 32px; padding: 16px; &__column h3 { font-size: 14px; line-height: 22px; } }
+
+.program-practice__text {
+  margin-top: 20px;
+}
+
+.program-practice__column h3 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.program-practice__column ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #ffffffb3;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.program-practice__column li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1100px) {
+  .program-about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .program-practice {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .program-practice > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .program-benefits {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .program-benefits__image {
+    margin: 0 auto -28px;
+    max-width: 471px;
+  }
+}
+
+@media (max-width: 460px) {
+  .program-about__skills h3 {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .program-about__skills ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .program-about__skills li {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .program-benefits__image {
+    margin-bottom: -16px;
+  }
+
+  .program-practice {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 16px;
+  }
+
+  .program-practice__column h3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

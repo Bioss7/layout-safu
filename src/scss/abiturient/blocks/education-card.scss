@@ -126,14 +126,14 @@
   text-shadow: 2px 2px 0px var(--main-black);
 }
 
-.education-card--accent .education-card__description,
-.education-card--accent .education-card__meta,
+.education-card__description--accent,
+.education-card__meta--accent,
 .education-card:hover .education-card__description,
 .education-card:hover .education-card__meta {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.education-card--accent .education-card__count {
+.education-card__count--accent {
   background-color: var(--main-accent-accent-100);
 }
 
@@ -150,7 +150,7 @@
   -webkit-mask-image: url("/abiturient/assets/img/education/icon-arrow-right.svg");
 }
 
-.education-card--accent .education-card__title,
+.education-card__title--accent,
 .education-card:hover .education-card__title,
 .education-card:focus-visible .education-card__title {
   color: var(--main-white-white-100);
@@ -275,16 +275,6 @@
     padding: 20px;
   }
 
-  .education-card--accent {
-    .education-card__meta {
-      margin-bottom: 13px;
-    }
-
-    .education-card__title {
-      margin-bottom: 10px;
-    }
-  }
-
   .education-card--international {
     min-height: 275px;
     padding: 17px;
@@ -324,8 +314,16 @@
     text-transform: uppercase;
   }
 
-  .education-card--accent .education-card__count {
+  .education-card__count--accent {
     border-color: var(--main-white-white-100);
+  }
+
+  .education-card__meta--accent {
+    margin-bottom: 13px;
+  }
+
+  .education-card__title--accent {
+    margin-bottom: 10px;
   }
 }
 
@@ -400,11 +398,11 @@
     flex-wrap: wrap;
   }
 
-  .education-card--accent .education-card__meta {
+  .education-card__meta--accent {
     margin-bottom: 10px;
   }
 
-  .education-card--accent .education-card__title {
+  .education-card__title--accent {
     margin-bottom: 8px;
   }
 }
@@ -435,7 +433,7 @@
     gap: 12px;
   }
 
-  .section--education .section-header {
+  .section-header--education {
     margin-bottom: 32px;
   }
 
@@ -472,17 +470,17 @@
     margin-bottom: 16px;
   }
 
-  .education-card--accent .education-card__meta {
+  .education-card__meta--accent {
     margin-bottom: 16px;
   }
 
-  .education-card--accent .education-card__title {
+  .education-card__title--accent {
     margin-bottom: 16px;
   }
 }
 
 @include breakpoint($bp-390) {
-  .section--education .title-2 {
+  .title-2--education {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
@@ -541,15 +539,15 @@
     height: 32px;
   }
 
-  .education-card--accent .education-card__meta {
+  .education-card__meta--accent {
     margin-bottom: 12px;
   }
 
-  .education-card--accent .education-card__title {
+  .education-card__title--accent {
     margin-bottom: 8px;
   }
 
-  .section--education .section-header {
+  .section-header--education {
     margin-bottom: 40px;
   }
 }

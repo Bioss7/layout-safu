@@ -54,7 +54,6 @@
     margin-bottom: 60px;
   }
 
-
   @include breakpoint($bp-992) {
     margin-bottom: 40px;
   }
@@ -127,10 +126,10 @@
   transition:
     background 0.3s ease,
     color 0.3s ease;
-  background: var(--main-white-white--500-opacity);
+  background-color: var(--main-white-white--500-opacity);
 
   &:hover {
-    background: var(--main-accent-accent-60);
+    background-color: var(--main-accent-accent-60);
     color: var(--main-white-white-100);
 
     svg path {
@@ -139,7 +138,7 @@
   }
 
   &:active {
-    background: var(--main-accent-accent-100);
+    background-color: var(--main-accent-accent-100);
     color: var(--main-white-white-100);
 
     svg path {
@@ -163,7 +162,7 @@
   }
 
   &--blue {
-    background: var(--main-blue-blue-40);
+    background-color: var(--main-blue-blue-40);
   }
 }
 
@@ -191,20 +190,20 @@
   margin: 10px;
   border: none;
   border-radius: 50%;
-  background: var(--main-blue-blue-20);
+  background-color: var(--main-blue-blue-20);
   cursor: pointer;
   transition: background 0.3s ease;
 
   &:hover {
-    background: var(--main-accent-accent-100);
+    background-color: var(--main-accent-accent-100);
   }
 
   &:active {
-    background: var(--main-blue-blue-100);
+    background-color: var(--main-blue-blue-100);
   }
 
   &--active {
-    background: var(--main-blue-blue-100);
+    background-color: var(--main-blue-blue-100);
   }
 
   &:focus-visible {

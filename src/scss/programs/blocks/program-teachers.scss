@@ -1,15 +1,75 @@
-.program-teachers {
- &__list { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; margin-top: 40px; }
+.program-teachers__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
 }
+
 .teacher-card {
- background: white; padding: 16px; border-radius: 4px; min-width: 0;
- &__photo { display: block; img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 4px; } }
- &__name { margin: 16px 0 8px; font-size: 14px; line-height: 22px; font-weight: 600; }
- &__role { font-size: 12px; line-height: 18px; color: var(--accent); }
- &__description { font-size: 12px; line-height: 18px; color: #0b2d4eb3; margin-top: 8px; }
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  min-width: 0;
 }
-@media(max-width:1300px) {
- .program-teachers__list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; padding-bottom: 8px; }
- .teacher-card { flex: 0 0 300px; scroll-snap-align: start; }
+
+.teacher-card__photo {
+  display: block;
 }
-@media(max-width:460px) { .program-teachers__list { margin-top: 24px; } .teacher-card { flex-basis: 100%; &__photo img { max-height: 299px; } } }
+
+.teacher-card__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.teacher-card__name {
+  margin: 16px 0 8px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.teacher-card__role {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--accent);
+}
+
+.teacher-card__description {
+  font-size: 12px;
+  line-height: 18px;
+  color: #0b2d4eb3;
+  margin-top: 8px;
+}
+
+@media (max-width: 1300px) {
+  .program-teachers__list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 8px;
+  }
+
+  .teacher-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 460px) {
+  .program-teachers__list {
+    margin-top: 24px;
+  }
+
+  .teacher-card {
+    flex-basis: 100%;
+  }
+
+  .teacher-card__photo img {
+    max-height: 299px;
+  }
+}

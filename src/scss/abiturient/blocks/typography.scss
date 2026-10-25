@@ -56,7 +56,7 @@
 .br-above-992 {
   display: inline;
 }
-#faq .title-2 {
+.title-2--faq {
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -66,7 +66,7 @@
   color: var(--main-blue-blue-100);
 }
 
-.contacts .title-2 {
+.title-2--contacts {
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -76,7 +76,7 @@
   color: var(--main-blue-blue-100);
 }
 
-.section--reviews .title-2 {
+.title-2--reviews {
   font-family: var(--main-font-display);
   font-style: normal;
   font-weight: 800;
@@ -112,18 +112,18 @@
     display: none;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0.04em;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     font-size: 40px;
     line-height: 48px;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     font-size: 40px;
     line-height: 48px;
   }
@@ -135,19 +135,19 @@
     line-height: 48px;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     font-size: 40px;
     line-height: 48px;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     font-size: 40px;
     max-width: 907px;
     line-height: 48px;
     letter-spacing: 0.04em;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0em;
@@ -167,19 +167,19 @@
     letter-spacing: 0.04em;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
@@ -201,14 +201,14 @@
     text-shadow: none;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     text-shadow: none;
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     max-width: none;
     text-shadow: none;
     font-size: 32px;
@@ -216,7 +216,7 @@
     letter-spacing: 0.04em;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     text-shadow: none;
     font-size: 40px;
     line-height: 48px;
@@ -241,19 +241,19 @@
     letter-spacing: 0.04em;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.04em;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.04em;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.04em;
@@ -277,15 +277,15 @@
     letter-spacing: -1px;
   }
 
-  #faq .title-2 {
+  .title-2--faq {
     letter-spacing: -1px;
   }
 
-  .contacts .title-2 {
+  .title-2--contacts {
     letter-spacing: -1px;
   }
 
-  .section--reviews .title-2 {
+  .title-2--reviews {
     letter-spacing: -1px;
   }
 

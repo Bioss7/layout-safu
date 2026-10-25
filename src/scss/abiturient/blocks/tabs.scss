@@ -123,11 +123,24 @@
       width: 242px;
     }
   }
+
+  .tabs--contacts {
+    gap: 16px;
+  }
 }
 
 @include breakpoint($bp-1200) {
   .tabs__tab--faq {
     padding-bottom: 16px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .tabs__tab--contacts {
+    height: 44px;
+    padding: 10px 18px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -158,6 +171,48 @@
       width: auto;
     }
   }
+
+  .tabs--contacts {
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 0;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .tabs__tab--contacts {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    white-space: normal;
+    height: auto;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .tabs--contacts {
+    order: 1;
+    flex-direction: row;
+    gap: 16px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    margin-bottom: -4px;
+    width: calc(100% + 4px);
+    max-width: none;
+  }
+
+  .tabs__tab--contacts {
+    width: auto;
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 10px;
+    white-space: nowrap;
+  }
 }
 
 @include breakpoint($bp-390) {
@@ -165,5 +220,27 @@
     &:nth-child(-n + 2) {
       width: 320px;
     }
+  }
+
+  .tabs--contacts {
+    order: 1;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    overflow: visible;
+    margin-bottom: 0;
+  }
+
+  .tabs__tab--contacts {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 18px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    white-space: normal;
   }
 }

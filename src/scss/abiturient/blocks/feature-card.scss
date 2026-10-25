@@ -135,7 +135,7 @@
     line-height: 26px;
   }
 
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 128px);
   }
   .feature-card__news-phrase {
@@ -182,7 +182,7 @@
     max-width: 323px;
   }
 
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 96px);
   }
   .feature-card__news-phrase {
@@ -190,7 +190,7 @@
   }
 }
 @include breakpoint($bp-992) {
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 64px);
   }
   .feature-card {
@@ -201,7 +201,7 @@
       background-image:
         linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
         linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 32.82%),
-        linear-gradient(179.873deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.75%);
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.75%);
       opacity: 1;
     }
   }
@@ -326,7 +326,7 @@
     max-width: none;
   }
 
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 48px);
   }
 
@@ -393,7 +393,7 @@
     max-width: none;
   }
 
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 40px);
   }
 
@@ -418,15 +418,15 @@
     height: 40px;
   }
 
-  .section--opportunities .container {
+  .container--opportunities {
     width: calc(100% - 32px);
   }
 
-  .section--opportunities .section-header {
+  .section-header--opportunities {
     margin-bottom: 40px;
   }
 
-  .section--opportunities .title-2 {
+  .title-2--opportunities {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.04em;
@@ -448,7 +448,7 @@
       background-image:
         linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
         linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 32.82%),
-        linear-gradient(179.718deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.75%);
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.75%);
       opacity: 1;
     }
   }

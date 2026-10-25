@@ -1,4 +1,39 @@
-.pagination { display:flex; justify-content:center; align-items:center; gap:16px; margin-top:28px;
- &__pages { display:flex; gap:4px; }
- &__button { width:40px; height:40px; border:0; border-radius:4px; background:#00aeef1a; font-size:14px; font-weight:500; &:hover:not(:disabled) { background:#00aeef33; } &:active:not(:disabled),&[aria-current=page] { background:#00aeef80; } &--next { background:#00aeef33; } &--previous img { transform:rotate(180deg); } }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.pagination__pages {
+  display: flex;
+  gap: 4px;
+}
+
+.pagination__button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #00aeef1a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pagination__button:hover:not(:disabled) {
+  background-color: #00aeef33;
+}
+
+.pagination__button:active:not(:disabled),
+.pagination__button[aria-current="page"] {
+  background-color: #00aeef80;
+}
+
+.pagination__button--next {
+  background-color: #00aeef33;
+}
+
+.pagination__button--previous img {
+  transform: rotate(180deg);
 }

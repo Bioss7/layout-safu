@@ -14,7 +14,7 @@
   width: 100%;
   padding: 40px;
   border-radius: 4px;
-  background: var(--main-white-white--500-opacity);
+  background-color: var(--main-white-white--500-opacity);
   transition: box-shadow 0.2s ease;
 
   &:hover {
@@ -27,7 +27,6 @@
   }
 }
 
-/* Картинка слева */
 .direction-card__media {
   flex-shrink: 0;
   width: 415px;
@@ -85,7 +84,6 @@
   color: var(--main-blue-blue-100);
 }
 
-/* Правая колонка строки: специальности */
 .direction-card__aside {
   display: flex;
   flex-direction: column;
@@ -143,7 +141,7 @@
   padding: 18px 24px;
   border: none;
   border-radius: 4px;
-  background: linear-gradient(95.71deg, #06c 9.98%, #036 90.02%);
+  background: linear-gradient(96deg, #06c 9.98%, #036 90.02%);
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
@@ -156,7 +154,8 @@
   cursor: pointer;
 
   &:hover {
-    background: var(--main-accent-accent-100);
+    background-color: var(--main-accent-accent-100);
+    background-image: none;
   }
 }
 

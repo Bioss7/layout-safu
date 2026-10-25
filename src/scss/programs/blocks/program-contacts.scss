@@ -1,14 +1,83 @@
 @use "../_mixins" as *;
+
 @use "../_vars" as *;
 
 .program-contacts {
- padding-block: 40px;
- &__inner { display: grid; grid-template-columns: 700fr 980fr; gap: 40px; }
- &__intro { p { font-size: 16px; line-height: 26px; color: #ffffffb3; max-width: 620px; margin-top: 12px; } .button { margin-top: 20px; } }
- &__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
- &__tile { padding: 16px; border-radius: 4px; background: #ffffff0d; border: 1px solid #ffffff1a; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 24px; &--community { justify-content: center; font-weight: 600; } }
- &__label { text-transform: uppercase; font-size: 12px; line-height: 18px; color: #fff9; }
- &__note { font-size: 12px; line-height: 18px; color: #ffffffb3; }
+  padding-block: 40px;
 }
-@include breakpoint($bp-992) { .program-contacts__inner { grid-template-columns: 1fr; gap: 24px; } }
-@media(max-width:460px) { .program-contacts { padding-block: 16px; &__intro p { font-size: 14px; line-height: 22px; } &__grid { grid-template-columns: 1fr; } } }
+
+.program-contacts__inner {
+  display: grid;
+  grid-template-columns: 700fr 980fr;
+  gap: 40px;
+}
+
+.program-contacts__description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffffb3;
+  max-width: 620px;
+  margin-top: 12px;
+}
+
+.program-contacts__button {
+  margin-top: 20px;
+}
+
+.program-contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.program-contacts__tile {
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.program-contacts__tile--community {
+  justify-content: center;
+  font-weight: 600;
+}
+
+.program-contacts__label {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff9;
+}
+
+.program-contacts__note {
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffffb3;
+}
+
+@include breakpoint($bp-992) {
+  .program-contacts__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 460px) {
+  .program-contacts {
+    padding-block: 16px;
+  }
+
+  .program-contacts__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .program-contacts__grid {
+    grid-template-columns: 1fr;
+  }
+}

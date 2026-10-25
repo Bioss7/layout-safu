@@ -2,356 +2,358 @@
 @use "../_vars" as *;
 
 .section--history {
-    --history-blue: #0b2d4e;
-    --history-blue-hover: #00aeef;
-    --history-dot-bg: #cceffc;
+  --history-blue: #0b2d4e;
+  --history-blue-hover: #00aeef;
+  --history-dot-bg: #cceffc;
 }
 
 .history-timeline {
-    position: relative;
-    width: 100%;
-    margin-top: 60px;
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
 }
 
 .history-timeline__line {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
 
-    svg {
-        display: block;
-        width: 100%;
-        height: 2px;
-    }
+  svg {
+    display: block;
+    width: 100%;
+    height: 2px;
+  }
 }
 
 .history-timeline__points {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .history-timeline__item {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .history-timeline__point {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 
-    &:not(&--active) {
-        margin-top: 8px;
-    }
+  &:not(&--active) {
+    margin-top: 8px;
+  }
 
-    &--active {
-        gap: 12px;
-    }
+  &--active {
+    gap: 12px;
+  }
 }
 
-/* Обычная (неактивная) точка */
 .history-timeline__dot:not(.history-timeline__dot--active) {
-    display: block;
-    width: 15px;
-    height: 15px;
-    flex: 0 0 auto;
+  display: block;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
 
-    circle {
-        fill: var(--history-dot-bg);
-        stroke: var(--history-blue);
-        stroke-width: 2px;
-        transition: stroke 0.2s ease;
-    }
+  circle {
+    fill: var(--history-dot-bg);
+    stroke: var(--history-blue);
+    stroke-width: 2px;
+    transition: stroke 0.2s ease;
+  }
 }
 
-/* Активная точка: задаём только размеры, цвета — инлайново в SVG */
 .history-timeline__dot--active {
-    display: block;
-    width: 32px;
-    height: 32px;
-    flex: 0 0 auto;
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
 }
 
 .history-timeline__year {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--main-blue-blue-100);
+  transition: color 0.2s ease;
+
+  &--active {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 144%;
-    color: var(--main-blue-blue-100);
-    transition: color 0.2s ease;
-
-    &--active {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 133%;
-    }
+    font-size: 24px;
+    line-height: 133%;
+  }
 }
 
-/* Hover только для неактивных точек */
-.history-timeline__item:hover .history-timeline__point:not(.history-timeline__point--active) .history-timeline__dot:not(.history-timeline__dot--active) circle {
-    stroke: var(--history-blue-hover);
+.history-timeline__item:hover
+  .history-timeline__point:not(.history-timeline__point--active)
+  .history-timeline__dot:not(.history-timeline__dot--active)
+  circle {
+  stroke: var(--history-blue-hover);
 }
 
-.history-timeline__item:hover .history-timeline__point:not(.history-timeline__point--active) .history-timeline__year {
-    color: var(--history-blue-hover);
+.history-timeline__item:hover
+  .history-timeline__point:not(.history-timeline__point--active)
+  .history-timeline__year {
+  color: var(--history-blue-hover);
 }
 
 .history-cards {
-    position: relative;
-    margin-top: 40px;
+  position: relative;
+  margin-top: 40px;
 }
 
 .history-card {
-    display: none;
-    justify-content: space-between;
-    gap: 40px;
-    background: var(--main-white-white--500-opacity);
-    padding: 40px;
-    width: 100%;
-    max-width: 1723px;
-    border-radius: 12px;
-    box-sizing: border-box;
+  display: none;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--main-white-white--500-opacity);
+  padding: 40px;
+  width: 100%;
+  max-width: 1723px;
+  border-radius: 12px;
+  box-sizing: border-box;
 
-    @include breakpoint($bp-1440) {
-        padding: 24px;
-        gap: 16px;
-    }
+  @include breakpoint($bp-1440) {
+    padding: 24px;
+    gap: 16px;
+  }
 
-    &--active {
-        display: flex;
-    }
+  &--active {
+    display: flex;
+  }
 }
 
 .history-card__text {
-    max-width: 827px;
+  max-width: 827px;
 }
 
 .history-card__year {
-    margin-bottom: 20px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 163%;
-    letter-spacing: 0.06em;
+  margin-bottom: 20px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 163%;
+  letter-spacing: 0.06em;
 
-    @include breakpoint($bp-1440) {
-        font-size: 28px;
-        line-height: 143%;
-    }
+  @include breakpoint($bp-1440) {
+    font-size: 28px;
+    line-height: 143%;
+  }
 }
 
 .history-card__descr {
-    margin: 0;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.06em;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
 
-    @include breakpoint($bp-1440) {
-        font-size: 18px;
-        line-height: 144%;
-    }
+  @include breakpoint($bp-1440) {
+    font-size: 18px;
+    line-height: 144%;
+  }
 }
 
 .history-card__media {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 556px;
+  height: 314px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    display: block;
     width: 100%;
-    max-width: 556px;
-    height: 314px;
-    border-radius: 12px;
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    @include breakpoint($bp-1440) {
-        max-width: 606px;
-        height: 342px;
-    }
+  @include breakpoint($bp-1440) {
+    max-width: 606px;
+    height: 342px;
+  }
 }
 
 @include breakpoint($bp-1440) {
-    .section--history .section-header__content--history {
-        flex: 0 1 auto;
-        min-width: 0;
-        max-width: 632px;
-    }
+  .section--history .section-header__content--history {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 632px;
+  }
 
-    .history-cards {
-        margin-top: 32px;
-    }
+  .history-cards {
+    margin-top: 32px;
+  }
 
-    .history-card__text {
-        flex: 1 1 0;
-        min-width: 0;
-        max-width: none;
-    }
+  .history-card__text {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+  }
 
-    .history-card__media {
-        flex: 1 1 0;
-        width: auto;
-        max-width: none;
-        height: 342px;
-    }
+  .history-card__media {
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    height: 342px;
+  }
 }
 
 @include breakpoint($bp-1200) {
-    .section--history .section-header {
-        margin-bottom: 0;
-    }
+  .section--history .section-header {
+    margin-bottom: 0;
+  }
 
-    .section--history .section-header__content--history {
-        gap: 16px;
-    }
+  .section--history .section-header__content--history {
+    gap: 16px;
+  }
 
-    .history-timeline {
-        margin-top: 40px;
-    }
+  .history-timeline {
+    margin-top: 40px;
+  }
 
-    .history-timeline__year {
-        font-size: 16px;
-        line-height: 150%;
-    }
+  .history-timeline__year {
+    font-size: 16px;
+    line-height: 150%;
+  }
 
-    .history-timeline__year--active {
-        font-size: 18px;
-        line-height: 144%;
-    }
+  .history-timeline__year--active {
+    font-size: 18px;
+    line-height: 144%;
+  }
 
-    .history-card {
-        padding: 16px;
-    }
+  .history-card {
+    padding: 16px;
+  }
 
-    .history-card__media {
-        flex: 0 1 542px;
-        width: auto;
-        max-width: 542px;
-        height: 268px;
-    }
+  .history-card__media {
+    flex: 0 1 542px;
+    width: auto;
+    max-width: 542px;
+    height: 268px;
+  }
 }
 
 @include breakpoint($bp-992) {
-    .section--history .section-header__content--history {
-        flex: auto;
-        max-width: 750px;
-    }
+  .section--history .section-header__content--history {
+    flex: auto;
+    max-width: 750px;
+  }
 
-    .history-timeline {
-        margin-top: 32px;
-    }
+  .history-timeline {
+    margin-top: 32px;
+  }
 
-    .history-cards {
-        margin-top: 24px;
-    }
+  .history-cards {
+    margin-top: 24px;
+  }
 
-    .history-card__year {
-        font-size: 24px;
-        line-height: 133%;
-    }
+  .history-card__year {
+    font-size: 24px;
+    line-height: 133%;
+  }
 
-    .history-card__descr {
-        font-size: 18px;
-        line-height: 26px;
-    }
+  .history-card__descr {
+    font-size: 18px;
+    line-height: 26px;
+  }
 
-    .history-card__media {
-        flex: 0 1 366px;
-        max-width: 366px;
-        height: 210px;
-    }
+  .history-card__media {
+    flex: 0 1 366px;
+    max-width: 366px;
+    height: 210px;
+  }
 }
 
 @include breakpoint($bp-768) {
-    .section--history .section-header__content--history {
-        flex: 1 1 auto;
-        max-width: none;
-    }
+  .section--history .section-header__content--history {
+    flex: 1 1 auto;
+    max-width: none;
+  }
 
-    .history-timeline {
-        overflow-x: auto;
-        padding-bottom: 8px;
-    }
+  .history-timeline {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
 
-    .history-timeline__points {
-        min-width: 720px;
-        min-height: 80px;
-    }
+  .history-timeline__points {
+    min-width: 720px;
+    min-height: 80px;
+  }
 
-    .history-timeline__line {
-        min-width: 720px;
-    }
+  .history-timeline__line {
+    min-width: 720px;
+  }
 
-    .history-card {
-        flex-direction: column;
-        gap: 16px;
-    }
+  .history-card {
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    .history-card__year {
-        font-size: 20px;
-        line-height: 140%;
-    }
+  .history-card__year {
+    font-size: 20px;
+    line-height: 140%;
+  }
 
-    .history-card__descr {
-        font-size: 16px;
-        line-height: 24px;
-    }
+  .history-card__descr {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .history-card__media {
-        flex: none;
-        width: 100%;
-        max-width: none;
-        height: 410px;
-    }
+  .history-card__media {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    height: 410px;
+  }
 }
 
 @include breakpoint($bp-390) {
-    .history-timeline {
-        margin-top: 24px;
-    }
+  .history-timeline {
+    margin-top: 24px;
+  }
 
-    .history-timeline__year {
-        font-size: 18px;
-        line-height: 144%;
-    }
+  .history-timeline__year {
+    font-size: 18px;
+    line-height: 144%;
+  }
 
-    .history-timeline__year--active {
-        font-size: 24px;
-        line-height: 133%;
-    }
+  .history-timeline__year--active {
+    font-size: 24px;
+    line-height: 133%;
+  }
 
-    .history-card {
-        gap: 24px;
-    }
+  .history-card {
+    gap: 24px;
+  }
 
-    .history-card__year {
-        font-size: 16px;
-        line-height: 150%;
-        margin-bottom: 16px;
-    }
+  .history-card__year {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 16px;
+  }
 
-    .history-card__descr {
-        font-size: 16px;
-        line-height: 24px;
-    }
+  .history-card__descr {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .history-card__media {
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
+  .history-card__media {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }

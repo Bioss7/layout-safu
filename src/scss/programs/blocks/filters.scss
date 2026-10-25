@@ -1,11 +1,150 @@
-.filters { background:white; padding:40px 24px; border-radius:4px; align-self:start;
- &__search { display:flex; align-items:center; gap:8px; padding:8px; height:48px; border:1px solid #0b2d4e1a; border-radius:4px; background:#0b2d4e0d; &:focus-within { border-color:var(--accent); } input { width:100%; min-width:0; background:transparent; border:0; outline:0; color:var(--navy); font-weight:500; &::placeholder { color:#0b2d4eb3; } } button { border:0; background:transparent; padding:4px; } }
- &__heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:40px; margin-bottom:28px; h2 { font:18px/36px var(--display); } }
- &__reset { border:0; padding:4px 0; background:transparent; font-size:16px; font-weight:700; &:hover:not(:disabled) { color:var(--accent); } }
- &__groups { display:flex; flex-direction:column; gap:12px; }
- &__toggle { display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; min-height:48px; padding:13px 16px; text-align:left; background:#0b2d4e0d; border:1px solid #0b2d4e1a; border-radius:4px; font-size:16px; line-height:20px; font-weight:500; color:#0b2d4ecc; &:hover,&[aria-expanded=true] { border-color:var(--accent); background:#edf4fa; } &[aria-expanded=true] img { transform:rotate(180deg); } }
- &__options { border:1px solid #0b2d4e1a; border-radius:4px; padding:12px 0; margin:12px 0 0; background:#0b2d4e0d; max-height:290px; overflow:auto; }
- &__option { display:flex; align-items:flex-start; gap:12px; padding:8px 16px; font-size:14px; line-height:20px; font-weight:600; cursor:pointer; &:hover { background:#00aeef1a; } input { flex-shrink:0; width:16px; height:16px; margin:2px 0; accent-color:var(--accent); } }
- &__count { color:var(--accent); font-size:12px; }
+.filters {
+  background-color: white;
+  padding: 40px 24px;
+  border-radius: 4px;
+  align-self: start;
 }
-@media(max-width:600px) { .filters { padding:32px 16px; } }
+
+.filters__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  height: 48px;
+  border: 1px solid #0b2d4e1a;
+  border-radius: 4px;
+  background-color: #0b2d4e0d;
+}
+
+.filters__search:focus-within {
+  border-color: var(--accent);
+}
+
+.filters__search input {
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.filters__search input::placeholder {
+  color: #0b2d4eb3;
+}
+
+.filters__search button {
+  border: 0;
+  background-color: transparent;
+  padding: 4px;
+}
+
+.filters__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 40px;
+  margin-bottom: 28px;
+}
+
+.filters__heading h2 {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-stretch: normal;
+  line-height: 36px;
+}
+
+.filters__reset {
+  border: 0;
+  padding: 4px 0;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filters__reset:hover:not(:disabled) {
+  color: var(--accent);
+}
+
+.filters__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filters__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+  text-align: left;
+  background-color: #0b2d4e0d;
+  border: 1px solid #0b2d4e1a;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #0b2d4ecc;
+}
+
+.filters__toggle:hover,
+.filters__toggle[aria-expanded="true"] {
+  border-color: var(--accent);
+  background-color: #edf4fa;
+}
+
+.filters__toggle[aria-expanded="true"] img {
+  transform: rotate(180deg);
+}
+
+.filters__options {
+  border: 1px solid #0b2d4e1a;
+  border-radius: 4px;
+  padding: 12px 0;
+  margin: 12px 0 0;
+  background-color: #0b2d4e0d;
+  max-height: 290px;
+  overflow: auto;
+}
+
+.filters__option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters__option:hover {
+  background-color: #00aeef1a;
+}
+
+.filters__option input {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0;
+  accent-color: var(--accent);
+}
+
+.filters__count {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    padding: 32px 16px;
+  }
+}

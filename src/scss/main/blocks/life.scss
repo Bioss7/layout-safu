@@ -1,7 +1,6 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
-/* ================= ТАБЫ ================= */
 .life-tabs {
   display: flex;
   justify-content: space-between;
@@ -24,7 +23,7 @@
   height: 48px;
   border: none;
   border-radius: 4px;
-  background: var(--main-blue-blue-40);
+  background-color: var(--main-blue-blue-40);
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
@@ -35,18 +34,18 @@
   transition: background 0.2s ease;
 
   &:hover {
-    background: var(--main-accent-accent-100);
+    background-color: var(--main-accent-accent-100);
     color: var(--main-white-white-100);
   }
 
   &:active {
-    background: var(--main-blue-blue-100);
+    background-color: var(--main-blue-blue-100);
     color: var(--main-white-white-100);
   }
 }
 
 .life-tabs__tab--active {
-  background: var(--main-blue-blue-100);
+  background-color: var(--main-blue-blue-100);
   color: var(--main-white-white-100);
 }
 
@@ -69,11 +68,13 @@
   width: 415px;
   min-height: 378px;
   border-radius: 3px;
-  background: var(--main-white-white--500-opacity);
+  background-color: var(--main-white-white--500-opacity);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   @include breakpoint($bp-1440) {
     min-height: 310px;
@@ -188,12 +189,6 @@
 }
 
 @include breakpoint($bp-1200) {
-  .section--life .section-header__content {
-    flex: 0 1 464px;
-    width: 464px;
-    min-width: 0;
-  }
-
   .life-panel--active {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
@@ -217,17 +212,6 @@
 }
 
 @include breakpoint($bp-768) {
-  .section--life .section-header {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .section--life .section-header__content {
-    flex: 1 1 auto;
-    width: 100%;
-    gap: 24px;
-  }
-
   .life-tabs {
     flex-wrap: wrap;
     gap: 16px;
@@ -252,19 +236,6 @@
 }
 
 @include breakpoint($bp-390) {
-  .section--life .section-header {
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-
-  .section--life .section-header__content {
-    gap: 16px;
-  }
-
-  .section--life .section-header__descr {
-    color: var(--main-blue-blue-100);
-  }
-
   .life-tabs {
     flex-direction: column;
     align-items: flex-start;

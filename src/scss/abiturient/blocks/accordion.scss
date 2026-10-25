@@ -190,7 +190,7 @@
 }
 
 @include breakpoint($bp-390) {
-  #faq .title-2 {
+  .title-2--faq {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.04em;

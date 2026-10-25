@@ -6,8 +6,8 @@
   width: 100%;
   height: 900px;
   background:
-    linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
-    linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+    linear-gradient(175deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+    linear-gradient(357deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
     var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,25 +16,28 @@
     height: auto;
     padding: 224px 0 63px;
     background:
-      linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
-      linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-1440.png") center center / cover no-repeat;
+      linear-gradient(175deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+      linear-gradient(357deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-1440.png") center center /
+        cover no-repeat;
   }
 
   @include breakpoint($bp-1200) {
     padding: 215px 0 73px;
     background:
-      linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
-      linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-1200.png") center center / cover no-repeat;
+      linear-gradient(175deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+      linear-gradient(357deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-1200.png") center center /
+        cover no-repeat;
   }
 
   @include breakpoint($bp-992) {
     padding: 178px 0 120px;
     background:
-      linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
-      linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-992.png") center center / cover no-repeat;
+      linear-gradient(175deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+      linear-gradient(357deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-992.png") center center /
+        cover no-repeat;
   }
 
   @include breakpoint($bp-768) {
@@ -46,9 +49,10 @@
     min-height: 733px;
     padding: 134px 0 98px;
     background:
-      linear-gradient(175.12deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
-      linear-gradient(357.49deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
-      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-390.png") center center / cover no-repeat;
+      linear-gradient(175deg, #fff 6.52%, rgba(255, 255, 255, 0) 29.59%),
+      linear-gradient(357deg, #fff -3.82%, rgba(255, 255, 255, 0) 16.89%),
+      var(--main-white-white-700-opacity) url("/main/assets/img/hero-bg-390.png") center center /
+        cover no-repeat;
   }
 }
 
@@ -57,7 +61,7 @@
   z-index: 1;
   padding: 40px;
   border-radius: 4px;
-  background: var(--main-white-white-700-opacity);
+  background-color: var(--main-white-white-700-opacity);
   max-width: 929px;
   backdrop-filter: blur(5px);
 
@@ -96,7 +100,6 @@
   }
 }
 
-/* ---------- Слайдер ---------- */
 .hero__slider {
   position: relative;
   width: 100%;
@@ -107,7 +110,6 @@
   width: 100%;
   overflow: hidden;
 
-  /* fade-эффект */
   .swiper-slide {
     opacity: 0;
     transition: opacity 0.45s ease;
@@ -119,13 +121,11 @@
     pointer-events: auto;
   }
 
-  /* высота по контенту */
   .swiper-wrapper {
     align-items: stretch;
   }
 }
 
-/* ---------- Табы ---------- */
 .hero__tabs {
   display: flex;
   flex-wrap: wrap;
@@ -160,11 +160,17 @@
 .hero__tab {
   appearance: none;
   -webkit-appearance: none;
-  background: none;
+  background-color: transparent;
   border: 0;
   margin: 0;
   padding: 8px 0 8px;
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  line-height: inherit;
   color: inherit;
   cursor: pointer;
   text-align: left;
@@ -214,7 +220,9 @@
   letter-spacing: 0.06em;
   color: var(--main-blue-blue-100);
   opacity: 0.7;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 
   @include breakpoint($bp-768) {
     font-size: 14px;
@@ -340,7 +348,9 @@
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 
   &:focus-visible {
     outline: 2px solid var(--main-accent-accent-100);
@@ -355,7 +365,7 @@
     padding: 18px 24px;
     min-width: 231px;
     min-height: 60px;
-    background: var(--main-blue-blue-100);
+    background-color: var(--main-blue-blue-100);
 
     font-family: var(--second-family);
     font-weight: 400;
@@ -367,15 +377,15 @@
     white-space: nowrap;
 
     &:hover {
-      background: var(--main-accent-accent-100);
+      background-color: var(--main-accent-accent-100);
     }
 
     &:active {
-      background: var(--main-blue-blue-90);
+      background-color: var(--main-blue-blue-90);
     }
 
     &:disabled {
-      background: var(--main-blue-blue-30);
+      background-color: var(--main-blue-blue-30);
     }
   }
 
@@ -383,7 +393,7 @@
     padding: 18px 24px;
     max-width: 377px;
     min-height: 60px;
-    background: var(--main-white-white-100);
+    background-color: var(--main-white-white-100);
 
     font-family: var(--second-family);
     font-weight: 400;
@@ -395,22 +405,21 @@
     white-space: nowrap;
 
     &:hover {
-      background: var(--main-accent-accent-100);
+      background-color: var(--main-accent-accent-100);
       color: var(--main-white-white-100);
     }
 
     &:active {
-      background: var(--main-blue-blue-30);
+      background-color: var(--main-blue-blue-30);
       color: var(--main-white-white-100);
     }
 
     &:disabled {
-      background: var(--main-blue-blue-20);
+      background-color: var(--main-blue-blue-20);
     }
   }
 
   @include breakpoint($bp-1200) {
-
     &--primary,
     &--secondary {
       padding: 14px 16px;
@@ -464,10 +473,6 @@
   transition: transform 0.2s ease;
 }
 
-// .hero__btn:hover .hero__btn-icon {
-//   transform: translateX(2px);
-// }
-
 .hero__pagination {
   display: flex;
   align-items: flex-end;
@@ -502,10 +507,16 @@
 .hero__dot {
   appearance: none;
   -webkit-appearance: none;
-  background: none;
+  background-color: transparent;
   border: 0;
   margin: 0;
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  line-height: inherit;
   color: var(--main-blue-blue-100);
   cursor: pointer;
 
@@ -515,7 +526,9 @@
   padding: 0 0 10px;
   font-size: 15px;
   opacity: 0.5;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 
   &::after {
     content: "";
@@ -574,7 +587,6 @@
   }
 }
 
-/* ----- Стрелки ----- */
 .hero__arrows {
   display: flex;
   align-items: center;
@@ -599,10 +611,10 @@
   transition:
     background 0.3s ease,
     color 0.3s ease;
-  background: var(--main-white-white--500-opacity);
+  background-color: var(--main-white-white--500-opacity);
 
   &:hover {
-    background: var(--main-accent-accent-60);
+    background-color: var(--main-accent-accent-60);
     color: var(--main-white-white-100);
 
     svg path {
@@ -611,7 +623,7 @@
   }
 
   &:active {
-    background: var(--main-accent-accent-100);
+    background-color: var(--main-accent-accent-100);
     color: var(--main-white-white-100);
 
     svg path {

@@ -31,5 +31,7 @@
   }
 }
 @include breakpoint($bp-1200) {
-  html { scrollbar-gutter: auto; }
+  html {
+    scrollbar-gutter: auto;
+  }
 }
