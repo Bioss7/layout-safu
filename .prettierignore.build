@@ -1,0 +1,3 @@
+# Explicit build output formatting; editor exclusions are in .prettierignore.
+node_modules/
+.git/

@@ -1,3 +1,10 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "prettier.requireConfig": true,
+  "prettier.ignorePath": ".prettierignore",
+  "[html][scss][css][javascript][json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  }
 }

@@ -1,6 +1,7 @@
 import { dirname, relative, resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import { uiPreview } from './tools/ui-preview.mjs';
+import { formatOnSave } from './tools/format-on-save.mjs';
 
 const toPosix = (value) => value.replace(/\\/g, '/');
 
@@ -69,7 +70,7 @@ function relativeClassicScripts() {
 export default defineConfig({
   base: './',
   publicDir: 'public',
-  plugins: [relativeClassicScripts(), uiPreview()],
+  plugins: [relativeClassicScripts(), uiPreview(), formatOnSave()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
