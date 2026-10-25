@@ -1,7 +1,7 @@
 {
   "fileKey": "aVwbPxZ5FUxYkvTcvME566",
-  "retrievedAt": "2026-10-23",
-  "note": "Figma measurements. Round section heights and inter-section gaps individually; retain the existing 390 bachelor copy (+20px). Footer is report-only.",
+  "retrievedAt": "2026-10-25",
+  "note": "Reconfirmed against live Figma 2026-10-25; full-audit cache and screenshots. Header/footer excluded. Round section heights and gaps independently. User approved keeping meaningful education/review copy and consistent counts; 390 bachelor copy adds 20px.",
   "frames": [
     {
       "id": "4200:19138",

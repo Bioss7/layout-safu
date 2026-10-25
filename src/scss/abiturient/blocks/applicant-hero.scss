@@ -202,7 +202,7 @@
 .applicant-hero__building {
   position: absolute;
   width: 1222px;
-  height: 739px;
+  height: 811px;
   left: 53.78%;
   top: 49px;
   background-color: var(--main-white-white-100);
@@ -270,14 +270,14 @@
   .applicant-hero__building {
     width: 977px;
     height: auto;
-    aspect-ratio: 1222 / 739;
+    aspect-ratio: 1222 / 811;
     left: calc(78.27vw - 393px);
     top: 117px;
   }
 
   .applicant-hero__people {
     width: 535px;
-    left: calc(78.33vw - 358px);
+    left: calc(78.33vw - 398px);
     top: 121px;
     bottom: auto;
   }
@@ -397,14 +397,14 @@
 
   .applicant-hero__building {
     width: 786px;
-    left: 433px;
-    top: 258px;
+    left: 457px;
+    top: 286px;
   }
 
   .applicant-hero__people {
     width: 431px;
-    left: 471px;
-    top: 261px;
+    left: 495px;
+    top: 289px;
   }
 
   .applicant-hero__status li {

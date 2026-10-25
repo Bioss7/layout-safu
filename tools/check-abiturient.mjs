@@ -87,6 +87,7 @@ try {
       }),
       educationDisplay: getComputedStyle(document.querySelector('.education-layout')).display,
       loadedImages: [...document.images].every(image => image.complete && image.naturalWidth > 0),
+      reviewDotIndex: [...document.querySelectorAll('.js-review-dot')].findIndex(dot => dot.getAttribute('aria-current') === 'true'),
       reviewShadow: (() => {
         const slider = document.querySelector('.js-reviews');
         const active = slider.querySelector('.swiper-slide-active');
@@ -103,8 +104,11 @@ try {
       scripts: [...document.scripts].filter(script => script.src).map(script => new URL(script.src).pathname),
     }));
     metrics.push(metric);
+    // Figma 4200:19303: central active item (third of five; second of three at 390).
+    assert.equal(metric.reviewDotIndex, width <= 390 ? 1 : 2, 'Начальный индикатор отзывов соответствует Figma');
     assert.equal(metric.contacts.background, 'rgb(255, 255, 255)', 'Белый фон контактов поверх сетки');
-    assert.equal(metric.questionBackground, 'rgb(255, 255, 255)', 'Белый фон содержимого вопроса поверх сетки');
+    // Figma 4209:33349 is transparent at 768; 4209:33953 and 4209:32220 are white.
+    assert.equal(metric.questionBackground, width > 576 && width <= 768 ? 'rgba(0, 0, 0, 0)' : 'rgb(255, 255, 255)', 'Фон вопроса соответствует адаптиву Figma');
     assert.equal(metric.contacts.paddingTop, width <= 576 ? 20 : width <= 768 ? 24 : 40);
     assert.equal(metric.contacts.paddingBottom, width <= 576 ? 20 : width <= 768 ? 24 : 40);
     const contactsReference = {
@@ -125,7 +129,8 @@ try {
     const answersReference = {
       1920: { width: 680, height: 617, titleSize: 20, textWidth: 544, textHeight: 26, truncated: true },
       1440: { width: 640, height: 545, titleSize: 24, textWidth: 568, textHeight: 52, truncated: false },
-      1200: { width: 536, height: 409, titleSize: 18, textWidth: 452, textHeight: 24, truncated: true },
+      // Figma 4193:7360 / I4224:36700;82:3105: two lines at 18/26, no truncation.
+      1200: { width: 536, height: 441, titleSize: 18, textWidth: 480, textHeight: 52, truncated: false },
     }[width];
     if (answersReference) assert.deepEqual(metric.answersCard, answersReference, 'Карточка ответов соответствует макету ' + width);
     if (metric.scrollWidth > width + 1) {

@@ -6,10 +6,7 @@
       "page": "abiturient",
       "block": "Вопросы и ответы",
       "selector": ".accordion__trigger",
-      "states": [
-        ":active",
-        ":disabled"
-      ],
+      "states": [":active", ":disabled"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/accordion.scss"
     },
@@ -18,9 +15,7 @@
       "page": "abiturient",
       "block": "Всё для поступления",
       "selector": ".study-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/admission.scss"
     },
@@ -29,9 +24,7 @@
       "page": "abiturient",
       "block": "Уровни образования",
       "selector": ".education-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/education-card.scss"
     },
@@ -40,9 +33,7 @@
       "page": "abiturient",
       "block": "Больше возможностей",
       "selector": ".feature-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/feature-card.scss"
     },
@@ -51,10 +42,7 @@
       "page": "abiturient",
       "block": "Задать вопрос",
       "selector": ".form-field__input",
-      "states": [
-        ":disabled",
-        ":read-only"
-      ],
+      "states": [":disabled", ":read-only"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/form-field.scss"
     },
@@ -63,10 +51,7 @@
       "page": "abiturient",
       "block": "Вкладки",
       "selector": ".tabs__tab",
-      "states": [
-        ":disabled",
-        ":active"
-      ],
+      "states": [":disabled", ":active"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/tabs.scss"
     },
@@ -75,10 +60,7 @@
       "page": "abiturient",
       "block": "Выбор темы",
       "selector": ".topic-select__trigger",
-      "states": [
-        ":disabled",
-        ":active"
-      ],
+      "states": [":disabled", ":active"],
       "fallback": "сохранено базовое оформление",
       "file": "src/scss/abiturient/blocks/topic-select.scss"
     },
@@ -98,7 +80,7 @@
       "block": "Контакты приёмной комиссии — карта на 1440",
       "selector": ".contact-map",
       "states": [],
-      "description": "Figma 4193:5045: карта 420×422px. Сохранённые групповые экспорты квадратные 560×560px; нужен отдельный чистый экспорт для 1440. Текущий MCP use_figma отклонён сервером с требованием Full seat.",
+      "description": "Figma 4193:5045: карта 420×422px; имеющиеся групповые экспорты квадратные 560×560px. Сохранено пропорциональное масштабирование до 420×420px; отличие 2px не скрывается растяжением. Контекст повторно прочитан 2026-10-25.",
       "fallback": "Карта масштабируется до 420×420px без растяжения; тень 4px задаётся отдельно в CSS.",
       "file": "src/scss/abiturient/blocks/contacts.scss"
     },
@@ -115,12 +97,22 @@
     {
       "id": "abiturient-mobile-review-copy",
       "page": "abiturient",
-      "block": "Отзывы, 576 и 390 px",
+      "block": "Отзывы, семь адаптивов",
       "selector": ".review-card__text",
       "states": [],
-      "description": "В Figma 4272:6328 / 4282:18441 демонстрационный текст отличается от существующего полного текста отзыва, включая тире после «Арктике». Последние слова при обрезке различаются; геометрия области 66px и типографика соответствуют макету.",
-      "fallback": "Сохранён существующий полный текст отзыва; различия содержимого не распространяются на другие ширины.",
+      "description": "С согласия пользователя сохранён содержательный полный текст отзыва вместо повторяющегося демонстрационного текста Figma. Удалены препятствовавшие переносу связка «Арктике —» и неразрывный дефис; последние слова при обрезке могут отличаться.",
+      "fallback": "Единый осмысленный текст на всех ширинах; геометрия и типографика проверяются отдельно.",
       "file": "src/scss/abiturient/blocks/reviews-page.scss"
+    },
+    {
+      "id": "abiturient-adaptive-education-copy",
+      "page": "abiturient",
+      "block": "Уровни образования, различия содержимого адаптивов",
+      "selector": ".education-card__count",
+      "states": [],
+      "description": "По решению пользователя сохранены единые числа: бакалавриат 24 программы (Figma 1440: 12), магистратура 16 (Figma 390: 12), иностранные граждане 16 (Figma 1200: 12). Источники: 4193:4871, 4209:32116, 4193:7003. Это согласованное отличие содержимого, не ошибка адаптивности.",
+      "fallback": "Данные не меняются в зависимости от ширины экрана.",
+      "file": "src/scss/abiturient/blocks/education-card.scss"
     }
   ]
 }

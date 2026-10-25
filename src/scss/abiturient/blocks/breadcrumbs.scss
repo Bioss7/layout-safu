@@ -68,6 +68,12 @@
   }
 }
 
+@include breakpoint($bp-992) {
+  .breadcrumbs {
+    padding-top: 56px;
+  }
+}
+
 @include breakpoint($bp-768) {
   .breadcrumbs {
     padding-top: 32px;

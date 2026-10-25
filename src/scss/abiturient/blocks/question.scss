@@ -40,6 +40,10 @@
   margin-bottom: 32px;
 }
 
+.question-form .form-field {
+  padding-bottom: 23px;
+}
+
 .question-form__bottom {
   display: flex;
   align-items: center;
@@ -81,7 +85,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 56px;
+  padding: 54px;
   border: 2px solid var(--main-white-white-100);
   background-color: var(--main-panel);
   box-shadow: 2px 2px var(--main-black);
@@ -237,11 +241,11 @@
   }
 
   .question-form .form-field {
-    padding-bottom: 24px;
+    padding-bottom: 23px;
   }
 
   .question-form .topic-select {
-    padding: 20px;
+    padding: 20px 20px 19px;
   }
 
   .question-form .topic-select__trigger {
@@ -345,7 +349,7 @@
 
   .answers-card {
     flex-basis: calc((100% - 32px) / 2);
-    padding: 16px;
+    padding: 14px;
     gap: 16px;
   }
 
@@ -367,19 +371,19 @@
   }
 
   .answers-card__link {
-    gap: 28px;
-    font-size: 16px;
-    line-height: 24px;
+    gap: 0;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .answers-card__link span:first-child {
-    white-space: nowrap;
+    white-space: normal;
   }
 }
 
 @include breakpoint($bp-992) {
   .question-form__submit {
-    padding: 18px 24px;
+    padding: 16px 24px;
   }
 
   .question__surface > .container {
@@ -396,7 +400,7 @@
     width: 100%;
     gap: 20px;
     border-width: 2px;
-    padding: 20px;
+    padding: 18px;
   }
 
   .question-form {
@@ -454,6 +458,7 @@
   .question__surface {
     padding-top: 24px;
     padding-bottom: 24px;
+    background-color: transparent;
   }
 
   .question-form__description {
@@ -562,6 +567,7 @@
   .question__surface {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color: var(--main-white-white-100);
   }
 
   .question__surface > .container {

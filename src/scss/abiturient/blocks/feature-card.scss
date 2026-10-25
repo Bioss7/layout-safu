@@ -8,12 +8,13 @@
 }
 
 .feature-card {
+  --feature-shade: 0.1;
   position: relative;
   display: flex;
   align-items: flex-end;
   min-width: 0;
   min-height: 450px;
-  padding: 37px;
+  padding: 40px;
   overflow: hidden;
   border: 3px solid var(--main-white-white-100);
   box-shadow: 4px 4px var(--main-black);
@@ -25,13 +26,15 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(
-      180deg,
-      var(--main-blue-blue-500-opacity),
-      transparent 33%,
-      var(--main-black)
-    );
-    opacity: 0.8;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, var(--feature-shade)),
+        rgba(0, 0, 0, var(--feature-shade))
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 32.82%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 99.75%);
+    opacity: 1;
     transition: opacity 200ms;
   }
   &:hover::after {
@@ -120,9 +123,12 @@
   max-width: 752px;
 }
 @include breakpoint($bp-1440) {
+  .feature-card--3 {
+    --feature-shade: 0.2;
+  }
   .feature-card {
     min-height: 342px;
-    padding: 21px;
+    padding: 24px;
   }
 
   .feature-card__title {
@@ -149,7 +155,7 @@
 
   .feature-card {
     min-height: 287px;
-    padding: 17px;
+    padding: 20px;
   }
 
   .feature-card--1,
@@ -174,12 +180,25 @@
   }
   .feature-card--1 .feature-card__body,
   .feature-card--4 .feature-card__body {
-    max-width: 476px;
+    max-width: none;
   }
 
   .feature-card--2 .feature-card__body,
   .feature-card--3 .feature-card__body {
+    max-width: none;
+  }
+
+  .feature-card--1 .feature-card__title,
+  .feature-card--4 .feature-card__title {
+    max-width: 476px;
+  }
+
+  .feature-card--2 .feature-card__title {
     max-width: 323px;
+  }
+
+  .feature-card--3 .feature-card__title {
+    max-width: 353px;
   }
 
   .container--opportunities {
@@ -187,6 +206,10 @@
   }
   .feature-card__news-phrase {
     white-space: normal;
+  }
+
+  .feature-card__description .br-1200-above-768 {
+    display: none;
   }
 }
 @include breakpoint($bp-992) {

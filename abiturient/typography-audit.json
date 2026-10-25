@@ -1566,7 +1566,19 @@
       },
       "sourceStyles": {
         "1920": 18
-      }
+      },
+      "overrides": [
+        {
+          "selector": ".study-card--lists .study-card__description",
+          "source": "Figma 4209:33074; confirmed 2026-10-25",
+          "expected": {
+            "768": {
+              "font-size": "14px",
+              "line-height": "20px"
+            }
+          }
+        }
+      ]
     },
     {
       "file": "src/scss/abiturient/blocks/admission.scss",
@@ -3144,8 +3156,8 @@
           "text-shadow": "none",
           "font-family": "Montserrat, sans-serif",
           "font-weight": "500",
-          "font-size": "16px",
-          "line-height": "24px"
+          "font-size": "18px",
+          "line-height": "26px"
         },
         "1440": {
           "font-style": "normal",
@@ -3198,6 +3210,9 @@
       },
       "sourceStyles": {
         "1920": 18
+      },
+      "sourceProperties": {
+        "1200": "Figma I4224:36698;82:3105, I4224:36700;82:3105; 2026-10-25"
       }
     },
     {
@@ -4093,14 +4108,6 @@
       }
     }
   ],
-  "widths": [
-    1920,
-    1440,
-    1200,
-    992,
-    768,
-    576,
-    390
-  ],
+  "widths": [1920, 1440, 1200, 992, 768, 576, 390],
   "sourceNote": "Ожидания 390–1440 извлечены из сохранённых точных контекстов Figma (узлы указаны у каждой записи); 1920 — из typography-current.json/sourceStyles и ранее подтверждённого education-current.json. Значения не получены из CSS реализации. Цветовые варианты и hover проверяются отдельно."
 }

@@ -1,6 +1,10 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.section--faq {
+  background-color: var(--main-white-white-100);
+}
+
 .faq__panel {
   margin-top: 40px;
 }
@@ -34,7 +38,7 @@
   gap: 16px;
   width: 100%;
   min-height: 100px;
-  padding: 37px 24px;
+  padding: 24px;
   border: 0;
   background-color: transparent;
   color: var(--main-blue-blue-100);
@@ -77,6 +81,11 @@
   font-family: var(--font-family);
 }
 
+.accordion--open .accordion__trigger {
+  min-height: 0;
+  padding-bottom: 16px;
+}
+
 .accordion--open .accordion__icon {
   transform: rotate(180deg);
 }
@@ -107,7 +116,7 @@
 
 @include breakpoint($bp-1440) {
   .section--faq {
-    background-color: var(--main-white-white-100);
+    background-color: transparent;
   }
 
   .faq__content {

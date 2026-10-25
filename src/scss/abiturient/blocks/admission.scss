@@ -5,6 +5,10 @@
   display: none;
 }
 
+.study-card__line-break {
+  display: inline;
+}
+
 .section--admission {
   position: relative;
   padding-top: 120px;
@@ -332,12 +336,13 @@
 
     &::before {
       display: block;
-      height: 39px;
+      height: 73px;
+      transform: scaleY(-1);
       background-image: url("/abiturient/assets/img/admission/admission-transition-top-992.svg");
     }
 
     &::after {
-      height: 39px;
+      height: 73px;
       background-image: url("/abiturient/assets/img/admission/admission-transition-bottom-992.svg");
     }
   }
@@ -433,6 +438,9 @@
 }
 
 @include breakpoint($bp-768) {
+  .study-card__line-break {
+    display: none;
+  }
   .br-admission-768 {
     display: inline;
   }
