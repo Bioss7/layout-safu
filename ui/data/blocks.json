@@ -360,7 +360,7 @@
         "src/scss/abiturient/blocks/apply-banner.scss",
         "src/scss/abiturient/blocks/button.scss",
         "src/scss/abiturient/blocks/question.scss",
-        "src/scss/abiturient/blocks/reviews-page.scss"
+        "src/scss/abiturient/blocks/reviews.scss"
       ]
     },
     {
@@ -395,7 +395,7 @@
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/review.scss",
-        "src/scss/abiturient/blocks/reviews-page.scss",
+        "src/scss/abiturient/blocks/reviews.scss",
         "src/js/abiturient/reviews.js"
       ],
       "reuseSource": {
@@ -487,7 +487,7 @@
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/reviews-page.scss"
+        "src/scss/abiturient/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
@@ -504,7 +504,7 @@
         "src/scss/abiturient/blocks/apply-banner.scss",
         "src/scss/abiturient/blocks/button.scss",
         "src/scss/abiturient/blocks/question.scss",
-        "src/scss/abiturient/blocks/reviews-page.scss"
+        "src/scss/abiturient/blocks/reviews.scss"
       ]
     },
     {
@@ -514,7 +514,7 @@
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/review.scss",
-        "src/scss/abiturient/blocks/reviews-page.scss",
+        "src/scss/abiturient/blocks/reviews.scss",
         "src/js/abiturient/reviews.js"
       ],
       "reuseSource": {

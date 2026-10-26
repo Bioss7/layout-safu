@@ -7,7 +7,7 @@
   padding-top: 32px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-stretch: normal;
   font-size: 16px;
   line-height: 24px;
@@ -65,13 +65,11 @@
 @include breakpoint($bp-1440) {
   .breadcrumbs {
     padding-top: 28px;
+    font-weight: 400;
   }
 }
 
 @include breakpoint($bp-992) {
-  .breadcrumbs {
-    padding-top: 56px;
-  }
 }
 
 @include breakpoint($bp-768) {

@@ -47,7 +47,7 @@ CSS Reset Эрика Мейера: http://meyerweb.com/eric/tools/css/reset/,
   Примеры: src/scss/programs/blocks/program-card.scss:53,
   src/scss/programs/blocks/program-detail.scss:3,
   src/scss/main/blocks/stats.scss:385.
-- В abiturient review.scss и reviews-page.scss остаются двумя историческими
+- В abiturient review.scss и reviews.scss остаются двумя историческими
   слоями оформления отзывов. Избыточные родительские селекторы сокращены;
   полное объединение слоёв не выполнялось, чтобы не менять каскад попутно.
 - Для about и programs отсутствует локальный подробный кэш Figma. Проверка

@@ -8,7 +8,6 @@
 @use "blocks/header-panels";
 @use "blocks/search-input";
 @use "blocks/footer";
-@use "blocks/review";
 @use "blocks/section";
 @use "blocks/typography";
 @use "blocks/button";
@@ -21,7 +20,7 @@
 @use "blocks/feature-card";
 @use "blocks/tabs";
 @use "blocks/contacts";
-@use "blocks/reviews-page";
+@use "blocks/reviews";
 @use "blocks/accordion";
 @use "blocks/form-field";
 @use "blocks/topic-select";

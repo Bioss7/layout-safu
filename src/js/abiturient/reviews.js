@@ -78,7 +78,7 @@
       }
       swiper = new Swiper(root, {
         slidesPerView: queries[2].matches ? "auto" : 1,
-        // Зазор совпадает с местом под тень в reviews-page.scss: соседний слайд её не перекрывает.
+        // Зазор совпадает с местом под тень в reviews.scss: соседний слайд её не перекрывает.
         spaceBetween: queries[2].matches ? 16 : 4,
         speed: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 600,
         initialSlide: Math.min(Math.floor(firstCard / groupSize), slideCount - 1),

@@ -40,10 +40,6 @@
   margin-bottom: 32px;
 }
 
-.question-form .form-field {
-  padding-bottom: 23px;
-}
-
 .question-form__bottom {
   display: flex;
   align-items: center;
@@ -52,6 +48,7 @@
 
 .question-form__submit {
   flex: 1 1 auto;
+  padding: 18px 24px;
   min-height: 64px;
   font-family: var(--main-font-display);
   font-style: normal;
@@ -85,7 +82,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 54px;
+  padding: 56px;
   border: 2px solid var(--main-white-white-100);
   background-color: var(--main-panel);
   box-shadow: 2px 2px var(--main-black);
@@ -240,12 +237,8 @@
     line-height: 26px;
   }
 
-  .question-form .form-field {
-    padding-bottom: 23px;
-  }
-
-  .question-form .topic-select {
-    padding: 20px 20px 19px;
+  .form-field {
+    padding: 20px;
   }
 
   .question-form .topic-select__trigger {
@@ -261,7 +254,7 @@
 
   .answers-card {
     flex-basis: 640px;
-    padding: 22px;
+    padding: 24px;
   }
 
   .answers-card__label {
@@ -309,15 +302,11 @@
   }
 
   .question-form .form-field {
-    padding-right: 24px;
-    padding-left: 24px;
+    padding: 24px;
   }
 
   .question-form .topic-select {
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-bottom: 23px;
-    padding-left: 24px;
+    padding: 24px;
   }
 
   .question-form .topic-select__trigger {
@@ -337,7 +326,7 @@
   .question-form__submit {
     font-size: 20px;
     line-height: 28px;
-    padding: 16px 24px;
+    padding: 18px 24px;
   }
 
   .question-form__consent {
@@ -349,7 +338,7 @@
 
   .answers-card {
     flex-basis: calc((100% - 32px) / 2);
-    padding: 14px;
+    padding: 16px;
     gap: 16px;
   }
 
@@ -383,7 +372,7 @@
 
 @include breakpoint($bp-992) {
   .question-form__submit {
-    padding: 16px 24px;
+    padding: 18px 24px;
   }
 
   .question__surface > .container {
@@ -400,7 +389,7 @@
     width: 100%;
     gap: 20px;
     border-width: 2px;
-    padding: 18px;
+    padding: 20px;
   }
 
   .question-form {
@@ -412,9 +401,7 @@
   }
 
   .question-form .form-field {
-    padding-right: 28px;
-    padding-left: 28px;
-    padding-bottom: 23px;
+    padding: 24px 28px;
   }
 
   .question-form textarea.form-field__input {
@@ -469,15 +456,11 @@
 
   .question-form .form-field {
     padding: 16px;
-    padding-bottom: 15px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
-  .question-form .topic-select {
-    padding: 16px;
-    padding-bottom: 15px;
-  }
+  // .question-form .topic-select {
+  //   padding: 16px;
+  // }
 
   .question-form textarea.form-field__input {
     min-height: 56px;
@@ -495,8 +478,6 @@
     font-weight: 800;
     letter-spacing: 0.04em;
     min-height: 64px;
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 
   .question-form__consent {
@@ -508,7 +489,7 @@
   .answers-card {
     border-width: 2px;
     gap: 20px;
-    padding: 18px;
+    padding: 20px;
   }
 
   .answers-card__label {
@@ -586,8 +567,7 @@
 
   .question-form__submit {
     min-height: 52px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 14px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -628,10 +608,6 @@
     width: 100%;
   }
 
-  .question-form .form-field {
-    padding-bottom: 15px;
-  }
-
   .question-form .topic-select__trigger,
   .question-form .form-field__input {
     font-size: 18px;
@@ -654,9 +630,6 @@
     line-height: 24px;
     font-weight: 800;
     letter-spacing: 0.04em;
-    padding: 9px 12px;
-    padding-top: 12px;
-    padding-bottom: 12px;
   }
 
   .question-form__consent {
@@ -696,19 +669,11 @@
     letter-spacing: 0.04em;
   }
 
-  .question-form__bottom {
-    gap: 16px;
-  }
-
   .answers-card {
-    padding: 14px;
+    padding: 16px;
   }
 
   .question__surface > .container {
     width: calc(100% - 32px);
-  }
-
-  .question-form .topic-select {
-    padding-bottom: 15px;
   }
 }

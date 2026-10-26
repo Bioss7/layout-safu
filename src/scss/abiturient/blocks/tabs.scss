@@ -51,7 +51,7 @@
 }
 
 .tabs__tab--contacts {
-  padding: 10px 18px;
+  padding: 12px 20px;
 }
 
 .tabs--line {
@@ -60,7 +60,7 @@
 }
 
 .tabs__tab--faq {
-  padding: 12px 16px 14px;
+  padding: 12px 16px 16px;
   border: 0;
   border-bottom: 2px solid var(--main-panel);
   background-color: transparent;
@@ -97,8 +97,6 @@
 
 @include breakpoint($bp-1440) {
   .tabs__tab--faq {
-    padding-bottom: 14px;
-
     &:nth-child(1) {
       width: 354px;
     }
@@ -137,16 +135,9 @@
   }
 }
 
-@include breakpoint($bp-1200) {
-  .tabs__tab--faq {
-    padding-bottom: 14px;
-  }
-}
-
 @include breakpoint($bp-992) {
   .tabs__tab--contacts {
     height: 44px;
-    padding: 10px 18px;
     font-size: 14px;
     line-height: 20px;
   }
@@ -169,7 +160,6 @@
   }
 
   .tabs__tab--faq {
-    padding-bottom: 14px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
@@ -192,7 +182,6 @@
   .tabs__tab--contacts {
     width: 100%;
     min-height: 44px;
-    padding: 10px 12px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 800;
@@ -219,7 +208,7 @@
     width: auto;
     flex: 0 0 auto;
     min-height: 44px;
-    padding: 10px;
+    padding: 12px;
     white-space: nowrap;
   }
 }
@@ -245,7 +234,6 @@
   .tabs__tab--contacts {
     width: 100%;
     min-height: 48px;
-    padding: 10px 18px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;

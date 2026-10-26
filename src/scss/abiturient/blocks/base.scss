@@ -155,9 +155,6 @@ img {
   :where(main > section) > .container {
     width: calc(100% - 48px);
   }
-  main {
-    background-image: none;
-  }
   :where(main > section) > .container.applicant-hero__inner {
     width: calc(100% - 48px);
   }

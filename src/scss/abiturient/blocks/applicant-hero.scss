@@ -340,10 +340,6 @@
     width: 555px;
     top: 146px;
   }
-
-  .hero-link {
-    padding: 18px 16px 20px 0;
-  }
 }
 
 @include breakpoint($bp-992) {
@@ -370,7 +366,7 @@
   }
 
   .applicant-hero__year {
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .applicant-hero__badge {

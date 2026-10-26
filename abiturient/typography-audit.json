@@ -2091,7 +2091,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "file": "src/scss/abiturient/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__title",
       "expected": {
         "390": {
@@ -2193,7 +2193,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "file": "src/scss/abiturient/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__meta-item",
       "expected": {
         "390": {
@@ -2295,7 +2295,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "file": "src/scss/abiturient/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__text",
       "expected": {
         "390": {
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "file": "src/scss/abiturient/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__link",
       "expected": {
         "390": {
@@ -2499,7 +2499,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews-page.scss",
+      "file": "src/scss/abiturient/blocks/reviews.scss",
       "selector": ".section--reviews .link-arrow--stories",
       "expected": {
         "390": {
