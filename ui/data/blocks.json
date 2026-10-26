@@ -374,7 +374,7 @@
       "purpose": "Слайдер отзывов",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/review.scss",
+        "src/scss/abiturient/blocks/reviews.scss",
         "src/js/abiturient/reviews.js"
       ],
       "reuseSource": {
@@ -394,7 +394,6 @@
       "purpose": "Карточка отзыва",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/review.scss",
         "src/scss/abiturient/blocks/reviews.scss",
         "src/js/abiturient/reviews.js"
       ],
@@ -416,7 +415,7 @@
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/review.scss"
+        "src/scss/abiturient/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
@@ -440,7 +439,7 @@
       "files": [
         "abiturient/index.html",
         "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/review.scss"
+        "src/scss/abiturient/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
@@ -513,7 +512,6 @@
       "purpose": "Карточка отзыва",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/review.scss",
         "src/scss/abiturient/blocks/reviews.scss",
         "src/js/abiturient/reviews.js"
       ],
