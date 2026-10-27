@@ -257,15 +257,28 @@
   &:hover {
     color: var(--main-white-white-100);
     background-color: var(--main-blue-blue-90);
-    svg path {
-      fill: var(--main-white-white-100);
-    }
   }
   &:active {
     background-color: var(--main-blue-blue-30);
     opacity: 0.8;
   }
   width: 100%;
+}
+
+.footer__btn-icon {
+  display: block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/students/assets/img/footer/feedback-arrow.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/students/assets/img/footer/feedback-arrow.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .footer__socials {

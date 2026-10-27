@@ -22,3 +22,19 @@
 @media(max-width:1550px) { .site-footer__top { grid-template-columns:1fr 1.4fr 1fr; gap:32px; } .site-footer__top > :last-child { grid-column:3; } }
 @include breakpoint($bp-992) { .site-footer__top { grid-template-columns:1fr 1fr; } .site-footer__top > :last-child { grid-column:auto; } }
 @media(max-width:600px) { .site-footer__content { padding-block:24px; } .site-footer__top { display:flex; flex-direction:column; gap:40px; } .site-footer__bottom { align-items:flex-start; flex-direction:column; gap:24px; } .site-footer__information summary { font-size:14px; padding-block:10px; } .site-footer .button { align-self:flex-start; padding:10px 14px; min-height:40px; } }
+
+.site-footer__feedback-icon {
+  display: block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/programs/assets/img/footer/feedback-arrow.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/programs/assets/img/footer/feedback-arrow.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}

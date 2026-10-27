@@ -164,12 +164,11 @@
   }
 
   .student-cards__list {
-    flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 
   .student-cards__item {
-    flex-basis: auto;
+    flex-basis: calc((100% - 16px) / 2);
   }
 
   .student-card__body {
@@ -197,6 +196,10 @@
 
   .student-cards__list {
     gap: 20px;
+  }
+
+  .student-cards__item {
+    flex-basis: 100%;
   }
 
   .student-card__body {

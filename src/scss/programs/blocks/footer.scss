@@ -292,15 +292,28 @@
     color: var(--main-white-white-100);
     background: var(--main-blue-blue-90);
 
-    svg path {
-      fill: var(--main-white-white-100);
-    }
   }
 
   &:active {
     background: var(--main-blue-blue-30);
     opacity: 0.8;
   }
+}
+
+.footer__btn-icon {
+  display: block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/programs/assets/img/footer/feedback-arrow.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/programs/assets/img/footer/feedback-arrow.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .footer__socials {

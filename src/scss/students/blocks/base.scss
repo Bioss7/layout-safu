@@ -76,8 +76,7 @@ img {
   max-width: 100%;
 }
 
-.container,
-.student-container {
+.container {
   width: calc(100% - 200px);
   max-width: 1720px;
   margin-inline: auto;
@@ -102,7 +101,7 @@ img {
   .container {
     width: calc(100% - 160px);
   }
-  .student-container {
+  .container--student {
     width: calc(100% - 128px);
   }
   .student-title {
@@ -115,7 +114,7 @@ img {
   .container {
     width: calc(100% - 64px);
   }
-  .student-container {
+  .container--student {
     width: calc(100% - 96px);
   }
   .student-title {
@@ -137,7 +136,7 @@ img {
   .container {
     width: calc(100% - 48px);
   }
-  .student-container {
+  .container--student {
     width: calc(100% - 64px);
   }
   .student-title {
@@ -153,7 +152,7 @@ img {
   .container {
     width: calc(100% - 32px);
   }
-  .student-container {
+  .container--student {
     width: calc(100% - 48px);
   }
   .student-title {
@@ -166,7 +165,7 @@ img {
   :root {
     --applicant-header-height: 102px;
   }
-  .student-container {
+  .container--student {
     width: calc(100% - 40px);
   }
   .student-title {
@@ -176,7 +175,7 @@ img {
 }
 
 @include breakpoint($bp-390) {
-  .student-container {
+  .container--student {
     width: calc(100% - 32px);
   }
   .student-title {
