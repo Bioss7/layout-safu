@@ -20,7 +20,8 @@
         // Один ключ переключает панель и экспортированное целиком состояние карты.
         const map = root.querySelector(".js-contact-map-image");
         if (map) {
-          map.src = `/abiturient/assets/img/contacts/map-${selectedKey}.png`;
+          // Сохраняем каталог из разметки: он различается в вёрстке и шаблоне Битрикс.
+          map.src = new URL(`map-${selectedKey}.png`, map.src).href;
           map.alt = `Карта: ${tab.textContent.trim()}`;
         }
         root.dispatchEvent(new CustomEvent("tabchange", { detail: { key: selectedKey } }));
