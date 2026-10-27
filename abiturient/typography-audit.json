@@ -12,7 +12,7 @@
   },
   "entries": [
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": "#education-title",
       "expected": {
         "390": {
@@ -114,7 +114,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": "#faq .title-2",
       "expected": {
         "390": {
@@ -216,7 +216,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": ".contacts .title-2",
       "expected": {
         "390": {
@@ -318,7 +318,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": ".section--reviews .title-2",
       "expected": {
         "390": {
@@ -420,7 +420,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "file": "abiturient/assets/scss/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__title",
       "expected": {
         "390": {
@@ -531,7 +531,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "file": "abiturient/assets/scss/blocks/applicant-hero.scss",
       "selector": ".hero-link",
       "expected": {
         "390": {
@@ -642,7 +642,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "file": "abiturient/assets/scss/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__status",
       "expected": {
         "390": {
@@ -744,7 +744,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/applicant-hero.scss",
+      "file": "abiturient/assets/scss/blocks/applicant-hero.scss",
       "selector": ".applicant-hero__description",
       "expected": {
         "390": {
@@ -846,7 +846,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/apply-banner.scss",
+      "file": "abiturient/assets/scss/blocks/apply-banner.scss",
       "selector": ".apply-banner__title",
       "expected": {
         "390": {
@@ -957,7 +957,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/apply-banner.scss",
+      "file": "abiturient/assets/scss/blocks/apply-banner.scss",
       "selector": ".apply-banner__text",
       "expected": {
         "390": {
@@ -1059,7 +1059,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/button.scss",
+      "file": "abiturient/assets/scss/blocks/button.scss",
       "selector": ".apply-banner .button",
       "expected": {
         "390": {
@@ -1161,7 +1161,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "file": "abiturient/assets/scss/blocks/education-card.scss",
       "selector": ".education-card__title",
       "expected": {
         "390": {
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "file": "abiturient/assets/scss/blocks/education-card.scss",
       "selector": ".education-card__description",
       "expected": {
         "390": {
@@ -1365,7 +1365,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/admission.scss",
+      "file": "abiturient/assets/scss/blocks/admission.scss",
       "selector": ".study-card__title",
       "expected": {
         "390": {
@@ -1467,7 +1467,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/admission.scss",
+      "file": "abiturient/assets/scss/blocks/admission.scss",
       "selector": ".study-card__description",
       "expected": {
         "390": {
@@ -1581,7 +1581,7 @@
       ]
     },
     {
-      "file": "src/scss/abiturient/blocks/admission.scss",
+      "file": "abiturient/assets/scss/blocks/admission.scss",
       "selector": ".admission-note h3",
       "expected": {
         "390": {
@@ -1683,7 +1683,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/admission.scss",
+      "file": "abiturient/assets/scss/blocks/admission.scss",
       "selector": ".admission-note p",
       "expected": {
         "390": {
@@ -1785,7 +1785,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/feature-card.scss",
+      "file": "abiturient/assets/scss/blocks/feature-card.scss",
       "selector": ".feature-card__title",
       "expected": {
         "390": {
@@ -1887,7 +1887,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/feature-card.scss",
+      "file": "abiturient/assets/scss/blocks/feature-card.scss",
       "selector": ".feature-card__description",
       "expected": {
         "390": {
@@ -1989,7 +1989,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/tabs.scss",
+      "file": "abiturient/assets/scss/blocks/tabs.scss",
       "selector": ".contacts .tabs__tab",
       "expected": {
         "390": {
@@ -2091,7 +2091,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews.scss",
+      "file": "abiturient/assets/scss/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__title",
       "expected": {
         "390": {
@@ -2193,7 +2193,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews.scss",
+      "file": "abiturient/assets/scss/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__meta-item",
       "expected": {
         "390": {
@@ -2295,7 +2295,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews.scss",
+      "file": "abiturient/assets/scss/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__text",
       "expected": {
         "390": {
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews.scss",
+      "file": "abiturient/assets/scss/blocks/reviews.scss",
       "selector": ".section--reviews .review-card__link",
       "expected": {
         "390": {
@@ -2499,7 +2499,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/reviews.scss",
+      "file": "abiturient/assets/scss/blocks/reviews.scss",
       "selector": ".section--reviews .link-arrow--stories",
       "expected": {
         "390": {
@@ -2601,7 +2601,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".question-form__description",
       "expected": {
         "390": {
@@ -2703,7 +2703,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".question-form__submit",
       "expected": {
         "390": {
@@ -2805,7 +2805,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".answers-card__label",
       "expected": {
         "390": {
@@ -2907,7 +2907,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".answers-card__count",
       "expected": {
         "390": {
@@ -3009,7 +3009,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".answers-card__title",
       "expected": {
         "390": {
@@ -3111,7 +3111,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".answers-card__link",
       "expected": {
         "390": {
@@ -3216,7 +3216,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/question.scss",
+      "file": "abiturient/assets/scss/blocks/question.scss",
       "selector": ".answers-card .button--text",
       "expected": {
         "390": {
@@ -3318,7 +3318,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/form-field.scss",
+      "file": "abiturient/assets/scss/blocks/form-field.scss",
       "selector": ".form-field__label",
       "expected": {
         "390": {
@@ -3484,7 +3484,7 @@
       ]
     },
     {
-      "file": "src/scss/abiturient/blocks/form-field.scss",
+      "file": "abiturient/assets/scss/blocks/form-field.scss",
       "selector": ".form-field__input",
       "expected": {
         "390": {
@@ -3587,7 +3587,7 @@
       "sourceNote": "Figma placeholder text; проверяется типографика input, цвет placeholder не сравнивается с цветом введённого текста."
     },
     {
-      "file": "src/scss/abiturient/blocks/education-card.scss",
+      "file": "abiturient/assets/scss/blocks/education-card.scss",
       "selector": ".education-card__count",
       "expected": {
         "390": {
@@ -3691,7 +3691,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": "#admission-title",
       "expected": {
         "390": {
@@ -3802,7 +3802,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": "#opportunities-title",
       "expected": {
         "390": {
@@ -3904,7 +3904,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/typography.scss",
+      "file": "abiturient/assets/scss/blocks/typography.scss",
       "selector": "#question-title",
       "expected": {
         "390": {
@@ -4006,7 +4006,7 @@
       }
     },
     {
-      "file": "src/scss/abiturient/blocks/tabs.scss",
+      "file": "abiturient/assets/scss/blocks/tabs.scss",
       "selector": "#faq .tabs__tab",
       "expected": {
         "390": {

@@ -7,7 +7,7 @@ if (!["before", "after"].includes(phase)) throw new Error("Use before or after")
 const output = `screenshots/abiturient/full-audit/${phase}`;
 await mkdir(output, { recursive: true });
 const frames = [1920, 1440, 1200, 992, 768, 576, 390];
-const vars = await readFile("src/scss/abiturient/_vars.scss", "utf8");
+const vars = await readFile("abiturient/assets/scss/_vars.scss", "utf8");
 const points = [...vars.matchAll(/\$bp-\d+:\s*(\d+)px;/g)].map((m) => +m[1]);
 const boundaries = points.flatMap((w) => [w - 1, w, w + 1]);
 const mids = [425, 500, 558, 628, 724, 880, 1071, 1175, 1320, 1680];

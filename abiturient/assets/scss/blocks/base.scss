@@ -1,0 +1,194 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+:root {
+  --applicant-header-height: 168px;
+  --applicant-marquee-height: 52px;
+  --main-font-display: "Unbounded", sans-serif;
+  --main-panel: #e8eef6;
+  --main-black: #000;
+  --main-banner-start: #003366;
+  --main-banner-end: #0066cc;
+  --main-error: #7e0909;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  position: relative;
+  max-width: 1920px;
+  margin-inline: auto;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-100);
+}
+body.no-scroll {
+  overflow: hidden;
+}
+main {
+  position: relative;
+  background-image: url("../../img/page/page-bg-grid.svg");
+  background-position: -40px 0;
+  background-size: 400px 400px;
+  background-repeat: repeat;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+button,
+input,
+textarea {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:is(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--main-accent-accent-100);
+  outline-offset: 4px;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@include breakpoint($bp-1440) {
+  main {
+    background-position: -32px 0;
+  }
+
+  .container {
+    width: calc(100% - 160px);
+  }
+  :where(main > section) > .container {
+    width: calc(100% - 128px);
+  }
+}
+
+@include breakpoint($bp-1200) {
+  main {
+    background-position: 0 0;
+  }
+
+  .container {
+    width: calc(100% - 64px);
+  }
+  :where(main > section) > .container {
+    width: calc(100% - 96px);
+  }
+}
+
+@include breakpoint($bp-1150) {
+  :root {
+    --applicant-header-height: 142px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  main {
+    background-position: -32px 0;
+  }
+
+  .container {
+    width: calc(100% - 48px);
+  }
+  :where(main > section) > .container {
+    width: calc(100% - 64px);
+    &.applicant-hero__inner {
+      width: calc(100% - 48px);
+    }
+  }
+  :root {
+    --applicant-header-height: 114px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  :root {
+    --applicant-header-height: 112px;
+  }
+  .container {
+    width: calc(100% - 32px);
+  }
+  :where(main > section) > .container {
+    width: calc(100% - 48px);
+  }
+  :where(main > section) > .container.applicant-hero__inner {
+    width: calc(100% - 48px);
+  }
+}
+
+@include breakpoint($bp-576) {
+  :root {
+    --applicant-header-height: 102px;
+  }
+  main {
+    background-image: url("../../img/page/page-bg-grid.svg");
+    background-position: center top;
+  }
+
+  :where(main > section) > .container {
+    width: calc(100% - 40px);
+  }
+  :where(main > section) > .container.applicant-hero__inner {
+    width: calc(100% - 40px);
+  }
+}
+
+@include breakpoint($bp-390) {
+  :root {
+    --applicant-header-height: 102px;
+    --applicant-marquee-height: 40px;
+  }
+  main {
+    background-position: center top;
+  }
+  :where(main > section) > .container {
+    width: calc(100% - 32px);
+  }
+  :where(main > section) > .container.applicant-hero__inner {
+    width: calc(100% - 32px);
+  }
+}

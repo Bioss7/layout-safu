@@ -1,0 +1,832 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.br-admission-768 {
+  display: none;
+}
+
+.study-card__line-break {
+  display: inline;
+}
+
+.section--admission {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 152px;
+  isolation: isolate;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    background-image: url("../../img/admission/admission-transition-top.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -1px;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    bottom: -1px;
+    background-image: url("../../img/admission/admission-transition-bottom.svg");
+  }
+}
+
+.admission-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../../img/admission/admission-bg-1920.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.admission-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admission-list > * {
+  flex: 0 1 calc(25% - 15px);
+  min-width: 0;
+}
+
+.study-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 1;
+  padding: 20px;
+  min-width: 0;
+  border: 0;
+  text-align: left;
+  text-decoration: none;
+  color: var(--main-blue-blue-100);
+  appearance: none;
+  background-color: transparent;
+  background-image: url("../../img/admission/admission-card-bg.svg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(4px 4px 0 var(--main-black));
+
+  &:hover {
+    color: var(--main-blue-blue-100);
+  }
+}
+
+.study-card--catalog {
+  align-self: flex-start;
+}
+
+.study-card__arrow {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.study-card__arrow .card-arrow {
+  width: 48px;
+  height: 48px;
+}
+
+.study-card:hover .card-arrow {
+  color: var(--main-accent-accent-100);
+  mask-image: url("../../img/admission/icon-arrow-right.svg");
+  -webkit-mask-image: url("../../img/admission/icon-arrow-right.svg");
+}
+
+.study-card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.study-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+}
+
+.study-card__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.study-card__title {
+  margin-bottom: 16px;
+  font-variant: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: var(--main-blue-blue-100);
+}
+
+.study-card__description {
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0em;
+  color: var(--main-blue-blue-100);
+}
+
+.admission-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--main-white-white-100);
+  padding: 32px;
+}
+
+.admission-note h3 {
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+  font-family: var(--main-font-display);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: var(--main-white-white-100);
+}
+
+.admission-note p {
+  margin: 0;
+  font-variant: normal;
+  font-stretch: normal;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  color: var(--main-white-white-100);
+}
+
+@include breakpoint($bp-1440) {
+  .section--admission {
+    padding-top: 97px;
+    padding-bottom: 96px;
+
+    &::before,
+    &::after {
+      height: 57px;
+    }
+  }
+
+  .admission-list {
+    gap: 16px;
+  }
+
+  .admission-list > * {
+    flex-basis: calc(25% - 12px);
+  }
+
+  .study-card {
+    padding: 16px;
+    filter: drop-shadow(5px 5px 0 var(--main-black));
+  }
+
+  .study-card__arrow {
+    right: 16px;
+    top: 16px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .study-card__body {
+  }
+
+  .study-card__icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .study-card__icon img {
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
+    transform: scale(0.510708);
+  }
+
+  .study-card__joined-text {
+    white-space: nowrap;
+  }
+
+  .study-card__title {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .study-card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .admission-note {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .admission-note h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .admission-note p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .section--admission {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &::before,
+    &::after {
+      height: 48px;
+    }
+  }
+
+  .study-card {
+    padding: 12px;
+    filter: drop-shadow(4px 4px 0 var(--main-black));
+  }
+
+  .study-card__arrow {
+    right: 12px;
+    top: 12px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .study-card__icon {
+    margin-bottom: 6px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .study-card__icon img {
+    transform: scale(0.426667);
+  }
+
+  .study-card__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .study-card__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .admission-note {
+    gap: 8px;
+  }
+
+  .admission-note h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .admission-note p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .section--admission {
+    padding-top: 105px;
+    padding-bottom: 105px;
+
+    &::before {
+      display: block;
+      height: 73px;
+      transform: scaleY(-1);
+      background-image: url("../../img/admission/admission-transition-top-992.svg");
+    }
+
+    &::after {
+      height: 73px;
+      background-image: url("../../img/admission/admission-transition-bottom-992.svg");
+    }
+  }
+
+  .admission-list > * {
+    flex-basis: calc(50% - 12px);
+  }
+
+  .admission-list {
+    gap: 24px;
+  }
+
+  .study-card {
+    padding: 24px;
+  }
+
+  .study-card__arrow {
+    top: 24px;
+    right: 24px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .study-card__body {
+  }
+
+  .study-card__icon {
+    margin-bottom: 12px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .study-card__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    transform: none;
+  }
+
+  .study-card__title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .study-card__description {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  .admission-note {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .admission-note h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .admission-note p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .admission-note--second .br {
+    display: none;
+  }
+
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
+    justify-content: flex-start;
+    min-height: min-content;
+  }
+
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .study-card__body {
+    margin-top: calc((100vw - 768px) * 40 / 224);
+  }
+
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+  .admission-background {
+    background-size: 135.76% 116.43%;
+    background-position: 73.24% 99.88%;
+  }
+  .study-card__joined-text {
+    white-space: normal;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .study-card__line-break {
+    display: none;
+  }
+  .br-admission-768 {
+    display: inline;
+  }
+  .section--admission {
+    padding-top: 105px;
+    padding-bottom: 105px;
+
+    &::before {
+      height: 74px;
+      transform: scaleY(-1);
+      background-image: url("../../img/admission/admission-transition-top-768.svg");
+    }
+
+    &::after {
+      height: 73px;
+      background-image: url("../../img/admission/admission-transition-bottom-768.svg");
+    }
+  }
+
+  .admission-background {
+    background-image: url("../../img/admission/admission-bg-1920.png");
+  }
+
+  .section-header--admission {
+    margin-bottom: 32px;
+  }
+
+  .admission-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .admission-list > * {
+    flex-basis: auto;
+    flex: 0 1 calc(50% - 8px);
+    min-height: 0;
+  }
+
+  .study-card {
+    aspect-ratio: 1;
+    padding: 16px;
+    min-height: min-content;
+  }
+
+  .study-card__arrow {
+    right: 16px;
+    top: 16px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .study-card__body {
+  }
+
+  .study-card__icon {
+    width: 112px;
+    height: 112px;
+  }
+
+  .study-card__icon img {
+    max-width: none;
+    max-height: none;
+    flex-shrink: 0;
+    transform: none;
+  }
+
+  .study-card__joined-text {
+    white-space: normal;
+  }
+
+  .study-card__title {
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .study-card__description {
+    font-weight: 500;
+    letter-spacing: normal;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .study-card--lists .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .admission-note {
+    padding: 16px;
+    aspect-ratio: 1;
+    gap: 12px;
+    min-height: min-content;
+  }
+
+  .admission-note h3 {
+    text-shadow: none;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+
+  .admission-note p {
+    width: 100%;
+    letter-spacing: normal;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .admission-note--first {
+    order: 1;
+  }
+
+  .admission-note--second {
+    order: 6;
+  }
+
+  .study-card--catalog {
+    order: 0;
+  }
+
+  .study-card--lists {
+    order: 2;
+  }
+
+  .study-card--rules {
+    order: 3;
+  }
+
+  .study-card--target {
+    order: 4;
+  }
+
+  .study-card--paid {
+    order: 5;
+  }
+
+  .study-card--results {
+    order: 7;
+  }
+  .admission-note--second .br {
+    display: inline;
+  }
+
+  .admission-note--second h3 .br {
+    display: none;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
+    justify-content: flex-end;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .study-card__body {
+    margin-top: 0;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .br-admission-768 {
+    display: none;
+  }
+  .section--admission {
+    padding-bottom: 83px;
+
+    &::before,
+    &::after {
+      height: 51px;
+      background-image: url("../../img/admission/admission-transition-576.svg");
+    }
+
+    &::before {
+      transform: scaleY(-1);
+    }
+
+    padding-top: 81px;
+  }
+
+  .study-card {
+    padding: 12px;
+    aspect-ratio: 1;
+    min-height: min-content;
+  }
+
+  .study-card__arrow {
+    top: 12px;
+    right: 12px;
+  }
+
+  .study-card__body {
+  }
+
+  .study-card__icon {
+    margin-bottom: 4px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .study-card__icon img {
+    transform: scale(0.533333);
+  }
+
+  .study-card__title {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-wrap: normal;
+  }
+
+  .study-card__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .study-card--lists .study-card__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .admission-note--second h3 .br {
+    display: inline;
+  }
+
+  .admission-note {
+    padding: 12px;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .admission-note h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .admission-note p {
+    width: auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@include breakpoint($bp-390) {
+  .study-card--lists .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .title-2--admission {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
+    text-shadow: 3px 4px var(--main-black);
+  }
+
+  .section--admission {
+    padding-top: 88px;
+    padding-bottom: 83px;
+
+    &::before,
+    &::after {
+      height: 48px;
+      background-image: url("../../img/admission/admission-transition-390.svg");
+    }
+  }
+
+  .section-header--admission {
+    margin-bottom: 40px;
+  }
+
+  .study-card {
+    padding: 24px;
+    width: 100%;
+    filter: drop-shadow(4px 4px 0 var(--main-black));
+    aspect-ratio: auto;
+    min-height: 358px;
+  }
+
+  .study-card__arrow {
+    right: 24px;
+    top: 24px;
+  }
+
+  .study-card__arrow .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .study-card__body {
+  }
+
+  .study-card__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+  }
+
+  .study-card--lists .study-card__title,
+  .study-card--rules .study-card__title {
+    margin-bottom: 6px;
+  }
+
+  .study-card__first-line {
+    white-space: nowrap;
+  }
+
+  .study-card--lists .study-card__joined-text {
+    display: block;
+  }
+
+  .study-card--paid .study-card__title,
+  .study-card--results .study-card__title {
+    margin-bottom: 8px;
+  }
+
+  .study-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .admission-note {
+    padding: 0 2px;
+    gap: 12px;
+    min-height: 358px;
+    aspect-ratio: auto;
+  }
+
+  .admission-note h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+  }
+
+  .admission-note p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .admission-note p .br {
+    display: none;
+  }
+
+  .admission-background {
+    background-image: url("../../img/admission/admission-bg-390.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .admission-list {
+    flex-direction: column;
+  }
+
+  .admission-list > * {
+    flex: 0 1 auto;
+    min-height: 358px;
+  }
+
+  .study-card__icon {
+    margin-bottom: 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  .study-card__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    transform: none;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) {
+    min-height: 358px;
+  }
+  .study-card:is(.study-card--target, .study-card--paid, .study-card--results) .card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}

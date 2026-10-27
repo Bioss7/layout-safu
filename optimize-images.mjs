@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const PUBLIC_DIR = path.resolve('public');
+const PROJECT_DIR = path.resolve('.');
 const WEBP_QUALITY = 100;
 const WEBP_QUALITY_PHOTO = 100;
 
@@ -17,15 +17,11 @@ function isPhoto(relPath) {
   return PHOTO_PATTERNS.some(p => relPath.includes(p));
 }
 
-// Папки изображений каждой страницы: public/<page>/assets/img
+// Папки изображений каждой страницы: <page>/assets/img и общая assets/img
 function getPageImgDirs() {
-  const dirs = [];
-  for (const entry of fs.readdirSync(PUBLIC_DIR, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const imgDir = path.join(PUBLIC_DIR, entry.name, 'assets', 'img');
-    if (fs.existsSync(imgDir)) dirs.push(imgDir);
-  }
-  return dirs;
+  return ['', 'main', 'about', 'programs', 'abiturient', 'students']
+    .map(page => path.join(PROJECT_DIR, page, 'assets', 'img'))
+    .filter(directory => fs.existsSync(directory));
 }
 
 function getAllPngFiles(dir, base = '') {
@@ -50,7 +46,7 @@ async function main() {
   const srcDirs = getPageImgDirs();
 
   if (!srcDirs.length) {
-    console.log('Не найдено папок public/<page>/assets/img');
+    console.log('Не найдено папок <page>/assets/img и общая assets/img');
     return;
   }
 

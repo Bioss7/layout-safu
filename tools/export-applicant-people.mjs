@@ -13,5 +13,5 @@ for (const [breakpoint, width, height, layers] of [
   [390, 440, 463, [[75, 0, 365, 459, man, 1, .944227755, 0, .000390016], [0, 80, 260, 383, woman, .760878503, .839219093, .137070447, .068044797]]],
 ]) {
   const parts = layers.map(([x, y, w, h, data, scaleX, scaleY, offsetX, offsetY], index) => `<defs><clipPath id="c${index}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><g clip-path="url(#c${index})"><image href="data:image/png;base64,${data}" x="${x - offsetX / scaleX * w}" y="${y - offsetY / scaleY * h}" width="${w / scaleX}" height="${h / scaleY}" preserveAspectRatio="none"/></g>`).join('');
-  await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">${parts}</svg>`)).png().toFile(fileURLToPath(new URL(`public/abiturient/assets/img/hero/hero-people-${breakpoint}.png`, root)));
+  await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">${parts}</svg>`)).png().toFile(fileURLToPath(new URL(`abiturient/assets/img/hero/hero-people-${breakpoint}.png`, root)));
 }

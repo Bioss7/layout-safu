@@ -1,0 +1,38 @@
+@use "./vars";
+@use "./fonts";
+@use "./blocks/header";
+@use "./blocks/header-panels";
+@use "./blocks/search-input";
+@use "./blocks/footer";
+@use "./blocks/site-frame";
+
+:is(.header, .header-panels, .footer) {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main-blue-blue-100);
+}
+
+.header--overlay {
+  position: absolute;
+  background-color: var(--main-white-white-100);
+}
+
+.header--overlay.header--open {
+  position: static;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  z-index: 1001;
+  padding: 8px 16px;
+  color: var(--main-blue-blue-100, #0b2d4e);
+  background-color: #ffffff;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

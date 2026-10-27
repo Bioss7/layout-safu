@@ -4,13 +4,14 @@
 
 Классическая вёрстка на HTML, SCSS/CSS и Vanilla JavaScript; Vite + pnpm — инструменты сборки.
 Главная — index.html, остальные страницы — <page>/index.html.
-Ресурсы страницы: src/scss/<page>/, src/js/<page>/, public/<page>/assets/.
-Стили, шрифты, изображения и авторский JS независимы от других страниц.
+Все ресурсы страницы находятся в <page>/assets/: scss/, js/, img/, fonts/.
+Общие ресурсы шаблона находятся в корневом assets/. Главная использует main/assets/.
 HTML, PHP и данные сборка не генерирует.
 
-- SCSS: _vars.scss, _mixins.scss, _fonts.scss, reset.scss, blocks/, вход style.scss.
-- Изображения: public/<page>/assets/img/<block>/; шрифты — assets/fonts/. В исходниках пути абсолютные: /<page>/assets/....
-- Готовые блоки, включая header/footer, копировать в новую страницу и менять только копии. Правила подключения скриптов — в навыке [javascript](skills/javascript/SKILL.md).
+- SCSS страницы: _vars.scss, _mixins.scss, _fonts.scss, reset.scss, blocks/, вход <page>.scss. Общий вход — assets/scss/common.scss.
+- Изображения: <page>/assets/img/<block>/; специфичные шрифты — <page>/assets/fonts/. Общие шрифты и библиотеки — assets/fonts/ и assets/vendor/. В SCSS использовать относительные @use и url() от текущего файла.
+- Общие header/footer и панели имеют единственный источник в assets/html/, assets/scss/ и assets/js/. Страницы включают разметку маркерами `<!-- safu:header -->` и `<!-- safu:footer -->`; Vite раскрывает их в dev/build. Различия оформлять модификаторами общего компонента, независимые копии не создавать. PHP-разметку поддерживать вручную.
+- Vite собирает CSS/JS страницы в <page>/assets/css/ и <page>/assets/js/, общий код — в assets/css/ и assets/js/. Изображения, шрифты и vendor сохраняют каталоги, включая динамически выбираемые файлы. SCSS и HTML-фрагменты в dist не копируются. Каталог и детальная программа используют ресурсы раздела programs.
 
 ## Команды
 

@@ -94,7 +94,7 @@ try {
     }
     assert.equal(await page.locator('img').evaluateAll(images => images.filter(image => !image.complete || !image.naturalWidth).length), 0, `Изображения ${width}`);
   }
-  const styles = new URL('../src/scss/abiturient/blocks/', import.meta.url);
+  const styles = new URL('../abiturient/assets/scss/blocks/', import.meta.url);
   for (const name of await readdir(styles)) if (name.endsWith('.scss')) assert.doesNotMatch(await readFile(new URL(name, styles), 'utf8'), /\bclamp\s*\(/, name);
   assert.deepEqual(failures, []);
   console.log('Passed: Figma 992 geometry, FAQ/Swiper, 14 widths, resources, unchanged header/footer, no clamp.');

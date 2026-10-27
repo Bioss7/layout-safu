@@ -21,10 +21,11 @@ try {
   await page.evaluate(() => document.fonts.ready);
   assert.equal(await page.locator('#applicant-question').inputValue(), '', 'An empty textarea must display its placeholder');
   const expectedScripts = [
-    'header', 'footer', 'tabs', 'drag-scroll', 'accordion', 'topic-select',
+    'tabs', 'drag-scroll', 'accordion', 'topic-select',
     'question-form', 'reviews', 'info-dialog',
-  ].map(name => '/assets/js/abiturient-' + name + '.js');
-  expectedScripts.splice(7, 0, '/abiturient/assets/vendor/swiper-bundle.min.js');
+  ].map(name => '/abiturient/assets/js/' + name + '.js');
+  expectedScripts.splice(5, 0, '/assets/vendor/swiper-bundle.min.js');
+  expectedScripts.push('/assets/js/header.js', '/assets/js/footer.js');
   const scripts = await page.locator('script[src]').evaluateAll(elements => elements.map(element => ({
     path: new URL(element.src).pathname,
     type: element.getAttribute('type'),

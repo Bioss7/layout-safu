@@ -1,0 +1,430 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.student-services {
+  padding-top: 150px;
+  padding-bottom: 0;
+}
+
+.student-services__inner {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.student-services__tabs {
+  display: flex;
+  flex: 0 0 calc((100% - 20px) * 0.3294117647);
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.student-services__tab {
+  --student-services-more-icon: url("../../img/icons/arrow-up-right-tab.svg");
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--main-blue-blue-100-opacity);
+  color: var(--main-blue-blue-100);
+  text-align: left;
+  transition:
+    color 160ms,
+    background-color 160ms;
+
+  &:hover:not(.student-services__tab--selected) {
+    --student-services-more-icon: url("../../img/icons/arrow-right.svg");
+
+    background-color: var(--main-accent-accent-100);
+    color: var(--main-white-white-100);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--main-accent-accent-100);
+    outline-offset: 4px;
+  }
+}
+
+.student-services__tab--selected {
+  --student-services-more-icon: url("../../img/icons/arrow-right.svg");
+
+  background-color: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
+}
+
+.student-services__tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.student-services__tab-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+.student-services__tab-count {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.student-services__more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+
+  &::after {
+    content: "";
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    mask-image: var(--student-services-more-icon);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--student-services-more-icon);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
+
+.student-services__icon,
+.student-services__link-arrow {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.student-services__icon--study {
+  mask-image: url("../../img/icons/graduation-hat.svg");
+  -webkit-mask-image: url("../../img/icons/graduation-hat.svg");
+}
+
+.student-services__icon--science {
+  mask-image: url("../../img/icons/beaker.svg");
+  -webkit-mask-image: url("../../img/icons/beaker.svg");
+}
+
+.student-services__icon--postgraduate {
+  mask-image: url("../../img/icons/certificate.svg");
+  -webkit-mask-image: url("../../img/icons/certificate.svg");
+}
+
+.student-services__icon--calendar {
+  mask-image: url("../../img/icons/calendar.svg");
+  -webkit-mask-image: url("../../img/icons/calendar.svg");
+}
+
+.student-services__icon--file {
+  mask-image: url("../../img/icons/file.svg");
+  -webkit-mask-image: url("../../img/icons/file.svg");
+}
+
+.student-services__icon--scholarship {
+  mask-image: url("../../img/icons/card-check.svg");
+  -webkit-mask-image: url("../../img/icons/card-check.svg");
+}
+
+.student-services__icon--support {
+  mask-image: url("../../img/icons/coins-hand.svg");
+  -webkit-mask-image: url("../../img/icons/coins-hand.svg");
+}
+
+.student-services__icon--practice {
+  mask-image: url("../../img/icons/briefcase.svg");
+  -webkit-mask-image: url("../../img/icons/briefcase.svg");
+}
+
+.student-services__panels {
+  flex: 1;
+  min-width: 0;
+  border-radius: 4px;
+  background-color: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
+}
+
+.student-services__panel {
+  min-width: 0;
+}
+
+.student-services__panel--empty {
+  padding: 40px;
+}
+
+.student-services__links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.student-services__link {
+  --student-services-link-arrow: url("../../img/icons/arrow-up-right-link.svg");
+
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 102px;
+  padding: 31px 40px;
+  border-bottom: 2px solid var(--main-white-white-200-opacity);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 300ms ease-in-out;
+
+  &:hover {
+    --student-services-link-arrow: url("../../img/icons/arrow-right-link.svg");
+
+    background-color: var(--main-white-white-200-opacity);
+  }
+}
+
+.student-services__link-title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+.student-services__link-arrow {
+  margin-left: 0;
+  mask-image: var(--student-services-link-arrow);
+  -webkit-mask-image: var(--student-services-link-arrow);
+}
+
+.student-services__empty {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@include breakpoint($bp-1440) {
+  .student-services {
+    padding-top: 96px;
+  }
+
+  .student-services__tabs {
+    flex-basis: calc((100% - 20px) * 0.36);
+  }
+
+  .student-services__tab-title {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+  }
+
+  .student-services__link {
+    padding: 28px;
+  }
+
+  .student-services__link-title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .student-services {
+    padding-top: 72px;
+  }
+
+  .student-services__tab {
+    gap: 20px;
+  }
+
+  .student-services__tab-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .student-services__link {
+    gap: 12px;
+    min-height: 96px;
+    padding: 26px 24px;
+  }
+
+  .student-services__link-title {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .student-services {
+    padding-top: 64px;
+  }
+
+  // На планшете три категории стоят над общей панелью вместо боковой колонки.
+  .student-services__inner {
+    flex-direction: column;
+  }
+
+  .student-services__tabs {
+    flex-basis: auto;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .student-services__tab {
+    flex: 1 1 0;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .student-services__panel--empty {
+    padding: 28px;
+  }
+
+  .student-services__link {
+    min-height: 88px;
+    padding: 26px 24px;
+  }
+
+  .student-services__links {
+    gap: 12px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .student-services {
+    padding-top: 56px;
+  }
+
+  .student-services__tabs {
+    gap: 12px;
+  }
+
+  .student-services__tab-title {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+  }
+
+  .student-services__tab-count {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .student-services__more {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+  }
+
+  .student-services__link-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .student-services__icon,
+  .student-services__link-arrow {
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .student-services {
+    padding-top: 48px;
+  }
+
+  // На телефоне категории идут вертикально, без горизонтальной ленты и слайдера.
+  .student-services__tabs {
+    flex-direction: column;
+  }
+
+  .student-services__tab {
+    flex-basis: auto;
+    gap: 16px;
+  }
+
+  .student-services__tab-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .student-services__link {
+    gap: 12px;
+    min-height: 84px;
+    padding: 24px 16px;
+  }
+
+  .student-services__icon,
+  .student-services__link-arrow {
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .student-services__panel--empty {
+    padding: 24px 20px;
+  }
+
+  .student-services__empty {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+
+@include breakpoint($bp-390) {
+  .student-services {
+    padding-top: 40px;
+  }
+
+  .student-services__link {
+    gap: 10px;
+  }
+
+  .student-services__link-title {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+  }
+}

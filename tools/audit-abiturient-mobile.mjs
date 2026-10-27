@@ -25,7 +25,7 @@ const sections = [
   "#faq",
   ".question__surface",
 ];
-const vars = await readFile(new URL("../src/scss/abiturient/_vars.scss", import.meta.url), "utf8");
+const vars = await readFile(new URL("../abiturient/assets/scss/_vars.scss", import.meta.url), "utf8");
 const breakpoints = [...vars.matchAll(/\$bp-\d+:\s*(\d+)px;/g)].map((match) => +match[1]);
 const widths = [
   ...new Set(breakpoints.flatMap((w) => [w - 1, w, w + 1]).concat([1920, 820, 1024])),

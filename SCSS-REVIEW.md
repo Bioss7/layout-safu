@@ -32,7 +32,7 @@ abiturient находятся в tabs.scss; варианты section-header гл
 
 ## Атрибуция reset
 
-В src/scss/main/reset.scss и src/scss/about/reset.scss используется модифицированный
+В main/assets/scss/reset.scss и about/assets/scss/reset.scss используется модифицированный
 CSS Reset Эрика Мейера: http://meyerweb.com/eric/tools/css/reset/,
 версия `v2.0-modified | 20110126`, лицензия `none (public domain)`.
 Сопутствующие нормализующие правила и совместимость со старыми браузерами
@@ -40,7 +40,7 @@ CSS Reset Эрика Мейера: http://meyerweb.com/eric/tools/css/reset/,
 
 ## Объединение отзывов — 26 октября 2026
 
-Стили отзывов abiturient объединены в src/scss/abiturient/blocks/reviews.scss.
+Стили отзывов abiturient объединены в abiturient/assets/scss/blocks/reviews.scss.
 Исторический слой review.scss и отключённая копия reviews-page.scss удалены.
 Сохранён действующий каскад, включая правки пользователя из коммита 6dffd3b;
 адаптивы сгруппированы по существующим брейкпоинтам. Отдельный компонент
@@ -61,9 +61,9 @@ screenshots/abiturient/reviews-refactor/. Проверка подтвержда�
   диапазонные media; в главной также есть старые диапазонные media и Grid.
   Приведение их к текущим правилам Flexbox и именованных брейкпоинтов потребует
   отдельной проверки геометрии. В рамках этого ревью раскладка сохранена.
-  Примеры: src/scss/programs/blocks/program-card.scss:53,
-  src/scss/programs/blocks/program-detail.scss:3,
-  src/scss/main/blocks/stats.scss:385.
+  Примеры: programs/assets/scss/blocks/program-card.scss:53,
+  programs/assets/scss/blocks/program-detail.scss:3,
+  main/assets/scss/blocks/stats.scss:385.
 - Для about и programs отсутствует локальный подробный кэш Figma. Проверка
   этих страниц опирается на исходную реализацию, а не подтверждает соответствие
   макету. Для abiturient использован существующий кэш.

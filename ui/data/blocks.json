@@ -12,7 +12,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Hero абитуриента",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/applicant-hero.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/applicant-hero.scss"]
     },
     {
       "id": "breadcrumbs",
@@ -23,7 +23,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Хлебные крошки",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/breadcrumbs.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/breadcrumbs.scss"]
     },
     {
       "id": "hero-link",
@@ -34,7 +34,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Ссылка hero",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/applicant-hero.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/applicant-hero.scss"]
     },
     {
       "id": "card-arrow",
@@ -47,11 +47,11 @@
       "purpose": "Стрелка ссылок и карточек",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/admission.scss",
-        "src/scss/abiturient/blocks/applicant-hero.scss",
-        "src/scss/abiturient/blocks/education-card.scss",
-        "src/scss/abiturient/blocks/feature-card.scss",
-        "src/scss/abiturient/blocks/typography.scss"
+        "abiturient/assets/scss/blocks/admission.scss",
+        "abiturient/assets/scss/blocks/applicant-hero.scss",
+        "abiturient/assets/scss/blocks/education-card.scss",
+        "abiturient/assets/scss/blocks/feature-card.scss",
+        "abiturient/assets/scss/blocks/typography.scss"
       ]
     },
     {
@@ -63,7 +63,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Баннер подачи заявления",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/apply-banner.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/apply-banner.scss"]
     },
     {
       "id": "education-card",
@@ -74,7 +74,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Карточка уровня образования",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/education-card.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/education-card.scss"]
     },
     {
       "id": "study-card",
@@ -85,7 +85,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Карточка поступления",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/admission.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/admission.scss"]
     },
     {
       "id": "admission-note",
@@ -96,7 +96,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Информационная вставка о поступлении",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/admission.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/admission.scss"]
     },
     {
       "id": "feature-card",
@@ -107,7 +107,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Карточка возможностей",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/feature-card.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/feature-card.scss"]
     },
     {
       "id": "contacts",
@@ -118,7 +118,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Контакты приёмной комиссии",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/section.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/section.scss"]
     },
     {
       "id": "contact-map",
@@ -131,8 +131,8 @@
       "purpose": "Карта контактов",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/contacts.scss",
-        "src/js/abiturient/tabs.js"
+        "abiturient/assets/scss/blocks/contacts.scss",
+        "abiturient/assets/js/tabs.js"
       ]
     },
     {
@@ -146,8 +146,8 @@
       "purpose": "Вкладки",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/tabs.scss",
-        "src/js/abiturient/tabs.js"
+        "abiturient/assets/scss/blocks/tabs.scss",
+        "abiturient/assets/js/tabs.js"
       ]
     },
     {
@@ -159,7 +159,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Контактные данные",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/contacts.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/contacts.scss"]
     },
     {
       "id": "contact-link",
@@ -170,7 +170,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Ссылка контактов",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/contacts.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/contacts.scss"]
     },
     {
       "id": "faq",
@@ -194,8 +194,8 @@
       "purpose": "Аккордеон",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/accordion.scss",
-        "src/js/abiturient/accordion.js"
+        "abiturient/assets/scss/blocks/accordion.scss",
+        "abiturient/assets/js/accordion.js"
       ]
     },
     {
@@ -209,8 +209,8 @@
       "purpose": "Форма вопроса",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/question.scss",
-        "src/js/abiturient/question-form.js"
+        "abiturient/assets/scss/blocks/question.scss",
+        "abiturient/assets/js/question-form.js"
       ]
     },
     {
@@ -224,8 +224,8 @@
       "purpose": "Поле формы",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/form-field.scss",
-        "src/js/abiturient/question-form.js"
+        "abiturient/assets/scss/blocks/form-field.scss",
+        "abiturient/assets/js/question-form.js"
       ]
     },
     {
@@ -239,8 +239,8 @@
       "purpose": "Выбор нескольких тем вопроса: раскрытие поверх полей формы, чекбоксы и управление с клавиатуры",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/topic-select.scss",
-        "src/js/abiturient/topic-select.js"
+        "abiturient/assets/scss/blocks/topic-select.scss",
+        "abiturient/assets/js/topic-select.js"
       ]
     },
     {
@@ -252,7 +252,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Предыдущие ответы",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/question.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/question.scss"]
     },
     {
       "id": "info-dialog",
@@ -265,8 +265,8 @@
       "purpose": "Информационное окно",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/info-dialog.scss",
-        "src/js/abiturient/info-dialog.js"
+        "abiturient/assets/scss/blocks/info-dialog.scss",
+        "abiturient/assets/js/info-dialog.js"
       ]
     },
     {
@@ -280,13 +280,13 @@
       "purpose": "Шапка",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/header.scss",
-        "src/js/abiturient/header.js"
+        "assets/scss/blocks/header.scss",
+        "assets/js/header.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "header",
-        "files": ["index.html", "src/scss/main/blocks/header.scss"]
+        "files": ["index.html", "assets/scss/blocks/header.scss"]
       }
     },
     {
@@ -300,17 +300,17 @@
       "purpose": "Панели шапки",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/header-panels.scss",
-        "src/js/abiturient/header.js"
+        "abiturient/assets/scss/blocks/common.scss",
+        "assets/scss/blocks/header-panels.scss",
+        "assets/js/header.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "header-panels",
         "files": [
           "index.html",
-          "src/scss/main/blocks/common.scss",
-          "src/scss/main/blocks/header-panels.scss"
+          "main/assets/scss/blocks/common.scss",
+          "assets/scss/blocks/header-panels.scss"
         ]
       }
     },
@@ -323,11 +323,11 @@
       "phase": null,
       "taskId": null,
       "purpose": "Поле поиска",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/search-input.scss"],
+      "files": ["abiturient/index.html", "assets/scss/blocks/search-input.scss"],
       "reuseSource": {
         "page": "main",
         "id": "search-input",
-        "files": ["index.html", "src/scss/main/blocks/search-input.scss"]
+        "files": ["index.html", "assets/scss/blocks/search-input.scss"]
       }
     },
     {
@@ -339,11 +339,11 @@
       "phase": null,
       "taskId": null,
       "purpose": "Бегущая строка",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/marquee.scss"],
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/marquee.scss"],
       "reuseSource": {
         "page": "main",
         "id": "marquee",
-        "files": ["index.html", "src/scss/main/blocks/marquee.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/marquee.scss"]
       }
     },
     {
@@ -357,10 +357,10 @@
       "purpose": "Кнопка",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/apply-banner.scss",
-        "src/scss/abiturient/blocks/button.scss",
-        "src/scss/abiturient/blocks/question.scss",
-        "src/scss/abiturient/blocks/reviews.scss"
+        "abiturient/assets/scss/blocks/apply-banner.scss",
+        "abiturient/assets/scss/blocks/button.scss",
+        "abiturient/assets/scss/blocks/question.scss",
+        "abiturient/assets/scss/blocks/reviews.scss"
       ]
     },
     {
@@ -374,13 +374,13 @@
       "purpose": "Слайдер отзывов",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/reviews.scss",
-        "src/js/abiturient/reviews.js"
+        "abiturient/assets/scss/blocks/reviews.scss",
+        "abiturient/assets/js/reviews.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "reviews-slider",
-        "files": ["index.html", "src/scss/main/blocks/review.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/review.scss"]
       }
     },
     {
@@ -394,13 +394,13 @@
       "purpose": "Карточка отзыва",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/reviews.scss",
-        "src/js/abiturient/reviews.js"
+        "abiturient/assets/scss/blocks/reviews.scss",
+        "abiturient/assets/js/reviews.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "review-card",
-        "files": ["index.html", "src/scss/main/blocks/review.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/review.scss"]
       }
     },
     {
@@ -414,16 +414,16 @@
       "purpose": "Кнопка навигации слайдера",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/reviews.scss"
+        "abiturient/assets/scss/blocks/common.scss",
+        "abiturient/assets/scss/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
         "id": "arrow-btn",
         "files": [
           "index.html",
-          "src/scss/main/blocks/common.scss",
-          "src/scss/main/blocks/review.scss"
+          "main/assets/scss/blocks/common.scss",
+          "main/assets/scss/blocks/review.scss"
         ]
       }
     },
@@ -438,16 +438,16 @@
       "purpose": "Индикаторы слайдера",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/reviews.scss"
+        "abiturient/assets/scss/blocks/common.scss",
+        "abiturient/assets/scss/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
         "id": "slider-dots",
         "files": [
           "index.html",
-          "src/scss/main/blocks/common.scss",
-          "src/scss/main/blocks/review.scss"
+          "main/assets/scss/blocks/common.scss",
+          "main/assets/scss/blocks/review.scss"
         ]
       }
     },
@@ -462,13 +462,13 @@
       "purpose": "Подвал",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/footer.scss",
-        "src/js/abiturient/footer.js"
+        "assets/scss/blocks/footer.scss",
+        "assets/js/footer.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "footer",
-        "files": ["index.html", "src/scss/main/blocks/footer.scss"]
+        "files": ["index.html", "assets/scss/blocks/footer.scss"]
       }
     },
     {
@@ -482,13 +482,13 @@
       "purpose": "Шапка",
       "files": [
         "students/index.html",
-        "src/scss/students/blocks/header.scss",
-        "src/js/students/header.js"
+        "assets/scss/blocks/header.scss",
+        "assets/js/header.js"
       ],
       "reuseSource": {
         "page": "abiturient",
         "id": "header",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/header.scss"]
+        "files": ["abiturient/index.html", "assets/scss/blocks/header.scss"]
       }
     },
     {
@@ -500,11 +500,11 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Панели меню и поиска",
-      "files": ["students/index.html", "src/scss/students/blocks/header-panels.scss"],
+      "files": ["students/index.html", "assets/scss/blocks/header-panels.scss"],
       "reuseSource": {
         "page": "abiturient",
         "id": "header-panels",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/header-panels.scss"]
+        "files": ["abiturient/index.html", "assets/scss/blocks/header-panels.scss"]
       }
     },
     {
@@ -516,11 +516,11 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Поле поиска",
-      "files": ["students/index.html", "src/scss/students/blocks/search-input.scss"],
+      "files": ["students/index.html", "assets/scss/blocks/search-input.scss"],
       "reuseSource": {
         "page": "abiturient",
         "id": "search-input",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/search-input.scss"]
+        "files": ["abiturient/index.html", "assets/scss/blocks/search-input.scss"]
       }
     },
     {
@@ -534,13 +534,13 @@
       "purpose": "Подвал",
       "files": [
         "students/index.html",
-        "src/scss/students/blocks/footer.scss",
-        "src/js/students/footer.js"
+        "assets/scss/blocks/footer.scss",
+        "assets/js/footer.js"
       ],
       "reuseSource": {
         "page": "abiturient",
         "id": "footer",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/footer.scss"]
+        "files": ["abiturient/index.html", "assets/scss/blocks/footer.scss"]
       }
     },
     {
@@ -552,7 +552,7 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Главный баннер студентов",
-      "files": ["students/index.html", "src/scss/students/blocks/student-hero.scss"]
+      "files": ["students/index.html", "students/assets/scss/blocks/student-hero.scss"]
     },
     {
       "id": "student-announcements",
@@ -563,7 +563,7 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Объявления студентов",
-      "files": ["students/index.html", "src/scss/students/blocks/student-announcements.scss"]
+      "files": ["students/index.html", "students/assets/scss/blocks/student-announcements.scss"]
     },
     {
       "id": "student-services",
@@ -576,13 +576,13 @@
       "purpose": "Вкладки студенческих сервисов",
       "files": [
         "students/index.html",
-        "src/scss/students/blocks/student-services.scss",
-        "src/js/students/services.js"
+        "students/assets/scss/blocks/student-services.scss",
+        "students/assets/js/services.js"
       ],
       "reuseSource": {
         "page": "abiturient",
         "id": "tabs",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/tabs.scss"]
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/tabs.scss"]
       }
     },
     {
@@ -594,11 +594,11 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Информационная карточка",
-      "files": ["students/index.html", "src/scss/students/blocks/student-cards.scss"],
+      "files": ["students/index.html", "students/assets/scss/blocks/student-cards.scss"],
       "reuseSource": {
         "page": "main",
         "id": "life-card",
-        "files": ["index.html", "src/scss/main/blocks/life.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/life.scss"]
       }
     },
     {
@@ -610,11 +610,11 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Плитка студенческой жизни",
-      "files": ["students/index.html", "src/scss/students/blocks/student-life.scss"],
+      "files": ["students/index.html", "students/assets/scss/blocks/student-life.scss"],
       "reuseSource": {
         "page": "abiturient",
         "id": "feature-card",
-        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/feature-card.scss"]
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/feature-card.scss"]
       }
     }
   ],
@@ -623,7 +623,7 @@
       "page": "main",
       "id": "link-arrow",
       "purpose": "Текстовая ссылка со стрелкой; копировать и адаптировать под страницу",
-      "files": ["index.html", "src/scss/main/blocks/common.scss"]
+      "files": ["index.html", "main/assets/scss/blocks/common.scss"]
     },
     {
       "page": "abiturient",
@@ -631,13 +631,13 @@
       "purpose": "Адаптированная ссылка «Посмотреть все истории» с предоставленным SVG",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/common.scss",
-        "src/scss/abiturient/blocks/reviews.scss"
+        "abiturient/assets/scss/blocks/common.scss",
+        "abiturient/assets/scss/blocks/reviews.scss"
       ],
       "reuseSource": {
         "page": "main",
         "id": "link-arrow",
-        "files": ["index.html", "src/scss/main/blocks/common.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/common.scss"]
       }
     },
     {
@@ -646,10 +646,10 @@
       "purpose": "Кнопка",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/apply-banner.scss",
-        "src/scss/abiturient/blocks/button.scss",
-        "src/scss/abiturient/blocks/question.scss",
-        "src/scss/abiturient/blocks/reviews.scss"
+        "abiturient/assets/scss/blocks/apply-banner.scss",
+        "abiturient/assets/scss/blocks/button.scss",
+        "abiturient/assets/scss/blocks/question.scss",
+        "abiturient/assets/scss/blocks/reviews.scss"
       ]
     },
     {
@@ -658,32 +658,32 @@
       "purpose": "Карточка отзыва",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/reviews.scss",
-        "src/js/abiturient/reviews.js"
+        "abiturient/assets/scss/blocks/reviews.scss",
+        "abiturient/assets/js/reviews.js"
       ],
       "reuseSource": {
         "page": "main",
         "id": "review-card",
-        "files": ["index.html", "src/scss/main/blocks/review.scss"]
+        "files": ["index.html", "main/assets/scss/blocks/review.scss"]
       }
     },
     {
       "page": "abiturient",
       "id": "education-card",
       "purpose": "Карточка уровня образования",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/education-card.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/education-card.scss"]
     },
     {
       "page": "abiturient",
       "id": "study-card",
       "purpose": "Карточка поступления",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/admission.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/admission.scss"]
     },
     {
       "page": "abiturient",
       "id": "feature-card",
       "purpose": "Карточка возможностей",
-      "files": ["abiturient/index.html", "src/scss/abiturient/blocks/feature-card.scss"]
+      "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/feature-card.scss"]
     },
     {
       "page": "abiturient",
@@ -691,11 +691,11 @@
       "purpose": "Стрелка ссылок и карточек",
       "files": [
         "abiturient/index.html",
-        "src/scss/abiturient/blocks/admission.scss",
-        "src/scss/abiturient/blocks/applicant-hero.scss",
-        "src/scss/abiturient/blocks/education-card.scss",
-        "src/scss/abiturient/blocks/feature-card.scss",
-        "src/scss/abiturient/blocks/typography.scss"
+        "abiturient/assets/scss/blocks/admission.scss",
+        "abiturient/assets/scss/blocks/applicant-hero.scss",
+        "abiturient/assets/scss/blocks/education-card.scss",
+        "abiturient/assets/scss/blocks/feature-card.scss",
+        "abiturient/assets/scss/blocks/typography.scss"
       ]
     }
   ]

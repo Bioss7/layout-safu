@@ -2,4 +2,4 @@
 
 Сгенерировано из `ui/data/remarks.json` командой `pnpm remarks:md`. Этот Markdown не редактируется вручную. Номера строк вычисляются по селекторам в исходниках.
 
-- Замечание — блок «Вкладки», элемент .student-services__empty: Наполнение вкладок «Наука и карьера в науке» и «Аспиранту» отсутствует в источнике; по согласованию показано сообщение об отсутствии содержимого. [src/scss/students/blocks/student-services.scss:231](../src/scss/students/blocks/student-services.scss#L231)
+- Замечание — блок «Вкладки», элемент .student-services__empty: Наполнение вкладок «Наука и карьера в науке» и «Аспиранту» отсутствует в источнике; по согласованию показано сообщение об отсутствии содержимого. [students/assets/scss/blocks/student-services.scss:231](assets/scss/blocks/student-services.scss#L231)

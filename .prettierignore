@@ -5,4 +5,4 @@ dist/
 .ai-statistics/
 screenshots/
 test-results/
-public/**/vendor/
+**/assets/vendor/

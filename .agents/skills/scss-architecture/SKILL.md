@@ -6,7 +6,7 @@ description: "Стили layout-safu: плоский БЭМ, Flexbox, имено
 # SCSS компонентов
 
 Зона верстальщика — SCSS назначенной страницы. Блоки подключать через @use
-в style.scss; в блоках использовать @use "../_mixins" as * и @use "../_vars" as *.
+в <page>.scss; в блоках использовать @use "../_mixins" as * и @use "../_vars" as *.
 Токены — своей страницы; common.scss — общие элементы, typography.scss — типографика.
 
 ## Селекторы и раскладка

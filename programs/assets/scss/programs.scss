@@ -1,0 +1,18 @@
+@use "./_vars";
+@use "./_fonts";
+
+@use "./blocks/base";
+
+@use "./blocks/hero";
+@use "./blocks/filters";
+@use "./blocks/catalog";
+@use "./blocks/program-card";
+@use "./blocks/pagination";
+@use "./blocks/contact-form";
+@use "./blocks/program-detail";
+@use "./blocks/program-hero";
+@use "./blocks/program-admission";
+@use "./blocks/program-about";
+@use "./blocks/program-teachers";
+@use "./blocks/program-materials";
+@use "./blocks/program-contacts";

@@ -9,9 +9,9 @@
     "project:data:check": "node tools/project-data.mjs",
     "remarks:md": "node tools/project-data.mjs --remarks-md",
     "check:project-data": "node --test tools/project-data.test.mjs",
-    "format:styles": "prettier --write \"src/scss/abiturient/**/*.scss\" \"src/scss/students/**/*.scss\" ui/ui.css",
-    "format:styles:check": "prettier --check \"src/scss/abiturient/**/*.scss\" \"src/scss/students/**/*.scss\" ui/ui.css",
-    "format:css:build": "prettier --write --ignore-path .prettierignore.build dist/assets/css/abiturient.css dist/assets/css/students.css \"dist/ui/**/*.css\"",
+    "format:styles": "prettier --write \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" ui/ui.css",
+    "format:styles:check": "prettier --check \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" ui/ui.css",
+    "format:css:build": "prettier --write --ignore-path .prettierignore.build dist/assets/css/common.css dist/abiturient/assets/css/abiturient.css dist/students/assets/css/students.css \"dist/ui/**/*.css\"",
     "preview": "vite preview",
     "stats": "node tools/ai-statistics.mjs",
     "check:statistics": "node --test tools/ai-statistics.test.mjs",
@@ -20,7 +20,11 @@
     "webp": "node convert-to-webp.mjs",
     "optimize": "node optimize-images.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "check:typography": "node tools/check-typography.mjs"
+    "check:typography": "node tools/check-typography.mjs",
+    "check:assets": "node --test tools/assets.test.mjs",
+    "check:assets:browser": "node tools/check-assets-browser.mjs",
+    "check:assets:runtime": "node tools/check-assets-runtime.mjs",
+    "check:assets:panel": "node tools/check-assets-panel.mjs"
   },
   "repository": {
     "type": "git",
