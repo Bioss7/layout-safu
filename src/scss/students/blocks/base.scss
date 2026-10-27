@@ -1,0 +1,199 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+:root {
+  --applicant-header-height: 168px;
+  --main-black: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  position: relative;
+  max-width: 1920px;
+  margin-inline: auto;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-100);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  --second-family: "HS_LunaObscura Students", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:is(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--main-accent-accent-100);
+  outline-offset: 4px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container,
+.student-container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+
+.student-title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.br {
+  display: inline;
+}
+
+@include breakpoint($bp-1440) {
+  .container {
+    width: calc(100% - 160px);
+  }
+  .student-container {
+    width: calc(100% - 128px);
+  }
+  .student-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .container {
+    width: calc(100% - 64px);
+  }
+  .student-container {
+    width: calc(100% - 96px);
+  }
+  .student-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@include breakpoint($bp-1150) {
+  :root {
+    --applicant-header-height: 142px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  :root {
+    --applicant-header-height: 114px;
+  }
+  .container {
+    width: calc(100% - 48px);
+  }
+  .student-container {
+    width: calc(100% - 64px);
+  }
+  .student-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  :root {
+    --applicant-header-height: 112px;
+  }
+  .container {
+    width: calc(100% - 32px);
+  }
+  .student-container {
+    width: calc(100% - 48px);
+  }
+  .student-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  :root {
+    --applicant-header-height: 102px;
+  }
+  .student-container {
+    width: calc(100% - 40px);
+  }
+  .student-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@include breakpoint($bp-390) {
+  .student-container {
+    width: calc(100% - 32px);
+  }
+  .student-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

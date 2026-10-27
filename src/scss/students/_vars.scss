@@ -1,0 +1,55 @@
+$font-family: "Montserrat", sans-serif;
+$second-family: "HS_LunaObscura", sans-serif;
+$third-family: "Golos Text", sans-serif;
+
+$bp-390: 390px;
+$bp-460: 460px;
+$bp-540: 540px;
+$bp-680: 680px;
+$bp-576: 576px;
+$bp-768: 768px;
+$bp-992: 992px;
+$bp-1150: 1150px;
+$bp-1200: 1200px;
+$bp-1440: 1440px;
+
+:root {
+  --font-family: #{$font-family};
+  --second-family: #{$second-family};
+  --third-family: #{$third-family};
+
+  --main-accent-accent-100: #00aeef;
+  --main-accent-accent-90: #1ab6f1;
+  --main-accent-accent-80: #33bef2;
+  --main-accent-accent-70: #4dc6f4;
+  --main-accent-accent-60: #66cef5;
+  --main-accent-accent-50: #80d6f7;
+  --main-accent-accent-40: #99dff9;
+  --main-accent-accent-30: #b3e7fa;
+  --main-accent-accent-300-opacity: rgba(0, 174, 239, 0.3);
+  --main-accent-accent-20: #cceffc;
+  --main-accent-accent-10: #e6f7fd;
+  --main-accent-accent-5: #f2fbfe;
+  --main-blue-blue-100: #0b2d4e;
+  --main-blue-blue-90: #234260;
+  --main-blue-blue-80: #3c5771;
+  --main-blue-blue-70: #546c83;
+  --main-blue-blue-60: #6d8195;
+  --main-blue-blue-50: #8596a6;
+  --main-blue-blue-500-opacity: rgba(11, 45, 78, 0.5);
+  --main-blue-blue-40: #c2d7e8;
+  --main-blue-blue-30: #b6c0ca;
+  --main-blue-blue-20: #ced5dc;
+  --main-blue-blue-200-opacity: rgba(11, 45, 78, 0.2);
+  --main-blue-blue-10: #e7eaed;
+  --main-blue-blue-100-opacity: rgba(11, 45, 78, 0.1);
+  --main-blue-blue-5: #f3f5f6;
+  --main-white-white-100: #fff;
+  --main-white-white-900-opacity: rgba(255, 255, 255, 0.9);
+  --main-white-white-700-opacity: rgba(255, 255, 255, 0.7);
+  --main-white-white--500-opacity: rgba(255, 255, 255, 0.5);
+  --main-white-white-400-opacity: rgba(255, 255, 255, 0.4);
+  --main-white-white-200-opacity: rgba(255, 255, 255, 0.2);
+  --main-white-white-50-opacity: rgba(255, 255, 255, 0.05);
+  --color: #fff;
+}

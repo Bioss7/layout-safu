@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { chromium } from "@playwright/test";
 
 const base = "http://127.0.0.1:4173";
@@ -13,7 +14,10 @@ try {
   await page.waitForFunction(
     () => !document.querySelector(".js-remarks-status").textContent.includes("Загрузка"),
   );
-  assert.equal(await page.locator(".catalog__card").count(), 5);
+  const pages = JSON.parse(
+    await readFile(new URL("../ui/data/pages.json", import.meta.url), "utf8"),
+  );
+  assert.equal(await page.locator(".catalog__card").count(), pages.length);
   assert.ok((await page.locator(".js-remarks li").count()) >= 5);
   const remarks = await (await page.request.get(`${base}/__ui/remarks`)).json();
   assert.equal(
@@ -82,7 +86,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "UI: пять ссылок, замечания, фильтры, локальное обновление без двойного учёта/внешних запросов, приватность, 390px — OK.",
+    `UI: ${pages.length} ссылок, замечания, фильтры, локальное обновление без двойного учёта/внешних запросов, приватность, 390px — OK.`,
   );
 } finally {
   await browser.close();

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "auditedPages": ["abiturient"],
+  "auditedPages": ["abiturient", "students"],
   "definition": "Самостоятельный БЭМ-компонент. Повторения, элементы, модификаторы и структурные обёртки не увеличивают счётчик. Перенесённые и адаптированные готовые компоненты учитываются отдельно.",
   "entries": [
     {
@@ -469,6 +469,152 @@
         "page": "main",
         "id": "footer",
         "files": ["index.html", "src/scss/main/blocks/footer.scss"]
+      }
+    },
+    {
+      "id": "header",
+      "name": "Шапка",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Шапка",
+      "files": [
+        "students/index.html",
+        "src/scss/students/blocks/header.scss",
+        "src/js/students/header.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "header",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/header.scss"]
+      }
+    },
+    {
+      "id": "header-panels",
+      "name": "Панели меню и поиска",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Панели меню и поиска",
+      "files": ["students/index.html", "src/scss/students/blocks/header-panels.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "header-panels",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/header-panels.scss"]
+      }
+    },
+    {
+      "id": "search-input",
+      "name": "Поле поиска",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Поле поиска",
+      "files": ["students/index.html", "src/scss/students/blocks/search-input.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "search-input",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/search-input.scss"]
+      }
+    },
+    {
+      "id": "footer",
+      "name": "Подвал",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Подвал",
+      "files": [
+        "students/index.html",
+        "src/scss/students/blocks/footer.scss",
+        "src/js/students/footer.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "footer",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/footer.scss"]
+      }
+    },
+    {
+      "id": "student-hero",
+      "name": "Главный баннер студентов",
+      "origin": "new",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Главный баннер студентов",
+      "files": ["students/index.html", "src/scss/students/blocks/student-hero.scss"]
+    },
+    {
+      "id": "student-announcements",
+      "name": "Объявления студентов",
+      "origin": "new",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Объявления студентов",
+      "files": ["students/index.html", "src/scss/students/blocks/student-announcements.scss"]
+    },
+    {
+      "id": "student-services",
+      "name": "Вкладки студенческих сервисов",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Вкладки студенческих сервисов",
+      "files": [
+        "students/index.html",
+        "src/scss/students/blocks/student-services.scss",
+        "src/js/students/services.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "tabs",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/tabs.scss"]
+      }
+    },
+    {
+      "id": "student-card",
+      "name": "Информационная карточка",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Информационная карточка",
+      "files": ["students/index.html", "src/scss/students/blocks/student-cards.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "life-card",
+        "files": ["index.html", "src/scss/main/blocks/life.scss"]
+      }
+    },
+    {
+      "id": "student-life-card",
+      "name": "Плитка студенческой жизни",
+      "origin": "existing",
+      "page": "students",
+      "addedAt": "2026-10-27",
+      "phase": "implementation",
+      "taskId": "students-responsive-2026-10-27",
+      "purpose": "Плитка студенческой жизни",
+      "files": ["students/index.html", "src/scss/students/blocks/student-life.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "feature-card",
+        "files": ["abiturient/index.html", "src/scss/abiturient/blocks/feature-card.scss"]
       }
     }
   ],

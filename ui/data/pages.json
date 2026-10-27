@@ -1,5 +1,13 @@
 [
   {
+    "id": "students",
+    "name": "Студентам",
+    "url": "/students/",
+    "status": "Реализована; проверены 1920 и шесть адаптивов; ссылки с заглушками #; ожидается наполнение двух вкладок",
+    "design": "https://www.figma.com/design/MdNS1JNJQqYX95VcB4HU48/?node-id=2-1656",
+    "remarksReport": "students/STYLE-REMARKS.md"
+  },
+  {
     "id": "main",
     "name": "Главная",
     "url": "/",
