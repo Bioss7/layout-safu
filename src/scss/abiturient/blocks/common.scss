@@ -13,17 +13,6 @@
   margin-bottom: 80px;
 }
 
-.section-header__content {
-  display: flex;
-  flex-direction: column;
-  flex: 0;
-  min-width: 598px;
-}
-
-.section-title {
-  margin-bottom: 80px;
-}
-
 .link-arrow {
   display: flex;
   align-items: center;
@@ -61,10 +50,6 @@
     mask-position: center;
     mask-size: contain;
     mask-repeat: no-repeat;
-  }
-  &--header::after {
-    width: 40px;
-    height: 40px;
   }
 }
 
@@ -159,40 +144,17 @@
   .section-header {
     margin-bottom: 60px;
   }
-
-  .section-header__content {
-    min-width: 524px;
-  }
 }
 
 @include breakpoint($bp-1200) {
   .section-header {
     margin-bottom: 60px;
   }
-
-  .section-title {
-    margin-bottom: 60px;
-  }
-}
-
-@include breakpoint($bp-992) {
-  .section-header__content {
-    min-width: 0;
-  }
-
-  .section-title {
-    margin-bottom: 40px;
-  }
 }
 
 @include breakpoint($bp-768) {
   .section-header {
     gap: 24px;
-  }
-
-  .section-header__content {
-    flex: 1 1 auto;
-    width: 100%;
   }
 }
 
@@ -203,16 +165,10 @@
     margin-bottom: 32px;
   }
 
-  .section-title {
-    margin-bottom: 32px;
-  }
-
   .link-arrow {
     &::after {
       -webkit-mask-image: url("/abiturient/assets/img/icons/link-arrow-390.svg");
       mask-image: url("/abiturient/assets/img/icons/link-arrow-390.svg");
-    }
-    &:not(&--header)::after {
       width: 16px;
       height: 16px;
     }

@@ -185,7 +185,6 @@
   line-height: 26px;
   color: var(--main-accent-accent-100);
   text-decoration: none;
-  transition: opacity 0.3s ease;
   font-style: normal;
   letter-spacing: 0em;
 }
@@ -596,13 +595,6 @@
     background-image: url("/abiturient/assets/img/review/review-play-768.svg");
     background-size: contain;
     background-repeat: no-repeat;
-  }
-
-  .button--stories {
-    font-size: 14px;
-    line-height: 20px;
-    min-height: 42px;
-    padding: 9px 12px;
   }
 }
 
