@@ -7,7 +7,16 @@ import { Script } from "node:vm";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const dist = resolve(root, "dist");
-const pages = ["main", "about", "programs", "abiturient", "students"];
+const pages = [
+  "main",
+  "about",
+  "programs",
+  "abiturient",
+  "students",
+  "template-main",
+  "template-abiturient",
+  "template-international",
+];
 async function files(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   return (

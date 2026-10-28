@@ -1,0 +1,69 @@
+@use "../../../../template-main/assets/scss/_mixins" as *;
+@use "../../../../template-main/assets/scss/_vars" as *;
+
+@font-face {
+  font-family: "Cakra";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Cakra-Normal.woff2") format("woff2");
+}
+
+.template-page--international {
+  --template-gradient-angle: 117.6797236322deg;
+  --template-gradient-start: #e2f1f7;
+  --template-gradient-end: #eee7fa;
+  --template-table-gradient-start: #f8e8ea;
+  --template-table-gradient-end: #f5f1dd;
+  background-image: linear-gradient(
+    var(--template-gradient-angle),
+    var(--template-gradient-start) 0%,
+    var(--template-gradient-end) 70.711%
+  );
+}
+
+.template-content--international {
+  --template-heading-family: "Cakra", sans-serif;
+  :is(h1, h2, h3, h4, h5, h6) {
+    text-transform: uppercase;
+  }
+  thead th {
+    --template-table-gradient-angle: 170.3217399469deg;
+    background-image: linear-gradient(
+      var(--template-table-gradient-angle),
+      var(--template-table-gradient-start) 0%,
+      var(--template-table-gradient-end) 70.711%
+    );
+  }
+  thead th:nth-child(2) {
+    --template-table-gradient-angle: 164.3125462147deg;
+  }
+  thead th:nth-child(3) {
+    --template-table-gradient-angle: 159.4439547804deg;
+  }
+  thead th:nth-child(4) {
+    --template-table-gradient-angle: 170.2971427671deg;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .template-page--international {
+    --template-gradient-angle: 97.8986074084deg;
+  }
+  .template-content--international {
+    --template-section-gap: 32px;
+    h6 {
+      font-family: var(--second-family);
+    }
+    thead th {
+      --template-table-gradient-angle: 169.0459373566deg;
+    }
+    thead th:nth-child(2),
+    thead th:nth-child(3) {
+      --template-table-gradient-angle: 154.7594707352deg;
+    }
+    thead th:nth-child(4) {
+      --template-table-gradient-angle: 173.3137830114deg;
+    }
+  }
+}

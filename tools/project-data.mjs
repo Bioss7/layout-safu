@@ -18,10 +18,18 @@ export async function collectRemarks() {
       throw new Error("Идентификатор замечания должен быть уникальным.");
     seen.add(entry.id);
     const file = resolve(root, entry.file);
-    if (!file.startsWith(root + sep) || !/^(?:(?:main|about|programs|abiturient|students)\/)?assets\/scss\/.+\.scss$/.test(entry.file))
+    if (
+      !file.startsWith(root + sep) ||
+      !/^(?:(?:main|about|programs|abiturient|students|template-main|template-abiturient|template-international)\/)?assets\/scss\/.+\.scss$/.test(
+        entry.file,
+      )
+    )
       throw new Error("Источник замечания должен находиться в assets/scss шаблона или страницы.");
     const lines = (await readFile(file, "utf8")).split(/\r?\n/);
-    const line = lines.findIndex((value) => value.includes(entry.selector) && !value.trimStart().startsWith("//")) + 1;
+    const line =
+      lines.findIndex(
+        (value) => value.includes(entry.selector) && !value.trimStart().startsWith("//"),
+      ) + 1;
     if (!line) throw new Error(`Селектор замечания ${entry.id} не найден в SCSS.`);
     const text = entry.description
       ? `Замечание — блок «${entry.block}», элемент ${entry.selector}: ${entry.description}; ${entry.fallback}.`
@@ -64,7 +72,9 @@ export function validateComponentMetadata(entry) {
       if (
         typeof file !== "string" ||
         file.includes("\\") ||
-        !/^(?:(?:(?:main|about|programs|abiturient|students)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(file) ||
+        !/^(?:(?:(?:main|about|programs|abiturient|students|template-main|template-abiturient|template-international)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(
+          file,
+        ) ||
         file.split("/").includes("..") ||
         !resolve(root, file).startsWith(root + sep)
       )
@@ -157,7 +167,9 @@ export async function checkProjectData() {
       await readFile(resolve(root, file), "utf8");
   }
   for (const page of pages.filter((page) => inventory.auditedPages.includes(page.id))) {
-    const html = renderSharedHtml(await readFile(resolve(root, page.url.replace(/^\//, ""), "index.html"), "utf8"));
+    const html = renderSharedHtml(
+      await readFile(resolve(root, page.url.replace(/^\//, ""), "index.html"), "utf8"),
+    );
     const classes = new Set(
       [...html.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\s+/)),
     );

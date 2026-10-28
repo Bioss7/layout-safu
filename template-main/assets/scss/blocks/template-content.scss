@@ -1,0 +1,421 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+.template-content {
+  --template-link-visited: #5856d6;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 0;
+  padding: 48px;
+  margin-inline: auto;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-100);
+  overflow-wrap: anywhere;
+
+  :where(h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, hr, table) {
+    margin: 0;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--template-heading-family, var(--second-family));
+    font-weight: var(--template-heading-weight, 400);
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: var(--template-section-gap, 48px);
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  p + p {
+    margin-top: 12px;
+  }
+  strong {
+    font-weight: 600;
+  }
+  b {
+    font-weight: 700;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+  sup,
+  sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup {
+    top: -0.5em;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+
+  a {
+    color: var(--template-link);
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-position: from-font;
+    transition: color 160ms;
+    &:visited {
+      color: var(--template-link-visited);
+    }
+    &:hover {
+      color: var(--main-accent-accent-100);
+    }
+  }
+
+  :is(ul, ol) {
+    padding-left: 22px;
+    margin-top: 12px;
+    li + li {
+      margin-top: 12px;
+    }
+    li::marker {
+      color: var(--main-accent-accent-100);
+    }
+    :is(ul, ol) {
+      margin-bottom: 12px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    > li {
+      position: relative;
+      padding-left: 14px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--main-accent-accent-100);
+      }
+    }
+  }
+  ol {
+    list-style-type: decimal;
+    padding-left: 18px;
+    color: var(--main-blue-blue-90);
+  }
+  :is(p, hr) + p:has(> strong:only-child) {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  figure {
+    margin-top: var(--template-section-gap, 48px);
+  }
+  > img,
+  > p:has(> img:only-child),
+  > picture {
+    margin-top: var(--template-section-gap, 48px);
+  }
+  picture {
+    display: block;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  > img,
+  > p > img:only-child {
+    width: 100%;
+  }
+  figure img {
+    width: 100%;
+  }
+  figcaption {
+    margin-top: 12px;
+    color: var(--main-blue-blue-80);
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--main-blue-blue-20);
+    margin-block: 24px;
+  }
+  hr + p:has(> strong:only-child) {
+    margin-top: 0;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 24px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  caption {
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+  }
+  th,
+  td {
+    padding: 20px;
+    border: 1px solid var(--main-blue-blue-20);
+    vertical-align: top;
+  }
+  th {
+    font-weight: 600;
+  }
+  tbody th {
+    padding-right: 14px;
+  }
+  thead {
+    background-color: var(--main-accent-accent-10);
+  }
+  th:first-child {
+    width: 32.7%;
+  }
+  th:nth-child(2) {
+    width: 19.85%;
+  }
+  th:nth-child(3) {
+    width: 14.86%;
+  }
+  thead th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  thead tr {
+    height: 66px;
+  }
+  tbody tr {
+    height: 89px;
+  }
+  table + p {
+    margin-top: 24px;
+    color: var(--main-blue-blue-80);
+  }
+  [data-table-scroll] {
+    min-width: 0;
+    margin-top: 24px;
+  }
+  [data-table-scroll] + p {
+    margin-top: 24px;
+    color: var(--main-blue-blue-80);
+  }
+  [data-table-label] {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+  [data-table-viewport] {
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:focus-visible {
+      outline: 3px solid var(--main-accent-accent-100);
+      outline-offset: 4px;
+    }
+  }
+  [data-table-viewport] > table {
+    display: table;
+    max-width: none;
+    margin-top: 0;
+    overflow: visible;
+  }
+  [data-table-viewport] caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  [data-table-progress] {
+    display: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    margin-bottom: 12px;
+    border: 0;
+    background-color: var(--main-blue-blue-10);
+    &::-webkit-progress-bar {
+      background-color: var(--main-blue-blue-10);
+      border-radius: 4px;
+    }
+    &::-webkit-progress-value {
+      background-color: var(--main-accent-accent-100);
+      border-radius: 4px;
+    }
+    &::-moz-progress-bar {
+      background-color: var(--main-accent-accent-100);
+      border-radius: 4px;
+    }
+  }
+  [data-table-scroll][data-overflow="true"] > progress {
+    display: block;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .template-content {
+    padding: 32px;
+    table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--main-accent-accent-100) var(--main-blue-blue-10);
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: var(--main-blue-blue-10);
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--main-accent-accent-100);
+        border-radius: 4px;
+      }
+      &:focus-visible {
+        outline: 3px solid var(--main-accent-accent-100);
+        outline-offset: 4px;
+      }
+    }
+    th,
+    td {
+      min-width: 140px;
+    }
+  }
+}
+
+@include breakpoint($bp-576) {
+  .template-content {
+    padding: 16px;
+    h1 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    h3 {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    h5 {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h6 {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    :is(p, hr) + p:has(> strong:only-child) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    > img,
+    > p > img:only-child,
+    figure img {
+      width: calc(100% - 16px);
+    }
+    > img,
+    > p:has(> img:only-child),
+    > picture,
+    figure {
+      margin-bottom: 0;
+    }
+    > img + h2,
+    > p:has(> img:only-child) + h2,
+    > picture + h2,
+    figure + h2 {
+      margin-top: calc(var(--template-section-gap, 48px) + var(--template-image-bottom, 8.68445px));
+    }
+    table {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    th,
+    td {
+      padding: 16px;
+    }
+    thead th {
+      padding-top: 16px;
+      padding-bottom: 26px;
+    }
+    // Ширины четырёхколоночного примера из Figma; остальные таблицы сохраняют нативную раскладку.
+    tr:has(> :nth-child(4):last-child) {
+      > :first-child {
+        width: 341px;
+        min-width: 341px;
+      }
+      > :nth-child(2),
+      > :nth-child(3) {
+        width: 140px;
+        min-width: 140px;
+      }
+      > :nth-child(4) {
+        width: 563px;
+        min-width: 563px;
+      }
+    }
+    tbody tr {
+      height: 53px;
+    }
+  }
+}

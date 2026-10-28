@@ -42,5 +42,26 @@
     "status": "Реализована; есть замечания к отсутствующим состояниям",
     "design": "https://www.figma.com/design/aVwbPxZ5FUxYkvTcvME566/?node-id=4147-4873",
     "remarksReport": "abiturient/STYLE-REMARKS.md"
+  },
+  {
+    "id": "template-main",
+    "name": "Шаблон — Главная",
+    "url": "/template-main/",
+    "status": "Реализована; визуально сверена на 1920 и 576; проверена на 20 ширинах; общая оболочка сохранена",
+    "design": "https://www.figma.com/design/zdA190tK6pprgrjmwacIqP/?node-id=76-3325"
+  },
+  {
+    "id": "template-abiturient",
+    "name": "Шаблон — Абитуриент",
+    "url": "/template-abiturient/",
+    "status": "Реализована; визуально сверена на 1920 и 576; проверена на 20 ширинах; общая оболочка сохранена",
+    "design": "https://www.figma.com/design/0g0if0G5GAMLjX6ZQU5GhP/?node-id=126-6772"
+  },
+  {
+    "id": "template-international",
+    "name": "Шаблон — Иностранный абитуриент",
+    "url": "/template-international/",
+    "status": "Реализована; визуально сверена на 1920 и 576; проверена на 20 ширинах; общая оболочка сохранена",
+    "design": "https://www.figma.com/design/0g0if0G5GAMLjX6ZQU5GhP/?node-id=126-7463"
   }
 ]

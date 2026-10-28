@@ -1,0 +1,51 @@
+@use "../../../../template-main/assets/scss/_mixins" as *;
+@use "../../../../template-main/assets/scss/_vars" as *;
+
+body.template-page--abiturient {
+  background-color: var(--main-white-white-100);
+  background-image: url("../../img/page/background-tile.png");
+  background-position: center top;
+  background-size: 1920px 800px;
+  background-repeat: repeat-y;
+}
+
+.template-content--abiturient {
+  --template-heading-family: "Unbounded", sans-serif;
+  --template-heading-weight: 800;
+  border: 3px solid var(--main-white-white-100);
+  background-color: var(--main-blue-blue-5);
+  box-shadow: 3px 3px 0 #000;
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    text-transform: uppercase;
+  }
+  tbody {
+    background-color: var(--main-white-white-100);
+  }
+  tbody th {
+    padding-right: 12px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .template-page--abiturient .breadcrumbs--template {
+    width: calc(100% - 32px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .template-content--abiturient {
+    --template-section-gap: 32px;
+    --template-image-bottom: 5.46042px;
+    // Кадр 126:7009 сохраняет свободное место после списка; длинный контент расширяет статью.
+    min-height: 3064px;
+    h6 {
+      font-size: 14px;
+      line-height: 26px;
+    }
+    > img,
+    > p > img:only-child,
+    figure img {
+      width: calc(100% - 10px);
+    }
+  }
+}

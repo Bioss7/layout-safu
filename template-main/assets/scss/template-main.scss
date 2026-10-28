@@ -1,0 +1,10 @@
+@use "./reset";
+@use "./blocks/breadcrumbs";
+@use "./blocks/template-page";
+@use "./blocks/template-content";
+
+.template-page *,
+.template-page *::before,
+.template-page *::after {
+  box-sizing: border-box;
+}

@@ -1,8 +1,18 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, relative, resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const owners = ["", "main", "about", "programs", "abiturient", "students"];
+const owners = [
+  "",
+  "main",
+  "about",
+  "programs",
+  "abiturient",
+  "students",
+  "template-main",
+  "template-abiturient",
+  "template-international",
+];
 const posix = (path) => path.replaceAll("\\", "/");
 const local = (path) => posix(relative(root, path));
 
@@ -25,7 +35,10 @@ function files(directory) {
 export function scriptInputs() {
   return Object.fromEntries(
     owners
-      .flatMap((owner) => files(resolve(root, owner, "assets/js")))
+      .flatMap((owner) => {
+        const directory = resolve(root, owner, "assets/js");
+        return existsSync(directory) ? files(directory) : [];
+      })
       .filter((file) => file.endsWith(".js"))
       .map((file) => [local(file).slice(0, -3), file]),
   );
@@ -44,7 +57,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );
@@ -105,6 +118,18 @@ export function pageAssets() {
       order: "post",
       handler(_options, bundle) {
         const outputs = new Set(Object.keys(bundle));
+        // Rollup объединяет одинаковый CSS, но классический HTML сохраняет путь каждой страницы.
+        for (const asset of Object.values(bundle)) {
+          if (asset.type !== "asset" || !asset.fileName.endsWith(".css")) continue;
+          for (const name of asset.names || []) {
+            const owner = name.replace(/^css-/, "").replace(/\.css$/, "");
+            if (!owner || !owners.includes(owner)) continue;
+            const alias = `${owner}/assets/css/${owner}.css`;
+            if (outputs.has(alias)) continue;
+            this.emitFile({ type: "asset", fileName: alias, source: asset.source });
+            outputs.add(alias);
+          }
+        }
         // Копируем также файлы, выбираемые динамически из JS и data-атрибутов.
         for (const owner of owners) {
           for (const file of files(resolve(root, owner, "assets"))) {

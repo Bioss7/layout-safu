@@ -1,0 +1,119 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../../assets/fonts/Montserrat-Italic.ttf") format("truetype");
+}
+
+:root {
+  --template-link: #007aff;
+}
+body.template-page {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-blue-blue-5);
+}
+.template-page__main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+.container--template {
+  width: calc(100% - 64px);
+  max-width: 1280px;
+}
+.breadcrumbs--template {
+  color: var(--main-blue-blue-100);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+.breadcrumbs--template .breadcrumbs__list {
+  flex-wrap: wrap;
+}
+.breadcrumbs--template .breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumbs--template .breadcrumbs__item::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url("../../../../assets/img/header/header-chevron-right.svg");
+  mask-size: 24px 24px;
+  mask-repeat: no-repeat;
+}
+.template-page :is(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--main-accent-accent-100);
+  outline-offset: 4px;
+}
+.template-page [hidden] {
+  display: none !important;
+}
+@include breakpoint($bp-1440) {
+  .container {
+    width: calc(100% - 128px);
+  }
+  .container--template {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-1200) {
+  .container {
+    width: calc(100% - 96px);
+  }
+  .container--template {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-992) {
+  .container {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-768) {
+  .container {
+    width: calc(100% - 48px);
+  }
+}
+@include breakpoint($bp-576) {
+  .template-page__main {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .container {
+    width: calc(100% - 64px);
+  }
+  .container--template {
+    width: calc(100% - 32px);
+  }
+  .breadcrumbs--template {
+    margin-left: auto;
+    margin-bottom: 32px;
+    padding-top: 10px;
+  }
+}
+@include breakpoint($bp-390) {
+  .breadcrumbs--template {
+    padding-top: 10px;
+    margin-left: auto;
+  }
+  .breadcrumbs--template .breadcrumbs__list {
+    font-size: 14px;
+  }
+  .breadcrumbs--template .breadcrumbs__current {
+    font-size: 14px;
+  }
+}

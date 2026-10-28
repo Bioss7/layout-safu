@@ -278,11 +278,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Шапка",
-      "files": [
-        "abiturient/index.html",
-        "assets/scss/blocks/header.scss",
-        "assets/js/header.js"
-      ],
+      "files": ["abiturient/index.html", "assets/scss/blocks/header.scss", "assets/js/header.js"],
       "reuseSource": {
         "page": "main",
         "id": "header",
@@ -460,11 +456,7 @@
       "phase": null,
       "taskId": null,
       "purpose": "Подвал",
-      "files": [
-        "abiturient/index.html",
-        "assets/scss/blocks/footer.scss",
-        "assets/js/footer.js"
-      ],
+      "files": ["abiturient/index.html", "assets/scss/blocks/footer.scss", "assets/js/footer.js"],
       "reuseSource": {
         "page": "main",
         "id": "footer",
@@ -480,11 +472,7 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Шапка",
-      "files": [
-        "students/index.html",
-        "assets/scss/blocks/header.scss",
-        "assets/js/header.js"
-      ],
+      "files": ["students/index.html", "assets/scss/blocks/header.scss", "assets/js/header.js"],
       "reuseSource": {
         "page": "abiturient",
         "id": "header",
@@ -532,11 +520,7 @@
       "phase": "implementation",
       "taskId": "students-responsive-2026-10-27",
       "purpose": "Подвал",
-      "files": [
-        "students/index.html",
-        "assets/scss/blocks/footer.scss",
-        "assets/js/footer.js"
-      ],
+      "files": ["students/index.html", "assets/scss/blocks/footer.scss", "assets/js/footer.js"],
       "reuseSource": {
         "page": "abiturient",
         "id": "footer",
@@ -616,6 +600,40 @@
         "id": "feature-card",
         "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/feature-card.scss"]
       }
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Хлебные крошки шаблона",
+      "origin": "existing",
+      "page": "template-main",
+      "addedAt": "2026-10-28",
+      "phase": "implementation",
+      "taskId": "content-templates",
+      "purpose": "Навигация перед редакторской областью; локальный цвет для светлого фона",
+      "files": [
+        "template-main/index.html",
+        "template-main/assets/scss/blocks/breadcrumbs.scss",
+        "template-main/assets/scss/blocks/template-page.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "breadcrumbs",
+        "files": ["abiturient/assets/scss/blocks/breadcrumbs.scss"]
+      }
+    },
+    {
+      "id": "template-table",
+      "name": "Прокрутка таблицы по тегу table",
+      "origin": "new",
+      "page": "template-main",
+      "addedAt": "2026-10-28",
+      "phase": "implementation",
+      "taskId": "content-templates",
+      "purpose": "Автоматическая обработка тега table без классов; обёртки с data-атрибутами",
+      "files": [
+        "template-main/assets/js/content-tables.js",
+        "template-main/assets/scss/blocks/template-content.scss"
+      ]
     }
   ],
   "reusableComponents": [
