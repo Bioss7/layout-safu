@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "auditedPages": ["abiturient", "students"],
+  "auditedPages": ["abiturient", "students", "partners"],
   "definition": "Самостоятельный БЭМ-компонент. Повторения, элементы, модификаторы и структурные обёртки не увеличивают счётчик. Перенесённые и адаптированные готовые компоненты учитываются отдельно.",
   "entries": [
     {
@@ -633,6 +633,157 @@
       "files": [
         "template-main/assets/js/content-tables.js",
         "template-main/assets/scss/blocks/template-content.scss"
+      ]
+    },
+    {
+      "id": "partner-hero",
+      "name": "Первый экран партнерам",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Первый экран партнерам",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-hero.scss",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-marquee",
+      "name": "Информационная строка",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Информационная строка",
+      "files": ["partners/index.html", "partners/assets/scss/blocks/partner-marquee.scss"]
+    },
+    {
+      "id": "partner-practice",
+      "name": "Кадры и практика",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Кадры и практика",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-practice.scss",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-development",
+      "name": "Программа развития",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Программа развития",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-development.scss",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-opportunities",
+      "name": "Возможности сотрудничества",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Возможности сотрудничества",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-opportunities.scss",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-network",
+      "name": "Наши партнеры",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Наши партнеры",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-network.scss",
+        "partners/assets/js/tabs.js",
+        "partners/assets/js/logos.js",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-cta",
+      "name": "Стать партнером",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Стать партнером",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-cta.scss",
+        "partners/assets/scss/blocks/section.scss"
+      ]
+    },
+    {
+      "id": "partner-title",
+      "name": "Заголовок секции",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Заголовок секции",
+      "files": ["partners/index.html", "partners/assets/scss/blocks/base.scss"]
+    },
+    {
+      "id": "partner-button",
+      "name": "Кнопка партнерам",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Кнопка партнерам",
+      "files": ["partners/index.html", "partners/assets/scss/blocks/base.scss"]
+    },
+    {
+      "id": "partner-opportunity",
+      "name": "Карточка возможности",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Карточка возможности",
+      "files": ["partners/index.html", "partners/assets/scss/blocks/partner-opportunities.scss"]
+    },
+    {
+      "id": "partner-logos",
+      "name": "Лента логотипов",
+      "origin": "new",
+      "page": "partners",
+      "addedAt": "2026-10-28",
+      "phase": "verification",
+      "taskId": null,
+      "purpose": "Лента логотипов",
+      "files": [
+        "partners/index.html",
+        "partners/assets/scss/blocks/partner-network.scss",
+        "partners/assets/js/logos.js"
       ]
     }
   ],

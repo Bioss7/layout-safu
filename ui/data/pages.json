@@ -63,5 +63,13 @@
     "url": "/template-international/",
     "status": "Реализована; визуально сверена на 1920 и 576; проверена на 20 ширинах; общая оболочка сохранена",
     "design": "https://www.figma.com/design/0g0if0G5GAMLjX6ZQU5GhP/?node-id=126-7463"
+  },
+  {
+    "id": "partners",
+    "name": "Партнерам",
+    "url": "/partners/",
+    "status": "Реализована; сверены макеты 1920 и 390; проверена на 18 ширинах; ссылки #; логотипы временно повторяются во всех вкладках",
+    "design": "https://www.figma.com/design/CGbmxuN7RRy1plfxfak9U1/?node-id=1-908",
+    "remarksReport": "partners/STYLE-REMARKS.md"
   }
 ]

@@ -1,0 +1,18 @@
+@forward "../../../assets/scss/vars";
+
+$bp-1400: 1400px;
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "HS_LunaObscura", sans-serif;
+  --main-blue-blue-100: #0b2d4e;
+  --main-blue-blue-90: #234260;
+  --main-blue-blue-70: #546c83;
+  --main-blue-blue-30: #b6c0ca;
+  --main-white-white-100: #fff;
+  --main-accent-accent-100: #00aeef;
+  --partner-white-80: rgba(255, 255, 255, 0.8);
+  --partner-page-background: #d6eaf8;
+  --partner-tab-background: #c2d7e8;
+  --partner-logo-background: rgba(255, 255, 255, 0.5);
+}

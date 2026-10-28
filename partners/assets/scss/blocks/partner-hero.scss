@@ -1,0 +1,191 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.partner-hero {
+  min-height: 802px;
+  background-image: url("../../img/hero/harbor.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.partner-hero__breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 46px;
+  min-height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: var(--main-accent-accent-100);
+    }
+  }
+  [aria-current] {
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+}
+.partner-hero__chevron {
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url("../../img/icons/chevron-right.svg");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+.partner-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 860px;
+}
+.partner-hero__title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.partner-hero__description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.partner-hero__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.partner-hero__text {
+  max-width: 747px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--main-blue-blue-70);
+}
+.partner-hero__text--mobile {
+  display: none;
+}
+.partner-hero__copy > .partner-button {
+  margin-top: 15px;
+}
+
+@include breakpoint($bp-1400) {
+  .partner-hero {
+    min-height: 740px;
+    background-position: 57% center;
+  }
+  .partner-hero__copy {
+    max-width: 700px;
+  }
+  .partner-hero__title {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  .partner-hero__text {
+    max-width: 610px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .partner-hero__copy {
+    max-width: 640px;
+  }
+  .partner-hero__title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+@include breakpoint($bp-992) {
+  .partner-hero {
+    min-height: 690px;
+    background-position: 48% center;
+  }
+  .partner-hero__copy {
+    max-width: 570px;
+  }
+  .partner-hero__subtitle {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .partner-hero__text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@include breakpoint($bp-768) {
+  .partner-hero {
+    min-height: 650px;
+    background-position: 40% center;
+  }
+  .partner-hero__breadcrumbs {
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .partner-hero__copy {
+    max-width: 520px;
+    gap: 20px;
+  }
+  .partner-hero__title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+@include breakpoint($bp-576) {
+  .partner-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 779px;
+    background-image: none;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      height: calc(100% + 58px);
+      background-image: url("../../img/hero/harbor-mobile.png");
+      background-size: 147.83% 122.39%;
+      background-position: 57.16% 71.55%;
+      background-repeat: no-repeat;
+    }
+  }
+  .partner-hero > .container {
+    position: relative;
+  }
+  .partner-hero__breadcrumbs {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .partner-hero__copy {
+    gap: 0;
+  }
+  .partner-hero__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .partner-hero__subtitle {
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .partner-hero__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .partner-hero__text--desktop {
+    display: none;
+  }
+  .partner-hero__text--mobile {
+    display: block;
+  }
+  .partner-hero__copy > .partner-button {
+    width: 100%;
+    margin-top: 24px;
+  }
+}

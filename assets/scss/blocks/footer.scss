@@ -11,6 +11,7 @@
 
 .footer__toggle {
   @include reset-btn;
+  border-bottom: 1px solid var(--main-white-white-200-opacity);
   display: block;
   width: 100%;
   padding: 0;

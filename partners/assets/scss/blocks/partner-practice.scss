@@ -1,0 +1,113 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+.partner-practice__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 80px;
+}
+.partner-practice__card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex: 0 0 calc((100% - 16px) * 0.4149061);
+  min-width: 0;
+  min-height: 420px;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--main-blue-blue-100);
+  color: var(--main-white-white-100);
+  text-decoration: none;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 45, 78, 0.3);
+    pointer-events: none;
+  }
+  &--wide {
+    flex-basis: calc((100% - 16px) * 0.5850939);
+  }
+}
+.partner-practice__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.partner-practice__title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--second-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.partner-practice__break {
+  display: none;
+}
+@include breakpoint($bp-1400) {
+  .partner-practice__cards {
+    padding-top: 56px;
+  }
+  .partner-practice__card {
+    min-height: 350px;
+    padding: 28px;
+  }
+  .partner-practice__title {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .partner-practice__title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+@include breakpoint($bp-992) {
+  .partner-practice__card {
+    flex-basis: calc((100% - 16px) / 2);
+    min-height: 300px;
+    padding: 24px;
+  }
+}
+@include breakpoint($bp-768) {
+  .partner-practice__cards {
+    padding-top: 40px;
+  }
+  .partner-practice__card {
+    min-height: 260px;
+    padding: 20px;
+  }
+  .partner-practice__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@include breakpoint($bp-576) {
+  .partner-practice__cards {
+    padding-top: 32px;
+  }
+  .partner-practice__card {
+    flex-basis: 100%;
+    min-height: 0;
+    aspect-ratio: 1;
+    border-radius: 2.5px;
+  }
+  .partner-practice__title {
+    line-height: 28px;
+    letter-spacing: 0.06em;
+  }
+  .partner-practice__break {
+    display: inline;
+  }
+  .partner-practice__desktop-break {
+    display: none;
+  }
+}

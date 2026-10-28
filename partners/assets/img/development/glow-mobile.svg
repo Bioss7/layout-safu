@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="619.943" height="619.943" viewBox="0 0 619.943 619.943" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="aurora-glow-left" filter="url(#filter0_f_0_630)" style="mix-blend-mode:color-dodge">
+<path d="M445.471 309.971C445.471 384.806 384.806 445.471 309.971 445.471C235.137 445.471 174.471 384.806 174.471 309.971C174.471 235.137 235.137 174.471 309.971 174.471C384.806 174.471 445.471 235.137 445.471 309.971Z" fill="#00AEEF" fill-opacity="0.4"/>
+</g>
+<defs>
+<filter id="filter0_f_0_630" x="0" y="0" width="619.943" height="619.943" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="87.2356" result="effect1_foregroundBlur_0_630"/>
+</filter>
+</defs>
+</svg>

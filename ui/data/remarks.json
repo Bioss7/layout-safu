@@ -123,6 +123,16 @@
       "fallback": "по согласованию показано сообщение об отсутствии содержимого",
       "file": "students/assets/scss/blocks/student-services.scss",
       "description": "Наполнение вкладок «Наука и карьера в науке» и «Аспиранту» отсутствует в источнике"
+    },
+    {
+      "id": "partners-demo-logos",
+      "page": "partners",
+      "block": "Наши партнеры",
+      "selector": ".partner-network",
+      "states": [],
+      "description": "Отдельные наборы логотипов трех дополнительных вкладок не предоставлены",
+      "fallback": "По согласованию во всех четырех вкладках повторяется набор из макета",
+      "file": "partners/assets/scss/blocks/partner-network.scss"
     }
   ]
 }
