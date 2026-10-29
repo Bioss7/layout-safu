@@ -7,9 +7,6 @@
   gap: 16px;
   margin-top: 80px;
 }
-.section--competencies .stp-title {
-  height: 48px;
-}
 .stp-competency {
   display: flex;
   flex-direction: column;
@@ -45,9 +42,6 @@
   line-height: 26px;
 }
 @include breakpoint($bp-1400) {
-  .section--competencies .stp-title {
-    height: auto;
-  }
   .stp-competency {
     padding: 24px;
   }

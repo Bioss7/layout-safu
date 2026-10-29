@@ -209,7 +209,7 @@ try {
       "Переполнение страницы " + width,
     );
     const bad = await page
-      .locator(".stp-competency,.stp-case,.stp-contact,.stp-stat,.stp-project")
+      .locator(".stp-competency,.stp-case,.stp-contact,.stp-stat,.stp-project,.stp-metric")
       .evaluateAll((ns) =>
         ns.filter((n) => n.scrollWidth > n.clientWidth + 1).map((n) => n.className),
       );

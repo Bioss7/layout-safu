@@ -66,6 +66,9 @@ body {
   border-radius: 50%;
   background-color: currentColor;
 }
+.stp-title--competencies {
+  line-height: 48px;
+}
 .stp-title--contacts {
   line-height: 48px;
   letter-spacing: 0.04em;
@@ -99,6 +102,9 @@ body {
   }
   .stp-title {
     font-size: 32px;
+    line-height: 44px;
+  }
+  .stp-title--competencies {
     line-height: 44px;
   }
   .stp-title::before {
