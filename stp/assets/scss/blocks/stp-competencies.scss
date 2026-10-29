@@ -1,0 +1,84 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.stp-competencies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 80px;
+}
+.section--competencies .stp-title {
+  height: 48px;
+}
+.stp-competency {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  flex: 0 0 calc((100% - 32px) / 3);
+  min-width: 0;
+  min-height: 510px;
+  padding: 28px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.stp-competency__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.stp-competency__icon {
+  width: 60px;
+  height: 60px;
+}
+.stp-competency__title {
+  font-family: var(--second-family);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.06em;
+
+  overflow-wrap: anywhere;
+}
+.stp-competency__text {
+  font-size: 18px;
+  line-height: 26px;
+}
+@include breakpoint($bp-1400) {
+  .section--competencies .stp-title {
+    height: auto;
+  }
+  .stp-competency {
+    padding: 24px;
+  }
+  .stp-competency__title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .stp-competencies {
+    margin-top: 56px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .stp-competency {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@include breakpoint($bp-768) {
+  .stp-competency {
+    flex-basis: 100%;
+    min-height: 0;
+    padding: 16px;
+  }
+  .stp-competency__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .stp-competency__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .stp-competencies {
+    margin-top: 32px;
+  }
+}

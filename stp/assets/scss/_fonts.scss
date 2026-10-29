@@ -1,0 +1,32 @@
+// Локальные начертания Figma подключены отдельными именами только для содержимого STP.
+@font-face {
+  font-family: "Montserrat STP";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat STP";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../../assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat STP";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HS_LunaObscura STP";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../../assets/fonts/HS_LunaObscura.woff2") format("woff2");
+  ascent-override: 108.8888889%;
+  descent-override: 11.1111111%;
+  line-gap-override: 25.5555556%;
+}

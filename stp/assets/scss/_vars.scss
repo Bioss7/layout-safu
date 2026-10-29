@@ -1,0 +1,13 @@
+@forward "../../../assets/scss/vars";
+$bp-1400: 1400px;
+.stp {
+  --font-family: "Montserrat STP", sans-serif;
+  --second-family: "HS_LunaObscura STP", sans-serif;
+  --stp-blue: #0b2d4e;
+  --stp-muted: #546c83;
+  --stp-caption: #6d8195;
+  --stp-accent: #00aeef;
+  --stp-background: #d6eaf8;
+  --stp-border: #c2d7e8;
+  --stp-white: #fff;
+}

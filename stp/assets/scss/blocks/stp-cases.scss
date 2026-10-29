@@ -1,0 +1,130 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.stp-cases {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 80px;
+}
+.stp-case {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 28px;
+  box-shadow: inset 0 -1px var(--stp-border);
+}
+.stp-case__picture {
+  position: relative;
+  flex: 0 0 24.302326%;
+  min-width: 0;
+}
+.stp-case__picture img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 418 / 235;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.stp-case__tag {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--stp-white);
+  font-family: var(--second-family);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+}
+.stp-case__content {
+  flex: 1;
+  min-width: 0;
+}
+.stp-case__title {
+  font-family: var(--second-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36.48px;
+  letter-spacing: 0.06em;
+}
+.stp-case__details {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 32px;
+}
+.stp-case__task {
+  flex: 0 0 36.697966%;
+  min-width: 0;
+  padding: 16px;
+}
+.stp-case__result {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background-color: var(--stp-white);
+  border-radius: 4px;
+}
+.stp-case__label {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+@include breakpoint($bp-1400) {
+  .stp-cases {
+    margin-top: 56px;
+  }
+  .stp-case__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .stp-case__details {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .stp-case__task,
+  .stp-case__result {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .stp-case__picture {
+    flex-basis: 32%;
+  }
+}
+@include breakpoint($bp-768) {
+  .stp-case {
+    flex-direction: column;
+  }
+  .stp-case__picture {
+    width: 100%;
+    flex-basis: auto;
+  }
+  .stp-case__content {
+    width: 100%;
+  }
+  .stp-case__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .stp-cases {
+    margin-top: 32px;
+    gap: 32px;
+  }
+}
+@include breakpoint($bp-576) {
+  .section--cases .stp-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .stp-case__details {
+    gap: 24px;
+  }
+  .stp-case {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

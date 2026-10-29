@@ -13,6 +13,7 @@ const pages = [
   "programs",
   "abiturient",
   "students",
+  "stp",
   "template-main",
   "template-abiturient",
   "template-international",

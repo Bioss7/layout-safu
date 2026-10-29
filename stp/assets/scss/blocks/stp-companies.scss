@@ -1,0 +1,218 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.stp-companies {
+  overflow: hidden;
+  color: var(--stp-white);
+  background-color: var(--stp-blue);
+}
+.stp-companies::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  // Непрозрачность 20% уже сохранена в десктопном экспорте.
+  opacity: 1;
+  mix-blend-mode: overlay;
+  background-image: url("../../img/companies/map.png");
+  background-size: cover;
+  background-position: center bottom;
+  pointer-events: none;
+}
+.stp-companies::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("../../img/companies/glow-left.svg"), url("../../img/companies/glow-right.svg");
+  background-repeat: no-repeat;
+  background-size:
+    1078px 1077px,
+    1208px 1208px;
+  background-position:
+    left -393px top -357px,
+    right -323px bottom -558px;
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+}
+.stp-companies > .container {
+  position: relative;
+  z-index: 1;
+}
+.stp-companies__title {
+  font-family: var(--second-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0.06em;
+}
+.stp-companies__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 80px;
+}
+.stp-companies__text {
+  flex: 1;
+  min-width: 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+.stp-companies__text p + p {
+  margin-top: 12px;
+}
+.stp-companies__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 0 0 49.534884%;
+  min-width: 0;
+}
+.stp-company {
+  flex: 0 0 calc((100% - 28px) / 2);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  // Наклон и остановки радиальной заливки перенесены из контекста Figma.
+  background-image: url("../../img/companies/card-gradient.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+}
+.stp-company__label {
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--stp-accent);
+  font-family: var(--second-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+}
+.stp-company__label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.stp-company__logo {
+  display: block;
+  width: 166.25px;
+  height: 100px;
+  max-width: 100%;
+  background-color: var(--stp-white);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+.stp-company__logo--gazprom {
+  mask-image: url("../../img/companies/gazprom.png");
+}
+.stp-company__logo--acbk {
+  mask-image: url("../../img/companies/acbk.png");
+}
+.stp-company__logo--severalmaz {
+  mask-image: url("../../img/companies/severalmaz.png");
+}
+.stp-company__name {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #cceffc;
+  text-align: center;
+}
+.stp-companies__break {
+  display: none;
+}
+@include breakpoint($bp-1400) {
+  .stp-companies__title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .stp-companies__content {
+    margin-top: 56px;
+  }
+  .stp-company {
+    padding: 24px;
+  }
+  .stp-company__label {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .stp-company {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .stp-companies__content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .stp-companies__cards {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+@include breakpoint($bp-768) {
+  .stp-companies__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .stp-companies__content {
+    margin-top: 32px;
+  }
+}
+@include breakpoint($bp-576) {
+  .stp-companies::before {
+    background-image: url("../../img/companies/map-mobile.png");
+    opacity: 0.2;
+    background-size: 161.3535% 121.0993%;
+    background-position: center top;
+  }
+  .stp-companies::after {
+    background-image:
+      url("../../img/companies/glow-mobile.svg"), url("../../img/companies/glow-mobile.svg");
+    background-size: 950px 950px;
+    background-position:
+      left -272px top -443px,
+      left -115px bottom -515px;
+  }
+  .stp-companies__break {
+    display: inline;
+  }
+  .stp-companies__content {
+    gap: 24px;
+  }
+  .stp-companies__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .stp-companies__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .stp-companies__cards {
+    gap: 24px;
+  }
+  .stp-company {
+    flex-basis: 100%;
+    padding: 16px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1019607857);
+    background-image: url("../../img/companies/card-gradient-mobile.svg");
+  }
+  .stp-company__label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

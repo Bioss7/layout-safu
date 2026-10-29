@@ -1,0 +1,143 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+body {
+  margin: 0;
+  background-color: #d6eaf8;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+.stp {
+  color: var(--stp-blue);
+  background-color: var(--stp-background);
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 26px;
+}
+.stp :where(h1, h2, h3, h4, p, dl, dd) {
+  margin: 0;
+}
+.stp :is(h1, h2, h3) {
+  overflow-wrap: anywhere;
+}
+.stp :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+.stp :where(button) {
+  font-family: inherit;
+  cursor: pointer;
+}
+.stp img {
+  display: block;
+  max-width: 100%;
+}
+.stp :is(a, button):focus-visible {
+  outline: 3px solid var(--stp-accent);
+  outline-offset: 4px;
+}
+.container--stp {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+.stp-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-family: var(--second-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0.06em;
+}
+.stp-title::before {
+  content: "";
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.stp-title--contacts {
+  line-height: 48px;
+  letter-spacing: 0.04em;
+}
+.stp-title--contacts::before {
+  margin-top: 18px;
+}
+.stp-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  color: var(--stp-accent);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+}
+.stp-link__icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url("../../img/icons/chevron-right.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+@include breakpoint($bp-1400) {
+  .container--stp {
+    width: calc(100% - 96px);
+  }
+  .stp-title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .stp-title::before {
+    margin-top: 16px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .container--stp {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-992) {
+  .stp-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .stp-title::before {
+    margin-top: 14px;
+  }
+}
+@include breakpoint($bp-768) {
+  .container--stp {
+    width: calc(100% - 32px);
+  }
+  .stp-title {
+    font-size: 24px;
+    line-height: 36px;
+    gap: 12px;
+  }
+  .stp-title::before {
+    margin-top: 12px;
+  }
+}
+@include breakpoint($bp-576) {
+  .stp {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .stp-title--contacts {
+    line-height: 32px;
+  }
+}

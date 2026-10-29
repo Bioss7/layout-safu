@@ -1,0 +1,97 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.section {
+  position: relative;
+}
+.section--hero {
+  padding-top: 216px;
+  padding-bottom: 134px;
+}
+.section--program {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section--dashboard {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section--competencies {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section--companies {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section--cases {
+  padding-top: 120px;
+  padding-bottom: 0;
+}
+.section--contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@include breakpoint($bp-1400) {
+  .section--hero {
+    padding-top: 216px;
+    padding-bottom: 100px;
+  }
+  .section--program,
+  .section--dashboard,
+  .section--competencies,
+  .section--companies {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .section--cases {
+    padding-top: 96px;
+  }
+  .section--contacts {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+@include breakpoint($bp-992) {
+  .section--hero {
+    padding-top: 176px;
+    padding-bottom: 200px;
+  }
+  .section--program,
+  .section--dashboard,
+  .section--competencies,
+  .section--companies {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .section--cases {
+    padding-top: 80px;
+  }
+  .section--contacts {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@include breakpoint($bp-576) {
+  .section--hero {
+    padding-top: 144px;
+    padding-bottom: 206px;
+  }
+  .section--program,
+  .section--competencies {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .section--dashboard,
+  .section--companies {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section--cases {
+    padding-top: 70px;
+  }
+  .section--contacts {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

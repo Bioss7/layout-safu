@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "auditedPages": ["abiturient", "students", "partners"],
+  "auditedPages": ["abiturient", "students", "partners", "stp"],
   "definition": "Самостоятельный БЭМ-компонент. Повторения, элементы, модификаторы и структурные обёртки не увеличивают счётчик. Перенесённые и адаптированные готовые компоненты учитываются отдельно.",
   "entries": [
     {
@@ -785,6 +785,221 @@
         "partners/assets/scss/blocks/partner-network.scss",
         "partners/assets/js/logos.js"
       ]
+    },
+    {
+      "id": "stp-hero",
+      "name": "Первый экран",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Первый экран",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-hero.scss"]
+    },
+    {
+      "id": "marquee",
+      "name": "Информационная строка",
+      "origin": "existing",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Бегущая строка главной: сохранены БЭМ-имя и пауза при наведении; геометрия STP, цикл 90 секунд по запросу пользователя",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/marquee.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "marquee",
+        "files": ["index.html", "main/assets/scss/blocks/marquee.scss"]
+      }
+    },
+    {
+      "id": "stp-program",
+      "name": "Программа развития",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Программа развития",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-program.scss"]
+    },
+    {
+      "id": "stp-accordion",
+      "name": "Аккордеон программы",
+      "origin": "existing",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Аккордеон программы",
+      "files": [
+        "stp/index.html",
+        "stp/assets/scss/blocks/stp-program.scss",
+        "stp/assets/js/accordion.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "accordion",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/js/accordion.js",
+          "abiturient/assets/scss/blocks/accordion.scss"
+        ]
+      }
+    },
+    {
+      "id": "stp-project",
+      "name": "Карточка стратегического проекта",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Карточка стратегического проекта",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-program.scss"]
+    },
+    {
+      "id": "stp-dashboard",
+      "name": "Дашборд проекта",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Дашборд проекта",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-dashboard.scss"]
+    },
+    {
+      "id": "stp-stat",
+      "name": "Карточка дашборда",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Карточка дашборда",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-dashboard.scss"]
+    },
+    {
+      "id": "stp-chart",
+      "name": "График публикаций",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "График публикаций",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-dashboard.scss"]
+    },
+    {
+      "id": "stp-funding",
+      "name": "Объем НИР",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Объем НИР",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-dashboard.scss"]
+    },
+    {
+      "id": "stp-metric",
+      "name": "Целевой показатель",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Целевой показатель",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-dashboard.scss"]
+    },
+    {
+      "id": "stp-competency",
+      "name": "Карточка компетенции",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Карточка компетенции",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-competencies.scss"]
+    },
+    {
+      "id": "stp-companies",
+      "name": "Предприятия",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Предприятия",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-companies.scss"]
+    },
+    {
+      "id": "stp-company",
+      "name": "Карточка предприятия",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Карточка предприятия",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-companies.scss"]
+    },
+    {
+      "id": "stp-case",
+      "name": "Индустриальный кейс",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Индустриальный кейс",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-cases.scss"]
+    },
+    {
+      "id": "stp-contact",
+      "name": "Контактная карточка",
+      "origin": "new",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Контактная карточка",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/stp-contacts.scss"]
+    },
+    {
+      "id": "stp-title",
+      "name": "Заголовок секции",
+      "origin": "existing",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Заголовок секции",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/base.scss"],
+      "reuseSource": {
+        "page": "partners",
+        "id": "partner-title",
+        "files": ["partners/assets/scss/blocks/base.scss"]
+      }
+    },
+    {
+      "id": "stp-link",
+      "name": "Ссылка со стрелкой",
+      "origin": "existing",
+      "page": "stp",
+      "addedAt": "2026-10-29",
+      "phase": "verification",
+      "taskId": "stp-layout",
+      "purpose": "Ссылка со стрелкой",
+      "files": ["stp/index.html", "stp/assets/scss/blocks/base.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "link-arrow",
+        "files": ["index.html", "main/assets/scss/blocks/common.scss"]
+      }
     }
   ],
   "reusableComponents": [

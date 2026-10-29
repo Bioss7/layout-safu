@@ -9,9 +9,9 @@
     "project:data:check": "node tools/project-data.mjs",
     "remarks:md": "node tools/project-data.mjs --remarks-md",
     "check:project-data": "node --test tools/project-data.test.mjs",
-    "format:styles": "prettier --write \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" \"template-main/assets/scss/**/*.scss\" \"template-abiturient/assets/scss/**/*.scss\" \"template-international/assets/scss/**/*.scss\" \"partners/assets/scss/**/*.scss\" ui/ui.css",
-    "format:styles:check": "prettier --check \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" \"template-main/assets/scss/**/*.scss\" \"template-abiturient/assets/scss/**/*.scss\" \"template-international/assets/scss/**/*.scss\" \"partners/assets/scss/**/*.scss\" ui/ui.css",
-    "format:css:build": "prettier --write --ignore-path .prettierignore.build dist/assets/css/common.css dist/abiturient/assets/css/abiturient.css dist/students/assets/css/students.css \"dist/ui/**/*.css\" dist/template-main/assets/css/template-main.css dist/template-abiturient/assets/css/template-abiturient.css dist/template-international/assets/css/template-international.css dist/partners/assets/css/partners.css",
+    "format:styles": "prettier --write \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" \"template-main/assets/scss/**/*.scss\" \"template-abiturient/assets/scss/**/*.scss\" \"template-international/assets/scss/**/*.scss\" \"partners/assets/scss/**/*.scss\" \"stp/assets/scss/**/*.scss\" ui/ui.css",
+    "format:styles:check": "prettier --check \"assets/scss/**/*.scss\" \"abiturient/assets/scss/**/*.scss\" \"students/assets/scss/**/*.scss\" \"template-main/assets/scss/**/*.scss\" \"template-abiturient/assets/scss/**/*.scss\" \"template-international/assets/scss/**/*.scss\" \"partners/assets/scss/**/*.scss\" \"stp/assets/scss/**/*.scss\" ui/ui.css",
+    "format:css:build": "prettier --write --ignore-path .prettierignore.build dist/assets/css/common.css dist/abiturient/assets/css/abiturient.css dist/students/assets/css/students.css \"dist/ui/**/*.css\" dist/template-main/assets/css/template-main.css dist/template-abiturient/assets/css/template-abiturient.css dist/template-international/assets/css/template-international.css dist/partners/assets/css/partners.css dist/stp/assets/css/stp.css",
     "preview": "vite preview",
     "stats": "node tools/ai-statistics.mjs",
     "check:statistics": "node --test tools/ai-statistics.test.mjs",
@@ -26,7 +26,8 @@
     "check:assets:runtime": "node tools/check-assets-runtime.mjs",
     "check:assets:panel": "node tools/check-assets-panel.mjs",
     "check:templates": "node tools/check-templates.mjs",
-    "check:partners": "node tools/check-partners.mjs"
+    "check:partners": "node tools/check-partners.mjs",
+    "check:stp": "node tools/check-stp.mjs"
   },
   "repository": {
     "type": "git",

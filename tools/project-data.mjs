@@ -20,7 +20,7 @@ export async function collectRemarks() {
     const file = resolve(root, entry.file);
     if (
       !file.startsWith(root + sep) ||
-      !/^(?:(?:main|about|programs|abiturient|students|partners|template-main|template-abiturient|template-international)\/)?assets\/scss\/.+\.scss$/.test(
+      !/^(?:(?:main|about|programs|abiturient|students|partners|stp|template-main|template-abiturient|template-international)\/)?assets\/scss\/.+\.scss$/.test(
         entry.file,
       )
     )
@@ -72,7 +72,7 @@ export function validateComponentMetadata(entry) {
       if (
         typeof file !== "string" ||
         file.includes("\\") ||
-        !/^(?:(?:(?:main|about|programs|abiturient|students|partners|template-main|template-abiturient|template-international)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(
+        !/^(?:(?:(?:main|about|programs|abiturient|students|partners|stp|template-main|template-abiturient|template-international)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(
           file,
         ) ||
         file.split("/").includes("..") ||

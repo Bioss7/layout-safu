@@ -10,6 +10,7 @@ const owners = [
   "abiturient",
   "students",
   "partners",
+  "stp",
   "template-main",
   "template-abiturient",
   "template-international",
@@ -58,7 +59,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students|partners|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|partners|stp|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );
@@ -81,7 +82,7 @@ export function pageAssets() {
         const pageDirectory = dirname(context.filename);
         const overlay =
           posix(context.filename) === posix(resolve(root, "index.html")) ||
-          /[\\/](?:abiturient|students|partners)[\\/]index\.html$/.test(context.filename);
+          /[\\/](?:abiturient|students|partners|stp)[\\/]index\.html$/.test(context.filename);
         html = renderSharedHtml(html, overlay);
         // Относительные ссылки работают и в dev, и после размещения dist в подкаталоге.
         html = html

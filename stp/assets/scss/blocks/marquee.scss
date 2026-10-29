@@ -1,0 +1,91 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+// Копия marquee главной; размеры и интервалы адаптированы под кадры STP.
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: var(--stp-blue);
+  background-color: var(--stp-white);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 90s linear infinite;
+  will-change: transform;
+}
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 68px;
+  min-height: 58px;
+  padding-right: 68px;
+}
+.marquee__text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.marquee__dot {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@include breakpoint($bp-768) {
+  .marquee {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .marquee__group {
+    min-height: 40px;
+  }
+  .marquee__text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@include breakpoint($bp-576) {
+  .marquee {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .marquee__group {
+    gap: 20px;
+    min-height: 58px;
+    padding-right: 20px;
+  }
+  .marquee__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+  }
+  .marquee__track {
+    animation: none;
+  }
+  .marquee__group[aria-hidden] {
+    display: none;
+  }
+}
