@@ -1,5 +1,8 @@
 @use "../mixins" as *;
 @use "../vars" as *;
+.partner-network {
+  overflow-x: clip;
+}
 .partner-network__heading {
   display: flex;
   justify-content: space-between;
@@ -65,9 +68,6 @@
   flex-direction: column;
   gap: 20px;
   padding-top: 32px;
-}
-.partner-logos__row {
-  overflow: hidden;
 }
 .partner-logos__offset {
   position: relative;
@@ -227,10 +227,6 @@
   }
   .partner-logos__image--cover {
     opacity: 0.5;
-  }
-
-  .partner-logos__row {
-    overflow: hidden;
   }
 }
 @media (prefers-reduced-motion: reduce) {
