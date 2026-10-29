@@ -1,8 +1,5 @@
 @use "../mixins" as *;
 @use "../vars" as *;
-.partner-network {
-  overflow-x: clip;
-}
 .partner-network__heading {
   display: flex;
   justify-content: space-between;
@@ -66,6 +63,7 @@
 .partner-logos {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 20px;
   padding-top: 32px;
 }
@@ -117,7 +115,7 @@
 }
 @keyframes partner-logos-scroll {
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--logo-distance, 50%)));
   }
 }
 @include breakpoint($bp-1400) {

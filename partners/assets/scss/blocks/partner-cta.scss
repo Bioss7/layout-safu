@@ -5,16 +5,10 @@
   overflow: hidden;
   color: var(--main-white-white-100);
   background-color: var(--main-blue-blue-100);
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.2;
-    background-image: url("../../img/cta/background.png");
-    background-size: 127.99% 117.7%;
-    background-position: 97.21% -0.23%;
-    background-repeat: no-repeat;
-  }
+  background-image: url("../../img/cta/background-desktop.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .partner-cta__inner {
   position: relative;
@@ -91,24 +85,6 @@
     mask-image: url("../../img/cta/trending-up.svg");
   }
 }
-.partner-cta__glow {
-  position: absolute;
-  pointer-events: none;
-  width: 1362px;
-  height: 1362px;
-  mix-blend-mode: color-dodge;
-  background-image: url("../../img/cta/glow.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  &--left {
-    left: -617px;
-    top: -545px;
-  }
-  &--right {
-    left: 1119px;
-    top: 10px;
-  }
-}
 @include breakpoint($bp-1400) {
   .partner-cta__description {
     font-size: 18px;
@@ -142,12 +118,7 @@
     display: none;
   }
   .partner-cta {
-    &::before {
-      background-image: url("../../img/development/background-mobile.png");
-      background-size: cover;
-      background-position: center;
-      transform: scaleX(-1);
-    }
+    background-image: url("../../img/cta/background-mobile.webp");
   }
   .partner-cta__inner {
     gap: 16px;
@@ -178,23 +149,5 @@
   }
   .partner-cta__icon {
     background-color: rgba(0, 174, 239, 0.3);
-  }
-  .partner-cta__glow {
-    &--left {
-      width: 930px;
-      height: 930px;
-      left: -353px;
-      top: -331px;
-      background-image: url("../../img/cta/glow-mobile-left.svg");
-      transform: scaleX(-1);
-    }
-    &--right {
-      width: 1203.5px;
-      height: 1203.5px;
-      left: -125.25px;
-      top: 983.75px;
-      background-image: url("../../img/cta/glow-mobile-right.svg");
-      transform: scaleX(-1);
-    }
   }
 }

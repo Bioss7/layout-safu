@@ -1,0 +1,169 @@
+{
+  "fileKey": "CGbmxuN7RRy1plfxfak9U1",
+  "retrievedAt": "2026-10-29",
+  "scale": 2,
+  "sourceImage": "development/background.png",
+  "nodes": [
+    {
+      "nodeId": "1:966",
+      "width": 1920,
+      "height": 368,
+      "mirror": false,
+      "backgroundColor": "#0b2d4e",
+      "output": "development/background-desktop.webp",
+      "image": {
+        "mode": "CROP",
+        "opacity": 0.20000000298023224,
+        "transform": [
+          [0.7376909852027893, 0, 0.2351801097393036],
+          [0, 0.3577265739440918, 0.24732232093811035]
+        ]
+      },
+      "glows": [
+        {
+          "nodeId": "1:967",
+          "width": 571,
+          "height": 571,
+          "transform": [
+            [-1, 0, 2131],
+            [0, 1, -226]
+          ],
+          "blendMode": "color-dodge",
+          "source": "development/glow-right.svg"
+        },
+        {
+          "nodeId": "1:972",
+          "width": 662,
+          "height": 662,
+          "transform": [
+            [-1, 0, 434],
+            [0, 1, 37]
+          ],
+          "blendMode": "color-dodge",
+          "source": "development/glow-left.svg"
+        }
+      ]
+    },
+    {
+      "nodeId": "1:1046",
+      "width": 1920,
+      "height": 540,
+      "mirror": true,
+      "backgroundColor": "#0b2d4e",
+      "output": "cta/background-desktop.webp",
+      "image": {
+        "mode": "CROP",
+        "opacity": 0.20000000298023224,
+        "transform": [
+          [0.781326174736023, 0, 0.2126270979642868],
+          [0, 0.8496023416519165, -0.00033853406785055995]
+        ]
+      },
+      "glows": [
+        {
+          "nodeId": "1:1047",
+          "width": 662,
+          "height": 662,
+          "transform": [
+            [1, 0, -267],
+            [0, 1, -195]
+          ],
+          "blendMode": "color-dodge",
+          "source": "cta/glow.svg"
+        },
+        {
+          "nodeId": "1:1078",
+          "width": 662,
+          "height": 662,
+          "transform": [
+            [1, 0, 1469],
+            [0, 1, 360]
+          ],
+          "blendMode": "color-dodge",
+          "source": "cta/glow.svg"
+        }
+      ]
+    },
+    {
+      "nodeId": "9:967",
+      "width": 358,
+      "height": 368,
+      "mirror": false,
+      "backgroundColor": "#0b2d4e",
+      "output": "development/background-mobile.webp",
+      "image": {
+        "mode": "CROP",
+        "opacity": 0.20000000298023224,
+        "transform": [
+          [0.36297041177749634, 0, 0.4346408545970917],
+          [0, 0.7278070449829102, 0.11185925453901291]
+        ]
+      },
+      "glows": [
+        {
+          "nodeId": "9:968",
+          "width": 271,
+          "height": 271,
+          "transform": [
+            [-1, 0, 148],
+            [0, 1, 208]
+          ],
+          "blendMode": "color-dodge",
+          "source": "development/glow-mobile.svg"
+        },
+        {
+          "nodeId": "9:973",
+          "width": 271,
+          "height": 271,
+          "transform": [
+            [-1, 0, 439],
+            [0, 1, -101]
+          ],
+          "blendMode": "color-dodge",
+          "source": "development/glow-mobile.svg"
+        }
+      ]
+    },
+    {
+      "nodeId": "9:1038",
+      "width": 390,
+      "height": 806,
+      "mirror": true,
+      "backgroundColor": "#0b2d4e",
+      "output": "cta/background-mobile.webp",
+      "image": {
+        "mode": "FILL",
+        "opacity": 0.20000000298023224,
+        "transform": [
+          [0.781326174736023, 0, 0.2126270979642868],
+          [0, 0.8496023416519165, -0.00033853406785055995]
+        ]
+      },
+      "glows": [
+        {
+          "nodeId": "9:1039",
+          "width": 452,
+          "height": 452,
+          "transform": [
+            [1, 0, -114],
+            [0, 1, -92]
+          ],
+          "blendMode": "color-dodge",
+          "source": "cta/glow-mobile-left.svg"
+        },
+        {
+          "nodeId": "9:1070",
+          "width": 585,
+          "height": 585,
+          "transform": [
+            [1, 0, 184],
+            [0, 1, 1293]
+          ],
+          "blendMode": "color-dodge",
+          "source": "cta/glow-mobile-right.svg"
+        }
+      ]
+    }
+  ],
+  "sourceSha256": "1e7e89e8c186d485a2626308d3353a2bf3aeebcff08f8d1a1f037d39da898ad0"
+}

@@ -133,6 +133,7 @@ try {
   const metrics = [];
   for (const width of [
     320, 390, 575, 576, 577, 767, 768, 769, 991, 992, 993, 1199, 1200, 1201, 1399, 1400, 1401, 1920,
+    1921, 2560, 3440,
   ]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.evaluate(() => document.fonts.ready);
@@ -223,7 +224,39 @@ try {
       });
       await page.screenshot({ path: `${output}/${width}.png`, fullPage: true });
     }
+    if ([390, 576, 1920, 1921, 2560, 3440].includes(width)) {
+      for (const block of ["development", "cta", "network"]) {
+        await page
+          .locator(`.partner-${block}`)
+          .screenshot({ path: `${output}/${block}-${width}.png` });
+      }
+    }
   }
+  for (const width of [1920, 1921, 2560, 3440]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (let tab = 0; tab < 4; tab++) {
+      await tabs.nth(tab).click();
+      await page.waitForTimeout(50);
+      const coverage = await page.getByRole("tabpanel").evaluate((panel) => {
+        const bounds = panel.getBoundingClientRect();
+        return [...panel.querySelectorAll(".partner-logos__track")].flatMap((track) => {
+          const animation = track.getAnimations()[0];
+          animation.pause();
+          return [0, 0.25, 0.5, 0.75, 0.999].map((phase) => {
+            animation.currentTime = animation.effect.getTiming().duration * phase;
+            const first = track.firstElementChild.firstElementChild.getBoundingClientRect();
+            const last = track.lastElementChild.lastElementChild.getBoundingClientRect();
+            return { phase, left: first.left - bounds.left, right: last.right - bounds.right };
+          });
+        });
+      });
+      assert(
+        coverage.every(({ left, right }) => left <= 1 && right >= -1),
+        `Пустой край ленты: ${width}px, вкладка ${tab}: ${JSON.stringify(coverage)}`,
+      );
+    }
+  }
+  await tabs.first().click();
   await page.setViewportSize({ width: 768, height: 900 });
   await tabs.first().focus();
   const list = page.locator(".js-partner-tabs");
@@ -265,6 +298,14 @@ try {
   assert.equal(
     await tracks.first().evaluate((node) => getComputedStyle(node).animationName),
     "none",
+  );
+  const row = page.getByRole("tabpanel").locator(".partner-logos__row").first();
+  assert.equal(await row.evaluate((node) => getComputedStyle(node).overflowX), "auto");
+  assert(
+    await row.evaluate((node) => {
+      node.scrollLeft = 100;
+      return node.scrollLeft > 0;
+    }),
   );
   for (const route of ["partners", "students"]) {
     await page.goto(`${base}/${route}/`, { waitUntil: "networkidle" });
