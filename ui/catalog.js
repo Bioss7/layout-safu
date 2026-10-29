@@ -26,7 +26,7 @@ pages.forEach((page) => {
 });
 
 try {
-  const response = await fetch("/__ui/remarks");
+  const response = await fetch(document.documentElement.dataset.remarksUrl || "/__ui/remarks");
   if (!response.ok) throw new Error();
   const remarks = await response.json();
   document.querySelector(".js-remarks-status").textContent = `Замечаний: ${remarks.length}`;
