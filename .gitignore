@@ -4,6 +4,10 @@ Thumbs.db
 .DS_Store
 opencode.json
 figma/
+!schoolchildren/assets/img/figma/
+!schoolchildren/figma/
+schoolchildren/figma/*
+!schoolchildren/figma/verification.json
 test-results/
 tests/
 screenshots/

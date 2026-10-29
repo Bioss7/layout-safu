@@ -11,6 +11,7 @@ const owners = [
   "students",
   "partners",
   "stp",
+  "schoolchildren",
   "template-main",
   "template-abiturient",
   "template-international",
@@ -18,11 +19,11 @@ const owners = [
 const posix = (path) => path.replaceAll("\\", "/");
 const local = (path) => posix(relative(root, path));
 
-export function renderSharedHtml(html, overlay = false) {
+export function renderSharedHtml(html, overlay = false, schoolchildren = false) {
   return html.replace(/<!-- safu:(header|footer) -->/g, (_, block) =>
     readFileSync(resolve(root, "assets/html", `${block}.html`), "utf8").replaceAll(
       "{{headerModifier}}",
-      overlay ? " header--overlay" : "",
+      `${overlay ? " header--overlay" : ""}${schoolchildren ? " header--schoolchildren" : ""}`,
     ),
   );
 }
@@ -59,7 +60,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students|partners|stp|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );
@@ -82,8 +83,11 @@ export function pageAssets() {
         const pageDirectory = dirname(context.filename);
         const overlay =
           posix(context.filename) === posix(resolve(root, "index.html")) ||
-          /[\\/](?:abiturient|students|partners|stp)[\\/]index\.html$/.test(context.filename);
-        html = renderSharedHtml(html, overlay);
+          /[\\/](?:abiturient|students|partners|stp|schoolchildren)[\\/]index\.html$/.test(
+            context.filename,
+          );
+        const schoolchildren = /[\\/]schoolchildren[\\/]index\.html$/.test(context.filename);
+        html = renderSharedHtml(html, overlay, schoolchildren);
         // Относительные ссылки работают и в dev, и после размещения dist в подкаталоге.
         html = html
           .replace(

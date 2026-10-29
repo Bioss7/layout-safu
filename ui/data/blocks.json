@@ -1000,6 +1000,82 @@
         "id": "link-arrow",
         "files": ["index.html", "main/assets/scss/blocks/common.scss"]
       }
+    },
+    {
+      "id": "school-hero",
+      "name": "Первый экран школьникам",
+      "origin": "new",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Первый экран страницы школьникам",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/school-hero.scss"]
+    },
+    {
+      "id": "school-nav",
+      "name": "Навигационные карточки",
+      "origin": "new",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Карточки направлений и подбор по ЕГЭ",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/school-nav.scss"]
+    },
+    {
+      "id": "school-dna",
+      "name": "Дом научной коллаборации",
+      "origin": "new",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Сетка проектов ДНК",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/school-dna.scss"]
+    },
+    {
+      "id": "school-links",
+      "name": "Дополнительные сведения",
+      "origin": "new",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Группы полезных ссылок",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/school-links.scss"]
+    },
+    {
+      "id": "button",
+      "name": "Кнопка",
+      "origin": "existing",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Кнопки страницы школьникам",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/button.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "button",
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/button.scss"]
+      }
+    },
+    {
+      "id": "student-life-card",
+      "name": "Карточка проекта ДНК",
+      "origin": "existing",
+      "page": "schoolchildren",
+      "addedAt": "2026-10-29",
+      "phase": "implementation",
+      "taskId": "schoolchildren-layout",
+      "purpose": "Карточка проекта ДНК",
+      "files": ["schoolchildren/index.html", "schoolchildren/assets/scss/blocks/student-life.scss"],
+      "reuseSource": {
+        "page": "students",
+        "id": "student-life-card",
+        "files": ["students/index.html", "students/assets/scss/blocks/student-life.scss"]
+      }
     }
   ],
   "reusableComponents": [

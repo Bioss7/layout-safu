@@ -78,5 +78,12 @@
     "url": "/stp/",
     "status": "Реализована; визуально сверена на 1920 и 390; проверена на 25 ширинах 360–2560; все карточки на мобильном; ссылки #; три текстовые заглушки программы",
     "design": "https://www.figma.com/design/lwvDFhdkutSIHkmVXVBr9f/?node-id=1-445"
+  },
+  {
+    "id": "schoolchildren",
+    "name": "Школьникам",
+    "url": "/schoolchildren/",
+    "status": "Реализована; блоки сверены с Figma на 1920 и 390; резиновые адаптивы; ссылки #; отдельное замечание по общему подвалу",
+    "design": "https://www.figma.com/design/hFl4eZcqsWHnHq4MlWye0W/?node-id=130-949"
   }
 ]

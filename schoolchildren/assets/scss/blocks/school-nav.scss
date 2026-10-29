@@ -1,0 +1,256 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+.school-nav__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.school-nav__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 36px;
+  flex: 1 1 calc((100% - 20px) / 2);
+  min-width: 0;
+  min-height: 490px;
+  padding: 40px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0b2d4e;
+}
+.school-nav__card::before,
+.school-nav__preview::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.28;
+  pointer-events: none;
+}
+.school-nav__card--catalog::before {
+  background-image: url("../../img/figma/desktop-cardcatalog.png");
+}
+.school-nav__card--olympiads::before {
+  background-image: url("../../img/figma/desktop-cardcatalog1.png");
+}
+.school-nav__card--navigator {
+  flex: 1 1 100%;
+  flex-direction: row;
+  gap: 70px;
+  color: #0b2d4e;
+  background-color: #e7eaee;
+}
+.school-nav__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  min-width: 0;
+}
+.school-nav__card--navigator .school-nav__copy {
+  flex: 0 1 calc((100% - 70px) * 0.4840764331);
+}
+.school-nav__tag {
+  padding: 4px 10px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.school-nav__card--navigator .school-nav__tag {
+  box-shadow: inset 0 0 0 1px rgba(11, 45, 78, 0.2);
+  background-color: rgba(11, 45, 78, 0.1);
+}
+.school-nav__title,
+.school-nav__preview-title {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 52px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.school-nav__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.school-nav__card--navigator .school-nav__text {
+  color: #234260;
+}
+.school-nav__card--navigator .school-nav__button {
+  margin-top: auto;
+}
+.school-nav__button {
+  align-self: flex-start;
+}
+.school-nav__preview {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 calc((100% - 70px) * 0.5159235669);
+  min-width: 0;
+  padding: 40px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0b2d4e;
+}
+.school-nav__preview::before {
+  inset: auto;
+  top: -7.3494177769%;
+  left: -41.4075403967%;
+  width: 162.7286301999%;
+  height: 158.8693594031%;
+  background-image: url("../../img/figma/desktop-cardcatalog2.png");
+  background-size: cover;
+  opacity: 0.2;
+}
+.school-nav__preview-title {
+  width: 570px;
+  max-width: 100%;
+  font-size: 28px;
+  line-height: 40px;
+}
+.school-nav__subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.school-nav__subject {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(11, 45, 78, 0.5);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  backdrop-filter: blur(10.15px);
+}
+.school-nav__subject strong {
+  color: #00aeef;
+  font-weight: 600;
+}
+.school-nav__result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  font-weight: 500;
+}
+.school-nav__result span:first-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+.school-nav__result span:last-child {
+  font-weight: 400;
+  font-family: var(--second-family);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+}
+@include breakpoint($bp-1200) {
+  .school-nav__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+@include breakpoint($bp-992) {
+  .school-nav__card {
+    padding: 24px;
+  }
+  .school-nav__card--navigator {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .school-nav__card--navigator .school-nav__copy {
+    flex-basis: auto;
+  }
+  .school-nav__preview {
+    flex-basis: auto;
+    min-height: 410px;
+  }
+}
+@include breakpoint($bp-768) {
+  .school-nav__card {
+    flex-basis: 100%;
+  }
+}
+@include breakpoint($bp-576) {
+  .school-nav__card {
+    flex-basis: 100%;
+    min-height: 360px;
+    gap: 40px;
+    padding: 16px;
+  }
+  .school-nav__card--catalog::before,
+  .school-nav__card--olympiads::before {
+    background-image: url("../../img/figma/mobile-cardcatalog.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .school-nav__tag {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  .school-nav__copy {
+    gap: 16px;
+  }
+  .school-nav__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .school-nav__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .school-nav__button {
+    align-self: stretch;
+  }
+  .school-nav__preview {
+    flex: auto;
+    min-height: 410px;
+    padding: 16px;
+  }
+  .school-nav__preview::before {
+    background-image: url("../../img/figma/mobile-cardcatalog1.png");
+  }
+  .school-nav__preview-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .school-nav__subject {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .school-nav__result {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .school-nav__result span:last-child {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

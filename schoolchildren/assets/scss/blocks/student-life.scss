@@ -1,0 +1,122 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.student-life-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  aspect-ratio: 1;
+  padding: 24px;
+  overflow: hidden;
+  color: var(--main-white-white-100);
+  background-color: var(--main-blue-blue-100);
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 45, 78, 0.3);
+    pointer-events: none;
+  }
+
+  &--text {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--main-blue-blue-100);
+    background-color: var(--main-white-white-100);
+    text-align: center;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+.student-life-card__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.student-life-card__arrow {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: currentColor;
+  mask-image: url("../../img/icons/arrow-life.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("../../img/icons/arrow-life.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  transform: scaleY(-1);
+}
+.student-life-card__title {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.student-life-card__description {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 337px;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+@include breakpoint($bp-1400) {
+  .student-life-card {
+    padding: 20px;
+  }
+  .student-life-card__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .student-life-card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@include breakpoint($bp-576) {
+  .student-life-card {
+    padding: 20px;
+  }
+  .student-life-card--text {
+    padding: 4px;
+  }
+  .student-life-card__arrow {
+    top: 20px;
+    right: 20px;
+  }
+  .student-life-card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .student-life-card__description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

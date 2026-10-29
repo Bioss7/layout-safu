@@ -1,0 +1,156 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+.school-links__title {
+  max-width: 1009px;
+  margin-bottom: 60px !important;
+}
+.school-links__mobile-break {
+  display: none;
+}
+.school-links__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.school-links__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0b2d4e;
+}
+.school-links__card::before,
+.school-links__card::after {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.school-links__card::before {
+  content: "";
+  opacity: 0.2;
+}
+.school-links__card--pupils::before {
+  background-image: url("../../img/figma/desktop-card6.png");
+  background-size: cover;
+  background-position: center 37.7546%;
+}
+.school-links__card--parents::before {
+  background-image: url("../../img/figma/desktop-card7.png");
+  background-size: cover;
+  background-position: center 37.5846%;
+}
+.school-links__card--teachers::before {
+  background-image: url("../../img/figma/desktop-card8.png");
+  background-size: cover;
+  background-position: center 22.28797%;
+}
+.school-links__card--partners::before {
+  background-image: url("../../img/figma/desktop-card9.png");
+  background-size: cover;
+  background-position: center 8.6237%;
+}
+.school-links__card-title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.school-links__card-text {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+.school-links__tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+.school-links__tag {
+  padding: 14px 24px;
+  border-radius: 4px;
+  color: #0b2d4e !important;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  transition:
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out;
+}
+.school-links__tag:hover {
+  color: #fff !important;
+  background-color: #00aeef;
+}
+@include breakpoint($bp-576) {
+  .school-links__mobile-break {
+    display: block;
+  }
+  .school-links__title {
+    margin-bottom: 32px !important;
+  }
+  .school-links__card {
+    padding: 16px;
+  }
+  .school-links__card::before {
+    opacity: 0.1;
+    background-size: auto 100%;
+  }
+  .school-links__card--pupils::before {
+    background-position: 82.3376% center;
+  }
+  .school-links__card--parents::before {
+    background-position: 94.792% center;
+  }
+  .school-links__card--teachers::before,
+  .school-links__card--partners::before {
+    background-image: url("../../img/figma/mobile-card8.png");
+    background-position: 94.1857% center;
+  }
+  .school-links__card--partners::after {
+    content: "";
+    opacity: 0.2;
+    background-image: url("../../img/figma/mobile-card9.png");
+    background-size: auto 100%;
+    background-position: 98.7826% center;
+  }
+  .school-links__card-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .school-links__card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .school-links__tags {
+    width: 100%;
+    flex-direction: column;
+  }
+  .school-links__tag {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .school-links__tag--wide-text {
+    padding-inline: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .school-links__tag {
+    transition: none;
+  }
+}

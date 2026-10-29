@@ -1,0 +1,48 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.schoolchildren {
+  color: var(--school-blue);
+  background-color: #fff;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 26px;
+}
+.schoolchildren :where(h1, h2, h3, p) {
+  margin: 0;
+}
+.schoolchildren :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+.schoolchildren :where(a, button):focus-visible {
+  outline: 3px solid var(--school-accent);
+  outline-offset: 4px;
+}
+.container--schoolchildren {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+@include breakpoint($bp-1400) {
+  .container--schoolchildren {
+    width: calc(100% - 96px);
+  }
+}
+@include breakpoint($bp-1200) {
+  .container--schoolchildren {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-768) {
+  .container--schoolchildren {
+    width: calc(100% - 32px);
+  }
+}

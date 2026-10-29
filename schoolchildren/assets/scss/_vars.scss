@@ -1,0 +1,15 @@
+@forward "../../../assets/scss/vars";
+$bp-1400: 1400px;
+.schoolchildren {
+  --font-family: "Montserrat STP", sans-serif;
+  --second-family: "HS_LunaObscura STP", sans-serif;
+  --school-blue: #0b2d4e;
+  --school-muted: #546c83;
+  --school-accent: #00aeef;
+  --main-white-white-100: #fff;
+  --main-blue-blue-100: #0b2d4e;
+  --main-accent-accent-100: #00aeef;
+  --main-blue-blue-90: #234260;
+  --main-blue-blue-30: #b6c0ca;
+  --main-font-display: "HS_LunaObscura STP", sans-serif;
+}

@@ -435,3 +435,13 @@ html.page--header-open body > footer {
     display: none;
   }
 }
+
+// Страница школьников: прозрачная шапка поверх первого экрана.
+.header--overlay.header--schoolchildren {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.header--overlay.header--schoolchildren.header--open {
+  background-color: var(--main-white-white-100);
+}

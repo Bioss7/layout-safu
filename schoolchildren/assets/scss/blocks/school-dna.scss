@@ -1,0 +1,97 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+.school-dna__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.school-dna__mobile-break {
+  display: none;
+}
+.school-dna__title,
+.school-links__title {
+  max-width: 978px;
+  font-family: var(--second-family);
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.school-dna__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 1 560px;
+  color: #234260;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+.school-dna__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.school-dna__card {
+  flex: 0 1 calc((100% - 60px) / 4);
+}
+.school-dna__card--festival::after {
+  background-color: rgba(11, 45, 78, 0.6);
+}
+@include breakpoint($bp-1200) {
+  .school-dna__desktop-break {
+    display: none;
+  }
+  .school-dna__title,
+  .school-links__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+@include breakpoint($bp-992) {
+  .school-dna__header {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .school-dna__intro {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .school-dna__card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+@include breakpoint($bp-576) {
+  .school-dna__mobile-break {
+    display: block;
+  }
+  .school-dna__header {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .school-dna__title,
+  .school-links__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .school-dna__intro {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .school-dna__card {
+    flex-basis: 100%;
+  }
+  .school-dna__grid {
+    gap: 16px;
+  }
+  .student-life-card__image--bright {
+    opacity: 1;
+  }
+  .school-dna__card--festival::after {
+    background-color: rgba(11, 45, 78, 0.4);
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "fileKey": "hFl4eZcqsWHnHq4MlWye0W",
+  "retrievedAt": "2026-10-29",
+  "coordinateSystem": "Frame-local CSS pixels; Figma absolute frame origins: desktop (2,-42), mobile (1982,-42)",
+  "tolerance": 1,
+  "frames": {
+    "390": [
+      {
+        "selector": ".school-hero",
+        "nodeId": "130:801",
+        "rect": [
+          0,
+          0,
+          390,
+          840
+        ]
+      },
+      {
+        "selector": ".school-nav__grid",
+        "nodeId": "130:829",
+        "rect": [
+          16,
+          910,
+          358,
+          1594
+        ]
+      },
+      {
+        "selector": ".school-dna__header",
+        "nodeId": "130:853",
+        "rect": [
+          16,
+          2574,
+          358,
+          320
+        ]
+      },
+      {
+        "selector": ".school-dna__grid",
+        "nodeId": "139:9804",
+        "rect": [
+          16,
+          2926,
+          358,
+          2976
+        ]
+      },
+      {
+        "selector": ".school-links__title",
+        "nodeId": "139:9856",
+        "rect": [
+          16,
+          5972,
+          358,
+          128
+        ]
+      },
+      {
+        "selector": ".school-links__cards",
+        "nodeId": "139:9857",
+        "rect": [
+          16,
+          6132,
+          358,
+          1840
+        ]
+      }
+    ],
+    "1920": [
+      {
+        "selector": ".school-hero",
+        "nodeId": "130:950",
+        "rect": [
+          0,
+          0,
+          1920,
+          800
+        ]
+      },
+      {
+        "selector": ".school-nav__grid",
+        "nodeIds": [
+          "133:8752",
+          "133:9312"
+        ],
+        "method": "Union of the two child rectangles in frame-local coordinates",
+        "rect": [
+          100,
+          950,
+          1720,
+          1000
+        ]
+      },
+      {
+        "selector": ".school-nav__preview",
+        "nodeId": "134:9373",
+        "rect": [
+          970,
+          1500,
+          810,
+          410
+        ]
+      },
+      {
+        "selector": ".school-dna__header",
+        "nodeId": "130:1025",
+        "rect": [
+          100,
+          2100,
+          1720,
+          180
+        ]
+      },
+      {
+        "selector": ".school-dna__grid",
+        "nodeId": "130:8486",
+        "rect": [
+          100,
+          2340,
+          1720,
+          850
+        ]
+      },
+      {
+        "selector": ".school-links__title",
+        "nodeId": "130:1057",
+        "rect": [
+          100,
+          3340,
+          1009,
+          96
+        ]
+      },
+      {
+        "selector": ".school-links__cards",
+        "nodeId": "130:1058",
+        "rect": [
+          100,
+          3496,
+          1720,
+          1176
+        ]
+      }
+    ]
+  },
+  "states": {
+    "primary": {
+      "hover": "#00AEEF",
+      "active": "#234260",
+      "source": "133:9006 ON_HOVER→133:9010 ON_PRESS→133:9014"
+    },
+    "secondarySmall": {
+      "hover": "#234260",
+      "active": "#B6C0CA",
+      "source": "133:9022 ON_HOVER→133:9026 ON_PRESS→133:9030"
+    },
+    "transition": {
+      "seconds": 0.30000001192092896,
+      "easing": "EASE_IN_AND_OUT"
+    },
+    "note": "Small variant names Hover/Pressed are swapped; prototype reactions determine actual behavior.",
+    "secondaryLarge": {
+      "hover": "#00AEEF",
+      "active": "#B6C0CA",
+      "source": "133:9262 main 133:8910 ON_HOVER→133:8914"
+    }
+  },
+  "headerEffects": {
+    "nodeIds": [
+      "138:9526",
+      "133:8664"
+    ],
+    "fillOpacity": 0.699999988079071,
+    "glassRadius": 10,
+    "css": "backdrop-filter: blur(10px); Figma glass refraction is approximated by a browser backdrop filter"
+  },
+  "linkMobileFills": {
+    "nodeIds": [
+      "139:9858",
+      "139:9918",
+      "139:9939"
+    ],
+    "opacity": 0.10000000149011612,
+    "partnerNodeId": "139:9960",
+    "partnerOpacities": [
+      0.10000000149011612,
+      0.20000000298023224
+    ]
+  },
+  "knownOutOfScope": {
+    "footer": {
+      "mobileExpectedHeight": 1072.6328125,
+      "mobileActualHeight": 1082,
+      "desktopExpectedHeight": 416,
+      "desktopActualHeight": 417
+    }
+  },
+  "imageFit": {
+    "decision": "Per user clarification, decorative images remain CSS backgrounds with cover or auto 100%; preserve image proportions across widths.",
+    "reference": "abiturient/assets/scss/blocks/feature-card.scss; .opportunities-list and .feature-card__image",
+    "note": "Figma stretched imageFill transforms are retained as source data, not applied as nonuniform CSS image stretching."
+  }
+}

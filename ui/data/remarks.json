@@ -125,6 +125,16 @@
       "description": "Наполнение вкладок «Наука и карьера в науке» и «Аспиранту» отсутствует в источнике"
     },
     {
+      "id": "schoolchildren-shared-footer",
+      "page": "schoolchildren",
+      "block": "Общий подвал",
+      "selector": ".footer",
+      "states": [],
+      "description": "На ширине 390 px высота общего подвала 1082 px вместо 1072.6328125 px в Figma (139:9674); на 1920 px 417 px вместо 416 px (138:9403)",
+      "fallback": "Общий подвал сохранён согласно границам задачи; положения блоков страницы выше подвала совпадают с макетом",
+      "file": "assets/scss/blocks/footer.scss"
+    },
+    {
       "id": "partners-demo-logos",
       "page": "partners",
       "block": "Наши партнеры",
