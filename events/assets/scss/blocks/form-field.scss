@@ -1,0 +1,118 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.form-field {
+  position: relative;
+  min-width: 0;
+  flex: 1;
+  padding-bottom: var(--field-error-space, 20px);
+}
+.form-field__input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(11, 45, 78, 0.1);
+  border-radius: 4px;
+  padding: 15px 36px 15px 16px;
+  background-color: rgba(11, 45, 78, 0.7);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  transition:
+    border-color 160ms,
+    background-color 160ms;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+  }
+  &:hover {
+    background-color: rgba(0, 174, 239, 0.2);
+    border-color: rgba(0, 174, 239, 0.2);
+  }
+  &:focus {
+    outline: none;
+    border-color: rgba(0, 174, 239, 0.5);
+  }
+  &:focus::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+  &[aria-invalid="true"] {
+    border-color: #d94b4b;
+    color: #d94b4b;
+  }
+  &:disabled {
+    cursor: wait;
+  }
+}
+.form-field__input--question {
+  min-height: 97px;
+  max-height: 320px;
+  resize: vertical;
+  overflow-y: auto;
+  @include accent-scrollbar;
+}
+.form-field--question {
+  --field-error-space: var(--question-error-space, 19px);
+}
+.form-field--invalid {
+  --field-error-space: 20px;
+}
+.form-field__input--sending {
+  min-height: 106px;
+}
+.form-field__clear {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+.form-field__error {
+  display: block;
+  color: #d94b4b;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.form-field__error--field {
+  position: absolute;
+  top: calc(100% - var(--field-error-space, 20px) + 2px);
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 2px;
+  background-color: rgba(11, 45, 78, 0.7);
+  &::before {
+    content: "";
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+    mask-image: url("../../img/form-alert.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 12px 12px;
+  }
+}
+.form-field__error:empty {
+  display: none;
+}
+@include breakpoint($bp-576) {
+  .form-field {
+    padding-bottom: 0;
+  }
+  .form-field__error--field {
+    position: static;
+    margin-top: 2px;
+  }
+  .form-field__input--question {
+    min-height: 200px;
+  }
+}

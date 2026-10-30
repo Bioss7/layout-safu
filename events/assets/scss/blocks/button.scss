@@ -1,0 +1,66 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--events-display);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  transition:
+    background-color 160ms,
+    color 160ms;
+}
+
+.button--reset {
+  padding: 11px 14px;
+  background-color: #ffffff;
+  &:hover {
+    background-color: rgba(0, 174, 239, 0.1);
+    color: #00aeef;
+  }
+}
+
+.button--submit {
+  width: 100%;
+  padding: 18px 24px;
+  background-color: #ffffff;
+  color: #0b2d4e;
+  font-size: 16px;
+  line-height: 1;
+  &:hover {
+    background-color: #00aeef;
+    color: #ffffff;
+  }
+  &:active {
+    background-color: #008fc5;
+  }
+  &:disabled {
+    cursor: wait;
+    background-color: #d9e0e6;
+    color: #0b2d4e;
+  }
+}
+.button--form-submit {
+  margin-top: 8px;
+}
+
+// Поправка метрик HS Luna: видимая надпись Figma на 3px ниже при том же line-box.
+.button__text {
+  position: relative;
+  top: 3px;
+}
+
+@include breakpoint($bp-576) {
+  .button--submit {
+    padding: 18px 24px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

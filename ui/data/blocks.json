@@ -1076,6 +1076,208 @@
         "id": "student-life-card",
         "files": ["students/index.html", "students/assets/scss/blocks/student-life.scss"]
       }
+    },
+    {
+      "id": "hero",
+      "name": "Каталог мероприятий: hero",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация hero под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/hero.scss"],
+      "reuseSource": {
+        "page": "programs",
+        "id": "hero",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/hero.scss"]
+      }
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Каталог мероприятий: breadcrumbs",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация breadcrumbs под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/breadcrumbs.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "breadcrumbs",
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/breadcrumbs.scss"]
+      }
+    },
+    {
+      "id": "catalog",
+      "name": "Каталог мероприятий: catalog",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация catalog под макеты 1920 и 390",
+      "files": [
+        "events/index.html",
+        "events/assets/scss/blocks/catalog.scss",
+        "events/assets/js/catalog.js"
+      ],
+      "reuseSource": {
+        "page": "programs",
+        "id": "catalog",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/catalog.scss"]
+      }
+    },
+    {
+      "id": "filters",
+      "name": "Каталог мероприятий: filters",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация filters под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/filters.scss"],
+      "reuseSource": {
+        "page": "programs",
+        "id": "filters",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/filters.scss"]
+      }
+    },
+    {
+      "id": "button",
+      "name": "Каталог мероприятий: button",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация button под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/button.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "button",
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/button.scss"]
+      }
+    },
+    {
+      "id": "pagination",
+      "name": "Каталог мероприятий: pagination",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация pagination под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/pagination.scss"],
+      "reuseSource": {
+        "page": "programs",
+        "id": "pagination",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/pagination.scss"]
+      }
+    },
+    {
+      "id": "contacts",
+      "name": "Каталог мероприятий: contacts",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация contacts под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/contacts.scss"],
+      "reuseSource": {
+        "page": "programs",
+        "id": "contacts",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/contact-form.scss"]
+      }
+    },
+    {
+      "id": "contact-form",
+      "name": "Каталог мероприятий: contact-form",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация contact-form под макеты 1920 и 390",
+      "files": [
+        "events/index.html",
+        "events/assets/scss/blocks/contact-form.scss",
+        "events/assets/js/question-form.js"
+      ],
+      "reuseSource": {
+        "page": "programs",
+        "id": "contact-form",
+        "files": ["programs/index.html", "programs/assets/scss/blocks/contact-form.scss"]
+      }
+    },
+    {
+      "id": "form-field",
+      "name": "Каталог мероприятий: form-field",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация form-field под макеты 1920 и 390",
+      "files": ["events/index.html", "events/assets/scss/blocks/form-field.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "form-field",
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/form-field.scss"]
+      }
+    },
+    {
+      "id": "topic-select",
+      "name": "Каталог мероприятий: topic-select",
+      "origin": "existing",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Адаптация topic-select под макеты 1920 и 390",
+      "files": [
+        "events/index.html",
+        "events/assets/scss/blocks/topic-select.scss",
+        "events/assets/js/topic-select.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "topic-select",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/topic-select.scss",
+          "abiturient/assets/js/topic-select.js"
+        ]
+      }
+    },
+    {
+      "id": "event-card",
+      "name": "Каталог мероприятий: event-card",
+      "origin": "new",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-figma-1-334",
+      "purpose": "Вертикальная карточка мероприятия с типом, датой и адресом",
+      "files": ["events/index.html", "events/assets/scss/blocks/event-card.scss"]
+    },
+    {
+      "id": "demo-menu",
+      "name": "Тестовое меню состояний",
+      "origin": "new",
+      "page": "events",
+      "addedAt": "2026-10-30",
+      "phase": "implementation",
+      "taskId": "events-demo-menu",
+      "purpose": "Абсолютно позиционированное меню переключения состояний формы и поиска",
+      "files": [
+        "events/index.html",
+        "events/assets/scss/blocks/demo-menu.scss",
+        "events/assets/js/demo-menu.js"
+      ]
     }
   ],
   "reusableComponents": [

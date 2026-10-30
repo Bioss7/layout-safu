@@ -1,0 +1,17 @@
+@mixin breakpoint($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin accent-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #00aeef transparent;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #00aeef;
+    border-radius: 4px;
+  }
+}

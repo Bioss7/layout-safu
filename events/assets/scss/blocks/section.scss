@@ -1,0 +1,54 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+.section--hero {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.section--catalog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section--contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@include breakpoint($bp-1440) {
+  .container--events {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-992) {
+  .container--events {
+    width: calc(100% - 48px);
+  }
+  .section--hero {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+  .section--catalog {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section--contacts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@include breakpoint($bp-576) {
+  .container--events {
+    width: calc(100% - 32px);
+  }
+  .section--hero {
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+  .section--contacts {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

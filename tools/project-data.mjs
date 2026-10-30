@@ -72,7 +72,7 @@ export function validateComponentMetadata(entry) {
       if (
         typeof file !== "string" ||
         file.includes("\\") ||
-        !/^(?:(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|template-main|template-abiturient|template-international)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(
+        !/^(?:(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events|template-main|template-abiturient|template-international)\/)?assets\/|[a-z0-9/-]*index\.html$)/.test(
           file,
         ) ||
         file.split("/").includes("..") ||

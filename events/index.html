@@ -1,0 +1,1414 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Каталог профориентационных мероприятий САФУ для школьников и абитуриентов"
+    />
+    <title>САФУ — Каталог мероприятий</title>
+    <link rel="stylesheet" href="/events/assets/scss/events.scss" />
+    <link rel="stylesheet" href="/assets/scss/common.scss" />
+  </head>
+  <body>
+    <!-- safu:header -->
+    <div class="demo-menu-anchor">
+      <details class="demo-menu js-demo-menu">
+        <summary class="demo-menu__toggle">Тест состояний</summary>
+        <div class="demo-menu__body">
+          <div class="demo-menu__group" role="group" aria-label="Состояния формы">
+            <p class="demo-menu__title">Форма</p>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="default"
+              aria-pressed="false"
+            >
+              Пустая
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="filled"
+              aria-pressed="false"
+            >
+              Заполненная
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="select"
+              aria-pressed="false"
+            >
+              Открытый select
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="invalid"
+              aria-pressed="false"
+            >
+              Ошибки полей
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="pending"
+              aria-pressed="false"
+            >
+              Отправка
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="success"
+              aria-pressed="false"
+            >
+              Успех
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="error"
+              aria-pressed="false"
+            >
+              Ошибка отправки
+            </button>
+          </div>
+          <div class="demo-menu__group" role="group" aria-label="Состояния поиска">
+            <p class="demo-menu__title">Поиск</p>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="default"
+              aria-pressed="false"
+            >
+              Пустой
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="hover"
+              aria-pressed="false"
+            >
+              Наведение
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="focus"
+              aria-pressed="false"
+            >
+              Фокус
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="filled"
+              aria-pressed="false"
+            >
+              С результатами
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="empty"
+              aria-pressed="false"
+            >
+              Ничего не найдено
+            </button>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="search"
+              data-state="invalid"
+              aria-pressed="false"
+            >
+              Ошибка
+            </button>
+          </div>
+          <p class="demo-menu__note">
+            Только демонстрационные данные. «Отправка» удерживается до выбора другого состояния.
+          </p>
+        </div>
+      </details>
+    </div>
+    <main id="main">
+      <section class="section section--hero hero" aria-labelledby="events-title">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="container container--events hero__inner">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="/">Главная</a
+            ><img src="/events/assets/img/breadcrumb-chevron.svg" alt="" width="24" height="24" /><a
+              class="breadcrumbs__link"
+              href="/schoolchildren/"
+              >Школьникам</a
+            ><img
+              src="/events/assets/img/breadcrumb-chevron.svg"
+              alt=""
+              width="24"
+              height="24"
+            /><span class="breadcrumbs__current" aria-current="page">Мероприятия</span>
+          </nav>
+          <div class="hero__text">
+            <h1 class="hero__title" id="events-title">
+              Каталог<span class="hero__subtitle">профориентационных мероприятий</span>
+            </h1>
+            <p class="hero__description">
+              Найди мероприятия для школьников и абитуриентов: экскурсии, дни открытых дверей и
+              профориентационные проекты. Выбери интересное и запишись онлайн!
+            </p>
+          </div>
+          <picture class="hero__figure"
+            ><source media="(max-width:576px)" srcset="/events/assets/img/hero-people.png" />
+            <img
+              src="/events/assets/img/hero-people.png"
+              width="527"
+              height="351"
+              alt="Студентка САФУ"
+              fetchpriority="high"
+          /></picture>
+        </div>
+      </section>
+      <section class="section section--catalog" aria-label="Каталог мероприятий">
+        <div class="container container--events catalog js-catalog">
+          <form class="filters js-filters" aria-label="Фильтры мероприятий">
+            <div class="filters__search">
+              <img
+                class="js-search-icon"
+                src="/events/assets/img/search.svg"
+                alt=""
+                width="16"
+                height="16"
+              /><label class="sr-only" for="events-search">Поиск мероприятий</label>
+              <div class="filters__search-text">
+                <span class="filters__error js-search-error" id="events-search-error" hidden
+                  >Содержит запрещающие символы</span
+                >
+                <input
+                  class="filters__input js-search"
+                  type="search"
+                  name="q"
+                  id="events-search"
+                  aria-describedby="events-search-error"
+                  placeholder="Поиск программ..."
+                  maxlength="200"
+                />
+              </div>
+              <button
+                class="filters__clear js-search-clear"
+                type="button"
+                aria-label="Очистить поиск"
+                hidden
+              >
+                <img src="/events/assets/img/close.svg" alt="" width="16" height="16" />
+              </button>
+              <img
+                class="js-search-alert"
+                src="/events/assets/img/search-alert.svg"
+                alt=""
+                width="16"
+                height="16"
+                hidden
+              />
+            </div>
+            <button
+              class="filters__heading js-filter-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="events-filter-fields"
+            >
+              Фильтры
+              <img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+            </button>
+            <div class="filters__fields" id="events-filter-fields">
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="format" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="format-list"
+                  aria-label="Формат проведения"
+                >
+                  <span class="topic-select__value js-topic-value">Формат проведения</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="format-list"
+                  role="listbox"
+                  aria-label="Формат проведения"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="format-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Очно"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Очно
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="format-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Онлайн"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Онлайн
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="registration" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="registration-list"
+                  aria-label="Вид регистрации"
+                >
+                  <span class="topic-select__value js-topic-value">Вид регистрации</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="registration-list"
+                  role="listbox"
+                  aria-label="Вид регистрации"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="registration-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Групповая заявка"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Групповая заявка
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="registration-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Индивидуальная заявка"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Индивидуальная
+                    заявка
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="audience" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="audience-list"
+                  aria-label="Категория участников"
+                >
+                  <span class="topic-select__value js-topic-value">Категория участников</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="audience-list"
+                  role="listbox"
+                  aria-label="Категория участников"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="audience-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Школьники"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Школьники
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="audience-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Абитуриенты"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Абитуриенты
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="audience-2"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Родители"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Родители
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="date" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="date-list"
+                  aria-label="Дата мероприятия"
+                >
+                  <span class="topic-select__value js-topic-value">Дата мероприятия</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="date-list"
+                  role="listbox"
+                  aria-label="Дата мероприятия"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="date-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="10.09.2026"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>10.09.2026
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="date-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="11.09.2026"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>11.09.2026
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="date-2"
+                    role="option"
+                    aria-selected="false"
+                    data-value="12.09.2026"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>12.09.2026
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="city" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="city-list"
+                  aria-label="Город проведения"
+                >
+                  <span class="topic-select__value js-topic-value">Город проведения</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="city-list"
+                  role="listbox"
+                  aria-label="Город проведения"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="city-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Северодвинск"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Северодвинск
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="city-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Архангельск"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Архангельск
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="city-2"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Нарьян-Мар"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Нарьян-Мар
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="profile" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="profile-list"
+                  aria-label="Профиль / направления"
+                >
+                  <span class="topic-select__value js-topic-value">Профиль / направления</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="profile-list"
+                  role="listbox"
+                  aria-label="Профиль / направления"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="profile-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="IT-технологии"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>IT-технологии
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="profile-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Инженерное направление"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Инженерное
+                    направление
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="profile-2"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Гуманитарное направление"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Гуманитарное
+                    направление
+                  </li>
+                </ul>
+              </div>
+              <div class="topic-select topic-select--filter js-topic" data-multiple="true">
+                <input type="hidden" name="department" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="department-list"
+                  aria-label="Подразделение"
+                >
+                  <span class="topic-select__value js-topic-value">Подразделение</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="department-list"
+                  role="listbox"
+                  aria-label="Подразделение"
+                  aria-multiselectable="true"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="department-0"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Высшая школа информационных систем"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Высшая школа
+                    информационных систем
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="department-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Высшая инженерная школа"
+                  >
+                    <span class="topic-select__check" aria-hidden="true"></span>Высшая инженерная
+                    школа
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="button button--reset" type="reset">Сбросить</button>
+          </form>
+          <div class="catalog__results">
+            <div class="catalog__toolbar">
+              <h2 class="catalog__count" aria-live="polite">
+                Найдено: <span class="js-results-count">9 мероприятий</span>
+              </h2>
+              <div class="topic-select topic-select--sort js-topic">
+                <input type="hidden" name="sort" class="js-field-input" />
+                <button
+                  class="topic-select__trigger js-topic-trigger"
+                  type="button"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="sort-list"
+                  aria-label="Сортировка"
+                >
+                  <span class="topic-select__value js-topic-value">Сортировка</span
+                  ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                </button>
+                <ul
+                  class="topic-select__list js-topic-list"
+                  id="sort-list"
+                  role="listbox"
+                  aria-label="Сортировка"
+                  hidden
+                >
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="sort-0"
+                    role="option"
+                    aria-selected="true"
+                    data-value="По дате"
+                  >
+                    <span class="topic-select__mark" aria-hidden="true"></span
+                    ><span class="topic-select__option-text">По дате</span>
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="sort-1"
+                    role="option"
+                    aria-selected="false"
+                    data-value="По названию"
+                  >
+                    <span class="topic-select__mark" aria-hidden="true"></span
+                    ><span class="topic-select__option-text">По названию</span>
+                  </li>
+                  <li
+                    class="topic-select__option js-topic-option"
+                    id="sort-2"
+                    role="option"
+                    aria-selected="false"
+                    data-value="Сначала новые"
+                  >
+                    <span class="topic-select__mark" aria-hidden="true"></span
+                    ><span class="topic-select__option-text">Сначала новые</span>
+                  </li>
+                  <li
+                    class="topic-select__option topic-select__option--reset js-topic-option"
+                    id="sort-3"
+                    data-reset
+                    role="option"
+                    aria-selected="false"
+                    data-value="Сбросить"
+                  >
+                    Сбросить
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog__cards">
+              <article class="event-card js-event-card" data-index="0">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="1">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="2">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="3">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="4">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="5">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="6">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="7">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+              <article class="event-card js-event-card" data-index="8">
+                <a
+                  class="event-card__link"
+                  href="#"
+                  aria-label="IT-технологии и искусственный интеллект"
+                >
+                  <div class="event-card__image">
+                    <img
+                      src="/events/assets/img/event.png"
+                      width="415"
+                      height="234"
+                      alt=""
+                      loading="lazy"
+                    /><span class="event-card__tag">Интерактивная лекция</span>
+                  </div>
+                  <div class="event-card__body">
+                    <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                    <dl class="event-card__meta">
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Подразделение</dt>
+                        <dd class="event-card__value">Высшая школа информационных систем</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Дата проведения</dt>
+                        <dd class="event-card__value">10.09.2026</dd>
+                      </div>
+                      <div class="event-card__row">
+                        <dt class="event-card__label">Адрес</dt>
+                        <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                      </div>
+                    </dl>
+                    <div class="event-card__footer">
+                      <span>#ГРУППОВАЯ ЗАЯВКА</span
+                      ><img
+                        src="/events/assets/img/chevron-right.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                    </div></div
+                ></a>
+              </article>
+            </div>
+            <p class="catalog__empty js-empty" hidden>
+              Мероприятия не найдены. Измените запрос или сбросьте фильтры.
+            </p>
+            <nav class="pagination js-pagination" aria-label="Страницы каталога">
+              <button
+                class="pagination__arrow js-page-prev"
+                type="button"
+                aria-label="Предыдущая страница"
+                disabled
+              >
+                <img
+                  src="/events/assets/img/chevron-right.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                /></button
+              ><button
+                class="pagination__button js-page"
+                type="button"
+                data-page="1"
+                aria-current="page"
+              >
+                01</button
+              ><button class="pagination__button js-page" type="button" data-page="2">02</button
+              ><button class="pagination__button js-page" type="button" data-page="3">03</button
+              ><button class="pagination__button js-page" type="button" data-page="4">04</button
+              ><button class="pagination__button js-page" type="button" data-page="5">05</button
+              ><button class="pagination__button js-page" type="button" data-page="6">06</button
+              ><button
+                class="pagination__arrow js-page-next"
+                type="button"
+                aria-label="Следующая страница"
+              >
+                <img src="/events/assets/img/chevron-right.svg" alt="" width="16" height="16" />
+              </button>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts contacts" aria-labelledby="contacts-title">
+        <div class="container container--events contacts__inner">
+          <div class="contacts__content">
+            <h2 class="contacts__title" id="contacts-title">
+              Контакты для консультации<br />по мероприятиям
+            </h2>
+            <p class="contacts__intro">
+              Отвечаем в течение одного рабочего дня и публикуем ответ, <br />если вопрос пригодится
+              другим.
+            </p>
+            <div class="contacts__details">
+              <dl class="contacts__data">
+                <div class="contacts__item">
+                  <dt class="contacts__label">Директор</dt>
+                  <dd class="contacts__value">Шанина Ольга Николаевна</dd>
+                </div>
+                <div class="contacts__item">
+                  <dt class="contacts__label">Телефон</dt>
+                  <dd class="contacts__value"><a href="tel:+7882412886">+7-882-41-28-86</a></dd>
+                </div>
+                <div class="contacts__item">
+                  <dt class="contacts__label">Почта</dt>
+                  <dd class="contacts__value"><a href="mailto:fdp@narfu.ru">fdp@narfu.ru</a></dd>
+                </div>
+              </dl>
+              <div class="contacts__social">
+                <p class="contacts__label contacts__label--social">Социальные сети</p>
+                <a class="contacts__link" href="#"
+                  ><img src="/events/assets/img/vk.svg" alt="" width="32" height="32" />Группа в
+                  Контакте</a
+                ><a class="contacts__link" href="#"
+                  ><img src="/events/assets/img/max.svg" alt="" width="32" height="32" />Канал
+                  «Поступай в САФУ»</a
+                ><a class="contacts__link" href="#"
+                  ><img
+                    src="/events/assets/img/telegram.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />Чат-бот «Поступай в САФУ»</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-form js-contact-form" data-demo-result="success">
+            <form
+              class="contact-form__form js-question-form"
+              novalidate
+              aria-label="Задать вопрос о мероприятиях"
+            >
+              <p class="contact-form__required">* Поля обязательны для заполнения</p>
+              <div class="contact-form__fields">
+                <div class="topic-select topic-select--dark js-topic">
+                  <input type="hidden" name="topic" class="js-field-input" data-required="true" />
+                  <button
+                    class="topic-select__trigger js-topic-trigger"
+                    type="button"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-controls="topic-list"
+                    aria-label="* Выберите тему вопроса"
+                    aria-describedby="error-topic"
+                  >
+                    <span class="topic-select__value js-topic-value">* Выберите тему вопроса</span
+                    ><img src="/events/assets/img/chevron-down.svg" alt="" width="16" height="16" />
+                  </button>
+                  <ul
+                    class="topic-select__list js-topic-list"
+                    id="topic-list"
+                    role="listbox"
+                    aria-label="* Выберите тему вопроса"
+                    hidden
+                  >
+                    <li
+                      class="topic-select__option js-topic-option"
+                      id="topic-0"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Общий вопрос"
+                    >
+                      Общий вопрос
+                    </li>
+                    <li
+                      class="topic-select__option js-topic-option"
+                      id="topic-1"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Регистрация на мероприятие"
+                    >
+                      Регистрация на мероприятие
+                    </li>
+                    <li
+                      class="topic-select__option js-topic-option"
+                      id="topic-2"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Групповая заявка"
+                    >
+                      Групповая заявка
+                    </li>
+                    <li
+                      class="topic-select__option js-topic-option"
+                      id="topic-3"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Другое"
+                    >
+                      Другое
+                    </li>
+                  </ul>
+                  <span class="form-field__error" id="error-topic"></span>
+                </div>
+                <div class="contact-form__row contact-form__row--name">
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-surname">Фамилия</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-surname"
+                      name="surname"
+                      type="text"
+                      placeholder="* Фамилия"
+                      required
+                      autocomplete="family-name"
+                      aria-describedby="error-surname"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Фамилия"
+                      hidden
+                    >
+                      <img
+                        src="/events/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-surname"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-name">Имя</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-name"
+                      name="name"
+                      type="text"
+                      placeholder="* Имя"
+                      required
+                      autocomplete="given-name"
+                      aria-describedby="error-name"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Имя"
+                      hidden
+                    >
+                      <img
+                        src="/events/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-name"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-patronymic">Отчество</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-patronymic"
+                      name="patronymic"
+                      type="text"
+                      placeholder="Отчество"
+                      autocomplete="additional-name"
+                      aria-describedby="error-patronymic"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Отчество"
+                      hidden
+                    >
+                      <img
+                        src="/events/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-patronymic"
+                    ></span>
+                  </div>
+                </div>
+                <div class="contact-form__row">
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-phone">Телефон</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="* Телефон"
+                      required
+                      autocomplete="tel"
+                      aria-describedby="error-phone"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Телефон"
+                      hidden
+                    >
+                      <img
+                        src="/events/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-phone"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-email">Эл.почта</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-email"
+                      name="email"
+                      type="email"
+                      placeholder="* Эл.почта"
+                      required
+                      autocomplete="email"
+                      aria-describedby="error-email"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Эл.почта"
+                      hidden
+                    >
+                      <img
+                        src="/events/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-email"
+                    ></span>
+                  </div>
+                </div>
+                <div class="form-field form-field--question js-field">
+                  <label class="sr-only" for="event-question">Ваш вопрос</label
+                  ><textarea
+                    class="form-field__input form-field__input--question js-field-input"
+                    name="question"
+                    id="event-question"
+                    required
+                    maxlength="4000"
+                    placeholder="* Ваш вопрос, например: учитывается ли волонтёрская книжка, если я подаю документы на инженерное направление?"
+                    aria-describedby="error-question"
+                  ></textarea
+                  ><button
+                    class="form-field__clear js-field-clear"
+                    type="button"
+                    aria-label="Очистить вопрос"
+                    hidden
+                  >
+                    <img src="/events/assets/img/close.svg" alt="" width="16" height="16" /></button
+                  ><span
+                    class="form-field__error form-field__error--field"
+                    id="error-question"
+                  ></span>
+                </div>
+              </div>
+              <div class="contact-form__actions">
+                <label class="contact-form__consent"
+                  ><input
+                    class="contact-form__checkbox js-consent"
+                    type="checkbox"
+                    name="consent"
+                    required
+                    aria-describedby="error-consent"
+                  /><span
+                    >Нажимая кнопку «Отправить», вы соглашаетесь с
+                    <a href="#">политикой конфиденциальности</a> и даёте
+                    <a href="#">согласие на обработку ваших персональных данных</a></span
+                  ></label
+                ><span class="form-field__error" id="error-consent"></span
+                ><button class="button button--submit button--form-submit js-submit" type="submit">
+                  <span class="button__text js-submit-label">Отправить заявку</span
+                  ><img
+                    class="contact-form__spinner"
+                    src="/events/assets/img/loading.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    hidden
+                  />
+                </button>
+                <p class="contact-form__hint js-form-hint" role="status">
+                  <img
+                    class="contact-form__promise-icon"
+                    src="/events/assets/img/icon-promise.svg"
+                    alt=""
+                    width="15"
+                    height="21"
+                  /><span class="js-hint-text">Гарантируем обратную связь в течение 24 часов</span>
+                </p>
+              </div>
+            </form>
+            <div class="contact-form__result js-form-result" tabindex="-1" hidden>
+              <div class="contact-form__result-icon">
+                <img
+                  class="contact-form__result-image js-result-icon"
+                  src="/events/assets/img/result-success.svg"
+                  alt=""
+                  width="192"
+                  height="192"
+                />
+              </div>
+              <div class="contact-form__result-copy">
+                <h3 class="contact-form__result-title js-result-title"></h3>
+                <p class="contact-form__result-text js-result-text"></p>
+              </div>
+              <p class="contact-form__demo">Демонстрация: данные не отправлены.</p>
+              <button class="button button--submit js-form-again" type="button">
+                <span class="button__text js-form-again-label">Отправить ещё вопрос</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- safu:footer -->
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/events/assets/js/topic-select.js" defer></script>
+    <script src="/events/assets/js/catalog.js" defer></script>
+    <script src="/events/assets/js/question-form.js" defer></script>
+    <script src="/events/assets/js/demo-menu.js" defer></script>
+  </body>
+</html>

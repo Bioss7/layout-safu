@@ -1,0 +1,137 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 0 0 371px;
+  padding: 24px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.filters__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 8px;
+  background-color: rgba(11, 45, 78, 0.05);
+  border: 1px solid rgba(11, 45, 78, 0.1);
+  border-radius: 4px;
+  transition:
+    background-color 160ms,
+    border-color 160ms;
+  &:hover,
+  &.filters__search--demo-hover {
+    background-color: rgba(0, 174, 239, 0.1);
+    border-color: rgba(0, 174, 239, 0.2);
+  }
+  &:focus-within {
+    border-color: rgba(0, 174, 239, 0.3);
+  }
+}
+.filters__search--invalid {
+  padding: 4.5px 9.5px;
+  border-width: 0;
+  box-shadow: inset 0 0 0 1.5px #e02b37;
+  &:hover,
+  &:focus-within,
+  &.filters__search--demo-hover {
+    border-color: #e02b37;
+    background-color: rgba(11, 45, 78, 0.05);
+  }
+}
+.filters__search-text {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+.filters__error {
+  align-self: flex-start;
+  max-width: 100%;
+  color: #e02b37;
+  background-image: linear-gradient(to right, #e02b37, #fd5c60);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filters__input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  &::placeholder {
+    color: #546c83;
+    opacity: 1;
+  }
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.filters__clear {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+.filters__input--invalid {
+  color: #e02b37;
+  caret-color: #e02b37;
+  background-image: linear-gradient(to right, #e02b37, #fd5c60);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.filters__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-family: var(--events-display);
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 1.08px;
+}
+
+.filters__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@include breakpoint($bp-1440) {
+  .filters {
+    flex-basis: 300px;
+    padding: 20px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .filters {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .filters {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,58 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 28px;
+}
+
+.pagination__button,
+.pagination__arrow {
+  &:first-child {
+    margin-right: 12px;
+  }
+  &:last-child {
+    margin-left: 12px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: background-color 160ms;
+  &:hover {
+    background-color: rgba(0, 174, 239, 0.2);
+  }
+}
+
+.pagination__button[aria-current] {
+  background-color: rgba(0, 174, 239, 0.4);
+}
+
+.pagination__arrow {
+  background-color: rgba(0, 174, 239, 0.2);
+  &:first-child img {
+    transform: rotate(180deg);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .pagination {
+    gap: 4px;
+    margin-top: 24px;
+  }
+}

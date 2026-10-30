@@ -85,5 +85,12 @@
     "url": "/schoolchildren/",
     "status": "Реализована; блоки сверены с Figma на 1920 и 390; резиновые адаптивы; ссылки #; отдельное замечание по общему подвалу",
     "design": "https://www.figma.com/design/hFl4eZcqsWHnHq4MlWye0W/?node-id=130-949"
+  },
+  {
+    "id": "events",
+    "name": "Каталог мероприятий",
+    "url": "/events/",
+    "status": "Реализована; сверены 1920 и 390; проверены 15 ширин; форма и каталог — локальные заглушки; общая оболочка сохранена",
+    "design": "https://www.figma.com/design/CBbFxqLCLyzqrbp3eWDSHS/?node-id=1-334"
   }
 ]

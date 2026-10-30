@@ -1,0 +1,213 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.contact-form {
+  position: relative;
+  flex: 0 0 53.31%;
+  min-width: 0;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(38px);
+}
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-form__required {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.contact-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contact-form__row {
+  display: flex;
+  gap: 20px;
+}
+.contact-form__row--name {
+  margin-top: 19px;
+  --field-error-space: var(--name-error-space, 19px);
+}
+.contact-form--pending {
+  --name-error-space: 20px;
+  --question-error-space: 20px;
+}
+.contact-form__actions {
+  margin-top: -9px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.contact-form__checkbox {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  background-color: transparent;
+  &:checked {
+    background-image: url("../../img/check.svg");
+    background-position: center;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+  }
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: #00aeef;
+  cursor: pointer;
+}
+.contact-form__consent a {
+  color: #00aeef;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.contact-form__hint {
+  color: #00aeef;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.contact-form__promise-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.contact-form__spinner {
+  animation: events-spin 1s linear infinite;
+}
+
+@keyframes events-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.contact-form__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+  text-align: center;
+}
+.contact-form__result:focus {
+  outline: none;
+}
+.contact-form--result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 613px;
+}
+.contact-form__result-icon {
+  position: relative;
+  flex: 0 0 129px;
+  width: 129px;
+  height: 129px;
+}
+.contact-form__result-image {
+  position: absolute;
+  left: -31.5px;
+  top: -31.5px;
+  max-width: none;
+}
+.contact-form__result-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.contact-form__result-title {
+  font-family: var(--events-display);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 44px;
+}
+.contact-form__result-title--error {
+  white-space: nowrap;
+}
+.contact-form__result-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.contact-form__demo {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+@include breakpoint($bp-1440) {
+  .contact-form__result-title--error {
+    white-space: normal;
+  }
+  .contact-form {
+    padding: 32px;
+  }
+  .contact-form__row {
+    gap: 12px;
+  }
+}
+@include breakpoint($bp-992) {
+  .contact-form {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
+@include breakpoint($bp-576) {
+  .contact-form {
+    padding: 16px;
+  }
+  .contact-form__form {
+    gap: 20px;
+  }
+  .contact-form__row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-form__fields {
+    gap: 20px;
+  }
+  .contact-form__row--name {
+    margin-top: 0;
+  }
+  .contact-form__actions {
+    margin-top: 12px;
+  }
+  .contact-form__hint {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contact-form--result {
+    min-height: 613px;
+  }
+  .contact-form__result-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .contact-form__result-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,143 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.event-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
+  border: 0;
+  border-radius: 4px;
+  box-shadow:
+    inset 0 0 0 1px rgba(11, 45, 78, 0.2),
+    0 4px 12px rgba(11, 45, 78, 0.03);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.event-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: color 160ms;
+  &:hover {
+    color: #00aeef;
+  }
+}
+
+.event-card__image {
+  position: relative;
+  aspect-ratio: 415 / 234;
+  background-color: #cceffc;
+}
+
+.event-card__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.event-card__tag {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #0b2d4e;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+.event-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+  padding: 20px;
+}
+
+.event-card__title {
+  margin-bottom: -6px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  min-height: 50px;
+}
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #0b2d4e;
+}
+
+.event-card__row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-card__label {
+  font-size: 12px;
+  line-height: 16px;
+  color: #546c83;
+}
+
+.event-card__value {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.event-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  box-shadow: inset 0 1px rgba(11, 45, 78, 0.1);
+  padding-top: 12px;
+  color: #00aeef;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+@include breakpoint($bp-1440) {
+  .event-card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
+@include breakpoint($bp-576) {
+  .event-card {
+    flex-basis: 100%;
+  }
+  .event-card__image {
+    aspect-ratio: 358 / 202;
+  }
+  .event-card__tag {
+    top: 16px;
+    left: 16px;
+  }
+  .event-card__body {
+    padding: 16px;
+    gap: 16px;
+  }
+  .event-card__title {
+    margin-bottom: -2px;
+    font-size: 18px;
+    line-height: 26px;
+    min-height: 0;
+  }
+  .event-card__meta {
+    gap: 12px;
+  }
+  .event-card__value {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
