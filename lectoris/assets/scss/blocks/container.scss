@@ -1,0 +1,20 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.container {
+  width: calc(100% - 96px);
+  max-width: 1824px;
+  margin-inline: auto;
+}
+
+@include breakpoint($bp-1400) {
+  .container {
+    width: calc(100% - 64px);
+  }
+}
+
+@include breakpoint($bp-768) {
+  .container {
+    width: calc(100% - 32px);
+  }
+}

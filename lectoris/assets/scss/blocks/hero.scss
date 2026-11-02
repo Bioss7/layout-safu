@@ -1,0 +1,229 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.hero {
+  overflow: clip;
+  background: var(--blue);
+  color: #fff;
+}
+
+.hero__inner {
+  position: relative;
+  min-height: 728px;
+}
+
+.hero__copy {
+  width: 58%;
+  padding-top: 243px;
+  padding-bottom: 130px;
+}
+
+.hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+}
+
+.hero__description {
+  max-width: 903px;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 200;
+}
+
+.hero__subscribe {
+  margin-top: 32px;
+}
+
+.hero__subscribe-label,
+.hero__subscribe-mobile,
+.hero__mobile-intro {
+  display: none;
+}
+
+.hero__visual {
+  position: absolute;
+  top: 117px;
+  right: 5px;
+  width: 40.625%;
+  height: 539px;
+}
+
+.hero__quote {
+  min-height: 104px;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 354px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  // CSS-приближение матовой подложки Glass; параметры Figma — figma/hero-appearance.json.
+  -webkit-backdrop-filter: blur(58px);
+  backdrop-filter: blur(58px);
+  color: var(--ink);
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.hero__quote-icon {
+  flex: 0 0 auto;
+}
+
+.hero__quote-mobile {
+  white-space: pre-line;
+}
+
+@include breakpoint($bp-1400) {
+  .hero__copy {
+    width: 54%;
+    padding-top: 210px;
+    padding-bottom: 100px;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .hero__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .hero__visual {
+    top: 140px;
+    right: 0;
+    width: 43%;
+    transform: scale(0.84);
+    transform-origin: right top;
+  }
+  .hero__quote {
+    min-height: 84px;
+    left: -48px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .hero__copy {
+    width: 53%;
+  }
+  .hero__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .hero__visual {
+    transform: scale(0.72);
+  }
+  .hero__inner {
+    min-height: 660px;
+  }
+  .hero__quote {
+    left: -80px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .hero__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .hero__copy {
+    width: 100%;
+    max-width: 680px;
+    padding-top: 112px;
+    padding-bottom: 0;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .hero__visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 741px;
+    max-width: 100%;
+    height: 539px;
+    margin: 48px 0 48px;
+    transform: none;
+  }
+  .hero__quote {
+    left: 0;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .hero__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .hero__description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .hero__copy {
+    padding-top: 88px;
+  }
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+  }
+  .hero__desktop-intro {
+    display: none;
+  }
+  .hero__mobile-intro {
+    display: inline;
+  }
+  .hero__description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    max-width: 358px;
+  }
+  .hero__subscribe-label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .hero__subscribe-desktop {
+    display: none;
+  }
+  .hero__subscribe-mobile {
+    display: flex;
+    gap: 8px;
+    min-width: 0;
+  }
+  .hero__visual {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 539px;
+    width: 100%;
+  }
+  .hero__quote {
+    width: 296px;
+    max-width: 100%;
+    padding: 12px;
+    gap: 14px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+  }
+  .hero__quote-icon {
+    width: 20.8px;
+    height: 16px;
+  }
+}

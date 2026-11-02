@@ -1,0 +1,13 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.logo__image {
+  width: 153px;
+  height: 56px;
+  object-fit: contain;
+}

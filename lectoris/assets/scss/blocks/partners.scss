@@ -1,0 +1,138 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.partner-banner {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  padding: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #212121;
+  color: #fff;
+}
+
+.partner-banner::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: url("../img/partners/partner-background.png") center/cover no-repeat;
+  opacity: 0.72;
+}
+
+.partner-banner__content {
+  position: relative;
+  z-index: 1;
+  max-width: 657px;
+}
+
+.partner-banner__logo {
+  width: 185px;
+  height: 48px;
+}
+
+.partner-banner__description {
+  max-width: 453px;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.partner-banner__description span {
+  color: #63b36b;
+}
+
+.partner-banner__button {
+  margin-top: 20px;
+  min-width: 125px;
+}
+
+.partner-banner__art {
+  position: absolute;
+  z-index: -1;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.partner-banner__art--first {
+  width: 687.376px;
+  height: auto;
+  left: 63.6513%;
+  top: 447.2319px;
+  transform: rotate(-69.11916deg);
+  transform-origin: 0 0;
+}
+
+.partner-banner__art--second {
+  width: 615.805px;
+  height: auto;
+  left: 51.0537%;
+  top: -95.4375px;
+  transform: rotate(4.20672deg);
+  transform-origin: 0 0;
+}
+
+@include breakpoint($bp-1400) {
+  .partner-banner__art--second {
+    right: 180px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .partner-banner__content {
+    max-width: 48%;
+  }
+  .partner-banner__art--second {
+    display: none;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .partner-banner__art--first {
+    right: -120px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .partner-banner {
+    padding: 32px;
+  }
+  .partner-banner__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .partner-banner__art--first {
+    right: -190px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .partner-banner {
+    align-items: flex-start;
+    min-height: 449px;
+    padding: 24px;
+    border-radius: 16px;
+  }
+  .partner-banner__content {
+    max-width: 100%;
+  }
+  .partner-banner__logo {
+    width: 123.247px;
+    height: 32px;
+  }
+  .partner-banner__description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .partner-banner__art--first {
+    width: 416.512px;
+    left: 15.992px;
+    right: auto;
+    top: 194.095px;
+    transform: rotate(-13.77158deg);
+  }
+}

@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Лекторис — открытая образовательная площадка для сотрудников университетов. Вебинары, экспертные статьи и профессиональное сообщество."
+    />
+    <title>О нас — Лекторис</title>
+    <link rel="icon" href="assets/img/icons/icon-video.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/lectoris.css" />
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/speaker-slider.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="header js-header">
+      <div class="container header__inner">
+        <a class="logo" href="#" aria-label="Лекторис — главная"
+          ><picture
+            ><source
+              media="(max-width: 576px)"
+              srcset="assets/img/branding/lectoris-logo-mobile.svg" />
+            <img
+              class="logo__image"
+              src="assets/img/branding/lectoris-logo.svg"
+              alt="Лекторис"
+              width="153"
+              height="56" /></picture
+        ></a>
+        <div class="header__desktop-socials">
+          <div class="socials">
+            <a class="socials__link socials__link--white" href="#" aria-label="Telegram"
+              ><img
+                src="assets/img/icons/social-telegram-white.svg"
+                alt=""
+                width="20"
+                height="20" /></a
+            ><a class="socials__link socials__link--white" href="#" aria-label="VK"
+              ><img src="assets/img/icons/social-vk-white.svg" alt="" width="20" height="20" /></a
+            ><a class="socials__link socials__link--white" href="#" aria-label="MAX"
+              ><img src="assets/img/icons/social-max-white.svg" alt="" width="20" height="20"
+            /></a>
+          </div>
+        </div>
+        <button
+          class="header__toggle js-header-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="header-menu"
+        >
+          <img src="assets/img/icons/icon-menu.svg" alt="" width="24" height="24" />
+        </button>
+        <nav class="header__menu js-header-menu" id="header-menu" aria-label="Основная навигация">
+          <a class="tag tag--light" href="#">Анонсы</a>
+          <a class="tag tag--light" href="#">Спикерам</a>
+          <a class="tag tag--light" href="#">Рекламодателям</a>
+          <a class="tag tag--light" href="#">Статьи</a>
+          <a class="tag tag--light tag--current" href="#" aria-current="page">О нас</a>
+          <a class="tag tag--light" href="#">Конференция</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="section section--hero hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__mobile-intro">Лекторис – </span
+              ><span class="hero__desktop-intro">О</span
+              ><span class="hero__mobile-intro">о</span>ткрытая образовательная площадка
+              <br class="mobile-copy" />для сотрудников университетов
+            </h1>
+            <p class="hero__description">
+              Создаем пространство для обмена опытом <br class="mobile-copy" />и развития высшего
+              образования.
+            </p>
+            <div class="hero__subscribe">
+              <p class="hero__subscribe-label">Подписаться на канал</p>
+              <a class="button button--glass hero__subscribe-desktop" href="#"
+                >Подписаться на канал</a
+              >
+              <div class="socials hero__subscribe-mobile">
+                <a class="socials__link socials__link--mobile" href="#" aria-label="Telegram"
+                  ><img
+                    src="assets/img/icons/social-telegram-mobile.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></a
+                ><a class="socials__link socials__link--mobile" href="#" aria-label="VK"
+                  ><img
+                    src="assets/img/icons/social-vk-mobile.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></a
+                ><a class="socials__link socials__link--mobile" href="#" aria-label="MAX"
+                  ><img src="assets/img/icons/social-max-mobile.svg" alt="" width="48" height="48"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <blockquote class="hero__quote">
+              <img
+                class="hero__quote-icon"
+                src="assets/img/hero/quote.svg"
+                alt=""
+                width="26"
+                height="20"
+              />
+              <p class="js-hero-quote-text">
+                Здесь можно не только делиться опытом, <br class="mobile-copy" />но и самому
+                находить новое
+              </p>
+            </blockquote>
+            <div
+              class="reviews-slider reviews-slider--speakers js-reviews"
+              role="region"
+              aria-roledescription="карусель"
+              aria-label="Спикеры Лекториса"
+              tabindex="0"
+            >
+              <div class="reviews-slider__viewport js-reviews-viewport">
+                <article
+                  class="speaker-card speaker-card--anna speaker-card--active js-review-card"
+                  data-speaker="anna"
+                  data-quote="Здесь можно не только делиться опытом, но и самому находить новое"
+                  data-quote-mobile="Здесь можно не только делиться опытом,&#10;но и самому находить новое"
+                  role="group"
+                  aria-roledescription="слайд"
+                  aria-label="1 из 5: Анна Тукачёва"
+                  aria-hidden="false"
+                >
+                  <div class="speaker-card__portrait" role="img" aria-label="Анна Тукачёва"></div>
+                  <div class="speaker-card__caption">
+                    <h2 class="speaker-card__name">Анна Тукачёва</h2>
+                    <p class="speaker-card__description">
+                      Директор центра маркетинга,<br />
+                      Университет Дубна
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="speaker-card speaker-card--gulnaz speaker-card--next js-review-card"
+                  data-speaker="gulnaz"
+                  data-quote="Вместе проще находить решения и развивать высшее образование."
+                  role="group"
+                  aria-roledescription="слайд"
+                  aria-label="2 из 5: Гульназ Ижбаева"
+                  aria-hidden="true"
+                >
+                  <div class="speaker-card__portrait" role="img" aria-label="Гульназ Ижбаева"></div>
+                  <div class="speaker-card__caption">
+                    <h2 class="speaker-card__name">Гульназ Ижбаева</h2>
+                    <p class="speaker-card__description">
+                      Эксперт образовательного сообщества «Лекторис»
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="speaker-card speaker-card--anna speaker-card--inactive js-review-card"
+                  data-speaker="irina"
+                  data-quote="Практика коллег помогает превращать новые идеи в работающие решения."
+                  role="group"
+                  aria-roledescription="слайд"
+                  aria-label="3 из 5: Ирина Соколова"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <div class="speaker-card__portrait" role="img" aria-label="Ирина Соколова"></div>
+                  <div class="speaker-card__caption">
+                    <h2 class="speaker-card__name">Ирина Соколова</h2>
+                    <p class="speaker-card__description">
+                      Участник профессионального сообщества «Лекторис»
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="speaker-card speaker-card--alexey speaker-card--inactive js-review-card"
+                  data-speaker="dmitry"
+                  data-quote="Учиться друг у друга — значит вместе менять образование к лучшему."
+                  role="group"
+                  aria-roledescription="слайд"
+                  aria-label="4 из 5: Дмитрий Орлов"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <div class="speaker-card__portrait" role="img" aria-label="Дмитрий Орлов"></div>
+                  <div class="speaker-card__caption">
+                    <h2 class="speaker-card__name">Дмитрий Орлов</h2>
+                    <p class="speaker-card__description">
+                      Участник профессионального сообщества «Лекторис»
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="speaker-card speaker-card--alexey speaker-card--previous js-review-card"
+                  data-speaker="alexey"
+                  data-quote="Обмениваясь опытом, мы находим новые возможности для университетов."
+                  role="group"
+                  aria-roledescription="слайд"
+                  aria-label="5 из 5: Алексей Шиманский"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="speaker-card__portrait"
+                    role="img"
+                    aria-label="Алексей Шиманский"
+                  ></div>
+                  <div class="speaker-card__caption">
+                    <h2 class="speaker-card__name">Алексей Шиманский</h2>
+                    <p class="speaker-card__description">
+                      Эксперт образовательного сообщества «Лекторис»
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="reviews-slider__controls">
+                <button
+                  class="arrow-btn js-reviews-prev"
+                  type="button"
+                  aria-label="Предыдущий спикер"
+                >
+                  <img
+                    class="arrow-btn__icon arrow-btn__icon--previous"
+                    src="assets/img/icons/arrow-white.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </button>
+                <div class="slider-dots js-reviews-dots">
+                  <button
+                    class="slider-dots__dot slider-dots__dot--active js-review-dot"
+                    type="button"
+                    aria-label="Показать: Анна Тукачёва"
+                    aria-current="true"
+                    data-slide="0"
+                  >
+                    <span aria-hidden="true"></span></button
+                  ><button
+                    class="slider-dots__dot js-review-dot"
+                    type="button"
+                    aria-label="Показать: Гульназ Ижбаева"
+                    aria-current="false"
+                    data-slide="1"
+                  >
+                    <span aria-hidden="true"></span></button
+                  ><button
+                    class="slider-dots__dot js-review-dot"
+                    type="button"
+                    aria-label="Показать: Ирина Соколова"
+                    aria-current="false"
+                    data-slide="2"
+                  >
+                    <span aria-hidden="true"></span></button
+                  ><button
+                    class="slider-dots__dot js-review-dot"
+                    type="button"
+                    aria-label="Показать: Дмитрий Орлов"
+                    aria-current="false"
+                    data-slide="3"
+                  >
+                    <span aria-hidden="true"></span></button
+                  ><button
+                    class="slider-dots__dot js-review-dot"
+                    type="button"
+                    aria-label="Показать: Алексей Шиманский"
+                    aria-current="false"
+                    data-slide="4"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <button
+                  class="arrow-btn js-reviews-next"
+                  type="button"
+                  aria-label="Следующий спикер"
+                >
+                  <img
+                    class="arrow-btn__icon"
+                    src="assets/img/icons/arrow-white.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </button>
+              </div>
+              <p class="visually-hidden js-reviews-status" aria-live="polite" aria-atomic="true">
+                Анна Тукачёва. Слайд 1 из 5
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--features" aria-labelledby="features-title">
+        <div class="container">
+          <h2 class="section__title" id="features-title">Возможности платформы</h2>
+          <div class="features">
+            <article class="feature-card feature-card--webinars">
+              <span class="feature-card__icon feature-card__icon--large"
+                ><img src="assets/img/icons/icon-video.svg" alt="" width="28" height="28"
+              /></span>
+              <h3 class="feature-card__title">Бесплатные вебинары</h3>
+              <p class="feature-card__description">
+                Наша основная задача – проведение вебинаров, которые может посетить любой сотрудник
+                вуза. Делимся практикой экспертов по актуальным вопросам
+              </p>
+              <a class="button button--outline" href="#">Смотреть</a>
+            </article>
+            <div class="features__list">
+              <article class="feature-card feature-card--network">
+                <div class="feature-card__content">
+                  <span class="feature-card__icon"
+                    ><img src="assets/img/icons/icon-network.svg" alt="" width="20" height="20"
+                  /></span>
+                  <h3 class="feature-card__title">Нетворкинг</h3>
+                  <p class="feature-card__description">
+                    Сообщество коллег, открытых к сотрудничеству
+                  </p>
+                </div>
+                <div class="feature-card__actions">
+                  <a class="button button--text" href="#"
+                    >Подписаться
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/arrow-blue.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                  /></a>
+                  <div class="socials feature-card__socials">
+                    <a class="socials__link socials__link--blue" href="#" aria-label="Telegram"
+                      ><img
+                        src="assets/img/icons/social-telegram-blue.svg"
+                        alt=""
+                        width="32"
+                        height="32" /></a
+                    ><a class="socials__link socials__link--blue" href="#" aria-label="VK"
+                      ><img
+                        src="assets/img/icons/social-vk-blue.svg"
+                        alt=""
+                        width="32"
+                        height="32" /></a
+                    ><a class="socials__link socials__link--blue" href="#" aria-label="MAX"
+                      ><img
+                        src="assets/img/icons/social-max-blue.svg"
+                        alt=""
+                        width="32"
+                        height="32"
+                    /></a>
+                  </div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <div class="feature-card__content">
+                  <span class="feature-card__icon"
+                    ><img src="assets/img/icons/icon-file.svg" alt="" width="20" height="20"
+                  /></span>
+                  <h3 class="feature-card__title">Экспертные статьи</h3>
+                  <p class="feature-card__description">Кейсы, аналитика и профессиональный опыт</p>
+                </div>
+                <a class="button button--text" href="#"
+                  >Читать
+                  <img
+                    class="button__icon"
+                    src="assets/img/icons/arrow-blue.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                /></a>
+              </article>
+              <article class="feature-card">
+                <div class="feature-card__content">
+                  <span class="feature-card__icon"
+                    ><img src="assets/img/icons/icon-folder.svg" alt="" width="20" height="20"
+                  /></span>
+                  <h3 class="feature-card__title">Полезные материалы</h3>
+                  <p class="feature-card__description">
+                    <span class="desktop-copy">Размещаем на странице прошедшего вебинара</span
+                    ><span class="mobile-copy"
+                      >Отчеты об исследованиях, методички, памятки и другое</span
+                    >
+                  </p>
+                </div>
+                <a class="button button--text" href="#"
+                  >Получить
+                  <img
+                    class="button__icon"
+                    src="assets/img/icons/arrow-blue.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                /></a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--audience" aria-labelledby="audience-title">
+        <div class="container">
+          <h2 class="section__title" id="audience-title">Для тех, кто развивает вузы</h2>
+          <div class="audience">
+            <article class="audience-card">
+              <picture
+                ><source
+                  media="(max-width: 576px)"
+                  srcset="assets/img/audience/audience-staff-mobile.png" />
+                <img
+                  class="audience-card__image"
+                  src="assets/img/audience/audience-staff.png"
+                  alt=""
+                  width="438"
+                  height="329"
+              /></picture>
+              <div class="audience-card__content">
+                <h3 class="audience-card__title">Сотрудникам</h3>
+                <p class="audience-card__description">
+                  Практика экспертов по актуальным вопросам высшего образования
+                </p>
+              </div>
+            </article>
+            <article class="audience-card">
+              <picture
+                ><source
+                  media="(max-width: 576px)"
+                  srcset="assets/img/audience/audience-managers-mobile.png" />
+                <img
+                  class="audience-card__image"
+                  src="assets/img/audience/audience-managers.png"
+                  alt=""
+                  width="438"
+                  height="329"
+              /></picture>
+              <div class="audience-card__content">
+                <h3 class="audience-card__title">Руководителям</h3>
+                <p class="audience-card__description">
+                  Идеи и решения для развития университета и его подразделений
+                </p>
+              </div>
+            </article>
+            <article class="audience-card">
+              <picture
+                ><source
+                  media="(max-width: 576px)"
+                  srcset="assets/img/audience/audience-teachers-mobile.png" />
+                <img
+                  class="audience-card__image"
+                  src="assets/img/audience/audience-teachers.png"
+                  alt=""
+                  width="438"
+                  height="329"
+              /></picture>
+              <div class="audience-card__content">
+                <h3 class="audience-card__title">Преподавателям</h3>
+                <p class="audience-card__description">Новые подходы, технологии и опыт коллег</p>
+              </div>
+            </article>
+            <article class="audience-card">
+              <picture
+                ><source
+                  media="(max-width: 576px)"
+                  srcset="assets/img/audience/audience-experts-mobile.png" />
+                <img
+                  class="audience-card__image"
+                  src="assets/img/audience/audience-experts.png"
+                  alt=""
+                  width="438"
+                  height="329"
+              /></picture>
+              <div class="audience-card__content">
+                <h3 class="audience-card__title">Экспертам</h3>
+                <p class="audience-card__description">
+                  Возможность поделиться своей практикой с профессиональным сообществом.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section--topics" aria-labelledby="topics-title">
+        <div class="container topics">
+          <div class="topics__intro">
+            <h2 class="section__title" id="topics-title">Спектр тем</h2>
+            <p class="topics__description">
+              Мы накапливаем знания и формируем тематические подборки записей эфиров. Выбирайте
+              нужное и переходите к просмотру – здесь полезно.
+            </p>
+          </div>
+          <ul class="topics__tags">
+            <li><a class="tag tag--blue" href="#">Приемная кампания</a></li>
+            <li><a class="tag tag--blue" href="#">ДПО</a></li>
+            <li><a class="tag tag--blue" href="#">Маркетинг</a></li>
+            <li><a class="tag tag--blue" href="#">Аналитика</a></li>
+            <li><a class="tag tag--blue" href="#">Управление</a></li>
+            <li><a class="tag tag--blue" href="#">Цифровизация</a></li>
+            <li><a class="tag tag--blue" href="#">CRM</a></li>
+            <li><a class="tag tag--blue" href="#">ИИ</a></li>
+            <li><a class="tag tag--blue" href="#">Образовательные программы</a></li>
+            <li><a class="tag tag--blue" href="#">Студенты</a></li>
+            <li><a class="tag tag--blue" href="#">Преподавание</a></li>
+            <li><a class="tag tag--blue" href="#">Брендинг</a></li>
+            <li><a class="tag tag--blue" href="#">Репутация</a></li>
+            <li><a class="tag tag--blue" href="#">International</a></li>
+            <li><a class="tag tag--blue" href="#">Наука</a></li>
+            <li><a class="tag tag--blue" href="#">Партнерство</a></li>
+            <li><a class="tag tag--blue" href="#">СПО</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section--webinars" aria-labelledby="webinars-title">
+        <div class="container">
+          <h2 class="section__title" id="webinars-title">Последние вебинары</h2>
+          <div class="webinars">
+            <article class="event-card">
+              <a class="event-card__image-link" href="#" aria-label="Подробнее о вебинаре"
+                ><img
+                  class="event-card__image"
+                  src="assets/img/webinars/webinar.png"
+                  alt=""
+                  width="527"
+                  height="296"
+              /></a>
+              <div class="event-card__meta event-card__meta--desktop">
+                <span
+                  ><img
+                    src="assets/img/icons/icon-calendar.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />13.03.2025</span
+                ><span
+                  ><img src="assets/img/icons/icon-clock.svg" alt="" width="16" height="16" />11:00
+                  мск</span
+                >
+              </div>
+              <div class="event-card__meta event-card__meta--mobile">
+                <span>Вебинар</span><span>13.03.2025</span
+                ><span
+                  ><img
+                    src="assets/img/icons/icon-user-square.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />А. Марченко</span
+                >
+              </div>
+              <h3 class="event-card__title">
+                <a href="#"
+                  ><span class="desktop-copy"
+                    >CRM для работы с абитуриентами 2025 — описание вебинара</span
+                  ><span class="mobile-copy">CRM Мероприятия 2.0<br />для поколения Альфа</span></a
+                >
+              </h3>
+              <div class="event-card__actions event-card__actions--desktop">
+                <a class="button button--primary" href="#"
+                  >Регистрация на вебинар<img
+                    class="button__icon"
+                    src="assets/img/icons/arrow-white.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+              </div>
+              <div class="event-card__actions event-card__actions--mobile">
+                <a class="button button--primary" href="#"
+                  >Получить запись
+                  <img
+                    class="button__icon"
+                    src="assets/img/icons/icon-recording.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+                <div class="event-card__secondary">
+                  <a class="button button--subtle" href="#"
+                    >Получить КП
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-document.svg"
+                      alt=""
+                      width="24"
+                      height="24" /></a
+                  ><a class="button button--subtle" href="#"
+                    >Спикер
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-speaker.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                  /></a>
+                </div>
+              </div>
+            </article>
+            <article class="event-card">
+              <a class="event-card__image-link" href="#" aria-label="Подробнее о вебинаре"
+                ><img
+                  class="event-card__image"
+                  src="assets/img/webinars/webinar.png"
+                  alt=""
+                  width="527"
+                  height="296"
+              /></a>
+              <div class="event-card__meta event-card__meta--desktop">
+                <span
+                  ><img
+                    src="assets/img/icons/icon-calendar.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />13.03.2025</span
+                ><span
+                  ><img src="assets/img/icons/icon-clock.svg" alt="" width="16" height="16" />11:00
+                  мск</span
+                >
+              </div>
+              <div class="event-card__meta event-card__meta--mobile">
+                <span>Вебинар</span><span>13.03.2025</span
+                ><span
+                  ><img
+                    src="assets/img/icons/icon-user-square.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />А. Марченко</span
+                >
+              </div>
+              <h3 class="event-card__title">
+                <a href="#"
+                  ><span class="desktop-copy"
+                    >CRM для работы с абитуриентами 2025 — описание вебинара</span
+                  ><span class="mobile-copy">CRM Мероприятия 2.0<br />для поколения Альфа</span></a
+                >
+              </h3>
+              <div class="event-card__actions event-card__actions--desktop">
+                <a class="button button--primary" href="#"
+                  >Получить запись вебинара<img
+                    class="button__icon"
+                    src="assets/img/icons/icon-recording.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+              </div>
+              <div class="event-card__actions event-card__actions--mobile">
+                <a class="button button--primary" href="#"
+                  >Получить запись
+                  <img
+                    class="button__icon"
+                    src="assets/img/icons/icon-recording.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+                <div class="event-card__secondary">
+                  <a class="button button--subtle" href="#"
+                    >Получить КП
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-document.svg"
+                      alt=""
+                      width="24"
+                      height="24" /></a
+                  ><a class="button button--subtle" href="#"
+                    >Спикер
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-speaker.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                  /></a>
+                </div>
+              </div>
+            </article>
+            <article class="event-card">
+              <a class="event-card__image-link" href="#" aria-label="Подробнее о вебинаре"
+                ><img
+                  class="event-card__image"
+                  src="assets/img/webinars/webinar.png"
+                  alt=""
+                  width="527"
+                  height="296"
+              /></a>
+              <div class="event-card__meta event-card__meta--desktop">
+                <span
+                  ><img
+                    src="assets/img/icons/icon-calendar.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />13.03.2025</span
+                ><span
+                  ><img src="assets/img/icons/icon-clock.svg" alt="" width="16" height="16" />11:00
+                  мск</span
+                >
+              </div>
+              <div class="event-card__meta event-card__meta--mobile">
+                <span>Вебинар</span><span>13.03.2025</span
+                ><span
+                  ><img
+                    src="assets/img/icons/icon-user-square.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />А. Марченко</span
+                >
+              </div>
+              <h3 class="event-card__title">
+                <a href="#"
+                  ><span class="desktop-copy"
+                    >CRM для работы с абитуриентами 2025 — описание вебинара</span
+                  ><span class="mobile-copy">CRM Мероприятия 2.0<br />для поколения Альфа</span></a
+                >
+              </h3>
+              <div class="event-card__actions event-card__actions--desktop">
+                <a class="button button--primary" href="#"
+                  >Получить запись вебинара<img
+                    class="button__icon"
+                    src="assets/img/icons/icon-recording.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+              </div>
+              <div class="event-card__actions event-card__actions--mobile">
+                <a class="button button--primary" href="#"
+                  >Получить запись
+                  <img
+                    class="button__icon"
+                    src="assets/img/icons/icon-recording.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                /></a>
+                <div class="event-card__secondary">
+                  <a class="button button--subtle" href="#"
+                    >Получить КП
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-document.svg"
+                      alt=""
+                      width="24"
+                      height="24" /></a
+                  ><a class="button button--subtle" href="#"
+                    >Спикер
+                    <img
+                      class="button__icon"
+                      src="assets/img/icons/icon-speaker.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                  /></a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="webinars__more">
+            <a class="button button--subtle" href="#"
+              >Смотреть все
+              <img
+                class="button__icon"
+                src="assets/img/icons/arrow-dark.svg"
+                alt=""
+                width="24"
+                height="24"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <section class="section section--community" aria-labelledby="community-title">
+        <div class="community">
+          <div class="container">
+            <dl class="community__statistics">
+              <div>
+                <dt>4 800+</dt>
+                <dd>слушателей</dd>
+              </div>
+              <div>
+                <dt>35+</dt>
+                <dd>экспертов</dd>
+              </div>
+              <div>
+                <dt>300+</dt>
+                <dd>университетов</dd>
+              </div>
+            </dl>
+            <picture class="community__logos"
+              ><source
+                media="(max-width: 576px)"
+                srcset="assets/img/community/university-logos-mobile.png" />
+              <img
+                src="assets/img/community/university-logos-desktop.png"
+                alt="Университеты и организации сообщества Лекторис"
+                width="1064"
+                height="96"
+            /></picture>
+            <h2 class="community__title" id="community-title">
+              Присоединяйтесь <br class="mobile-copy" />к сообществу профессионалов!
+            </h2>
+            <p class="community__description">
+              Публикуйте лекции, делитесь знаниями <br class="mobile-copy" />и развивайтесь вместе с
+              «Лекторисом»
+            </p>
+            <div class="community__subscribe">
+              <p>Подписаться</p>
+              <div class="community__links">
+                <a class="button button--glass" href="#">Telegram</a
+                ><a class="button button--glass" href="#">VK</a
+                ><a class="button button--glass" href="#">MAX</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--partners" aria-labelledby="partners-title">
+        <div class="container">
+          <h2 class="section__title" id="partners-title">Партнеры</h2>
+          <div class="partner-banner">
+            <div class="partner-banner__content">
+              <img
+                class="partner-banner__logo"
+                src="assets/img/partners/sibtech-logo.png"
+                alt="Сибтех"
+                width="185"
+                height="48"
+              />
+              <p class="partner-banner__description">
+                Интегратор №1 в сфере образования <span>по версии Рейтинга Рунета</span>
+              </p>
+              <a class="button button--glass partner-banner__button" href="#"
+                >Сайт
+                <img
+                  class="button__icon"
+                  src="assets/img/icons/arrow-white.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+              /></a>
+            </div>
+            <img
+              class="partner-banner__art partner-banner__art--first"
+              src="assets/img/partners/partner-source-3.png"
+              alt=""
+              width="687"
+              height="688"
+            />
+            <img
+              class="partner-banner__art partner-banner__art--second"
+              src="assets/img/partners/partner-source-3.png"
+              alt=""
+              width="616"
+              height="616"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a class="logo" href="#" aria-label="Лекторис — главная"
+            ><img
+              class="logo__image"
+              src="assets/img/branding/lectoris-logo.svg"
+              alt="Лекторис"
+              width="153"
+              height="56"
+          /></a>
+          <div class="socials footer__socials">
+            <a class="socials__link socials__link--white" href="#" aria-label="Telegram"
+              ><img
+                src="assets/img/icons/social-telegram-white.svg"
+                alt=""
+                width="20"
+                height="20" /></a
+            ><a class="socials__link socials__link--white" href="#" aria-label="VK"
+              ><img src="assets/img/icons/social-vk-white.svg" alt="" width="20" height="20" /></a
+            ><a class="socials__link socials__link--white" href="#" aria-label="MAX"
+              ><img src="assets/img/icons/social-max-white.svg" alt="" width="20" height="20"
+            /></a>
+          </div>
+        </div>
+        <nav class="footer__menu" aria-label="Навигация в подвале">
+          <a class="tag tag--light footer__desktop-link" href="#">Главная</a
+          ><a class="tag tag--light" href="#">Анонсы</a
+          ><a class="tag tag--light" href="#">Спикерам</a
+          ><a class="tag tag--light" href="#"
+            ><span class="desktop-copy">Рекламодателям</span
+            ><span class="mobile-copy">Телеграм канал</span></a
+          ><a class="tag tag--light footer__desktop-link" href="#">О нас</a>
+        </nav>
+        <a class="footer__credit" href="#" aria-label="Сделано в Сибтехе"
+          ><img
+            src="assets/img/footer/sibtech-credit.png"
+            alt="Сделано в Сибтехе"
+            width="173"
+            height="32"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.socials__link {
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background-color 160ms;
+}
+
+.socials__link--white {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.socials__link--white:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.socials__link--blue {
+  width: 32px;
+  height: 32px;
+}
+
+.socials__link--blue:hover {
+  background: #d9f3fb;
+}
+
+.socials__link--mobile {
+  width: 48px;
+  height: 48px;
+}
+
+.socials__link--mobile:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

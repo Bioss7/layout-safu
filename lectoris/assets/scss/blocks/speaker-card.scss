@@ -1,0 +1,125 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.speaker-card {
+  position: absolute;
+  top: 27px;
+  width: 260px;
+  height: 350px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ink);
+  transition:
+    left 280ms ease,
+    top 280ms ease,
+    width 280ms ease,
+    height 280ms ease;
+}
+
+.speaker-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0, 186, 237, 0.5);
+  transition: opacity 280ms;
+}
+
+.speaker-card--previous {
+  z-index: 1;
+  left: 0;
+}
+
+.speaker-card--next {
+  z-index: 1;
+  left: 394px;
+}
+
+.speaker-card--active {
+  z-index: 2;
+  top: 0;
+  left: 169px;
+  width: 300px;
+  height: 404px;
+  border: 1.432px solid #fff;
+}
+
+.speaker-card--active::after {
+  opacity: 0;
+}
+
+.speaker-card__portrait {
+  position: absolute;
+  inset: -2px;
+  background-repeat: no-repeat;
+}
+
+.speaker-card--anna .speaker-card__portrait {
+  background-image: url("../img/hero/anna-source-1.jpeg");
+  background-size: 288.34% 142.79%;
+  background-position: 38.75% 26.71%;
+}
+
+.speaker-card--alexey .speaker-card__portrait {
+  background-image: url("../img/hero/alexey-source-3.png");
+  background-size: 128.34% 143.06%;
+  background-position: 99.68% 42.82%;
+}
+
+.speaker-card--gulnaz .speaker-card__portrait {
+  background-image: url("../img/hero/gulnaz-source-1.jpeg");
+  background-size: 206.26% 207.54%;
+  background-position: 72.76% 29.64%;
+}
+
+.speaker-card__caption {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  min-height: 64.109px;
+  padding: 23px 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.speaker-card__name {
+  font-size: 17.373px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.speaker-card__description {
+  display: none;
+  margin: 9px auto 0;
+  max-width: 200px;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 15.36px;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.speaker-card--active .speaker-card__caption {
+  left: -1.432px;
+  right: -1.432px;
+  bottom: -1.432px;
+  min-height: 74px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+
+.speaker-card--active .speaker-card__portrait {
+  inset: -1.432px;
+}
+
+.speaker-card--active .speaker-card__name {
+  font-size: 18px;
+}
+
+.speaker-card--active .speaker-card__description {
+  display: block;
+}

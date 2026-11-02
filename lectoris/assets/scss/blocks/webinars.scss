@@ -1,0 +1,200 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.webinars {
+  width: calc(100% - 3px);
+  margin-inline: auto;
+  display: flex;
+  gap: 24px;
+}
+
+.event-card {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.event-card__image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.event-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  mix-blend-mode: luminosity;
+  transition: transform 220ms;
+}
+
+.event-card__image-link:hover .event-card__image {
+  transform: scale(1.035);
+}
+
+.event-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.event-card__meta span {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 40px;
+  background: rgba(0, 186, 237, 0.05);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  align-items: center;
+}
+
+.event-card__meta--mobile {
+  display: none;
+}
+
+.event-card__title {
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.event-card__title a:hover {
+  color: #008dbd;
+}
+
+.event-card__actions {
+  margin-top: 48px;
+}
+
+.event-card__actions--desktop .button {
+  padding: 9px 15px 9px 19px;
+  gap: 12px;
+}
+
+.event-card__actions--mobile {
+  display: none;
+}
+
+.webinars__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.webinars__more .button {
+  gap: 16px;
+}
+
+@include breakpoint($bp-1200) {
+  .event-card {
+    padding: 20px;
+  }
+  .event-card__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .event-card__meta {
+    gap: 8px 16px;
+  }
+  .event-card__actions .button {
+    font-size: 14px;
+    padding-inline: 14px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .webinars {
+    flex-wrap: wrap;
+  }
+  .event-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@include breakpoint($bp-768) {
+  .event-card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .webinars {
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .event-card {
+    flex-basis: auto;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .event-card__meta--desktop,
+  .event-card__actions--desktop {
+    display: none;
+  }
+  .event-card__meta--mobile {
+    display: flex;
+    gap: 8px 4px;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .event-card__meta--mobile span {
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    background: #e6f6fc;
+    letter-spacing: -0.04em;
+    border-radius: 40px;
+  }
+  .event-card__meta--mobile span:first-child {
+    border-color: rgba(0, 166, 222, 0.6);
+    border-radius: 15px 15px 15px 0;
+  }
+  .event-card__meta--mobile span:last-child {
+    flex-basis: auto;
+    margin-right: 50%;
+    white-space: nowrap;
+  }
+  .event-card__title {
+    margin-top: 16px;
+  }
+  .event-card__actions--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .event-card__actions--mobile .button {
+    padding: 7px 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .event-card__secondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .event-card__secondary .button {
+    flex: none;
+    white-space: nowrap;
+    padding: 7px 14px 7px 16px;
+    gap: 12px;
+    background: #fff;
+    border-color: transparent;
+  }
+  .webinars__more {
+    margin-top: 32px;
+  }
+}

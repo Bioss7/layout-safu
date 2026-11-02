@@ -1,0 +1,89 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.audience {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.audience-card {
+  flex: 1;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.audience-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 438/329;
+  object-fit: contain;
+}
+
+.audience-card__content {
+  padding: 24px 23px;
+  text-align: center;
+}
+
+.audience-card__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.audience-card__description {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+@include breakpoint($bp-1200) {
+  .audience {
+    flex-wrap: wrap;
+  }
+  .audience-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@include breakpoint($bp-768) {
+  .audience-card__content {
+    padding: 20px 16px;
+  }
+  .audience-card__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .audience-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .audience {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .audience-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .audience-card__content {
+    padding: 19.616px 19.616px 13.078px;
+    min-height: 104.85px;
+  }
+  .audience-card__title {
+    font-size: 20px;
+    line-height: 24.52px;
+  }
+  .audience-card__description {
+    margin-top: 6.539px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

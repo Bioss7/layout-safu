@@ -1,0 +1,191 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.community {
+  overflow: hidden;
+  color: #fff;
+  background: var(--blue);
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+.community::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: url("../img/community/community-background.png") center/cover no-repeat;
+  mix-blend-mode: soft-light;
+  opacity: 0.3;
+}
+
+.community__statistics {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 58px 0 40px;
+}
+
+.community__statistics div {
+  flex: 1;
+}
+
+.community__statistics dt {
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 200;
+}
+
+.community__statistics dd {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.community__logos {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 32px auto 0;
+}
+
+.community__logos img {
+  width: 1064px;
+  max-width: 100%;
+  height: auto;
+}
+
+.community__title {
+  margin: 40px auto 0;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.community__description {
+  margin: 16px auto 0;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.community__subscribe {
+  margin-top: 48px;
+  padding-bottom: 58px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.community__links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.community__links .button {
+  min-width: 120px;
+}
+
+@include breakpoint($bp-1200) {
+  .community__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .community__statistics dt {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .community__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .community__description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .community__statistics {
+    gap: 16px;
+  }
+  .community__statistics dt {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .community__statistics dd {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .community__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@include breakpoint($bp-576) {
+  .community__statistics {
+    justify-content: space-between;
+    gap: 8px;
+    padding: 24px 8px;
+  }
+  .community__statistics div {
+    flex: 0 1 auto;
+  }
+  .community__statistics dt {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .community__statistics dd {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .community__logos {
+    margin-top: 28.5px;
+  }
+  .community__logos img {
+    width: 312px;
+    height: auto;
+  }
+  .community__title {
+    max-width: 358px;
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+  }
+  .community__description {
+    max-width: 358px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .community__subscribe {
+    margin-top: 45px;
+    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .community__links {
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .community__links .button {
+    min-width: 0;
+    width: 96px;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .community::before {
+    background-position: 70% center;
+  }
+}
