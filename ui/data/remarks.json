@@ -6,10 +6,7 @@
       "page": "abiturient",
       "block": "Вопросы и ответы",
       "selector": ".accordion__trigger",
-      "states": [
-        ":active",
-        ":disabled"
-      ],
+      "states": [":active", ":disabled"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/accordion.scss"
     },
@@ -18,9 +15,7 @@
       "page": "abiturient",
       "block": "Всё для поступления",
       "selector": ".study-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/admission.scss"
     },
@@ -29,9 +24,7 @@
       "page": "abiturient",
       "block": "Уровни образования",
       "selector": ".education-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/education-card.scss"
     },
@@ -40,9 +33,7 @@
       "page": "abiturient",
       "block": "Больше возможностей",
       "selector": ".feature-card",
-      "states": [
-        ":active"
-      ],
+      "states": [":active"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/feature-card.scss"
     },
@@ -51,10 +42,7 @@
       "page": "abiturient",
       "block": "Задать вопрос",
       "selector": ".form-field__input",
-      "states": [
-        ":disabled",
-        ":read-only"
-      ],
+      "states": [":disabled", ":read-only"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/form-field.scss"
     },
@@ -63,10 +51,7 @@
       "page": "abiturient",
       "block": "Вкладки",
       "selector": ".tabs__tab",
-      "states": [
-        ":disabled",
-        ":active"
-      ],
+      "states": [":disabled", ":active"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/tabs.scss"
     },
@@ -75,10 +60,7 @@
       "page": "abiturient",
       "block": "Выбор темы",
       "selector": ".topic-select__trigger",
-      "states": [
-        ":disabled",
-        ":active"
-      ],
+      "states": [":disabled", ":active"],
       "fallback": "сохранено базовое оформление",
       "file": "abiturient/assets/scss/blocks/topic-select.scss"
     },
@@ -190,6 +172,16 @@
       "states": [],
       "description": "Высота общего подвала 417px вместо 416px на 1920 и 1082px вместо 1072.6328125px на 390. Источники: 2002:2487, 2002:2434; начало подвала совпадает.",
       "fallback": "Общий подвал сохранён согласно границам задачи.",
+      "file": "assets/scss/blocks/footer.scss"
+    },
+    {
+      "id": "international-shared-footer",
+      "page": "international",
+      "block": "Общий подвал",
+      "selector": ".footer",
+      "states": [],
+      "description": "На 1920 общий подвал вместе с панелью имеет высоту 417 px вместо 416; на 390 — 1082 px вместо 1072.6328125. Источники Figma: 116:7211 и 117:8274; воспроизведение: начальное свёрнутое состояние /international/ на соответствующей ширине",
+      "fallback": "подключён действующий общий подвал без изменения его HTML, SCSS и JavaScript",
       "file": "assets/scss/blocks/footer.scss"
     }
   ]

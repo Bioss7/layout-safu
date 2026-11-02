@@ -1,0 +1,149 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+body {
+  background-color: var(--international-background);
+  // Полупрозрачная общая шапка в макете лежит над белым первым экраном.
+  background-image: linear-gradient(var(--main-white-white-100), var(--main-white-white-100));
+  background-size: 100% 900px;
+  background-repeat: no-repeat;
+  font-weight: 500;
+}
+.container--international {
+  width: calc(100% - 10.4166666667%);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+.text-mobile {
+  display: none;
+}
+.section-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 17px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+.section-header--light {
+  color: var(--main-white-white-100);
+}
+.section-header__text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  position: relative;
+  top: 0.15em;
+}
+.people__tab-text,
+.partner-network__tab-text,
+.life-tabs__text,
+.button__text {
+  position: relative;
+  top: 0.15em;
+}
+.section-header--people {
+  line-height: 56px;
+  letter-spacing: 0.04em;
+  gap: 16px;
+  &::before {
+    flex-basis: 12px;
+    width: 12px;
+    height: 12px;
+    margin-top: 22px;
+  }
+}
+.section-header--contacts {
+  gap: 16px;
+  letter-spacing: 0.04em;
+  &::before {
+    flex-basis: 12px;
+    width: 12px;
+    height: 12px;
+    margin-top: 18px;
+  }
+}
+.demo-note {
+  color: var(--main-blue-blue-70);
+  font-size: 14px;
+  line-height: 20px;
+}
+@include breakpoint($bp-1400) {
+  .section-header {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .container--international {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-992) {
+  .container--international {
+    width: calc(100% - 48px);
+  }
+  .section-header {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+@include breakpoint($bp-768) {
+  .container--international {
+    width: calc(100% - 32px);
+  }
+  .section-header {
+    font-size: 24px;
+    line-height: 32px;
+    gap: 14px;
+  }
+  .section-header::before {
+    flex-basis: 8px;
+    width: 8px;
+    height: 8px;
+    margin-top: 12px;
+  }
+}
+@include breakpoint($bp-576) {
+  .section-header--people {
+    font-size: 20px;
+    line-height: 28px;
+    gap: 12px;
+    letter-spacing: 0.06em;
+    &::before {
+      flex-basis: 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 13px;
+    }
+  }
+  .section-header--light {
+    position: relative;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .text-desktop {
+    display: none;
+  }
+  .text-mobile {
+    display: inline;
+  }
+  .section-header--contacts {
+    gap: 12px;
+    letter-spacing: 0.04em;
+  }
+  .section-header--contacts::before {
+    margin-top: 15px;
+  }
+}

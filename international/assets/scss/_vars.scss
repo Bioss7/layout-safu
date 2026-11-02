@@ -1,0 +1,24 @@
+@forward "../../../assets/scss/vars";
+$bp-1400: 1400px;
+:root {
+  --main-blue-blue-100: #0b2d4e;
+  --main-blue-blue-80: #3c5771;
+  --main-blue-blue-70: #546c83;
+  --main-blue-blue-60: #6d8195;
+  --main-white-white-100: #ffffff;
+  --main-accent-accent-100: #00aeef;
+  --main-accent-accent-20: #cceffc;
+  --partner-tab-background: #c2d7e8;
+  --partner-logo-background: rgba(255, 255, 255, 0.5);
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "HS_LunaObscura", sans-serif;
+  --international-background: #d6eaf8;
+  --international-panel: rgba(255, 255, 255, 0.5);
+  --international-contact: rgba(255, 255, 255, 0.6);
+  --international-card-border: rgba(255, 255, 255, 0.7);
+  --international-white-70: rgba(255, 255, 255, 0.7);
+  --international-white-20: rgba(255, 255, 255, 0.2);
+  --international-overlay: rgba(11, 45, 78, 0.15);
+  --international-tab: #c2d7e8;
+  --international-shadow: rgba(11, 45, 78, 0.03);
+}

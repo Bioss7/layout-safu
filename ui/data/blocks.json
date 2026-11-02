@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "auditedPages": ["abiturient", "students", "partners", "stp"],
+  "auditedPages": ["abiturient", "students", "partners", "stp", "international"],
   "definition": "Самостоятельный БЭМ-компонент. Повторения, элементы, модификаторы и структурные обёртки не увеличивают счётчик. Перенесённые и адаптированные готовые компоненты учитываются отдельно.",
   "entries": [
     {
@@ -1288,17 +1288,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Первый экран",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/hero.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/hero.scss"],
       "reuseSource": {
         "page": "events",
         "id": "hero",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/hero.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/hero.scss"]
       }
     },
     {
@@ -1310,17 +1304,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Хлебные крошки",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/breadcrumbs.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/breadcrumbs.scss"],
       "reuseSource": {
         "page": "events",
         "id": "breadcrumbs",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/breadcrumbs.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/breadcrumbs.scss"]
       }
     },
     {
@@ -1332,17 +1320,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Кнопки",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/button.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/button.scss"],
       "reuseSource": {
         "page": "events",
         "id": "button",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/button.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/button.scss"]
       }
     },
     {
@@ -1354,17 +1336,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Карточка мероприятия",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/event-card.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/event-card.scss"],
       "reuseSource": {
         "page": "events",
         "id": "event-card",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/event-card.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/event-card.scss"]
       }
     },
     {
@@ -1376,17 +1352,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Контакты",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/contacts.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/contacts.scss"],
       "reuseSource": {
         "page": "events",
         "id": "contacts",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/contacts.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/contacts.scss"]
       }
     },
     {
@@ -1422,17 +1392,11 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Поле формы",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/form-field.scss"
-      ],
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/form-field.scss"],
       "reuseSource": {
         "page": "events",
         "id": "form-field",
-        "files": [
-          "events/index.html",
-          "events/assets/scss/blocks/form-field.scss"
-        ]
+        "files": ["events/index.html", "events/assets/scss/blocks/form-field.scss"]
       }
     },
     {
@@ -1468,10 +1432,7 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Сведения о мероприятии",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/event-info.scss"
-      ]
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/event-info.scss"]
     },
     {
       "id": "event-panel",
@@ -1482,10 +1443,7 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Содержательные панели детальной",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/event-panel.scss"
-      ]
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/event-panel.scss"]
     },
     {
       "id": "feature-card",
@@ -1496,10 +1454,7 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Текстовый пункт программы встречи",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/feature-card.scss"
-      ]
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/feature-card.scss"]
     },
     {
       "id": "step-card",
@@ -1510,10 +1465,7 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Шаг подачи заявки",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/step-card.scss"
-      ]
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/step-card.scss"]
     },
     {
       "id": "event-location",
@@ -1524,10 +1476,7 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Адрес и статическая карта",
-      "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/event-location.scss"
-      ]
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/event-location.scss"]
     },
     {
       "id": "related-events",
@@ -1538,10 +1487,294 @@
       "phase": "implementation",
       "taskId": "events-detail-figma-27-1920",
       "purpose": "Похожие мероприятия",
+      "files": ["events/detail/index.html", "events/detail/assets/scss/blocks/related-events.scss"]
+    },
+    {
+      "id": "hero",
+      "name": "Первый экран",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Первый экран",
       "files": [
-        "events/detail/index.html",
-        "events/detail/assets/scss/blocks/related-events.scss"
+        "international/index.html",
+        "international/assets/scss/blocks/hero.scss",
+        "international/assets/js/hero.js"
+      ],
+      "reuseSource": {
+        "page": "main",
+        "id": "hero",
+        "files": ["index.html", "main/assets/scss/blocks/hero.scss", "main/assets/js/hero.js"]
+      }
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Хлебные крошки",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Хлебные крошки",
+      "files": ["international/index.html", "international/assets/scss/blocks/breadcrumbs.scss"],
+      "reuseSource": {
+        "page": "events",
+        "id": "breadcrumbs",
+        "files": ["events/index.html", "events/assets/scss/blocks/breadcrumbs.scss"]
+      }
+    },
+    {
+      "id": "marquee",
+      "name": "Бегущая строка",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Бегущая строка",
+      "files": ["international/index.html", "international/assets/scss/blocks/marquee.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "marquee",
+        "files": ["index.html", "main/assets/scss/blocks/marquee.scss"]
+      }
+    },
+    {
+      "id": "button",
+      "name": "Кнопки-ссылки",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Кнопки-ссылки",
+      "files": ["international/index.html", "international/assets/scss/blocks/button.scss"],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "button",
+        "files": ["abiturient/index.html", "abiturient/assets/scss/blocks/button.scss"]
+      }
+    },
+    {
+      "id": "pagination",
+      "name": "Пагинация слайдов и сотрудников",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Пагинация слайдов и сотрудников",
+      "files": ["international/index.html", "international/assets/scss/blocks/pagination.scss"],
+      "reuseSource": {
+        "page": "events",
+        "id": "pagination",
+        "files": ["events/index.html", "events/assets/scss/blocks/pagination.scss"]
+      }
+    },
+    {
+      "id": "life-tabs",
+      "name": "Вкладки новостей",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Вкладки новостей",
+      "files": [
+        "international/index.html",
+        "international/assets/scss/blocks/life.scss",
+        "international/assets/js/life-tabs.js"
+      ],
+      "reuseSource": {
+        "page": "main",
+        "id": "life-tabs",
+        "files": ["index.html", "main/assets/scss/blocks/life.scss", "main/assets/js/life-tabs.js"]
+      }
+    },
+    {
+      "id": "life-panel",
+      "name": "Панель новостей",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Панель новостей",
+      "files": ["international/index.html", "international/assets/scss/blocks/life.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "life-panel",
+        "files": ["index.html", "main/assets/scss/blocks/life.scss"]
+      }
+    },
+    {
+      "id": "life-card",
+      "name": "Карточка новости",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Карточка новости",
+      "files": ["international/index.html", "international/assets/scss/blocks/life.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "life-card",
+        "files": ["index.html", "main/assets/scss/blocks/life.scss"]
+      }
+    },
+    {
+      "id": "partner-network",
+      "name": "Партнёры и вкладки стран",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Партнёры и вкладки стран",
+      "files": [
+        "international/index.html",
+        "international/assets/scss/blocks/partner-network.scss",
+        "international/assets/js/partner-tabs.js",
+        "international/assets/js/logos.js"
+      ],
+      "reuseSource": {
+        "page": "partners",
+        "id": "partner-network",
+        "files": [
+          "partners/index.html",
+          "partners/assets/scss/blocks/partner-network.scss",
+          "partners/assets/js/tabs.js"
+        ]
+      }
+    },
+    {
+      "id": "partner-logos",
+      "name": "Ленты логотипов",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Ленты логотипов",
+      "files": [
+        "international/index.html",
+        "international/assets/scss/blocks/partner-network.scss",
+        "international/assets/js/logos.js"
+      ],
+      "reuseSource": {
+        "page": "partners",
+        "id": "partner-logos",
+        "files": [
+          "partners/index.html",
+          "partners/assets/scss/blocks/partner-network.scss",
+          "partners/assets/js/logos.js"
+        ]
+      }
+    },
+    {
+      "id": "link-arrow",
+      "name": "Ссылка со стрелкой",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Ссылка со стрелкой",
+      "files": ["international/index.html", "international/assets/scss/blocks/information.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "link-arrow",
+        "files": ["index.html", "main/assets/scss/blocks/common.scss"]
+      }
+    },
+    {
+      "id": "stat-card",
+      "name": "Карточка статистики",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Карточка статистики",
+      "files": ["international/index.html", "international/assets/scss/blocks/statistics.scss"]
+    },
+    {
+      "id": "statistics",
+      "name": "Международная деятельность в цифрах",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Международная деятельность в цифрах",
+      "files": ["international/index.html", "international/assets/scss/blocks/statistics.scss"]
+    },
+    {
+      "id": "info-card",
+      "name": "Информационная карточка",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Информационная карточка",
+      "files": ["international/index.html", "international/assets/scss/blocks/information.scss"]
+    },
+    {
+      "id": "contact-card",
+      "name": "Контактная карточка",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Контактная карточка",
+      "files": ["international/index.html", "international/assets/scss/blocks/contacts.scss"]
+    },
+    {
+      "id": "person-card",
+      "name": "Карточка сотрудника",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Карточка сотрудника",
+      "files": ["international/index.html", "international/assets/scss/blocks/people.scss"]
+    },
+    {
+      "id": "people",
+      "name": "Подразделения и сотрудники",
+      "origin": "new",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Подразделения и сотрудники",
+      "files": [
+        "international/index.html",
+        "international/assets/scss/blocks/people.scss",
+        "international/assets/js/people.js"
       ]
+    },
+    {
+      "id": "section-header",
+      "name": "Заголовок секции с точкой",
+      "origin": "existing",
+      "page": "international",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "international-1920-390",
+      "purpose": "Заголовки секций по макету International",
+      "files": ["international/index.html", "international/assets/scss/blocks/base.scss"],
+      "reuseSource": {
+        "page": "main",
+        "id": "section-header",
+        "files": ["index.html", "main/assets/scss/blocks/section-header.scss"]
+      }
     }
   ],
   "reusableComponents": [

@@ -1,0 +1,128 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 80px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 calc((100% - 32px) / 3);
+  min-width: 0;
+  min-height: 587px;
+  padding: 23px;
+  border: 1px solid var(--international-contact);
+  border-radius: 4px;
+  background-color: var(--international-contact);
+}
+.contact-card__title {
+  position: relative;
+  top: 0.15em;
+  min-height: 52px;
+  font-family: var(--second-family);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.contact-card__rule {
+  position: relative;
+  flex: 0 0 0;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: 1px;
+    background-color: rgba(11, 45, 78, 0.1);
+  }
+}
+.contact-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact-card__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-card__item--short {
+  height: 43px;
+  flex-shrink: 0;
+}
+.contact-card__label {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--main-blue-blue-60);
+}
+.contact-card__value {
+  font-size: 14px;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+.contact-card__social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-card__social-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+.contact-card__link,
+.contact-card__social-link {
+  transition: color 160ms;
+  &:hover {
+    color: var(--main-accent-accent-100);
+  }
+}
+.contact-card__social-icon {
+  flex-shrink: 0;
+}
+@include breakpoint($bp-1200) {
+  .contact-card {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@include breakpoint($bp-768) {
+  .contact-card {
+    padding: 16px;
+  }
+}
+@include breakpoint($bp-576) {
+  .contacts {
+    flex-direction: column;
+    padding-top: 0;
+    margin-top: 32px;
+  }
+  .contact-card {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 355px;
+    padding: 15px;
+  }
+  .contact-card--social {
+    min-height: 587px;
+    padding-bottom: 11px;
+  }
+  .contact-card:last-child {
+    min-height: 331px;
+  }
+  .contact-card__title {
+    min-height: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

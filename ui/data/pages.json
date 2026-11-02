@@ -100,5 +100,13 @@
     "status": "Реализована; сверены 1920/390 и новые состояния формы; проверены 25 ширин; демоотправка; ограничения Glass и общего подвала",
     "design": "https://www.figma.com/design/r5VxFY5XneRjDWvVD1P8kZ/?node-id=27-1920",
     "remarksReport": "events/detail/STYLE-REMARKS.md"
+  },
+  {
+    "id": "international",
+    "name": "Международное сотрудничество",
+    "url": "/international/",
+    "status": "Реализована; сверены 1920 и 390; проверены 25 ширин, вкладки, свайп и клавиатура; дополнительные состояния демонстрационные; общая оболочка сохранена",
+    "design": "https://www.figma.com/design/oozCCezWvGMRB5pAdXVMtT/?node-id=1-6",
+    "remarksReport": "international/STYLE-REMARKS.md"
   }
 ]

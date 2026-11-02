@@ -1,0 +1,71 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.marquee {
+  padding-block: 33px;
+  overflow: hidden;
+  width: 100%;
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 68px;
+}
+.marquee__text {
+  position: relative;
+  top: 0.15em;
+  font-family: var(--second-family);
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.marquee__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@include breakpoint($bp-1200) {
+  .marquee__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@include breakpoint($bp-576) {
+  .marquee {
+    padding-block: 23px;
+  }
+  .marquee__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .marquee__item {
+    padding-right: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

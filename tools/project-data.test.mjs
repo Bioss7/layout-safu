@@ -92,4 +92,9 @@ test("метаданные переиспользования сохраняют
     ["events/detail/assets/scss/blocks/hero.scss"],
   );
   assert.throws(() => validateComponentMetadata({ files: ["events/detail/../../secret.json"] }));
+  assert.deepEqual(
+    validateComponentMetadata({ files: ["international/assets/scss/blocks/hero.scss"] }).files,
+    ["international/assets/scss/blocks/hero.scss"],
+  );
+  assert.throws(() => validateComponentMetadata({ files: ["international/../../secret.json"] }));
 });

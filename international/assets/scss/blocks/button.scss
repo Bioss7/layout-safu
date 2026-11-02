@@ -1,0 +1,37 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  font-family: var(--second-family);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition:
+    color 160ms,
+    background-color 160ms;
+  &:hover {
+    color: var(--main-accent-accent-100);
+  }
+}
+.button--accent {
+  padding-inline: 0;
+  color: var(--main-accent-accent-100);
+}
+.button__arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  mask-image: url("../../img/statistics/icon-arrow-up-right.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: currentColor;
+}

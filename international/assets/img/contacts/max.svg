@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="MAX" clip-path="url(#clip0_0_265)">
+<path id="Vector" d="M18.0077 0H5.99234C2.68286 0 0 2.68286 0 5.99234V18.0077C0 21.3171 2.68286 24 5.99234 24H18.0077C21.3171 24 24 21.3171 24 18.0077V5.99234C24 2.68286 21.3171 0 18.0077 0Z" fill="url(#paint0_linear_0_265)" fill-opacity="0.9"/>
+<path id="Vector_2" d="M12.1971 21.0799C10.3969 21.0799 9.56033 20.8171 8.10619 19.7659C7.18639 20.9485 4.27373 21.8727 4.1467 20.2915C4.1467 19.1045 3.8839 18.1015 3.58606 17.0065C3.23129 15.6575 2.82833 14.1552 2.82833 11.9783C2.82833 6.7793 7.09442 2.868 12.1489 2.868C17.2077 2.868 21.1716 6.97202 21.1716 12.0265C21.1886 17.0028 17.1733 21.0533 12.1971 21.0799ZM12.2715 7.36183C9.81 7.23482 7.89156 8.93863 7.46671 11.6104C7.11631 13.8223 7.73827 16.516 8.26824 16.6561C8.52228 16.7174 9.16176 16.2006 9.56033 15.802C10.2194 16.2573 10.9869 16.5308 11.7854 16.5948C14.3359 16.7175 16.5153 14.7757 16.6865 12.228C16.7862 9.67483 14.8224 7.51234 12.2715 7.36622V7.36183Z" fill-rule="evenodd" clip-rule="evenodd" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_265" x1="-6" y1="37" x2="24" y2="-4" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9933DD"/>
+<stop offset="0.346392" stop-color="#5533EE"/>
+<stop offset="1" stop-color="#44CCFF"/>
+</linearGradient>
+<clipPath id="clip0_0_265">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

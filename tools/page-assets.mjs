@@ -13,6 +13,7 @@ const owners = [
   "stp",
   "schoolchildren",
   "events",
+  "international",
   "events/detail",
   "template-main",
   "template-abiturient",
@@ -65,7 +66,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events(?:\/detail)?|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events(?:\/detail)?|international|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );

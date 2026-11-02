@@ -1,0 +1,63 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.section--hero {
+  background-color: var(--main-white-white-100);
+}
+.section--statistics {
+  padding-block: 120px;
+}
+.section--information,
+.section--news,
+.section--contacts,
+.section--partners,
+.section--people {
+  margin-top: 150px;
+}
+.section--people {
+  margin-bottom: 150px;
+}
+@include breakpoint($bp-1400) {
+  .section--statistics {
+    padding-block: 80px;
+  }
+  .section--information,
+  .section--news,
+  .section--contacts,
+  .section--partners,
+  .section--people {
+    margin-top: 100px;
+  }
+  .section--people {
+    margin-bottom: 100px;
+  }
+}
+@include breakpoint($bp-992) {
+  .section--statistics {
+    padding-block: 56px;
+  }
+  .section--information,
+  .section--news,
+  .section--contacts,
+  .section--partners,
+  .section--people {
+    margin-top: 80px;
+  }
+  .section--people {
+    margin-bottom: 80px;
+  }
+}
+@include breakpoint($bp-576) {
+  .section--statistics {
+    padding-block: 32px;
+  }
+  .section--information,
+  .section--news,
+  .section--contacts,
+  .section--partners,
+  .section--people {
+    margin-top: 70px;
+  }
+  .section--people {
+    margin-bottom: 70px;
+  }
+}
