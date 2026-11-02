@@ -1,0 +1,13 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.related-events__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+@include breakpoint($bp-576) {
+  .related-events__cards {
+    margin-top: 24px;
+  }
+}

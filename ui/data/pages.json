@@ -92,5 +92,13 @@
     "url": "/events/",
     "status": "Реализована; сверены 1920 и 390; проверены 15 ширин; форма и каталог — локальные заглушки; общая оболочка сохранена",
     "design": "https://www.figma.com/design/CBbFxqLCLyzqrbp3eWDSHS/?node-id=1-334"
+  },
+  {
+    "id": "events-detail",
+    "name": "Детальная страница мероприятия",
+    "url": "/events/detail/",
+    "status": "Реализована; сверены 1920/390 и новые состояния формы; проверены 25 ширин; демоотправка; ограничения Glass и общего подвала",
+    "design": "https://www.figma.com/design/r5VxFY5XneRjDWvVD1P8kZ/?node-id=27-1920",
+    "remarksReport": "events/detail/STYLE-REMARKS.md"
   }
 ]

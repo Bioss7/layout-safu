@@ -1,0 +1,204 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  background-color: #f3f5f6;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -168px 0 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../../img/hero-background.png") center top / cover no-repeat;
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+}
+.hero__card {
+  position: relative;
+  display: flex;
+  margin-top: 56px;
+  border-radius: 4px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0b2d4e url("../../img/hero-texture.png") 54.3% 62.6% / 126.93% 127.92% no-repeat;
+  color: #fff;
+}
+.hero__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-color: rgba(11, 45, 78, 0.5);
+  backdrop-filter: blur(25px);
+}
+.hero__card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: color-dodge;
+  background:
+    url("../../img/hero-glow.svg") left -577px top -22px / 1362px 1362px no-repeat,
+    url("../../img/hero-glow.svg") left calc(50% + 145px) top -745px / 1362px 1362px no-repeat;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  min-width: 0;
+  flex: 1;
+  padding: 94px 60px;
+}
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero__tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+.hero__tag img {
+  flex-shrink: 0;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero__title {
+  position: relative;
+  top: 8px;
+  font-family: var(--events-display);
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: 2.4px;
+  font-weight: 400;
+  max-width: 985px;
+}
+.hero__intro {
+  max-width: 792px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.hero__intro--mobile {
+  display: none;
+}
+.hero__intro--desktop {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 8px;
+}
+.hero__picture {
+  display: block;
+  flex: 0 0 34.8256%;
+  min-width: 0;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@include breakpoint($bp-1400) {
+  .hero__content {
+    padding: 64px 32px;
+  }
+  .hero__title {
+    top: 6px;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 1.92px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .hero__picture {
+    flex-basis: 32%;
+  }
+}
+@include breakpoint($bp-992) {
+  .hero__card {
+    margin-top: 32px;
+  }
+  .hero__content {
+    padding: 32px 24px;
+  }
+  .hero__title {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 1.68px;
+  }
+}
+@include breakpoint($bp-768) {
+  .hero__card {
+    flex-direction: column;
+  }
+  .hero__picture {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 599 / 400;
+  }
+  .hero__image {
+    object-position: center 35%;
+  }
+}
+@include breakpoint($bp-576) {
+  .hero__card::before {
+    background-color: rgba(11, 45, 78, 0.4);
+  }
+  .hero__card::after {
+    z-index: -3;
+    background: url("../../img/hero-glow.svg") left -216px top -588px / 1362px 1362px no-repeat;
+  }
+  .hero__card {
+    background-size: auto 112.39%;
+    background-position: center top;
+  }
+  .hero__content {
+    padding: 16px 16px 40px;
+  }
+  .hero__title {
+    top: 5px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 1.44px;
+  }
+  .hero__intro--desktop {
+    display: none;
+  }
+  .hero__intro--mobile {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .hero__actions {
+    margin-top: 0;
+    align-items: stretch;
+  }
+  .hero__picture {
+    aspect-ratio: 358 / 388;
+  }
+  .hero__image {
+    object-position: center;
+  }
+}

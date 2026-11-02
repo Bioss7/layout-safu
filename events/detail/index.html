@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Студент на один день: программа встречи, адрес и регистрация на профориентационное мероприятие САФУ"
+    />
+    <title>САФУ — Студент на один день</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/img/header/header-mark-mobile.svg" />
+    <link rel="stylesheet" href="/events/detail/assets/scss/events-detail.scss" />
+    <link rel="stylesheet" href="/assets/scss/common.scss" />
+  </head>
+  <body>
+    <!-- safu:header -->
+    <div class="demo-menu-anchor">
+      <details class="demo-menu js-demo-menu">
+        <summary class="demo-menu__toggle">Тест состояний</summary>
+        <div class="demo-menu__body">
+          <div class="demo-menu__group" role="group" aria-label="Состояния регистрации">
+            <p class="demo-menu__title">Форма регистрации</p>
+            <button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="default"
+              aria-pressed="false"
+            >
+              Пустая</button
+            ><button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="filled"
+              aria-pressed="false"
+            >
+              Заполненная</button
+            ><button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="invalid"
+              aria-pressed="false"
+            >
+              Ошибки полей</button
+            ><button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="pending"
+              aria-pressed="false"
+            >
+              Отправка</button
+            ><button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="success"
+              aria-pressed="false"
+            >
+              Успех</button
+            ><button
+              class="demo-menu__button js-demo-state"
+              type="button"
+              data-target="form"
+              data-state="error"
+              aria-pressed="false"
+            >
+              Ошибка отправки
+            </button>
+          </div>
+          <p class="demo-menu__note">
+            Только демонстрационные данные. «Отправка» удерживается до выбора другого состояния.
+          </p>
+        </div>
+      </details>
+    </div>
+    <main id="main">
+      <section class="section section--hero hero" aria-labelledby="event-title">
+        <div class="container container--event-detail">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="/schoolchildren/">Школьникам</a
+            ><img
+              src="/events/detail/assets/img/breadcrumb-chevron.svg"
+              alt=""
+              width="24"
+              height="24"
+            /><a class="breadcrumbs__link breadcrumbs__link--catalog" href="/events/">Мероприятия</a
+            ><img
+              src="/events/detail/assets/img/breadcrumb-chevron.svg"
+              alt=""
+              width="24"
+              height="24"
+            /><span class="breadcrumbs__current" aria-current="page">Студент на один день</span>
+          </nav>
+          <div class="hero__card">
+            <div class="hero__content">
+              <ul class="hero__tags">
+                <li class="hero__tag">
+                  <img
+                    src="/events/detail/assets/img/sparkles.svg"
+                    alt=""
+                    width="14"
+                    height="14"
+                  />Квест
+                </li>
+                <li class="hero__tag">
+                  <img
+                    src="/events/detail/assets/img/graduation-hat.svg"
+                    alt=""
+                    width="17"
+                    height="15"
+                  />5-11 классы
+                </li>
+                <li class="hero__tag">
+                  <img src="/events/detail/assets/img/users.svg" alt="" width="16" height="16" />до
+                  12 человек
+                </li>
+              </ul>
+              <div class="hero__text">
+                <h1 class="hero__title" id="event-title">
+                  Студент на один описание мероприятия описание
+                </h1>
+                <p class="hero__intro hero__intro--desktop">
+                  «Студент на один день» — квест для школьников, который помогает увидеть САФУ
+                  изнутри и на несколько часов почувствовать себя настоящим студентом. «Студент на
+                  один день» — квест для школьников, который помогает увидеть САФУ изнутри и на
+                  несколько часов почувствовать себя настоящим студентом.
+                </p>
+                <p class="hero__intro hero__intro--mobile">
+                  Найди мероприятия для школьников и абитуриентов: экскурсии, дни открытых дверей и
+                  профориентационные проекты. Выбери интересное и запишись онлайн!
+                </p>
+              </div>
+              <div class="hero__actions">
+                <dl class="event-info event-info--hero">
+                  <div class="event-info__row">
+                    <dt class="event-info__label event-info__label--hero">Подразделение</dt>
+                    <dd class="event-info__value">ВШСГНиМК</dd>
+                  </div>
+                  <div class="event-info__row">
+                    <dt class="event-info__label event-info__label--hero">Дата проведения</dt>
+                    <dd class="event-info__value">По запросу (согласованию)</dd>
+                  </div>
+                  <div class="event-info__row">
+                    <dt class="event-info__label event-info__label--hero">Формат регистрации</dt>
+                    <dd class="event-info__value">Индивидуальная заявка от участника</dd>
+                  </div>
+                </dl>
+                <a class="button button--white hero__apply" href="#registration"
+                  ><span class="button__text">Отправить заявку</span></a
+                >
+              </div>
+            </div>
+            <picture class="hero__picture"
+              ><source
+                media="(max-width: 576px)"
+                srcset="/events/detail/assets/img/hero-people-390.png" />
+              <img
+                class="hero__image"
+                src="/events/detail/assets/img/hero-people.png"
+                alt="Студентка с учебными материалами на фоне университета"
+                width="599"
+                height="651"
+                fetchpriority="high"
+            /></picture>
+          </div>
+        </div>
+      </section>
+      <section class="section section--about event-about" aria-label="О мероприятии">
+        <div class="container container--event-detail event-about__inner">
+          <article class="event-panel event-panel--about">
+            <h2 class="event-panel__title">О мероприятии</h2>
+            <p class="event-panel__description event-panel__description--desktop">
+              описание мероприятия описание мероприятияописание мероприятияописание
+              мероприятияописание мероприятияописание мероприятияописание мероприятияописание
+              мероприятияописание мероприятияописание мероприятияописание мероприятияописание
+              мероприятияописание мероприятияописание мероприятияописание мероприятиямописание
+              мероприятияописание мероприятиям
+            </p>
+            <p class="event-panel__description event-panel__description--mobile">
+              важные детали (дополнительно о мероприятии) важные детали (дополнительно о
+              мероприятии)важные детали (дополнительно о мероприятии)важные детали (дополнительно о
+              мероприятии)важные детали (дополнительно о мероприятии)важные детали (дополнительно о
+              мероприятии)
+            </p>
+            <dl class="event-info">
+              <div class="event-info__row">
+                <dt class="event-info__label">Сроки проведения</dt>
+                <dd class="event-info__value">Сентябрь – Февраль</dd>
+              </div>
+              <div class="event-info__row">
+                <dt class="event-info__label">Продолжительность</dt>
+                <dd class="event-info__value">До 90 минут</dd>
+              </div>
+              <div class="event-info__row">
+                <dt class="event-info__label">Профиль / направление</dt>
+                <dd class="event-info__value">Психолого / педагогический</dd>
+              </div>
+            </dl>
+          </article>
+          <article class="event-panel event-panel--additional">
+            <h2 class="event-panel__title">Дополнительно</h2>
+            <p class="event-panel__description">
+              важные детали (дополнительно о мероприятии) важные детали (дополнительно о
+              мероприятии)важные детали (дополнительно о мероприятии)важные детали (дополнительно о
+              мероприятии)важные детали (дополнительно о мероприятии)важные детали (дополнительно о
+              мероприятии)
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section section--benefits event-benefits" aria-labelledby="benefits-title">
+        <div class="container container--event-detail">
+          <div class="event-panel event-panel--benefits">
+            <h2 class="event-panel__title" id="benefits-title">Что вы получите на встрече</h2>
+            <div class="event-panel__list">
+              <article class="feature-card feature-card--event">
+                <h3 class="feature-card__title">
+                  1. Погружение<br class="feature-card__break" />
+                  в студенческую жизнь
+                </h3>
+                <p class="feature-card__text">
+                  Узнаете, как проходит типичный день студента, какие задания и проекты ждут на
+                  занятиях, и как выглядит учебный процесс изнутри.
+                </p>
+              </article>
+              <article class="feature-card feature-card--event">
+                <h3 class="feature-card__title">
+                  2. Знакомство<br class="feature-card__break" />
+                  с преподавателями
+                </h3>
+                <p class="feature-card__text">
+                  Познакомитесь с преподавателями, зададите вопросы о программе и узнаете, как они
+                  помогают студентам в учебе и проектах.
+                </p>
+              </article>
+              <article class="feature-card feature-card--event">
+                <h3 class="feature-card__title">3. Осмотр кампуса и аудиторий</h3>
+                <p class="feature-card__text">
+                  Познакомитесь с преподавателями, зададите вопросы о программе и узнаете, как они
+                  помогают студентам в учебе и проектах.
+                </p>
+              </article>
+              <article class="feature-card feature-card--event">
+                <h3 class="feature-card__title">4. Коммуникация со студентами</h3>
+                <p class="feature-card__text">
+                  Пообщаетесь со студентами разных курсов, узнаете о их опыте, о том, как они
+                  учатся, работают над проектами и проводят свободное время.
+                </p>
+              </article>
+              <article class="feature-card feature-card--event">
+                <h3 class="feature-card__title">5. Практические задания и впечатления</h3>
+                <p class="feature-card__text">
+                  Принимаете участие в практических заданиях, получаете живые впечатления и
+                  понимаете, насколько комфортно и интересно учиться в университете.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--steps event-steps" aria-labelledby="steps-title">
+        <div class="container container--event-detail">
+          <div class="event-panel">
+            <h2 class="event-panel__title" id="steps-title">
+              Как подать заявку на участие в мероприятии
+            </h2>
+            <ol class="event-panel__steps">
+              <li class="step-card">
+                <span class="step-card__tag">1 шаг</span>
+                <div class="step-card__copy">
+                  <h3 class="step-card__title">Оставьте заявку</h3>
+                  <p class="step-card__text">
+                    Заполните короткую форму: укажите ФИО, класс, школу, контакты и удобную дату
+                    участия
+                  </p>
+                </div>
+              </li>
+              <li class="step-card">
+                <span class="step-card__tag">2 шаг</span>
+                <div class="step-card__copy">
+                  <h3 class="step-card__title">Согласуйте визит</h3>
+                  <p class="step-card__text">
+                    Специалист САФУ свяжется с вами, подтвердит свободное время и отправит адрес,
+                    место встречи и контакт организатора
+                  </p>
+                </div>
+              </li>
+              <li class="step-card">
+                <span class="step-card__tag">3 шаг</span>
+                <div class="step-card__copy">
+                  <h3 class="step-card__title">Подготовьтесь к участию</h3>
+                  <p class="step-card__text">
+                    Предупредите классного руководителя, возьмите документ, удостоверяющий личность,
+                    и приходите за 10–15 минут до начала. Всё необходимое для квеста выдадим
+                    на месте
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="section section--location event-location" aria-labelledby="location-title">
+        <div class="container container--event-detail">
+          <div class="event-panel">
+            <div class="event-location__heading">
+              <h2 class="event-panel__title" id="location-title">Адрес проведения мероприятия</h2>
+              <p class="event-location__address">Архангельск, улица Мировая, 26с5</p>
+            </div>
+            <picture class="event-location__map"
+              ><source media="(max-width: 576px)" srcset="/events/detail/assets/img/map-390.png" />
+              <img
+                src="/events/detail/assets/img/map.png"
+                alt="Карта: место проведения мероприятия на улице Мировой, 26с5 в Архангельске"
+                width="1664"
+                height="350"
+                loading="lazy"
+            /></picture>
+          </div>
+        </div>
+      </section>
+      <section class="section section--related related-events" aria-labelledby="related-title">
+        <div class="container container--event-detail">
+          <h2 class="event-panel__title" id="related-title">Вас также могут заинтересовать</h2>
+          <div class="related-events__cards">
+            <article class="event-card">
+              <a
+                class="event-card__link"
+                href="#"
+                aria-label="IT-технологии и искусственный интеллект"
+              >
+                <div class="event-card__image">
+                  <img
+                    src="/events/detail/assets/img/event.png"
+                    width="415"
+                    height="234"
+                    alt=""
+                    loading="lazy"
+                  /><span class="event-card__tag">Интерактивная лекция</span>
+                </div>
+                <div class="event-card__body">
+                  <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                  <dl class="event-card__meta">
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Подразделение</dt>
+                      <dd class="event-card__value">Высшая школа информационных систем</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Дата проведения</dt>
+                      <dd class="event-card__value">10.09.2026</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Адрес</dt>
+                      <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                    </div>
+                  </dl>
+                  <div class="event-card__footer">
+                    <span>#ГРУППОВАЯ ЗАЯВКА</span
+                    ><img
+                      src="/events/detail/assets/img/chevron-right.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div></div
+              ></a>
+            </article>
+            <article class="event-card">
+              <a
+                class="event-card__link"
+                href="#"
+                aria-label="IT-технологии и искусственный интеллект"
+              >
+                <div class="event-card__image">
+                  <img
+                    src="/events/detail/assets/img/event.png"
+                    width="415"
+                    height="234"
+                    alt=""
+                    loading="lazy"
+                  /><span class="event-card__tag">Интерактивная лекция</span>
+                </div>
+                <div class="event-card__body">
+                  <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                  <dl class="event-card__meta">
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Подразделение</dt>
+                      <dd class="event-card__value">Высшая школа информационных систем</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Дата проведения</dt>
+                      <dd class="event-card__value">10.09.2026</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Адрес</dt>
+                      <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                    </div>
+                  </dl>
+                  <div class="event-card__footer">
+                    <span>#ГРУППОВАЯ ЗАЯВКА</span
+                    ><img
+                      src="/events/detail/assets/img/chevron-right.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div></div
+              ></a>
+            </article>
+            <article class="event-card">
+              <a
+                class="event-card__link"
+                href="#"
+                aria-label="IT-технологии и искусственный интеллект"
+              >
+                <div class="event-card__image">
+                  <img
+                    src="/events/detail/assets/img/event.png"
+                    width="415"
+                    height="234"
+                    alt=""
+                    loading="lazy"
+                  /><span class="event-card__tag">Интерактивная лекция</span>
+                </div>
+                <div class="event-card__body">
+                  <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                  <dl class="event-card__meta">
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Подразделение</dt>
+                      <dd class="event-card__value">Высшая школа информационных систем</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Дата проведения</dt>
+                      <dd class="event-card__value">10.09.2026</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Адрес</dt>
+                      <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                    </div>
+                  </dl>
+                  <div class="event-card__footer">
+                    <span>#ГРУППОВАЯ ЗАЯВКА</span
+                    ><img
+                      src="/events/detail/assets/img/chevron-right.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div></div
+              ></a>
+            </article>
+            <article class="event-card">
+              <a
+                class="event-card__link"
+                href="#"
+                aria-label="IT-технологии и искусственный интеллект"
+              >
+                <div class="event-card__image">
+                  <img
+                    src="/events/detail/assets/img/event.png"
+                    width="415"
+                    height="234"
+                    alt=""
+                    loading="lazy"
+                  /><span class="event-card__tag">Интерактивная лекция</span>
+                </div>
+                <div class="event-card__body">
+                  <h3 class="event-card__title">IT-технологии и искусственный интеллект</h3>
+                  <dl class="event-card__meta">
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Подразделение</dt>
+                      <dd class="event-card__value">Высшая школа информационных систем</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Дата проведения</dt>
+                      <dd class="event-card__value">10.09.2026</dd>
+                    </div>
+                    <div class="event-card__row">
+                      <dt class="event-card__label">Адрес</dt>
+                      <dd class="event-card__value">г. Северодвинск, ул. Воронина, 6</dd>
+                    </div>
+                  </dl>
+                  <div class="event-card__footer">
+                    <span>#ГРУППОВАЯ ЗАЯВКА</span
+                    ><img
+                      src="/events/detail/assets/img/chevron-right.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div></div
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts contacts" aria-label="Контакты и заявка">
+        <div class="container container--event-detail contacts__inner">
+          <div class="contacts__content">
+            <h2 class="contacts__title">Остались вопросы?</h2>
+            <p class="contacts__intro">
+              Заполни форму и мы направим ответ на указанную вами электронную почту
+            </p>
+            <a
+              class="button button--white button--question contacts__question"
+              href="/events/#contacts-title"
+              ><span class="button__text">Задать вопрос</span></a
+            >
+            <h3 class="contacts__subtitle">Контакты для связи</h3>
+            <div class="contacts__details">
+              <dl class="contacts__data">
+                <div class="contacts__item">
+                  <dt class="contacts__label">Директор</dt>
+                  <dd class="contacts__value">Шанина Ольга Николаевна</dd>
+                </div>
+                <div class="contacts__item">
+                  <dt class="contacts__label">Телефон</dt>
+                  <dd class="contacts__value"><a href="tel:+7882412886">+7-882-41-28-86</a></dd>
+                </div>
+                <div class="contacts__item">
+                  <dt class="contacts__label">Почта</dt>
+                  <dd class="contacts__value"><a href="mailto:fdp@narfu.ru">fdp@narfu.ru</a></dd>
+                </div>
+              </dl>
+              <div class="contacts__social">
+                <p class="contacts__label contacts__label--social">Социальные сети</p>
+                <a class="contacts__link" href="#"
+                  ><img
+                    src="/events/detail/assets/img/vk.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />Группа в Контакте</a
+                ><a class="contacts__link" href="#"
+                  ><img
+                    src="/events/detail/assets/img/max.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />Канал «Поступай в САФУ»</a
+                ><a class="contacts__link" href="#"
+                  ><img
+                    src="/events/detail/assets/img/telegram.svg"
+                    alt=""
+                    width="32"
+                    height="32"
+                  />Чат-бот «Поступай в САФУ»</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-form js-contact-form" id="registration">
+            <form
+              class="contact-form__form js-registration-form"
+              novalidate
+              aria-labelledby="registration-title"
+            >
+              <div class="contact-form__heading">
+                <h2 class="contact-form__title" id="registration-title">Заявка на мероприятие</h2>
+                <p class="contact-form__intro">
+                  Заполни форму и мы направим ответ на указанную вами электронную почту
+                </p>
+              </div>
+              <p class="contact-form__required">* Поля обязательны для заполнения</p>
+              <div class="contact-form__fields">
+                <div class="contact-form__row contact-form__row--name">
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-surname">Фамилия</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-surname"
+                      name="surname"
+                      type="text"
+                      placeholder="* Фамилия"
+                      required
+                      autocomplete="family-name"
+                      aria-describedby="error-surname"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Фамилия"
+                      hidden
+                    >
+                      <img
+                        src="/events/detail/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-surname"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-name">Имя</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-name"
+                      name="name"
+                      type="text"
+                      placeholder="* Имя"
+                      required
+                      autocomplete="given-name"
+                      aria-describedby="error-name"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Имя"
+                      hidden
+                    >
+                      <img
+                        src="/events/detail/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-name"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-patronymic">Отчество</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-patronymic"
+                      name="patronymic"
+                      type="text"
+                      placeholder="Отчество"
+                      autocomplete="additional-name"
+                      aria-describedby="error-patronymic"
+                      maxlength="100"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Отчество"
+                      hidden
+                    >
+                      <img
+                        src="/events/detail/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-patronymic"
+                    ></span>
+                  </div>
+                </div>
+                <div class="contact-form__row">
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-phone">Телефон</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="* Телефон"
+                      required
+                      autocomplete="tel"
+                      aria-describedby="error-phone"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Телефон"
+                      hidden
+                    >
+                      <img
+                        src="/events/detail/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-phone"
+                    ></span>
+                  </div>
+                  <div class="form-field js-field">
+                    <label class="sr-only" for="event-email">Эл.почта</label
+                    ><input
+                      class="form-field__input js-field-input"
+                      id="event-email"
+                      name="email"
+                      type="email"
+                      placeholder="* Эл.почта"
+                      required
+                      autocomplete="email"
+                      aria-describedby="error-email"
+                    /><button
+                      class="form-field__clear js-field-clear"
+                      type="button"
+                      aria-label="Очистить поле Эл.почта"
+                      hidden
+                    >
+                      <img
+                        src="/events/detail/assets/img/close.svg"
+                        alt=""
+                        width="16"
+                        height="16"
+                      /></button
+                    ><span
+                      class="form-field__error form-field__error--field"
+                      id="error-email"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-form__actions">
+                <label class="contact-form__consent"
+                  ><span class="contact-form__checkbox-wrap"
+                    ><input
+                      class="contact-form__checkbox js-consent"
+                      type="checkbox"
+                      name="consent"
+                      required
+                      aria-describedby="error-consent" /></span
+                  ><span
+                    >Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#"
+                      >политикой конфиденциальности</a
+                    >
+                    и даёте <a href="#">согласие на обработку ваших персональных данных</a></span
+                  ></label
+                ><span class="form-field__error" id="error-consent"></span
+                ><button class="button button--submit button--form-submit js-submit" type="submit">
+                  <span class="button__text js-submit-label">Зарегистрироваться</span
+                  ><img
+                    class="contact-form__spinner"
+                    src="/events/detail/assets/img/loading.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    hidden
+                  />
+                </button>
+                <p class="contact-form__hint js-form-hint" role="status">
+                  <span class="contact-form__promise-icon" aria-hidden="true"
+                    ><img
+                      class="contact-form__promise-image"
+                      src="/events/detail/assets/img/icon-promise.svg"
+                      alt=""
+                      width="15"
+                      height="21" /></span
+                  ><span class="contact-form__hint-text js-hint-text"
+                    >Гарантируем обратную связь <br class="contact-form__hint-break" />в течение 24
+                    часов</span
+                  >
+                </p>
+              </div>
+            </form>
+            <div class="contact-form__result js-form-result" tabindex="-1" hidden>
+              <div class="contact-form__result-icon">
+                <img
+                  class="contact-form__result-image js-result-icon"
+                  src="/events/detail/assets/img/result-success.png"
+                  alt=""
+                  width="192"
+                  height="192"
+                />
+              </div>
+              <div class="contact-form__result-copy">
+                <h3 class="contact-form__result-title js-result-title"></h3>
+                <p class="contact-form__result-text js-result-text"></p>
+              </div>
+              <p class="contact-form__demo">Демонстрация: данные не отправлены.</p>
+              <button class="button button--submit js-form-again" type="button">
+                <span class="button__text js-form-again-label">Отправить ещё вопрос</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- safu:footer -->
+    <script src="/events/detail/assets/js/registration-form.js" defer></script>
+    <script src="/events/detail/assets/js/demo-menu.js" defer></script>
+  </body>
+</html>

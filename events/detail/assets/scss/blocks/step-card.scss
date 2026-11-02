@@ -1,0 +1,49 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.step-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f3f5f6;
+}
+.step-card__tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.step-card__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.step-card__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.step-card__text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #234260;
+}
+@include breakpoint($bp-992) {
+  .step-card {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@include breakpoint($bp-576) {
+  .step-card {
+    padding: 16px;
+    flex-basis: auto;
+  }
+}

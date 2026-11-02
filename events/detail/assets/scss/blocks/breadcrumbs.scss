@@ -1,0 +1,52 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.breadcrumbs__link {
+  flex-shrink: 0;
+  padding-block: 8px;
+  transition: color 160ms;
+  &:hover {
+    color: #00aeef;
+  }
+}
+
+.breadcrumbs__current {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.breadcrumbs__link--catalog {
+  font-weight: 500;
+  letter-spacing: 0.96px;
+}
+
+@include breakpoint($bp-576) {
+  .breadcrumbs {
+    gap: 8px;
+    font-size: 16px;
+  }
+  .breadcrumbs img {
+    flex-shrink: 0;
+  }
+  .breadcrumbs__link,
+  .breadcrumbs__current {
+    flex: 1;
+    min-width: 0;
+    padding-block: 8px;
+  }
+  .breadcrumbs__link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.event-location__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.event-location__address {
+  font-size: 20px;
+  line-height: 28px;
+}
+.event-location__map {
+  display: block;
+}
+.event-location__map img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+@include breakpoint($bp-576) {
+  .event-location__heading {
+    gap: 16px;
+  }
+  .event-location__address {
+    max-width: 326px;
+  }
+  .event-location__map {
+    margin-top: -16px;
+  }
+}

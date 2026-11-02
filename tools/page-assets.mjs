@@ -13,12 +13,16 @@ const owners = [
   "stp",
   "schoolchildren",
   "events",
+  "events/detail",
   "template-main",
   "template-abiturient",
   "template-international",
 ];
 const posix = (path) => path.replaceAll("\\", "/");
 const local = (path) => posix(relative(root, path));
+const stylesheetOwners = Object.fromEntries(
+  owners.filter(Boolean).map((owner) => [owner.replaceAll("/", "-"), owner]),
+);
 
 export function renderSharedHtml(html, overlay = false, schoolchildren = false) {
   return html.replace(/<!-- safu:(header|footer) -->/g, (_, block) =>
@@ -53,7 +57,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
   if (name.endsWith(".css")) {
     const stem = name.slice(0, -4).replace(/^css-/, "");
     if (stem === "common") return "assets/css/common.css";
-    if (owners.includes(stem) && stem) return `${stem}/assets/css/${stem}.css`;
+    if (stylesheetOwners[stem]) return `${stylesheetOwners[stem]}/assets/css/${stem}.css`;
     if (/^(?:ui|pages)/.test(stem)) return "ui/assets/[name][extname]";
     throw new Error(`Unknown stylesheet owner: ${name}`);
   }
@@ -61,7 +65,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events(?:\/detail)?|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );
@@ -130,8 +134,8 @@ export function pageAssets() {
           if (asset.type !== "asset" || !asset.fileName.endsWith(".css")) continue;
           for (const name of asset.names || []) {
             const owner = name.replace(/^css-/, "").replace(/\.css$/, "");
-            if (!owner || !owners.includes(owner)) continue;
-            const alias = `${owner}/assets/css/${owner}.css`;
+            if (!stylesheetOwners[owner]) continue;
+            const alias = `${stylesheetOwners[owner]}/assets/css/${owner}.css`;
             if (outputs.has(alias)) continue;
             this.emitFile({ type: "asset", fileName: alias, source: asset.source });
             outputs.add(alias);

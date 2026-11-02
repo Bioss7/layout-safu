@@ -1278,6 +1278,270 @@
         "events/assets/scss/blocks/demo-menu.scss",
         "events/assets/js/demo-menu.js"
       ]
+    },
+    {
+      "id": "hero",
+      "name": "Первый экран",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Первый экран",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/hero.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "hero",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/hero.scss"
+        ]
+      }
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Хлебные крошки",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Хлебные крошки",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/breadcrumbs.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "breadcrumbs",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/breadcrumbs.scss"
+        ]
+      }
+    },
+    {
+      "id": "button",
+      "name": "Кнопки",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Кнопки",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/button.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "button",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/button.scss"
+        ]
+      }
+    },
+    {
+      "id": "event-card",
+      "name": "Карточка мероприятия",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Карточка мероприятия",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/event-card.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "event-card",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/event-card.scss"
+        ]
+      }
+    },
+    {
+      "id": "contacts",
+      "name": "Контакты",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Контакты",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/contacts.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "contacts",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/contacts.scss"
+        ]
+      }
+    },
+    {
+      "id": "contact-form",
+      "name": "Форма регистрации",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Форма регистрации",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/contact-form.scss",
+        "events/detail/assets/js/registration-form.js"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "contact-form",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/contact-form.scss",
+          "events/assets/js/question-form.js"
+        ]
+      }
+    },
+    {
+      "id": "form-field",
+      "name": "Поле формы",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Поле формы",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/form-field.scss"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "form-field",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/form-field.scss"
+        ]
+      }
+    },
+    {
+      "id": "demo-menu",
+      "name": "Меню проверки состояний",
+      "origin": "existing",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Меню проверки состояний",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/demo-menu.scss",
+        "events/detail/assets/js/demo-menu.js"
+      ],
+      "reuseSource": {
+        "page": "events",
+        "id": "demo-menu",
+        "files": [
+          "events/index.html",
+          "events/assets/scss/blocks/demo-menu.scss",
+          "events/assets/js/demo-menu.js"
+        ]
+      }
+    },
+    {
+      "id": "event-info",
+      "name": "Сведения о мероприятии",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Сведения о мероприятии",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/event-info.scss"
+      ]
+    },
+    {
+      "id": "event-panel",
+      "name": "Содержательные панели детальной",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Содержательные панели детальной",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/event-panel.scss"
+      ]
+    },
+    {
+      "id": "feature-card",
+      "name": "Текстовый пункт программы встречи",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Текстовый пункт программы встречи",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/feature-card.scss"
+      ]
+    },
+    {
+      "id": "step-card",
+      "name": "Шаг подачи заявки",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Шаг подачи заявки",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/step-card.scss"
+      ]
+    },
+    {
+      "id": "event-location",
+      "name": "Адрес и статическая карта",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Адрес и статическая карта",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/event-location.scss"
+      ]
+    },
+    {
+      "id": "related-events",
+      "name": "Похожие мероприятия",
+      "origin": "new",
+      "page": "events-detail",
+      "addedAt": "2026-11-02",
+      "phase": "implementation",
+      "taskId": "events-detail-figma-27-1920",
+      "purpose": "Похожие мероприятия",
+      "files": [
+        "events/detail/index.html",
+        "events/detail/assets/scss/blocks/related-events.scss"
+      ]
     }
   ],
   "reusableComponents": [

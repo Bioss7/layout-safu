@@ -1,0 +1,34 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.event-info__row {
+  display: flex;
+  gap: 16px;
+  padding-block: 8px;
+}
+.event-info__label {
+  color: #546c83;
+  font-weight: 500;
+}
+.event-info__value {
+  font-weight: 600;
+}
+.event-info--hero {
+  color: #fff;
+}
+.event-info__label--hero {
+  color: rgba(255, 255, 255, 0.7);
+}
+@include breakpoint($bp-992) {
+  .event-info__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

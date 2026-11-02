@@ -1,0 +1,33 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f3f5f6;
+}
+.feature-card__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.feature-card__text {
+  max-width: 900px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #234260;
+}
+.feature-card__break {
+  display: none;
+}
+@include breakpoint($bp-576) {
+  .feature-card__break {
+    display: initial;
+  }
+  .feature-card {
+    padding: 16px;
+  }
+}

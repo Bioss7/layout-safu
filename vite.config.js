@@ -24,6 +24,8 @@ export default defineConfig({
         stp: resolve("stp/index.html"),
         schoolchildren: resolve("schoolchildren/index.html"),
         events: resolve("events/index.html"),
+        "events-detail": resolve("events/detail/index.html"),
+        "css-events-detail": resolve("events/detail/assets/scss/events-detail.scss"),
         "template-main": resolve("template-main/index.html"),
         "template-abiturient": resolve("template-abiturient/index.html"),
         "template-international": resolve("template-international/index.html"),

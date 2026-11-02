@@ -1,0 +1,68 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.container {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+.section--hero {
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+.section--about,
+.section--benefits,
+.section--steps,
+.section--location,
+.section--related {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section--contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section--related {
+  padding-bottom: 80px;
+}
+@include breakpoint($bp-1400) {
+  .container--event-detail {
+    width: calc(100% - 64px);
+  }
+}
+@include breakpoint($bp-992) {
+  .container--event-detail {
+    width: calc(100% - 48px);
+  }
+  .section--hero {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .section--about,
+  .section--benefits,
+  .section--steps,
+  .section--location,
+  .section--related {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .section--contacts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@include breakpoint($bp-576) {
+  .container--event-detail {
+    width: calc(100% - 32px);
+  }
+  .section--hero {
+    padding-top: 32px;
+  }
+  .section--related {
+    padding-bottom: 40px;
+  }
+  .section--contacts {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

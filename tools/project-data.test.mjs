@@ -87,4 +87,9 @@ test("метаданные переиспользования сохраняют
   assert.throws(() => validateComponentMetadata({ files: ["../secret.json"] }));
   assert.throws(() => validateComponentMetadata({ files: ["C:/private.json"] }));
   assert.throws(() => validateComponentMetadata({ files: [".ai-statistics/report.json"] }));
+  assert.deepEqual(
+    validateComponentMetadata({ files: ["events/detail/assets/scss/blocks/hero.scss"] }).files,
+    ["events/detail/assets/scss/blocks/hero.scss"],
+  );
+  assert.throws(() => validateComponentMetadata({ files: ["events/detail/../../secret.json"] }));
 });
