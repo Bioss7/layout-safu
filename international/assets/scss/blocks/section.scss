@@ -4,60 +4,64 @@
   background-color: var(--main-white-white-100);
 }
 .section--statistics {
-  padding-block: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .section--information,
 .section--news,
 .section--contacts,
 .section--partners,
 .section--people {
-  margin-top: 150px;
+  padding-top: 150px;
 }
 .section--people {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 @include breakpoint($bp-1400) {
   .section--statistics {
-    padding-block: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .section--information,
   .section--news,
   .section--contacts,
   .section--partners,
   .section--people {
-    margin-top: 100px;
+    padding-top: 100px;
   }
   .section--people {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 }
 @include breakpoint($bp-992) {
   .section--statistics {
-    padding-block: 56px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
   .section--information,
   .section--news,
   .section--contacts,
   .section--partners,
   .section--people {
-    margin-top: 80px;
+    padding-top: 80px;
   }
   .section--people {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
 }
 @include breakpoint($bp-576) {
   .section--statistics {
-    padding-block: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .section--information,
   .section--news,
   .section--contacts,
   .section--partners,
   .section--people {
-    margin-top: 70px;
+    padding-top: 70px;
   }
   .section--people {
-    margin-bottom: 70px;
+    padding-bottom: 70px;
   }
 }

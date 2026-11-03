@@ -178,6 +178,8 @@
 @include breakpoint($bp-576) {
   .partner-network__tab {
     flex: 0 0 calc((100% - 16px) / 2);
+    max-width: 100%;
+    line-height: 22px;
     text-align: center;
   }
   .partner-logos__row {
@@ -206,11 +208,6 @@
     overflow-x: visible;
     cursor: auto;
     touch-action: auto;
-  }
-  .partner-network__tab {
-    max-width: 100%;
-    line-height: 22px;
-    text-align: left;
   }
   .partner-logos {
     width: 100%;
