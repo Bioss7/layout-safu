@@ -124,6 +124,19 @@
     rgba(255, 255, 255, 0) 85%
   );
   backdrop-filter: blur(10px);
+
+  &:hover {
+    background-color: transparent;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+      radial-gradient(
+        104.77% 98.57% at 100% 100%,
+        rgba(0, 174, 239, 0.25) 50.48%,
+        rgba(0, 174, 239, 0) 100%
+      );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 }
 
 .stp-stat--small {
@@ -296,7 +309,7 @@
 
 .stp-dashboard__metrics {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 24px;
   margin-top: 48px;
 }

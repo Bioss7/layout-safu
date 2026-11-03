@@ -21,6 +21,7 @@
     "optimize": "node optimize-images.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:typography": "node tools/check-typography.mjs",
+    "check:typograf": "node --test tools/html-typograf.test.mjs",
     "check:assets": "node --test tools/assets.test.mjs",
     "check:assets:browser": "node tools/check-assets-browser.mjs",
     "check:assets:runtime": "node tools/check-assets-runtime.mjs",
@@ -46,9 +47,11 @@
   "devDependencies": {
     "@playwright/test": "^1.64.0",
     "autoprefixer": "^10.5.4",
+    "parse5": "^8.1.0",
     "prettier": "3.9.10",
     "sass": "^1.102.0",
     "sharp": "^0.35.3",
+    "typograf": "^7.8.0",
     "vite": "^7.1.0"
   },
   "pnpm": {

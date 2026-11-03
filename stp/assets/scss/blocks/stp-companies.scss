@@ -45,6 +45,12 @@
   line-height: 52px;
   letter-spacing: 0.06em;
 }
+
+h2.stp-companies__title {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: auto;
+}
 .stp-companies__content {
   display: flex;
   align-items: flex-start;
@@ -132,9 +138,6 @@
   color: #cceffc;
   text-align: center;
 }
-.stp-companies__break {
-  display: none;
-}
 @include breakpoint($bp-1400) {
   .stp-companies__title {
     font-size: 32px;
@@ -187,9 +190,6 @@
     background-position:
       left -272px top -443px,
       left -115px bottom -515px;
-  }
-  .stp-companies__break {
-    display: inline;
   }
   .stp-companies__content {
     gap: 24px;

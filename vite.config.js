@@ -2,12 +2,13 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import { uiPreview } from "./tools/ui-preview.mjs";
 import { formatOnSave } from "./tools/format-on-save.mjs";
+import { stpTypograf } from "./tools/html-typograf.mjs";
 import { pageAssets, restoreAssetTags, scriptInputs, assetFileName } from "./tools/page-assets.mjs";
 
 export default defineConfig({
   base: "./",
   publicDir: false,
-  plugins: [pageAssets(), restoreAssetTags(), uiPreview(), formatOnSave()],
+  plugins: [pageAssets(), stpTypograf(), restoreAssetTags(), uiPreview(), formatOnSave()],
   build: {
     outDir: "dist",
     emptyOutDir: true,
