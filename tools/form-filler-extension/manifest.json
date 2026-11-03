@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Формы • русские тестовые данные",
+  "version": "1.0.0",
+  "description": "Выбор формы, русские тестовые данные, правила САФУ и обучение кастомных элементов. Всё локально.",
+  "minimum_chrome_version": "120",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Открыть заполнение форм" },
+  "commands": {
+    "_execute_action": { "suggested_key": { "default": "Alt+Shift+F" } }
+  }
+}

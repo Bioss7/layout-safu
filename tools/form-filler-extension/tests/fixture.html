@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Независимые компоненты для проверки заполнения</title>
+  <style>
+    body {
+      font: 16px/1.5 system-ui;
+      margin: 32px;
+      color: #183d32;
+      background: #f4f7f5;
+    }
+    form {
+      width: 470px;
+      max-width: calc(100vw - 64px);
+      padding: 24px;
+      background: white;
+      border: 1px solid #b9cfc3;
+      border-radius: 12px;
+    }
+    label {
+      display: block;
+      margin-bottom: 12px;
+    }
+    input,
+    select,
+    textarea,
+    button {
+      font: inherit;
+      padding: 8px;
+    }
+    input:not([type="checkbox"]):not([type="radio"]),
+    textarea {
+      display: block;
+      width: 90%;
+    }
+    [hidden] {
+      display: none !important;
+    }
+    button,
+    [role="radio"],
+    [role="checkbox"],
+    .entry {
+      cursor: pointer;
+    }
+    .entry,
+    [role="radio"],
+    [role="checkbox"] {
+      padding: 8px;
+      border: 1px solid #b9cfc3;
+      margin: 4px;
+    }
+    .is-chosen,
+    [aria-checked="true"] {
+      background: #c6ead8;
+    }
+    #portal {
+      position: absolute;
+      top: 100px;
+      left: 550px;
+      background: white;
+      padding: 12px;
+      z-index: 20;
+    }
+    #outside {
+      margin-top: 30px;
+    }
+  </style>
+  <h1>Проверка независимых компонентов</h1>
+  <form id="test-form">
+    <label>Фамилия<input name="surname" required /></label>
+    <label>Имя<input name="name" required /></label>
+    <label>Отчество<input name="patronymic" /></label>
+    <label>Почта<input name="email" type="email" required /></label>
+    <label>Телефон<input name="phone" type="tel" /></label>
+    <label>Количество<input name="amount" type="number" min="10" max="20" step="3" /></label>
+    <label>Дата<input name="date" type="date" min="2030-01-01" max="2030-12-31" /></label>
+    <label>Вопрос<textarea name="question" minlength="20" maxlength="80"></textarea></label>
+    <label
+      >Город<select name="city">
+        <option value="">Выберите</option>
+        <option value="ark">Архангельск</option>
+      </select></label
+    >
+    <label
+      >Направления<select name="directions" multiple>
+        <option value="a">Наука</option>
+        <option value="b">Спорт</option>
+      </select></label
+    >
+    <label><input name="consent" type="checkbox" />Согласие</label>
+    <fieldset>
+      <legend>Нативная группа</legend>
+      <label><input type="radio" name="format" value="online" />Онлайн</label
+      ><label><input type="radio" name="format" value="offline" />Очно</label>
+    </fieldset>
+    <p>Селект без ARIA (обучение)</p>
+    <button id="opaque-trigger" type="button">Выберите тему</button
+    ><input type="hidden" name="opaque" />
+    <p>Автоматически распознаваемая группа</p>
+    <div id="custom-radio" role="radiogroup" aria-label="Способ связи">
+      <div role="radio" tabindex="0" aria-checked="false">Почта</div>
+      <div role="radio" tabindex="0" aria-checked="false">Телефон</div>
+    </div>
+    <div id="custom-check" role="checkbox" tabindex="0" aria-checked="false" aria-label="Новости">
+      Новости
+    </div>
+    <label>Не менять<input name="existing" value="Сохранить меня" /></label>
+    <label>Заблокировано<input name="blocked" disabled /></label>
+    <label>Только чтение<input name="readonly" readonly /></label>
+    <label>Файл<input type="file" name="attachment" /></label>
+    <button type="submit" id="submit">Отправить</button>
+  </form>
+  <label id="outside">Вне формы<input name="outside" /></label>
+  <button
+    id="dynamic-trigger"
+    type="button"
+    role="combobox"
+    aria-controls="dynamic-list"
+    aria-expanded="false"
+  >
+    Динамический список
+  </button>
+  <div id="portal" hidden>
+    <div class="entry" data-value="first">Общий вопрос</div>
+    <div class="entry" data-value="second">Поступление</div>
+  </div>
+  <script>
+    window.testEvents = { input: 0, change: 0, submit: 0 };
+    const form = document.querySelector("form");
+    form.addEventListener("input", () => testEvents.input++);
+    form.addEventListener("change", () => testEvents.change++);
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      testEvents.submit++;
+    });
+    document.querySelector("#opaque-trigger").onclick = () => {
+      document.querySelector("#portal").hidden = !document.querySelector("#portal").hidden;
+    };
+    document.querySelectorAll(".entry").forEach((node) => {
+      node.onclick = () => {
+        document.querySelectorAll(".entry").forEach((item) => item.classList.remove("is-chosen"));
+        node.classList.add("is-chosen");
+        form.elements.opaque.value = node.dataset.value;
+        document.querySelector("#opaque-trigger").textContent = node.textContent;
+        document.querySelector("#portal").hidden = true;
+      };
+    });
+    document.querySelectorAll("[role=radio]").forEach((node) => {
+      node.onclick = () => {
+        document
+          .querySelectorAll("[role=radio]")
+          .forEach((item) => item.setAttribute("aria-checked", String(item === node)));
+      };
+    });
+    document.querySelector("#custom-check").onclick = (event) => {
+      const node = event.currentTarget;
+      node.setAttribute("aria-checked", String(node.getAttribute("aria-checked") !== "true"));
+    };
+    let dynamicValue = "";
+    const dynamicTrigger = document.querySelector("#dynamic-trigger");
+    const closeDynamic = () => {
+      document.querySelector("#dynamic-list")?.remove();
+      dynamicTrigger.setAttribute("aria-expanded", "false");
+    };
+    dynamicTrigger.onclick = () => {
+      if (document.querySelector("#dynamic-list")) {
+        closeDynamic();
+        return;
+      }
+      const list = document.createElement("div");
+      list.id = "dynamic-list";
+      list.setAttribute("role", "listbox");
+      for (const text of ["Север", "Юг"]) {
+        const option = document.createElement("div");
+        option.setAttribute("role", "option");
+        option.dataset.value = text;
+        option.textContent = text;
+        option.setAttribute("aria-selected", String(text === dynamicValue));
+        option.onclick = () => {
+          dynamicValue = text;
+          option.setAttribute("aria-selected", "true");
+          dynamicTrigger.textContent = text;
+          closeDynamic();
+        };
+        list.append(option);
+      }
+      document.body.append(list);
+      dynamicTrigger.setAttribute("aria-expanded", "true");
+    };
+    dynamicTrigger.onkeydown = (event) => {
+      if (event.key === "Escape") closeDynamic();
+    };
+    document.querySelector("[name=phone]").addEventListener("input", (event) => {
+      const digits = event.target.value.replace(/\D/g, "");
+      if (digits.length === 11)
+        event.target.value = `+7 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7, 9)}-${digits.slice(9)}`;
+    });
+  </script>
+</html>
