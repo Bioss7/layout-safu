@@ -223,10 +223,6 @@
 }
 
 @include breakpoint($bp-1440) {
-  .question__surface > .container {
-    width: calc(100% - 128px);
-  }
-
   .question__surface {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -287,10 +283,6 @@
 @include breakpoint($bp-1200) {
   #topic-label {
     line-height: 22px;
-  }
-
-  .question__surface > .container {
-    width: calc(100% - 96px);
   }
 
   .question__layout {
@@ -375,10 +367,6 @@
     padding: 18px 24px;
   }
 
-  .question__surface > .container {
-    width: calc(100% - 64px);
-  }
-
   .question__layout {
     flex-direction: column;
     gap: 24px;
@@ -438,10 +426,6 @@
 }
 
 @include breakpoint($bp-768) {
-  .question__surface > .container {
-    width: calc(100% - 48px);
-  }
-
   .question__surface {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -549,10 +533,6 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--main-white-white-100);
-  }
-
-  .question__surface > .container {
-    width: calc(100% - 40px);
   }
 
   .title-2--question {
@@ -671,9 +651,5 @@
 
   .answers-card {
     padding: 16px;
-  }
-
-  .question__surface > .container {
-    width: calc(100% - 32px);
   }
 }

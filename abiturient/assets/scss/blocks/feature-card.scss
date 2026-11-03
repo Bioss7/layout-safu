@@ -1,6 +1,11 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.container--opportunities {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+}
+
 .opportunities-list {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,49 @@
+@use "../_mixins" as *;
+@use "../_vars" as *;
+
+// Общая оболочка защищена от страничных стилей, как и до унификации.
+.container,
+:is(.header, .header-panels, .footer) .container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding-inline: 0;
+}
+
+@include breakpoint($bp-1440) {
+  .container,
+  :is(.header, .header-panels, .footer) .container {
+    max-width: 1280px;
+  }
+}
+
+@include breakpoint($bp-1200) {
+  .container,
+  :is(.header, .header-panels, .footer) .container {
+    width: calc(100vw - 64px);
+    max-width: 1136px;
+  }
+}
+
+@include breakpoint($bp-992) {
+  .container,
+  :is(.header, .header-panels, .footer) .container {
+    width: calc(100vw - 48px);
+    max-width: 944px;
+  }
+}
+
+@include breakpoint($bp-768) {
+  .container,
+  :is(.header, .header-panels, .footer) .container {
+    width: calc(100vw - 32px);
+    max-width: 736px;
+  }
+}
+
+@include breakpoint($bp-390) {
+  .container,
+  :is(.header, .header-panels, .footer) .container {
+    max-width: 358px;
+  }
+}

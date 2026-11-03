@@ -22,11 +22,6 @@ body.template-page {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.container {
-  width: calc(100% - 200px);
-  max-width: 1720px;
-  margin-inline: auto;
-}
 .container--template {
   width: calc(100% - 64px);
   max-width: 1280px;
@@ -61,29 +56,8 @@ body.template-page {
 .template-page [hidden] {
   display: none !important;
 }
-@include breakpoint($bp-1440) {
-  .container {
-    width: calc(100% - 128px);
-  }
-  .container--template {
-    width: calc(100% - 64px);
-  }
-}
-@include breakpoint($bp-1200) {
-  .container {
-    width: calc(100% - 96px);
-  }
-  .container--template {
-    width: calc(100% - 64px);
-  }
-}
-@include breakpoint($bp-992) {
-  .container {
-    width: calc(100% - 64px);
-  }
-}
 @include breakpoint($bp-768) {
-  .container {
+  .container--template {
     width: calc(100% - 48px);
   }
 }
@@ -91,9 +65,6 @@ body.template-page {
   .template-page__main {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-  .container {
-    width: calc(100% - 64px);
   }
   .container--template {
     width: calc(100% - 32px);

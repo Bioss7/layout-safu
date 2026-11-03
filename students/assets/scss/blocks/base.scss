@@ -75,12 +75,6 @@ img {
   max-width: 100%;
 }
 
-.container {
-  width: calc(100% - 200px);
-  max-width: 1720px;
-  margin-inline: auto;
-}
-
 .student-title {
   margin: 0;
   font-family: var(--second-family);
@@ -97,12 +91,6 @@ img {
 }
 
 @include breakpoint($bp-1440) {
-  .container {
-    width: calc(100% - 160px);
-  }
-  .container--student {
-    width: calc(100% - 128px);
-  }
   .student-title {
     font-size: 32px;
     line-height: 40px;
@@ -110,12 +98,6 @@ img {
 }
 
 @include breakpoint($bp-1200) {
-  .container {
-    width: calc(100% - 64px);
-  }
-  .container--student {
-    width: calc(100% - 96px);
-  }
   .student-title {
     font-size: 28px;
     line-height: 36px;
@@ -132,12 +114,6 @@ img {
   :root {
     --applicant-header-height: 114px;
   }
-  .container {
-    width: calc(100% - 48px);
-  }
-  .container--student {
-    width: calc(100% - 64px);
-  }
   .student-title {
     font-size: 26px;
     line-height: 34px;
@@ -147,12 +123,6 @@ img {
 @include breakpoint($bp-768) {
   :root {
     --applicant-header-height: 112px;
-  }
-  .container {
-    width: calc(100% - 32px);
-  }
-  .container--student {
-    width: calc(100% - 48px);
   }
   .student-title {
     font-size: 24px;
@@ -164,9 +134,6 @@ img {
   :root {
     --applicant-header-height: 102px;
   }
-  .container--student {
-    width: calc(100% - 40px);
-  }
   .student-title {
     font-size: 22px;
     line-height: 30px;
@@ -174,9 +141,6 @@ img {
 }
 
 @include breakpoint($bp-390) {
-  .container--student {
-    width: calc(100% - 32px);
-  }
   .student-title {
     font-size: 20px;
     line-height: 28px;

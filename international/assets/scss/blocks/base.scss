@@ -8,11 +8,6 @@ body {
   background-repeat: no-repeat;
   font-weight: 500;
 }
-.container--international {
-  width: calc(100% - 10.4166666667%);
-  max-width: 1720px;
-  margin-inline: auto;
-}
 .text-mobile {
   display: none;
 }
@@ -85,24 +80,13 @@ body {
     line-height: 42px;
   }
 }
-@include breakpoint($bp-1200) {
-  .container--international {
-    width: calc(100% - 64px);
-  }
-}
 @include breakpoint($bp-992) {
-  .container--international {
-    width: calc(100% - 48px);
-  }
   .section-header {
     font-size: 28px;
     line-height: 38px;
   }
 }
 @include breakpoint($bp-768) {
-  .container--international {
-    width: calc(100% - 32px);
-  }
   .section-header {
     font-size: 24px;
     line-height: 32px;

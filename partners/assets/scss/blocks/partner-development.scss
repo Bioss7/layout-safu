@@ -76,8 +76,10 @@
     width: calc(100% - 32px);
     margin-inline: auto;
   }
-  .partner-development__inner {
+  .container--development {
     width: calc(100% - 40px);
+  }
+  .partner-development__inner {
     gap: 40px;
   }
   .partner-development__inner > .partner-button {

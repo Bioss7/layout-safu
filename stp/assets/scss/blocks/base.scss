@@ -42,11 +42,6 @@ body {
   outline: 3px solid var(--stp-accent);
   outline-offset: 4px;
 }
-.container--stp {
-  width: calc(100% - 200px);
-  max-width: 1720px;
-  margin-inline: auto;
-}
 .stp-title {
   display: flex;
   align-items: flex-start;
@@ -97,9 +92,6 @@ body {
   mask-size: contain;
 }
 @include breakpoint($bp-1400) {
-  .container--stp {
-    width: calc(100% - 96px);
-  }
   .stp-title {
     font-size: 32px;
     line-height: 44px;
@@ -109,11 +101,6 @@ body {
   }
   .stp-title::before {
     margin-top: 16px;
-  }
-}
-@include breakpoint($bp-1200) {
-  .container--stp {
-    width: calc(100% - 64px);
   }
 }
 @include breakpoint($bp-992) {
@@ -126,9 +113,6 @@ body {
   }
 }
 @include breakpoint($bp-768) {
-  .container--stp {
-    width: calc(100% - 32px);
-  }
   .stp-title {
     font-size: 24px;
     line-height: 36px;

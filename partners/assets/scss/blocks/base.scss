@@ -39,12 +39,6 @@ button {
   outline-offset: 4px;
 }
 
-.container {
-  width: calc(100% - 200px);
-  max-width: 1720px;
-  margin-inline: auto;
-}
-
 .partner-title {
   display: flex;
   align-items: flex-start;
@@ -120,9 +114,6 @@ button {
 }
 
 @include breakpoint($bp-1400) {
-  .container--partners {
-    width: calc(100% - 96px);
-  }
   .partner-title {
     font-size: 32px;
     line-height: 40px;
@@ -131,15 +122,7 @@ button {
     }
   }
 }
-@include breakpoint($bp-1200) {
-  .container--partners {
-    width: calc(100% - 64px);
-  }
-}
 @include breakpoint($bp-992) {
-  .container--partners {
-    width: calc(100% - 48px);
-  }
   .partner-title {
     font-size: 28px;
     line-height: 36px;
@@ -149,9 +132,6 @@ button {
   }
 }
 @include breakpoint($bp-768) {
-  .container--partners {
-    width: calc(100% - 32px);
-  }
   .partner-title {
     font-size: 24px;
     line-height: 32px;

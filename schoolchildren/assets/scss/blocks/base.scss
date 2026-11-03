@@ -26,23 +26,3 @@ body {
   outline: 3px solid var(--school-accent);
   outline-offset: 4px;
 }
-.container--schoolchildren {
-  width: calc(100% - 200px);
-  max-width: 1720px;
-  margin-inline: auto;
-}
-@include breakpoint($bp-1400) {
-  .container--schoolchildren {
-    width: calc(100% - 96px);
-  }
-}
-@include breakpoint($bp-1200) {
-  .container--schoolchildren {
-    width: calc(100% - 64px);
-  }
-}
-@include breakpoint($bp-768) {
-  .container--schoolchildren {
-    width: calc(100% - 32px);
-  }
-}

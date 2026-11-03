@@ -23,3 +23,9 @@ body {
 *:after {
   box-sizing: border-box;
 }
+
+@include breakpoint($bp-1200) {
+  html {
+    scrollbar-gutter: auto;
+  }
+}

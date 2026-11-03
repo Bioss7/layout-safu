@@ -1,6 +1,11 @@
 @use "../_mixins" as *;
 @use "../_vars" as *;
 
+.container--contacts {
+  width: calc(100% - 200px);
+  max-width: 1720px;
+}
+
 .contacts__layout {
   display: flex;
   align-items: flex-start;

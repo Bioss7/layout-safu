@@ -5,6 +5,7 @@
 @use "./blocks/search-input";
 @use "./blocks/footer";
 @use "./blocks/site-frame";
+@use "./blocks/container";
 
 :is(.header, .header-panels, .footer) {
   font-family: var(--font-family);
