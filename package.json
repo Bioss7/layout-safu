@@ -1,5 +1,5 @@
 {
-  "name": "landing-moscow-transport",
+  "name": "layout-safu",
   "version": "1.0.0",
   "description": "Vite + pnpm build: SCSS -> CSS (autoprefix + minify), JS bundle, static assets",
   "type": "module",
@@ -35,15 +35,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bioss7/landing-moscow-transport.git"
+    "url": "git+https://github.com/Bioss7/layout-safu.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bioss7/landing-moscow-transport/issues"
+    "url": "https://github.com/Bioss7/layout-safu/issues"
   },
-  "homepage": "https://github.com/Bioss7/landing-moscow-transport#readme",
+  "homepage": "https://github.com/Bioss7/layout-safu#readme",
   "devDependencies": {
     "@playwright/test": "^1.64.0",
     "autoprefixer": "^10.5.4",

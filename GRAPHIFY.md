@@ -22,7 +22,8 @@
 [интерактивный граф](graphify-out/graph.html), [данные](graphify-out/graph.json),
 [отчёт Graphify](graphify-out/GRAPH_REPORT.md), [проверка структуры](graphify-out/validation.json),
 [проверка браузера](graphify-out/browser-check.json), [снимок](graphify-out/browser-check.png).
-Каталог `graphify-out/` локальный, исключён из Git и Prettier.
+Каталог `graphify-out/` локальный, исключён из Git и Prettier; отдельные
+артефакты первого запуска могут отсутствовать в текущем окружении.
 
 ## 1. Где искать аналоги компонентов
 
