@@ -238,6 +238,15 @@ try {
     .screenshot({ path: "screenshots/events/form-pending.png" });
   await page.locator(".js-form-result").waitFor({ state: "visible" });
   assert.match(await page.locator(".js-result-title").textContent(), /Спасибо/);
+  const checkResultImage = async (name) => {
+    const icon = page.locator(".js-result-icon");
+    assert.match(await icon.getAttribute("src"), new RegExp(`/result-${name}\\.svg$`));
+    assert.equal(await icon.evaluate(async (image) => {
+      await image.decode();
+      return image.naturalWidth > 0;
+    }), true);
+  };
+  await checkResultImage("success");
   await page
     .locator(".js-contact-form")
     .screenshot({ path: "screenshots/events/form-success.png" });
@@ -259,6 +268,7 @@ try {
   await page.locator(".js-consent").check();
   await page.locator(".js-submit").click();
   await page.locator(".contact-form--error").waitFor();
+  await checkResultImage("error");
   await page
     .locator(".js-contact-form")
     .screenshot({ path: "screenshots/events/form-send-error.png" });
@@ -266,6 +276,7 @@ try {
   await page.locator(".js-form-again").click();
   await page.locator(".js-form-result").waitFor({ state: "visible" });
   assert.match(await page.locator(".js-result-title").textContent(), /Спасибо/);
+  await checkResultImage("success");
   assert.deepEqual(posts, []);
   // Меню удерживает выбранные состояния и не позволяет старому таймеру их перезаписать.
   await page.goto(`${base}/events/`);

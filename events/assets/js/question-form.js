@@ -108,8 +108,8 @@
         root.classList.toggle("contact-form--error", failed);
         form.hidden = true;
         result.hidden = false;
-        root.querySelector(".js-result-icon").src =
-          `/events/assets/img/result-${failed ? "error" : "success"}.svg`;
+        const icon = root.querySelector(".js-result-icon");
+        icon.src = failed ? icon.dataset.imageError : icon.dataset.imageSuccess;
         root.querySelector(".js-result-title").textContent = failed
           ? "Не удалось отправить заявку"
           : "Спасибо за обращение!";
