@@ -1775,6 +1775,527 @@
         "id": "section-header",
         "files": ["index.html", "main/assets/scss/blocks/section-header.scss"]
       }
+    },
+    {
+      "id": "hero",
+      "name": "Баннеры",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Баннеры",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/hero.scss",
+        "foreign-students/assets/js/hero.js"
+      ],
+      "reuseSource": {
+        "page": "international",
+        "id": "hero",
+        "files": [
+          "international/index.html",
+          "international/assets/scss/blocks/hero.scss"
+        ]
+      }
+    },
+    {
+      "id": "pagination",
+      "name": "Пагинация",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Пагинация",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/pagination.scss"
+      ],
+      "reuseSource": {
+        "page": "international",
+        "id": "pagination",
+        "files": [
+          "international/index.html",
+          "international/assets/scss/blocks/pagination.scss"
+        ]
+      }
+    },
+    {
+      "id": "feature-card",
+      "name": "Карточка преимуществ",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка преимуществ",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "feature-card",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/feature-card.scss"
+        ]
+      }
+    },
+    {
+      "id": "statistics",
+      "name": "Статистика университета",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Статистика университета",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "international",
+        "id": "statistics",
+        "files": [
+          "international/index.html",
+          "international/assets/scss/blocks/statistics.scss"
+        ]
+      }
+    },
+    {
+      "id": "stat-card",
+      "name": "Карточка показателя",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка показателя",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "international",
+        "id": "stat-card",
+        "files": [
+          "international/index.html",
+          "international/assets/scss/blocks/statistics.scss"
+        ]
+      }
+    },
+    {
+      "id": "study-card",
+      "name": "Карточка поступления",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка поступления",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "study-card",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/admission.scss"
+        ]
+      }
+    },
+    {
+      "id": "student-life-card",
+      "name": "Карточка студенческой жизни",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка студенческой жизни",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "students",
+        "id": "student-life-card",
+        "files": [
+          "students/index.html",
+          "students/assets/scss/blocks/student-life.scss"
+        ]
+      }
+    },
+    {
+      "id": "life-card",
+      "name": "Карточка новости",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка новости",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ],
+      "reuseSource": {
+        "page": "international",
+        "id": "life-card",
+        "files": [
+          "international/index.html",
+          "international/assets/scss/blocks/life.scss"
+        ]
+      }
+    },
+    {
+      "id": "reviews-slider",
+      "name": "Слайдер отзывов",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Слайдер отзывов",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss",
+        "foreign-students/assets/js/testimonials.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "reviews-slider",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/reviews.scss"
+        ]
+      }
+    },
+    {
+      "id": "review-card",
+      "name": "Карточка отзыва",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка отзыва",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "review-card",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/reviews.scss"
+        ]
+      }
+    },
+    {
+      "id": "accordion",
+      "name": "Вопросы и ответы",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Вопросы и ответы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss",
+        "foreign-students/assets/js/faq.js"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "accordion",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/accordion.scss"
+        ]
+      }
+    },
+    {
+      "id": "contact-map",
+      "name": "Карта контактов",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карта контактов",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "contact-map",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/contacts.scss"
+        ]
+      }
+    },
+    {
+      "id": "contact-item",
+      "name": "Строка контактов",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Строка контактов",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "contact-item",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/contacts.scss"
+        ]
+      }
+    },
+    {
+      "id": "contact-link",
+      "name": "Ссылка контактов",
+      "origin": "existing",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Ссылка контактов",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ],
+      "reuseSource": {
+        "page": "abiturient",
+        "id": "contact-link",
+        "files": [
+          "abiturient/index.html",
+          "abiturient/assets/scss/blocks/contacts.scss"
+        ]
+      }
+    },
+    {
+      "id": "benefits",
+      "name": "Преимущества",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Преимущества",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "city-life",
+      "name": "Жизнь в Архангельске",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Жизнь в Архангельске",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "city-card",
+      "name": "Карточка о городе",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Карточка о городе",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "admissions",
+      "name": "Поступление",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Поступление",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "program-cta",
+      "name": "Выбор программы",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Выбор программы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "university-video",
+      "name": "Видео об университете",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Видео об университете",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/content.scss"
+      ]
+    },
+    {
+      "id": "testimonials",
+      "name": "Истории студентов",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Истории студентов",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ]
+    },
+    {
+      "id": "faq",
+      "name": "Частые вопросы",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Частые вопросы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ]
+    },
+    {
+      "id": "application",
+      "name": "Предварительная заявка",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Предварительная заявка",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ]
+    },
+    {
+      "id": "application-form",
+      "name": "Форма заявки",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Форма заявки",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ]
+    },
+    {
+      "id": "contacts",
+      "name": "Контакты",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Контакты",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/lower.scss"
+      ]
+    },
+    {
+      "id": "site-header",
+      "name": "Шапка страницы",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Шапка страницы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/shell.scss"
+      ]
+    },
+    {
+      "id": "mobile-menu",
+      "name": "Мобильное меню",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Мобильное меню",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/shell.scss"
+      ]
+    },
+    {
+      "id": "student-search",
+      "name": "Поиск страницы",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Поиск страницы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/shell.scss"
+      ]
+    },
+    {
+      "id": "site-footer",
+      "name": "Подвал страницы",
+      "origin": "new",
+      "page": "foreign-students",
+      "addedAt": "2026-11-06",
+      "phase": "implementation",
+      "taskId": "foreign-students",
+      "purpose": "Подвал страницы",
+      "files": [
+        "foreign-students/index.html",
+        "foreign-students/assets/scss/blocks/shell.scss"
+      ]
     }
   ],
   "reusableComponents": [

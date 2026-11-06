@@ -1,0 +1,19 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+body { background-color: #ffffff; font-family: var(--font-family); color: #0b2d4e; }
+html { scroll-behavior: smooth; }
+.section { scroll-margin-top: 24px; }
+.section-heading { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.section-heading__title { font-family: var(--second-family); font-size: 48px; line-height: 56px; font-weight: 400; letter-spacing: 3px; }
+.section-heading__ornament { flex-shrink: 0; width: 32px; height: 32px; }
+.section-heading__description { font-size: 24px; line-height: 32px; }
+@include breakpoint($bp-1200) {
+  .section-heading__title { font-size: 36px; line-height: 44px; }
+}
+@include breakpoint($bp-768) {
+  .section-heading { align-items: flex-start; gap: 8px; justify-content: flex-start; }
+  .section-heading__title { font-size: 32px; line-height: 44px; }
+  .section-heading__ornament { width: 20px; height: 20px; margin-top: 10px; }
+  .section-heading__description { font-size: 14px; line-height: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

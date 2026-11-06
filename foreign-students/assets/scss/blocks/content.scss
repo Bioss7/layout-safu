@@ -1,0 +1,968 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+
+.content-mobile {
+  display: none;
+}
+.section-header--foreign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #0b2d4e;
+}
+.section-header--foreign .section-header__ornament {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+}
+.section-header--foreign .section-header__title {
+  min-width: 0;
+  margin: 0;
+  font-family: "Cakra", sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.benefits__inner,
+.city-life__inner,
+.admissions__inner,
+.student-life__inner,
+.news__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.benefits__inner {
+  gap: 40px;
+}
+.benefits__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.benefits__description {
+  max-width: 986px;
+  margin: 0;
+  color: rgba(11, 45, 78, 0.8);
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 20px;
+}
+.feature-card--foreign {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+  min-width: 0;
+  min-height: 316px;
+  padding: 24px;
+  border: 2px solid rgba(11, 45, 78, 0.1);
+  border-radius: 4px;
+}
+.feature-card--benefit-1 {
+  background-image: linear-gradient(150.5645836386deg, #eee8fa 0%, #f7e9ef 70.711%);
+}
+.feature-card--benefit-2,
+.feature-card--benefit-3 {
+  background-image: linear-gradient(150.5645836386deg, #f8e8ea 0%, #f5f1dd 70.711%);
+}
+.feature-card--benefit-4 {
+  background-image: linear-gradient(150.5645836386deg, #f8eee7 0%, #eef4db 70.711%);
+}
+.feature-card--benefit-5 {
+  background-image: linear-gradient(150.5645836386deg, #edf4dd 0%, #e4f3f6 70.711%);
+}
+.feature-card--benefit-6 {
+  background-image: linear-gradient(150.5645836386deg, #e2f1f7 0%, #eee7fa 70.711%);
+}
+.feature-card--foreign .feature-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-card--foreign .feature-card__ornament {
+  width: 32px;
+  height: 32px;
+}
+.feature-card--foreign .feature-card__number {
+  color: #00aeef;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.feature-card--foreign .feature-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.feature-card--foreign .feature-card__title {
+  margin: 0;
+  color: #0b2d4e;
+  font-family: "Cakra", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+}
+.feature-card--foreign .feature-card__text {
+  margin: 0;
+  color: #4a5d6e;
+  font-size: 18px;
+  line-height: 24px;
+}
+.feature-card--foreign strong {
+  color: #00aeef;
+  font-weight: 600;
+}
+.statistics--foreign {
+  position: relative;
+  overflow: hidden;
+  background-color: #0b2d4e;
+  color: #ffffff;
+}
+.statistics--foreign::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: url("../../img/content/statistics-background.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+.statistics--foreign .statistics__glow {
+  position: absolute;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  mix-blend-mode: color-dodge;
+}
+.statistics--foreign .statistics__glow--left {
+  width: 1050px;
+  height: 1050px;
+  left: -393px;
+  top: -321px;
+  background-image: url("../../img/content/statistics-glow-left.svg");
+}
+.statistics--foreign .statistics__glow--right {
+  width: 950px;
+  height: 950px;
+  right: -325px;
+  top: 227px;
+  background-image: url("../../img/content/statistics-glow-right.svg");
+}
+.statistics__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.statistics__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.statistics--foreign .section-header--foreign {
+  color: #ffffff;
+}
+.statistics__description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 24px;
+}
+.statistics--foreign .statistics__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 209px);
+  gap: 16px;
+}
+.stat-card--foreign {
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(11, 45, 78, 0.15);
+  background-image: radial-gradient(
+    ellipse at right bottom,
+    rgba(0, 174, 239, 0.2),
+    transparent 85%
+  );
+}
+.stat-card--foreign-1 {
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+.stat-card--foreign-2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.stat-card--foreign-3 {
+  grid-row: 2;
+  grid-column: 2;
+}
+.stat-card--foreign-4 {
+  grid-row: 1;
+  grid-column: 3;
+}
+.stat-card--foreign-5 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.stat-card--foreign-6 {
+  grid-row: 1 / 3;
+  grid-column: 4;
+}
+.stat-card--foreign .stat-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.stat-card--foreign .stat-card__number {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.stat-card--foreign .stat-card__label {
+  margin: 0;
+  color: #00aeef;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.stat-card--foreign .stat-card__description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 20px;
+}
+.city-life__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.city-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 1 calc((100% - 40px) / 3);
+  min-width: 0;
+  min-height: 510px;
+  padding: 28px;
+  overflow: hidden;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #0b2d4e;
+}
+.city-card__picture,
+.city-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.city-card__image {
+  object-fit: cover;
+}
+.city-card--1 .city-card__image {
+  width: 143.28%;
+  height: 118.63%;
+  left: -5.5%;
+  top: 0;
+  object-fit: fill;
+}
+.city-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: linear-gradient(
+    180.13deg,
+    rgba(0, 100, 137, 0) 56.748%,
+    rgba(11, 45, 78, 0.9) 99.875%
+  );
+  pointer-events: none;
+}
+.city-card__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.city-card__title,
+.student-life-card--foreign .student-life-card__title {
+  margin: 0;
+  font-family: "Cakra", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+.city-card__description {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+.admissions__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.study-card--foreign {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 510px;
+  min-width: 0;
+  padding: 40px;
+  border: 2px solid rgba(217, 217, 217, 0.2);
+  border-radius: 4px;
+}
+.study-card--foreign-1,
+.study-card--foreign-4 {
+  background-image: linear-gradient(149.0956173115deg, #eee8fa 0%, #f7e9ef 70.711%);
+}
+.study-card--foreign-2 {
+  background-image: linear-gradient(149.0956173115deg, #edf4dd 0%, #e4f3f6 70.711%);
+}
+.study-card--foreign-3 {
+  background-image: linear-gradient(149.0956173115deg, #f8e8ea 0%, #f5f1dd 70.711%);
+}
+.study-card--foreign .study-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.study-card--foreign .study-card__title {
+  margin: 0;
+  color: #0b2d4e;
+  font-family: "Cakra", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+.study-card--foreign .study-card__action {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  padding-block: 12px;
+  color: #0b2d4e;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+}
+.study-card--foreign .study-card__action-icon {
+  width: 20px;
+  height: 20px;
+}
+.study-card--foreign .study-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.study-card--foreign .study-card__caption {
+  margin: 0;
+  padding-block: 8px;
+  color: #0b2d4e;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.study-card--foreign .study-card__links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 12px 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.study-card--foreign-2 .study-card__links,
+.study-card--foreign-3 .study-card__links {
+  grid-template-rows: repeat(4, auto);
+}
+.study-card--foreign-2 .study-card__links {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+}
+.study-card--foreign-4 .study-card__links {
+  grid-template-rows: repeat(6, auto);
+}
+.study-card--foreign .study-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding-block: 8px;
+  color: #0b2d4e;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+}
+.study-card--foreign .study-card__link-icon {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+}
+.study-card--foreign .study-card__action,
+.study-card--foreign .study-card__link {
+  transition: color 150ms;
+}
+.study-card--foreign .study-card__action:hover,
+.study-card--foreign .study-card__link:hover {
+  color: #00aeef;
+}
+.study-card--foreign a:focus-visible,
+.program-cta__action:focus-visible,
+.student-life-card--foreign:focus-visible,
+.life-card--foreign a:focus-visible {
+  outline: 2px solid #00aeef;
+  outline-offset: 4px;
+}
+.program-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 332px;
+  overflow: hidden;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #00aeef;
+}
+.program-cta__grid {
+  position: absolute;
+  left: 69px;
+  top: 0;
+  width: 1945.892578125px;
+  height: 1945.892578125px;
+  background-image: url("../../img/content/program-grid.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.program-cta__ornament {
+  position: absolute;
+  width: 699.8464338856px;
+  height: 699.8464338856px;
+  background-image: url("../../img/content/program-ornament.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.program-cta__ornament--left {
+  left: -232px;
+  top: -101px;
+}
+.program-cta__ornament--right {
+  right: -261px;
+  top: -301px;
+}
+.program-cta__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.program-cta__title {
+  max-width: 812px;
+  margin: 0;
+  font-family: "Cakra", sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+}
+.program-cta__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 326px;
+  min-height: 52px;
+  padding: 14px;
+  border-radius: 4px;
+  color: #0b2d4e;
+  background-color: #ffffff;
+  font-family: "Cakra", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  transition:
+    color 150ms,
+    background-color 150ms;
+}
+.program-cta__action:hover {
+  color: #ffffff;
+  background-color: #0b2d4e;
+}
+.program-cta__action-icon {
+  width: 16px;
+  height: 16px;
+}
+.university-video {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #0b2d4e;
+}
+.university-video__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.student-life--foreign .student-life__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.student-life-card--foreign {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  min-height: 376px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #0b2d4e;
+  text-decoration: none;
+}
+.student-life-card--foreign .student-life-card__picture,
+.student-life-card--foreign .student-life-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.student-life-card--foreign .student-life-card__image {
+  object-fit: cover;
+}
+.student-life-card--foreign::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: linear-gradient(
+    180.13deg,
+    rgba(11, 45, 78, 0) 56.748%,
+    rgba(11, 45, 78, 0.9) 99.875%
+  );
+  pointer-events: none;
+}
+.student-life-card--foreign .student-life-card__title {
+  position: relative;
+  z-index: 1;
+}
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.life-card--foreign {
+  min-width: 0;
+  min-height: 392px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgba(0, 174, 239, 0.1);
+}
+.life-card--foreign .life-card__link {
+  display: flex;
+  flex-direction: column;
+  color: #0b2d4e;
+  text-decoration: none;
+}
+.life-card--foreign .life-card__picture {
+  display: block;
+  height: 232px;
+  overflow: hidden;
+}
+.life-card--foreign .life-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.life-card--foreign .life-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+.life-card--foreign .life-card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.life-card--foreign .life-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: rgba(11, 45, 78, 0.5);
+  font-size: 12px;
+  line-height: 16px;
+}
+.life-card--foreign .life-card__calendar {
+  width: 12px;
+  height: 12px;
+}
+.life-card--foreign .life-card__title {
+  transition: color 150ms;
+}
+.life-card--foreign .life-card__link:hover .life-card__title {
+  color: #00aeef;
+}
+
+@include breakpoint($bp-1400) {
+  .section-header--foreign .section-header__title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .feature-card--foreign .feature-card__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .city-card {
+    min-height: 420px;
+    padding: 20px;
+  }
+  .city-card__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .study-card--foreign {
+    padding: 24px;
+  }
+  .study-card--foreign .study-card__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .study-card--foreign .study-card__links {
+    column-gap: 16px;
+  }
+  .stat-card--foreign {
+    padding: 24px;
+  }
+}
+@include breakpoint($bp-1200) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .statistics__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .statistics--foreign .statistics__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+  .stat-card--foreign {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 200px;
+  }
+  .student-life--foreign .student-life__list,
+  .news__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .city-card {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+  .study-card--foreign .study-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+@include breakpoint($bp-992) {
+  .admissions__grid {
+    grid-template-columns: 1fr;
+  }
+  .study-card--foreign {
+    min-height: 0;
+  }
+  .study-card--foreign .study-card__links {
+    display: grid;
+  }
+  .statistics__inner {
+    gap: 40px;
+  }
+}
+@include breakpoint($bp-768) {
+  .content-desktop {
+    display: none;
+  }
+  .content-mobile {
+    display: inline;
+  }
+  .section-header--foreign {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 36px;
+  }
+  .section-header--foreign .section-header__ornament {
+    flex-basis: 20px;
+    width: 20px;
+    height: 36px;
+    object-fit: contain;
+  }
+  .section-header--foreign .section-header__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .benefits__inner,
+  .city-life__inner,
+  .admissions__inner,
+  .student-life__inner,
+  .news__inner {
+    gap: 32px;
+  }
+  .benefits__inner {
+    gap: 40px;
+  }
+  .benefits__header {
+    align-items: stretch;
+    gap: 16px;
+  }
+  .benefits__header .section-header--foreign {
+    align-items: center;
+  }
+  .benefits__description {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+  .benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card--foreign {
+    min-height: 0;
+    padding: 16px;
+  }
+  .feature-card--foreign .feature-card__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .feature-card--foreign .feature-card__text {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .statistics--foreign::before {
+    background-image: url("../../img/content/statistics-background-390.png");
+    background-size: auto 100%;
+    background-position: 67% center;
+  }
+  .statistics--foreign .statistics__glow {
+    display: none;
+  }
+  .statistics__inner {
+    gap: 32px;
+  }
+  .statistics__header {
+    align-items: stretch;
+    gap: 12px;
+  }
+  .statistics__header .section-header--foreign {
+    min-height: 32px;
+  }
+  .statistics__header .section-header__ornament {
+    height: 32px;
+  }
+  .statistics__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .statistics--foreign .statistics__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .stat-card--foreign {
+    padding: 16px;
+    min-height: 200px;
+  }
+  .stat-card--foreign-1,
+  .stat-card--foreign-6 {
+    min-height: 280px;
+  }
+  .stat-card--foreign .stat-card__content {
+    gap: 8px;
+  }
+  .stat-card--foreign .stat-card__number {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .stat-card--foreign .stat-card__label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .stat-card--foreign .stat-card__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .city-life__grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .city-card {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 358px;
+    padding: 16px;
+  }
+  .city-card__body {
+    gap: 8px;
+  }
+  .city-card__title,
+  .student-life-card--foreign .student-life-card__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .city-card__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .study-card--foreign {
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 16px;
+    border: 0;
+  }
+  .study-card--foreign-1 {
+    background-image: linear-gradient(126.9468563363deg, #e2f1f7 0%, #eee7fa 70.711%);
+  }
+  .study-card--foreign .study-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .study-card--foreign .study-card__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .study-card--foreign .study-card__action {
+    gap: 6px;
+    padding-block: 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .study-card--foreign .study-card__action-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .study-card--foreign .study-card__body {
+    gap: 16px;
+  }
+  .study-card--foreign .study-card__caption {
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .study-card--foreign .study-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .study-card--foreign .study-card__item {
+    width: 100%;
+  }
+  .study-card--foreign .study-card__link {
+    justify-content: space-between;
+    padding-block: 10px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .study-card__item--additional {
+    order: 1;
+  }
+  .program-cta__grid {
+    left: calc(50% - 894px);
+  }
+  .program-cta__ornament--left {
+    width: 351.4274507163px;
+    height: 351.4274507163px;
+    left: -152px;
+    top: 109px;
+    background-image: url("../../img/content/program-ornament-left-390.svg");
+    transform: rotate(17.23deg);
+  }
+  .program-cta__ornament--right {
+    width: 466.8657546765px;
+    height: 466.8657546765px;
+    right: -200px;
+    top: -212px;
+    background-image: url("../../img/content/program-ornament-right-390.svg");
+    transform: rotate(17.23deg);
+  }
+  .program-cta__title {
+    max-width: 274px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 3px;
+  }
+  .program-cta__action {
+    width: min(326px, 100%);
+    min-height: 48px;
+    padding-block: 11px;
+  }
+  .university-video__media {
+    aspect-ratio: 358 / 201;
+  }
+  .student-life--foreign .student-life__list,
+  .news__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .student-life-card--foreign {
+    min-height: 324px;
+  }
+  .life-card--foreign {
+    min-height: 364px;
+  }
+  .life-card--foreign .life-card__picture {
+    height: 200px;
+  }
+  .life-card--foreign .life-card__body {
+    gap: 16px;
+  }
+  .life-card--foreign .life-card__meta {
+    gap: 2.352px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .study-card--foreign a,
+  .program-cta__action,
+  .life-card--foreign .life-card__title {
+    transition: none;
+  }
+}

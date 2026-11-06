@@ -14,6 +14,7 @@ const owners = [
   "schoolchildren",
   "events",
   "international",
+  "foreign-students",
   "events/detail",
   "template-main",
   "template-abiturient",
@@ -26,11 +27,15 @@ const stylesheetOwners = Object.fromEntries(
 );
 
 export function renderSharedHtml(html, overlay = false, schoolchildren = false) {
-  return html.replace(/<!-- safu:(header|footer) -->/g, (_, block) =>
+  const shared = html.replace(/<!-- safu:(header|footer) -->/g, (_, block) =>
     readFileSync(resolve(root, "assets/html", `${block}.html`), "utf8").replaceAll(
       "{{headerModifier}}",
       `${overlay ? " header--overlay" : ""}${schoolchildren ? " header--schoolchildren" : ""}`,
     ),
+  );
+  // Самостоятельная оболочка будущего отдельного шаблона Битрикс.
+  return shared.replace(/<!-- foreign-students:(header|footer) -->/g, (_, block) =>
+    readFileSync(resolve(root, "foreign-students/assets/html", `${block}.html`), "utf8"),
   );
 }
 
@@ -66,7 +71,7 @@ export function assetFileName({ names = [], originalFileNames = [] }) {
     .map(posix)
     .map((file) => (file.startsWith(posix(root) + "/") ? file.slice(posix(root).length + 1) : file))
     .find((file) =>
-      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events(?:\/detail)?|international|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
+      /^(?:(?:main|about|programs|abiturient|students|partners|stp|schoolchildren|events(?:\/detail)?|international|foreign-students|template-main|template-abiturient|template-international)\/)?assets\/(?:img|fonts|vendor)\//.test(
         file,
       ),
     );
@@ -122,8 +127,9 @@ export function pageAssets() {
     },
     configureServer(server) {
       server.watcher.add(resolve(root, "assets/html"));
+      server.watcher.add(resolve(root, "foreign-students/assets/html"));
       server.watcher.on("change", (file) => {
-        if (local(file).startsWith("assets/html/")) server.ws.send({ type: "full-reload" });
+        if (local(file).startsWith("assets/html/") || local(file).startsWith("foreign-students/assets/html/")) server.ws.send({ type: "full-reload" });
       });
     },
     generateBundle: {

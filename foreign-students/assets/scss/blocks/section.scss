@@ -1,0 +1,14 @@
+@use "../_vars" as *;
+@use "../_mixins" as *;
+.section { padding-top: 150px; padding-bottom: 0; }
+.section--hero { padding-top: 0; }
+.section--contacts { padding-bottom: 150px; }
+@include breakpoint($bp-1200) {
+  .section { padding-top: 96px; }
+  .section--hero { padding-top: 64px; }
+  .section--contacts { padding-bottom: 96px; }
+}
+@include breakpoint($bp-768) {
+  .section { padding-top: 64px; }
+  .section--contacts { padding-bottom: 64px; }
+}

@@ -108,5 +108,12 @@
     "status": "Реализована; сверены 1920 и 390; проверены 25 ширин, вкладки, свайп и клавиатура; дополнительные состояния демонстрационные; общая оболочка сохранена",
     "design": "https://www.figma.com/design/oozCCezWvGMRB5pAdXVMtT/?node-id=1-6",
     "remarksReport": "international/STYLE-REMARKS.md"
+  },
+  {
+    "id": "foreign-students",
+    "name": "Иностранному студенту",
+    "url": "/foreign-students/",
+    "status": "Вёрстка в работе; визуальная проверка не завершена",
+    "design": "https://www.figma.com/design/KKia7FhppvUI2YqlyscnjX/?node-id=53-3748"
   }
 ]
