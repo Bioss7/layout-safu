@@ -11,8 +11,9 @@
     "id": "main",
     "name": "Главная",
     "url": "/",
-    "status": "Реализована",
-    "design": "https://www.figma.com/design/AYZNvmZNeWcin2GmQmDOdh/?node-id=7-2641"
+    "status": "Исправлены замечания главной на шести ширинах; требуется свежая сверка фона меню после снятия лимита Figma MCP",
+    "design": "https://www.figma.com/design/AYZNvmZNeWcin2GmQmDOdh/?node-id=7-2641",
+    "remarksReport": "main/STYLE-REMARKS.md"
   },
   {
     "id": "about",

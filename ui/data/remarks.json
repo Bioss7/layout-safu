@@ -2,6 +2,16 @@
   "schemaVersion": 1,
   "remarks": [
     {
+      "id": "main-menu-figma-review",
+      "page": "main",
+      "block": "Меню: фон",
+      "selector": ".header-panels__menu",
+      "states": [],
+      "fallback": "сохранён существующий локальный фон меню",
+      "description": "Замечание Figma 2:4133: проверить кадрирование и более яркий фон. Текущий фон сопоставлен с локальным эталоном; свежие параметры узла 2:4156 не получены из-за лимита Figma MCP. Визуальное соответствие новой версии не подтверждено.",
+      "file": "assets/scss/blocks/header-panels.scss"
+    },
+    {
       "id": "abiturient-accordion",
       "page": "abiturient",
       "block": "Вопросы и ответы",
