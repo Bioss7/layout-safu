@@ -266,43 +266,92 @@
 }
 
 .header-panels__search {
+  position: relative;
+  isolation: isolate;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior-y: contain;
   color: var(--main-blue-blue-100);
-  padding: 52px 0 80px;
-  background-image: url("../../img/header/header-search-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  padding: 76px 0 80px;
+
+  // Ресурс экспортирован на весь экран, включая область шапки.
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--main-accent-accent-10);
+    background-image:
+      linear-gradient(var(--main-white-white-600-opacity), var(--main-white-white-600-opacity)),
+      url("../../img/header/header-background.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
 
   &[hidden] {
     display: none;
   }
 
-  @include breakpoint($bp-1440) {
-    background-image: url("../../img/header/header-search-bg-1440.png");
+  @include breakpoint($bp-768) {
+    padding: 16px 0 60px;
   }
+}
 
-  @include breakpoint($bp-1200) {
-    background-image: url("../../img/header/header-search-bg-1200.png");
-  }
+.header-panels__search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
 
   @include breakpoint($bp-992) {
-    background-image: url("../../img/header/header-search-bg-992.png");
+    margin-bottom: 20px;
   }
 
   @include breakpoint($bp-768) {
-    background-image: url("../../img/header/header-search-bg-768.png");
-    padding: 16px 0 60px;
+    display: none;
+  }
+}
+
+.header-panels__search-title {
+  margin: 0;
+}
+
+.header-panels__search-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--main-blue-blue-100);
+  background-color: var(--main-white-white-700-opacity);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--main-white-white-100);
   }
 
-  @include breakpoint($bp-390) {
-    background-image: url("../../img/header/header-search-bg-390.png");
+  &:focus-visible {
+    outline: 2px solid var(--main-accent-accent-100);
+    outline-offset: 3px;
   }
+}
+
+.header-panels__search-close-icon {
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url("../../img/header/header-close.svg");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 .header-panels__search-results {

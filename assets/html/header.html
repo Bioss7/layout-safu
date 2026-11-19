@@ -54,7 +54,7 @@
             data-header-dropdown
           >
             <button class="header__control header__control--branch" type="button">
-              <span class="header__control-text">Филиал</span>
+              <span class="header__control-text">Филиалы</span>
               <svg
                 class="header__icon header__icon--arrow"
                 width="16"
@@ -605,7 +605,16 @@
     hidden
   >
     <div class="container">
-      <h2 class="header-panels__search-title">Поиск</h2>
+      <div class="header-panels__search-header">
+        <h2 class="header-panels__search-title">Поиск</h2>
+        <button
+          class="js-header-close header-panels__search-close"
+          type="button"
+          aria-label="Закрыть поиск"
+        >
+          <span class="header-panels__search-close-icon" aria-hidden="true"></span>
+        </button>
+      </div>
       <form data-header-search-form role="search" aria-label="Поиск по сайту">
         <div class="search-input">
           <img class="search-input__icon" src="/assets/img/header/header-search.svg" alt="" />

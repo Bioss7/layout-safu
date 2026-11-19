@@ -170,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((button) =>
     button.addEventListener("click", () => open(button.dataset.headerToggle, button)),
   );
+  panelsWrap?.querySelector(".js-header-close")?.addEventListener("click", () => close());
   menuSections.forEach((button) => button.addEventListener("click", () => selectSection(button)));
   input?.addEventListener("input", () => startSearch(true));
   panelsWrap?.querySelector("[data-header-search-form]")?.addEventListener("submit", (event) => {
@@ -207,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") input?.classList.add("search-input__field--keyboard");
     if (!active) return;
     if (event.key === "Escape") {
       event.preventDefault();
@@ -224,5 +226,8 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       first.focus();
     }
+  });
+  document.addEventListener("pointerdown", () => {
+    input?.classList.remove("search-input__field--keyboard");
   });
 });
