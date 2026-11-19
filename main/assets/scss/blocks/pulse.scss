@@ -273,15 +273,17 @@
 }
 
 .pulse {
-  display: grid;
-  grid-template-columns: 990px 706px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 }
 
 .pulse__wrap {
   display: flex;
+  flex: 1 1 990px;
   align-items: center;
+  justify-content: center;
 }
 
 .pulse__col {
@@ -337,6 +339,7 @@
 
 .pulse-panel {
   position: relative;
+  flex: 1 1 706px;
   border-radius: 4px;
   padding: 28px;
   width: 706px;
@@ -345,6 +348,7 @@
   backdrop-filter: blur(12px);
 
   @include breakpoint($bp-1440) {
+    flex: 0 1 auto;
     min-height: 320px;
     width: 100%;
   }
@@ -591,6 +595,7 @@
   .pulse__wrap {
     display: grid;
     grid-template-columns: minmax(0, 416px) 350px minmax(0, 1fr);
+    flex: 0 1 auto;
     column-gap: 48px;
     width: 100%;
   }

@@ -15,6 +15,7 @@
   flex-direction: column;
   gap: 16px;
   flex: 1 1 50%;
+  min-width: 0;
   max-width: 852px;
 
   @include breakpoint($bp-1440) {
@@ -44,6 +45,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.admission__row .admission-card {
+  width: calc((100% - 16px) / 2);
 }
 
 .admission-card {
@@ -648,14 +653,6 @@
   }
 }
 
-@include breakpoint($bp-1440) {
-  .admission__column {
-    min-width: 0;
-  }
-  .admission__row .admission-card {
-    width: calc((100% - 16px) / 2);
-  }
-}
 @include breakpoint($bp-1200) {
   .admission-card__title {
     font-size: 24px;

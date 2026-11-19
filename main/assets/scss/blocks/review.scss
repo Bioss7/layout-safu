@@ -292,6 +292,15 @@
 }
 
 @include breakpoint($bp-390) {
+  .review-card__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section--reviews .section-header {
+    margin-bottom: 32px;
+  }
+
   .reviews-slider__slide {
     width: min(314px, calc(100vw - 32px)) !important;
   }

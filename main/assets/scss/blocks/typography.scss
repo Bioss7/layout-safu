@@ -106,6 +106,13 @@
   }
 }
 
+@include breakpoint($bp-390) {
+  .section-header__descr {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .section-title,
 .section--stats .title-2,
 .section--life .title-2 {

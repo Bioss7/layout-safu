@@ -206,6 +206,15 @@
 }
 
 @include breakpoint($bp-992) {
+  .life-tabs {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .life-tabs__list {
+    flex-wrap: wrap;
+  }
+
   .life-card {
     min-height: 307px;
   }
@@ -213,13 +222,7 @@
 
 @include breakpoint($bp-768) {
   .life-tabs {
-    flex-wrap: wrap;
-    gap: 16px;
     margin-bottom: 32px;
-  }
-
-  .life-tabs__list {
-    flex-wrap: wrap;
   }
 
   .life-panel--active {

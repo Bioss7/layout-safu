@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     swipers[index] = new Swiper(el, {
       effect: "fade",
       fadeEffect: { crossFade: true },
+      autoHeight: true,
       speed: 450,
       loop: false,
       allowTouchMove: true,
@@ -128,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sw) {
       sw.update();
       sw.slideTo(0, 0);
+      sw.updateAutoHeight(0);
       updateDots(sw.realIndex);
       updateArrows(sw);
     } else {
@@ -155,4 +157,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Старт
   activateTab(0);
+  document.fonts.ready.then(() => swipers[activeIndex]?.updateAutoHeight(0));
 });
