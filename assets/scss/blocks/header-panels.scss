@@ -2,6 +2,8 @@
 @use "../_vars" as *;
 
 .header-panels {
+  position: relative;
+  z-index: 1;
   display: none;
   flex-direction: column;
   flex: 1;
@@ -12,69 +14,98 @@
   }
 }
 
+.header--menu-open + .header-panels::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("../../img/header/header-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .header-panels__menu {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior-y: contain;
   color: var(--main-blue-blue-100);
-  padding: 56px 0 120px;
-  background-image: url("../../img/header/header-menu-bg.png");
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  padding: 34px 0 60px;
 
   &[hidden] {
     display: none;
   }
 
   @include breakpoint($bp-1440) {
-    background-image: url("../../img/header/header-menu-bg-1440.png");
+    padding-top: 56px;
   }
 
   @include breakpoint($bp-1200) {
-    background-image: url("../../img/header/header-menu-bg-1200.png");
     padding-top: 56px;
     padding-bottom: 80px;
   }
 
   @include breakpoint($bp-992) {
-    background-image: url("../../img/header/header-menu-bg-992.png");
     padding-top: 48px;
     padding-bottom: 40px;
   }
 
   @include breakpoint($bp-768) {
-    background-image: url("../../img/header/header-menu-bg-768.png");
     display: block;
     padding: 38px 0 60px;
-  }
-
-  @include breakpoint($bp-390) {
-    background-image: url("../../img/header/header-menu-bg-390.png");
   }
 }
 
 .header-panels__menu-list {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(260px, 416px) minmax(0, 1fr);
-  column-gap: 40px;
+  column-gap: 160px;
   grid-template-rows: repeat(6, 80px);
   align-content: start;
+  min-height: calc(100dvh - 220px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 416px;
+    z-index: -1;
+    background-color: var(--main-blue-blue-10);
+  }
+
+  @include breakpoint($bp-1440) {
+    column-gap: 40px;
+  }
 
   @include breakpoint($bp-1200) {
     grid-template-columns: 332px minmax(0, 1fr);
+
+    &::before {
+      width: 332px;
+    }
   }
 
   @include breakpoint($bp-992) {
     grid-template-columns: 304px minmax(0, 1fr);
     column-gap: 32px;
+
+    &::before {
+      width: 304px;
+    }
   }
 
   @include breakpoint($bp-768) {
     display: block;
+    min-height: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -166,7 +197,11 @@
   grid-column: 2;
   grid-row: 1 / span 6;
   align-self: start;
-  padding: 0;
+  padding: 32px 0 0;
+
+  @include breakpoint($bp-1440) {
+    padding-top: 0;
+  }
 
   &[hidden] {
     display: none;
@@ -320,6 +355,11 @@
   margin: 0;
 }
 
+.header-panels__menu-inner {
+  position: relative;
+}
+
+.header-panels__menu-close,
 .header-panels__search-close {
   display: flex;
   align-items: center;
@@ -344,6 +384,18 @@
   }
 }
 
+.header-panels__menu-close {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 1;
+
+  @include breakpoint($bp-768) {
+    display: none;
+  }
+}
+
+.header-panels__menu-close-icon,
 .header-panels__search-close-icon {
   width: 24px;
   height: 24px;

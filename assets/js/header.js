@@ -170,7 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach((button) =>
     button.addEventListener("click", () => open(button.dataset.headerToggle, button)),
   );
-  panelsWrap?.querySelector(".js-header-close")?.addEventListener("click", () => close());
+  panelsWrap?.querySelectorAll(".js-header-close").forEach((button) => {
+    button.addEventListener("click", () => close());
+  });
   menuSections.forEach((button) => button.addEventListener("click", () => selectSection(button)));
   input?.addEventListener("input", () => startSearch(true));
   panelsWrap?.querySelector("[data-header-search-form]")?.addEventListener("submit", (event) => {

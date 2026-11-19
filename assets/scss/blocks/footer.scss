@@ -32,6 +32,7 @@
 }
 
 .footer__toggle-text {
+  text-align: left;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -561,9 +562,8 @@
   }
 
   .footer__toggle-text {
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .footer__bottom {
@@ -575,9 +575,10 @@
   .footer > .container {
     width: calc(100% - 32px);
   }
-  .footer__toggle-inner {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .footer__toggle .container--footer-toggle.footer__toggle-inner {
+    width: calc(100% - 32px);
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .footer__copyright {
     flex: 0 1 auto;

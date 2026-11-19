@@ -864,7 +864,7 @@
     justify-content: center;
     justify-items: center;
     column-gap: 16px;
-    row-gap: 24px;
+    row-gap: 16px;
     width: 100%;
   }
 
@@ -876,6 +876,7 @@
     flex: 0 0 auto;
     width: 304px;
     height: 304px;
+    margin-bottom: 16px;
   }
 
   .pulse__col {
@@ -923,6 +924,10 @@
     margin: 0;
   }
 
+  .pulse-card__text {
+    display: block;
+  }
+
   .pulse-panel {
     padding: 28px;
     min-height: 0;
@@ -957,6 +962,7 @@
     justify-self: center;
     width: 248px;
     height: 248px;
+    margin-bottom: 0;
   }
 
   .pulse__col {

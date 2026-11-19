@@ -24,6 +24,10 @@
   background-color: var(--main-white-white-700-opacity);
 }
 
+.header--overlay.header--open.header--menu-open {
+  background-color: transparent;
+}
+
 .skip-link {
   position: absolute;
   top: 0;

@@ -293,6 +293,23 @@
   padding-bottom: 24px;
 }
 
+.header--menu-open {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.header--menu-open .header__inner {
+  padding-top: 44px;
+
+  @include breakpoint($bp-1440) {
+    padding-top: 60px;
+  }
+
+  @include breakpoint($bp-768) {
+    padding-top: 50px;
+  }
+}
+
 .header--open .header__bottom {
   min-height: 58px;
   align-items: flex-end;

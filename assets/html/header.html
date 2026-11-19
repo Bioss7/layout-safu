@@ -171,7 +171,14 @@
 
 <div class="js-header-panels header-panels" data-header-panels>
   <div class="js-header-panel header-panels__menu" id="header-menu" data-header-panel="menu" hidden>
-    <div class="container">
+    <div class="container header-panels__menu-inner">
+      <button
+        class="js-header-close header-panels__menu-close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <span class="header-panels__menu-close-icon" aria-hidden="true"></span>
+      </button>
       <h2 class="header-panels__menu-heading">Меню сайта</h2>
       <nav class="header-panels__menu-list" aria-label="Разделы сайта">
         <div class="header-panels__menu-item header-panels__menu-branches">
